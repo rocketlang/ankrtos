@@ -2,8 +2,11 @@
  * ankrBFC API Server
  *
  * Main entry point for the BFC GraphQL API
- * Port: 4020
+ * Port is auto-configured from @ankr-bfc/config
  */
+
+// Bootstrap MUST be first - auto-configures from centralized ports
+import '@ankr-bfc/config/bootstrap';
 
 import Fastify from 'fastify';
 import mercurius from 'mercurius';
@@ -15,8 +18,10 @@ import { schema } from './schema/index.js';
 import { resolvers } from './resolvers/index.js';
 import { createContext, type Context } from './context.js';
 import { initializeEncryption } from '@ankr-bfc/core';
+import { PORTS } from '@ankr-bfc/config';
 
-const PORT = Number(process.env.PORT) || 4020;
+// Port is set by bootstrap, fallback to config
+const PORT = Number(process.env.PORT) || PORTS.bfc.api;
 const HOST = process.env.HOST || '0.0.0.0';
 
 async function main() {
@@ -40,9 +45,13 @@ async function main() {
     contentSecurityPolicy: false, // Disable for GraphQL Playground
   });
 
-  // CORS
+  // CORS - origins set by bootstrap or fallback to config
+  const defaultOrigins = [
+    `http://localhost:${PORTS.bfc.web}`,
+    `http://localhost:${PORTS.bfc.customer}`,
+  ];
   await app.register(cors, {
-    origin: process.env.CORS_ORIGIN?.split(',') || ['http://localhost:3020'],
+    origin: process.env.CORS_ORIGIN?.split(',') || defaultOrigins,
     credentials: true,
   });
 

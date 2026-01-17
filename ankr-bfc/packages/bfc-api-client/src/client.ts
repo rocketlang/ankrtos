@@ -1,5 +1,6 @@
 /**
  * BFC Apollo Client Setup
+ * URLs are derived from centralized port configuration
  */
 
 import {
@@ -14,6 +15,7 @@ import { GraphQLWsLink } from '@apollo/client/link/subscriptions';
 import { getMainDefinition } from '@apollo/client/utilities';
 import { onError } from '@apollo/client/link/error';
 import { createClient } from 'graphql-ws';
+import { PORTS, URLS } from '@ankr-bfc/config';
 
 export interface BFCClientConfig {
   apiUrl: string;
@@ -22,9 +24,14 @@ export interface BFCClientConfig {
   onAuthError?: () => void;
 }
 
+// Generate URLs from centralized config
+const host = typeof window !== 'undefined'
+  ? window.location.hostname
+  : (process.env.API_HOST || 'localhost');
+
 const DEFAULT_CONFIG: BFCClientConfig = {
-  apiUrl: 'http://localhost:4020/graphql',
-  wsUrl: 'ws://localhost:4020/graphql',
+  apiUrl: `http://${host}:${PORTS.bfc.api}/graphql`,
+  wsUrl: `ws://${host}:${PORTS.bfc.api}/graphql`,
 };
 
 /**
