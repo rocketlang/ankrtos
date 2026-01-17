@@ -1,0 +1,30 @@
+{
+  "name": "@ankr/encryption",
+  "version": "1.0.0",
+  "description": "Enterprise encryption at rest with AES-256-GCM, field-level encryption, and key rotation",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": ["encryption", "aes-256", "gcm", "field-encryption", "pii", "gdpr", "compliance", "fintech"],
+  "author": "ANKR Technologies",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}

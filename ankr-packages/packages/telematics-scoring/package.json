@@ -1,0 +1,39 @@
+{
+  "name": "@ankr/telematics-scoring",
+  "version": "1.0.0",
+  "description": "Vehicle telematics and driving behavior scoring - trip tracking, safety scores, and behavioral analysis",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "telematics",
+    "driving-score",
+    "vehicle",
+    "ubi",
+    "insurance",
+    "fleet",
+    "safety",
+    "gps",
+    "trip-tracking"
+  ],
+  "author": "ANKR Labs",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
