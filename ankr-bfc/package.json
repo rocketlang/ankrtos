@@ -1,0 +1,31 @@
+{
+  "name": "ankr-bfc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Transaction Behavioral Intelligence platform for banks",
+  "scripts": {
+    "dev": "pnpm -r --parallel run dev",
+    "dev:api": "pnpm --filter bfc-api dev",
+    "dev:web": "pnpm --filter bfc-web dev",
+    "dev:customer-app": "pnpm --filter bfc-customer-app start",
+    "dev:staff-app": "pnpm --filter bfc-staff-app start",
+    "build": "pnpm -r run build",
+    "build:api": "pnpm --filter bfc-api build",
+    "build:web": "pnpm --filter bfc-web build",
+    "lint": "pnpm -r run lint",
+    "test": "pnpm -r run test",
+    "db:migrate": "pnpm --filter bfc-api prisma migrate dev",
+    "db:push": "pnpm --filter bfc-api prisma db push",
+    "db:generate": "pnpm --filter bfc-api prisma generate",
+    "db:studio": "pnpm --filter bfc-api prisma studio"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "prettier": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

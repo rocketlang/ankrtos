@@ -1,0 +1,1183 @@
+// ankrBFC - Transaction Behavioral Intelligence for Banks
+// Enhanced beyond Goals101 with CBS integration, consent, life events, churn prediction
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  extensions = [vector, pgcrypto]
+}
+
+// =============================================================================
+// CUSTOMER CORE
+// =============================================================================
+
+model Customer {
+  id              String   @id @default(uuid())
+  externalId      String   @unique  // CBS customer ID
+  cif             String?  @unique  // Customer Information File number
+
+  // Identity
+  firstName       String
+  lastName        String
+  displayName     String?
+  email           String?
+  phone           String
+  altPhone        String?
+
+  // KYC Documents
+  pan             String?  @unique
+  aadhaarHash     String?  // Hashed for security
+  dateOfBirth     DateTime?
+  gender          String?  // M, F, O
+
+  // Address (default)
+  address         Json?    // {line1, line2, city, state, pincode, country}
+
+  // Scores & Segments
+  kycStatus       KycStatus @default(PENDING)
+  riskScore       Float    @default(0.5)    // 0-1, higher = riskier
+  trustScore      Float    @default(0.5)    // 0-1, higher = more trusted
+  creditScore     Int?     // External bureau score
+  segment         String?  // Derived: MASS, AFFLUENT, HNI, ULTRA_HNI
+  subSegment      String?  // More granular
+  lifetimeValue   Float    @default(0)      // Calculated LTV
+
+  // Relationship
+  relationshipManagerId String?
+  relationshipManager   Staff?   @relation(fields: [relationshipManagerId], references: [id])
+  branchCode            String?
+  onboardingChannel     String?  // BRANCH, DIGITAL, REFERRAL
+
+  // Status
+  status          CustomerStatus @default(ACTIVE)
+  statusReason    String?
+
+  // Churn Prediction (Goals101 didn't have this)
+  churnProbability    Float    @default(0)   // 0-1
+  churnRiskLevel      String?  // LOW, MEDIUM, HIGH
+  lastChurnScoreAt    DateTime?
+
+  // Preferences (consent management)
+  communicationPrefs  Json?    // {email: bool, sms: bool, push: bool, whatsapp: bool}
+  preferredLanguage   String   @default("en")
+  dndEnabled          Boolean  @default(false)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  lastActivityAt  DateTime?
+
+  // Relations
+  episodes        CustomerEpisode[]
+  products        CustomerProduct[]
+  offers          CustomerOffer[]
+  transactions    TransactionEvent[]
+  consents        CustomerConsent[]
+  lifeEvents      LifeEvent[]
+  documents       CustomerDocument[]
+  communications  Communication[]
+  sessions        OmniChannelSession[]
+  campaigns       CampaignParticipation[]
+
+  @@index([phone])
+  @@index([pan])
+  @@index([segment])
+  @@index([relationshipManagerId])
+  @@index([churnRiskLevel])
+  @@index([status])
+}
+
+enum KycStatus {
+  PENDING
+  IN_PROGRESS
+  VERIFIED
+  REJECTED
+  EXPIRED
+}
+
+enum CustomerStatus {
+  PROSPECT
+  ACTIVE
+  DORMANT
+  CHURNED
+  BLOCKED
+  DECEASED
+}
+
+// =============================================================================
+// STAFF & BRANCHES
+// =============================================================================
+
+model Staff {
+  id              String   @id @default(uuid())
+  employeeId      String   @unique
+  name            String
+  email           String   @unique
+  phone           String?
+  role            StaffRole @default(OFFICER)
+  branchCode      String?
+  isActive        Boolean  @default(true)
+
+  customers       Customer[]
+  createdAt       DateTime @default(now())
+
+  @@index([branchCode])
+  @@index([role])
+}
+
+enum StaffRole {
+  OFFICER
+  MANAGER
+  BRANCH_MANAGER
+  REGIONAL_MANAGER
+  ADMIN
+}
+
+model Branch {
+  id              String   @id @default(uuid())
+  code            String   @unique
+  name            String
+  type            String   // BRANCH, ATM, EXTENSION_COUNTER, DIGITAL
+  address         Json?
+  latitude        Float?
+  longitude       Float?
+  ifscCode        String?  @unique
+  isActive        Boolean  @default(true)
+
+  @@index([type])
+}
+
+// =============================================================================
+// BEHAVIORAL EPISODES (Enhanced EON-style)
+// =============================================================================
+
+model CustomerEpisode {
+  id              String   @id @default(uuid())
+  customerId      String
+  customer        Customer @relation(fields: [customerId], references: [id])
+
+  // Context
+  state           String   // "age 35, income 50L, existing savings account"
+  context         Json?    // Structured context data
+
+  // Action & Outcome
+  action          String   // "applied_for_home_loan"
+  outcome         String   // "approved_at_7.5%"
+  success         Boolean
+
+  // Categorization
+  module          BfcModule
+  subModule       String?  // More specific categorization
+
+  // Channel tracking (Goals101 enhancement)
+  channel         Channel  @default(DIGITAL)
+  deviceType      String?  // MOBILE, DESKTOP, TABLET
+  sessionId       String?  // Links to OmniChannelSession
+
+  // AI/Vector
+  embedding       Unsupported("vector(1536)")?
+  aiInsight       String?  // AI-generated insight about this episode
+
+  // Attribution
+  campaignId      String?
+
+  metadata        Json?
+  createdAt       DateTime @default(now())
+
+  @@index([customerId])
+  @@index([module])
+  @@index([channel])
+  @@index([createdAt])
+  @@index([success])
+}
+
+enum BfcModule {
+  LOAN
+  DEPOSIT
+  PAYMENT
+  CARD
+  INVESTMENT
+  INSURANCE
+  FOREX
+  SUPPORT
+  KYC
+  ONBOARDING
+}
+
+enum Channel {
+  BRANCH
+  DIGITAL
+  MOBILE_APP
+  ATM
+  CALL_CENTER
+  WHATSAPP
+  EMAIL
+  CHATBOT
+  FIELD_AGENT
+}
+
+// =============================================================================
+// BEHAVIORAL PATTERNS (Semantic Memory)
+// =============================================================================
+
+model BehavioralPattern {
+  id              String   @id @default(uuid())
+  context         String   // "loan_eligibility"
+  action          String   // "approve_home_loan"
+  segment         String?  // "age_30_40_income_50L"
+
+  successCount    Int      @default(0)
+  totalCount      Int      @default(0)
+  successRate     Float    @default(0)
+
+  // Pattern confidence
+  confidence      Float    @default(0.5)
+  isStable        Boolean  @default(false)  // Has enough data
+
+  lastSeen        DateTime @default(now())
+
+  @@unique([context, action, segment])
+  @@index([context])
+  @@index([successRate])
+}
+
+// =============================================================================
+// CUSTOMER PRODUCTS (CBS Integration)
+// =============================================================================
+
+model CustomerProduct {
+  id              String   @id @default(uuid())
+  customerId      String
+  customer        Customer @relation(fields: [customerId], references: [id])
+
+  productType     ProductType
+  productCode     String   // Bank's product code
+  accountNumber   String?  // Account/Loan number
+  externalId      String   // CBS product ID
+
+  status          ProductStatus @default(ACTIVE)
+  openedAt        DateTime @default(now())
+  closedAt        DateTime?
+  closureReason   String?
+
+  // Financial summary (synced from CBS)
+  balance         Decimal  @default(0)
+  sanctionedLimit Decimal? // For loans/OD
+  outstandingAmount Decimal? @default(0)
+  interestRate    Float?
+
+  // For loans
+  emiAmount       Decimal?
+  nextDueDate     DateTime?
+  overdueAmount   Decimal? @default(0)
+  dpd             Int?     @default(0) // Days Past Due
+
+  // CBS Sync
+  lastSyncAt      DateTime?
+  cbsData         Json?    // Raw CBS data
+
+  metadata        Json?
+
+  @@unique([accountNumber])
+  @@index([customerId])
+  @@index([productType])
+  @@index([status])
+}
+
+enum ProductType {
+  SAVINGS
+  CURRENT
+  SALARY
+  FD
+  RD
+  HOME_LOAN
+  PERSONAL_LOAN
+  CAR_LOAN
+  EDUCATION_LOAN
+  BUSINESS_LOAN
+  GOLD_LOAN
+  OVERDRAFT
+  CREDIT_CARD
+  DEBIT_CARD
+  MUTUAL_FUND
+  INSURANCE
+  DEMAT
+}
+
+enum ProductStatus {
+  PENDING
+  ACTIVE
+  DORMANT
+  CLOSED
+  NPA
+  WRITTEN_OFF
+}
+
+// =============================================================================
+// PERSONALIZED OFFERS
+// =============================================================================
+
+model CustomerOffer {
+  id              String   @id @default(uuid())
+  customerId      String
+  customer        Customer @relation(fields: [customerId], references: [id])
+
+  // Offer details
+  offerType       ProductType
+  offerCode       String   // For tracking
+  title           String
+  description     String
+  terms           Json?    // {rate, tenure, maxAmount, etc}
+
+  // AI scoring
+  confidence      Float    // AI confidence score
+  relevanceScore  Float?   // How relevant to customer
+  propensityScore Float?   // Likelihood to convert
+
+  // Status tracking
+  status          OfferStatus @default(GENERATED)
+
+  // Timing
+  validFrom       DateTime @default(now())
+  expiresAt       DateTime?
+  shownAt         DateTime?
+  clickedAt       DateTime?
+  convertedAt     DateTime?
+  rejectedAt      DateTime?
+  rejectionReason String?
+
+  // Attribution
+  campaignId      String?
+  campaign        Campaign? @relation(fields: [campaignId], references: [id])
+  channelShown    Channel?
+
+  metadata        Json?
+  createdAt       DateTime @default(now())
+
+  @@index([customerId])
+  @@index([status])
+  @@index([offerType])
+  @@index([campaignId])
+}
+
+enum OfferStatus {
+  GENERATED
+  QUEUED
+  SHOWN
+  CLICKED
+  CONVERTED
+  REJECTED
+  EXPIRED
+}
+
+// =============================================================================
+// TRANSACTIONS (Pattern Learning)
+// =============================================================================
+
+model TransactionEvent {
+  id              String   @id @default(uuid())
+  customerId      String
+  customer        Customer @relation(fields: [customerId], references: [id])
+
+  // CBS Reference
+  externalId      String   @unique  // CBS transaction ID
+  accountNumber   String?
+
+  // Transaction details
+  eventType       TransactionType
+  subType         String?  // UPI, NEFT, IMPS, etc
+  amount          Decimal
+  direction       String   // CREDIT, DEBIT
+
+  // Channel & Location
+  channel         Channel
+  merchantName    String?
+  merchantCategory String? // MCC code or derived category
+  location        Json?    // {city, state, country}
+
+  // Categorization (AI-enhanced)
+  category        String?  // SALARY, RENT, UTILITIES, SHOPPING, etc
+  isRecurring     Boolean  @default(false)
+
+  // Flags
+  isAnomalous     Boolean  @default(false)
+  anomalyScore    Float?
+  amlFlag         Boolean  @default(false)
+
+  metadata        Json?
+  timestamp       DateTime @default(now())
+
+  @@index([customerId])
+  @@index([eventType])
+  @@index([category])
+  @@index([timestamp])
+  @@index([isAnomalous])
+}
+
+enum TransactionType {
+  DEPOSIT
+  WITHDRAWAL
+  TRANSFER
+  PAYMENT
+  EMI
+  REFUND
+  REVERSAL
+  CHARGE
+  INTEREST
+  DIVIDEND
+}
+
+// =============================================================================
+// CONSENT MANAGEMENT (GDPR/RBI Compliance)
+// =============================================================================
+
+model CustomerConsent {
+  id              String   @id @default(uuid())
+  customerId      String
+  customer        Customer @relation(fields: [customerId], references: [id])
+
+  consentType     ConsentType
+  purpose         String   // Human-readable purpose
+  status          Boolean  @default(false)
+
+  // Tracking
+  givenAt         DateTime?
+  revokedAt       DateTime?
+  expiresAt       DateTime?
+
+  // Audit
+  ipAddress       String?
+  channel         Channel?
+  documentId      String?  // Reference to signed consent doc
+
+  metadata        Json?
+
+  @@unique([customerId, consentType])
+  @@index([customerId])
+  @@index([consentType])
+}
+
+enum ConsentType {
+  MARKETING_EMAIL
+  MARKETING_SMS
+  MARKETING_PUSH
+  MARKETING_WHATSAPP
+  MARKETING_CALL
+  DATA_SHARING
+  CREDIT_BUREAU
+  CROSS_SELL
+  THIRD_PARTY
+  ANALYTICS
+  AA_CONSENT  // Account Aggregator
+}
+
+// =============================================================================
+// LIFE EVENTS DETECTION (Goals101 Enhancement)
+// =============================================================================
+
+model LifeEvent {
+  id              String   @id @default(uuid())
+  customerId      String
+  customer        Customer @relation(fields: [customerId], references: [id])
+
+  eventType       LifeEventType
+  confidence      Float    // AI confidence in detection
+
+  // Detection source
+  source          String   // TRANSACTION, DOCUMENT, SELF_DECLARED, AI_INFERRED
+  evidence        Json?    // Supporting data
+
+  // Status
+  isConfirmed     Boolean  @default(false)
+  confirmedAt     DateTime?
+
+  // Trigger offers
+  triggeredOffers String[] // Offer IDs generated from this
+
+  detectedAt      DateTime @default(now())
+  eventDate       DateTime? // Actual event date if known
+
+  @@index([customerId])
+  @@index([eventType])
+  @@index([detectedAt])
+}
+
+enum LifeEventType {
+  MARRIAGE
+  CHILD_BIRTH
+  JOB_CHANGE
+  SALARY_INCREASE
+  SALARY_DECREASE
+  HOME_PURCHASE
+  CAR_PURCHASE
+  RELOCATION
+  RETIREMENT
+  BUSINESS_START
+  MEDICAL_EMERGENCY
+  EDUCATION_START
+}
+
+// =============================================================================
+// DOCUMENT VAULT (Secure KYC Storage)
+// =============================================================================
+
+model CustomerDocument {
+  id              String   @id @default(uuid())
+  customerId      String
+  customer        Customer @relation(fields: [customerId], references: [id])
+
+  documentType    DocumentType
+  documentNumber  String?  // Encrypted
+
+  // Storage
+  storageUrl      String   // S3/secure storage path
+  encryptionKey   String?  // Key reference
+
+  // Verification
+  isVerified      Boolean  @default(false)
+  verificationMethod String? // DIGILOCKER, MANUAL, API
+  verifiedAt      DateTime?
+  verifiedBy      String?  // Staff ID
+
+  // Validity
+  issuedAt        DateTime?
+  expiresAt       DateTime?
+
+  metadata        Json?
+  uploadedAt      DateTime @default(now())
+
+  @@index([customerId])
+  @@index([documentType])
+}
+
+enum DocumentType {
+  PAN
+  AADHAAR
+  PASSPORT
+  DRIVING_LICENSE
+  VOTER_ID
+  BANK_STATEMENT
+  SALARY_SLIP
+  ITR
+  FORM_16
+  ADDRESS_PROOF
+  PHOTO
+  SIGNATURE
+  CONSENT_FORM
+}
+
+// =============================================================================
+// CAMPAIGNS & ATTRIBUTION
+// =============================================================================
+
+model Campaign {
+  id              String   @id @default(uuid())
+  code            String   @unique
+  name            String
+  description     String?
+
+  type            CampaignType
+  targetSegment   Json?    // Segment criteria
+
+  // Timing
+  startDate       DateTime
+  endDate         DateTime?
+  status          CampaignStatus @default(DRAFT)
+
+  // Goals
+  targetConversions Int?
+  budget          Decimal?
+
+  // Performance (calculated)
+  impressions     Int      @default(0)
+  clicks          Int      @default(0)
+  conversions     Int      @default(0)
+  revenue         Decimal  @default(0)
+
+  createdBy       String?
+  createdAt       DateTime @default(now())
+
+  offers          CustomerOffer[]
+  participants    CampaignParticipation[]
+
+  @@index([status])
+  @@index([type])
+}
+
+enum CampaignType {
+  ACQUISITION
+  CROSS_SELL
+  UPSELL
+  RETENTION
+  REACTIVATION
+  AWARENESS
+}
+
+enum CampaignStatus {
+  DRAFT
+  SCHEDULED
+  ACTIVE
+  PAUSED
+  COMPLETED
+  CANCELLED
+}
+
+model CampaignParticipation {
+  id              String   @id @default(uuid())
+  campaignId      String
+  campaign        Campaign @relation(fields: [campaignId], references: [id])
+  customerId      String
+  customer        Customer @relation(fields: [customerId], references: [id])
+
+  status          String   // TARGETED, REACHED, ENGAGED, CONVERTED
+  reachedAt       DateTime?
+  engagedAt       DateTime?
+  convertedAt     DateTime?
+
+  channel         Channel?
+
+  @@unique([campaignId, customerId])
+  @@index([campaignId])
+  @@index([customerId])
+}
+
+// =============================================================================
+// COMMUNICATION LOG
+// =============================================================================
+
+model Communication {
+  id              String   @id @default(uuid())
+  customerId      String
+  customer        Customer @relation(fields: [customerId], references: [id])
+
+  channel         Channel
+  direction       String   // INBOUND, OUTBOUND
+  type            String   // TRANSACTIONAL, PROMOTIONAL, SERVICE
+
+  // Content
+  subject         String?
+  body            String?
+  templateId      String?
+
+  // Delivery
+  status          CommunicationStatus @default(PENDING)
+  sentAt          DateTime?
+  deliveredAt     DateTime?
+  readAt          DateTime?
+  failedAt        DateTime?
+  failureReason   String?
+
+  // Response
+  responded       Boolean  @default(false)
+  responseType    String?  // CLICKED, REPLIED, UNSUBSCRIBED
+
+  metadata        Json?
+  createdAt       DateTime @default(now())
+
+  @@index([customerId])
+  @@index([channel])
+  @@index([status])
+  @@index([createdAt])
+}
+
+enum CommunicationStatus {
+  PENDING
+  SENT
+  DELIVERED
+  READ
+  FAILED
+  BOUNCED
+}
+
+// =============================================================================
+// OMNI-CHANNEL SESSIONS (Session Continuity)
+// =============================================================================
+
+model OmniChannelSession {
+  id              String   @id @default(uuid())
+  customerId      String
+  customer        Customer @relation(fields: [customerId], references: [id])
+
+  // Session tracking
+  sessionToken    String   @unique
+  currentChannel  Channel
+  previousChannel Channel?
+
+  // Journey tracking
+  journeyType     String?  // LOAN_APPLICATION, SUPPORT, ONBOARDING
+  currentStep     String?
+  completedSteps  String[]
+
+  // Context
+  context         Json?    // Carries data across channels
+
+  // Status
+  isActive        Boolean  @default(true)
+  startedAt       DateTime @default(now())
+  lastActivityAt  DateTime @default(now())
+  completedAt     DateTime?
+
+  metadata        Json?
+
+  @@index([customerId])
+  @@index([isActive])
+  @@index([journeyType])
+}
+
+// =============================================================================
+// CBS SYNC LOG (Audit Trail)
+// =============================================================================
+
+model CbsSyncLog {
+  id              String   @id @default(uuid())
+
+  entityType      String   // CUSTOMER, PRODUCT, TRANSACTION
+  entityId        String
+
+  operation       String   // CREATE, UPDATE, DELETE
+  beforeData      Json?
+  afterData       Json?
+
+  syncSource      String   // CBS_PUSH, CBS_PULL, MANUAL
+  cbsTransactionId String?
+
+  status          String   // SUCCESS, FAILED, PARTIAL
+  errorMessage    String?
+
+  syncedAt        DateTime @default(now())
+
+  @@index([entityType, entityId])
+  @@index([syncedAt])
+}
+
+// =============================================================================
+// NEXT BEST ACTION (Real-time Recommendations)
+// =============================================================================
+
+model NextBestAction {
+  id              String   @id @default(uuid())
+  customerId      String   @unique
+
+  // Top recommendations
+  recommendations Json     // Array of {action, confidence, reason, offerCode}
+
+  // Calculation metadata
+  modelVersion    String?
+  calculatedAt    DateTime @default(now())
+  expiresAt       DateTime
+
+  // Triggers
+  triggerReason   String?  // What triggered recalculation
+
+  @@index([calculatedAt])
+}
+
+// =============================================================================
+// ALERT & FRAUD DETECTION
+// =============================================================================
+
+model Alert {
+  id              String   @id @default(uuid())
+
+  alertType       AlertType
+  severity        String   // LOW, MEDIUM, HIGH, CRITICAL
+
+  // Reference
+  entityType      String   // CUSTOMER, TRANSACTION, PRODUCT
+  entityId        String
+  customerId      String?
+
+  // Details
+  title           String
+  description     String
+  evidence        Json?
+
+  // Status
+  status          AlertStatus @default(OPEN)
+  assignedTo      String?
+  resolvedAt      DateTime?
+  resolution      String?
+
+  createdAt       DateTime @default(now())
+
+  @@index([alertType])
+  @@index([severity])
+  @@index([status])
+  @@index([customerId])
+}
+
+enum AlertType {
+  FRAUD_SUSPECTED
+  AML_FLAG
+  UNUSUAL_ACTIVITY
+  HIGH_VALUE_TRANSACTION
+  CHURN_RISK
+  COMPLIANCE_BREACH
+  DOCUMENT_EXPIRY
+  NPA_WARNING
+}
+
+enum AlertStatus {
+  OPEN
+  INVESTIGATING
+  ESCALATED
+  RESOLVED
+  FALSE_POSITIVE
+}
+
+// =============================================================================
+// DOCCHAIN DMS (Document Management with Chain-of-Custody)
+// =============================================================================
+
+model DocChainDocument {
+  id              String   @id @default(uuid())
+  externalId      String?  // External reference (e.g., RBI submission ID)
+
+  // Document Type & Classification
+  docType         DocChainDocType
+  status          DocChainStatus @default(DRAFT)
+  accessLevel     DocChainAccessLevel @default(INTERNAL)
+
+  // Document Info
+  title           String
+  description     String?
+  version         String   @default("1.0")
+  mimeType        String
+  fileSize        Int
+  fileName        String
+
+  // Content Hashes (Immutable)
+  contentHash     String   // SHA-256
+  checksumMD5     String
+  checksumSHA1    String
+
+  // Classification
+  category        String
+  subcategory     String?
+  tags            String[]
+
+  // Ownership
+  ownerId         String
+  ownerName       String
+  department      String?
+  branch          String?
+
+  // Related Entities
+  customerId      String?
+  applicationId   String?
+  transactionId   String?
+
+  // Dates
+  createdAt       DateTime @default(now())
+  modifiedAt      DateTime @updatedAt
+  publishedAt     DateTime?
+  expiresAt       DateTime?
+  retentionUntil  DateTime  // Minimum retention date (RBI compliance)
+
+  // Approval Workflow
+  requiresApproval Boolean @default(false)
+  approvers       String[]
+  approvedBy      String?
+  approvedAt      DateTime?
+
+  // Digital Signature
+  isSigned        Boolean  @default(false)
+  signedBy        String?
+  signedAt        DateTime?
+  signatureType   String?  // DSC, AADHAAR_ESIGN, USB_TOKEN
+  certificateSerial String?
+
+  // Chain Reference
+  genesisBlockHash String
+  latestBlockHash  String
+  blockCount       Int     @default(1)
+
+  // Storage
+  storageLocation String   // Encrypted storage path
+  encryptionKeyId String   // KMS key used
+  isEncrypted     Boolean  @default(true)
+
+  // Relations
+  chainBlocks     DocChainBlock[]
+  reportInstance  DocChainReportInstance?
+
+  @@index([docType])
+  @@index([status])
+  @@index([customerId])
+  @@index([applicationId])
+  @@index([ownerId])
+  @@index([createdAt])
+  @@index([contentHash])
+}
+
+enum DocChainDocType {
+  // Regulatory
+  REGULATORY_RBI
+  REGULATORY_SEBI
+  REGULATORY_IRDAI
+
+  // AML/Compliance
+  AML_STR
+  AML_CTR
+  KYC_VERIFICATION
+  COMPLIANCE_AUDIT
+
+  // Financial
+  CREDIT_DECISION
+  LOAN_AGREEMENT
+  DISBURSEMENT_ADVICE
+  STATEMENT
+
+  // Tax
+  TDS_CERTIFICATE
+  FORM_26AS
+  GST_INVOICE
+
+  // Operational
+  DAILY_OPERATIONS
+  BRANCH_REPORT
+  EXCEPTION_REPORT
+
+  // Customer Documents
+  CUSTOMER_DOCUMENT
+  IDENTITY_PROOF
+  ADDRESS_PROOF
+  INCOME_PROOF
+
+  // Internal
+  POLICY_DOCUMENT
+  PROCEDURE_DOCUMENT
+  MEETING_MINUTES
+
+  // Audit
+  INTERNAL_AUDIT
+  EXTERNAL_AUDIT
+  PENETRATION_TEST
+}
+
+enum DocChainStatus {
+  DRAFT
+  PENDING_APPROVAL
+  APPROVED
+  PUBLISHED
+  ARCHIVED
+  SUPERSEDED
+  REVOKED
+}
+
+enum DocChainAccessLevel {
+  PUBLIC
+  INTERNAL
+  CONFIDENTIAL
+  RESTRICTED
+  TOP_SECRET
+}
+
+// Chain Block - Immutable record in the document chain
+model DocChainBlock {
+  id              String   @id @default(uuid())
+  documentId      String
+  document        DocChainDocument @relation(fields: [documentId], references: [id])
+
+  // Block Linking
+  previousBlockHash String
+  blockHash        String   @unique
+
+  // Action
+  action          DocChainAction
+  timestamp       DateTime @default(now())
+
+  // Actor
+  actorId         String
+  actorRole       String
+  actorIP         String?
+
+  // Document State
+  documentHash    String   // Hash at time of action
+
+  // Digital Signature
+  signature       String
+
+  // Additional Data
+  metadata        Json?
+
+  @@index([documentId])
+  @@index([action])
+  @@index([actorId])
+  @@index([timestamp])
+}
+
+enum DocChainAction {
+  CREATED
+  VIEWED
+  DOWNLOADED
+  PRINTED
+  MODIFIED
+  APPROVED
+  REJECTED
+  SIGNED
+  SHARED
+  REVOKED
+  ARCHIVED
+  RESTORED
+  VERIFIED
+  EXPORTED
+  SUBMITTED
+  ACKNOWLEDGED
+}
+
+// Report Definitions
+model DocChainReportDefinition {
+  id              String   @id @default(uuid())
+  name            String
+  description     String
+
+  docType         DocChainDocType
+  frequency       ReportFrequency
+  scheduleExpression String? // Cron expression
+
+  // Template
+  templateId      String
+  templateVersion String
+
+  // Output
+  outputFormats   String[] // PDF, XLSX, CSV, JSON, XML
+  defaultFormat   String   @default("PDF")
+
+  // Distribution
+  autoDistribute  Boolean  @default(false)
+  recipients      Json?    // Array of {type, value, format}
+
+  // Compliance
+  regulatoryReport Boolean @default(false)
+  submissionDeadline String? // e.g., T+1, T+7D
+  regulatorCode   String?   // RBI, FIU, SEBI
+
+  // Retention
+  retentionYears  Int      @default(7)
+  archiveAfterDays Int     @default(365)
+
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  instances       DocChainReportInstance[]
+
+  @@unique([name])
+  @@index([docType])
+  @@index([regulatoryReport])
+}
+
+enum ReportFrequency {
+  DAILY
+  WEEKLY
+  MONTHLY
+  QUARTERLY
+  YEARLY
+  ON_DEMAND
+}
+
+// Report Instances
+model DocChainReportInstance {
+  id              String   @id @default(uuid())
+  definitionId    String
+  definition      DocChainReportDefinition @relation(fields: [definitionId], references: [id])
+  documentId      String   @unique
+  document        DocChainDocument @relation(fields: [documentId], references: [id])
+
+  // Generation
+  generatedAt     DateTime @default(now())
+  generatedBy     String
+  parameters      Json
+
+  // Period
+  periodStart     DateTime
+  periodEnd       DateTime
+
+  // Status
+  status          ReportInstanceStatus @default(GENERATING)
+  errorMessage    String?
+
+  // Submission (for regulatory reports)
+  submittedAt     DateTime?
+  submittedTo     String?
+  submissionRef   String?
+  acknowledgedAt  DateTime?
+  acknowledgementRef String?
+
+  @@index([definitionId])
+  @@index([status])
+  @@index([periodStart])
+  @@index([submittedTo])
+}
+
+enum ReportInstanceStatus {
+  GENERATING
+  GENERATED
+  FAILED
+  SUBMITTED
+  ACKNOWLEDGED
+}
+
+// Audit Log for DocChain operations
+model DocChainAuditLog {
+  id              String   @id @default(uuid())
+
+  // Action
+  action          String   // CREATE, VIEW, DOWNLOAD, APPROVE, etc.
+  entityType      String   // DOCUMENT, REPORT, CHAIN
+  entityId        String
+
+  // Actor
+  actorId         String
+  actorName       String
+  actorRole       String?
+  actorIP         String?
+  userAgent       String?
+
+  // Context
+  sessionId       String?
+  tenantId        String?
+  branchId        String?
+
+  // Details
+  description     String
+  previousValue   Json?
+  newValue        Json?
+  metadata        Json?
+
+  // Severity
+  severity        DocChainAuditSeverity @default(INFO)
+
+  timestamp       DateTime @default(now())
+
+  @@index([entityType, entityId])
+  @@index([actorId])
+  @@index([action])
+  @@index([severity])
+  @@index([timestamp])
+}
+
+enum DocChainAuditSeverity {
+  INFO
+  WARNING
+  CRITICAL
+}
+
+// Retention Policies
+model DocChainRetentionPolicy {
+  id              String   @id @default(uuid())
+  docType         DocChainDocType @unique
+  retentionYears  Int
+  archiveAfterDays Int
+  deleteAfterArchive Boolean @default(false)
+  legalHoldExempt Boolean  @default(false)
+  regulatoryRequirement String?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}

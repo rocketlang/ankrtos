@@ -1,0 +1,146 @@
+version: '3.8'
+
+services:
+  # ==========================================================================
+  # BFC API Service
+  # ==========================================================================
+  bfc-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: bfc-api
+    container_name: bfc-api
+    ports:
+      - "4020:4020"
+    environment:
+      - NODE_ENV=production
+      - PORT=4020
+      - DATABASE_URL=postgresql://ankr:${DB_PASSWORD:-indrA@0612}@postgres:5432/bfc
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - AI_PROXY_URL=http://ai-proxy:4444
+      - EON_URL=http://eon:4005
+      - JWT_SECRET=${JWT_SECRET:-bfc-jwt-secret-change-in-production}
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY:-bfc-aes-256-key-must-be-32-chars!}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - bfc-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4020/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+
+  # ==========================================================================
+  # BFC Web Dashboard
+  # ==========================================================================
+  bfc-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: bfc-web
+    container_name: bfc-web
+    ports:
+      - "3020:80"
+    environment:
+      - VITE_API_URL=http://localhost:4020/graphql
+    depends_on:
+      - bfc-api
+    networks:
+      - bfc-network
+    restart: unless-stopped
+
+  # ==========================================================================
+  # PostgreSQL Database
+  # ==========================================================================
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: bfc-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=ankr
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-indrA@0612}
+      - POSTGRES_DB=bfc
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./scripts/init-db.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - bfc-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ankr -d bfc"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ==========================================================================
+  # Redis Cache
+  # ==========================================================================
+  redis:
+    image: redis:7-alpine
+    container_name: bfc-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis-data:/data
+    networks:
+      - bfc-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ==========================================================================
+  # AI Proxy (Optional - use existing ANKR service)
+  # ==========================================================================
+  # ai-proxy:
+  #   image: ankr/ai-proxy:latest
+  #   container_name: bfc-ai-proxy
+  #   ports:
+  #     - "4444:4444"
+  #   environment:
+  #     - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+  #     - OPENAI_API_KEY=${OPENAI_API_KEY}
+  #   networks:
+  #     - bfc-network
+  #   restart: unless-stopped
+
+  # ==========================================================================
+  # EON Memory (Optional - use existing ANKR service)
+  # ==========================================================================
+  # eon:
+  #   image: ankr/eon:latest
+  #   container_name: bfc-eon
+  #   ports:
+  #     - "4005:4005"
+  #   environment:
+  #     - DATABASE_URL=postgresql://ankr:${DB_PASSWORD:-indrA@0612}@postgres:5432/eon
+  #   depends_on:
+  #     - postgres
+  #   networks:
+  #     - bfc-network
+  #   restart: unless-stopped
+
+# ==========================================================================
+# Networks
+# ==========================================================================
+networks:
+  bfc-network:
+    driver: bridge
+
+# ==========================================================================
+# Volumes
+# ==========================================================================
+volumes:
+  postgres-data:
+  redis-data:
