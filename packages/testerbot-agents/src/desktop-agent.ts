@@ -34,6 +34,8 @@ export class DesktopTestAgent extends TestAgent {
   private config: DesktopAgentConfig;
   private isRecording: boolean = false;
   private currentVideoName: string | null = null;
+  private setupStartTime: number = 0;
+  private setupEndTime: number = 0;
 
   constructor(config: DesktopAgentConfig) {
     super();
@@ -48,6 +50,8 @@ export class DesktopTestAgent extends TestAgent {
    * Launch Electron app
    */
   async setup(): Promise<void> {
+    this.setupStartTime = Date.now();
+
     // Ensure videos directory exists
     if (!fs.existsSync(this.config.videosDir!)) {
       fs.mkdirSync(this.config.videosDir!, { recursive: true });
@@ -80,6 +84,8 @@ export class DesktopTestAgent extends TestAgent {
 
     // Wait for app to be ready
     await this.page.waitForLoadState('domcontentloaded');
+
+    this.setupEndTime = Date.now();
   }
 
   /**
@@ -194,6 +200,36 @@ export class DesktopTestAgent extends TestAgent {
     });
 
     return metrics.heapUsed;
+  }
+
+  /**
+   * Get performance metrics
+   */
+  async getPerformanceMetrics(): Promise<{
+    startupTime?: number;
+    memoryUsage?: number;
+    cpuUsage?: number;
+    networkLatency?: number;
+    fps?: number;
+  }> {
+    const metrics: any = {};
+
+    // Startup time
+    if (this.setupEndTime && this.setupStartTime) {
+      metrics.startupTime = this.setupEndTime - this.setupStartTime;
+    }
+
+    // Memory usage
+    try {
+      metrics.memoryUsage = await this.getMemoryUsage();
+    } catch {
+      // Ignore errors
+    }
+
+    // CPU usage (not available for Electron)
+    // fps (not available for Electron)
+
+    return metrics;
   }
 
   /**

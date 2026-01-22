@@ -134,6 +134,14 @@ export class TesterBotOrchestrator {
 
     const duration = Date.now() - startTime;
 
+    // Collect performance metrics
+    let metrics;
+    try {
+      metrics = await agent.getPerformanceMetrics?.();
+    } catch (metricsErr) {
+      // Ignore metrics collection errors
+    }
+
     return {
       testId: test.id,
       testName: test.name,
@@ -143,6 +151,7 @@ export class TesterBotOrchestrator {
       error,
       screenshots,
       videos,
+      metrics,
       retryCount
     };
   }

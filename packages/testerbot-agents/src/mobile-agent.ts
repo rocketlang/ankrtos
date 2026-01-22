@@ -50,6 +50,8 @@ export class MobileTestAgent extends TestAgent {
   private config: MobileAgentConfig;
   private isRecording: boolean = false;
   private currentVideoName: string | null = null;
+  private setupStartTime: number = 0;
+  private setupEndTime: number = 0;
 
   constructor(config: MobileAgentConfig) {
     super();
@@ -66,6 +68,8 @@ export class MobileTestAgent extends TestAgent {
    * Launch mobile app
    */
   async setup(): Promise<void> {
+    this.setupStartTime = Date.now();
+
     const capabilities = this.buildCapabilities();
 
     const options: RemoteOptions = {
@@ -81,6 +85,8 @@ export class MobileTestAgent extends TestAgent {
 
     // Wait for app to launch
     await this.wait(3000);
+
+    this.setupEndTime = Date.now();
   }
 
   /**
@@ -497,5 +503,29 @@ export class MobileTestAgent extends TestAgent {
     } finally {
       this.currentVideoName = null;
     }
+  }
+
+  /**
+   * Get performance metrics
+   */
+  async getPerformanceMetrics(): Promise<{
+    startupTime?: number;
+    memoryUsage?: number;
+    cpuUsage?: number;
+    networkLatency?: number;
+    fps?: number;
+  }> {
+    const metrics: any = {};
+
+    // Startup time
+    if (this.setupEndTime && this.setupStartTime) {
+      metrics.startupTime = this.setupEndTime - this.setupStartTime;
+    }
+
+    // Memory usage (not easily available via Appium)
+    // CPU usage (not easily available via Appium)
+    // FPS (not easily available via Appium)
+
+    return metrics;
   }
 }

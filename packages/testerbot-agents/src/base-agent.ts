@@ -65,6 +65,17 @@ export abstract class TestAgent {
   abstract stopVideoRecording(save?: boolean): Promise<string | null>;
 
   /**
+   * Get performance metrics
+   */
+  abstract getPerformanceMetrics(): Promise<{
+    startupTime?: number;
+    memoryUsage?: number;
+    cpuUsage?: number;
+    networkLatency?: number;
+    fps?: number;
+  }>;
+
+  /**
    * Wait for specified time
    */
   wait(ms: number): Promise<void> {

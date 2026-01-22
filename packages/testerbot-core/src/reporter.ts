@@ -194,6 +194,20 @@ export class Reporter {
                 </div>
               ` : ''}
             ` : ''}
+            ${test.metrics && (test.metrics.startupTime || test.metrics.memoryUsage || test.metrics.networkLatency) ? `
+              <div style="margin-top: 10px;">
+                <details>
+                  <summary style="cursor: pointer; color: #3498db;">📊 Performance Metrics</summary>
+                  <div style="margin-top: 10px; font-size: 14px; color: #555;">
+                    ${test.metrics.startupTime ? `<div>⏱️ Startup Time: ${test.metrics.startupTime}ms</div>` : ''}
+                    ${test.metrics.memoryUsage ? `<div>💾 Memory Usage: ${(test.metrics.memoryUsage / 1024 / 1024).toFixed(2)} MB</div>` : ''}
+                    ${test.metrics.networkLatency ? `<div>🌐 Network Latency: ${test.metrics.networkLatency}ms</div>` : ''}
+                    ${test.metrics.cpuUsage ? `<div>⚙️ CPU Usage: ${test.metrics.cpuUsage.toFixed(1)}%</div>` : ''}
+                    ${test.metrics.fps ? `<div>🎬 FPS: ${test.metrics.fps}</div>` : ''}
+                  </div>
+                </details>
+              </div>
+            ` : ''}
           </div>
           <div class="test-duration">${test.duration}ms</div>
           <div class="test-status ${test.status}">${test.status}</div>

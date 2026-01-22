@@ -55,6 +55,9 @@ export class WebTestAgent extends TestAgent {
   private config: WebAgentConfig;
   private isRecording: boolean = false;
   private currentVideoName: string | null = null;
+  private setupStartTime: number = 0;
+  private setupEndTime: number = 0;
+  private pageLoadTime: number = 0;
 
   constructor(config: WebAgentConfig) {
     super();
@@ -72,6 +75,8 @@ export class WebTestAgent extends TestAgent {
    * Launch browser and navigate to base URL
    */
   async setup(): Promise<void> {
+    this.setupStartTime = Date.now();
+
     // Ensure videos directory exists
     if (!fs.existsSync(this.config.videosDir!)) {
       fs.mkdirSync(this.config.videosDir!, { recursive: true });
@@ -116,10 +121,14 @@ export class WebTestAgent extends TestAgent {
     });
 
     // Navigate to base URL
+    const navStartTime = Date.now();
     await this.page.goto(this.config.baseUrl, {
       waitUntil: 'domcontentloaded',
       timeout: 30000
     });
+    this.pageLoadTime = Date.now() - navStartTime;
+
+    this.setupEndTime = Date.now();
   }
 
   /**
@@ -452,5 +461,49 @@ export class WebTestAgent extends TestAgent {
     } finally {
       this.currentVideoName = null;
     }
+  }
+
+  /**
+   * Get performance metrics
+   */
+  async getPerformanceMetrics(): Promise<{
+    startupTime?: number;
+    memoryUsage?: number;
+    cpuUsage?: number;
+    networkLatency?: number;
+    fps?: number;
+  }> {
+    const metrics: any = {};
+
+    // Startup time (browser launch + page load)
+    if (this.setupEndTime && this.setupStartTime) {
+      metrics.startupTime = this.setupEndTime - this.setupStartTime;
+    }
+
+    // Network latency (page load time)
+    if (this.pageLoadTime) {
+      metrics.networkLatency = this.pageLoadTime;
+    }
+
+    // Memory usage (via Performance API if available)
+    try {
+      if (this.page) {
+        const perfMetrics = await this.page.evaluate(() => {
+          if ((performance as any).memory) {
+            return {
+              usedJSHeapSize: (performance as any).memory.usedJSHeapSize
+            };
+          }
+          return null;
+        });
+        if (perfMetrics) {
+          metrics.memoryUsage = perfMetrics.usedJSHeapSize;
+        }
+      }
+    } catch {
+      // Performance memory API not available
+    }
+
+    return metrics;
   }
 }
