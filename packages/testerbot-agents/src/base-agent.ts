@@ -76,6 +76,15 @@ export abstract class TestAgent {
   }>;
 
   /**
+   * Take screenshot for visual regression testing
+   * @param name - Name for the screenshot (usually test ID)
+   * @returns Path to saved screenshot
+   */
+  async takeVisualSnapshot(name: string): Promise<string> {
+    return await this.takeScreenshot(name);
+  }
+
+  /**
    * Wait for specified time
    */
   wait(ms: number): Promise<void> {

@@ -1,0 +1,23 @@
+{
+  "name": "@ankr/testerbot-tests",
+  "version": "0.1.0",
+  "description": "Test registry and test suites for TesterBot",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["testing", "test-suites", "e2e", "smoke-tests"],
+  "author": "ANKR Labs",
+  "license": "MIT",
+  "dependencies": {
+    "@ankr/testerbot-core": "workspace:*",
+    "@ankr/testerbot-agents": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.9.3"
+  }
+}

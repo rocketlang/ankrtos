@@ -100,8 +100,31 @@ export interface TestResult {
   /** Performance metrics */
   metrics?: PerformanceMetrics;
 
+  /** Visual regression comparison result */
+  visualComparison?: VisualComparisonResult;
+
   /** Retry attempt number */
   retryCount?: number;
+}
+
+export interface VisualComparisonResult {
+  /** Whether images match within threshold */
+  matches: boolean;
+
+  /** Number of different pixels */
+  diffPixels: number;
+
+  /** Percentage of different pixels (0-100) */
+  diffPercentage: number;
+
+  /** Path to diff image (if generated) */
+  diffImagePath?: string;
+
+  /** Path to baseline image */
+  baselinePath: string;
+
+  /** Path to current screenshot */
+  currentPath: string;
 }
 
 export interface PerformanceMetrics {

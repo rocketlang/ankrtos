@@ -208,6 +208,38 @@ export class Reporter {
                 </details>
               </div>
             ` : ''}
+            ${test.visualComparison ? `
+              <div style="margin-top: 10px;">
+                <details ${!test.visualComparison.matches ? 'open' : ''}>
+                  <summary style="cursor: pointer; color: ${test.visualComparison.matches ? '#3498db' : '#e74c3c'};">
+                    🎨 Visual Comparison ${test.visualComparison.matches ? '✓' : '✗'}
+                  </summary>
+                  <div style="margin-top: 10px; font-size: 14px;">
+                    <div style="color: ${test.visualComparison.matches ? '#27ae60' : '#e74c3c'};">
+                      Match: ${test.visualComparison.matches ? 'Yes' : 'No'}
+                      (${test.visualComparison.diffPercentage.toFixed(4)}% difference)
+                    </div>
+                    <div style="color: #555;">Different Pixels: ${test.visualComparison.diffPixels.toLocaleString()}</div>
+                    ${test.visualComparison.diffImagePath ? `
+                      <div style="margin-top: 10px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+                        <div>
+                          <div style="font-weight: bold; margin-bottom: 5px;">Baseline</div>
+                          <img src="${test.visualComparison.baselinePath}" style="width: 100%; border: 2px solid #3498db; border-radius: 4px;" />
+                        </div>
+                        <div>
+                          <div style="font-weight: bold; margin-bottom: 5px;">Current</div>
+                          <img src="${test.visualComparison.currentPath}" style="width: 100%; border: 2px solid #f39c12; border-radius: 4px;" />
+                        </div>
+                        <div>
+                          <div style="font-weight: bold; margin-bottom: 5px;">Diff</div>
+                          <img src="${test.visualComparison.diffImagePath}" style="width: 100%; border: 2px solid #e74c3c; border-radius: 4px;" />
+                        </div>
+                      </div>
+                    ` : ''}
+                  </div>
+                </details>
+              </div>
+            ` : ''}
           </div>
           <div class="test-duration">${test.duration}ms</div>
           <div class="test-status ${test.status}">${test.status}</div>
