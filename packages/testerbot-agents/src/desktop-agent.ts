@@ -58,9 +58,9 @@ export class DesktopTestAgent extends TestAgent {
     }
 
     // Launch Electron app with video recording enabled
+    // For Playwright Electron: args[0] should be the app path (directory or main.js)
     this.app = await electron.launch({
-      executablePath: this.config.appPath,
-      args: this.config.args || [],
+      args: [this.config.appPath, ...(this.config.args || [])],
       cwd: this.config.cwd,
       env: {
         ...(process.env as Record<string, string>),

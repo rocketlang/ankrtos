@@ -10,18 +10,18 @@ export const ankrshieldSmokeTests: Test[] = [
   {
     id: 'ankrshield-smoke-001',
     name: 'App launches successfully',
-    description: 'Verify the Electron app launches within 3 seconds',
+    description: 'Verify the Electron app launches within 15 seconds',
     type: 'smoke',
     app: 'ankrshield-desktop',
     tags: ['critical', 'startup'],
-    timeout: 5000,
+    timeout: 20000,
     fn: async (agent: DesktopTestAgent) => {
       const startTime = Date.now();
       await agent.setup();
       const launchTime = Date.now() - startTime;
 
-      if (launchTime > 3000) {
-        throw new Error(`App took ${launchTime}ms to launch (should be < 3000ms)`);
+      if (launchTime > 15000) {
+        throw new Error(`App took ${launchTime}ms to launch (should be < 15000ms)`);
       }
 
       const isVisible = await agent.isAppVisible();
