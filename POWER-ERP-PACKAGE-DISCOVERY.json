@@ -1,0 +1,56 @@
+[
+  {
+    "name": "@powererp/accounting-ap",
+    "description": "Power ERP accounting - ap",
+    "path": "/root/power-erp/apps/api/src/modules/accounting/ap.schema.ts",
+    "files": [
+      "ap.schema.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "APAgingBucketType"
+    ],
+    "size": 27010,
+    "reusability": "medium",
+    "reason": "ERP module"
+  },
+  {
+    "name": "@powererp/accounting-ar",
+    "description": "Power ERP accounting - ar",
+    "path": "/root/power-erp/apps/api/src/modules/accounting/ar.schema.ts",
+    "files": [
+      "ar.schema.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "ARAgingBucketType"
+    ],
+    "size": 24404,
+    "reusability": "medium",
+    "reason": "ERP module"
+  },
+  {
+    "name": "@powererp/projects-projects",
+    "description": "Power ERP projects - projects",
+    "path": "/root/power-erp/apps/api/src/modules/projects/projects.schema.ts",
+    "files": [
+      "projects.schema.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "ProjectType",
+      "ProjectPhaseType",
+      "ProjectTaskType",
+      "ProjectMemberType",
+      "TimeEntryType",
+      "TaskAttachmentType",
+      "ProjectCommentType"
+    ],
+    "size": 41350,
+    "reusability": "medium",
+    "reason": "ERP module"
+  }
+]

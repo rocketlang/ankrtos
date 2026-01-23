@@ -1,0 +1,2540 @@
+[
+  {
+    "name": "@fr8x/services-address.service",
+    "description": "Fr8X services - address.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/address.service.ts",
+    "files": [
+      "address.service.ts"
+    ],
+    "dependencies": [
+      "nanoid"
+    ],
+    "category": "backend",
+    "exports": [
+      "searchAddress",
+      "reverseGeocode",
+      "lookupPincode",
+      "calculateDistance",
+      "isWithinIndia",
+      "",
+      "CreateAddressInput",
+      "UpdateAddressInput",
+      "ValidationError",
+      "AddressServiceResult",
+      "AddressService",
+      "createAddressService"
+    ],
+    "size": 21151,
+    "reusability": "medium",
+    "reason": "12 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-admin.service",
+    "description": "Fr8X services - admin.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/admin.service.ts",
+    "files": [
+      "admin.service.ts"
+    ],
+    "dependencies": [
+      "@ankr/iam"
+    ],
+    "category": "backend",
+    "exports": [
+      "AdminUser",
+      "AdminRole",
+      "Tenant",
+      "TenantPlan",
+      "TenantSettings",
+      "TenantUsage",
+      "TenantBilling",
+      "SystemConfig",
+      "AuditLog",
+      "FeatureFlag",
+      "PlatformStats",
+      "AdminService",
+      "adminService"
+    ],
+    "size": 16296,
+    "reusability": "medium",
+    "reason": "13 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-advanced-analytics.service",
+    "description": "Fr8X services - advanced-analytics.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/advanced-analytics.service.ts",
+    "files": [
+      "advanced-analytics.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "DemandForecast",
+      "CarrierScore",
+      "RouteRecommendation",
+      "PricePrediction",
+      "AnalyticsInsight",
+      "createAdvancedAnalyticsService",
+      "AdvancedAnalyticsService"
+    ],
+    "size": 35479,
+    "reusability": "high",
+    "reason": "7 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-agent-orchestrator.service",
+    "description": "Fr8X services - agent-orchestrator.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/agent-orchestrator.service.ts",
+    "files": [
+      "agent-orchestrator.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "AgentProvider",
+      "TaskComplexity",
+      "TaskType",
+      "AgentConfig",
+      "TaskClassification",
+      "AgentOutput",
+      "JudgmentScore",
+      "ExecutionResult",
+      "ChainStep",
+      "ChainResult",
+      "AgentStats",
+      "AgentOrchestratorService",
+      "getAgentOrchestratorService",
+      "createAgentOrchestratorService"
+    ],
+    "size": 17526,
+    "reusability": "medium",
+    "reason": "14 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-analytics.service",
+    "description": "Fr8X services - analytics.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/analytics.service.ts",
+    "files": [
+      "analytics.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "DashboardMetrics",
+      "OverviewMetrics",
+      "LoadBoardMetrics",
+      "LaneMetric",
+      "FleetMetrics",
+      "FinancialMetrics",
+      "PerformanceMetrics",
+      "DateRange",
+      "AnalyticsFilter",
+      "AnalyticsService",
+      "default"
+    ],
+    "size": 16568,
+    "reusability": "high",
+    "reason": "11 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-audit.service",
+    "description": "Fr8X services - audit.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/audit.service.ts",
+    "files": [
+      "audit.service.ts"
+    ],
+    "dependencies": [
+      "nanoid"
+    ],
+    "category": "backend",
+    "exports": [
+      "AuditEventType",
+      "AuditSeverity",
+      "AuditCategory",
+      "AuditLogInput",
+      "AuditLog",
+      "AuditQueryOptions",
+      "AuditQueryResult",
+      "AuditSummary",
+      "ComplianceReport",
+      "AuditService",
+      "createAuditService"
+    ],
+    "size": 22219,
+    "reusability": "medium",
+    "reason": "11 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-backhaul-optimizer.service",
+    "description": "Fr8X services - backhaul-optimizer.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/backhaul-optimizer.service.ts",
+    "files": [
+      "backhaul-optimizer.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "createBackhaulOptimizerService",
+      "BackhaulOptimizerService"
+    ],
+    "size": 36064,
+    "reusability": "high",
+    "reason": "2 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-booking.service",
+    "description": "Fr8X services - booking.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/booking.service.ts",
+    "files": [
+      "booking.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "QuoteRequestStatus",
+      "BidStatus",
+      "BookingType",
+      "BookingStatus",
+      "CreateQuoteRequestInput",
+      "CarrierBidInput",
+      "InstantBookingInput",
+      "ContractRate",
+      "BookingResult",
+      "WorkflowEvent",
+      "BOOKING_WIZARD_STEPS",
+      "BookingService",
+      "createBookingService",
+      "default"
+    ],
+    "size": 48488,
+    "reusability": "high",
+    "reason": "14 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-bot.service",
+    "description": "Fr8X services - bot.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/bot.service.ts",
+    "files": [
+      "bot.service.ts"
+    ],
+    "dependencies": [
+      "@ankr/ai-router"
+    ],
+    "category": "backend",
+    "exports": [
+      "createBotService",
+      "BotService"
+    ],
+    "size": 49614,
+    "reusability": "medium",
+    "reason": "2 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-bulk-operations.service",
+    "description": "Fr8X services - bulk-operations.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/bulk-operations.service.ts",
+    "files": [
+      "bulk-operations.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "BulkOperation",
+      "BulkOperationType",
+      "BulkOperationStatus",
+      "BulkOperationResult",
+      "BulkStatusUpdate",
+      "BulkAssignment",
+      "BulkRateUpdate",
+      "BulkDocumentGeneration",
+      "BulkNotification",
+      "BulkExport",
+      "BulkSchedule",
+      "BulkFilter",
+      "BulkOperationProgress",
+      "BulkOperationsService",
+      "bulkOperationsService"
+    ],
+    "size": 20090,
+    "reusability": "high",
+    "reason": "15 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-cache.service",
+    "description": "Fr8X services - cache.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/cache.service.ts",
+    "files": [
+      "cache.service.ts"
+    ],
+    "dependencies": [
+      "ioredis"
+    ],
+    "category": "backend",
+    "exports": [
+      "CacheConfig",
+      "CacheEntry",
+      "CacheStats",
+      "CacheTTL",
+      "CacheService",
+      "getCacheService",
+      "createCacheService",
+      "CarrierCacheHelper",
+      "createCarrierCacheHelper",
+      "ShipmentBatchHelper",
+      "createShipmentBatchHelper"
+    ],
+    "size": 12126,
+    "reusability": "medium",
+    "reason": "11 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-carbon-tracking.service",
+    "description": "Fr8X services - carbon-tracking.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/carbon-tracking.service.ts",
+    "files": [
+      "carbon-tracking.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "EmissionFactors",
+      "CarbonEmission",
+      "EmissionBreakdown",
+      "CarbonReport",
+      "ReductionOpportunity",
+      "OffsetRecommendation",
+      "ComplianceStatus",
+      "ShipmentEmission",
+      "CarbonTrackingService",
+      "createCarbonTrackingService"
+    ],
+    "size": 27134,
+    "reusability": "high",
+    "reason": "10 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-carrier.service",
+    "description": "Fr8X services - carrier.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/carrier.service.ts",
+    "files": [
+      "carrier.service.ts"
+    ],
+    "dependencies": [
+      "nanoid"
+    ],
+    "category": "backend",
+    "exports": [
+      "RegisterCarrierInput",
+      "UpdateCarrierInput",
+      "ValidationError",
+      "CarrierServiceResult",
+      "TrustScoreBreakdown",
+      "CarrierService",
+      "createCarrierService"
+    ],
+    "size": 21044,
+    "reusability": "medium",
+    "reason": "7 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-compliance.service",
+    "description": "Fr8X services - compliance.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/compliance.service.ts",
+    "files": [
+      "compliance.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "FREIGHT_GST_RATES",
+      "FREIGHT_HSN_CODES",
+      "EWAY_BILL_THRESHOLD",
+      "STATE_CODES",
+      "GSTVerificationResult",
+      "GSTCalculationResult",
+      "EwayBillRequest",
+      "EwayBillItem",
+      "EwayBillResult",
+      "EinvoiceRequest",
+      "EinvoiceItem",
+      "EinvoiceResult",
+      "HSNLookupResult",
+      "complianceService"
+    ],
+    "size": 24893,
+    "reusability": "high",
+    "reason": "14 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-crm-integration.service",
+    "description": "Fr8X services - crm-integration.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/crm-integration.service.ts",
+    "files": [
+      "crm-integration.service.ts"
+    ],
+    "dependencies": [
+      "@ankr/crm-core"
+    ],
+    "category": "backend",
+    "exports": [
+      "Lead",
+      "LeadSource",
+      "LeadStatus",
+      "LeadActivity",
+      "Contact",
+      "Deal",
+      "DealStage",
+      "DealProduct",
+      "Campaign",
+      "CRMStats",
+      "CRMIntegrationService",
+      "crmIntegrationService"
+    ],
+    "size": 17280,
+    "reusability": "medium",
+    "reason": "12 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-dev-tools.service",
+    "description": "Fr8X services - dev-tools.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/dev-tools.service.ts",
+    "files": [
+      "dev-tools.service.ts"
+    ],
+    "dependencies": [
+      "react",
+      "vitest"
+    ],
+    "category": "backend",
+    "exports": [
+      "RBACTestUser",
+      "RBACTestCase",
+      "RBACTestResult",
+      "RBACSummary",
+      "MockDataConfig",
+      "GeneratedMockData",
+      "CodeGenRequest",
+      "CodeGenResult",
+      "HealthCheckResult",
+      "SystemHealthReport",
+      "FR8X_TEST_USERS",
+      "FR8X_TEST_CASES",
+      "devToolsService",
+      "default"
+    ],
+    "size": 27820,
+    "reusability": "medium",
+    "reason": "14 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-dispute.service",
+    "description": "Fr8X services - dispute.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/dispute.service.ts",
+    "files": [
+      "dispute.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "Dispute",
+      "DisputeType",
+      "DisputeStatus",
+      "DisputePriority",
+      "DisputeCategory",
+      "DisputeEvidence",
+      "EvidenceType",
+      "DisputeEvent",
+      "EventType",
+      "DisputeResolution",
+      "ResolutionType",
+      "CompensationType",
+      "DisputeSLA",
+      "SettlementOffer",
+      "DisputeFilter",
+      "DisputeStats",
+      "DisputeService",
+      "disputeService"
+    ],
+    "size": 19432,
+    "reusability": "high",
+    "reason": "18 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-dms.service",
+    "description": "Fr8X services - dms.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/dms.service.ts",
+    "files": [
+      "dms.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "DocumentCategory",
+      "DocumentStatus",
+      "StorageProvider",
+      "DocumentMetadata",
+      "Document",
+      "DocumentVersion",
+      "Folder",
+      "Permission",
+      "UploadOptions",
+      "SearchOptions",
+      "SearchResult",
+      "DMSService",
+      "getDMSService",
+      "createDMSService"
+    ],
+    "size": 17643,
+    "reusability": "medium",
+    "reason": "14 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-docscan.service",
+    "description": "Fr8X services - docscan.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/docscan.service.ts",
+    "files": [
+      "docscan.service.ts"
+    ],
+    "dependencies": [
+      "@ankr/ai-router"
+    ],
+    "category": "backend",
+    "exports": [
+      "DocScanType",
+      "OCRResult",
+      "ValidationResult",
+      "ExternalVerificationResult",
+      "docScanService",
+      "default"
+    ],
+    "size": 23758,
+    "reusability": "medium",
+    "reason": "6 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-document-generation.service",
+    "description": "Fr8X services - document-generation.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/document-generation.service.ts",
+    "files": [
+      "document-generation.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "TEMPLATE_CONFIG",
+      "DocumentMetadata",
+      "EwayBillData",
+      "EinvoiceData",
+      "LorryReceiptData",
+      "GSTReportData",
+      "GeneratedDocument",
+      "documentGenerationService"
+    ],
+    "size": 38604,
+    "reusability": "high",
+    "reason": "8 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-driver.service",
+    "description": "Fr8X services - driver.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/driver.service.ts",
+    "files": [
+      "driver.service.ts"
+    ],
+    "dependencies": [
+      "nanoid"
+    ],
+    "category": "backend",
+    "exports": [
+      "RegisterDriverInput",
+      "UpdateDriverInput",
+      "DriverLocationUpdate",
+      "DriverServiceResult",
+      "DriverVerificationResult",
+      "DriverPerformance",
+      "DriverService",
+      "createDriverService"
+    ],
+    "size": 19714,
+    "reusability": "medium",
+    "reason": "8 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-dynamic-pricing.service",
+    "description": "Fr8X services - dynamic-pricing.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/dynamic-pricing.service.ts",
+    "files": [
+      "dynamic-pricing.service.ts"
+    ],
+    "dependencies": [
+      "crypto"
+    ],
+    "category": "backend",
+    "exports": [
+      "RateResult",
+      "SurgeInfo",
+      "RateTrend",
+      "PricingConfig",
+      "DynamicPricingService",
+      "getDynamicPricingService",
+      "default"
+    ],
+    "size": 20111,
+    "reusability": "medium",
+    "reason": "7 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-eon-memory.service",
+    "description": "Fr8X services - eon-memory.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/eon-memory.service.ts",
+    "files": [
+      "eon-memory.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "LogisticsDocType",
+      "LogisticsMetadata",
+      "LogisticsDocument",
+      "SearchOptions",
+      "SearchResult",
+      "IngestResult",
+      "ContextResult",
+      "DriverAnswer",
+      "DriverContext",
+      "EonMemoryService",
+      "getEonMemoryService",
+      "createEonMemoryService"
+    ],
+    "size": 20125,
+    "reusability": "medium",
+    "reason": "12 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-erp-integration.service",
+    "description": "Fr8X services - erp-integration.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/erp-integration.service.ts",
+    "files": [
+      "erp-integration.service.ts"
+    ],
+    "dependencies": [
+      "crypto"
+    ],
+    "category": "backend",
+    "exports": [
+      "ERPConfig",
+      "ERPProvider",
+      "ERPCredentials",
+      "ERPSettings",
+      "FieldMapping",
+      "SyncResult",
+      "InvoiceData",
+      "InvoiceItem",
+      "PaymentData",
+      "VendorData",
+      "ERPIntegrationService",
+      "createERPIntegrationService"
+    ],
+    "size": 31286,
+    "reusability": "medium",
+    "reason": "12 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-export.service",
+    "description": "Fr8X services - export.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/export.service.ts",
+    "files": [
+      "export.service.ts"
+    ],
+    "dependencies": [
+      "nanoid"
+    ],
+    "category": "backend",
+    "exports": [
+      "ExportFormat",
+      "ReportType",
+      "ExportRequest",
+      "ExportFilters",
+      "ExportOptions",
+      "ExportResult",
+      "ExportJob",
+      "ExportService",
+      "createExportService"
+    ],
+    "size": 24563,
+    "reusability": "medium",
+    "reason": "9 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-flow.service",
+    "description": "Fr8X services - flow.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/flow.service.ts",
+    "files": [
+      "flow.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "FlowState",
+      "StageHistoryEntry",
+      "TransitionResult",
+      "EntityFlowSummary",
+      "FlowService",
+      "getFlowService",
+      "default"
+    ],
+    "size": 13100,
+    "reusability": "high",
+    "reason": "7 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-fraud-detection.service",
+    "description": "Fr8X services - fraud-detection.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/fraud-detection.service.ts",
+    "files": [
+      "fraud-detection.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "FraudCheckInput",
+      "FraudCheckResult",
+      "FraudFlag",
+      "FraudFlagType",
+      "BehaviorEvent",
+      "RiskProfile",
+      "RiskEvent",
+      "BehavioralProfile",
+      "FraudStatistics",
+      "FraudDetectionService",
+      "getFraudDetectionService",
+      "createFraudDetectionService"
+    ],
+    "size": 15613,
+    "reusability": "medium",
+    "reason": "12 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-gamification.service",
+    "description": "Fr8X services - gamification.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/gamification.service.ts",
+    "files": [
+      "gamification.service.ts"
+    ],
+    "dependencies": [
+      "@ankr/wire"
+    ],
+    "category": "backend",
+    "exports": [
+      "Mission",
+      "UserMission",
+      "MissionCategory",
+      "Achievement",
+      "AchievementCategory",
+      "UserAchievement",
+      "LeaderboardEntry",
+      "UserStats",
+      "Streak",
+      "PointTransaction",
+      "GamificationService",
+      "createGamificationService"
+    ],
+    "size": 30125,
+    "reusability": "medium",
+    "reason": "12 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-geocoding.service",
+    "description": "Fr8X services - geocoding.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/geocoding.service.ts",
+    "files": [
+      "geocoding.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "initGeocodingService",
+      "GeocodingResult",
+      "PincodeResult",
+      "DistanceResult",
+      "isWithinIndia",
+      "haversineDistance",
+      "formatAddress",
+      "GeocodingService",
+      "default"
+    ],
+    "size": 15833,
+    "reusability": "high",
+    "reason": "9 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-gps-tracking.service",
+    "description": "Fr8X services - gps-tracking.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/gps-tracking.service.ts",
+    "files": [
+      "gps-tracking.service.ts"
+    ],
+    "dependencies": [
+      "events"
+    ],
+    "category": "backend",
+    "exports": [
+      "DriverLocation",
+      "Geofence",
+      "GeofenceAlert",
+      "BehaviorScore",
+      "BehaviorEventType",
+      "BehaviorEvent",
+      "FuelEntry",
+      "RouteStop",
+      "OptimizedRoute",
+      "FatigueStatus",
+      "AccidentReport",
+      "VoiceCommand",
+      "GPSStats",
+      "BEHAVIOR_PENALTIES",
+      "FATIGUE_THRESHOLDS",
+      "SPEED_LIMITS",
+      "VOICE_COMMANDS",
+      "gpsTrackingService"
+    ],
+    "size": 33566,
+    "reusability": "medium",
+    "reason": "18 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-hrms-integration.service",
+    "description": "Fr8X services - hrms-integration.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/hrms-integration.service.ts",
+    "files": [
+      "hrms-integration.service.ts"
+    ],
+    "dependencies": [
+      "@ankr/hrms"
+    ],
+    "category": "backend",
+    "exports": [
+      "Employee",
+      "EmployeeType",
+      "EmployeeStatus",
+      "Address",
+      "EmergencyContact",
+      "EmployeeDocument",
+      "BankDetails",
+      "StatutoryDetails",
+      "Attendance",
+      "Leave",
+      "LeaveType",
+      "LeaveBalance",
+      "Payroll",
+      "PayrollComponent",
+      "Department",
+      "HRMSStats",
+      "HRMSIntegrationService",
+      "hrmsIntegrationService"
+    ],
+    "size": 18886,
+    "reusability": "medium",
+    "reason": "18 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-i18n.service",
+    "description": "Fr8X services - i18n.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/i18n.service.ts",
+    "files": [
+      "i18n.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "SupportedLocale",
+      "LocaleConfig",
+      "NumberFormatConfig",
+      "Translation",
+      "TranslationCategory",
+      "PluralForms",
+      "TranslationContext",
+      "FormattedValue",
+      "I18nService",
+      "createI18nService",
+      "createTranslator"
+    ],
+    "size": 22911,
+    "reusability": "high",
+    "reason": "11 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-index",
+    "description": "Fr8X services - index",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/index.ts",
+    "files": [
+      "index.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "CarrierService",
+      "createCarrierService",
+      "type RegisterCarrierInput",
+      "type UpdateCarrierInput",
+      "type CarrierServiceResult",
+      "type TrustScoreBreakdown",
+      "",
+      "initGeocodingService",
+      "geocodeAddress",
+      "searchPincodesByArea",
+      "findNearestPincode",
+      "getPostOfficesByPincode",
+      "searchPostOffices",
+      "smartAddressSearch",
+      "haversineDistance",
+      "formatAddress",
+      "GeocodingService",
+      "type DistanceResult"
+    ],
+    "size": 3434,
+    "reusability": "high",
+    "reason": "18 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-insurance.service",
+    "description": "Fr8X services - insurance.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/insurance.service.ts",
+    "files": [
+      "insurance.service.ts"
+    ],
+    "dependencies": [
+      "crypto"
+    ],
+    "category": "backend",
+    "exports": [
+      "InsuranceQuoteRequest",
+      "CargoType",
+      "TransportMode",
+      "PackagingType",
+      "SpecialHandling",
+      "LocationInfo",
+      "InsuranceQuote",
+      "CoverageDetails",
+      "InsurancePolicy",
+      "PolicyStatus",
+      "PolicyType",
+      "PolicyDocument",
+      "InsuranceClaim",
+      "ClaimStatus",
+      "ClaimType",
+      "DamageDetails",
+      "ClaimDocument",
+      "ClaimEvent",
+      "RiskAssessment",
+      "RiskFactor",
+      "InsuranceService",
+      "createInsuranceService"
+    ],
+    "size": 22289,
+    "reusability": "medium",
+    "reason": "22 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-lead-scraper.service",
+    "description": "Fr8X services - lead-scraper.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/lead-scraper.service.ts",
+    "files": [
+      "lead-scraper.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "ScrapedLead",
+      "LeadScraperConfig",
+      "LeadStats",
+      "SiteConfig",
+      "INDIAN_LOAD_BOARDS",
+      "DEFAULT_KEYWORDS",
+      "leadScraperService",
+      "default"
+    ],
+    "size": 20776,
+    "reusability": "high",
+    "reason": "8 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-marketplace.service",
+    "description": "Fr8X services - marketplace.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/marketplace.service.ts",
+    "files": [
+      "marketplace.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "CarrierRating",
+      "CarrierProfile",
+      "Badge",
+      "BadgeType",
+      "VerificationStatus",
+      "ReviewFilter",
+      "ReputationScore",
+      "MarketplaceService",
+      "marketplaceService"
+    ],
+    "size": 15953,
+    "reusability": "high",
+    "reason": "9 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-messaging.service",
+    "description": "Fr8X services - messaging.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/messaging.service.ts",
+    "files": [
+      "messaging.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "Message",
+      "MessageType",
+      "MessageStatus",
+      "Attachment",
+      "MessageMetadata",
+      "Conversation",
+      "ConversationType",
+      "ConversationStatus",
+      "Participant",
+      "ConversationFilter",
+      "QuickReply",
+      "MessagingService",
+      "messagingService"
+    ],
+    "size": 15286,
+    "reusability": "high",
+    "reason": "13 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-milestone.service",
+    "description": "Fr8X services - milestone.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/milestone.service.ts",
+    "files": [
+      "milestone.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "MilestoneState",
+      "MilestoneTimeline",
+      "MilestoneTimelineEntry",
+      "MilestoneAlert",
+      "MilestoneService",
+      "getMilestoneService",
+      "default"
+    ],
+    "size": 13437,
+    "reusability": "high",
+    "reason": "7 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-ml-optimizer.service",
+    "description": "Fr8X services - ml-optimizer.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/ml-optimizer.service.ts",
+    "files": [
+      "ml-optimizer.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "CarrierPreferences",
+      "MLScoreAdjustment",
+      "DemandPrediction",
+      "DynamicWeights",
+      "createMLOptimizerService",
+      "MLOptimizerService"
+    ],
+    "size": 33063,
+    "reusability": "high",
+    "reason": "6 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-multi-tenant.service",
+    "description": "Fr8X services - multi-tenant.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/multi-tenant.service.ts",
+    "files": [
+      "multi-tenant.service.ts"
+    ],
+    "dependencies": [
+      "fastify"
+    ],
+    "category": "backend",
+    "exports": [
+      "TenantConfig",
+      "TenantPlan",
+      "TenantFeatures",
+      "TenantLimits",
+      "TenantBranding",
+      "TenantSettings",
+      "NotificationPreferences",
+      "TenantUsage",
+      "TenantContext",
+      "MultiTenantService",
+      "createMultiTenantService",
+      "getTenantContext",
+      "requireFeature"
+    ],
+    "size": 21392,
+    "reusability": "medium",
+    "reason": "13 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-notification.service",
+    "description": "Fr8X services - notification.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/notification.service.ts",
+    "files": [
+      "notification.service.ts"
+    ],
+    "dependencies": [
+      "@ankr/wire",
+      "@ankr/alerts",
+      "@ankr/oauth",
+      "pg"
+    ],
+    "category": "backend",
+    "exports": [
+      "ALERT_TOPICS",
+      "NOTIFY_TOPICS",
+      "TEMPLATES",
+      "NotificationRecipient",
+      "NotificationChannel",
+      "AlertCategory",
+      "AlertPriority",
+      "NotificationPayload",
+      "AlertInput",
+      "SOSInput",
+      "BroadcastInput",
+      "FR8X_TOPICS",
+      "NotificationServiceConfig",
+      "NotificationService",
+      "notificationService"
+    ],
+    "size": 31755,
+    "reusability": "medium",
+    "reason": "15 exports, documented, typed"
+  },
+  {
+    "name": "@fr8x/services-ocean-tracking.service",
+    "description": "Fr8X services - ocean-tracking.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/ocean-tracking.service.ts",
+    "files": [
+      "ocean-tracking.service.ts"
+    ],
+    "dependencies": [
+      "events"
+    ],
+    "category": "backend",
+    "exports": [
+      "ContainerTrackRequest",
+      "CarrierCode",
+      "ContainerStatus",
+      "ContainerStatusType",
+      "ContainerEvent",
+      "VesselTrackRequest",
+      "VesselStatus",
+      "VesselStatusType",
+      "FreightRate",
+      "ContainerType",
+      "OceanAlert",
+      "SUPPORTED_CARRIERS",
+      "INDIAN_PORTS",
+      "oceanTrackingService"
+    ],
+    "size": 23303,
+    "reusability": "medium",
+    "reason": "14 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-ocr.service",
+    "description": "Fr8X services - ocr.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/ocr.service.ts",
+    "files": [
+      "ocr.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "DocumentType",
+      "SupportedLanguage",
+      "OCREngine",
+      "OCRConfig",
+      "PreprocessOptions",
+      "BoundingBox",
+      "TextBlock",
+      "ExtractedFields",
+      "OCRResult",
+      "OCRService",
+      "getOCRService",
+      "createOCRService"
+    ],
+    "size": 17967,
+    "reusability": "medium",
+    "reason": "12 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-offline-sync.service",
+    "description": "Fr8X services - offline-sync.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/offline-sync.service.ts",
+    "files": [
+      "offline-sync.service.ts"
+    ],
+    "dependencies": [
+      "crypto"
+    ],
+    "category": "backend",
+    "exports": [
+      "SyncState",
+      "SyncRequest",
+      "SyncResponse",
+      "SyncChanges",
+      "ShipmentChange",
+      "DriverChange",
+      "VehicleChange",
+      "RouteChange",
+      "DocumentChange",
+      "NotificationChange",
+      "OfflineOperation",
+      "OperationType",
+      "EntityType",
+      "SyncConflict",
+      "FailedOperation",
+      "DeviceInfo",
+      "SyncMetrics",
+      "OfflineSyncService",
+      "createOfflineSyncService"
+    ],
+    "size": 33697,
+    "reusability": "medium",
+    "reason": "19 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-organization.service",
+    "description": "Fr8X services - organization.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/organization.service.ts",
+    "files": [
+      "organization.service.ts"
+    ],
+    "dependencies": [
+      "nanoid"
+    ],
+    "category": "backend",
+    "exports": [
+      "CreateOrganizationInput",
+      "UpdateOrganizationInput",
+      "ValidationErrors",
+      "OrganizationServiceResult",
+      "OrganizationService",
+      "createOrganizationService"
+    ],
+    "size": 13386,
+    "reusability": "medium",
+    "reason": "6 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-pod.service",
+    "description": "Fr8X services - pod.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/pod.service.ts",
+    "files": [
+      "pod.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "ProofOfDelivery",
+      "RecipientInfo",
+      "RecipientRelationship",
+      "PODPhoto",
+      "PhotoType",
+      "PhotoAnalysis",
+      "SignatureData",
+      "PODLocation",
+      "CargoCondition",
+      "ConditionRating",
+      "SealsCondition",
+      "DamageReport",
+      "DamageType",
+      "TemperatureReading",
+      "VerificationStatus",
+      "PODTimestamps",
+      "PODMetadata",
+      "PODTemplate",
+      "CustomField",
+      "PODService",
+      "podService"
+    ],
+    "size": 16559,
+    "reusability": "high",
+    "reason": "21 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-predictive-pricing.service",
+    "description": "Fr8X services - predictive-pricing.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/predictive-pricing.service.ts",
+    "files": [
+      "predictive-pricing.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "PricingFactors",
+      "PricePrediction",
+      "PriceFactorBreakdown",
+      "MarketComparison",
+      "TrendAnalysis",
+      "DynamicAdjustment",
+      "MarketInsight",
+      "PredictivePricingService",
+      "createPredictivePricingService"
+    ],
+    "size": 29190,
+    "reusability": "high",
+    "reason": "9 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-push-notification.service",
+    "description": "Fr8X services - push-notification.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/push-notification.service.ts",
+    "files": [
+      "push-notification.service.ts"
+    ],
+    "dependencies": [
+      "crypto",
+      "@ankr/wire"
+    ],
+    "category": "backend",
+    "exports": [
+      "PushToken",
+      "DeviceMetadata",
+      "PushNotification",
+      "NotificationTemplate",
+      "NotificationCategory",
+      "SendResult",
+      "BulkSendResult",
+      "ScheduledNotification",
+      "NotificationPreferences",
+      "NotificationStats",
+      "PushNotificationService",
+      "createPushNotificationService"
+    ],
+    "size": 23325,
+    "reusability": "medium",
+    "reason": "12 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-rag.service",
+    "description": "Fr8X services - rag.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/rag.service.ts",
+    "files": [
+      "rag.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "RAGDocument",
+      "IndexedDocument",
+      "SearchResult",
+      "RAGResult",
+      "RAGConfig",
+      "RAGService",
+      "getRAGService",
+      "createRAGService"
+    ],
+    "size": 12779,
+    "reusability": "medium",
+    "reason": "8 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-rate-limiter.service",
+    "description": "Fr8X services - rate-limiter.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/rate-limiter.service.ts",
+    "files": [
+      "rate-limiter.service.ts"
+    ],
+    "dependencies": [
+      "ioredis"
+    ],
+    "category": "backend",
+    "exports": [
+      "RateLimitConfig",
+      "RateLimitResult",
+      "SlidingWindowConfig",
+      "TokenBucketConfig",
+      "DynamicPricingConfig",
+      "RateLimiterService",
+      "rateLimiters",
+      "default"
+    ],
+    "size": 13101,
+    "reusability": "medium",
+    "reason": "8 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-rate.service",
+    "description": "Fr8X services - rate.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/rate.service.ts",
+    "files": [
+      "rate.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "ROAD_VEHICLE_RATES",
+      "AIR_FREIGHT_RATES",
+      "OCEAN_FREIGHT_RATES",
+      "RAIL_FREIGHT_RATES",
+      "TransportMode",
+      "RateRequest",
+      "RateResult",
+      "VehicleOption",
+      "RateService",
+      "createRateService"
+    ],
+    "size": 22993,
+    "reusability": "high",
+    "reason": "10 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-razorpay.service",
+    "description": "Fr8X services - razorpay.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/razorpay.service.ts",
+    "files": [
+      "razorpay.service.ts"
+    ],
+    "dependencies": [
+      "razorpay",
+      "crypto"
+    ],
+    "category": "backend",
+    "exports": [
+      "CheckoutType",
+      "createRazorpayService",
+      "RazorpayService"
+    ],
+    "size": 31878,
+    "reusability": "medium",
+    "reason": "3 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-realtime-analytics.service",
+    "description": "Fr8X services - realtime-analytics.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/realtime-analytics.service.ts",
+    "files": [
+      "realtime-analytics.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "DashboardMetrics",
+      "OverviewMetrics",
+      "ShipmentMetrics",
+      "FleetMetrics",
+      "FinancialMetrics",
+      "PerformanceMetrics",
+      "StatusCount",
+      "TypeCount",
+      "RouteMetrics",
+      "TrendData",
+      "DelayAnalysis",
+      "HeatmapData",
+      "VehicleLocation",
+      "TypeUtilization",
+      "FuelMetrics",
+      "CustomerRevenue",
+      "RouteRevenue",
+      "DriverPerformance",
+      "CarrierPerformance",
+      "Alert",
+      "AlertType",
+      "AnalyticsFilter",
+      "RealtimeSubscription",
+      "RealtimeAnalyticsService",
+      "createRealtimeAnalyticsService"
+    ],
+    "size": 26493,
+    "reusability": "high",
+    "reason": "25 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-resource-pool.service",
+    "description": "Fr8X services - resource-pool.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/resource-pool.service.ts",
+    "files": [
+      "resource-pool.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "ResourceType",
+      "ResourcePoolStatus",
+      "OpportunityStatus",
+      "ResourceCapabilities",
+      "PreferredRoutes",
+      "NearbyQuery",
+      "OpportunityInput",
+      "MatchResult",
+      "createResourcePoolService",
+      "ResourcePoolService"
+    ],
+    "size": 27113,
+    "reusability": "high",
+    "reason": "10 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-route-optimizer.service",
+    "description": "Fr8X services - route-optimizer.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/route-optimizer.service.ts",
+    "files": [
+      "route-optimizer.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "Coordinates",
+      "Location",
+      "RouteStop",
+      "OptimizedRoute",
+      "RouteConstraints",
+      "OptimizationRequest",
+      "ConsolidationOpportunity",
+      "TrafficData",
+      "RouteOptimizerService",
+      "createRouteOptimizerService"
+    ],
+    "size": 35047,
+    "reusability": "high",
+    "reason": "10 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-search.service",
+    "description": "Fr8X services - search.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/search.service.ts",
+    "files": [
+      "search.service.ts"
+    ],
+    "dependencies": [
+      "nanoid"
+    ],
+    "category": "backend",
+    "exports": [
+      "SearchableEntity",
+      "SearchInput",
+      "SearchFilters",
+      "SearchResult",
+      "SearchHighlight",
+      "SearchResponse",
+      "SearchFacets",
+      "EmbeddingRequest",
+      "VectorSearchOptions",
+      "SearchService",
+      "createSearchService"
+    ],
+    "size": 21173,
+    "reusability": "medium",
+    "reason": "11 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-shipment.service",
+    "description": "Fr8X services - shipment.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/shipment.service.ts",
+    "files": [
+      "shipment.service.ts"
+    ],
+    "dependencies": [
+      "nanoid"
+    ],
+    "category": "backend",
+    "exports": [
+      "CreateShipmentInput",
+      "AssignCarrierInput",
+      "UpdateLocationInput",
+      "ShipmentServiceResult",
+      "ShipmentService",
+      "createShipmentService"
+    ],
+    "size": 42011,
+    "reusability": "medium",
+    "reason": "6 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-subscription.service",
+    "description": "Fr8X services - subscription.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/subscription.service.ts",
+    "files": [
+      "subscription.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "SeatLimits",
+      "PlanLimits",
+      "DeviceType",
+      "DeviceInfo",
+      "ConfirmationRequest",
+      "PLAN_LIMITS",
+      "SubscriptionService",
+      "subscriptionService"
+    ],
+    "size": 17400,
+    "reusability": "high",
+    "reason": "8 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-swayam-bot.service",
+    "description": "Fr8X services - swayam-bot.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/swayam-bot.service.ts",
+    "files": [
+      "swayam-bot.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "BotPersona",
+      "Language",
+      "InteractionMode",
+      "BotContext",
+      "BotMessage",
+      "DetectedIntent",
+      "ExtractedEntity",
+      "BotResponse",
+      "BotAction",
+      "ResponseCard",
+      "ConversationSession",
+      "swayamBotService",
+      "default"
+    ],
+    "size": 22642,
+    "reusability": "high",
+    "reason": "13 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-tms-utils.service",
+    "description": "Fr8X services - tms-utils.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/tms-utils.service.ts",
+    "files": [
+      "tms-utils.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "ORDER_STATUS",
+      "TRIP_STATUS",
+      "VEHICLE_STATUS",
+      "DRIVER_STATUS",
+      "OrderStatus",
+      "TripStatus",
+      "VehicleStatus",
+      "DriverStatus",
+      "VEHICLE_TYPES",
+      "VehicleType",
+      "BENCHMARK_RATES",
+      "VEHICLE_CAPACITIES",
+      "Location",
+      "RateCalculation",
+      "TransitEstimate",
+      "TMSUtilsService",
+      "getTMSUtilsService",
+      "createTMSUtilsService"
+    ],
+    "size": 16367,
+    "reusability": "medium",
+    "reason": "18 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-token.service",
+    "description": "Fr8X services - token.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/token.service.ts",
+    "files": [
+      "token.service.ts"
+    ],
+    "dependencies": [
+      "jsonwebtoken",
+      "crypto"
+    ],
+    "category": "backend",
+    "exports": [
+      "TokenPayload",
+      "AccessTokenPayload",
+      "RefreshTokenPayload",
+      "TokenPair",
+      "TokenConfig",
+      "RefreshTokenRecord",
+      "TokenService",
+      "default"
+    ],
+    "size": 11892,
+    "reusability": "medium",
+    "reason": "8 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-user.service",
+    "description": "Fr8X services - user.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/user.service.ts",
+    "files": [
+      "user.service.ts"
+    ],
+    "dependencies": [
+      "bcrypt",
+      "jsonwebtoken"
+    ],
+    "category": "backend",
+    "exports": [
+      "UserRole",
+      "PermissionAction",
+      "PermissionResource",
+      "Permission",
+      "RoleDefinition",
+      "UserSubscription",
+      "CreateUserInput",
+      "UpdateUserInput",
+      "UserProfile",
+      "AuthResult",
+      "AccessCheckResult",
+      "ROLE_DEFINITIONS",
+      "UserService",
+      "userService",
+      "default"
+    ],
+    "size": 46151,
+    "reusability": "medium",
+    "reason": "15 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-vehicle.service",
+    "description": "Fr8X services - vehicle.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/vehicle.service.ts",
+    "files": [
+      "vehicle.service.ts"
+    ],
+    "dependencies": [
+      "nanoid"
+    ],
+    "category": "backend",
+    "exports": [
+      "RegisterVehicleInput",
+      "UpdateVehicleInput",
+      "VehicleLocationUpdate",
+      "VehicleServiceResult",
+      "VehicleComplianceStatus",
+      "FleetSummary",
+      "VehicleService",
+      "createVehicleService"
+    ],
+    "size": 22745,
+    "reusability": "medium",
+    "reason": "8 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-voice.service",
+    "description": "Fr8X services - voice.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/voice.service.ts",
+    "files": [
+      "voice.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "SupportedLanguage",
+      "VoiceConfig",
+      "STTResult",
+      "TTSResult",
+      "VoiceCommand",
+      "DriverVoiceContext",
+      "SUPPORTED_LANGUAGES",
+      "VoiceService",
+      "getVoiceService",
+      "createVoiceService"
+    ],
+    "size": 17635,
+    "reusability": "medium",
+    "reason": "10 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-wallet.service",
+    "description": "Fr8X services - wallet.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/wallet.service.ts",
+    "files": [
+      "wallet.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "createWalletService",
+      "WalletService"
+    ],
+    "size": 30345,
+    "reusability": "high",
+    "reason": "2 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-webhook.service",
+    "description": "Fr8X services - webhook.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/webhook.service.ts",
+    "files": [
+      "webhook.service.ts"
+    ],
+    "dependencies": [
+      "nanoid",
+      "crypto"
+    ],
+    "category": "backend",
+    "exports": [
+      "WebhookEventType",
+      "WebhookSource",
+      "WebhookPayload",
+      "WebhookLog",
+      "WebhookConfig",
+      "WebhookHandler",
+      "WebhookContext",
+      "WebhookResult",
+      "WebhookService",
+      "createWebhookService"
+    ],
+    "size": 16822,
+    "reusability": "medium",
+    "reason": "10 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-whatsapp-messaging.service",
+    "description": "Fr8X services - whatsapp-messaging.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/whatsapp-messaging.service.ts",
+    "files": [
+      "whatsapp-messaging.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "MessageChannel",
+      "MessageStatus",
+      "MessageDirection",
+      "MessageOptions",
+      "MessageResult",
+      "IncomingMessage",
+      "DetectedIntent",
+      "MESSAGING_TEMPLATES",
+      "WhatsAppMessagingService",
+      "getWhatsAppMessagingService",
+      "createWhatsAppMessagingService"
+    ],
+    "size": 13275,
+    "reusability": "medium",
+    "reason": "11 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-wizard.service",
+    "description": "Fr8X services - wizard.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/wizard.service.ts",
+    "files": [
+      "wizard.service.ts"
+    ],
+    "dependencies": [
+      "crypto"
+    ],
+    "category": "backend",
+    "exports": [
+      "WizardStepDef",
+      "CreateWizardTemplateInput",
+      "StartWizardInput",
+      "SubmitStepInput",
+      "StepProgress",
+      "WIZARD_TEMPLATES",
+      "createWizardService",
+      "WizardService"
+    ],
+    "size": 48864,
+    "reusability": "medium",
+    "reason": "8 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-workflow-actions.service",
+    "description": "Fr8X services - workflow-actions.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/workflow-actions.service.ts",
+    "files": [
+      "workflow-actions.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "createWorkflowActionsService",
+      "WorkflowActionsService"
+    ],
+    "size": 24168,
+    "reusability": "high",
+    "reason": "2 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/services-workflow-engine.service",
+    "description": "Fr8X services - workflow-engine.service",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/services/workflow-engine.service.ts",
+    "files": [
+      "workflow-engine.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "WORKFLOW_TEMPLATES",
+      "WorkflowStep",
+      "StepResult",
+      "ExecutionContext",
+      "CreateWorkflowInput",
+      "TriggerWorkflowInput",
+      "createWorkflowEngineService",
+      "WorkflowEngineService"
+    ],
+    "size": 40974,
+    "reusability": "high",
+    "reason": "8 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/utils-errors",
+    "description": "Fr8X utils - errors",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/utils/errors.ts",
+    "files": [
+      "errors.ts"
+    ],
+    "dependencies": [],
+    "category": "shared",
+    "exports": [
+      "ErrorCodes",
+      "ErrorCode",
+      "ErrorDetails",
+      "Fr8XServiceError",
+      "Errors"
+    ],
+    "size": 4435,
+    "reusability": "high",
+    "reason": "5 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/middleware-permission.guard",
+    "description": "Fr8X middleware - permission.guard",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/middleware/permission.guard.ts",
+    "files": [
+      "permission.guard.ts"
+    ],
+    "dependencies": [
+      "fastify"
+    ],
+    "category": "backend",
+    "exports": [
+      "PermissionContext",
+      "PermissionOptions",
+      "FlowCanvasGuardOptions",
+      "AuthenticatedRequest",
+      "requirePermission",
+      "requireRole",
+      "requireOrganization",
+      "requireSameOrganization",
+      "requireFlowCanvasAccess",
+      "requireFlowStageTransition",
+      "requireWorkflowExecution",
+      "requireProduct",
+      "requireWithinLimits",
+      "combineGuards",
+      "guards",
+      "default"
+    ],
+    "size": 18483,
+    "reusability": "medium",
+    "reason": "16 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/middleware-rate-limit.middleware",
+    "description": "Fr8X middleware - rate-limit.middleware",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/middleware/rate-limit.middleware.ts",
+    "files": [
+      "rate-limit.middleware.ts"
+    ],
+    "dependencies": [
+      "fastify"
+    ],
+    "category": "backend",
+    "exports": [
+      "RateLimitOptions",
+      "TieredRateLimitConfig",
+      "getClientIP",
+      "keyByIP",
+      "keyByUserOrIP",
+      "keyByOrgOrIP",
+      "keyByEndpoint",
+      "createRateLimitMiddleware",
+      "createTieredRateLimitMiddleware",
+      "graphqlRateLimits",
+      "createGraphQLRateLimitHook",
+      "defaultGlobalRateLimit",
+      "authRateLimit",
+      "defaultTieredRateLimit"
+    ],
+    "size": 11589,
+    "reusability": "medium",
+    "reason": "14 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/lib-apm",
+    "description": "Fr8X lib - apm",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/apm.ts",
+    "files": [
+      "apm.ts"
+    ],
+    "dependencies": [
+      "crypto"
+    ],
+    "category": "shared",
+    "exports": [
+      "TraceContext",
+      "SpanAttributes",
+      "SpanEvent",
+      "SpanData",
+      "SpanLink",
+      "SpanKind",
+      "SpanStatus",
+      "APMConfig",
+      "APMExporter",
+      "TracePropagator",
+      "generateTraceId",
+      "generateSpanId",
+      "extractW3CContext",
+      "extractB3Context",
+      "injectW3CContext",
+      "injectB3Context",
+      "APMSpan",
+      "APMTracer",
+      "apm",
+      "default"
+    ],
+    "size": 17937,
+    "reusability": "medium",
+    "reason": "20 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/lib-archival",
+    "description": "Fr8X lib - archival",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/archival.ts",
+    "files": [
+      "archival.ts"
+    ],
+    "dependencies": [],
+    "category": "shared",
+    "exports": [
+      "RetentionPolicy",
+      "ArchivalResult",
+      "ArchivalError",
+      "ArchivalProgress",
+      "RestorationResult",
+      "DEFAULT_RETENTION_POLICIES",
+      "createArchivalService",
+      "ArchivalService"
+    ],
+    "size": 18304,
+    "reusability": "high",
+    "reason": "8 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/lib-auth-directive",
+    "description": "Fr8X lib - auth-directive",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/auth-directive.ts",
+    "files": [
+      "auth-directive.ts"
+    ],
+    "dependencies": [
+      "graphql",
+      "@graphql-tools/utils"
+    ],
+    "category": "shared",
+    "exports": [
+      "Role",
+      "AuthContext",
+      "AuthDirectiveConfig",
+      "applyAuthDirective",
+      "authTypeDefs",
+      "createAuthContext",
+      "canAccess",
+      "requireRole",
+      "requireOwnerOrAdmin",
+      "requireSameOrg",
+      "PERMISSIONS",
+      "DEFAULT_ROLE_PERMISSIONS",
+      "getPermissionsForRole",
+      "getPermissionsForRoles"
+    ],
+    "size": 14308,
+    "reusability": "medium",
+    "reason": "14 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/lib-database",
+    "description": "Fr8X lib - database",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/database.ts",
+    "files": [
+      "database.ts"
+    ],
+    "dependencies": [],
+    "category": "shared",
+    "exports": [
+      "DatabaseConfig",
+      "ConnectionConfig",
+      "PoolConfig",
+      "TimeoutConfig",
+      "RetryConfig",
+      "PoolStats",
+      "QueryContext",
+      "createPrismaClient",
+      "createDatabaseManager",
+      "getDatabaseManager",
+      "getPrisma",
+      "getReadPrisma",
+      "DatabaseManager"
+    ],
+    "size": 14458,
+    "reusability": "high",
+    "reason": "13 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/lib-dataloaders",
+    "description": "Fr8X lib - dataloaders",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/dataloaders.ts",
+    "files": [
+      "dataloaders.ts"
+    ],
+    "dependencies": [
+      "dataloader"
+    ],
+    "category": "shared",
+    "exports": [
+      "DataLoaders",
+      "createDataLoaders",
+      "primeLoaders",
+      "clearEntityFromLoaders",
+      "clearAllLoaders"
+    ],
+    "size": 9781,
+    "reusability": "medium",
+    "reason": "5 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/lib-graphql-cache",
+    "description": "Fr8X lib - graphql-cache",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/graphql-cache.ts",
+    "files": [
+      "graphql-cache.ts"
+    ],
+    "dependencies": [
+      "crypto"
+    ],
+    "category": "shared",
+    "exports": [
+      "ResolverCacheConfig",
+      "RESOLVER_CACHE_CONFIG",
+      "CACHE_INVALIDATION_MAP",
+      "generateCacheKey",
+      "withCache",
+      "createCachePlugin"
+    ],
+    "size": 7316,
+    "reusability": "medium",
+    "reason": "6 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/lib-graphql-logger",
+    "description": "Fr8X lib - graphql-logger",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/graphql-logger.ts",
+    "files": [
+      "graphql-logger.ts"
+    ],
+    "dependencies": [
+      "mercurius"
+    ],
+    "category": "shared",
+    "exports": [
+      "graphqlLoggingHooks",
+      "createGraphQLLogger",
+      "withResolverLogging",
+      "withBatchLogging",
+      "default"
+    ],
+    "size": 2840,
+    "reusability": "medium",
+    "reason": "5 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/lib-index",
+    "description": "Fr8X lib - index",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/index.ts",
+    "files": [
+      "index.ts"
+    ],
+    "dependencies": [],
+    "category": "shared",
+    "exports": [
+      "logger",
+      "StructuredLogger",
+      "fastifyLoggerPlugin",
+      "getLogContext",
+      "runWithContext",
+      "withContext",
+      "generateCorrelationId",
+      "generateTraceId",
+      "generateSpanId",
+      "logGraphQLOperation",
+      "type LogContext",
+      "type StructuredLog",
+      "type GraphQLLogContext",
+      "",
+      "createGraphQLLogger",
+      "withResolverLogging",
+      "withBatchLogging",
+      "graphqlLoggingHooks",
+      "PulseClient",
+      "pulse",
+      "createGraphQLPulsePlugin",
+      "type MetricLabels",
+      "type PulseConfig",
+      "type SpanContext",
+      "QueryComplexityCalculator",
+      "createComplexityLimitRule",
+      "createComplexityPlugin",
+      "estimateQueryComplexity",
+      "isQueryLikelyComplex",
+      "formatComplexityBreakdown",
+      "DEFAULT_CONFIG",
+      "type ComplexityConfig",
+      "type ComplexityInfo",
+      "type FieldComplexity",
+      "encodeCursor",
+      "decodeCursor",
+      "buildPaginationArgs",
+      "buildConnection",
+      "buildOffsetPagination",
+      "offsetToConnection",
+      "type CursorPaginationInput",
+      "type OffsetPaginationInput",
+      "type PageInfo",
+      "type Connection",
+      "type Edge",
+      "applyAuthDirective",
+      "createAuthContext",
+      "canAccess",
+      "requireRole",
+      "requireOwnerOrAdmin",
+      "requireSameOrg",
+      "authTypeDefs",
+      "PERMISSIONS",
+      "DEFAULT_ROLE_PERMISSIONS",
+      "getPermissionsForRole",
+      "getPermissionsForRoles",
+      "type Role",
+      "type AuthContext",
+      "type AuthDirectiveConfig",
+      "createMigrationRunner",
+      "registerMigration",
+      "getMigrations",
+      "type Migration",
+      "type MigrationOptions",
+      "type MigrationResult",
+      "type MigrationProgress",
+      "type MigrationRunner",
+      "createArchivalService",
+      "DEFAULT_RETENTION_POLICIES",
+      "type RetentionPolicy",
+      "type ArchivalResult",
+      "type ArchivalService",
+      "createDatabaseManager",
+      "createPrismaClient",
+      "getDatabaseManager",
+      "getPrisma",
+      "getReadPrisma",
+      "readQuery",
+      "writeQuery",
+      "transactionQuery",
+      "type DatabaseConfig",
+      "type PoolConfig",
+      "type PoolStats",
+      "type QueryContext",
+      "type DatabaseManager",
+      "createDataLoaders",
+      "primeLoaders",
+      "clearEntityFromLoaders",
+      "clearAllLoaders",
+      "type DataLoaders",
+      "RESOLVER_CACHE_CONFIG",
+      "CACHE_INVALIDATION_MAP",
+      "generateCacheKey",
+      "withCache",
+      "invalidateCaches",
+      "warmGraphQLCache",
+      "createCachePlugin",
+      "type ResolverCacheConfig",
+      "RequestSigner",
+      "createSignature",
+      "createTimedSignature",
+      "verifyTimedSignature",
+      "generateNonce",
+      "generateEventId",
+      "sendSignedWebhook",
+      "createSignatureVerificationMiddleware",
+      "getIntegrationSigner",
+      "getSigningConfigFromEnv",
+      "type SigningConfig",
+      "type SignedRequest",
+      "type SignatureVerificationResult",
+      "type WebhookPayload",
+      "type WebhookSendOptions",
+      "type WebhookSendResult",
+      "APMTracer",
+      "APMSpan",
+      "apm",
+      "// generateTraceId and generateSpanId already exported from logger.js\n  extractW3CContext",
+      "extractB3Context",
+      "injectW3CContext",
+      "injectB3Context",
+      "type TraceContext",
+      "type SpanAttributes",
+      "type SpanData",
+      "type SpanKind",
+      "type APMConfig",
+      "type APMExporter"
+    ],
+    "size": 3294,
+    "reusability": "high",
+    "reason": "127 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/lib-logger",
+    "description": "Fr8X lib - logger",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/logger.ts",
+    "files": [
+      "logger.ts"
+    ],
+    "dependencies": [
+      "pino",
+      "async_hooks",
+      "crypto",
+      "fastify",
+      "fastify-plugin"
+    ],
+    "category": "shared",
+    "exports": [
+      "LogContext",
+      "StructuredLog",
+      "getLogContext",
+      "runWithContext",
+      "withContext",
+      "StructuredLogger",
+      "logger",
+      "fastifyLoggerPlugin",
+      "GraphQLLogContext",
+      "logGraphQLOperation",
+      "generateCorrelationId",
+      "generateTraceId",
+      "generateSpanId",
+      "default"
+    ],
+    "size": 13905,
+    "reusability": "medium",
+    "reason": "14 exports, documented, typed"
+  },
+  {
+    "name": "@fr8x/lib-migration",
+    "description": "Fr8X lib - migration",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/migration.ts",
+    "files": [
+      "migration.ts"
+    ],
+    "dependencies": [],
+    "category": "shared",
+    "exports": [
+      "Migration",
+      "MigrationOptions",
+      "MigrationResult",
+      "MigrationError",
+      "MigrationProgress",
+      "ValidationResult",
+      "ValidationIssue",
+      "registerMigration",
+      "getMigrations",
+      "createMigrationRunner",
+      "MigrationRunner"
+    ],
+    "size": 17021,
+    "reusability": "high",
+    "reason": "11 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/lib-pagination",
+    "description": "Fr8X lib - pagination",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/pagination.ts",
+    "files": [
+      "pagination.ts"
+    ],
+    "dependencies": [
+      "nanoid"
+    ],
+    "category": "shared",
+    "exports": [
+      "CursorPaginationInput",
+      "PageInfo",
+      "Edge",
+      "Connection",
+      "CursorPaginationResult",
+      "encodeCursor",
+      "decodeCursor",
+      "createCursor",
+      "PaginationOptions",
+      "buildPaginationArgs",
+      "buildConnection",
+      "OffsetPaginationInput",
+      "OffsetPaginationResult",
+      "buildOffsetPagination",
+      "offsetToConnection",
+      "parseGraphQLPaginationArgs",
+      "validatePaginationArgs"
+    ],
+    "size": 8995,
+    "reusability": "medium",
+    "reason": "17 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/lib-pubsub",
+    "description": "Fr8X lib - pubsub",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/pubsub.ts",
+    "files": [
+      "pubsub.ts"
+    ],
+    "dependencies": [],
+    "category": "shared",
+    "exports": [
+      "pubsub",
+      "fr8xPubSub"
+    ],
+    "size": 164,
+    "reusability": "medium",
+    "reason": "2 exports, documented, zero dependencies"
+  },
+  {
+    "name": "@fr8x/lib-pulse-integration",
+    "description": "Fr8X lib - pulse-integration",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/pulse-integration.ts",
+    "files": [
+      "pulse-integration.ts"
+    ],
+    "dependencies": [],
+    "category": "shared",
+    "exports": [
+      "MetricLabels",
+      "HistogramBuckets",
+      "MetricType",
+      "MetricDefinition",
+      "SpanContext",
+      "PulseConfig",
+      "PulseClient",
+      "pulse",
+      "GraphQLPulsePluginOptions",
+      "createGraphQLPulsePlugin",
+      "default"
+    ],
+    "size": 17370,
+    "reusability": "high",
+    "reason": "11 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@fr8x/lib-query-complexity",
+    "description": "Fr8X lib - query-complexity",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/query-complexity.ts",
+    "files": [
+      "query-complexity.ts"
+    ],
+    "dependencies": [
+      "graphql"
+    ],
+    "category": "shared",
+    "exports": [
+      "ComplexityConfig",
+      "ComplexityInfo",
+      "FieldComplexity",
+      "DEFAULT_CONFIG",
+      "QueryComplexityCalculator",
+      "ComplexityValidationRule",
+      "createComplexityLimitRule",
+      "createComplexityPlugin",
+      "estimateQueryComplexity",
+      "isQueryLikelyComplex",
+      "formatComplexityBreakdown",
+      "default"
+    ],
+    "size": 14875,
+    "reusability": "medium",
+    "reason": "12 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x/lib-request-signing",
+    "description": "Fr8X lib - request-signing",
+    "path": "/root/ankr-labs-nx/apps/fr8x/backend/src/lib/request-signing.ts",
+    "files": [
+      "request-signing.ts"
+    ],
+    "dependencies": [
+      "crypto"
+    ],
+    "category": "shared",
+    "exports": [
+      "SigningConfig",
+      "SignedRequest",
+      "SignatureVerificationResult",
+      "WebhookPayload",
+      "generateNonce",
+      "generateEventId",
+      "createSignature",
+      "createTimedSignature",
+      "verifyTimedSignature",
+      "RequestSigner",
+      "WebhookSendOptions",
+      "WebhookSendResult",
+      "createSignatureVerificationMiddleware",
+      "getIntegrationSigner",
+      "getSigningConfigFromEnv"
+    ],
+    "size": 13441,
+    "reusability": "medium",
+    "reason": "15 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@fr8x-ui/utils",
+    "description": "Fr8X UI - utils",
+    "path": "/root/ankr-labs-nx/apps/fr8x/frontend/src/lib/utils.ts",
+    "files": [
+      "utils.ts"
+    ],
+    "dependencies": [
+      "clsx",
+      "tailwind-merge"
+    ],
+    "category": "shared",
+    "exports": [
+      "cn"
+    ],
+    "size": 169,
+    "reusability": "medium",
+    "reason": "1 exports, minimal dependencies, typed"
+  }
+]

@@ -1,0 +1,1060 @@
+[
+  {
+    "name": "@vyomo/services-ai-recommendations.service",
+    "description": "Vyomo services - ai-recommendations.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/ai-recommendations.service.ts",
+    "files": [
+      "ai-recommendations.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "TradeRecommendation",
+      "RecommendationFactor",
+      "StrategyRecommendation",
+      "StrategyStep",
+      "PortfolioRecommendation",
+      "PortfolioAction",
+      "MarketOutlook",
+      "KeyLevel",
+      "UpcomingEvent",
+      "default"
+    ],
+    "size": 21716,
+    "reusability": "high",
+    "reason": "10 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-alert-rules.service",
+    "description": "Vyomo services - alert-rules.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/alert-rules.service.ts",
+    "files": [
+      "alert-rules.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "RuleMetric",
+      "RuleOperator",
+      "RuleLogic",
+      "RuleCondition",
+      "AlertRule",
+      "RuleEvaluationContext",
+      "RuleEvaluationResult",
+      "createRule",
+      "updateRule",
+      "deleteRule",
+      "getRule",
+      "getRulesByUser",
+      "getRulesByUnderlying",
+      "evaluateRule",
+      "resetDailyTriggerCounts",
+      "getRuleHistory",
+      "getRuleStats",
+      "RULE_PRESETS",
+      "default"
+    ],
+    "size": 21665,
+    "reusability": "high",
+    "reason": "19 exports, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-analytics-dashboard.service",
+    "description": "Vyomo services - analytics-dashboard.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/analytics-dashboard.service.ts",
+    "files": [
+      "analytics-dashboard.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "PerformanceMetrics",
+      "RiskMetrics",
+      "StrategyAnalysis",
+      "BehavioralAnalysis",
+      "BehavioralPattern",
+      "EmotionImpact",
+      "TimeAnalysis",
+      "DashboardSummary",
+      "KeyStat",
+      "DashboardAlert",
+      "RecentActivity",
+      "ChartData",
+      "default"
+    ],
+    "size": 33926,
+    "reusability": "high",
+    "reason": "13 exports, generic implementation, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-block-deal.service",
+    "description": "Vyomo services - block-deal.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/block-deal.service.ts",
+    "files": [
+      "block-deal.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "DealType",
+      "ParticipantType",
+      "BlockDeal",
+      "BlockDealAnalysis",
+      "BlockDealInput",
+      "analyzeBlockDeals",
+      "generateMockBlockDealAnalysis"
+    ],
+    "size": 15445,
+    "reusability": "high",
+    "reason": "7 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-broker-alerts.service",
+    "description": "Vyomo services - broker-alerts.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/broker-alerts.service.ts",
+    "files": [
+      "broker-alerts.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "BrokerAlert",
+      "BrokerAlertType",
+      "AlertConfig",
+      "NotificationRecord",
+      "AlertSummary",
+      "PositionAlert",
+      "default"
+    ],
+    "size": 16206,
+    "reusability": "high",
+    "reason": "7 exports, generic implementation, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-broker.service",
+    "description": "Vyomo services - broker.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/broker.service.ts",
+    "files": [
+      "broker.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "BrokerType",
+      "BrokerCredentials",
+      "BrokerConnection",
+      "BrokerOrder",
+      "OrderResponse",
+      "BrokerPosition",
+      "BrokerHolding",
+      "BrokerFunds",
+      "BROKER_CONFIG",
+      "getLoginUrl",
+      "disconnectBroker",
+      "getConnectedBrokers",
+      "default"
+    ],
+    "size": 15417,
+    "reusability": "high",
+    "reason": "13 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-community.service",
+    "description": "Vyomo services - community.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/community.service.ts",
+    "files": [
+      "community.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "SharedTrade",
+      "TradeComment",
+      "Strategy",
+      "StrategyReview",
+      "ExpertProfile",
+      "Webinar",
+      "WebinarRegistration",
+      "shareTrade",
+      "getTradeFeed",
+      "likeTrade",
+      "saveTrade",
+      "commentOnTrade",
+      "getTradeComments",
+      "createStrategy",
+      "getStrategies",
+      "subscribeToStrategy",
+      "reviewStrategy",
+      "createExpertProfile",
+      "getExpertProfile",
+      "getTopExperts",
+      "followExpert",
+      "createWebinar",
+      "getUpcomingWebinars",
+      "registerForWebinar",
+      "getUserWebinars",
+      "getCommunityStats",
+      "getTrendingTags",
+      "default"
+    ],
+    "size": 18161,
+    "reusability": "high",
+    "reason": "28 exports, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-expiry-pinning.service",
+    "description": "Vyomo services - expiry-pinning.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/expiry-pinning.service.ts",
+    "files": [
+      "expiry-pinning.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "StrikePinProbability",
+      "ExpiryPinningAnalysis",
+      "ExpiryPinningInput",
+      "analyzeExpiryPinning",
+      "generateMockExpiryPinning"
+    ],
+    "size": 12888,
+    "reusability": "high",
+    "reason": "5 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-fii-dii.service",
+    "description": "Vyomo services - fii-dii.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/fii-dii.service.ts",
+    "files": [
+      "fii-dii.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "InstitutionalFlow",
+      "DivergenceEvent",
+      "FIIDIIAnalysis",
+      "FIIDIIInput",
+      "analyzeFIIDII",
+      "generateMockFIIDIIAnalysis"
+    ],
+    "size": 16801,
+    "reusability": "high",
+    "reason": "6 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-gamification.service",
+    "description": "Vyomo services - gamification.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/gamification.service.ts",
+    "files": [
+      "gamification.service.ts"
+    ],
+    "dependencies": [
+      "@ankr/gamification"
+    ],
+    "category": "backend",
+    "exports": [
+      "VYOMO_BADGES",
+      "VYOMO_CHALLENGES",
+      "VYOMO_TIERS",
+      "VYOMO_POINTS",
+      "initializeGamification",
+      "getGamificationEngine",
+      "getAvailableBadges",
+      "default"
+    ],
+    "size": 18325,
+    "reusability": "high",
+    "reason": "8 exports, financial utilities, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-gex.service",
+    "description": "Vyomo services - gex.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/gex.service.ts",
+    "files": [
+      "gex.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "GEXLevel",
+      "GEXAnalysis",
+      "GEXInput",
+      "analyzeGEX",
+      "generateMockGEXAnalysis"
+    ],
+    "size": 11662,
+    "reusability": "high",
+    "reason": "5 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-insights.service",
+    "description": "Vyomo services - insights.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/insights.service.ts",
+    "files": [
+      "insights.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "Language",
+      "UserLevel",
+      "RiskAppetite",
+      "InsightContext",
+      "MarketInsight",
+      "StockValidation",
+      "generateMarketMoodInsight",
+      "generatePCRInsight",
+      "generateLevelInsight",
+      "validateStock",
+      "generateDailySummary"
+    ],
+    "size": 25027,
+    "reusability": "high",
+    "reason": "11 exports, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-iv-skew-anomaly.service",
+    "description": "Vyomo services - iv-skew-anomaly.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/iv-skew-anomaly.service.ts",
+    "files": [
+      "iv-skew-anomaly.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "AnomalyType",
+      "SkewAnomaly",
+      "IVSkewAnalysis",
+      "IVSkewInput",
+      "analyzeIVSkew",
+      "generateMockIVSkewAnalysis"
+    ],
+    "size": 17895,
+    "reusability": "high",
+    "reason": "6 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-liquidity-void.service",
+    "description": "Vyomo services - liquidity-void.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/liquidity-void.service.ts",
+    "files": [
+      "liquidity-void.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "ZoneType",
+      "LiquidityZone",
+      "VolumeProfile",
+      "LiquidityVoidAnalysis",
+      "LiquidityVoidInput",
+      "analyzeLiquidityVoids",
+      "generateMockLiquidityVoidAnalysis"
+    ],
+    "size": 16581,
+    "reusability": "high",
+    "reason": "7 exports, generic implementation, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-lms.service",
+    "description": "Vyomo services - lms.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/lms.service.ts",
+    "files": [
+      "lms.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "CourseLevel",
+      "LessonType",
+      "ContentFormat",
+      "QuizQuestionType",
+      "Course",
+      "Module",
+      "Lesson",
+      "LessonContent",
+      "Resource",
+      "Quiz",
+      "QuizQuestion",
+      "QuizOption",
+      "Instructor",
+      "LearningPath",
+      "UserProgress",
+      "Certificate",
+      "CourseReview",
+      "getCourse",
+      "getCourseBySlug",
+      "getAllCourses",
+      "searchCourses",
+      "getCourseLessons",
+      "getLesson",
+      "getLearningPath",
+      "getLearningPathBySlug",
+      "getAllLearningPaths",
+      "getLearningPathCourses",
+      "enrollInCourse",
+      "getUserProgress",
+      "getUserCourses",
+      "completeLesson",
+      "submitQuizAnswer",
+      "getCertificate",
+      "getUserCertificates",
+      "verifyCertificate",
+      "initializeLMS",
+      "default"
+    ],
+    "size": 27724,
+    "reusability": "high",
+    "reason": "37 exports, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-manipulation.service",
+    "description": "Vyomo services - manipulation.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/manipulation.service.ts",
+    "files": [
+      "manipulation.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "ManipulationPatternType",
+      "ManipulationIndicator",
+      "ManipulationPattern",
+      "ManipulationAnalysis",
+      "ManipulationInput",
+      "analyzeManipulation",
+      "generateMockManipulationAnalysis"
+    ],
+    "size": 22433,
+    "reusability": "high",
+    "reason": "7 exports, generic implementation, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-market-data.service",
+    "description": "Vyomo services - market-data.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/market-data.service.ts",
+    "files": [
+      "market-data.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "MarketDataConfig",
+      "IndexData",
+      "StockData",
+      "OptionData",
+      "OptionChainData",
+      "OHLCV",
+      "FIIDIIData",
+      "MarketStatus",
+      "setMarketDataConfig",
+      "subscribe",
+      "default"
+    ],
+    "size": 16624,
+    "reusability": "high",
+    "reason": "11 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-narrative-cycle.service",
+    "description": "Vyomo services - narrative-cycle.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/narrative-cycle.service.ts",
+    "files": [
+      "narrative-cycle.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "KNOWN_NARRATIVES",
+      "NarrativePhase",
+      "NarrativeTheme",
+      "NarrativeSignal",
+      "MediaMention",
+      "NarrativeCycleAnalysis",
+      "NarrativeCycleInput",
+      "analyzeNarrativeCycle",
+      "generateMockNarrativeCycle"
+    ],
+    "size": 20435,
+    "reusability": "high",
+    "reason": "9 exports, generic implementation, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-nse-data.service",
+    "description": "Vyomo services - nse-data.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/nse-data.service.ts",
+    "files": [
+      "nse-data.service.ts"
+    ],
+    "dependencies": [
+      "https"
+    ],
+    "category": "backend",
+    "exports": [
+      "NSEOptionChainResponse",
+      "NSEOptionData",
+      "NSEIndexQuote",
+      "NSEFIIDIIData",
+      "parseOptionChain",
+      "subscribeToOptionChain",
+      "subscribeToIndex",
+      "canMakeRequest",
+      "trackRequest",
+      "default"
+    ],
+    "size": 14116,
+    "reusability": "high",
+    "reason": "10 exports, generic implementation, financial utilities, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-operator-accumulation.service",
+    "description": "Vyomo services - operator-accumulation.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/operator-accumulation.service.ts",
+    "files": [
+      "operator-accumulation.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "AccumulationSignal",
+      "BulkDeal",
+      "InsiderTransaction",
+      "OperatorAccumulationAnalysis",
+      "analyzeOperatorAccumulation",
+      "generateMockOperatorAccumulation"
+    ],
+    "size": 17891,
+    "reusability": "high",
+    "reason": "6 exports, generic implementation, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-paper-trading.service",
+    "description": "Vyomo services - paper-trading.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/paper-trading.service.ts",
+    "files": [
+      "paper-trading.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "VirtualPortfolio",
+      "VirtualPosition",
+      "ClosedTrade",
+      "TradeOrder",
+      "BacktestConfig",
+      "BacktestResult",
+      "PortfolioStats",
+      "createPortfolio",
+      "getPortfolio",
+      "getUserPortfolios",
+      "deletePortfolio",
+      "executeTrade",
+      "updatePositionPrices",
+      "getPortfolioStats",
+      "getBacktestResult",
+      "getUserBacktests",
+      "BACKTEST_STRATEGIES",
+      "default"
+    ],
+    "size": 21514,
+    "reusability": "high",
+    "reason": "18 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-performance.service",
+    "description": "Vyomo services - performance.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/performance.service.ts",
+    "files": [
+      "performance.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "CacheConfig",
+      "CacheEntry",
+      "PerformanceMetrics",
+      "QueryStats",
+      "CACHE_CONFIGS",
+      "getFromCache",
+      "setCache",
+      "deleteCache",
+      "invalidateByTag",
+      "invalidateByPrefix",
+      "clearCache",
+      "getCacheSize",
+      "getPerformanceMetrics",
+      "getQueryStats",
+      "resetMetrics",
+      "compressOptionChain",
+      "decompressOptionChain",
+      "checkRateLimit",
+      "default"
+    ],
+    "size": 12094,
+    "reusability": "high",
+    "reason": "19 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-personalization.service",
+    "description": "Vyomo services - personalization.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/personalization.service.ts",
+    "files": [
+      "personalization.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "RiskProfile",
+      "UserProfile",
+      "RiskAssessmentQuestion",
+      "RiskAssessmentResult",
+      "TradeJournalEntry",
+      "JournalStats",
+      "PersonalizedInsight",
+      "RISK_ASSESSMENT_QUESTIONS",
+      "calculateRiskProfile",
+      "saveUserProfile",
+      "getUserProfile",
+      "addJournalEntry",
+      "updateJournalEntry",
+      "getJournalEntries",
+      "getJournalStats",
+      "generateInsights",
+      "getInsights",
+      "markInsightRead",
+      "default"
+    ],
+    "size": 26362,
+    "reusability": "high",
+    "reason": "19 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-portfolio-optimizer.service",
+    "description": "Vyomo services - portfolio-optimizer.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/portfolio-optimizer.service.ts",
+    "files": [
+      "portfolio-optimizer.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "PortfolioAnalysis",
+      "PortfolioSummary",
+      "GreeksAnalysis",
+      "RiskAnalysis",
+      "StressTestResult",
+      "CorrelationAnalysis",
+      "PositionCorrelation",
+      "OptimizationSuggestion",
+      "SuggestedAction",
+      "RebalancingPlan",
+      "RebalancingStep",
+      "PortfolioScorecard",
+      "OptimalAllocation",
+      "default"
+    ],
+    "size": 20289,
+    "reusability": "high",
+    "reason": "14 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-retail-fomo.service",
+    "description": "Vyomo services - retail-fomo.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/retail-fomo.service.ts",
+    "files": [
+      "retail-fomo.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "FOMOComponent",
+      "FOMOHistoricalEvent",
+      "RetailFOMOAnalysis",
+      "analyzeRetailFOMO",
+      "generateMockRetailFOMOAnalysis"
+    ],
+    "size": 16266,
+    "reusability": "high",
+    "reason": "5 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-retail-trap.service",
+    "description": "Vyomo services - retail-trap.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/retail-trap.service.ts",
+    "files": [
+      "retail-trap.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "StopClusterZone",
+      "TrapDetection",
+      "RetailTrapAnalysis",
+      "RetailTrapInput",
+      "analyzeRetailTraps",
+      "generateMockRetailTrapAnalysis"
+    ],
+    "size": 14782,
+    "reusability": "high",
+    "reason": "6 exports, generic implementation, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-smart-money.service",
+    "description": "Vyomo services - smart-money.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/smart-money.service.ts",
+    "files": [
+      "smart-money.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "TimeSegmentFlow",
+      "SmartMoneySignal",
+      "SmartMoneyAnalysis",
+      "SmartMoneyInput",
+      "analyzeSmartMoney",
+      "generateMockSmartMoneyAnalysis"
+    ],
+    "size": 14345,
+    "reusability": "high",
+    "reason": "6 exports, generic implementation, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-social-sentiment.service",
+    "description": "Vyomo services - social-sentiment.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/social-sentiment.service.ts",
+    "files": [
+      "social-sentiment.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "SentimentLevel",
+      "ContrarianSignal",
+      "SocialSource",
+      "InfluencerMention",
+      "SocialSentimentAnalysis",
+      "SocialSentimentInput",
+      "analyzeSocialSentiment",
+      "generateMockSocialSentiment"
+    ],
+    "size": 16983,
+    "reusability": "high",
+    "reason": "8 exports, generic implementation, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-telegram-bot.service",
+    "description": "Vyomo services - telegram-bot.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/telegram-bot.service.ts",
+    "files": [
+      "telegram-bot.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "getTelegramStatus",
+      "default"
+    ],
+    "size": 21924,
+    "reusability": "high",
+    "reason": "2 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-telegram.service",
+    "description": "Vyomo services - telegram.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/telegram.service.ts",
+    "files": [
+      "telegram.service.ts"
+    ],
+    "dependencies": [
+      "@ankr/wire"
+    ],
+    "category": "backend",
+    "exports": [
+      "wire",
+      "AlertPriority",
+      "AlertCategory",
+      "NotificationChannel",
+      "VyomoAlert",
+      "NotificationTarget",
+      "UserSubscription",
+      "formatPriceAlert",
+      "formatManipulationAlert",
+      "formatTrapAlert",
+      "formatSmartMoneyAlert",
+      "formatFOMOAlert",
+      "formatExpiryAlert",
+      "formatRegimeAlert",
+      "formatCompressionAlert",
+      "formatBlockDealAlert",
+      "formatDailySummary",
+      "formatSentimentAlert",
+      "createSubscription",
+      "getSubscription",
+      "updateSubscription",
+      "deleteSubscription",
+      "getSubscriptionsForAlert",
+      "SendResult",
+      "VyomoTopics",
+      "emitAlert",
+      "onAlert"
+    ],
+    "size": 20458,
+    "reusability": "high",
+    "reason": "27 exports, financial utilities, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-translation.service",
+    "description": "Vyomo services - translation.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/translation.service.ts",
+    "files": [
+      "translation.service.ts"
+    ],
+    "dependencies": [
+      "axios"
+    ],
+    "category": "backend",
+    "exports": [
+      "IndianLanguage",
+      "LanguageInfo",
+      "INDIAN_LANGUAGES",
+      "TRADING_TRANSLATIONS",
+      "VyomoTranslator",
+      "getTranslator",
+      "t"
+    ],
+    "size": 19696,
+    "reusability": "medium",
+    "reason": "7 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-voice-alerts.service",
+    "description": "Vyomo services - voice-alerts.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/voice-alerts.service.ts",
+    "files": [
+      "voice-alerts.service.ts"
+    ],
+    "dependencies": [
+      "crypto",
+      "fs",
+      "path"
+    ],
+    "category": "backend",
+    "exports": [
+      "VoiceChannel",
+      "VoiceAlertConfig",
+      "VoiceAlertSubscription",
+      "VoiceAlertResult",
+      "createVoiceSubscription",
+      "updateVoiceSubscription",
+      "deleteVoiceSubscription",
+      "getVoiceSubscription",
+      "getVoiceSubscriptionsByUser",
+      "getSupportedVoiceLanguages",
+      "initializeVoiceAlerts",
+      "default"
+    ],
+    "size": 19340,
+    "reusability": "medium",
+    "reason": "12 exports, financial utilities, documented, typed"
+  },
+  {
+    "name": "@vyomo/services-voice.service",
+    "description": "Vyomo services - voice.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/voice.service.ts",
+    "files": [
+      "voice.service.ts"
+    ],
+    "dependencies": [
+      "axios",
+      "crypto"
+    ],
+    "category": "backend",
+    "exports": [
+      "VoiceProvider",
+      "VoiceConfig",
+      "TTSResult",
+      "VyomoVoice",
+      "getVoiceService",
+      "prepareForVoice",
+      "getClientSpeechScript"
+    ],
+    "size": 8903,
+    "reusability": "medium",
+    "reason": "7 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-volatility-compression.service",
+    "description": "Vyomo services - volatility-compression.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/volatility-compression.service.ts",
+    "files": [
+      "volatility-compression.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "CompressionIndicator",
+      "CompressionAlert",
+      "VolatilityCompressionAnalysis",
+      "CompressionInput",
+      "analyzeVolatilityCompression",
+      "generateMockCompressionAnalysis"
+    ],
+    "size": 17077,
+    "reusability": "high",
+    "reason": "6 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-volatility-regime.service",
+    "description": "Vyomo services - volatility-regime.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/volatility-regime.service.ts",
+    "files": [
+      "volatility-regime.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "VolatilityRegime",
+      "RegimeCharacteristics",
+      "RegimeTransition",
+      "VolatilityRegimeAnalysis",
+      "VolatilityRegimeInput",
+      "analyzeVolatilityRegime",
+      "generateMockVolatilityRegimeAnalysis"
+    ],
+    "size": 17201,
+    "reusability": "high",
+    "reason": "7 exports, generic implementation, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-vyomo-equity.service",
+    "description": "Vyomo services - vyomo-equity.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/vyomo-equity.service.ts",
+    "files": [
+      "vyomo-equity.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "StockInsight",
+      "FundamentalAnalysis",
+      "TechnicalAnalysis",
+      "ChartPattern",
+      "SentimentAnalysis",
+      "InsiderTrade",
+      "StockEvent",
+      "StockNews",
+      "SectorAnalysis",
+      "StockComparison",
+      "ComparisonMetric",
+      "StockScreenerResult",
+      "default"
+    ],
+    "size": 21500,
+    "reusability": "high",
+    "reason": "13 exports, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-vyomo-ipo.service",
+    "description": "Vyomo services - vyomo-ipo.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/vyomo-ipo.service.ts",
+    "files": [
+      "vyomo-ipo.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "IPO",
+      "IPORating",
+      "IPOAnalysis",
+      "PeerCompany",
+      "GMPData",
+      "GMPHistoryPoint",
+      "SubscriptionData",
+      "DayWiseSubscription",
+      "AllotmentPrediction",
+      "IPOCalendarItem",
+      "default"
+    ],
+    "size": 18463,
+    "reusability": "high",
+    "reason": "11 exports, financial utilities, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@vyomo/services-whatsapp-bot.service",
+    "description": "Vyomo services - whatsapp-bot.service",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/services/whatsapp-bot.service.ts",
+    "files": [
+      "whatsapp-bot.service.ts"
+    ],
+    "dependencies": [
+      "@whiskeysockets/baileys",
+      "pino"
+    ],
+    "category": "backend",
+    "exports": [
+      "getWhatsAppStatus",
+      "default"
+    ],
+    "size": 29440,
+    "reusability": "medium",
+    "reason": "2 exports, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@vyomo/utils-logger",
+    "description": "Vyomo utils - logger",
+    "path": "/root/ankr-options-standalone/apps/vyomo-api/src/utils/logger.ts",
+    "files": [
+      "logger.ts"
+    ],
+    "dependencies": [
+      "pino"
+    ],
+    "category": "shared",
+    "exports": [
+      "logger",
+      "default"
+    ],
+    "size": 487,
+    "reusability": "medium",
+    "reason": "2 exports, financial utilities, documented, minimal dependencies"
+  },
+  {
+    "name": "@vyomo-ui/apollo",
+    "description": "Vyomo UI - apollo",
+    "path": "/root/ankr-options-standalone/apps/vyomo-web/src/utils/apollo.ts",
+    "files": [
+      "apollo.ts"
+    ],
+    "dependencies": [
+      "@apollo/client",
+      "graphql-ws"
+    ],
+    "category": "shared",
+    "exports": [
+      "apolloClient"
+    ],
+    "size": 1479,
+    "reusability": "high",
+    "reason": "1 exports, generic implementation, financial utilities, documented, minimal dependencies"
+  },
+  {
+    "name": "@vyomo-ui/query-client",
+    "description": "Vyomo UI - query-client",
+    "path": "/root/ankr-options-standalone/apps/vyomo-web/src/utils/query-client.ts",
+    "files": [
+      "query-client.ts"
+    ],
+    "dependencies": [
+      "@tanstack/react-query"
+    ],
+    "category": "shared",
+    "exports": [
+      "queryClient"
+    ],
+    "size": 299,
+    "reusability": "high",
+    "reason": "1 exports, generic implementation, documented, minimal dependencies"
+  }
+]

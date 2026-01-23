@@ -1,0 +1,2223 @@
+[
+  {
+    "name": "@ankr/admin",
+    "description": "Admin API Routes",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/admin-routes.ts",
+    "files": [
+      "admin-routes.ts"
+    ],
+    "dependencies": [
+      "fastify"
+    ],
+    "category": "backend",
+    "exports": [
+      "registerAdminRoutes"
+    ],
+    "size": 12797,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr/advanced-ai",
+    "description": "Advanced AI Service",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/advanced-ai-service.ts",
+    "files": [
+      "advanced-ai-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "MultimodalContent",
+      "MultimodalContentData",
+      "ContentMetadata",
+      "ImageAnalysis",
+      "DetectedObject",
+      "VideoAnalysis",
+      "KeyFrame",
+      "StudentPrediction",
+      "RiskPrediction",
+      "RiskFactor",
+      "PerformanceForecast",
+      "Intervention",
+      "CareerSuggestion",
+      "GeneratedContent",
+      "PracticeProblem",
+      "Worksheet",
+      "WorksheetSection",
+      "AdvancedAIService",
+      "getAdvancedAIService",
+      "registerAdvancedAIRoutes"
+    ],
+    "size": 27491,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/ai",
+    "description": "ANKR Interact - Real AI Service",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/ai-service.ts",
+    "files": [
+      "ai-service.ts"
+    ],
+    "dependencies": [
+      "lru-cache",
+      "${documentName}"
+    ],
+    "category": "backend",
+    "exports": [
+      "QuizQuestion",
+      "Flashcard",
+      "MindMapNode",
+      "default"
+    ],
+    "size": 12188,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr/ai-tutor",
+    "description": "AI Tutor Service",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/ai-tutor-service.ts",
+    "files": [
+      "ai-tutor-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "AITutorService",
+      "getTutorService",
+      "registerAITutorRoutes"
+    ],
+    "size": 12608,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/analytics",
+    "description": "Analytics Service - Track tier conversions, usage, and metrics",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/analytics-service.ts",
+    "files": [
+      "analytics-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "AnalyticsEvent",
+      "AnalyticsService",
+      "analyticsService"
+    ],
+    "size": 6165,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/assessment",
+    "description": "Assessment Service",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/assessment-service.ts",
+    "files": [
+      "assessment-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "Question",
+      "Quiz",
+      "QuizSubmission",
+      "QuestionResult",
+      "QuizAnalytics",
+      "AssessmentService",
+      "getAssessmentService",
+      "registerAssessmentRoutes"
+    ],
+    "size": 21290,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/backlinks",
+    "description": "ANKR Interact - Backlinks Service",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/backlinks-service.ts",
+    "files": [
+      "backlinks-service.ts"
+    ],
+    "dependencies": [
+      "fs",
+      "path"
+    ],
+    "category": "backend",
+    "exports": [
+      "extractWikilinks"
+    ],
+    "size": 6815,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr/chunk-upload",
+    "description": "Chunked Upload Routes - Handle large file uploads in chunks",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/chunk-upload-routes.ts",
+    "files": [
+      "chunk-upload-routes.ts"
+    ],
+    "dependencies": [
+      "fastify",
+      "fs",
+      "path",
+      "stream",
+      "crypto",
+      "@ankr/chunking"
+    ],
+    "category": "backend",
+    "exports": [
+      "registerChunkUploadRoutes"
+    ],
+    "size": 7132,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr/classroom",
+    "description": "Classroom Management Service",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/classroom-service.ts",
+    "files": [
+      "classroom-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "Classroom",
+      "ClassSchedule",
+      "ClassroomSettings",
+      "Student",
+      "Assignment",
+      "AssignmentRubric",
+      "AssignmentSubmission",
+      "Attendance",
+      "AttendanceRecord",
+      "ProgressReport",
+      "ParentNotification",
+      "ClassroomService",
+      "getClassroomService",
+      "registerClassroomRoutes"
+    ],
+    "size": 28287,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/gamification",
+    "description": "Gamification Service",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/gamification-service.ts",
+    "files": [
+      "gamification-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "UserProgress",
+      "Badge",
+      "Achievement",
+      "LeaderboardEntry",
+      "LeaderboardScope",
+      "XPGain",
+      "GamificationService",
+      "getGamificationService",
+      "registerGamificationRoutes"
+    ],
+    "size": 19330,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/import-helper",
+    "description": "Shared helper functions for document import",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/import-routes-helper.ts",
+    "files": [
+      "import-routes-helper.ts"
+    ],
+    "dependencies": [
+      "pdf-parse"
+    ],
+    "category": "backend",
+    "exports": [],
+    "size": 7509,
+    "reusability": "medium",
+    "reason": "Well documented, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr/import",
+    "description": "Document Import Routes - Universal import system for ANKR LMS",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/import-routes.ts",
+    "files": [
+      "import-routes.ts"
+    ],
+    "dependencies": [
+      "fastify",
+      "fs",
+      "path",
+      "stream",
+      "crypto",
+      "pdf-parse"
+    ],
+    "category": "backend",
+    "exports": [
+      "registerImportRoutes"
+    ],
+    "size": 7066,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr/live-session",
+    "description": "Live Session Service",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/live-session-service.ts",
+    "files": [
+      "live-session-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "LiveSession",
+      "SessionSettings",
+      "Participant",
+      "BreakoutRoom",
+      "Poll",
+      "PollResults",
+      "WhiteboardState",
+      "WhiteboardElement",
+      "Recording",
+      "WebRTCSignal",
+      "ChatMessage",
+      "LiveSessionService",
+      "getLiveSessionService",
+      "registerLiveSessionRoutes"
+    ],
+    "size": 29934,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/monitoring",
+    "description": "Monitoring & Scale Service",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/monitoring-service.ts",
+    "files": [
+      "monitoring-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "PerformanceMetric",
+      "ErrorLog",
+      "HealthCheck",
+      "ComplianceRecord",
+      "SecurityEvent",
+      "ABTest",
+      "ABVariant",
+      "ABMetric",
+      "MonitoringService",
+      "getMonitoringService",
+      "registerMonitoringRoutes"
+    ],
+    "size": 21234,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/offline",
+    "description": "Offline Service",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/offline-service.ts",
+    "files": [
+      "offline-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "OfflineContent",
+      "SyncQueue",
+      "BandwidthProfile",
+      "PWAManifest",
+      "PWAIcon",
+      "PWAScreenshot",
+      "CacheStrategy",
+      "OfflineService",
+      "getOfflineService",
+      "registerOfflineRoutes"
+    ],
+    "size": 17449,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/payment",
+    "description": "Payment API Routes for ANKR LMS",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/payment-routes.ts",
+    "files": [
+      "payment-routes.ts"
+    ],
+    "dependencies": [
+      "fastify"
+    ],
+    "category": "backend",
+    "exports": [
+      "registerPaymentRoutes"
+    ],
+    "size": 10465,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr/pdf",
+    "description": "PDF Service - Comprehensive PDF processing",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/pdf-service.ts",
+    "files": [
+      "pdf-service.ts"
+    ],
+    "dependencies": [
+      "pdfjs-dist",
+      "pdf-lib"
+    ],
+    "category": "backend",
+    "exports": [
+      "PDFService",
+      "getPDFService",
+      "registerPDFRoutes"
+    ],
+    "size": 29130,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr/peer-learning",
+    "description": "Peer Learning Service",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/peer-learning-service.ts",
+    "files": [
+      "peer-learning-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "StudyGroup",
+      "GroupMember",
+      "StudySession",
+      "SharedResource",
+      "ResourceComment",
+      "PeerTutorProfile",
+      "TimeSlot",
+      "TutoringRequest",
+      "TutoringSession",
+      "SessionRating",
+      "Forum",
+      "ForumThread",
+      "ForumReply",
+      "PeerAssessment",
+      "AssessmentCriteria",
+      "PeerLearningService",
+      "getPeerLearningService",
+      "registerPeerLearningRoutes"
+    ],
+    "size": 32693,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/qa",
+    "description": "Q&A Routes - Ask questions about uploaded documents",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/qa-routes.ts",
+    "files": [
+      "qa-routes.ts"
+    ],
+    "dependencies": [
+      "fastify"
+    ],
+    "category": "backend",
+    "exports": [
+      "registerQARoutes"
+    ],
+    "size": 6226,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr/razorpay",
+    "description": "Razorpay Payment Service for ANKR LMS",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/razorpay-service.ts",
+    "files": [
+      "razorpay-service.ts"
+    ],
+    "dependencies": [
+      "razorpay",
+      "crypto"
+    ],
+    "category": "backend",
+    "exports": [
+      "PaymentOrderOptions",
+      "SubscriptionOptions",
+      "verifyPaymentSignature",
+      "verifyWebhookSignature",
+      "isRazorpayConfigured"
+    ],
+    "size": 6406,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr/stripe",
+    "description": "Stripe Payment Integration",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/stripe-service.ts",
+    "files": [
+      "stripe-service.ts"
+    ],
+    "dependencies": [
+      "stripe"
+    ],
+    "category": "backend",
+    "exports": [
+      "StripeService",
+      "stripeService"
+    ],
+    "size": 10076,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Few dependencies"
+  },
+  {
+    "name": "@ankr/team-projects",
+    "description": "Team Projects Service",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/team-projects-service.ts",
+    "files": [
+      "team-projects-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "Project",
+      "ProjectRubric",
+      "Team",
+      "TeamMember",
+      "Task",
+      "TaskComment",
+      "KanbanBoard",
+      "SharedDocument",
+      "DocumentVersion",
+      "DocumentEdit",
+      "ProjectSubmission",
+      "PeerReview",
+      "FileAttachment",
+      "TeamProjectsService",
+      "getTeamProjectsService",
+      "registerTeamProjectsRoutes"
+    ],
+    "size": 30352,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/tier",
+    "description": "Tier Service - Manage user tiers and feature access",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/tier-service.ts",
+    "files": [
+      "tier-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "UserTier",
+      "FeatureCheckResult",
+      "TierService",
+      "tierService"
+    ],
+    "size": 5285,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/translation",
+    "description": "Translation Service - Format-Preserving Document Translation",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/translation-service.ts",
+    "files": [
+      "translation-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "TranslationOptions",
+      "TranslationResult",
+      "TranslationService",
+      "getTranslationService",
+      "registerTranslationRoutes"
+    ],
+    "size": 27157,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/vectorize",
+    "description": "Vectorization Service - Convert documents to embeddings for semantic search",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/vectorize-service.ts",
+    "files": [
+      "vectorize-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "VectorizeOptions",
+      "VectorSearchOptions",
+      "SearchResult",
+      "VectorizeService",
+      "getVectorizeService"
+    ],
+    "size": 7526,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/voice",
+    "description": "Voice AI Service - Speech-to-Text and Text-to-Speech",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/server/voice-service.ts",
+    "files": [
+      "voice-service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "VoiceAIService",
+      "getVoiceAIService",
+      "registerVoiceRoutes"
+    ],
+    "size": 5673,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/wikilinkautocomplete",
+    "description": "Wiki Link Autocomplete - Suggest pages as you type [[",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/WikiLinkAutocomplete.tsx",
+    "files": [
+      "WikiLinkAutocomplete.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "WikiLinkAutocomplete",
+      "useWikiLinkAutocomplete"
+    ],
+    "size": 6513,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/voicerecorder",
+    "description": "VoiceRecorder Component - Speech-to-Text Dictation",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/VoiceRecorder.tsx",
+    "files": [
+      "VoiceRecorder.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "VoiceRecorder"
+    ],
+    "size": 5314,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/voicefeatures",
+    "description": "Voice Features Component - STT search and TTS read aloud",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/VoiceFeatures.tsx",
+    "files": [
+      "VoiceFeatures.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "VoiceSearchButton",
+      "ReadAloudButton",
+      "VoiceFeatures"
+    ],
+    "size": 4072,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/viewersettings",
+    "description": "ViewerSettings Component - Font, size, and theme customization",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/ViewerSettings.tsx",
+    "files": [
+      "ViewerSettings.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "FontFamily",
+      "FontSize",
+      "Theme",
+      "ViewerSettingsProps",
+      "ViewerSettings"
+    ],
+    "size": 7041,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/upgradeprompt",
+    "description": "Upgrade Prompt - Modal shown when user hits tier limits or restricted features",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/UpgradePrompt.tsx",
+    "files": [
+      "UpgradePrompt.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "UpgradePromptProps",
+      "UpgradePrompt",
+      "UpgradeBannerProps",
+      "UpgradeBanner",
+      "UsageLimitWarningProps",
+      "UsageLimitWarning"
+    ],
+    "size": 12805,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/uilanguageselector",
+    "description": "UI Language Selector",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/UILanguageSelector.tsx",
+    "files": [
+      "UILanguageSelector.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "UILanguageSelector",
+      "UILanguageSelectorCompact"
+    ],
+    "size": 4522,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/translatedialog",
+    "description": "Translation Dialog",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/TranslateDialog.tsx",
+    "files": [
+      "TranslateDialog.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "TranslateDialog",
+      "TranslateButton"
+    ],
+    "size": 14651,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/translatebutton",
+    "description": "TranslateButton Component - AI-powered document translation",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/TranslateButton.tsx",
+    "files": [
+      "TranslateButton.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "TranslateButton"
+    ],
+    "size": 11720,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/tierbadge",
+    "description": "Tier Badge - Display user's current tier with usage stats",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/TierBadge.tsx",
+    "files": [
+      "TierBadge.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "TierBadgeProps",
+      "TierBadge",
+      "TierUsageStatsProps",
+      "TierUsageStats",
+      "TierComparisonProps",
+      "TierComparison"
+    ],
+    "size": 7562,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/templatepicker",
+    "description": "Template Picker - UI for selecting and applying document templates",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/TemplatePicker.tsx",
+    "files": [
+      "TemplatePicker.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "TemplatePicker"
+    ],
+    "size": 5716,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/tagautocomplete",
+    "description": "Tag Autocomplete - Suggest tags as you type #",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/TagAutocomplete.tsx",
+    "files": [
+      "TagAutocomplete.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "TagAutocomplete",
+      "useTagAutocomplete"
+    ],
+    "size": 8075,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/swayambutton",
+    "description": "SwayamButton - Voice-First AI Assistant",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/SwayamButton.tsx",
+    "files": [
+      "SwayamButton.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "SwayamButton"
+    ],
+    "size": 10737,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/readaloud",
+    "description": "ReadAloud Component - Text-to-Speech for Documents",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/ReadAloud.tsx",
+    "files": [
+      "ReadAloud.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "ReadAloud"
+    ],
+    "size": 7147,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/rtlprovider",
+    "description": "RTL Provider - Automatically handles RTL layout for Urdu, Sindhi, Kashmiri",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/RTLProvider.tsx",
+    "files": [
+      "RTLProvider.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "RTLProvider"
+    ],
+    "size": 3225,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/quizmode",
+    "description": "Interactive Quiz Mode - NotebookLLM-style",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/QuizMode.tsx",
+    "files": [
+      "QuizMode.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "QuizMode"
+    ],
+    "size": 9421,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/publishstatuspanel",
+    "description": "PublishStatusPanel Component - Sidebar showing all published documents",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/PublishStatusPanel.tsx",
+    "files": [
+      "PublishStatusPanel.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "PublishStatusPanel"
+    ],
+    "size": 8133,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/publishbutton",
+    "description": "PublishButton Component - Shows publish status and triggers publish dialog",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/PublishButton.tsx",
+    "files": [
+      "PublishButton.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "PublishButton"
+    ],
+    "size": 7177,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/publishanalytics",
+    "description": "PublishAnalytics Component - Dashboard showing publishing statistics",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/PublishAnalytics.tsx",
+    "files": [
+      "PublishAnalytics.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "PublishAnalytics"
+    ],
+    "size": 10519,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/pricingpage",
+    "description": "Pricing Page - Display tier options and feature comparison",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/PricingPage.tsx",
+    "files": [
+      "PricingPage.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "PricingPage"
+    ],
+    "size": 12587,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/mindmapview",
+    "description": "Mind Map View - Visual knowledge structure",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/MindMapView.tsx",
+    "files": [
+      "MindMapView.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "d3"
+    ],
+    "category": "frontend",
+    "exports": [
+      "MindMapView"
+    ],
+    "size": 4762,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/languageselector",
+    "description": "LanguageSelector Component - Multi-language support",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/LanguageSelector.tsx",
+    "files": [
+      "LanguageSelector.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "LanguageSelector"
+    ],
+    "size": 8005,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/graphviewcontrols",
+    "description": "Graph View Controls - Filter and configure the knowledge graph",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/GraphViewControls.tsx",
+    "files": [
+      "GraphViewControls.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "GraphFilters",
+      "GraphViewControls"
+    ],
+    "size": 9070,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/graphview",
+    "description": "GraphView - D3.js force-directed graph visualization",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/GraphView.tsx",
+    "files": [
+      "GraphView.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "d3"
+    ],
+    "category": "frontend",
+    "exports": [
+      "GraphView"
+    ],
+    "size": 12112,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/fontloader",
+    "description": "FontLoader Component - Dynamically loads Google Fonts for all Indian scripts",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/FontLoader.tsx",
+    "files": [
+      "FontLoader.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "FontLoader"
+    ],
+    "size": 523,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/flashcardsmode",
+    "description": "Flashcards Mode - Spaced Repetition Learning",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/FlashcardsMode.tsx",
+    "files": [
+      "FlashcardsMode.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "FlashcardsMode"
+    ],
+    "size": 6206,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/fileimportdialog",
+    "description": "File Import Dialog - Universal file import (PDFs, Word, Text, Images, etc.)",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/FileImportDialog.tsx",
+    "files": [
+      "FileImportDialog.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "FileImportDialog"
+    ],
+    "size": 7286,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/fileexplorer",
+    "description": "File Explorer - Browse local filesystem and import documents",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/FileExplorer.tsx",
+    "files": [
+      "FileExplorer.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "FileExplorer"
+    ],
+    "size": 10111,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/documentview",
+    "description": "Document View - Integrated Page and Canvas modes",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/DocumentView.tsx",
+    "files": [
+      "DocumentView.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "DocumentView"
+    ],
+    "size": 3245,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/databaseview",
+    "description": "Database View - Notion-style database views for documents",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/DatabaseView.tsx",
+    "files": [
+      "DatabaseView.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "DatabaseView"
+    ],
+    "size": 13593,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/createpagedialog",
+    "description": "Create Page Dialog - Create a new page when clicking a broken wiki link",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/CreatePageDialog.tsx",
+    "files": [
+      "CreatePageDialog.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "CreatePageDialog"
+    ],
+    "size": 5438,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/collaborationpanel",
+    "description": "Collaboration Panel - Affine-style real-time collaboration",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/CollaborationPanel.tsx",
+    "files": [
+      "CollaborationPanel.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "CollaborationPanel"
+    ],
+    "size": 16722,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/collaborationexample",
+    "description": "Collaboration Example - Real-time multi-user canvas collaboration",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/CollaborationExample.tsx",
+    "files": [
+      "CollaborationExample.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "http",
+      "express",
+      "@ankr/interact"
+    ],
+    "category": "frontend",
+    "exports": [
+      "BasicCollaborationExample",
+      "AuthenticatedCollaborationExample",
+      "ReadOnlyCollaborationExample",
+      "ToggleableCollaborationExample",
+      "TeamWorkspaceExample",
+      "ServerIntegrationExample",
+      "CollaborationMonitoringExample",
+      "CollaborationExamples"
+    ],
+    "size": 10922,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation"
+  },
+  {
+    "name": "@ankr-ui/blockcanvasexample",
+    "description": "Block Canvas Example - Demo of block-to-canvas drag & drop",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockCanvasExample.tsx",
+    "files": [
+      "BlockCanvasExample.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "BlockCanvasWithEditor",
+      "BlockCanvasMock",
+      "FullDocumentView",
+      "useProgrammaticBlockAdd",
+      "CustomBlockCanvas"
+    ],
+    "size": 5942,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/bidirectionallinks",
+    "description": "Bidirectional Links - Obsidian-style document linking",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BidirectionalLinks.tsx",
+    "files": [
+      "BidirectionalLinks.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "BidirectionalLinks",
+      "renderWikiLinks"
+    ],
+    "size": 9672,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/batchpublishdialog",
+    "description": "BatchPublishDialog Component - Publish multiple documents at once",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BatchPublishDialog.tsx",
+    "files": [
+      "BatchPublishDialog.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "BatchPublishDialog"
+    ],
+    "size": 9370,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/backlinkspanel",
+    "description": "Backlinks Panel - Shows which documents link to the current document",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BacklinksPanel.tsx",
+    "files": [
+      "BacklinksPanel.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "BacklinksPanel"
+    ],
+    "size": 6407,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/adminpanel",
+    "description": "AdminPanel Component - Quick tier management for testing",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/AdminPanel.tsx",
+    "files": [
+      "AdminPanel.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "AdminPanel"
+    ],
+    "size": 4998,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/accessibilitypanel",
+    "description": "AccessibilityPanel - Comprehensive accessibility controls",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/AccessibilityPanel.tsx",
+    "files": [
+      "AccessibilityPanel.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "AccessibilityPanel"
+    ],
+    "size": 19591,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/aifeaturespanel",
+    "description": "AI Features Panel - Central hub for all AI-powered features",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/AIFeaturesPanel.tsx",
+    "files": [
+      "AIFeaturesPanel.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "AIFeaturesPanel"
+    ],
+    "size": 11775,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/aidocumentassistant",
+    "description": "AI Document Assistant - NotebookLLM-style AI features",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/AIDocumentAssistant.tsx",
+    "files": [
+      "AIDocumentAssistant.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "AIDocumentAssistant"
+    ],
+    "size": 20331,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/aichatpanel",
+    "description": "AI Chat Panel - NotebookLLM-style chat interface",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/AIChatPanel.tsx",
+    "files": [
+      "AIChatPanel.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "ChatMessage",
+      "Citation",
+      "AIChatPanel"
+    ],
+    "size": 8403,
+    "reusability": "medium",
+    "reason": "Well documented, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/obsidianfeatures/index",
+    "description": "Obsidian Features - All Obsidian-style components",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/ObsidianFeatures/index.tsx",
+    "files": [
+      "ObsidianFeatures/index.tsx"
+    ],
+    "dependencies": [],
+    "category": "frontend",
+    "exports": [],
+    "size": 535,
+    "reusability": "medium",
+    "reason": "Well documented, Generic implementation, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/admin/aiadminpanel",
+    "description": "AI Admin Panel - Manage AI features, EON integration, LLM routing",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/admin/AIAdminPanel.tsx",
+    "files": [
+      "admin/AIAdminPanel.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "AIAdminPanel"
+    ],
+    "size": 23104,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/canvas/index",
+    "description": "Canvas Components - Export all canvas-related components",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/index.ts",
+    "files": [
+      "Canvas/index.ts"
+    ],
+    "dependencies": [],
+    "category": "frontend",
+    "exports": [],
+    "size": 2002,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/canvas/splitcanvasview",
+    "description": "Split Canvas View - Page and Canvas side-by-side",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/SplitCanvasView.tsx",
+    "files": [
+      "Canvas/SplitCanvasView.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "@excalidraw/excalidraw",
+      "lucide-react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "SplitCanvasView"
+    ],
+    "size": 10856,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr-ui/canvas/presentationmode",
+    "description": "Presentation Mode - Full-screen frame navigation",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/PresentationMode.tsx",
+    "files": [
+      "Canvas/PresentationMode.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react",
+      "@excalidraw/excalidraw"
+    ],
+    "category": "frontend",
+    "exports": [
+      "PresentationMode",
+      "usePresentationMode"
+    ],
+    "size": 12006,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr-ui/canvas/presenceindicators",
+    "description": "PresenceIndicators - Show who's currently viewing/editing the canvas",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/PresenceIndicators.tsx",
+    "files": [
+      "Canvas/PresenceIndicators.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "PresenceIndicatorsProps",
+      "PresenceIndicators",
+      "PresencePanelProps",
+      "PresencePanel",
+      "MiniPresenceProps",
+      "MiniPresence"
+    ],
+    "size": 11640,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/canvas/offlinemode",
+    "description": "Offline Mode Components",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/OfflineMode.tsx",
+    "files": [
+      "Canvas/OfflineMode.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "OfflineStatusBarProps",
+      "OfflineStatusBar",
+      "OfflineModeBannerProps",
+      "OfflineModeBanner",
+      "ConnectionIndicatorProps",
+      "ConnectionIndicator",
+      "SyncProgressProps",
+      "SyncProgress",
+      "ExportImportDialogProps",
+      "ExportImportDialog"
+    ],
+    "size": 13303,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/canvas/modetoggle",
+    "description": "Mode Toggle - Switch between Page and Canvas modes",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/ModeToggle.tsx",
+    "files": [
+      "Canvas/ModeToggle.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "ViewMode",
+      "ModeToggle",
+      "CompactModeToggle",
+      "ModeInfoBanner"
+    ],
+    "size": 4454,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/canvas/livecursors",
+    "description": "LiveCursors - Real-time cursor tracking component",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/LiveCursors.tsx",
+    "files": [
+      "Canvas/LiveCursors.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "LiveCursorsProps",
+      "LiveCursors",
+      "SelectionHighlightsProps",
+      "SelectionHighlights",
+      "useLocalCursor",
+      "useCursorAnimation"
+    ],
+    "size": 6803,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/canvas/integratedcanvasview",
+    "description": "Integrated Canvas View - Complete canvas experience with all features",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/IntegratedCanvasView.tsx",
+    "files": [
+      "Canvas/IntegratedCanvasView.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "@excalidraw/excalidraw",
+      "lucide-react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "IntegratedCanvasView"
+    ],
+    "size": 16354,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr-ui/canvas/framenavigator",
+    "description": "Frame Navigator - Sidebar for managing canvas frames",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/FrameNavigator.tsx",
+    "files": [
+      "Canvas/FrameNavigator.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react",
+      "@excalidraw/excalidraw"
+    ],
+    "category": "frontend",
+    "exports": [
+      "FrameNavigator",
+      "FrameSelector"
+    ],
+    "size": 12633,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr-ui/canvas/canvasview",
+    "description": "Canvas View - Excalidraw integration for canvas mode",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/CanvasView.tsx",
+    "files": [
+      "Canvas/CanvasView.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "@excalidraw/excalidraw",
+      "lucide-react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "CanvasView",
+      "CanvasToolbar"
+    ],
+    "size": 8167,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr-ui/canvas/canvastoblock",
+    "description": "Canvas to Block - Embed canvas elements back in page",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/CanvasToBlock.tsx",
+    "files": [
+      "Canvas/CanvasToBlock.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react",
+      "@excalidraw/excalidraw"
+    ],
+    "category": "frontend",
+    "exports": [
+      "CanvasElementRef",
+      "EmbeddedCanvasElement",
+      "CanvasElementPicker",
+      "useCanvasToBlock"
+    ],
+    "size": 11504,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr-ui/canvas/canvastemplates",
+    "description": "Canvas Templates - Pre-built layouts for common use cases",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/CanvasTemplates.tsx",
+    "files": [
+      "Canvas/CanvasTemplates.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react",
+      "@excalidraw/excalidraw"
+    ],
+    "category": "frontend",
+    "exports": [
+      "CanvasTemplatesDialog",
+      "TemplateButton"
+    ],
+    "size": 20985,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr-ui/canvas/canvasexportdialog",
+    "description": "Canvas Export Dialog - Export canvas to PNG/SVG/PDF",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/CanvasExportDialog.tsx",
+    "files": [
+      "Canvas/CanvasExportDialog.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react",
+      "@excalidraw/excalidraw"
+    ],
+    "category": "frontend",
+    "exports": [
+      "CanvasExportDialog",
+      "ExportButton"
+    ],
+    "size": 12750,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr-ui/canvas/canvascomments",
+    "description": "Canvas Comments System",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/CanvasComments.tsx",
+    "files": [
+      "Canvas/CanvasComments.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "CanvasComment",
+      "CanvasCommentsProps",
+      "CanvasComments"
+    ],
+    "size": 18099,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/canvas/blocktocanvas",
+    "description": "Block to Canvas - Drag blocks from page editor to canvas",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/Canvas/BlockToCanvas.tsx",
+    "files": [
+      "Canvas/BlockToCanvas.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "lucide-react",
+      "@excalidraw/excalidraw"
+    ],
+    "category": "frontend",
+    "exports": [
+      "BlockData",
+      "blockToCanvasElement",
+      "DraggableBlock",
+      "CanvasDropZone",
+      "BlockPalette"
+    ],
+    "size": 13045,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/index",
+    "description": "BlockEditor - Export all components",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/index.tsx",
+    "files": [
+      "BlockEditor/index.tsx"
+    ],
+    "dependencies": [],
+    "category": "frontend",
+    "exports": [],
+    "size": 173,
+    "reusability": "medium",
+    "reason": "Well documented, Generic implementation, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/toolbar",
+    "description": "Toolbar - Formatting toolbar for BlockEditor",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/Toolbar.tsx",
+    "files": [
+      "BlockEditor/Toolbar.tsx"
+    ],
+    "dependencies": [
+      "@tiptap/react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "Toolbar"
+    ],
+    "size": 10923,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/bubblemenu",
+    "description": "BubbleMenu - Simplified version without tiptap imports for now",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/BubbleMenu.tsx",
+    "files": [
+      "BlockEditor/BubbleMenu.tsx"
+    ],
+    "dependencies": [],
+    "category": "frontend",
+    "exports": [
+      "BubbleMenu"
+    ],
+    "size": 323,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/blockeditor",
+    "description": "BlockEditor - Notion-style block editor built with TipTap",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/BlockEditor.tsx",
+    "files": [
+      "BlockEditor/BlockEditor.tsx"
+    ],
+    "dependencies": [
+      "@tiptap/react",
+      "@tiptap/starter-kit",
+      "@tiptap/extension-table",
+      "@tiptap/extension-table-row",
+      "@tiptap/extension-table-cell",
+      "@tiptap/extension-table-header",
+      "@tiptap/extension-task-list",
+      "@tiptap/extension-task-item",
+      "@tiptap/extension-code-block-lowlight",
+      "@tiptap/extension-placeholder",
+      "@tiptap/extension-typography",
+      "@tiptap/markdown",
+      "lowlight",
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "BlockEditor"
+    ],
+    "size": 7266,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/extensions/toggle",
+    "description": "Toggle Extension - Collapsible toggle/details blocks",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/extensions/toggle.ts",
+    "files": [
+      "BlockEditor/extensions/toggle.ts"
+    ],
+    "dependencies": [
+      "@tiptap/core"
+    ],
+    "category": "frontend",
+    "exports": [
+      "ToggleOptions",
+      "Toggle"
+    ],
+    "size": 4572,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/extensions/timeline",
+    "description": "Timeline Extension - Chronological event timeline with milestones",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/extensions/timeline.ts",
+    "files": [
+      "BlockEditor/extensions/timeline.ts"
+    ],
+    "dependencies": [
+      "@tiptap/core"
+    ],
+    "category": "frontend",
+    "exports": [
+      "TimelineOptions",
+      "Timeline"
+    ],
+    "size": 10614,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/extensions/mermaid",
+    "description": "Mermaid Extension - Render Mermaid diagrams",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/extensions/mermaid.ts",
+    "files": [
+      "BlockEditor/extensions/mermaid.ts"
+    ],
+    "dependencies": [
+      "@tiptap/core",
+      "@tiptap/react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "MermaidOptions",
+      "Mermaid"
+    ],
+    "size": 2084,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/extensions/math",
+    "description": "Math Extension - Render KaTeX math equations",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/extensions/math.ts",
+    "files": [
+      "BlockEditor/extensions/math.ts"
+    ],
+    "dependencies": [
+      "@tiptap/core",
+      "@tiptap/react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "MathOptions",
+      "MathBlock",
+      "MathInline"
+    ],
+    "size": 2937,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/extensions/kanban",
+    "description": "Kanban Board Extension - Task board with columns and draggable cards",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/extensions/kanban.ts",
+    "files": [
+      "BlockEditor/extensions/kanban.ts"
+    ],
+    "dependencies": [
+      "@tiptap/core"
+    ],
+    "category": "frontend",
+    "exports": [
+      "KanbanOptions",
+      "Kanban"
+    ],
+    "size": 12666,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/extensions/image-gallery",
+    "description": "Image Gallery Extension - Multiple images in a grid layout",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/extensions/image-gallery.ts",
+    "files": [
+      "BlockEditor/extensions/image-gallery.ts"
+    ],
+    "dependencies": [
+      "@tiptap/core"
+    ],
+    "category": "frontend",
+    "exports": [
+      "ImageGalleryOptions",
+      "ImageGallery"
+    ],
+    "size": 7444,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/extensions/file-attachment",
+    "description": "File Attachment Extension - Upload and display files with previews",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/extensions/file-attachment.ts",
+    "files": [
+      "BlockEditor/extensions/file-attachment.ts"
+    ],
+    "dependencies": [
+      "@tiptap/core"
+    ],
+    "category": "frontend",
+    "exports": [
+      "FileAttachmentOptions",
+      "FileAttachment"
+    ],
+    "size": 6769,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/extensions/embed",
+    "description": "Embed Extension - Embed YouTube, Figma, etc.",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/extensions/embed.ts",
+    "files": [
+      "BlockEditor/extensions/embed.ts"
+    ],
+    "dependencies": [
+      "@tiptap/core"
+    ],
+    "category": "frontend",
+    "exports": [
+      "EmbedOptions",
+      "Embed"
+    ],
+    "size": 3969,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/extensions/database",
+    "description": "Database Extension - Notion-style database with multiple views",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/extensions/database.ts",
+    "files": [
+      "BlockEditor/extensions/database.ts"
+    ],
+    "dependencies": [
+      "@tiptap/core"
+    ],
+    "category": "frontend",
+    "exports": [
+      "DatabaseOptions",
+      "Database"
+    ],
+    "size": 16766,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/extensions/callout",
+    "description": "Callout Extension - Info/Warning/Error/Success callout blocks",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/extensions/callout.ts",
+    "files": [
+      "BlockEditor/extensions/callout.ts"
+    ],
+    "dependencies": [
+      "@tiptap/core"
+    ],
+    "category": "frontend",
+    "exports": [
+      "CalloutOptions",
+      "Callout"
+    ],
+    "size": 2523,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/extensions/calendar",
+    "description": "Calendar Extension - Date-based event view with month/week/day layouts",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/extensions/calendar.ts",
+    "files": [
+      "BlockEditor/extensions/calendar.ts"
+    ],
+    "dependencies": [
+      "@tiptap/core"
+    ],
+    "category": "frontend",
+    "exports": [
+      "CalendarOptions",
+      "Calendar"
+    ],
+    "size": 12980,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/blocks/mermaidblock",
+    "description": "MermaidBlock - React component for rendering Mermaid diagrams",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/blocks/MermaidBlock.tsx",
+    "files": [
+      "BlockEditor/blocks/MermaidBlock.tsx"
+    ],
+    "dependencies": [
+      "@tiptap/react",
+      "react",
+      "mermaid"
+    ],
+    "category": "frontend",
+    "exports": [
+      "MermaidBlock"
+    ],
+    "size": 3645,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr-ui/blockeditor/blocks/mathblock",
+    "description": "MathBlock - React component for rendering KaTeX math equations",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/client/components/BlockEditor/blocks/MathBlock.tsx",
+    "files": [
+      "BlockEditor/blocks/MathBlock.tsx"
+    ],
+    "dependencies": [
+      "@tiptap/react",
+      "react",
+      "katex"
+    ],
+    "category": "frontend",
+    "exports": [
+      "MathBlockComponent"
+    ],
+    "size": 3116,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe"
+  },
+  {
+    "name": "@ankr/config-aria-labels",
+    "description": "ARIA Labels for Accessibility",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/config/aria-labels.ts",
+    "files": [
+      "aria-labels.ts"
+    ],
+    "dependencies": [],
+    "category": "config",
+    "exports": [
+      "AriaLabels",
+      "ARIA_LABELS",
+      "getAriaLabel",
+      "getAriaLabelsForLanguage"
+    ],
+    "size": 25772,
+    "reusability": "high",
+    "reason": "Configuration files are highly reusable across projects"
+  },
+  {
+    "name": "@ankr/config-features",
+    "description": "Feature Flags Configuration",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/config/features.ts",
+    "files": [
+      "features.ts"
+    ],
+    "dependencies": [],
+    "category": "config",
+    "exports": [
+      "FeatureFlags",
+      "DEFAULT_FEATURES",
+      "isFeatureEnabled",
+      "useFeature",
+      "getEnabledFeatures",
+      "getFeatureFlags",
+      "enableFeatureTemporarily",
+      "hasFeatureOverride"
+    ],
+    "size": 4802,
+    "reusability": "high",
+    "reason": "Configuration files are highly reusable across projects"
+  },
+  {
+    "name": "@ankr/config-languages.d",
+    "description": "Comprehensive Language Configuration for ANKR Interact",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/config/languages.d.ts",
+    "files": [
+      "languages.d.ts"
+    ],
+    "dependencies": [],
+    "category": "config",
+    "exports": [
+      "SupportedLanguageCode",
+      "LanguageInfo"
+    ],
+    "size": 1641,
+    "reusability": "high",
+    "reason": "Configuration files are highly reusable across projects"
+  },
+  {
+    "name": "@ankr/config-languages",
+    "description": "Comprehensive Language Configuration for ANKR Interact",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/config/languages.ts",
+    "files": [
+      "languages.ts"
+    ],
+    "dependencies": [],
+    "category": "config",
+    "exports": [
+      "SupportedLanguageCode",
+      "LanguageInfo",
+      "SUPPORTED_LANGUAGES",
+      "getAllLanguageCodes",
+      "getLanguageInfo",
+      "getRTLLanguages",
+      "getLanguagesByRegion",
+      "getLanguagesByScript",
+      "getGoogleFontsURL",
+      "isRTL",
+      "getDirection"
+    ],
+    "size": 7098,
+    "reusability": "high",
+    "reason": "Configuration files are highly reusable across projects"
+  },
+  {
+    "name": "@ankr/shared-config",
+    "description": "ANKR Interact - Configuration System",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/shared/config.ts",
+    "files": [
+      "config.ts"
+    ],
+    "dependencies": [],
+    "category": "shared",
+    "exports": [
+      "AppConfig",
+      "config",
+      "default"
+    ],
+    "size": 6460,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/shared-tiers.d",
+    "description": "ANKR Interact - Tier System",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/shared/tiers.d.ts",
+    "files": [
+      "tiers.d.ts"
+    ],
+    "dependencies": [],
+    "category": "shared",
+    "exports": [
+      "TierLimits",
+      "TierFeatures",
+      "TierConfig",
+      "FeatureGroup"
+    ],
+    "size": 3088,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/shared-tiers.js",
+    "description": "ANKR Interact - Tier System",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/shared/tiers.js",
+    "files": [
+      "tiers.js"
+    ],
+    "dependencies": [],
+    "category": "shared",
+    "exports": [],
+    "size": 16604,
+    "reusability": "medium",
+    "reason": "Well documented, Generic implementation, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankr/shared-tiers",
+    "description": "ANKR Interact - Tier System",
+    "path": "/root/ankr-labs-nx/packages/ankr-interact/src/shared/tiers.ts",
+    "files": [
+      "tiers.ts"
+    ],
+    "dependencies": [],
+    "category": "shared",
+    "exports": [
+      "TierLimits",
+      "TierFeatures",
+      "TierConfig",
+      "TIERS",
+      "FeatureGroup",
+      "FEATURE_GROUPS",
+      "getTierConfig",
+      "hasFeature",
+      "checkLimit",
+      "getAllTiers",
+      "getUpgradePath",
+      "calculateSavings"
+    ],
+    "size": 16835,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  }
+]

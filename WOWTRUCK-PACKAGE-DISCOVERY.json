@@ -1,0 +1,653 @@
+[
+  {
+    "name": "@wowtruck/resolvers-analytics.resolver",
+    "description": "WowTruck resolvers - analytics.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/analytics.resolver.ts",
+    "files": [
+      "analytics.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "analyticsSchema",
+      "analyticsQueries",
+      "analyticsNewQueries",
+      "analyticsResolvers",
+      "default"
+    ],
+    "size": 14079,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-auto-quote.resolver",
+    "description": "WowTruck resolvers - auto-quote.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/auto-quote.resolver.ts",
+    "files": [
+      "auto-quote.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "autoQuoteQueries",
+      "autoQuoteMutations",
+      "autoQuoteTypeResolvers",
+      "autoQuoteSchema",
+      "default"
+    ],
+    "size": 33245,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-bank-integration.resolver",
+    "description": "WowTruck resolvers - bank-integration.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/bank-integration.resolver.ts",
+    "files": [
+      "bank-integration.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "bankIntegrationSchema",
+      "bankIntegrationQueries",
+      "bankIntegrationMutations",
+      "bankIntegrationResolvers",
+      "default"
+    ],
+    "size": 28434,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-crm.resolver",
+    "description": "WowTruck resolvers - crm.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/crm.resolver.ts",
+    "files": [
+      "crm.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "crmQueries",
+      "crmMutations",
+      "crmTypeResolvers"
+    ],
+    "size": 25803,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-docchain.resolver",
+    "description": "WowTruck resolvers - docchain.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/docchain.resolver.ts",
+    "files": [
+      "docchain.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "docchainTypeDefs",
+      "docchainQueries",
+      "docchainMutations",
+      "docchainResolvers"
+    ],
+    "size": 13787,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-document-ocr.resolver",
+    "description": "WowTruck resolvers - document-ocr.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/document-ocr.resolver.ts",
+    "files": [
+      "document-ocr.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "documentOCRSchema",
+      "documentOCRQueries",
+      "documentOCRMutations",
+      "documentOCRResolvers",
+      "default"
+    ],
+    "size": 12862,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-einvoice.resolver",
+    "description": "WowTruck resolvers - einvoice.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/einvoice.resolver.ts",
+    "files": [
+      "einvoice.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "einvoiceTypeDefs",
+      "einvoiceQueries",
+      "einvoiceMutations",
+      "einvoiceTypeResolvers",
+      "einvoiceResolvers",
+      "default"
+    ],
+    "size": 44170,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-email-inbox.resolver",
+    "description": "WowTruck resolvers - email-inbox.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/email-inbox.resolver.ts",
+    "files": [
+      "email-inbox.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "emailInboxQueries",
+      "emailInboxMutations",
+      "emailInboxTypeResolvers",
+      "default"
+    ],
+    "size": 28463,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-fleet-metrics.resolver",
+    "description": "WowTruck resolvers - fleet-metrics.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/fleet-metrics.resolver.ts",
+    "files": [
+      "fleet-metrics.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "fleetMetricsResolver"
+    ],
+    "size": 7955,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-fleet-metrics.schema",
+    "description": "WowTruck resolvers - fleet-metrics.schema",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/fleet-metrics.schema.ts",
+    "files": [
+      "fleet-metrics.schema.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "fleetMetricsTypeDefs"
+    ],
+    "size": 794,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-flow-canvas.resolver",
+    "description": "WowTruck resolvers - flow-canvas.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/flow-canvas.resolver.ts",
+    "files": [
+      "flow-canvas.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "flowCanvasSchema",
+      "flowCanvasResolvers"
+    ],
+    "size": 31549,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-freight.resolver",
+    "description": "WowTruck resolvers - freight.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/freight.resolver.ts",
+    "files": [
+      "freight.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "freightResolvers"
+    ],
+    "size": 6296,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-freight",
+    "description": "WowTruck resolvers - freight",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/freight.ts",
+    "files": [
+      "freight.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "freightResolvers"
+    ],
+    "size": 2552,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-frontend-compat.resolver",
+    "description": "WowTruck resolvers - frontend-compat.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/frontend-compat.resolver.ts",
+    "files": [
+      "frontend-compat.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "frontendCompatQueries",
+      "frontendCompatMutations"
+    ],
+    "size": 22667,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-geofence.resolver",
+    "description": "WowTruck resolvers - geofence.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/geofence.resolver.ts",
+    "files": [
+      "geofence.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "geofenceTypeDefs",
+      "geofenceResolvers",
+      "default"
+    ],
+    "size": 3290,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-gps",
+    "description": "WowTruck resolvers - gps",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/gps.ts",
+    "files": [
+      "gps.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "gpsQueries",
+      "gpsMutations"
+    ],
+    "size": 3025,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-hrms.resolver",
+    "description": "WowTruck resolvers - hrms.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/hrms.resolver.ts",
+    "files": [
+      "hrms.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "hrmsQueries",
+      "hrmsMutations",
+      "hrmsTypeResolvers"
+    ],
+    "size": 14283,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-hrms.schema",
+    "description": "WowTruck resolvers - hrms.schema",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/hrms.schema.ts",
+    "files": [
+      "hrms.schema.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "hrmsSchema"
+    ],
+    "size": 13391,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-index",
+    "description": "WowTruck resolvers - index",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/index.ts",
+    "files": [
+      "index.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "resolvers"
+    ],
+    "size": 97364,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-portalResolvers",
+    "description": "WowTruck resolvers - portalResolvers",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/portalResolvers.ts",
+    "files": [
+      "portalResolvers.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "resolvers",
+      "portalResolvers",
+      "default"
+    ],
+    "size": 22451,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-realtime-dashboard.resolver",
+    "description": "WowTruck resolvers - realtime-dashboard.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/realtime-dashboard.resolver.ts",
+    "files": [
+      "realtime-dashboard.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "realtimeDashboardSchema",
+      "realtimeDashboardQueries",
+      "realtimeDashboardMutations",
+      "realtimeDashboardResolvers",
+      "default"
+    ],
+    "size": 10661,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-test-report.resolver",
+    "description": "WowTruck resolvers - test-report.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/test-report.resolver.ts",
+    "files": [
+      "test-report.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "testReportSchema",
+      "testReportResolvers"
+    ],
+    "size": 9378,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-whatsapp-inbox.resolver",
+    "description": "WowTruck resolvers - whatsapp-inbox.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/whatsapp-inbox.resolver.ts",
+    "files": [
+      "whatsapp-inbox.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "whatsappInboxQueries",
+      "whatsappInboxMutations",
+      "whatsappInboxTypeResolvers",
+      "whatsappInboxResolvers",
+      "default"
+    ],
+    "size": 31704,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-whatsapp.resolver",
+    "description": "WowTruck resolvers - whatsapp.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/whatsapp.resolver.ts",
+    "files": [
+      "whatsapp.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "whatsappTypeDefs",
+      "whatsappQueries",
+      "whatsappMutations",
+      "whatsappResolvers"
+    ],
+    "size": 7954,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/resolvers-workflow.resolver",
+    "description": "WowTruck resolvers - workflow.resolver",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/resolvers/workflow.resolver.ts",
+    "files": [
+      "workflow.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "workflowSchema",
+      "workflowQueries",
+      "workflowMutations",
+      "workflowQueriesFiltered",
+      "workflowMutationsFiltered",
+      "workflowResolvers",
+      "default"
+    ],
+    "size": 15084,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/routes-docchain.routes",
+    "description": "WowTruck routes - docchain.routes",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/routes/docchain.routes.ts",
+    "files": [
+      "docchain.routes.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "default"
+    ],
+    "size": 5932,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/routes-document.routes",
+    "description": "WowTruck routes - document.routes",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/routes/document.routes.ts",
+    "files": [
+      "document.routes.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "default"
+    ],
+    "size": 3636,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/routes-flow-canvas.routes",
+    "description": "WowTruck routes - flow-canvas.routes",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/routes/flow-canvas.routes.ts",
+    "files": [
+      "flow-canvas.routes.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "default"
+    ],
+    "size": 14124,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/routes-otp.routes",
+    "description": "WowTruck routes - otp.routes",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/routes/otp.routes.ts",
+    "files": [
+      "otp.routes.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "default"
+    ],
+    "size": 6262,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/routes-rate.routes",
+    "description": "WowTruck routes - rate.routes",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/routes/rate.routes.ts",
+    "files": [
+      "rate.routes.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "default"
+    ],
+    "size": 6576,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/routes-swayam.routes",
+    "description": "WowTruck routes - swayam.routes",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/routes/swayam.routes.ts",
+    "files": [
+      "swayam.routes.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "default"
+    ],
+    "size": 6804,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/routes-whatsapp",
+    "description": "WowTruck routes - whatsapp",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/routes/whatsapp.ts",
+    "files": [
+      "whatsapp.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "default"
+    ],
+    "size": 10893,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/ai-swayam.service",
+    "description": "WowTruck ai - swayam.service",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/ai/swayam.service.ts",
+    "files": [
+      "swayam.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "SwayamService",
+      "default"
+    ],
+    "size": 31441,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/auth-index",
+    "description": "WowTruck auth - index",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/auth/index.ts",
+    "files": [
+      "index.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "AUTH_CONFIG",
+      "AuthUser",
+      "UserRole",
+      "AuthContext",
+      "JWTPayload",
+      "AuthService",
+      "requireAuth",
+      "requirePermission",
+      "requireRole",
+      "AnkrSessionManager",
+      "AnkrRBAC",
+      "AnkrAuditLog"
+    ],
+    "size": 15828,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/middleware-rateLimiter",
+    "description": "WowTruck middleware - rateLimiter",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/middleware/rateLimiter.ts",
+    "files": [
+      "rateLimiter.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "RateLimitConfig",
+      "apiRateLimitConfig",
+      "chatRateLimitConfig",
+      "rateLimitHook"
+    ],
+    "size": 2171,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  },
+  {
+    "name": "@wowtruck/middleware-rbac",
+    "description": "WowTruck middleware - rbac",
+    "path": "/root/ankr-labs-nx/apps/wowtruck/backend/src/middleware/rbac.ts",
+    "files": [
+      "rbac.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "AuthenticatedUser",
+      "requireRole",
+      "requirePermission",
+      "requireOwnershipOrAdmin",
+      "auditLog"
+    ],
+    "size": 3172,
+    "reusability": "medium",
+    "reason": "TMS utility"
+  }
+]

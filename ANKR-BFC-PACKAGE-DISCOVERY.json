@@ -1,0 +1,611 @@
+[
+  {
+    "name": "@bfc/services-agent.service",
+    "description": "BFC service - agent.service",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/agent.service.ts",
+    "files": [
+      "agent.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "finance",
+    "exports": [
+      "AgentService",
+      "createAgentService"
+    ],
+    "size": 15440,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/services-claims.service",
+    "description": "BFC service - claims.service",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/claims.service.ts",
+    "files": [
+      "claims.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "finance",
+    "exports": [
+      "ClaimCreateInput",
+      "FraudAnalysis",
+      "ClaimAssessment",
+      "ClaimsService",
+      "createClaimsService"
+    ],
+    "size": 21292,
+    "reusability": "high",
+    "reason": "5 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/services-compliance.service",
+    "description": "BFC service - compliance.service",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/compliance.service.ts",
+    "files": [
+      "compliance.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "finance",
+    "exports": [
+      "ComplianceService",
+      "createComplianceService"
+    ],
+    "size": 14176,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/services-credit.service",
+    "description": "BFC service - credit.service",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/credit.service.ts",
+    "files": [
+      "credit.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "finance",
+    "exports": [
+      "CreditDecisionResult",
+      "CreditService",
+      "createCreditService"
+    ],
+    "size": 3542,
+    "reusability": "high",
+    "reason": "3 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/services-customer.service",
+    "description": "BFC service - customer.service",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/customer.service.ts",
+    "files": [
+      "customer.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "finance",
+    "exports": [
+      "CustomerService",
+      "createCustomerService"
+    ],
+    "size": 3220,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/services-document.service",
+    "description": "BFC service - document.service",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/document.service.ts",
+    "files": [
+      "document.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "finance",
+    "exports": [
+      "DocumentService",
+      "createDocumentService"
+    ],
+    "size": 12685,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/services-gamification.service",
+    "description": "BFC service - gamification.service",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/gamification.service.ts",
+    "files": [
+      "gamification.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "finance",
+    "exports": [
+      "PointsAward",
+      "BadgeDefinition",
+      "GamificationService",
+      "createGamificationService"
+    ],
+    "size": 18972,
+    "reusability": "high",
+    "reason": "4 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/services-index",
+    "description": "BFC service - index",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/index.ts",
+    "files": [
+      "index.ts"
+    ],
+    "dependencies": [],
+    "category": "finance",
+    "exports": [
+      "CustomerService",
+      "createCustomerService",
+      "CreditService",
+      "createCreditService",
+      "type CreditDecisionResult",
+      "OfferService",
+      "createOfferService",
+      "type OfferRecommendation",
+      "TelematicsService",
+      "createTelematicsService",
+      "type TripSummary",
+      "type DrivingScore",
+      "InsuranceService",
+      "createInsuranceService",
+      "type PolicyCreateInput",
+      "type PremiumCalculation",
+      "GamificationService",
+      "createGamificationService",
+      "type PointsAward",
+      "ClaimsService",
+      "createClaimsService",
+      "type ClaimCreateInput",
+      "type FraudAnalysis",
+      "type ClaimAssessment",
+      "UnderwritingService",
+      "createUnderwritingService",
+      "WellnessService",
+      "createWellnessService",
+      "AgentService",
+      "createAgentService",
+      "ComplianceService",
+      "createComplianceService",
+      "RenewalService",
+      "createRenewalService",
+      "DocumentService",
+      "createDocumentService"
+    ],
+    "size": 1421,
+    "reusability": "high",
+    "reason": "36 exports, generic implementation, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@bfc/services-insurance.service",
+    "description": "BFC service - insurance.service",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/insurance.service.ts",
+    "files": [
+      "insurance.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "finance",
+    "exports": [
+      "PolicyCreateInput",
+      "PremiumCalculation",
+      "InsuranceService",
+      "createInsuranceService"
+    ],
+    "size": 14266,
+    "reusability": "high",
+    "reason": "4 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/services-offer.service",
+    "description": "BFC service - offer.service",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/offer.service.ts",
+    "files": [
+      "offer.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "finance",
+    "exports": [
+      "OfferRecommendation",
+      "OfferService",
+      "createOfferService"
+    ],
+    "size": 3698,
+    "reusability": "high",
+    "reason": "3 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/services-renewal.service",
+    "description": "BFC service - renewal.service",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/renewal.service.ts",
+    "files": [
+      "renewal.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "finance",
+    "exports": [
+      "RenewalService",
+      "createRenewalService"
+    ],
+    "size": 13700,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/services-telematics.service",
+    "description": "BFC service - telematics.service",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/telematics.service.ts",
+    "files": [
+      "telematics.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "finance",
+    "exports": [
+      "TripSummary",
+      "DrivingScore",
+      "TelematicsService",
+      "createTelematicsService"
+    ],
+    "size": 13988,
+    "reusability": "high",
+    "reason": "4 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/services-underwriting.service",
+    "description": "BFC service - underwriting.service",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/underwriting.service.ts",
+    "files": [
+      "underwriting.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "finance",
+    "exports": [
+      "UnderwritingService",
+      "createUnderwritingService"
+    ],
+    "size": 12462,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/services-wellness.service",
+    "description": "BFC service - wellness.service",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/services/wellness.service.ts",
+    "files": [
+      "wellness.service.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "finance",
+    "exports": [
+      "WellnessService",
+      "createWellnessService"
+    ],
+    "size": 13748,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/resolvers-claims.resolver",
+    "description": "BFC resolver - claims.resolver",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/resolvers/claims.resolver.ts",
+    "files": [
+      "claims.resolver.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "ClaimInput",
+      "claimsResolvers"
+    ],
+    "size": 9365,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/resolvers-credit.resolver",
+    "description": "BFC resolver - credit.resolver",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/resolvers/credit.resolver.ts",
+    "files": [
+      "credit.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "CreditApplicationInput",
+      "creditResolvers"
+    ],
+    "size": 9550,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@bfc/resolvers-customer.resolver",
+    "description": "BFC resolver - customer.resolver",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/resolvers/customer.resolver.ts",
+    "files": [
+      "customer.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "CustomerInput",
+      "PaginationInput",
+      "customerResolvers"
+    ],
+    "size": 7001,
+    "reusability": "high",
+    "reason": "3 exports, generic implementation, documented, zero dependencies, typed"
+  },
+  {
+    "name": "@bfc/resolvers-docchain.resolver",
+    "description": "BFC resolver - docchain.resolver",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/resolvers/docchain.resolver.ts",
+    "files": [
+      "docchain.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "docchainResolvers"
+    ],
+    "size": 1264,
+    "reusability": "high",
+    "reason": "1 exports, generic implementation, documented, zero dependencies"
+  },
+  {
+    "name": "@bfc/resolvers-episode.resolver",
+    "description": "BFC resolver - episode.resolver",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/resolvers/episode.resolver.ts",
+    "files": [
+      "episode.resolver.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "EpisodeInput",
+      "episodeResolvers"
+    ],
+    "size": 4510,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/resolvers-gamification.resolver",
+    "description": "BFC resolver - gamification.resolver",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/resolvers/gamification.resolver.ts",
+    "files": [
+      "gamification.resolver.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "gamificationResolvers"
+    ],
+    "size": 11695,
+    "reusability": "high",
+    "reason": "1 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/resolvers-index",
+    "description": "BFC resolver - index",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/resolvers/index.ts",
+    "files": [
+      "index.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "resolvers"
+    ],
+    "size": 4767,
+    "reusability": "high",
+    "reason": "1 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/resolvers-insurance.resolver",
+    "description": "BFC resolver - insurance.resolver",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/resolvers/insurance.resolver.ts",
+    "files": [
+      "insurance.resolver.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "InsurancePolicyInput",
+      "insuranceResolvers"
+    ],
+    "size": 6562,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/resolvers-notification.resolver",
+    "description": "BFC resolver - notification.resolver",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/resolvers/notification.resolver.ts",
+    "files": [
+      "notification.resolver.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "notificationResolvers"
+    ],
+    "size": 914,
+    "reusability": "high",
+    "reason": "1 exports, generic implementation, documented, zero dependencies"
+  },
+  {
+    "name": "@bfc/resolvers-offer.resolver",
+    "description": "BFC resolver - offer.resolver",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/resolvers/offer.resolver.ts",
+    "files": [
+      "offer.resolver.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "OfferInput",
+      "offerResolvers"
+    ],
+    "size": 6389,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/resolvers-telematics.resolver",
+    "description": "BFC resolver - telematics.resolver",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/resolvers/telematics.resolver.ts",
+    "files": [
+      "telematics.resolver.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "TelematicsEventInput",
+      "telematicsResolvers"
+    ],
+    "size": 6941,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/db-client",
+    "description": "BFC database - client",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/db/client.ts",
+    "files": [
+      "client.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "prisma",
+      "default"
+    ],
+    "size": 408,
+    "reusability": "high",
+    "reason": "2 exports, generic implementation, documented, minimal dependencies"
+  },
+  {
+    "name": "@bfc/db-credit.repository",
+    "description": "BFC database - credit.repository",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/db/credit.repository.ts",
+    "files": [
+      "credit.repository.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "CreditApplicationFilter",
+      "CreditRepository",
+      "creditRepository"
+    ],
+    "size": 5907,
+    "reusability": "high",
+    "reason": "3 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/db-customer.repository",
+    "description": "BFC database - customer.repository",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/db/customer.repository.ts",
+    "files": [
+      "customer.repository.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "CustomerFilter",
+      "PaginationOptions",
+      "CustomerRepository",
+      "customerRepository"
+    ],
+    "size": 4502,
+    "reusability": "high",
+    "reason": "4 exports, generic implementation, documented, minimal dependencies, typed"
+  },
+  {
+    "name": "@bfc/db-index",
+    "description": "BFC database - index",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/db/index.ts",
+    "files": [
+      "index.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "prisma",
+      "customerRepository",
+      "CustomerRepository",
+      "creditRepository",
+      "CreditRepository"
+    ],
+    "size": 225,
+    "reusability": "high",
+    "reason": "5 exports, generic implementation, documented, zero dependencies"
+  },
+  {
+    "name": "@bfc/plugins-auth",
+    "description": "BFC plugin - auth",
+    "path": "/root/ankr-bfc/apps/bfc-api/src/plugins/auth.ts",
+    "files": [
+      "auth.ts"
+    ],
+    "dependencies": [
+      "fastify",
+      "@fastify/jwt"
+    ],
+    "category": "backend",
+    "exports": [
+      "JwtPayload",
+      "generateToken",
+      "hasPermission",
+      "canAccessCustomer"
+    ],
+    "size": 2359,
+    "reusability": "high",
+    "reason": "4 exports, generic implementation, documented, minimal dependencies, typed"
+  }
+]

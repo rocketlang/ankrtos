@@ -1,0 +1,108 @@
+[
+  {
+    "name": "@everpure/services-api",
+    "description": "Everpure services - api",
+    "path": "/root/everpure-app/src/services/api.ts",
+    "files": [
+      "api.ts"
+    ],
+    "dependencies": [],
+    "category": "mobile",
+    "exports": [
+      "Product",
+      "OTPResponse",
+      "Customer",
+      "AuthResponse",
+      "OrderItem",
+      "Order",
+      "getImageUrl"
+    ],
+    "size": 7503,
+    "reusability": "high",
+    "reason": "7 exports, generic, zero deps, typed"
+  },
+  {
+    "name": "@everpure/components-ChatWidget",
+    "description": "Everpure components - ChatWidget",
+    "path": "/root/everpure-app/src/components/ChatWidget.tsx",
+    "files": [
+      "ChatWidget.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "react-native",
+      "@expo/vector-icons"
+    ],
+    "category": "mobile",
+    "exports": [
+      "default"
+    ],
+    "size": 9273,
+    "reusability": "medium",
+    "reason": "1 exports, generic, typed"
+  },
+  {
+    "name": "@everpure/components-ProductCard",
+    "description": "Everpure components - ProductCard",
+    "path": "/root/everpure-app/src/components/ProductCard.tsx",
+    "files": [
+      "ProductCard.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "react-native",
+      "@expo/vector-icons"
+    ],
+    "category": "mobile",
+    "exports": [
+      "default"
+    ],
+    "size": 7458,
+    "reusability": "medium",
+    "reason": "1 exports, generic, typed"
+  },
+  {
+    "name": "@everpure/context-AuthContext",
+    "description": "Everpure context - AuthContext",
+    "path": "/root/everpure-app/src/context/AuthContext.tsx",
+    "files": [
+      "AuthContext.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "react-native",
+      "expo-secure-store"
+    ],
+    "category": "mobile",
+    "exports": [
+      "User",
+      "AuthProvider",
+      "useAuth"
+    ],
+    "size": 5257,
+    "reusability": "medium",
+    "reason": "3 exports, generic, typed"
+  },
+  {
+    "name": "@everpure/context-CartContext",
+    "description": "Everpure context - CartContext",
+    "path": "/root/everpure-app/src/context/CartContext.tsx",
+    "files": [
+      "CartContext.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "react-native",
+      "expo-secure-store"
+    ],
+    "category": "mobile",
+    "exports": [
+      "CartItem",
+      "CartProvider",
+      "useCart"
+    ],
+    "size": 3750,
+    "reusability": "medium",
+    "reason": "3 exports, generic, typed"
+  }
+]

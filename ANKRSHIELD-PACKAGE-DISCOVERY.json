@@ -1,0 +1,484 @@
+[
+  {
+    "name": "@ankrshield/auth-jwt",
+    "description": "JWT token utilities",
+    "path": "/root/ankrshield/apps/api/src/auth/jwt.ts",
+    "files": [
+      "jwt.ts"
+    ],
+    "dependencies": [
+      "fastify"
+    ],
+    "category": "security",
+    "exports": [
+      "JWTPayload",
+      "extractToken"
+    ],
+    "size": 663,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankrshield/plugin-auth",
+    "description": "Authentication plugin for Fastify",
+    "path": "/root/ankrshield/apps/api/src/plugins/auth.ts",
+    "files": [
+      "auth.ts"
+    ],
+    "dependencies": [
+      "fastify-plugin",
+      "@fastify/jwt",
+      "fastify"
+    ],
+    "category": "backend",
+    "exports": [
+      "default"
+    ],
+    "size": 640,
+    "reusability": "medium",
+    "reason": "Well documented, Generic implementation"
+  },
+  {
+    "name": "@ankrshield/plugin-security",
+    "description": "Security plugins (CORS, Helmet, Rate Limiting)",
+    "path": "/root/ankrshield/apps/api/src/plugins/security.ts",
+    "files": [
+      "security.ts"
+    ],
+    "dependencies": [
+      "fastify-plugin",
+      "@fastify/cors",
+      "@fastify/helmet",
+      "@fastify/rate-limit",
+      "fastify"
+    ],
+    "category": "backend",
+    "exports": [
+      "default"
+    ],
+    "size": 793,
+    "reusability": "medium",
+    "reason": "Well documented, Generic implementation"
+  },
+  {
+    "name": "@ankrshield/graphql-auth",
+    "description": "Authentication GraphQL Types",
+    "path": "/root/ankrshield/apps/api/src/graphql/types/auth.ts",
+    "files": [
+      "auth.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "RegisterInput",
+      "LoginInput"
+    ],
+    "size": 753,
+    "reusability": "high",
+    "reason": "GraphQL type definitions - highly reusable"
+  },
+  {
+    "name": "@ankrshield/graphql-user",
+    "description": "User GraphQL Type",
+    "path": "/root/ankrshield/apps/api/src/graphql/types/user.ts",
+    "files": [
+      "user.ts"
+    ],
+    "dependencies": [
+      "@prisma/client"
+    ],
+    "category": "backend",
+    "exports": [
+      "UserRef"
+    ],
+    "size": 1966,
+    "reusability": "high",
+    "reason": "GraphQL type definitions - highly reusable"
+  },
+  {
+    "name": "@ankrshield/util-jwt",
+    "description": "JWT Helper - singleton to access Fastify JWT instance",
+    "path": "/root/ankrshield/apps/api/src/utils/jwt-helper.ts",
+    "files": [
+      "jwt-helper.ts"
+    ],
+    "dependencies": [
+      "jsonwebtoken"
+    ],
+    "category": "shared",
+    "exports": [
+      "generateToken",
+      "verifyToken"
+    ],
+    "size": 531,
+    "reusability": "high",
+    "reason": "Utility functions - highly reusable"
+  },
+  {
+    "name": "@ankrshield/monitor-traffic",
+    "description": "Network Traffic Monitor",
+    "path": "/root/ankrshield/apps/api/src/monitor/traffic-monitor.ts",
+    "files": [
+      "traffic-monitor.ts"
+    ],
+    "dependencies": [
+      "pg",
+      "events"
+    ],
+    "category": "security",
+    "exports": [
+      "startMonitor",
+      "stopMonitor",
+      "getMonitor",
+      "default"
+    ],
+    "size": 7989,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankrshield-ui/table",
+    "description": "Table Component",
+    "path": "/root/ankrshield/apps/web/src/components/ui/Table.tsx",
+    "files": [
+      "Table.tsx"
+    ],
+    "dependencies": [],
+    "category": "frontend",
+    "exports": [
+      "TableHeader",
+      "TableBody",
+      "TableRow",
+      "TableHead",
+      "TableCell",
+      "default"
+    ],
+    "size": 1509,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankrshield-ui/select",
+    "description": "Select Component",
+    "path": "/root/ankrshield/apps/web/src/components/ui/Select.tsx",
+    "files": [
+      "Select.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "default"
+    ],
+    "size": 1243,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankrshield-ui/input",
+    "description": "Input Component",
+    "path": "/root/ankrshield/apps/web/src/components/ui/Input.tsx",
+    "files": [
+      "Input.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "default"
+    ],
+    "size": 1158,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankrshield-ui/checkbox",
+    "description": "Checkbox Component",
+    "path": "/root/ankrshield/apps/web/src/components/ui/Checkbox.tsx",
+    "files": [
+      "Checkbox.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "default"
+    ],
+    "size": 701,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankrshield-ui/card",
+    "description": "Card Component",
+    "path": "/root/ankrshield/apps/web/src/components/ui/Card.tsx",
+    "files": [
+      "Card.tsx"
+    ],
+    "dependencies": [],
+    "category": "frontend",
+    "exports": [
+      "CardHeader",
+      "CardBody",
+      "CardFooter",
+      "default"
+    ],
+    "size": 1202,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankrshield-ui/button",
+    "description": "Button Component",
+    "path": "/root/ankrshield/apps/web/src/components/ui/Button.tsx",
+    "files": [
+      "Button.tsx"
+    ],
+    "dependencies": [
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "default"
+    ],
+    "size": 2028,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankrshield-ui/badge",
+    "description": "Badge Component",
+    "path": "/root/ankrshield/apps/web/src/components/ui/Badge.tsx",
+    "files": [
+      "Badge.tsx"
+    ],
+    "dependencies": [],
+    "category": "frontend",
+    "exports": [
+      "default"
+    ],
+    "size": 718,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankrshield-ui/alert",
+    "description": "Alert Component",
+    "path": "/root/ankrshield/apps/web/src/components/ui/Alert.tsx",
+    "files": [
+      "Alert.tsx"
+    ],
+    "dependencies": [
+      "lucide-react",
+      "react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "default"
+    ],
+    "size": 1703,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankrshield-ui/layout-sidebar",
+    "description": "Sidebar Component",
+    "path": "/root/ankrshield/apps/web/src/components/layout/Sidebar.tsx",
+    "files": [
+      "Sidebar.tsx"
+    ],
+    "dependencies": [
+      "react-router-dom",
+      "lucide-react"
+    ],
+    "category": "frontend",
+    "exports": [
+      "default"
+    ],
+    "size": 1660,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankrshield-ui/layout-header",
+    "description": "Header Component",
+    "path": "/root/ankrshield/apps/web/src/components/layout/Header.tsx",
+    "files": [
+      "Header.tsx"
+    ],
+    "dependencies": [
+      "lucide-react",
+      "react-router-dom"
+    ],
+    "category": "frontend",
+    "exports": [
+      "default"
+    ],
+    "size": 2011,
+    "reusability": "medium",
+    "reason": "Well documented, Few dependencies"
+  },
+  {
+    "name": "@ankrshield-ui/layout-contentwrapper",
+    "description": "Content Wrapper Component",
+    "path": "/root/ankrshield/apps/web/src/components/layout/ContentWrapper.tsx",
+    "files": [
+      "ContentWrapper.tsx"
+    ],
+    "dependencies": [],
+    "category": "frontend",
+    "exports": [
+      "default"
+    ],
+    "size": 511,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, No external dependencies, Few dependencies"
+  },
+  {
+    "name": "@ankrshield/desktop-preload",
+    "description": "Preload script for Electron",
+    "path": "/root/ankrshield/apps/desktop/src/preload.ts",
+    "files": [
+      "preload.ts"
+    ],
+    "dependencies": [
+      "electron"
+    ],
+    "category": "frontend",
+    "exports": [
+      "ElectronAPI"
+    ],
+    "size": 2212,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankrshield/desktop-App",
+    "description": "Main React App Component",
+    "path": "/root/ankrshield/apps/desktop/src/renderer/App.tsx",
+    "files": [
+      "renderer/App.tsx"
+    ],
+    "dependencies": [
+      "react",
+      "react-router-dom"
+    ],
+    "category": "frontend",
+    "exports": [
+      "default"
+    ],
+    "size": 2173,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Few dependencies"
+  },
+  {
+    "name": "@ankrshield/desktop-index",
+    "description": "Preload Script",
+    "path": "/root/ankrshield/apps/desktop/src/preload/index.ts",
+    "files": [
+      "preload/index.ts"
+    ],
+    "dependencies": [
+      "electron"
+    ],
+    "category": "frontend",
+    "exports": [
+      "ElectronAPI"
+    ],
+    "size": 4335,
+    "reusability": "high",
+    "reason": "Well documented, Generic implementation, Type-safe, Few dependencies"
+  },
+  {
+    "name": "@ankrshield/desktop-window",
+    "description": "Window Manager",
+    "path": "/root/ankrshield/apps/desktop/src/main/window.ts",
+    "files": [
+      "main/window.ts"
+    ],
+    "dependencies": [
+      "electron",
+      "path"
+    ],
+    "category": "frontend",
+    "exports": [
+      "createMainWindow",
+      "getMainWindow",
+      "showMainWindow",
+      "hideMainWindow",
+      "toggleMainWindow",
+      "saveWindowState"
+    ],
+    "size": 5514,
+    "reusability": "medium",
+    "reason": "Multiple exports, Well documented, Few dependencies"
+  },
+  {
+    "name": "@ankrshield/desktop-updater",
+    "description": "Auto-Updater",
+    "path": "/root/ankrshield/apps/desktop/src/main/updater.ts",
+    "files": [
+      "main/updater.ts"
+    ],
+    "dependencies": [
+      "electron-updater",
+      "electron"
+    ],
+    "category": "frontend",
+    "exports": [
+      "setupAutoUpdater",
+      "checkForUpdates",
+      "quitAndInstall",
+      "cleanupUpdater"
+    ],
+    "size": 2563,
+    "reusability": "high",
+    "reason": "Multiple exports, Well documented, Generic implementation, Few dependencies"
+  },
+  {
+    "name": "@ankrshield/desktop-tray",
+    "description": "System Tray Manager",
+    "path": "/root/ankrshield/apps/desktop/src/main/tray.ts",
+    "files": [
+      "main/tray.ts"
+    ],
+    "dependencies": [
+      "electron",
+      "path"
+    ],
+    "category": "frontend",
+    "exports": [
+      "createTray",
+      "updatePrivacyScore",
+      "updateProtectionStatus",
+      "getTray",
+      "destroyTray"
+    ],
+    "size": 3994,
+    "reusability": "medium",
+    "reason": "Multiple exports, Well documented, Few dependencies"
+  },
+  {
+    "name": "@ankrshield/desktop-notifications",
+    "description": "Notification Service",
+    "path": "/root/ankrshield/apps/desktop/src/main/notifications.ts",
+    "files": [
+      "main/notifications.ts"
+    ],
+    "dependencies": [
+      "electron",
+      "path"
+    ],
+    "category": "frontend",
+    "exports": [
+      "NotificationOptions",
+      "NotificationService"
+    ],
+    "size": 3666,
+    "reusability": "medium",
+    "reason": "Well documented, Type-safe, Few dependencies"
+  }
+]

@@ -1,0 +1,370 @@
+[
+  {
+    "name": "@ankrcrm/ai-index",
+    "description": "ANKR CRM ai - index",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/ai/index.ts",
+    "files": [
+      "index.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "SwayamClient",
+      "getSwayamClient",
+      "initializeSwayam",
+      "type IntentClassification",
+      "type ExtractedEntity",
+      "type SentimentAnalysis",
+      "type SmartReply",
+      "type LeadQualification",
+      "type ConversationSummary",
+      "type SwayamConfig"
+    ],
+    "size": 381,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/ai-swayam.client",
+    "description": "ANKR CRM ai - swayam.client",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/ai/swayam.client.ts",
+    "files": [
+      "swayam.client.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "SwayamConfig",
+      "IntentClassification",
+      "ExtractedEntity",
+      "EntityType",
+      "SentimentAnalysis",
+      "LeadQualification",
+      "SmartReply",
+      "ConversationSummary",
+      "SwayamClient",
+      "getSwayamClient",
+      "default"
+    ],
+    "size": 20458,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/channels-email.service",
+    "description": "ANKR CRM channels - email.service",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/channels/email.service.ts",
+    "files": [
+      "email.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "EmailService",
+      "default"
+    ],
+    "size": 8930,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/channels-index",
+    "description": "ANKR CRM channels - index",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/channels/index.ts",
+    "files": [
+      "index.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "default",
+      "getUnifiedInbox",
+      "initializeUnifiedInbox"
+    ],
+    "size": 391,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/channels-types",
+    "description": "ANKR CRM channels - types",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/channels/types.ts",
+    "files": [
+      "types.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "ChannelType",
+      "MessageDirection",
+      "MessageStatus",
+      "ConversationStatus",
+      "ChannelMessage",
+      "MessageAttachment",
+      "Conversation",
+      "AIClassification",
+      "ExtractedEntity",
+      "WhatsAppConfig",
+      "EmailConfig",
+      "SMSConfig",
+      "VoiceConfig",
+      "ChannelConfig",
+      "ChannelEvent"
+    ],
+    "size": 3739,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/channels-unified-inbox.service",
+    "description": "ANKR CRM channels - unified-inbox.service",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/channels/unified-inbox.service.ts",
+    "files": [
+      "unified-inbox.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "UnifiedInboxService",
+      "getUnifiedInbox",
+      "initializeUnifiedInbox",
+      "default"
+    ],
+    "size": 21720,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/channels-whatsapp.service",
+    "description": "ANKR CRM channels - whatsapp.service",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/channels/whatsapp.service.ts",
+    "files": [
+      "whatsapp.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "WhatsAppService",
+      "default"
+    ],
+    "size": 9647,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/integrations-complymitra.client",
+    "description": "ANKR CRM integrations - complymitra.client",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/integrations/complymitra.client.ts",
+    "files": [
+      "complymitra.client.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "GSTINDetails",
+      "PANDetails",
+      "TDSCalculation",
+      "EInvoice",
+      "ComplianceCheckResult",
+      "ComplyMitraClient"
+    ],
+    "size": 13301,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/integrations-ecosystem.service",
+    "description": "ANKR CRM integrations - ecosystem.service",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/integrations/ecosystem.service.ts",
+    "files": [
+      "ecosystem.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "EcosystemConfig",
+      "ServiceStatus",
+      "EcosystemService",
+      "getEcosystemService",
+      "initializeEcosystemService"
+    ],
+    "size": 11393,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/integrations-freightbox.client",
+    "description": "ANKR CRM integrations - freightbox.client",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/integrations/freightbox.client.ts",
+    "files": [
+      "freightbox.client.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "FreightMode",
+      "FreightBoxShipper",
+      "FreightBoxBooking",
+      "FreightBoxRate",
+      "ShipmentEvent",
+      "FreightBoxClient"
+    ],
+    "size": 11743,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/integrations-index",
+    "description": "ANKR CRM integrations - index",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/integrations/index.ts",
+    "files": [
+      "index.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "EcosystemService",
+      "getEcosystemService",
+      "initializeEcosystemService",
+      "type EcosystemConfig",
+      "type ServiceStatus",
+      "",
+      "WowTruckClient",
+      "FreightBoxClient",
+      "ComplyMitraClient"
+    ],
+    "size": 950,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/integrations-wowtruck.client",
+    "description": "ANKR CRM integrations - wowtruck.client",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/integrations/wowtruck.client.ts",
+    "files": [
+      "wowtruck.client.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "WowTruckCustomer",
+      "WowTruckOrder",
+      "WowTruckVehicle",
+      "WowTruckFleetSummary",
+      "WowTruckRate",
+      "WowTruckClient"
+    ],
+    "size": 10216,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/resolvers-index",
+    "description": "ANKR CRM resolvers - index",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/resolvers/index.ts",
+    "files": [
+      "index.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "resolvers"
+    ],
+    "size": 89598,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/resolvers-stages",
+    "description": "ANKR CRM resolvers - stages",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/resolvers/stages.ts",
+    "files": [
+      "stages.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "DEFAULT_OPPORTUNITY_STAGES"
+    ],
+    "size": 1294,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/utils-prisma",
+    "description": "ANKR CRM utils - prisma",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/utils/prisma.ts",
+    "files": [
+      "prisma.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "prisma"
+    ],
+    "size": 332,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/utils-redis",
+    "description": "ANKR CRM utils - redis",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/utils/redis.ts",
+    "files": [
+      "redis.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "redis"
+    ],
+    "size": 1028,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/voice-index",
+    "description": "ANKR CRM voice - index",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/voice/index.ts",
+    "files": [
+      "index.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "VoiceCRMService",
+      "getVoiceCRM",
+      "initializeVoiceCRM",
+      "type VoiceCommand",
+      "type VoiceCRMConfig",
+      "type TranscriptionResult",
+      "type CommandParseResult"
+    ],
+    "size": 292,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  },
+  {
+    "name": "@ankrcrm/voice-voice-crm.service",
+    "description": "ANKR CRM voice - voice-crm.service",
+    "path": "/root/ankr-labs-nx/apps/ankr-crm/backend/src/voice/voice-crm.service.ts",
+    "files": [
+      "voice-crm.service.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "VoiceCommand",
+      "VoiceCRMConfig",
+      "TranscriptionResult",
+      "CommandParseResult",
+      "VoiceCRMService",
+      "getVoiceCRM",
+      "initializeVoiceCRM",
+      "default"
+    ],
+    "size": 21039,
+    "reusability": "medium",
+    "reason": "CRM utility"
+  }
+]

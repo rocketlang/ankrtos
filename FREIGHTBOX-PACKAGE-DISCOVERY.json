@@ -1,0 +1,146 @@
+[
+  {
+    "name": "@freightbox/services-apibox",
+    "description": "Freightbox services - apibox",
+    "path": "/root/ankr-labs-nx/apps/freightbox/backend/src/services/apibox.ts",
+    "files": [
+      "apibox.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "DigiLockerDocument",
+      "GSTINDetails",
+      "VahanVehicleDetails",
+      "EWayBill",
+      "EWayBillGenerateInput",
+      "DigiLockerService",
+      "GSTNService",
+      "VahanService",
+      "EWayBillService",
+      "APIBoxService",
+      "apibox",
+      "default"
+    ],
+    "size": 24975,
+    "reusability": "medium",
+    "reason": "Freight utility"
+  },
+  {
+    "name": "@freightbox/services-container-tracking",
+    "description": "Freightbox services - container-tracking",
+    "path": "/root/ankr-labs-nx/apps/freightbox/backend/src/services/container-tracking.ts",
+    "files": [
+      "container-tracking.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "ContainerLocation",
+      "ContainerEvent",
+      "ContainerTracking",
+      "VesselPosition",
+      "ShipmentVisibility",
+      "ShipsGoService",
+      "GoCometService",
+      "ContainerTrackingService",
+      "containerTracking",
+      "default"
+    ],
+    "size": 22507,
+    "reusability": "medium",
+    "reason": "Freight utility"
+  },
+  {
+    "name": "@freightbox/services-ebl",
+    "description": "Freightbox services - ebl",
+    "path": "/root/ankr-labs-nx/apps/freightbox/backend/src/services/ebl.ts",
+    "files": [
+      "ebl.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "EBLDocumentStatus",
+      "TransferStatus",
+      "EndorsementType",
+      "Party",
+      "TransportDocument",
+      "TitleTransferRequest",
+      "TitleChainEntry",
+      "DocumentHash",
+      "DCSAEBLService",
+      "TitleTransferService",
+      "WAVEBLService",
+      "DocumentHashService",
+      "EBLService"
+    ],
+    "size": 22688,
+    "reusability": "medium",
+    "reason": "Freight utility"
+  },
+  {
+    "name": "@freightbox/services-pdf-generator",
+    "description": "Freightbox services - pdf-generator",
+    "path": "/root/ankr-labs-nx/apps/freightbox/backend/src/services/pdf-generator.ts",
+    "files": [
+      "pdf-generator.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "generateDocumentHash",
+      "renderTemplate",
+      "DOCUMENT_CONFIGS",
+      "GenerateDocumentOptions",
+      "GeneratedDocument",
+      "PDFGenerator",
+      "default"
+    ],
+    "size": 5057,
+    "reusability": "medium",
+    "reason": "Freight utility"
+  },
+  {
+    "name": "@freightbox/bff-flow-canvas.bff",
+    "description": "Freightbox bff - flow-canvas.bff",
+    "path": "/root/ankr-labs-nx/apps/freightbox/backend/src/bff/flow-canvas.bff.ts",
+    "files": [
+      "flow-canvas.bff.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "FlowCanvasKPIs",
+      "FlowStage",
+      "FlowData",
+      "StageItem",
+      "FlowCanvasBFF",
+      "flowCanvasSchema",
+      "createFlowCanvasResolvers"
+    ],
+    "size": 15352,
+    "reusability": "medium",
+    "reason": "Freight utility"
+  },
+  {
+    "name": "@freightbox/types-ankr-twin.d",
+    "description": "Freightbox types - ankr-twin.d",
+    "path": "/root/ankr-labs-nx/apps/freightbox/backend/src/types/ankr-twin.d.ts",
+    "files": [
+      "ankr-twin.d.ts"
+    ],
+    "dependencies": [],
+    "category": "backend",
+    "exports": [
+      "ContainerValidation",
+      "ShippingLine",
+      "validateContainerNumber",
+      "getContainerInfo",
+      "SHIPPING_LINES"
+    ],
+    "size": 920,
+    "reusability": "medium",
+    "reason": "Freight utility"
+  }
+]
