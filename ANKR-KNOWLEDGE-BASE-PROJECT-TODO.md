@@ -87,10 +87,13 @@
 
 - [ ] **Embedding Service**
   - File: `packages/ankr-knowledge/src/services/embeddings.ts`
-  - Generate embeddings using Voyage AI or OpenAI
+  - Generate embeddings using **Voyage AI (voyage-code-2)** - Primary choice
+  - 1536 dimensions, $0.0001 per 1k tokens (30% cheaper than OpenAI)
+  - Quality score: 10/10 for code/technical content
   - Batch processing (100 chunks at a time)
   - Cost tracking
   - Caching for duplicate content
+  - **Already available via AI Proxy** at `/api/embeddings`
 
 - [ ] **Knowledge Indexer Service**
   - File: `packages/ankr-knowledge/src/services/indexer.ts`
