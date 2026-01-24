@@ -104,8 +104,10 @@ All documents available at: **https://ankr.in/project/documents/**
 4. ✅ `FEATURE-3-TEACHER-DASHBOARD-COMPLETE.md` - Implementation summary
 5. ✅ `FERMI-INSPIRED-FEATURES-COMPLETE.md` - Status document
 6. ✅ `PRATHAM-MONDAY-PRESENTATION.md` - Monday meeting deck
-7. ✅ `ANKR-KNOWLEDGE-BASE-PROJECT-TODO.md` - New project TODO **← NEW**
-8. ✅ `ANKR-LMS-COMPETITIVE-LANDSCAPE-2026.md` - Market analysis
+7. ✅ `ANKR-KNOWLEDGE-BASE-PROJECT-TODO.md` - New project TODO (Voyage AI) **← UPDATED**
+8. ✅ `CAPTAIN-ANIL-LLM-TRAINING-COMPLETE-GUIDE.md` - LLM training guide (Voyage AI) **← UPDATED**
+9. ✅ `ANKR-VOYAGE-EMBEDDINGS-SETUP.md` - Voyage AI setup & cost analysis **← NEW**
+10. ✅ `ANKR-LMS-COMPETITIVE-LANDSCAPE-2026.md` - Market analysis
 
 ---
 
@@ -180,7 +182,10 @@ All documents available at: **https://ankr.in/project/documents/**
 
 ### Knowledge Base Additions (Planned):
 - **Vector DB:** pgvector (already have)
-- **Embeddings:** Voyage AI / OpenAI Ada
+- **Embeddings:** **Voyage AI (voyage-code-2)** - Primary choice ✅
+  - 1536 dimensions, $0.0001 per 1k tokens
+  - 23% cheaper than OpenAI, better quality for code (10/10)
+  - Already configured in AI Proxy
 - **Search:** Hybrid (vector + keyword)
 - **Code Parser:** TypeScript Compiler API
 - **Future:** Custom mini-LLM (optional Phase 5)
