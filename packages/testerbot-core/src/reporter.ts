@@ -166,6 +166,47 @@ export class Reporter {
       </div>
     </div>
 
+    ${(() => {
+      const testsWithFixes = report.tests.filter(t => t.fixResults && t.fixResults.length > 0);
+      if (testsWithFixes.length === 0) return '';
+
+      const totalFixAttempts = testsWithFixes.reduce((sum, t) => sum + (t.fixResults?.length || 0), 0);
+      const successfulFixes = testsWithFixes.reduce((sum, t) =>
+        sum + (t.fixResults?.filter(f => f.success).length || 0), 0);
+      const testsAutoFixed = testsWithFixes.filter(t =>
+        t.status === 'pass' && t.fixResults?.some(f => f.success)).length;
+
+      return `
+        <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+          <h2 style="margin: 0 0 15px 0; color: #333; font-size: 20px;">🔧 Auto-Fix Summary</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
+            <div>
+              <div style="font-size: 13px; color: #666; margin-bottom: 3px;">Tests with Fixes</div>
+              <div style="font-size: 24px; font-weight: bold; color: #3498db;">${testsWithFixes.length}</div>
+            </div>
+            <div>
+              <div style="font-size: 13px; color: #666; margin-bottom: 3px;">Fix Attempts</div>
+              <div style="font-size: 24px; font-weight: bold; color: #333;">${totalFixAttempts}</div>
+            </div>
+            <div>
+              <div style="font-size: 13px; color: #666; margin-bottom: 3px;">Successful</div>
+              <div style="font-size: 24px; font-weight: bold; color: #27ae60;">${successfulFixes}</div>
+            </div>
+            <div>
+              <div style="font-size: 13px; color: #666; margin-bottom: 3px;">Tests Auto-Fixed</div>
+              <div style="font-size: 24px; font-weight: bold; color: #27ae60;">${testsAutoFixed}</div>
+            </div>
+            <div>
+              <div style="font-size: 13px; color: #666; margin-bottom: 3px;">Success Rate</div>
+              <div style="font-size: 24px; font-weight: bold; color: ${successfulFixes / totalFixAttempts >= 0.5 ? '#27ae60' : '#e74c3c'};">
+                ${totalFixAttempts > 0 ? ((successfulFixes / totalFixAttempts) * 100).toFixed(0) : 0}%
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    })()}
+
     <div class="tests">
       ${report.tests.map(test => `
         <div class="test ${test.status}">
@@ -236,6 +277,43 @@ export class Reporter {
                         </div>
                       </div>
                     ` : ''}
+                  </div>
+                </details>
+              </div>
+            ` : ''}
+            ${test.fixResults && test.fixResults.length > 0 ? `
+              <div style="margin-top: 10px;">
+                <details open>
+                  <summary style="cursor: pointer; color: ${test.fixResults.some(f => f.success) ? '#27ae60' : '#e74c3c'};">
+                    🔧 Auto-Fix Attempted (${test.fixResults.filter(f => f.success).length}/${test.fixResults.length} successful)
+                  </summary>
+                  <div style="margin-top: 10px;">
+                    ${test.fixResults.map((fix, index) => `
+                      <div style="margin-bottom: 15px; padding: 10px; background: ${fix.success ? '#f0fff4' : '#fff5f5'}; border-left: 4px solid ${fix.success ? '#27ae60' : '#e74c3c'}; border-radius: 4px;">
+                        <div style="font-weight: bold; margin-bottom: 5px;">
+                          ${index + 1}. ${fix.success ? '✅' : '❌'} ${fix.fixName}
+                        </div>
+                        <div style="font-size: 13px; color: #666; margin-bottom: 5px;">
+                          <strong>Type:</strong> ${fix.issueType}
+                        </div>
+                        <div style="font-size: 13px; color: #666; margin-bottom: 5px;">
+                          <strong>Time:</strong> ${new Date(fix.timestamp).toLocaleTimeString()}
+                        </div>
+                        ${fix.actions && fix.actions.length > 0 ? `
+                          <div style="margin-top: 8px;">
+                            <div style="font-size: 13px; font-weight: 600; margin-bottom: 4px;">Actions Taken:</div>
+                            <ul style="margin: 0; padding-left: 20px; font-size: 12px; color: #555;">
+                              ${fix.actions.map(action => `<li>${action}</li>`).join('')}
+                            </ul>
+                          </div>
+                        ` : ''}
+                        ${fix.error ? `
+                          <div style="margin-top: 8px; padding: 6px; background: #ffe6e6; border-radius: 3px;">
+                            <div style="font-size: 12px; color: #c00;"><strong>Error:</strong> ${fix.error}</div>
+                          </div>
+                        ` : ''}
+                      </div>
+                    `).join('')}
                   </div>
                 </details>
               </div>

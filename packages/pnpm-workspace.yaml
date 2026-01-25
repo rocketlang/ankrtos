@@ -1,0 +1,6 @@
+packages:
+  - 'testerbot-core'
+  - 'testerbot-agents'
+  - 'testerbot-tests'
+  - 'testerbot-fixes'
+  - 'testerbot-cli'

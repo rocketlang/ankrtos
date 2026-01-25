@@ -103,6 +103,9 @@ export interface TestResult {
   /** Visual regression comparison result */
   visualComparison?: VisualComparisonResult;
 
+  /** Auto-fix results (if auto-fix was attempted) */
+  fixResults?: FixResult[];
+
   /** Retry attempt number */
   retryCount?: number;
 }

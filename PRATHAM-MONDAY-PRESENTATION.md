@@ -8,14 +8,21 @@
 
 ## Executive Summary
 
-We've completed the initial analysis of your Quantitative Aptitude content (347 questions, 12 topic clusters). Based on this foundation, we're proposing a modern AI-powered learning system that combines:
+We've completed the initial analysis of your Quantitative Aptitude content (347 questions, 12 topic clusters). Based on this foundation, we're proposing a **technology partnership** to build a modern AI-powered learning system.
 
+**Our Approach:**
+- **ANKR as Tech Partner:** We build the AI platform for Pratham
+- **Flexible Engagement:** Full stack OR specific components based on your needs
+- **Pratham Owns:** The platform, IP, and student data
+- **ANKR Provides:** Technology development, AI expertise, ongoing technical support
+
+**Technical Components:**
 - **RAG (Retrieval-Augmented Generation)** for context-aware tutoring
 - **Multi-LLM architecture** for cost optimization and quality
 - **Dual pedagogical modes** (Explanatory + Socratic)
 - **Real-time analytics** for teachers and administrators
 
-This document outlines **three possible directions** we can take, with technical approaches for each.
+This document outlines **three possible technical directions** we can take together.
 
 ---
 
@@ -66,10 +73,10 @@ Response to Student (Hindi/English)
 - ❌ Higher AI costs (GPT-4o for everything)
 - ❌ Limited learning analytics
 
-**Estimated Cost:**
-- Development: ₹2,00,000 (one-time)
-- Per student: ₹75/month (AI costs)
+**Implementation:**
 - Timeline: 3 weeks
+- Complexity: Low
+- Team required: 1 developer + 1 designer
 
 ---
 
@@ -184,10 +191,10 @@ Real-time metrics:
 - ⚠️ More complex implementation (4-5 weeks)
 - ⚠️ Requires teacher training on dual modes
 
-**Estimated Cost:**
-- Development: ₹3,50,000 (one-time)
-- Per student: ₹50/month (optimized AI costs)
+**Implementation:**
 - Timeline: 5 weeks
+- Complexity: Medium
+- Team required: 2 developers + 1 designer
 
 ---
 
@@ -281,10 +288,10 @@ Text-to-Speech response (Hindi voice)
 - ❌ Longer timeline (3 months)
 - ❌ Complex for teachers to use
 
-**Estimated Cost:**
-- Development: ₹8,00,000 (one-time)
-- Per student: ₹75/month
+**Implementation:**
 - Timeline: 12 weeks
+- Complexity: High
+- Team required: 3 developers + 1 designer + 1 ML engineer
 
 ---
 
@@ -437,6 +444,46 @@ Classroom deployment (100s of students)
 
 ---
 
+## How We Work as Tech Partners
+
+**Phase 1: Understanding & Alignment (Week 1)**
+- Deep-dive into Pratham's pedagogy, curriculum, student profiles
+- Technical audit of existing systems (if any)
+- Collaborative requirement gathering with your team
+- Joint decision on technical direction
+
+**Phase 2: Co-Design (Week 2)**
+- Architectural planning sessions with your input
+- Rapid prototyping of 2-3 key features
+- Your team reviews and provides feedback
+- Iterate until we're aligned on approach
+
+**Phase 3: Build Together (Week 3-6)**
+- We build, you review (weekly demos)
+- Your teachers/students test as we go
+- Continuous feedback loop
+- Knowledge transfer to your technical team (if you have one)
+
+**Phase 4: Deploy & Support (Week 7+)**
+- Gradual rollout (10 students → 50 → 100 → scale)
+- Training for teachers and administrators
+- Ongoing technical support and iteration
+- Optional: Train your team to maintain/extend the platform
+
+**What You Get:**
+- ✅ Complete ownership of platform and code
+- ✅ Technical documentation and architecture diagrams
+- ✅ Training for your team to understand the system
+- ✅ Ongoing partnership for improvements
+
+**What We Bring:**
+- ✅ AI/ML expertise (RAG, LLMs, embeddings)
+- ✅ Education technology experience
+- ✅ Rapid development capability
+- ✅ Cost-optimization knowledge
+
+---
+
 ## Proposed Path Forward
 
 ### Recommendation: Direction 2 (Dual-Mode AI Tutor)
@@ -448,10 +495,10 @@ Classroom deployment (100s of students)
    - Socratic mode for practice (deepens understanding)
    - Auto-progression (guided journey)
 
-2. **Cost-Effective:**
-   - ₹50/student/month (vs ₹75-100 for basic approach)
+2. **Technically Efficient:**
    - 73% AI cost savings through multi-LLM routing
-   - Scales efficiently to thousands of students
+   - Scales to thousands or lakhs of students
+   - Works on affordable smartphones
 
 3. **Teacher-Friendly:**
    - Dashboard shows where students struggle
@@ -551,49 +598,43 @@ Classroom deployment (100s of students)
 
 ---
 
-## Pricing Models (Choose One)
+## Partnership Model
 
-### Model A: Per-Student SaaS (Recommended)
-**Pricing:** ₹50/student/month
-**Minimum:** 100 students
-**Contract:** Monthly rolling (can cancel anytime)
+### ANKR as Tech Partner
 
-**What's included:**
-- Unlimited AI tutoring access
-- Both pedagogical modes
+We're proposing a **technology partnership** where ANKR builds the AI learning platform for Pratham.
+
+**Two Engagement Options:**
+
+### Option A: Full Stack Development
+We build the entire platform end-to-end:
+- Complete AI tutoring system
 - Teacher analytics dashboard
-- Mobile + web access
-- WhatsApp bot (optional)
+- Student mobile/web apps
+- Backend infrastructure
+- Ongoing maintenance and updates
 
-**Your investment:** ₹5,000/month for 100 students
-
----
-
-### Model B: Annual License
-**Pricing:** ₹4,00,000/year (up to 500 students)
-**Payment:** One-time annual
-**Contract:** 12 months
-
-**What's included:**
-- Everything in Model A
-- Priority support
-- Quarterly feature updates
-- Custom integrations
-
-**Your investment:** ₹4L upfront, ₹67/student/month effective
+**Pratham owns:** The platform, the IP, the student data
+**ANKR provides:** Technology development, AI expertise, technical support
 
 ---
 
-### Model C: Pilot + Revenue Share
-**Pilot:** ₹50,000 (100 students, 2 months)
-**Then:** 30% revenue share if you charge students
+### Option B: Component Integration
+We build specific AI components that integrate with your existing systems:
+- RAG pipeline (AI content understanding)
+- Multi-LLM routing layer
+- Analytics engine
+- Teacher dashboard only
 
-**Example:**
-- You charge students ₹100/month
-- We take ₹30, you keep ₹70
-- Zero risk, aligned incentives
+**Pratham owns:** Existing systems + new AI components
+**ANKR provides:** Specific technical modules you need
 
-**Your investment:** ₹50K pilot only
+---
+
+**Commercial Terms:**
+- We can discuss pricing after we align on technical approach and scope
+- Flexible engagement models based on your requirements
+- Focus first on building the right solution, then structure the partnership
 
 ---
 
@@ -645,27 +686,37 @@ To help us refine the approach, we'd love to understand:
 
 ---
 
-## Why ANKR?
+## Why ANKR as Tech Partner?
 
-**Technical Expertise:**
-- Built 50+ AI applications across domains
-- Deep expertise in RAG, multi-LLM, embeddings
-- Production-grade systems (not MVPs)
+**Partnership-First Approach:**
+- We build WITH you, not just FOR you
+- Your requirements drive the technical decisions
+- Collaborative problem-solving, not feature-selling
+- Open knowledge sharing (we teach your team as we build)
 
-**Education Focus:**
-- Understanding of Indian curriculum and pedagogy
-- Hindi language support (not just translation)
-- Teacher-centric design (not just student-facing)
+**Technical Depth:**
+- Built 50+ AI applications across education, logistics, healthcare
+- Deep expertise in RAG, multi-LLM routing, embeddings
+- Production-grade systems handling lakhs of users
+- Open to technical audits and peer reviews
 
-**Cost-Conscious:**
-- Multi-LLM architecture saves 73% on AI costs
-- Can offer ₹50/student (vs ₹200-500 from competitors)
-- Scalable to lakhs of students
+**Education Understanding:**
+- We respect pedagogical principles (not just tech)
+- Understanding of Indian curriculum, exam patterns, student challenges
+- Hindi language as first-class citizen (not afterthought)
+- Teacher-centric design (they're your key stakeholders)
 
-**Proven Track Record:**
-- Logistics AI systems handling 10,000+ transactions/day
-- Voice AI in Hindi (SunoKahoBolo project)
-- Real-time analytics platforms
+**Alignment with NGO Mission:**
+- Tech partner for social impact, not just commercial
+- Cost optimization built into architecture (73% AI cost savings)
+- Designed for scale (works for 100 or 1 lakh students)
+- Open to flexible engagement models
+
+**What Makes Us Different:**
+- We share technical knowledge openly (not black box)
+- You own everything we build (IP, code, data)
+- We train your team to maintain and evolve the platform
+- Long-term partnership mindset, not project-and-exit
 
 ---
 

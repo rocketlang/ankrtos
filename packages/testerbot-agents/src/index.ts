@@ -17,4 +17,4 @@ export { VisualRegression } from './visual-regression';
 export type { DesktopAgentConfig } from './desktop-agent';
 export type { WebAgentConfig, BrowserType } from './web-agent';
 export type { MobileAgentConfig, PlatformType } from './mobile-agent';
-export type { VisualRegressionConfig, VisualComparisonResult } from './visual-regression';
+export type { VisualRegressionConfig } from './visual-regression';

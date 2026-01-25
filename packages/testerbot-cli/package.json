@@ -1,0 +1,28 @@
+{
+  "name": "@ankr/testerbot-cli",
+  "version": "0.1.0",
+  "description": "Command-line interface for TesterBot",
+  "main": "dist/index.js",
+  "bin": {
+    "testerbot": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["testing", "cli", "automation"],
+  "author": "ANKR Labs",
+  "license": "MIT",
+  "dependencies": {
+    "@ankr/testerbot-core": "workspace:*",
+    "@ankr/testerbot-agents": "workspace:*",
+    "@ankr/testerbot-tests": "workspace:*",
+    "@ankr/testerbot-fixes": "workspace:*",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.9.3"
+  }
+}

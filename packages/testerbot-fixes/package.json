@@ -1,0 +1,24 @@
+{
+  "name": "@ankr/testerbot-fixes",
+  "version": "0.1.0",
+  "description": "Auto-fix engine for TesterBot - automatically fix common issues",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "test": "vitest"
+  },
+  "keywords": ["testing", "automation", "auto-fix", "self-healing"],
+  "author": "ANKR Labs",
+  "license": "MIT",
+  "dependencies": {
+    "@ankr/testerbot-core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.9.3",
+    "vitest": "^1.2.0"
+  }
+}

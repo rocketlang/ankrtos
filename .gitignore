@@ -1,5 +1,75 @@
+# Dependencies
 node_modules/
+.pnpm-store/
+.bun/
+.npm/
+
+# Caches
+.cache/
+.pm2/
+.electron-gyp/
+
+# IDE
+.vscode/
+.idea/
+
+# Build outputs
 dist/
-*.tsbuildinfo
-.vite/
-.next/
+build/
+*.tgz
+*.tar.gz
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+
+# Config files
+.bash_history
+.lesshst
+.viminfo
+.wget-hsts
+.psql_history
+.gitconfig
+
+# User directories
+.config/
+.local/
+.ssh/
+.gnupg/
+.pki/
+.docker/
+.gradle/
+.android/
+.expo/
+
+# Project-specific
+.ankr-memory/
+.ankr/
+.claude/
+.claude.json
+.claude.json.backup
+.codex/
+.opencode/
+.tasher/
+.vibecoding/
+
+# Temporary
+*.tmp
+*.swp
+*.swo
+*~
+
+# Backups
+*.backup
+*.bak
+*.old

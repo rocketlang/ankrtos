@@ -2,13 +2,16 @@
  * TesterBot Orchestrator - Central control system
  */
 
-import { TestConfig, TestReport, TestResult, Test, TestStatus } from './types';
+import { TestConfig, TestReport, TestResult, Test, TestStatus, FixResult } from './types';
 
 export class TesterBotOrchestrator {
   private tests: Map<string, Test> = new Map();
   private results: TestResult[] = [];
+  private autoFixEngine: any;  // Optional AutoFixEngine instance
 
-  constructor(private config: TestConfig) {}
+  constructor(private config: TestConfig, autoFixEngine?: any) {
+    this.autoFixEngine = autoFixEngine;
+  }
 
   /**
    * Register a test
@@ -63,6 +66,7 @@ export class TesterBotOrchestrator {
     let screenshots: string[] = [];
     let videos: string[] = [];
     let retryCount = 0;
+    let fixResults: FixResult[] | undefined;
 
     const maxRetries = test.retries ?? this.config.retries ?? 0;
 
@@ -132,6 +136,57 @@ export class TesterBotOrchestrator {
       }
     }
 
+    // Attempt auto-fix if test failed and auto-fix is enabled
+    if (status === 'fail' && this.config.autoFix && this.autoFixEngine && error) {
+      try {
+        const failureContext = {
+          testId: test.id,
+          testName: test.name,
+          errorMessage: error.message,
+          errorStack: error.stack,
+          app: test.app,
+          environment: this.config.environments[0] || 'unknown',
+          timestamp: Date.now(),
+          retryCount
+        };
+
+        const autoFixResults = await this.autoFixEngine.attemptFix(failureContext);
+
+        // Convert AutoFixResult[] to FixResult[]
+        if (autoFixResults && autoFixResults.length > 0) {
+          fixResults = autoFixResults.map((afr: any) => ({
+            issueType: afr.fixId,
+            fixName: afr.fixName,
+            success: afr.success && afr.verified,
+            actions: afr.actions.map((a: any) => a.description),
+            error: afr.error,
+            timestamp: new Date()
+          }));
+
+          // If any fix succeeded and was verified, re-run the test
+          const successfulFix = autoFixResults.find((r: any) => r.success && r.verified);
+          if (successfulFix) {
+            console.log(`  ↻ Re-running test after successful fix...`);
+
+            try {
+              await Promise.race([
+                test.fn(agent),
+                this.timeout(test.timeout ?? this.config.timeout ?? 30000)
+              ]);
+
+              status = 'pass';
+              error = undefined;
+              console.log(`  ✅ Test passed after auto-fix!`);
+            } catch (rerunErr) {
+              console.log(`  ❌ Test still failing after fix`);
+            }
+          }
+        }
+      } catch (fixErr) {
+        console.error(`  Auto-fix error:`, (fixErr as Error).message);
+      }
+    }
+
     const duration = Date.now() - startTime;
 
     // Collect performance metrics
@@ -152,6 +207,7 @@ export class TesterBotOrchestrator {
       screenshots,
       videos,
       metrics,
+      fixResults,
       retryCount
     };
   }

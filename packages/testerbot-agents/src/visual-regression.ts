@@ -7,26 +7,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { PNG } from 'pngjs';
 import pixelmatch from 'pixelmatch';
-
-export interface VisualComparisonResult {
-  /** Whether images match within threshold */
-  matches: boolean;
-
-  /** Number of different pixels */
-  diffPixels: number;
-
-  /** Percentage of different pixels (0-100) */
-  diffPercentage: number;
-
-  /** Path to diff image (if generated) */
-  diffImagePath?: string;
-
-  /** Path to baseline image */
-  baselinePath: string;
-
-  /** Path to current screenshot */
-  currentPath: string;
-}
+import type { VisualComparisonResult } from '@ankr/testerbot-core';
 
 export interface VisualRegressionConfig {
   /** Base directory for baseline images */
