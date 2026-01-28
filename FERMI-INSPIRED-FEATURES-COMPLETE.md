@@ -11,7 +11,7 @@
 
 ### 1. Dual Tutoring Modes (Explain + Guide) ✅
 
-**What:** Added Fermi.ai-style "productive struggle" alongside ANKR's explanatory mode
+**What:** Added Socratic-style "productive struggle" (inspired by adaptive learning best practices) alongside ANKR's explanatory mode
 
 **Implementation:**
 - ✅ Explain Mode (💡): Clear step-by-step explanations for learning

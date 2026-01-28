@@ -8,7 +8,9 @@
 
 ## 🏆 Achievement Unlocked: All 5 Fermi-Inspired Features Complete!
 
-From Fermi.ai inspiration to full implementation in ANKR LMS - we did it!
+From educational inspiration to full implementation in ANKR LMS - we did it!
+
+_Note: These features are inspired by best practices in adaptive learning and Socratic methodology. ANKR LMS is an independent product not affiliated with any specific platform._
 
 ---
 
@@ -30,7 +32,7 @@ From Fermi.ai inspiration to full implementation in ANKR LMS - we did it!
 
 ### The 5 Key Learning Metrics
 
-Inspired by Fermi.ai's approach to measuring true understanding beyond correctness:
+Inspired by leading practices in adaptive learning that measure true understanding beyond correctness:
 
 #### 1. Questions Asked Per Session
 
@@ -493,7 +495,7 @@ Perfect for showing Pratham:
 
 ## 🎓 What We Learned
 
-### About Fermi.ai's Approach
+### About Adaptive Learning Best Practices
 
 1. **Beyond Correctness:** Right answer ≠ understanding
 2. **Multiple Dimensions:** 5 metrics capture full picture
@@ -612,9 +614,11 @@ This completes 4 of 5 Fermi features (80% complete)! Combined with:
 ## 🙏 Acknowledgments
 
 **Inspired by:**
-- Fermi.ai - For the vision of measuring true learning
+- Leading adaptive learning platforms and Socratic methodology research
 - Pratham - For trusting ANKR with their students
 - Captain Anil - For believing in the Kika Feather dream
+
+_Disclaimer: ANKR LMS is an independent product. We acknowledge inspiration from various educational research and adaptive learning best practices, but are not affiliated with any specific platform._
 
 **Built with:**
 - TypeScript + React + GraphQL + Prisma

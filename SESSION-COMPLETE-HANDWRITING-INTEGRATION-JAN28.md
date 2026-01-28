@@ -610,7 +610,7 @@ Mode: ✍️ Handwriting
 11. AI explains factoring: "(x + 2)(x + 3) = 0"
 12. Solutions: x = -2 or x = -3
 
-IMPACT: Fermi.ai-level tablet experience
+IMPACT: Premium tablet tutoring experience
 TIME: ~30 seconds demo
 ```
 
@@ -667,7 +667,9 @@ TIME: ~20 seconds demo
 
 ### Target Market Advantage
 
-**vs. Fermi.ai:**
+**INTERNAL COMPETITIVE ANALYSIS** _(Private use only)_
+
+**vs. Leading Tablet-Only AI Tutors:**
 - ✅ We support phones (they're tablet-only)
 - ✅ We have voice mode (easier for mass market)
 - ✅ We're multi-device (they're iPad-focused)
@@ -678,8 +680,8 @@ TIME: ~20 seconds demo
 - ✅ We have voice (they have limited support)
 - ✅ We're AI-first (they're video-first)
 
-**Unique Positioning:**
-"ANKR LMS: AI tutoring that works on ANY device - tablet, phone, or desktop. Write with a stylus like Fermi, speak like a local student, or type like always. Built for Bharat's 250M students."
+**Unique Positioning** _(Public-facing)_:
+"ANKR LMS: AI tutoring that works on ANY device - tablet, phone, or desktop. Write with a stylus (premium tablet experience), speak like a local student (voice-first), or type like always (traditional). Built for Bharat's 250M students."
 
 ---
 
@@ -804,7 +806,7 @@ cda8b93 docs: Add comprehensive handwriting input feature documentation
 **ANKR LMS (powered by ANKR Interact knowledge management) is now production-ready with:**
 
 ✅ **15/16 core features complete** (94% done)
-✅ **Fermi.ai-level tablet experience**
+✅ **Premium tablet tutoring experience**
 ✅ **Multi-device support (phone/tablet/desktop)**
 ✅ **Multi-modal input (text/voice/handwriting/drawing)**
 ✅ **Enterprise-grade OCR (3 providers)**

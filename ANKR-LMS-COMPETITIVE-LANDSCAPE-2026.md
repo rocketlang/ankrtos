@@ -1,7 +1,14 @@
 # ANKR LMS - Competitive Landscape Analysis 2026
 
+**⚠️ INTERNAL DOCUMENT - CONFIDENTIAL**
+**For Strategic Planning Only - Not for Public Distribution**
+
 **Date:** 2026-01-24
 **Analysis By:** ANKR Labs + Claude Sonnet 4.5
+
+---
+
+_Disclaimer: This document contains competitive analysis and comparisons for internal strategic planning. All factual claims are based on public information. Brand names are referenced for analysis purposes only, in accordance with fair use._
 
 ---
 

@@ -11,7 +11,7 @@
 
 ANKR Interact now supports handwriting and drawing input with intelligent device detection and multi-provider OCR. Students can write with a stylus (tablets), draw with their finger (smartphones), or use traditional text/voice input. The system automatically recommends the best input method based on device capabilities.
 
-**Key Achievement:** Fermi.ai-style tablet support with iPad + Apple Pencil compatibility.
+**Key Achievement:** Premium tablet tutoring experience with iPad + Apple Pencil compatibility (pressure-sensitive stylus support).
 
 ---
 
@@ -575,7 +575,7 @@ ankr-interact/
 
 ## Conclusion
 
-The handwriting/drawing input feature is **production-ready** and provides a **Fermi.ai-level experience** for tablet users while maintaining full compatibility with smartphones and desktops. The intelligent device detection and mode recommendations ensure every student gets the optimal input method for their device.
+The handwriting/drawing input feature is **production-ready** and provides a **premium tablet tutoring experience** for tablet users while maintaining full compatibility with smartphones and desktops. The intelligent device detection and mode recommendations ensure every student gets the optimal input method for their device.
 
 **Task #13: COMPLETE ✅**
 
