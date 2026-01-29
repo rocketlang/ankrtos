@@ -104,6 +104,10 @@ function searchModal() {
 </div>
 
 <script>
+function esc(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/\\x3c/g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
 let searchTimer;
 function debounceSearch(q) {
   clearTimeout(searchTimer);

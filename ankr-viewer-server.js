@@ -627,6 +627,7 @@ app.get('/api/projects', (req, res) => {
               });
             project.files = projectFiles;
             project.fileCount = projectFiles.length;
+            if (!project.stats.documents) project.stats.documents = projectFiles.length;
           } catch (e) {
             // Skip
           }
@@ -691,6 +692,87 @@ app.get('/api/projects', (req, res) => {
     } catch (e) {
       // Skip
     }
+
+    // Also discover ALL top-level subdirectories in docs root as projects
+    // (ankrshield, openclaude, investor-apps, ai-swarm, etc.)
+    try {
+      const rootItems = fs.readdirSync(DOCS_ROOT);
+      for (const item of rootItems) {
+        const fullPath = path.join(DOCS_ROOT, item);
+        if (!fs.statSync(fullPath).isDirectory()) continue;
+        if (item === 'project' || item.startsWith('.')) continue; // skip project/ dir and hidden
+
+        const existingById = projects.some(p => p.id === item);
+        if (existingById) continue;
+
+        // Count .md files in this directory (recursive)
+        let fileCount = 0;
+        const files = [];
+        function countMd(dir) {
+          try {
+            for (const f of fs.readdirSync(dir)) {
+              const fp = path.join(dir, f);
+              const st = fs.statSync(fp);
+              if (st.isDirectory()) { countMd(fp); continue; }
+              if (!f.endsWith('.md') || f.startsWith('.')) continue;
+              fileCount++;
+              if (files.length < 20) {
+                try {
+                  const content = fs.readFileSync(fp, 'utf-8');
+                  const parsed = matter(content);
+                  files.push({
+                    name: f,
+                    path: path.relative(DOCS_ROOT, fp),
+                    title: parsed.data.title || f.replace('.md', ''),
+                    size: st.size,
+                    category: parsed.data.category || item,
+                  });
+                } catch(e) {
+                  files.push({ name: f, path: path.relative(DOCS_ROOT, fp), title: f.replace('.md', ''), size: st.size, category: item });
+                }
+              }
+            }
+          } catch(e) {}
+        }
+        countMd(fullPath);
+
+        if (fileCount === 0) continue; // skip empty dirs
+
+        // Check for .viewerrc or index.md
+        const viewerrc = path.join(fullPath, '.viewerrc');
+        const indexMd = path.join(fullPath, 'index.md');
+        let title = item.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        let description = '';
+        let tags = [item];
+        let meta = {};
+
+        if (fs.existsSync(viewerrc)) {
+          try { meta = JSON.parse(fs.readFileSync(viewerrc, 'utf-8')); } catch(e) {}
+        }
+        if (fs.existsSync(indexMd)) {
+          try {
+            const parsed = matter(fs.readFileSync(indexMd, 'utf-8'));
+            if (parsed.data.title) title = parsed.data.title;
+            if (parsed.data.description) description = parsed.data.description;
+            if (parsed.data.tags) tags = parsed.data.tags;
+          } catch(e) {}
+        }
+
+        projects.push({
+          id: item,
+          path: item,
+          title: meta.title || title,
+          description: meta.description || description || `${fileCount} documents in ${item}`,
+          category: meta.category || 'Documentation',
+          featured: meta.featured || false,
+          priority: meta.priority || 70,
+          tags: meta.tags || tags,
+          stats: meta.stats && meta.stats.documents ? meta.stats : { documents: fileCount },
+          files,
+          fileCount,
+        });
+      }
+    } catch(e) {}
 
     // Sort by priority (lower = higher priority), then featured first
     projects.sort((a, b) => {
