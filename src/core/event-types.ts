@@ -497,6 +497,67 @@ export type ReconciliationEventType =
   | 'reconciliation.adjustment_applied';
 
 // ============================================================================
+// LABOR EVENTS
+// ============================================================================
+
+export type LaborEventType =
+  | 'labor.worker_registered'
+  | 'labor.worker_status_changed'
+  | 'labor.shift_started'
+  | 'labor.shift_completed'
+  | 'labor.clock_in'
+  | 'labor.clock_out'
+  | 'labor.gang_created'
+  | 'labor.gang_assigned'
+  | 'labor.gang_disbanded'
+  | 'labor.task_assigned'
+  | 'labor.task_started'
+  | 'labor.task_completed'
+  | 'labor.overtime_alert'
+  | 'labor.cost_allocated'
+  | 'labor.productivity_recorded';
+
+// ============================================================================
+// MHE (MATERIAL HANDLING EQUIPMENT) EVENTS
+// ============================================================================
+
+export type MHEEventType =
+  | 'mhe.telematics_received'
+  | 'mhe.overspeed_alert'
+  | 'mhe.geofence_violation'
+  | 'mhe.idle_alert'
+  | 'mhe.impact_detected'
+  | 'mhe.certification_expiring'
+  | 'mhe.certification_expired'
+  | 'mhe.incident_reported'
+  | 'mhe.incident_closed'
+  | 'mhe.safety_check_completed'
+  | 'mhe.safety_check_failed'
+  | 'mhe.charging_started'
+  | 'mhe.charging_completed'
+  | 'mhe.battery_swapped'
+  | 'mhe.work_order_created'
+  | 'mhe.work_order_completed';
+
+// ============================================================================
+// EDI EVENTS
+// ============================================================================
+
+export type EDIEventType =
+  | 'edi.partner_registered'
+  | 'edi.partner_status_changed'
+  | 'edi.transaction_received'
+  | 'edi.transaction_parsed'
+  | 'edi.transaction_processed'
+  | 'edi.transaction_generated'
+  | 'edi.transaction_sent'
+  | 'edi.transaction_acknowledged'
+  | 'edi.transaction_error'
+  | 'edi.validation_failed'
+  | 'edi.queue_retry'
+  | 'edi.queue_failed';
+
+// ============================================================================
 // COMBINED EVENT TYPE
 // ============================================================================
 
@@ -516,6 +577,9 @@ export type ICDEventType =
   | InspectionEventType
   | CongestionEventType
   | ReconciliationEventType
+  | LaborEventType
+  | MHEEventType
+  | EDIEventType
   | SystemEventType;
 
 // Event categories for subscription filtering
@@ -532,6 +596,9 @@ export const EVENT_CATEGORIES = {
   scheduling: 'scheduling.*',
   inspection: 'inspection.*',
   reconciliation: 'reconciliation.*',
+  labor: 'labor.*',
+  mhe: 'mhe.*',
+  edi: 'edi.*',
   system: 'system.*',
 } as const;
 
@@ -573,6 +640,23 @@ export const EVENT_SEVERITY: Partial<Record<ICDEventType, EventSeverity>> = {
   // Reconciliation events
   'reconciliation.variance_detected': 'warning',
   'reconciliation.customs_notified': 'warning',
+
+  // Labor events
+  'labor.overtime_alert': 'warning',
+
+  // MHE events
+  'mhe.overspeed_alert': 'warning',
+  'mhe.geofence_violation': 'warning',
+  'mhe.impact_detected': 'critical',
+  'mhe.certification_expired': 'warning',
+  'mhe.certification_expiring': 'warning',
+  'mhe.incident_reported': 'critical',
+  'mhe.safety_check_failed': 'warning',
+
+  // EDI events
+  'edi.transaction_error': 'error',
+  'edi.validation_failed': 'warning',
+  'edi.queue_failed': 'error',
 };
 
 // Get severity for an event type

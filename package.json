@@ -121,6 +121,21 @@
       "import": "./dist/reconciliation/index.mjs",
       "require": "./dist/reconciliation/index.js"
     },
+    "./labor": {
+      "types": "./dist/labor/index.d.ts",
+      "import": "./dist/labor/index.mjs",
+      "require": "./dist/labor/index.js"
+    },
+    "./mhe": {
+      "types": "./dist/mhe/index.d.ts",
+      "import": "./dist/mhe/index.mjs",
+      "require": "./dist/mhe/index.js"
+    },
+    "./edi": {
+      "types": "./dist/edi/index.d.ts",
+      "import": "./dist/edi/index.mjs",
+      "require": "./dist/edi/index.js"
+    },
     "./api": {
       "types": "./dist/api/index.d.ts",
       "import": "./dist/api/index.mjs",

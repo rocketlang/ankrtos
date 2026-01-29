@@ -478,6 +478,52 @@ export {
   type CreateAdjustmentInput,
 } from './reconciliation';
 
+// Labor Management & Cost Allocation
+export {
+  LaborEngine,
+  getLaborEngine,
+  setLaborEngine,
+  type RegisterWorkerInput,
+  type CreateShiftInput,
+  type CreateGangInput,
+  type RecordClockInput,
+  type AssignLaborTaskInput,
+  type CreateCostCenterInput,
+  type AllocateCostInput,
+} from './labor';
+
+// Advanced Equipment & MHE
+export {
+  MHEEngine,
+  getMHEEngine,
+  setMHEEngine,
+  type RecordTelematicsInput,
+  type CreateGeofenceInput,
+  type RegisterCertificationInput,
+  type RecordTrainingInput,
+  type ReportIncidentInput,
+  type SubmitSafetyCheckInput,
+  type RegisterChargingDockInput,
+  type StartChargingInput,
+  type RecordBatterySwapInput,
+  type CreateMHEWorkOrderInput,
+  type RegisterLifecycleInput,
+} from './mhe';
+
+// Advanced EDI & Integration
+export {
+  EDIEngine,
+  getEDIEngine,
+  setEDIEngine,
+  type RegisterPartnerInput,
+  type CreateTransactionInput,
+  type ParseInboundInput,
+  type GenerateOutboundInput,
+  type AddValidationRuleInput,
+  type EnqueueInput,
+  type CreateFieldMappingInput,
+} from './edi';
+
 // Analytics & Reporting
 export {
   AnalyticsEngine,
@@ -522,6 +568,9 @@ import { getCongestionEngine } from './congestion';
 import { getSchedulingEngine } from './scheduling';
 import { getInspectionEngine } from './inspection';
 import { getReconciliationEngine } from './reconciliation';
+import { getLaborEngine } from './labor';
+import { getMHEEngine } from './mhe';
+import { getEDIEngine } from './edi';
 import { getEventBus } from './core';
 
 /**
@@ -562,6 +611,9 @@ export class ICDSystem {
   get scheduling() { return getSchedulingEngine(); }
   get inspection() { return getInspectionEngine(); }
   get reconciliation() { return getReconciliationEngine(); }
+  get labor() { return getLaborEngine(); }
+  get mhe() { return getMHEEngine(); }
+  get edi() { return getEDIEngine(); }
   get events() { return getEventBus(); }
 
   // Health check
@@ -592,6 +644,9 @@ export class ICDSystem {
         scheduling: 'active',
         inspection: 'active',
         reconciliation: 'active',
+        labor: 'active',
+        mhe: 'active',
+        edi: 'active',
         events: 'active',
       },
     };
@@ -624,6 +679,9 @@ export interface ICDHealthStatus {
     scheduling: 'active' | 'inactive';
     inspection: 'active' | 'inactive';
     reconciliation: 'active' | 'inactive';
+    labor: 'active' | 'inactive';
+    mhe: 'active' | 'inactive';
+    edi: 'active' | 'inactive';
     events: 'active' | 'inactive';
   };
 }
