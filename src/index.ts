@@ -442,6 +442,42 @@ export type {
   CongestionStats,
 } from './congestion';
 
+// Scheduling & Yard Operations
+export {
+  SchedulingEngine,
+  getSchedulingEngine,
+  setSchedulingEngine,
+  type RegisterDockSlotInput,
+  type CreateDockAppointmentInput,
+  type RegisterTrailerInput,
+  type ReceiveEmptyInput,
+  type CreateAllotmentInput,
+  type AddStackingRuleInput,
+} from './scheduling';
+
+// Inspection & QC
+export {
+  InspectionEngine,
+  getInspectionEngine,
+  setInspectionEngine,
+  type ScheduleSurveyInput,
+  type CompleteSurveyInput,
+  type AddDamageInput,
+  type OrderExamInput,
+  type CompleteExamInput,
+  type CreateQCCheckInput,
+} from './inspection';
+
+// Reconciliation & Cycle Counting
+export {
+  ReconciliationEngine,
+  getReconciliationEngine,
+  setReconciliationEngine,
+  type PlanCycleCountInput,
+  type RecordCountEntryInput,
+  type CreateAdjustmentInput,
+} from './reconciliation';
+
 // Analytics & Reporting
 export {
   AnalyticsEngine,
@@ -483,6 +519,9 @@ import { getIoTManager } from './iot';
 import { getBondEngine } from './bond';
 import { getComplianceEngine } from './compliance';
 import { getCongestionEngine } from './congestion';
+import { getSchedulingEngine } from './scheduling';
+import { getInspectionEngine } from './inspection';
+import { getReconciliationEngine } from './reconciliation';
 import { getEventBus } from './core';
 
 /**
@@ -520,6 +559,9 @@ export class ICDSystem {
   get bond() { return getBondEngine(); }
   get compliance() { return getComplianceEngine(); }
   get congestion() { return getCongestionEngine(); }
+  get scheduling() { return getSchedulingEngine(); }
+  get inspection() { return getInspectionEngine(); }
+  get reconciliation() { return getReconciliationEngine(); }
   get events() { return getEventBus(); }
 
   // Health check
@@ -547,6 +589,9 @@ export class ICDSystem {
         bond: 'active',
         compliance: 'active',
         congestion: 'active',
+        scheduling: 'active',
+        inspection: 'active',
+        reconciliation: 'active',
         events: 'active',
       },
     };
@@ -576,6 +621,9 @@ export interface ICDHealthStatus {
     bond: 'active' | 'inactive';
     compliance: 'active' | 'inactive';
     congestion: 'active' | 'inactive';
+    scheduling: 'active' | 'inactive';
+    inspection: 'active' | 'inactive';
+    reconciliation: 'active' | 'inactive';
     events: 'active' | 'inactive';
   };
 }

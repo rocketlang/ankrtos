@@ -431,6 +431,46 @@ export type ComplianceEventType =
   | 'compliance.gst_return_filed';
 
 // ============================================================================
+// SCHEDULING EVENTS
+// ============================================================================
+
+export type SchedulingEventType =
+  | 'scheduling.slot_registered'
+  | 'scheduling.slot_status_changed'
+  | 'scheduling.appointment_created'
+  | 'scheduling.appointment_confirmed'
+  | 'scheduling.appointment_cancelled'
+  | 'scheduling.appointment_completed'
+  | 'scheduling.appointment_no_show'
+  | 'scheduling.trailer_registered'
+  | 'scheduling.trailer_assigned'
+  | 'scheduling.trailer_released'
+  | 'scheduling.empty_received'
+  | 'scheduling.empty_allotted'
+  | 'scheduling.empty_released'
+  | 'scheduling.stacking_rule_added'
+  | 'scheduling.stacking_recommendation';
+
+// ============================================================================
+// INSPECTION EVENTS
+// ============================================================================
+
+export type InspectionEventType =
+  | 'inspection.survey_scheduled'
+  | 'inspection.survey_started'
+  | 'inspection.survey_completed'
+  | 'inspection.damage_reported'
+  | 'inspection.exam_ordered'
+  | 'inspection.exam_started'
+  | 'inspection.exam_completed'
+  | 'inspection.exam_discrepancy'
+  | 'inspection.qc_check_created'
+  | 'inspection.qc_passed'
+  | 'inspection.qc_failed'
+  | 'inspection.qc_hold_placed'
+  | 'inspection.qc_hold_released';
+
+// ============================================================================
 // CONGESTION EVENTS
 // ============================================================================
 
@@ -439,6 +479,22 @@ export type CongestionEventType =
   | 'congestion.alert_resolved'
   | 'congestion.action_created'
   | 'congestion.level_changed';
+
+// ============================================================================
+// RECONCILIATION EVENTS
+// ============================================================================
+
+export type ReconciliationEventType =
+  | 'reconciliation.count_planned'
+  | 'reconciliation.count_started'
+  | 'reconciliation.count_completed'
+  | 'reconciliation.entry_recorded'
+  | 'reconciliation.variance_detected'
+  | 'reconciliation.variance_resolved'
+  | 'reconciliation.customs_notified'
+  | 'reconciliation.adjustment_created'
+  | 'reconciliation.adjustment_approved'
+  | 'reconciliation.adjustment_applied';
 
 // ============================================================================
 // COMBINED EVENT TYPE
@@ -456,7 +512,10 @@ export type ICDEventType =
   | BillingEventType
   | BondEventType
   | ComplianceEventType
+  | SchedulingEventType
+  | InspectionEventType
   | CongestionEventType
+  | ReconciliationEventType
   | SystemEventType;
 
 // Event categories for subscription filtering
@@ -470,6 +529,9 @@ export const EVENT_CATEGORIES = {
   equipment: 'equipment.*',
   customs: 'customs.*',
   billing: 'billing.*',
+  scheduling: 'scheduling.*',
+  inspection: 'inspection.*',
+  reconciliation: 'reconciliation.*',
   system: 'system.*',
 } as const;
 
@@ -501,6 +563,16 @@ export const EVENT_SEVERITY: Partial<Record<ICDEventType, EventSeverity>> = {
   'customs.duty_payment_failed': 'error',
   'system.edi_error': 'error',
   'system.icegate_disconnected': 'error',
+
+  // Inspection events
+  'inspection.exam_discrepancy': 'warning',
+  'inspection.qc_failed': 'warning',
+  'inspection.qc_hold_placed': 'warning',
+  'inspection.damage_reported': 'warning',
+
+  // Reconciliation events
+  'reconciliation.variance_detected': 'warning',
+  'reconciliation.customs_notified': 'warning',
 };
 
 // Get severity for an event type

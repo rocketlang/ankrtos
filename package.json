@@ -106,6 +106,21 @@
       "import": "./dist/congestion/index.mjs",
       "require": "./dist/congestion/index.js"
     },
+    "./scheduling": {
+      "types": "./dist/scheduling/index.d.ts",
+      "import": "./dist/scheduling/index.mjs",
+      "require": "./dist/scheduling/index.js"
+    },
+    "./inspection": {
+      "types": "./dist/inspection/index.d.ts",
+      "import": "./dist/inspection/index.mjs",
+      "require": "./dist/inspection/index.js"
+    },
+    "./reconciliation": {
+      "types": "./dist/reconciliation/index.d.ts",
+      "import": "./dist/reconciliation/index.mjs",
+      "require": "./dist/reconciliation/index.js"
+    },
     "./api": {
       "types": "./dist/api/index.d.ts",
       "import": "./dist/api/index.mjs",
