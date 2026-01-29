@@ -368,6 +368,80 @@ export {
   type SensorQueryOptions,
 } from './iot';
 
+// Bond & Bonded Warehouse
+export {
+  BondEngine,
+  getBondEngine,
+  setBondEngine,
+  type RegisterBondInput,
+  type BondInInput,
+  type BondOutInput,
+} from './bond';
+
+// Re-export bond types
+export type {
+  Bond,
+  BondType,
+  BondStatus,
+  BondedContainer,
+  BondedContainerStatus,
+  BondMovement,
+  BondMovementType,
+  BondStatement,
+  BondStats,
+} from './bond';
+
+// Compliance (E-Way Bill, E-Invoice, GST)
+export {
+  ComplianceEngine,
+  getComplianceEngine,
+  setComplianceEngine,
+  type GenerateEWayBillInput,
+  type GenerateEInvoiceInput,
+  type CreateGSTReturnInput,
+  type AddGSTREntryInput,
+} from './compliance';
+
+// Re-export compliance types
+export type {
+  EWayBill as ComplianceEWayBill,
+  EWayBillStatus,
+  EWayBillTransactionType,
+  EWayBillSubType,
+  EWayBillItem,
+  EInvoice,
+  EInvoiceStatus,
+  EInvoiceItem,
+  GSTReturn,
+  GSTReturnType,
+  GSTReturnStatus,
+  GSTREntry,
+  ComplianceStats,
+} from './compliance';
+
+// Congestion & Hotspot Management
+export {
+  CongestionEngine,
+  getCongestionEngine,
+  setCongestionEngine,
+  type RegisterCongestionZoneInput,
+  type RecordCongestionReadingInput,
+  type CreateTrafficActionInput,
+} from './congestion';
+
+// Re-export congestion types
+export type {
+  CongestionZone,
+  CongestionZoneType,
+  CongestionLevel,
+  CongestionReading,
+  CongestionAlert,
+  CongestionAlertSeverity,
+  TrafficAction,
+  TrafficActionType,
+  CongestionStats,
+} from './congestion';
+
 // Analytics & Reporting
 export {
   AnalyticsEngine,
@@ -406,6 +480,9 @@ import { getOperationsEngine } from './operations';
 import { getDocumentationEngine } from './documentation';
 import { getHardwareManager } from './hardware';
 import { getIoTManager } from './iot';
+import { getBondEngine } from './bond';
+import { getComplianceEngine } from './compliance';
+import { getCongestionEngine } from './congestion';
 import { getEventBus } from './core';
 
 /**
@@ -440,6 +517,9 @@ export class ICDSystem {
   get documentation() { return getDocumentationEngine(); }
   get hardware() { return getHardwareManager(); }
   get iot() { return getIoTManager(); }
+  get bond() { return getBondEngine(); }
+  get compliance() { return getComplianceEngine(); }
+  get congestion() { return getCongestionEngine(); }
   get events() { return getEventBus(); }
 
   // Health check
@@ -464,6 +544,9 @@ export class ICDSystem {
         documentation: 'active',
         hardware: 'active',
         iot: 'active',
+        bond: 'active',
+        compliance: 'active',
+        congestion: 'active',
         events: 'active',
       },
     };
@@ -490,6 +573,9 @@ export interface ICDHealthStatus {
     documentation: 'active' | 'inactive';
     hardware: 'active' | 'inactive';
     iot: 'active' | 'inactive';
+    bond: 'active' | 'inactive';
+    compliance: 'active' | 'inactive';
+    congestion: 'active' | 'inactive';
     events: 'active' | 'inactive';
   };
 }

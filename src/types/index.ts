@@ -14,3 +14,6 @@ export * from './operations';
 export * from './documentation';
 export * from './hardware';
 export * from './iot';
+export * from './bond';
+// compliance types exported via ./compliance module (avoids EWayBill name conflict with transport.ts)
+export * from './congestion';

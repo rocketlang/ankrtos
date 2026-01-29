@@ -91,6 +91,21 @@
       "import": "./dist/iot/index.mjs",
       "require": "./dist/iot/index.js"
     },
+    "./bond": {
+      "types": "./dist/bond/index.d.ts",
+      "import": "./dist/bond/index.mjs",
+      "require": "./dist/bond/index.js"
+    },
+    "./compliance": {
+      "types": "./dist/compliance/index.d.ts",
+      "import": "./dist/compliance/index.mjs",
+      "require": "./dist/compliance/index.js"
+    },
+    "./congestion": {
+      "types": "./dist/congestion/index.d.ts",
+      "import": "./dist/congestion/index.mjs",
+      "require": "./dist/congestion/index.js"
+    },
     "./api": {
       "types": "./dist/api/index.d.ts",
       "import": "./dist/api/index.mjs",

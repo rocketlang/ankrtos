@@ -404,6 +404,43 @@ export type SystemEventType =
   | 'system.maintenance_ended';
 
 // ============================================================================
+// BOND EVENTS
+// ============================================================================
+
+export type BondEventType =
+  | 'bond.registered'
+  | 'bond.status_changed'
+  | 'bond.renewed'
+  | 'bond.container_bonded'
+  | 'bond.container_released'
+  | 'bond.extension_granted'
+  | 'bond.container_transferred'
+  | 'bond.overdue_alert'
+  | 'bond.expiry_alert';
+
+// ============================================================================
+// COMPLIANCE EVENTS
+// ============================================================================
+
+export type ComplianceEventType =
+  | 'compliance.eway_generated'
+  | 'compliance.eway_extended'
+  | 'compliance.eway_cancelled'
+  | 'compliance.einvoice_generated'
+  | 'compliance.einvoice_cancelled'
+  | 'compliance.gst_return_filed';
+
+// ============================================================================
+// CONGESTION EVENTS
+// ============================================================================
+
+export type CongestionEventType =
+  | 'congestion.alert_triggered'
+  | 'congestion.alert_resolved'
+  | 'congestion.action_created'
+  | 'congestion.level_changed';
+
+// ============================================================================
 // COMBINED EVENT TYPE
 // ============================================================================
 
@@ -417,6 +454,9 @@ export type ICDEventType =
   | EquipmentEventType
   | CustomsEventType
   | BillingEventType
+  | BondEventType
+  | ComplianceEventType
+  | CongestionEventType
   | SystemEventType;
 
 // Event categories for subscription filtering
