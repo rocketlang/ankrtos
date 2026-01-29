@@ -1,0 +1,154 @@
+{
+  "name": "@ankr/dodd-icd",
+  "version": "1.0.0",
+  "description": "World-class ICD & CFS Management System with Rail, Road, Waterfront, Yard, and Equipment Management",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./config": {
+      "import": "./dist/config/index.mjs",
+      "require": "./dist/config/index.js",
+      "types": "./dist/config/index.d.ts"
+    },
+    "./core": {
+      "import": "./dist/core/index.mjs",
+      "require": "./dist/core/index.js",
+      "types": "./dist/core/index.d.ts"
+    },
+    "./containers": {
+      "import": "./dist/containers/index.mjs",
+      "require": "./dist/containers/index.js",
+      "types": "./dist/containers/index.d.ts"
+    },
+    "./yard": {
+      "import": "./dist/yard/index.mjs",
+      "require": "./dist/yard/index.js",
+      "types": "./dist/yard/index.d.ts"
+    },
+    "./gate": {
+      "import": "./dist/gate/index.mjs",
+      "require": "./dist/gate/index.js",
+      "types": "./dist/gate/index.d.ts"
+    },
+    "./rail": {
+      "import": "./dist/rail/index.mjs",
+      "require": "./dist/rail/index.js",
+      "types": "./dist/rail/index.d.ts"
+    },
+    "./road": {
+      "import": "./dist/road/index.mjs",
+      "require": "./dist/road/index.js",
+      "types": "./dist/road/index.d.ts"
+    },
+    "./waterfront": {
+      "import": "./dist/waterfront/index.mjs",
+      "require": "./dist/waterfront/index.js",
+      "types": "./dist/waterfront/index.d.ts"
+    },
+    "./equipment": {
+      "import": "./dist/equipment/index.mjs",
+      "require": "./dist/equipment/index.js",
+      "types": "./dist/equipment/index.d.ts"
+    },
+    "./billing": {
+      "import": "./dist/billing/index.mjs",
+      "require": "./dist/billing/index.js",
+      "types": "./dist/billing/index.d.ts"
+    },
+    "./customs": {
+      "import": "./dist/customs/index.mjs",
+      "require": "./dist/customs/index.js",
+      "types": "./dist/customs/index.d.ts"
+    },
+    "./analytics": {
+      "import": "./dist/analytics/index.mjs",
+      "require": "./dist/analytics/index.js",
+      "types": "./dist/analytics/index.d.ts"
+    },
+    "./operations": {
+      "import": "./dist/operations/index.mjs",
+      "require": "./dist/operations/index.js",
+      "types": "./dist/operations/index.d.ts"
+    },
+    "./documentation": {
+      "import": "./dist/documentation/index.mjs",
+      "require": "./dist/documentation/index.js",
+      "types": "./dist/documentation/index.d.ts"
+    },
+    "./hardware": {
+      "import": "./dist/hardware/index.mjs",
+      "require": "./dist/hardware/index.js",
+      "types": "./dist/hardware/index.d.ts"
+    },
+    "./iot": {
+      "import": "./dist/iot/index.mjs",
+      "require": "./dist/iot/index.js",
+      "types": "./dist/iot/index.d.ts"
+    },
+    "./api": {
+      "import": "./dist/api/index.mjs",
+      "require": "./dist/api/index.js",
+      "types": "./dist/api/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src/",
+    "start": "node dist/api/index.js",
+    "clean": "rm -rf dist",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "db:format": "prisma format",
+    "db:validate": "prisma validate"
+  },
+  "keywords": [
+    "icd",
+    "cfs",
+    "container",
+    "freight",
+    "terminal",
+    "logistics",
+    "yard-management",
+    "rail-terminal",
+    "port",
+    "icegate",
+    "customs"
+  ],
+  "author": "ANKR",
+  "license": "UNLICENSED",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.2.0",
+    "@fastify/websocket": "^11.2.0",
+    "@prisma/client": "^7.3.0",
+    "date-fns": "^3.0.0",
+    "decimal.js": "^10.4.0",
+    "fastify": "^5.7.2",
+    "graphql": "^16.12.0",
+    "mercurius": "^16.7.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/uuid": "^9.0.8",
+    "prisma": "^7.3.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "uuid": "^9.0.1",
+    "vitest": "^1.0.0"
+  }
+}

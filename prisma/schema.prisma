@@ -1,0 +1,2872 @@
+// =============================================================================
+// ankrICD - Prisma Schema
+// World-Class ICD & CFS Management System
+// =============================================================================
+//
+// 55+ tables across 15 modules:
+// - Facility Management
+// - Container Lifecycle
+// - Yard Operations
+// - Gate Operations
+// - Rail Terminal
+// - Road Transport
+// - Waterfront/Port
+// - Equipment Fleet
+// - Billing & Revenue
+// - Customs & ICEGATE
+// - Audit & Events
+// - Operations (Stuffing/Destuffing/LCL/FCL/CrossDock/Inspection)
+// - Documentation (BL/DO/EDI/Manifest)
+// - Hardware (RFID/OCR/Weighbridge/Scanners/Printers)
+// - IoT (Sensors/Reefer/GPS/Environmental)
+//
+// =============================================================================
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  extensions = [pgcrypto, postgis]
+}
+
+// =============================================================================
+// FACILITY MANAGEMENT
+// =============================================================================
+
+model Facility {
+  id       String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId String @map("tenant_id")
+  code     String @unique
+  name     String
+  type     String @db.VarChar(20) // ICD, CFS, PORT, RAIL_TERMINAL, DRY_PORT
+  status   String @default("active") @db.VarChar(20)
+
+  // Location
+  address     Json
+  coordinates Json?
+  portCode    String? @map("port_code") @db.VarChar(20)
+  customsCode String? @map("customs_code") @db.VarChar(20)
+
+  // Capacity
+  capacityTEU        Int  @map("capacity_teu")
+  currentUtilization Int? @map("current_utilization")
+  groundSlots        Int  @map("ground_slots")
+  maxStackHeight     Int  @default(5) @map("max_stack_height")
+
+  // Operations
+  operatingHours Json   @map("operating_hours")
+  timeZone       String @default("Asia/Kolkata") @map("time_zone")
+
+  // Configuration
+  contacts Json @default("[]")
+  features Json @default("{}")
+  config   Json @default("{}")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+  createdBy String?  @map("created_by")
+  updatedBy String?  @map("updated_by")
+
+  // Relations
+  zones             FacilityZone[]
+  blocks            YardBlock[]
+  containers        Container[]
+  gates             Gate[]
+  railTracks        RailTrack[]
+  rakes             Rake[]
+  berths            Berth[]
+  vesselVisits      VesselVisit[]
+  quayCranes        QuayCrane[]
+  equipment         Equipment[]
+  customers         Customer[]
+  tariffs           Tariff[]
+  invoices          Invoice[]
+  billsOfEntry      BillOfEntry[]
+  shippingBills     ShippingBill[]
+  examinations      CustomsExamination[]
+  icegateMessages   ICEGATEMessage[]
+  transporters      Transporter[]
+  truckAppointments TruckAppointment[]
+  yardPlans         YardPlan[]
+  yardWorkOrders    YardWorkOrder[]
+  gateTransactions  GateTransaction[]
+
+  // Operations module
+  stuffingOps    StuffingOperation[]
+  destuffingOps  DestuffingOperation[]
+  consolidations LCLConsolidation[]
+  fclOperations  FCLOperation[]
+  crossDocks     CrossDockOperation[]
+  inspections    Inspection[]
+
+  // Documentation module
+  billsOfLading  BillOfLading[]
+  deliveryOrders DeliveryOrder[]
+  ediMessages    EDIMessage[]
+  manifests      Manifest[]
+
+  // Hardware module
+  hardwareDevices HardwareDevice[]
+
+  // IoT module
+  sensors            IoTSensor[]
+  reeferProfiles     ReeferProfile[]
+  gpsTracks          GPSTrack[]
+  environmentalZones EnvironmentalZone[]
+
+  @@index([tenantId])
+  @@index([code])
+  @@index([type])
+  @@map("facilities")
+}
+
+model FacilityZone {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  facilityId String @map("facility_id") @db.Uuid
+  code       String @db.VarChar(20)
+  name       String
+  type       String @db.VarChar(20) // import, export, empty, reefer, hazmat, etc.
+  status     String @default("active") @db.VarChar(20)
+
+  // Capacity
+  totalSlots     Int @default(0) @map("total_slots")
+  maxStackHeight Int @default(5) @map("max_stack_height")
+
+  // Restrictions
+  allowedContainerTypes String[] @map("allowed_container_types")
+  temperatureRange      Json?    @map("temperature_range")
+  hazmatClasses         String[] @map("hazmat_classes")
+
+  // Equipment
+  assignedEquipment String[] @map("assigned_equipment") @db.Uuid
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility    @relation(fields: [facilityId], references: [id])
+  blocks   YardBlock[]
+
+  @@unique([facilityId, code])
+  @@index([facilityId])
+  @@map("facility_zones")
+}
+
+model YardBlock {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  facilityId String @map("facility_id") @db.Uuid
+  zoneId     String @map("zone_id") @db.Uuid
+  code       String @db.VarChar(20)
+  name       String
+  type       String @db.VarChar(20)
+  status     String @default("active") @db.VarChar(20)
+
+  // Configuration
+  rows        Int
+  slotsPerRow Int @map("slots_per_row")
+  maxTiers    Int @default(5) @map("max_tiers")
+
+  // Current state
+  occupiedSlots      Int @default(0) @map("occupied_slots")
+  utilizationPercent Int @default(0) @map("utilization_percent")
+
+  // Restrictions
+  allowedContainerSizes String[] @map("allowed_container_sizes")
+  isReeferCapable       Boolean  @default(false) @map("is_reefer_capable")
+  isHazmatCapable       Boolean  @default(false) @map("is_hazmat_capable")
+  maxGroundWeight       Int?     @map("max_ground_weight")
+
+  // Equipment
+  assignedEquipment String[] @map("assigned_equipment") @db.Uuid
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility    Facility     @relation(fields: [facilityId], references: [id])
+  zone        FacilityZone @relation(fields: [zoneId], references: [id])
+  groundSlots GroundSlot[]
+
+  @@unique([facilityId, code])
+  @@index([facilityId])
+  @@index([zoneId])
+  @@map("yard_blocks")
+}
+
+model GroundSlot {
+  id      String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  blockId String @map("block_id") @db.Uuid
+  row     Int
+  slot    Int
+  barcode String @unique
+
+  // Configuration
+  maxTiers    Int     @default(5) @map("max_tiers")
+  slotType    String  @default("standard") @map("slot_type") @db.VarChar(20)
+  reeferPlugs Int?    @map("reefer_plugs")
+  rfidTag     String? @map("rfid_tag")
+
+  // Current state
+  currentTiers   Int     @default(0) @map("current_tiers")
+  topContainerId String? @map("top_container_id") @db.Uuid
+  containers     Json    @default("[]") // StackedContainer[]
+
+  // Status
+  status        String  @default("available") @db.VarChar(20)
+  blockedReason String? @map("blocked_reason")
+  reservedFor   Json?   @map("reserved_for")
+
+  // Relations
+  block YardBlock @relation(fields: [blockId], references: [id])
+
+  @@unique([blockId, row, slot])
+  @@index([blockId])
+  @@index([status])
+  @@map("ground_slots")
+}
+
+// =============================================================================
+// CONTAINER MANAGEMENT
+// =============================================================================
+
+model Container {
+  id              String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId        String @map("tenant_id")
+  facilityId      String @map("facility_id") @db.Uuid
+  containerNumber String @unique @map("container_number") @db.VarChar(11)
+  isoType         String @map("iso_type") @db.VarChar(4)
+  size            String @db.VarChar(2) // 20, 40, 45
+  type            String @db.VarChar(5) // GP, HC, RF, OT, FR, TK
+  height          String @default("standard") @db.VarChar(10)
+  status          String @default("announced") @db.VarChar(20)
+  condition       String @default("sound") @db.VarChar(20)
+
+  // Ownership
+  owner     String
+  ownerName String  @map("owner_name")
+  operator  String?
+
+  // Weights (kg)
+  tareWeight  Decimal  @map("tare_weight") @db.Decimal(10, 2)
+  grossWeight Decimal? @map("gross_weight") @db.Decimal(10, 2)
+  maxPayload  Decimal  @map("max_payload") @db.Decimal(10, 2)
+  vgmWeight   Decimal? @map("vgm_weight") @db.Decimal(10, 2)
+
+  // Seals
+  sealNumbers String[] @map("seal_numbers")
+  sealIntact  Boolean? @map("seal_intact")
+
+  // Cargo
+  cargoDescription String? @map("cargo_description")
+  harmonizedCode   String? @map("harmonized_code") @db.VarChar(10)
+  packagesCount    Int?    @map("packages_count")
+  packageType      String? @map("package_type")
+
+  // Special handling (JSONB for complex nested data)
+  hazmat     Json? // HazmatInfo
+  reefer     Json? // ReeferInfo
+  oog        Json? // OverGaugeInfo
+  overweight Json? // OverweightInfo
+
+  // Location
+  currentLocation   Json? @map("current_location") // YardLocation
+  previousLocations Json  @default("[]") @map("previous_locations")
+
+  // Transport
+  bookingRef          String? @map("booking_ref")
+  blNumber            String? @map("bl_number")
+  deliveryOrderNumber String? @map("delivery_order_number")
+  vesselVoyage        String? @map("vessel_voyage")
+  portOfLoading       String? @map("port_of_loading")
+  portOfDischarge     String? @map("port_of_discharge")
+  finalDestination    String? @map("final_destination")
+
+  // Timing
+  eta            DateTime? @db.Timestamptz
+  gateInTime     DateTime? @map("gate_in_time") @db.Timestamptz
+  groundedTime   DateTime? @map("grounded_time") @db.Timestamptz
+  gateOutTime    DateTime? @map("gate_out_time") @db.Timestamptz
+  freeTimeExpiry DateTime? @map("free_time_expiry") @db.Timestamptz
+
+  // Customs
+  customsStatus String  @default("pending") @map("customs_status") @db.VarChar(30)
+  boeNumber     String? @map("boe_number")
+  sbNumber      String? @map("sb_number")
+  igmNumber     String? @map("igm_number")
+  igmLineNumber Int?    @map("igm_line_number")
+
+  // Photos and documents
+  photos    Json @default("[]")
+  documents Json @default("[]")
+
+  // Linked
+  linkedContainers String[] @map("linked_containers") @db.Uuid
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+  createdBy String?  @map("created_by")
+  updatedBy String?  @map("updated_by")
+
+  // Relations
+  facility         Facility            @relation(fields: [facilityId], references: [id])
+  movements        ContainerMovement[]
+  holds            ContainerHold[]
+  gateTransactions GateTransaction[]
+
+  @@index([tenantId])
+  @@index([facilityId])
+  @@index([status])
+  @@index([customsStatus])
+  @@index([blNumber])
+  @@index([bookingRef])
+  @@index([containerNumber])
+  @@map("containers")
+}
+
+model ContainerMovement {
+  id           String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  containerId  String   @map("container_id") @db.Uuid
+  movementType String   @map("movement_type") @db.VarChar(30)
+  fromLocation Json?    @map("from_location")
+  toLocation   Json?    @map("to_location")
+  equipmentId  String?  @map("equipment_id") @db.Uuid
+  operatorId   String?  @map("operator_id") @db.Uuid
+  workOrderId  String?  @map("work_order_id") @db.Uuid
+  movementTime DateTime @default(now()) @map("movement_time") @db.Timestamptz
+  duration     Int? // minutes
+  notes        String?
+  metadata     Json?
+
+  // Relations
+  container Container @relation(fields: [containerId], references: [id])
+
+  @@index([containerId])
+  @@index([movementTime])
+  @@index([movementType])
+  @@map("container_movements")
+}
+
+model ContainerHold {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  containerId String    @map("container_id") @db.Uuid
+  type        String    @db.VarChar(20) // customs, shipping_line, damage, payment, etc.
+  reason      String
+  placedAt    DateTime  @default(now()) @map("placed_at") @db.Timestamptz
+  placedBy    String    @map("placed_by")
+  releasedAt  DateTime? @map("released_at") @db.Timestamptz
+  releasedBy  String?   @map("released_by")
+  reference   String?
+  autoRelease DateTime? @map("auto_release") @db.Timestamptz
+  priority    String    @default("medium") @db.VarChar(10)
+
+  // Relations
+  container Container @relation(fields: [containerId], references: [id])
+
+  @@index([containerId])
+  @@index([type])
+  @@map("container_holds")
+}
+
+// =============================================================================
+// YARD OPERATIONS
+// =============================================================================
+
+model YardPlan {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  facilityId String @map("facility_id") @db.Uuid
+  planType   String @map("plan_type") @db.VarChar(30)
+  status     String @default("draft") @db.VarChar(20)
+
+  // Reference
+  vesselVisitId String? @map("vessel_visit_id") @db.Uuid
+  rakeId        String? @map("rake_id") @db.Uuid
+
+  // Plan details
+  plannedMoves      Json @default("[]") @map("planned_moves")
+  totalMoves        Int  @default(0) @map("total_moves")
+  estimatedDuration Int  @default(0) @map("estimated_duration") // minutes
+
+  // Timing
+  plannedStart DateTime  @map("planned_start") @db.Timestamptz
+  plannedEnd   DateTime  @map("planned_end") @db.Timestamptz
+  actualStart  DateTime? @map("actual_start") @db.Timestamptz
+  actualEnd    DateTime? @map("actual_end") @db.Timestamptz
+
+  // Resources
+  requiredEquipment Json @default("[]") @map("required_equipment")
+  requiredOperators Int  @default(0) @map("required_operators")
+
+  // Metrics
+  executedMoves Int  @default(0) @map("executed_moves")
+  restackCount  Int  @default(0) @map("restack_count")
+  efficiency    Int? // percentage
+
+  // Audit
+  createdAt  DateTime  @default(now()) @map("created_at") @db.Timestamptz
+  createdBy  String    @map("created_by")
+  approvedAt DateTime? @map("approved_at") @db.Timestamptz
+  approvedBy String?   @map("approved_by")
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([status])
+  @@map("yard_plans")
+}
+
+model YardWorkOrder {
+  id              String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId        String @map("tenant_id")
+  facilityId      String @map("facility_id") @db.Uuid
+  workOrderNumber String @unique @map("work_order_number")
+  orderType       String @map("order_type") @db.VarChar(30)
+
+  // Container
+  containerId     String @map("container_id") @db.Uuid
+  containerNumber String @map("container_number") @db.VarChar(11)
+  containerSize   String @map("container_size") @db.VarChar(2)
+
+  // Locations
+  fromLocation Json @map("from_location")
+  toLocation   Json @map("to_location")
+
+  // Priority
+  priority Int     @default(5)
+  isUrgent Boolean @default(false) @map("is_urgent")
+
+  // Assignment
+  assignedEquipmentId String? @map("assigned_equipment_id") @db.Uuid
+  assignedOperatorId  String? @map("assigned_operator_id") @db.Uuid
+
+  // Parent
+  parentPlanId   String? @map("parent_plan_id") @db.Uuid
+  parentSequence Int?    @map("parent_sequence")
+
+  // Status
+  status        String @default("pending") @db.VarChar(20)
+  statusHistory Json   @default("[]") @map("status_history")
+
+  // Timing
+  scheduledAt DateTime? @map("scheduled_at") @db.Timestamptz
+  assignedAt  DateTime? @map("assigned_at") @db.Timestamptz
+  startedAt   DateTime? @map("started_at") @db.Timestamptz
+  completedAt DateTime? @map("completed_at") @db.Timestamptz
+  cancelledAt DateTime? @map("cancelled_at") @db.Timestamptz
+
+  // Metrics
+  estimatedDuration Int? @map("estimated_duration") // minutes
+  actualDuration    Int? @map("actual_duration")
+
+  // Notes
+  instructions    String?
+  completionNotes String? @map("completion_notes")
+  failureReason   String? @map("failure_reason")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([status])
+  @@index([containerId])
+  @@map("yard_work_orders")
+}
+
+model SlotReservation {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+  slotId     String @map("slot_id") @db.Uuid
+  blockId    String @map("block_id") @db.Uuid
+  row        Int
+  slot       Int
+
+  reservationType String  @map("reservation_type") @db.VarChar(20)
+  referenceId     String? @map("reference_id") @db.Uuid
+  referenceNumber String? @map("reference_number")
+
+  reservedAt DateTime  @default(now()) @map("reserved_at") @db.Timestamptz
+  expiresAt  DateTime  @map("expires_at") @db.Timestamptz
+  releasedAt DateTime? @map("released_at") @db.Timestamptz
+
+  status String @default("active") @db.VarChar(20)
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  @@index([facilityId])
+  @@index([blockId])
+  @@index([status])
+  @@map("slot_reservations")
+}
+
+// =============================================================================
+// GATE OPERATIONS
+// =============================================================================
+
+model Gate {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+  gateId     String @map("gate_id") @db.VarChar(10)
+  name       String
+  gateType   String @map("gate_type") @db.VarChar(20)
+
+  // Configuration
+  totalLanes Int @default(1) @map("total_lanes")
+
+  // Equipment
+  hasWeighbridge      Boolean @default(false) @map("has_weighbridge")
+  weighbridgeCapacity Int?    @map("weighbridge_capacity")
+  hasOCR              Boolean @default(false) @map("has_ocr")
+  hasRFID             Boolean @default(false) @map("has_rfid")
+
+  // Operating hours
+  operatingHours Json    @default("{}") @map("operating_hours")
+  is24x7         Boolean @default(false) @map("is_24x7")
+
+  status String @default("active") @db.VarChar(20)
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility     Facility          @relation(fields: [facilityId], references: [id])
+  lanes        GateLane[]
+  transactions GateTransaction[]
+
+  @@unique([facilityId, gateId])
+  @@index([facilityId])
+  @@map("gates")
+}
+
+model GateLane {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  gateId     String @map("gate_id") @db.Uuid
+  laneNumber String @map("lane_number") @db.VarChar(10)
+  laneType   String @map("lane_type") @db.VarChar(10) // in, out, both
+  status     String @default("open") @db.VarChar(20)
+
+  // Equipment
+  hasOCR         Boolean @default(false) @map("has_ocr")
+  hasRFID        Boolean @default(false) @map("has_rfid")
+  hasWeighbridge Boolean @default(false) @map("has_weighbridge")
+  hasBoomBarrier Boolean @default(false) @map("has_boom_barrier")
+
+  // State
+  currentTransactionId String? @map("current_transaction_id") @db.Uuid
+  vehiclesInQueue      Int     @default(0) @map("vehicles_in_queue")
+
+  // Relations
+  gate         Gate              @relation(fields: [gateId], references: [id])
+  transactions GateTransaction[]
+
+  @@unique([gateId, laneNumber])
+  @@map("gate_lanes")
+}
+
+model GateTransaction {
+  id                String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId          String @map("tenant_id")
+  facilityId        String @map("facility_id") @db.Uuid
+  transactionNumber String @unique @map("transaction_number")
+  transactionType   String @map("transaction_type") @db.VarChar(10) // GATE_IN, GATE_OUT
+
+  // Gate
+  gateId String @map("gate_id") @db.Uuid
+  laneId String @map("lane_id") @db.Uuid
+
+  // Vehicle
+  truckNumber   String  @map("truck_number") @db.VarChar(20)
+  trailerNumber String? @map("trailer_number") @db.VarChar(20)
+
+  // Driver
+  driverName    String  @map("driver_name")
+  driverLicense String  @map("driver_license") @db.VarChar(50)
+  driverPhone   String  @map("driver_phone") @db.VarChar(20)
+  driverPhoto   String? @map("driver_photo")
+
+  // Container (single)
+  containerId     String? @map("container_id") @db.Uuid
+  containerNumber String? @map("container_number") @db.VarChar(11)
+
+  // Multiple containers
+  containers Json @default("[]") // GateTransactionContainer[]
+
+  // Seal
+  sealNumbers   String[] @map("seal_numbers")
+  sealCondition String?  @map("seal_condition") @db.VarChar(20)
+
+  // Documentation
+  appointmentId       String? @map("appointment_id") @db.Uuid
+  appointmentNumber   String? @map("appointment_number")
+  deliveryOrderNumber String? @map("delivery_order_number")
+  eWayBillNumber      String? @map("e_way_bill_number")
+  lrNumber            String? @map("lr_number")
+  blNumber            String? @map("bl_number")
+
+  // Captures (JSONB)
+  photos          Json  @default("[]")
+  ocrCapture      Json? @map("ocr_capture")
+  rfidCapture     Json? @map("rfid_capture")
+  weighbridgeData Json? @map("weighbridge_data")
+
+  // Inspection
+  inspectionResult Json? @map("inspection_result")
+
+  // Timing
+  arrivalTime            DateTime  @map("arrival_time") @db.Timestamptz
+  processStartTime       DateTime? @map("process_start_time") @db.Timestamptz
+  documentCheckTime      DateTime? @map("document_check_time") @db.Timestamptz
+  inspectionTime         DateTime? @map("inspection_time") @db.Timestamptz
+  weighingTime           DateTime? @map("weighing_time") @db.Timestamptz
+  approvalTime           DateTime? @map("approval_time") @db.Timestamptz
+  completionTime         DateTime? @map("completion_time") @db.Timestamptz
+  totalProcessingMinutes Int?      @map("total_processing_minutes")
+
+  // Status
+  status        String @default("pending") @db.VarChar(30)
+  statusHistory Json   @default("[]") @map("status_history")
+
+  // Approval
+  approvedBy      String? @map("approved_by")
+  rejectionReason String? @map("rejection_reason")
+  remarks         String?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility  Facility   @relation(fields: [facilityId], references: [id])
+  gate      Gate       @relation(fields: [gateId], references: [id])
+  lane      GateLane   @relation(fields: [laneId], references: [id])
+  container Container? @relation(fields: [containerId], references: [id])
+
+  @@index([facilityId])
+  @@index([transactionType])
+  @@index([status])
+  @@index([arrivalTime])
+  @@index([truckNumber])
+  @@index([containerId])
+  @@map("gate_transactions")
+}
+
+// =============================================================================
+// RAIL TERMINAL
+// =============================================================================
+
+model RailTrack {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  trackNumber String  @map("track_number") @db.VarChar(20)
+  name        String?
+  trackType   String  @map("track_type") @db.VarChar(20)
+  status      String  @default("available") @db.VarChar(20)
+
+  // Specifications
+  length        Decimal @db.Decimal(10, 2) // meters
+  wagonCapacity Int     @map("wagon_capacity")
+  electrified   Boolean @default(false)
+  gaugeType     String  @default("broad") @map("gauge_type") @db.VarChar(10)
+
+  // State
+  currentRakeId String? @map("current_rake_id") @db.Uuid
+
+  // Position
+  coordinates Json?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+  rakes    Rake[]
+
+  @@unique([facilityId, trackNumber])
+  @@index([facilityId])
+  @@map("rail_tracks")
+}
+
+model Rake {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  rakeNumber  String @map("rake_number") @db.VarChar(50)
+  trainNumber String @map("train_number") @db.VarChar(50)
+
+  // Journey
+  origin          String   @db.VarChar(10)
+  originName      String   @map("origin_name")
+  destination     String   @db.VarChar(10)
+  destinationName String   @map("destination_name")
+  viaStations     String[] @map("via_stations")
+
+  // Schedule
+  eta DateTime  @db.Timestamptz
+  ata DateTime? @db.Timestamptz
+  etd DateTime  @db.Timestamptz
+  atd DateTime? @db.Timestamptz
+
+  // Track assignment
+  trackId     String? @map("track_id") @db.Uuid
+  trackNumber String? @map("track_number")
+
+  // Cargo summary
+  totalWagons      Int @default(0) @map("total_wagons")
+  totalTEU         Int @default(0) @map("total_teu")
+  importContainers Int @default(0) @map("import_containers")
+  exportContainers Int @default(0) @map("export_containers")
+  emptyContainers  Int @default(0) @map("empty_containers")
+
+  // Status
+  status String @default("announced") @db.VarChar(30)
+
+  // Documents
+  railwayReceipt String? @map("railway_receipt")
+  indentNumber   String? @map("indent_number")
+  manifestNumber String? @map("manifest_number")
+
+  // Railway details
+  locoNumber String? @map("loco_number")
+  guardName  String? @map("guard_name")
+  driverName String? @map("driver_name")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility  Facility       @relation(fields: [facilityId], references: [id])
+  track     RailTrack?     @relation(fields: [trackId], references: [id])
+  wagons    Wagon[]
+  manifests RailManifest[]
+
+  @@index([facilityId])
+  @@index([status])
+  @@index([trainNumber])
+  @@map("rakes")
+}
+
+model Wagon {
+  id          String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  rakeId      String @map("rake_id") @db.Uuid
+  wagonNumber String @map("wagon_number") @db.VarChar(20)
+  wagonType   String @map("wagon_type") @db.VarChar(10) // BLC, BLCA, BFKN, etc.
+  position    Int
+
+  // Capacity
+  maxLoadCapacity Decimal @map("max_load_capacity") @db.Decimal(10, 2) // tons
+  maxContainers   Int     @default(2) @map("max_containers")
+
+  // Current load
+  containers  Json    @default("[]") // WagonContainer[]
+  currentLoad Decimal @default(0) @map("current_load") @db.Decimal(10, 2)
+
+  // Tare
+  tareWeight Decimal @map("tare_weight") @db.Decimal(10, 2)
+
+  // Condition
+  condition String @default("fit") @db.VarChar(20)
+
+  // Relations
+  rake Rake @relation(fields: [rakeId], references: [id])
+
+  @@unique([rakeId, position])
+  @@index([rakeId])
+  @@map("wagons")
+}
+
+model RailManifest {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+  rakeId     String @map("rake_id") @db.Uuid
+
+  manifestNumber String @unique @map("manifest_number")
+  manifestType   String @map("manifest_type") @db.VarChar(10) // import, export
+
+  // Journey
+  originStation      String @map("origin_station")
+  destinationStation String @map("destination_station")
+
+  // Containers
+  containers      Json    @default("[]") // RailManifestContainer[]
+  totalContainers Int     @default(0) @map("total_containers")
+  totalTEU        Int     @default(0) @map("total_teu")
+  totalWeight     Decimal @default(0) @map("total_weight") @db.Decimal(12, 2)
+
+  // Status
+  status String @default("draft") @db.VarChar(20)
+
+  submittedAt    DateTime? @map("submitted_at") @db.Timestamptz
+  acknowledgedAt DateTime? @map("acknowledged_at") @db.Timestamptz
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  rake Rake @relation(fields: [rakeId], references: [id])
+
+  @@index([rakeId])
+  @@map("rail_manifests")
+}
+
+// =============================================================================
+// ROAD TRANSPORT
+// =============================================================================
+
+model Transporter {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  code      String @db.VarChar(20)
+  name      String
+  legalName String @map("legal_name")
+
+  // Registration
+  gstin         String? @db.VarChar(20)
+  panNumber     String? @map("pan_number") @db.VarChar(10)
+  transporterId String? @map("transporter_id") @db.VarChar(20)
+
+  // Contact
+  address  Json
+  contacts Json    @default("[]")
+  email    String?
+  phone    String?
+
+  // Fleet
+  fleetSize    Int?     @map("fleet_size")
+  vehicleTypes String[] @map("vehicle_types")
+
+  // Rating
+  rating         Decimal? @db.Decimal(3, 2)
+  completedTrips Int?     @map("completed_trips")
+  onTimePercent  Decimal? @map("on_time_percent") @db.Decimal(5, 2)
+
+  // Status
+  status String @default("active") @db.VarChar(20)
+
+  // Contract
+  contractStartDate DateTime? @map("contract_start_date") @db.Timestamptz
+  contractEndDate   DateTime? @map("contract_end_date") @db.Timestamptz
+  creditLimit       Decimal?  @map("credit_limit") @db.Decimal(15, 2)
+  paymentTerms      String?   @map("payment_terms")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility     Facility           @relation(fields: [facilityId], references: [id])
+  appointments TruckAppointment[]
+
+  @@unique([facilityId, code])
+  @@index([facilityId])
+  @@map("transporters")
+}
+
+model TruckAppointment {
+  id                String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId          String @map("tenant_id")
+  facilityId        String @map("facility_id") @db.Uuid
+  appointmentNumber String @unique @map("appointment_number")
+  appointmentType   String @map("appointment_type") @db.VarChar(10)
+
+  // Schedule
+  scheduledTime DateTime @map("scheduled_time") @db.Timestamptz
+  windowStart   DateTime @map("window_start") @db.Timestamptz
+  windowEnd     DateTime @map("window_end") @db.Timestamptz
+
+  // Transporter
+  transporterId   String  @map("transporter_id") @db.Uuid
+  transporterName String  @map("transporter_name")
+  truckNumber     String  @map("truck_number") @db.VarChar(20)
+  trailerNumber   String? @map("trailer_number") @db.VarChar(20)
+
+  // Driver
+  driverName    String @map("driver_name")
+  driverLicense String @map("driver_license") @db.VarChar(50)
+  driverPhone   String @map("driver_phone") @db.VarChar(20)
+
+  // Cargo
+  containers      Json @default("[]")
+  totalContainers Int  @default(0) @map("total_containers")
+
+  // Documentation
+  deliveryOrderNumber String? @map("delivery_order_number")
+  eWayBillNumber      String? @map("e_way_bill_number")
+  lrNumber            String? @map("lr_number")
+
+  // Status
+  status String @default("scheduled") @db.VarChar(20)
+
+  // Actual times
+  actualArrival DateTime? @map("actual_arrival") @db.Timestamptz
+  checkInTime   DateTime? @map("check_in_time") @db.Timestamptz
+  checkOutTime  DateTime? @map("check_out_time") @db.Timestamptz
+
+  // Notes
+  instructions String?
+  notes        String?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility    Facility    @relation(fields: [facilityId], references: [id])
+  transporter Transporter @relation(fields: [transporterId], references: [id])
+
+  @@index([facilityId])
+  @@index([scheduledTime])
+  @@index([status])
+  @@index([truckNumber])
+  @@map("truck_appointments")
+}
+
+model EWayBill {
+  id             String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId       String @map("tenant_id")
+  facilityId     String @map("facility_id") @db.Uuid
+  eWayBillNumber String @unique @map("e_way_bill_number")
+
+  // Validity
+  generatedAt DateTime @map("generated_at") @db.Timestamptz
+  validFrom   DateTime @map("valid_from") @db.Timestamptz
+  validTo     DateTime @map("valid_to") @db.Timestamptz
+
+  // Parties
+  fromGstin     String @map("from_gstin") @db.VarChar(20)
+  fromTradeName String @map("from_trade_name")
+  fromAddress   Json   @map("from_address")
+  toGstin       String @map("to_gstin") @db.VarChar(20)
+  toTradeName   String @map("to_trade_name")
+  toAddress     Json   @map("to_address")
+
+  // Transport
+  transportMode   String  @map("transport_mode") @db.VarChar(10)
+  transporterId   String? @map("transporter_id")
+  transporterName String? @map("transporter_name")
+  vehicleNumber   String? @map("vehicle_number") @db.VarChar(20)
+  vehicleType     String? @map("vehicle_type")
+
+  // Document
+  documentType   String   @map("document_type") @db.VarChar(30)
+  documentNumber String   @map("document_number")
+  documentDate   DateTime @map("document_date") @db.Timestamptz
+
+  // Goods
+  hsnCode            String  @map("hsn_code") @db.VarChar(10)
+  productDescription String  @map("product_description")
+  quantity           Decimal @db.Decimal(12, 3)
+  unit               String  @db.VarChar(10)
+  taxableValue       Decimal @map("taxable_value") @db.Decimal(15, 2)
+  cgst               Decimal @db.Decimal(15, 2)
+  sgst               Decimal @db.Decimal(15, 2)
+  igst               Decimal @db.Decimal(15, 2)
+  totalValue         Decimal @map("total_value") @db.Decimal(15, 2)
+
+  // Status
+  status       String    @default("active") @db.VarChar(20)
+  cancelledAt  DateTime? @map("cancelled_at") @db.Timestamptz
+  cancelReason String?   @map("cancel_reason")
+
+  // Part B updates
+  partBUpdates Json @default("[]") @map("part_b_updates")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  @@index([facilityId])
+  @@index([status])
+  @@index([validTo])
+  @@map("e_way_bills")
+}
+
+// =============================================================================
+// WATERFRONT / PORT
+// =============================================================================
+
+model Berth {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  berthNumber String  @map("berth_number") @db.VarChar(20)
+  name        String?
+
+  // Specifications
+  length   Decimal @db.Decimal(10, 2) // meters
+  depth    Decimal @db.Decimal(10, 2) // draft
+  maxLOA   Decimal @map("max_loa") @db.Decimal(10, 2)
+  maxBeam  Decimal @map("max_beam") @db.Decimal(10, 2)
+  maxDraft Decimal @map("max_draft") @db.Decimal(10, 2)
+
+  // Equipment
+  fenders Int?
+
+  // Status
+  status          String  @default("available") @db.VarChar(20)
+  currentVesselId String? @map("current_vessel_id") @db.Uuid
+
+  // Position
+  coordinates Json?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility     Facility      @relation(fields: [facilityId], references: [id])
+  vesselVisits VesselVisit[]
+
+  @@unique([facilityId, berthNumber])
+  @@index([facilityId])
+  @@map("berths")
+}
+
+model VesselVisit {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  // Vessel
+  vesselName String  @map("vessel_name")
+  imoNumber  String  @map("imo_number") @db.VarChar(20)
+  callSign   String? @map("call_sign")
+  flag       String  @db.VarChar(5)
+  vesselType String  @map("vessel_type") @db.VarChar(20)
+
+  // Voyage
+  voyageNumber String  @map("voyage_number")
+  shippingLine String  @map("shipping_line")
+  service      String?
+
+  // Dimensions
+  loa   Decimal @db.Decimal(10, 2)
+  beam  Decimal @db.Decimal(10, 2)
+  draft Decimal @db.Decimal(10, 2)
+
+  // Schedule
+  eta DateTime  @db.Timestamptz
+  etb DateTime? @db.Timestamptz
+  ata DateTime? @db.Timestamptz
+  atb DateTime? @db.Timestamptz
+  etd DateTime  @db.Timestamptz
+  atd DateTime? @db.Timestamptz
+
+  // Berth
+  berthId     String? @map("berth_id") @db.Uuid
+  berthNumber String? @map("berth_number")
+  berthSide   String  @default("port") @map("berth_side") @db.VarChar(10)
+
+  // Operations
+  dischargeContainers Int  @default(0) @map("discharge_containers")
+  loadContainers      Int  @default(0) @map("load_containers")
+  shiftContainers     Int? @map("shift_containers")
+  restowContainers    Int? @map("restow_containers")
+  totalMoves          Int  @default(0) @map("total_moves")
+  dischargeDone       Int  @default(0) @map("discharge_done")
+  loadDone            Int  @default(0) @map("load_done")
+
+  // Status
+  status String @default("announced") @db.VarChar(20)
+
+  // Stow plan
+  hasStowPlan Boolean @default(false) @map("has_stow_plan")
+  stowPlanId  String? @map("stow_plan_id") @db.Uuid
+
+  // Agent
+  shippingAgent String? @map("shipping_agent")
+  agentContact  Json?   @map("agent_contact")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility  Facility         @relation(fields: [facilityId], references: [id])
+  berth     Berth?           @relation(fields: [berthId], references: [id])
+  stowPlans VesselStowPlan[]
+
+  @@index([facilityId])
+  @@index([status])
+  @@index([imoNumber])
+  @@index([voyageNumber])
+  @@map("vessel_visits")
+}
+
+model QuayCrane {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  craneName   String @map("crane_name")
+  craneNumber String @map("crane_number") @db.VarChar(20)
+  craneType   String @map("crane_type") @db.VarChar(10) // STS, MHC, RMQC
+
+  // Specifications
+  outreach     Decimal  @db.Decimal(10, 2)
+  backreach    Decimal? @db.Decimal(10, 2)
+  liftCapacity Decimal  @map("lift_capacity") @db.Decimal(10, 2)
+  liftHeight   Decimal  @map("lift_height") @db.Decimal(10, 2)
+  hoistSpeed   Decimal  @map("hoist_speed") @db.Decimal(10, 2)
+  trolleySpeed Decimal  @map("trolley_speed") @db.Decimal(10, 2)
+  gantrySpeed  Decimal? @map("gantry_speed") @db.Decimal(10, 2)
+
+  // Spreader
+  spreaderType String @map("spreader_type") @db.VarChar(20)
+
+  // Status
+  status          String  @default("available") @db.VarChar(20)
+  currentBerthId  String? @map("current_berth_id") @db.Uuid
+  currentVesselId String? @map("current_vessel_id") @db.Uuid
+  currentBay      Int?    @map("current_bay")
+
+  // Productivity
+  movesPerHour Int? @map("moves_per_hour")
+  movesToday   Int? @map("moves_today")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@unique([facilityId, craneNumber])
+  @@index([facilityId])
+  @@map("quay_cranes")
+}
+
+model VesselStowPlan {
+  id            String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId      String @map("tenant_id")
+  facilityId    String @map("facility_id") @db.Uuid
+  vesselVisitId String @map("vessel_visit_id") @db.Uuid
+
+  version Int    @default(1)
+  status  String @default("draft") @db.VarChar(20)
+
+  // Summary
+  totalDischarge Int @default(0) @map("total_discharge")
+  totalLoad      Int @default(0) @map("total_load")
+  totalRestow    Int @default(0) @map("total_restow")
+
+  // Plan data
+  bays Json @default("[]") // BayPlan[]
+
+  // Audit
+  createdAt  DateTime  @default(now()) @map("created_at") @db.Timestamptz
+  approvedAt DateTime? @map("approved_at") @db.Timestamptz
+  approvedBy String?   @map("approved_by")
+
+  // Relations
+  vesselVisit VesselVisit @relation(fields: [vesselVisitId], references: [id])
+
+  @@index([vesselVisitId])
+  @@map("vessel_stow_plans")
+}
+
+// =============================================================================
+// EQUIPMENT MANAGEMENT
+// =============================================================================
+
+model Equipment {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  equipmentNumber String @unique @map("equipment_number")
+  type            String @db.VarChar(20) // RTG, RMG, REACH_STACKER, etc.
+  status          String @default("available") @db.VarChar(20)
+
+  // Details
+  make               String
+  model              String
+  yearOfManufacture  Int     @map("year_of_manufacture")
+  serialNumber       String? @map("serial_number")
+  registrationNumber String? @map("registration_number")
+
+  // Capabilities
+  liftCapacity    Decimal  @map("lift_capacity") @db.Decimal(10, 2) // tons
+  maxReach        Decimal? @map("max_reach") @db.Decimal(10, 2)
+  maxStack        Int?     @map("max_stack")
+  maxLiftHeight   Decimal? @map("max_lift_height") @db.Decimal(10, 2)
+  spreaderType    String?  @map("spreader_type") @db.VarChar(20)
+  canHandleReefer Boolean  @default(false) @map("can_handle_reefer")
+  canHandleHazmat Boolean  @default(false) @map("can_handle_hazmat")
+  canHandleOOG    Boolean  @default(false) @map("can_handle_oog")
+
+  // Power
+  fuelType         String   @map("fuel_type") @db.VarChar(10)
+  fuelCapacity     Decimal? @map("fuel_capacity") @db.Decimal(10, 2)
+  currentFuelLevel Decimal? @map("current_fuel_level") @db.Decimal(5, 2)
+
+  // Telematics
+  telematics Json? // EquipmentTelematics
+
+  // Assignment
+  assignedZone       String? @map("assigned_zone") @db.Uuid
+  currentOperatorId  String? @map("current_operator_id") @db.Uuid
+  currentWorkOrderId String? @map("current_work_order_id") @db.Uuid
+
+  // Maintenance
+  lastServiceDate     DateTime? @map("last_service_date") @db.Timestamptz
+  nextServiceDue      DateTime? @map("next_service_due") @db.Timestamptz
+  engineHours         Decimal   @default(0) @map("engine_hours") @db.Decimal(10, 2)
+  odometer            Decimal?  @db.Decimal(10, 2)
+  maintenanceSchedule Json      @default("[]") @map("maintenance_schedule")
+  certifications      Json      @default("[]")
+
+  // Checklist
+  lastPreTripInspection     DateTime? @map("last_pre_trip_inspection") @db.Timestamptz
+  preShiftChecklistRequired Boolean   @default(true) @map("pre_shift_checklist_required")
+
+  notes String?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility    Facility              @relation(fields: [facilityId], references: [id])
+  assignments EquipmentAssignment[]
+  maintenance MaintenanceRecord[]
+  checklists  PreShiftChecklist[]
+
+  @@index([facilityId])
+  @@index([type])
+  @@index([status])
+  @@map("equipment")
+}
+
+model EquipmentAssignment {
+  id          String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  equipmentId String  @map("equipment_id") @db.Uuid
+  workOrderId String? @map("work_order_id") @db.Uuid
+  operatorId  String? @map("operator_id") @db.Uuid
+
+  assignmentType String  @map("assignment_type") @db.VarChar(20)
+  referenceId    String? @map("reference_id") @db.Uuid
+
+  startTime DateTime  @map("start_time") @db.Timestamptz
+  endTime   DateTime? @map("end_time") @db.Timestamptz
+  status    String    @default("active") @db.VarChar(20)
+
+  // Metrics
+  movesCompleted Int?     @map("moves_completed")
+  hoursWorked    Decimal? @map("hours_worked") @db.Decimal(8, 2)
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  equipment Equipment @relation(fields: [equipmentId], references: [id])
+
+  @@index([equipmentId])
+  @@index([status])
+  @@map("equipment_assignments")
+}
+
+model MaintenanceRecord {
+  id              String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId        String @map("tenant_id")
+  facilityId      String @map("facility_id") @db.Uuid
+  equipmentId     String @map("equipment_id") @db.Uuid
+  type            String @db.VarChar(20) // preventive, corrective, breakdown, inspection
+  maintenanceType String @map("maintenance_type") @db.VarChar(30)
+
+  // Status
+  status String @default("scheduled") @db.VarChar(20)
+
+  // Timing
+  scheduledDate     DateTime  @map("scheduled_date") @db.Timestamptz
+  startedAt         DateTime? @map("started_at") @db.Timestamptz
+  completedAt       DateTime? @map("completed_at") @db.Timestamptz
+  estimatedDuration Decimal?  @map("estimated_duration") @db.Decimal(8, 2) // hours
+  actualDuration    Decimal?  @map("actual_duration") @db.Decimal(8, 2)
+
+  // Work
+  description   String
+  workPerformed String? @map("work_performed")
+  partsReplaced Json    @default("[]") @map("parts_replaced")
+
+  // Metrics
+  engineHoursAtService Decimal? @map("engine_hours_at_service") @db.Decimal(10, 2)
+  odometerAtService    Decimal? @map("odometer_at_service") @db.Decimal(10, 2)
+
+  // Costs
+  laborCost Decimal? @map("labor_cost") @db.Decimal(12, 2)
+  partsCost Decimal? @map("parts_cost") @db.Decimal(12, 2)
+  totalCost Decimal? @map("total_cost") @db.Decimal(12, 2)
+
+  // Vendor
+  performedBy   String? @map("performed_by")
+  vendorInvoice String? @map("vendor_invoice")
+
+  // Documents
+  workOrderNumber String?  @map("work_order_number")
+  documents       String[] @default([])
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  equipment Equipment @relation(fields: [equipmentId], references: [id])
+
+  @@index([equipmentId])
+  @@index([status])
+  @@index([scheduledDate])
+  @@map("maintenance_records")
+}
+
+model PreShiftChecklist {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  equipmentId String   @map("equipment_id") @db.Uuid
+  operatorId  String   @map("operator_id") @db.Uuid
+  shiftDate   DateTime @map("shift_date") @db.Date
+  shiftType   String   @map("shift_type") @db.VarChar(10)
+
+  // Items
+  items Json @default("[]") // ChecklistItem[]
+
+  // Result
+  passed       Boolean  @default(false)
+  defectsFound String[] @map("defects_found")
+
+  // Sign-off
+  operatorSignature  String?  @map("operator_signature")
+  supervisorApproval Boolean? @map("supervisor_approval")
+  supervisorId       String?  @map("supervisor_id")
+
+  completedAt DateTime @map("completed_at") @db.Timestamptz
+
+  // Relations
+  equipment Equipment @relation(fields: [equipmentId], references: [id])
+
+  @@index([equipmentId])
+  @@index([shiftDate])
+  @@map("pre_shift_checklists")
+}
+
+// =============================================================================
+// BILLING & REVENUE
+// =============================================================================
+
+model Customer {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  code      String @db.VarChar(20)
+  name      String
+  legalName String @map("legal_name")
+  type      String @db.VarChar(20) // importer, exporter, cha, etc.
+  status    String @default("active") @db.VarChar(20)
+
+  // Registration
+  iecCode   String? @map("iec_code") @db.VarChar(20)
+  gstInfo   Json?   @map("gst_info")
+  panNumber String? @map("pan_number") @db.VarChar(10)
+  cinNumber String? @map("cin_number") @db.VarChar(30)
+
+  // Contact
+  address        Json
+  billingAddress Json?   @map("billing_address")
+  contacts       Json    @default("[]")
+  email          String?
+  phone          String?
+
+  // Banking
+  bankDetails Json? @map("bank_details")
+
+  // Credit
+  creditLimit        Decimal @default(0) @map("credit_limit") @db.Decimal(15, 2)
+  currentOutstanding Decimal @default(0) @map("current_outstanding") @db.Decimal(15, 2)
+  paymentTerms       Int     @default(30) @map("payment_terms")
+  creditStatus       String  @default("good") @map("credit_status") @db.VarChar(10)
+
+  // Preferences
+  preferredCurrency String  @default("INR") @map("preferred_currency") @db.VarChar(3)
+  invoiceEmail      String? @map("invoice_email")
+  invoiceFrequency  String  @default("per_container") @map("invoice_frequency") @db.VarChar(20)
+
+  // Stats
+  rating                 Decimal? @db.Decimal(3, 2)
+  totalContainersHandled Int      @default(0) @map("total_containers_handled")
+  averagePaymentDays     Int?     @map("average_payment_days")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility  @relation(fields: [facilityId], references: [id])
+  invoices Invoice[]
+
+  @@unique([facilityId, code])
+  @@index([facilityId])
+  @@index([type])
+  @@index([iecCode])
+  @@map("customers")
+}
+
+model Tariff {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  tariffCode  String  @map("tariff_code") @db.VarChar(20)
+  name        String
+  description String?
+
+  // Validity
+  effectiveFrom DateTime  @map("effective_from") @db.Date
+  effectiveTo   DateTime? @map("effective_to") @db.Date
+  isActive      Boolean   @default(true) @map("is_active")
+
+  // Applicability
+  applicableContainerSizes String[] @map("applicable_container_sizes")
+  applicableContainerTypes String[] @map("applicable_container_types")
+  applicableCustomerTypes  String[] @map("applicable_customer_types")
+  applicableCustomerIds    String[] @map("applicable_customer_ids") @db.Uuid
+  applicableCargoTypes     String[] @map("applicable_cargo_types")
+
+  // Charges
+  charges Json @default("[]") // TariffCharge[]
+
+  // Terms
+  termsAndConditions String? @map("terms_and_conditions")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@unique([facilityId, tariffCode])
+  @@index([facilityId])
+  @@index([isActive])
+  @@map("tariffs")
+}
+
+model Invoice {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  invoiceNumber String @unique @map("invoice_number")
+  invoiceType   String @map("invoice_type") @db.VarChar(20)
+  status        String @default("draft") @db.VarChar(20)
+
+  // Customer
+  customerId     String  @map("customer_id") @db.Uuid
+  customerCode   String  @map("customer_code")
+  customerName   String  @map("customer_name")
+  customerGstin  String? @map("customer_gstin")
+  billingAddress Json    @map("billing_address")
+
+  // Dates
+  invoiceDate DateTime  @map("invoice_date") @db.Date
+  dueDate     DateTime  @map("due_date") @db.Date
+  periodFrom  DateTime? @map("period_from") @db.Date
+  periodTo    DateTime? @map("period_to") @db.Date
+
+  // Line items
+  lineItems Json @default("[]") @map("line_items") // InvoiceLineItem[]
+
+  // Totals
+  subtotal       Decimal @default(0) @db.Decimal(15, 2)
+  discountAmount Decimal @default(0) @map("discount_amount") @db.Decimal(15, 2)
+  taxableAmount  Decimal @default(0) @map("taxable_amount") @db.Decimal(15, 2)
+  cgst           Decimal @default(0) @db.Decimal(15, 2)
+  sgst           Decimal @default(0) @db.Decimal(15, 2)
+  igst           Decimal @default(0) @db.Decimal(15, 2)
+  totalTax       Decimal @default(0) @map("total_tax") @db.Decimal(15, 2)
+  roundOff       Decimal @default(0) @map("round_off") @db.Decimal(8, 2)
+  totalAmount    Decimal @default(0) @map("total_amount") @db.Decimal(15, 2)
+  currency       String  @default("INR") @db.VarChar(3)
+
+  // Outstanding
+  paidAmount    Decimal @default(0) @map("paid_amount") @db.Decimal(15, 2)
+  balanceAmount Decimal @default(0) @map("balance_amount") @db.Decimal(15, 2)
+
+  // Linked
+  linkedInvoiceId     String? @map("linked_invoice_id") @db.Uuid
+  linkedInvoiceNumber String? @map("linked_invoice_number")
+
+  // References
+  referenceNumbers String[] @map("reference_numbers")
+  poNumber         String?  @map("po_number")
+  paymentTerms     Int      @default(30) @map("payment_terms")
+
+  // Notes
+  notes         String?
+  internalNotes String? @map("internal_notes")
+
+  // PDF
+  pdfUrl String? @map("pdf_url")
+
+  // Approval
+  approvedAt DateTime? @map("approved_at") @db.Timestamptz
+  approvedBy String?   @map("approved_by")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility  @relation(fields: [facilityId], references: [id])
+  customer Customer  @relation(fields: [customerId], references: [id])
+  payments Payment[]
+
+  @@index([facilityId])
+  @@index([customerId])
+  @@index([status])
+  @@index([invoiceDate])
+  @@index([dueDate])
+  @@map("invoices")
+}
+
+model Payment {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  invoiceId   String   @map("invoice_id") @db.Uuid
+  paymentDate DateTime @map("payment_date") @db.Timestamptz
+  amount      Decimal  @db.Decimal(15, 2)
+  currency    String   @default("INR") @db.VarChar(3)
+
+  // Method
+  paymentMethod String  @map("payment_method") @db.VarChar(20)
+  reference     String?
+  chequeNumber  String? @map("cheque_number")
+  bankName      String? @map("bank_name")
+  utrNumber     String? @map("utr_number")
+
+  // Status
+  status String @default("pending") @db.VarChar(20)
+
+  // Notes
+  notes      String?
+  receivedBy String? @map("received_by")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+
+  // Relations
+  invoice Invoice @relation(fields: [invoiceId], references: [id])
+
+  @@index([invoiceId])
+  @@index([status])
+  @@map("payments")
+}
+
+// =============================================================================
+// CUSTOMS & ICEGATE
+// =============================================================================
+
+model BillOfEntry {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  boeNumber String? @unique @map("boe_number")
+  beType    String  @map("be_type") @db.VarChar(30)
+  status    String  @default("draft") @db.VarChar(30)
+
+  // Reference
+  jobNumber       String? @map("job_number")
+  referenceNumber String? @map("reference_number")
+
+  // Importer
+  importerIEC     String  @map("importer_iec") @db.VarChar(20)
+  importerName    String  @map("importer_name")
+  importerGstin   String? @map("importer_gstin") @db.VarChar(20)
+  importerAddress Json    @map("importer_address")
+
+  // CHA
+  chaLicense String? @map("cha_license")
+  chaName    String? @map("cha_name")
+
+  // Import details
+  countryOfOrigin      String @map("country_of_origin")
+  countryOfConsignment String @map("country_of_consignment")
+  portOfLoading        String @map("port_of_loading") @db.VarChar(10)
+  portOfDischarge      String @map("port_of_discharge") @db.VarChar(10)
+  portOfRegistration   String @map("port_of_registration") @db.VarChar(10)
+
+  // Transport
+  transportMode String   @map("transport_mode") @db.VarChar(10)
+  vesselName    String?  @map("vessel_name")
+  voyageNumber  String?  @map("voyage_number")
+  arrivalDate   DateTime @map("arrival_date") @db.Date
+
+  // BL
+  blNumber       String   @map("bl_number") @db.VarChar(50)
+  blDate         DateTime @map("bl_date") @db.Date
+  blType         String   @map("bl_type") @db.VarChar(10)
+  masterBlNumber String?  @map("master_bl_number")
+
+  // IGM
+  igmNumber     String?   @map("igm_number")
+  igmDate       DateTime? @map("igm_date") @db.Date
+  igmLineNumber Int?      @map("igm_line_number")
+
+  // Containers & items
+  containers       Json     @default("[]")
+  totalContainers  Int      @default(0) @map("total_containers")
+  totalPackages    Int      @default(0) @map("total_packages")
+  totalGrossWeight Decimal  @default(0) @map("total_gross_weight") @db.Decimal(12, 2)
+  totalNetWeight   Decimal? @map("total_net_weight") @db.Decimal(12, 2)
+  lineItems        Json     @default("[]") @map("line_items")
+  totalItems       Int      @default(0) @map("total_items")
+
+  // Values
+  invoiceNumber   String?   @map("invoice_number")
+  invoiceDate     DateTime? @map("invoice_date") @db.Date
+  invoiceValue    Decimal   @map("invoice_value") @db.Decimal(15, 2)
+  invoiceCurrency String    @map("invoice_currency") @db.VarChar(3)
+  exchangeRate    Decimal   @map("exchange_rate") @db.Decimal(12, 6)
+  cifValue        Decimal   @map("cif_value") @db.Decimal(15, 2)
+  assessableValue Decimal   @map("assessable_value") @db.Decimal(15, 2)
+  currency        String    @db.VarChar(3)
+
+  // Duties
+  basicDuty      Decimal   @default(0) @map("basic_duty") @db.Decimal(15, 2)
+  additionalDuty Decimal   @default(0) @map("additional_duty") @db.Decimal(15, 2)
+  specialDuty    Decimal   @default(0) @map("special_duty") @db.Decimal(15, 2)
+  igst           Decimal   @default(0) @db.Decimal(15, 2)
+  cess           Decimal   @default(0) @db.Decimal(15, 2)
+  totalDuty      Decimal   @default(0) @map("total_duty") @db.Decimal(15, 2)
+  dutyPaidDate   DateTime? @map("duty_paid_date") @db.Timestamptz
+
+  // ICEGATE
+  icegateRefNumber String?   @map("icegate_ref_number")
+  icegateStatus    String?   @map("icegate_status")
+  submittedAt      DateTime? @map("submitted_at") @db.Timestamptz
+  registeredAt     DateTime? @map("registered_at") @db.Timestamptz
+  assessedAt       DateTime? @map("assessed_at") @db.Timestamptz
+  outOfChargeAt    DateTime? @map("out_of_charge_at") @db.Timestamptz
+
+  // Examination
+  examinationOrdered Boolean @default(false) @map("examination_ordered")
+  examinationId      String? @map("examination_id") @db.Uuid
+
+  // Documents
+  documents Json    @default("[]")
+  remarks   String?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([status])
+  @@index([importerIEC])
+  @@index([blNumber])
+  @@map("bills_of_entry")
+}
+
+model ShippingBill {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  sbNumber String? @unique @map("sb_number")
+  sbType   String  @map("sb_type") @db.VarChar(30)
+  status   String  @default("draft") @db.VarChar(30)
+
+  // Reference
+  jobNumber String? @map("job_number")
+
+  // Exporter
+  exporterIEC     String  @map("exporter_iec") @db.VarChar(20)
+  exporterName    String  @map("exporter_name")
+  exporterGstin   String? @map("exporter_gstin") @db.VarChar(20)
+  exporterAddress Json    @map("exporter_address")
+
+  // CHA
+  chaLicense String? @map("cha_license")
+  chaName    String? @map("cha_name")
+
+  // Buyer
+  buyerName    String @map("buyer_name")
+  buyerAddress Json   @map("buyer_address")
+  buyerCountry String @map("buyer_country")
+
+  // Export details
+  portOfLoading        String @map("port_of_loading") @db.VarChar(10)
+  portOfDischarge      String @map("port_of_discharge") @db.VarChar(10)
+  finalDestination     String @map("final_destination")
+  countryOfDestination String @map("country_of_destination")
+
+  // Invoice
+  invoiceNumber   String   @map("invoice_number")
+  invoiceDate     DateTime @map("invoice_date") @db.Date
+  invoiceValue    Decimal  @map("invoice_value") @db.Decimal(15, 2)
+  invoiceCurrency String   @map("invoice_currency") @db.VarChar(3)
+  exchangeRate    Decimal  @map("exchange_rate") @db.Decimal(12, 6)
+  fobValue        Decimal  @map("fob_value") @db.Decimal(15, 2)
+  currency        String   @db.VarChar(3)
+
+  // Transport
+  transportMode  String  @map("transport_mode") @db.VarChar(10)
+  vesselName     String? @map("vessel_name")
+  voyageNumber   String? @map("voyage_number")
+  rotationNumber String? @map("rotation_number")
+
+  // Containers & items
+  containers       Json     @default("[]")
+  totalContainers  Int      @default(0) @map("total_containers")
+  totalPackages    Int      @default(0) @map("total_packages")
+  totalGrossWeight Decimal  @default(0) @map("total_gross_weight") @db.Decimal(12, 2)
+  totalNetWeight   Decimal? @map("total_net_weight") @db.Decimal(12, 2)
+  lineItems        Json     @default("[]") @map("line_items")
+  totalItems       Int      @default(0) @map("total_items")
+
+  // Incentives
+  drawbackAmount  Decimal? @map("drawback_amount") @db.Decimal(15, 2)
+  drawbackClaimed Boolean? @map("drawback_claimed")
+  rodtep          Boolean? @default(false)
+
+  // LEO
+  letExportDate DateTime? @map("let_export_date") @db.Timestamptz
+  letExportBy   String?   @map("let_export_by")
+
+  // EGM
+  egmNumber     String?   @map("egm_number")
+  egmDate       DateTime? @map("egm_date") @db.Date
+  egmLineNumber Int?      @map("egm_line_number")
+
+  // ICEGATE
+  icegateRefNumber String?   @map("icegate_ref_number")
+  icegateStatus    String?   @map("icegate_status")
+  submittedAt      DateTime? @map("submitted_at") @db.Timestamptz
+  registeredAt     DateTime? @map("registered_at") @db.Timestamptz
+  letExportAt      DateTime? @map("let_export_at") @db.Timestamptz
+
+  // Documents
+  documents Json    @default("[]")
+  remarks   String?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([status])
+  @@index([exporterIEC])
+  @@map("shipping_bills")
+}
+
+model CustomsExamination {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  examinationNumber String? @map("examination_number")
+  examinationType   String  @map("examination_type") @db.VarChar(20)
+  result            String? @db.VarChar(30)
+
+  // Reference
+  documentType   String @map("document_type") @db.VarChar(5) // BOE, SB
+  documentId     String @map("document_id") @db.Uuid
+  documentNumber String @map("document_number")
+
+  // Container
+  containerId     String @map("container_id") @db.Uuid
+  containerNumber String @map("container_number") @db.VarChar(11)
+
+  // Schedule
+  orderedAt     DateTime  @map("ordered_at") @db.Timestamptz
+  orderedBy     String    @map("ordered_by")
+  scheduledDate DateTime? @map("scheduled_date") @db.Timestamptz
+  scheduledSlot String?   @map("scheduled_slot")
+
+  // Execution
+  startedAt              DateTime? @map("started_at") @db.Timestamptz
+  completedAt            DateTime? @map("completed_at") @db.Timestamptz
+  examOfficer            String?   @map("exam_officer")
+  examOfficerDesignation String?   @map("exam_officer_designation")
+  examinationLocation    String?   @map("examination_location")
+
+  // Findings
+  findings      String?
+  discrepancies Json    @default("[]") // ExamDiscrepancy[]
+  photos        Json    @default("[]") // ExamPhoto[]
+
+  // Sample
+  sampleTaken      Boolean @default(false) @map("sample_taken")
+  sampleDetails    String? @map("sample_details")
+  sampleTestResult String? @map("sample_test_result")
+
+  // Re-examination
+  reExaminationRequired Boolean @default(false) @map("re_examination_required")
+  reExaminationReason   String? @map("re_examination_reason")
+  reExaminationId       String? @map("re_examination_id") @db.Uuid
+
+  // Supervisor
+  supervisorApproval Boolean? @map("supervisor_approval")
+  supervisorId       String?  @map("supervisor_id")
+  supervisorRemarks  String?  @map("supervisor_remarks")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([containerId])
+  @@index([documentId])
+  @@map("customs_examinations")
+}
+
+model ICEGATEMessage {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  messageType String @map("message_type") @db.VarChar(20)
+  direction   String @db.VarChar(10) // inbound, outbound
+
+  // Reference
+  referenceNumber String  @map("reference_number")
+  correlationId   String? @map("correlation_id")
+
+  // Content
+  payload    String // EDI or XML
+  parsedData Json?  @map("parsed_data")
+
+  // Status
+  status       String  @default("pending") @db.VarChar(20)
+  errorCode    String? @map("error_code")
+  errorMessage String? @map("error_message")
+
+  // Timestamps
+  sentAt         DateTime? @map("sent_at") @db.Timestamptz
+  acknowledgedAt DateTime? @map("acknowledged_at") @db.Timestamptz
+  processedAt    DateTime? @map("processed_at") @db.Timestamptz
+
+  // Retry
+  retryCount  Int       @default(0) @map("retry_count")
+  nextRetryAt DateTime? @map("next_retry_at") @db.Timestamptz
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([messageType])
+  @@index([direction])
+  @@index([status])
+  @@map("icegate_messages")
+}
+
+model DutyChallan {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  challanNumber  String? @map("challan_number")
+  documentType   String  @map("document_type") @db.VarChar(5)
+  documentId     String  @map("document_id") @db.Uuid
+  documentNumber String  @map("document_number")
+
+  // Amount
+  basicDuty      Decimal  @default(0) @map("basic_duty") @db.Decimal(15, 2)
+  additionalDuty Decimal  @default(0) @map("additional_duty") @db.Decimal(15, 2)
+  igst           Decimal  @default(0) @db.Decimal(15, 2)
+  cess           Decimal  @default(0) @db.Decimal(15, 2)
+  interest       Decimal? @db.Decimal(15, 2)
+  penalty        Decimal? @db.Decimal(15, 2)
+  totalAmount    Decimal  @default(0) @map("total_amount") @db.Decimal(15, 2)
+
+  // Payment
+  status           String  @default("pending") @db.VarChar(20)
+  paymentMode      String? @map("payment_mode") @db.VarChar(10)
+  bankName         String? @map("bank_name")
+  bankRefNumber    String? @map("bank_ref_number")
+  icegateRefNumber String? @map("icegate_ref_number")
+
+  // Timestamps
+  generatedAt    DateTime  @map("generated_at") @db.Timestamptz
+  paidAt         DateTime? @map("paid_at") @db.Timestamptz
+  acknowledgedAt DateTime? @map("acknowledged_at") @db.Timestamptz
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  @@index([documentId])
+  @@index([status])
+  @@map("duty_challans")
+}
+
+// =============================================================================
+// AUDIT & EVENTS
+// =============================================================================
+
+model AuditLog {
+  id         String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String   @map("tenant_id")
+  facilityId String?  @map("facility_id") @db.Uuid
+  entityType String   @map("entity_type") @db.VarChar(50)
+  entityId   String   @map("entity_id") @db.Uuid
+  action     String   @db.VarChar(30) // create, update, delete, status_change
+  userId     String?  @map("user_id")
+  userName   String?  @map("user_name")
+  changes    Json? // { field: { old, new } }
+  metadata   Json?
+  timestamp  DateTime @default(now()) @db.Timestamptz
+
+  @@index([tenantId])
+  @@index([entityType, entityId])
+  @@index([timestamp])
+  @@map("audit_logs")
+}
+
+model EventLog {
+  id            String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId      String   @map("tenant_id")
+  facilityId    String?  @map("facility_id") @db.Uuid
+  eventType     String   @map("event_type") @db.VarChar(100)
+  correlationId String?  @map("correlation_id")
+  payload       Json
+  timestamp     DateTime @default(now()) @db.Timestamptz
+
+  @@index([tenantId])
+  @@index([eventType])
+  @@index([correlationId])
+  @@index([timestamp])
+  @@map("event_logs")
+}
+
+// =============================================================================
+// OPERATIONS (Stuffing / Destuffing / LCL / FCL / CrossDock / Inspection)
+// =============================================================================
+
+model StuffingOperation {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  operationNumber String @unique @map("operation_number")
+  status          String @default("planned") @db.VarChar(20)
+
+  // Container
+  containerId     String @map("container_id") @db.Uuid
+  containerNumber String @map("container_number") @db.VarChar(11)
+
+  // Cargo
+  cargoItems      Json     @default("[]") @map("cargo_items")
+  totalPackages   Int      @default(0) @map("total_packages")
+  totalWeight     Decimal  @default(0) @map("total_weight") @db.Decimal(12, 2)
+  stuffingPercent Decimal? @map("stuffing_percent") @db.Decimal(5, 2)
+
+  // Schedule
+  plannedStart DateTime  @map("planned_start") @db.Timestamptz
+  plannedEnd   DateTime  @map("planned_end") @db.Timestamptz
+  actualStart  DateTime? @map("actual_start") @db.Timestamptz
+  actualEnd    DateTime? @map("actual_end") @db.Timestamptz
+
+  // Resources
+  assignedBay   String? @map("assigned_bay")
+  assignedLabor Int     @default(0) @map("assigned_labor")
+  equipmentUsed Json    @default("[]") @map("equipment_used")
+
+  // Supervision
+  supervisorId String? @map("supervisor_id") @db.Uuid
+  photos       Json    @default("[]")
+  remarks      String?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([status])
+  @@index([containerId])
+  @@map("stuffing_operations")
+}
+
+model DestuffingOperation {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  operationNumber String @unique @map("operation_number")
+  status          String @default("planned") @db.VarChar(20)
+
+  // Container
+  containerId     String @map("container_id") @db.Uuid
+  containerNumber String @map("container_number") @db.VarChar(11)
+
+  // Cargo
+  expectedItems Json  @default("[]") @map("expected_items")
+  receivedItems Json  @default("[]") @map("received_items")
+  totalExpected Int   @default(0) @map("total_expected")
+  totalReceived Int   @default(0) @map("total_received")
+  discrepancies Json  @default("[]")
+  damageReport  Json? @map("damage_report")
+
+  // Schedule
+  plannedStart DateTime  @map("planned_start") @db.Timestamptz
+  plannedEnd   DateTime  @map("planned_end") @db.Timestamptz
+  actualStart  DateTime? @map("actual_start") @db.Timestamptz
+  actualEnd    DateTime? @map("actual_end") @db.Timestamptz
+
+  // Resources
+  assignedBay   String? @map("assigned_bay")
+  assignedLabor Int     @default(0) @map("assigned_labor")
+
+  // Supervision
+  supervisorId String? @map("supervisor_id") @db.Uuid
+  photos       Json    @default("[]")
+  tallySheet   Json?   @map("tally_sheet")
+  remarks      String?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([status])
+  @@index([containerId])
+  @@map("destuffing_operations")
+}
+
+model LCLConsolidation {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  consolidationNumber String @unique @map("consolidation_number")
+  status              String @default("open") @db.VarChar(20)
+
+  // Container
+  containerId     String? @map("container_id") @db.Uuid
+  containerNumber String? @map("container_number") @db.VarChar(11)
+
+  // Consignments
+  consignments      Json    @default("[]")
+  totalConsignments Int     @default(0) @map("total_consignments")
+  totalWeight       Decimal @default(0) @map("total_weight") @db.Decimal(12, 2)
+  totalVolume       Decimal @default(0) @map("total_volume") @db.Decimal(12, 3)
+  capacityUsed      Decimal @default(0) @map("capacity_used") @db.Decimal(5, 2) // percentage
+
+  // Destination
+  destination     String
+  portOfDischarge String @map("port_of_discharge") @db.VarChar(10)
+
+  // Timing
+  cutoffDate DateTime  @map("cutoff_date") @db.Timestamptz
+  closedAt   DateTime? @map("closed_at") @db.Timestamptz
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([status])
+  @@map("lcl_consolidations")
+}
+
+model FCLOperation {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  operationNumber String @unique @map("operation_number")
+  operationType   String @map("operation_type") @db.VarChar(20) // receive, deliver, transfer
+  status          String @default("pending") @db.VarChar(20)
+
+  // Container
+  containerId     String @map("container_id") @db.Uuid
+  containerNumber String @map("container_number") @db.VarChar(11)
+
+  // Transport
+  transportMode String  @map("transport_mode") @db.VarChar(10) // road, rail, vessel
+  vehicleNumber String? @map("vehicle_number")
+  bookingRef    String? @map("booking_ref")
+
+  // Documentation
+  blNumber            String? @map("bl_number")
+  deliveryOrderNumber String? @map("delivery_order_number")
+
+  // Timing
+  scheduledAt DateTime  @map("scheduled_at") @db.Timestamptz
+  startedAt   DateTime? @map("started_at") @db.Timestamptz
+  completedAt DateTime? @map("completed_at") @db.Timestamptz
+
+  remarks String?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([status])
+  @@index([containerId])
+  @@map("fcl_operations")
+}
+
+model CrossDockOperation {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  operationNumber String @unique @map("operation_number")
+  status          String @default("pending") @db.VarChar(20)
+
+  // Inbound
+  inboundContainerId     String? @map("inbound_container_id") @db.Uuid
+  inboundContainerNumber String? @map("inbound_container_number") @db.VarChar(11)
+  inboundTransportMode   String  @map("inbound_transport_mode") @db.VarChar(10)
+
+  // Outbound
+  outboundContainerId     String? @map("outbound_container_id") @db.Uuid
+  outboundContainerNumber String? @map("outbound_container_number") @db.VarChar(11)
+  outboundTransportMode   String  @map("outbound_transport_mode") @db.VarChar(10)
+
+  // Cargo
+  cargoItems  Json    @default("[]") @map("cargo_items")
+  totalWeight Decimal @default(0) @map("total_weight") @db.Decimal(12, 2)
+
+  // Timing
+  receivedAt   DateTime? @map("received_at") @db.Timestamptz
+  sortedAt     DateTime? @map("sorted_at") @db.Timestamptz
+  dispatchedAt DateTime? @map("dispatched_at") @db.Timestamptz
+
+  remarks String?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([status])
+  @@map("cross_dock_operations")
+}
+
+model Inspection {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  inspectionNumber String @unique @map("inspection_number")
+  inspectionType   String @map("inspection_type") @db.VarChar(30)
+  status           String @default("scheduled") @db.VarChar(20)
+
+  // Target
+  containerId     String @map("container_id") @db.Uuid
+  containerNumber String @map("container_number") @db.VarChar(11)
+
+  // Execution
+  inspectorId   String?   @map("inspector_id") @db.Uuid
+  inspectorName String?   @map("inspector_name")
+  scheduledAt   DateTime  @map("scheduled_at") @db.Timestamptz
+  startedAt     DateTime? @map("started_at") @db.Timestamptz
+  completedAt   DateTime? @map("completed_at") @db.Timestamptz
+
+  // Results
+  result         String?  @db.VarChar(20)
+  findings       Json     @default("[]")
+  photos         Json     @default("[]")
+  checklistItems Json     @default("[]") @map("checklist_items")
+  overallScore   Decimal? @map("overall_score") @db.Decimal(5, 2)
+
+  remarks          String?
+  followUpRequired Boolean @default(false) @map("follow_up_required")
+  followUpNotes    String? @map("follow_up_notes")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([status])
+  @@index([containerId])
+  @@map("inspections")
+}
+
+// =============================================================================
+// DOCUMENTATION (Bill of Lading / Delivery Order / EDI / Manifest)
+// =============================================================================
+
+model BillOfLading {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  blNumber String @unique @map("bl_number")
+  blType   String @map("bl_type") @db.VarChar(20) // master, house, express
+  status   String @default("draft") @db.VarChar(20)
+
+  // Parties
+  shipperId     String @map("shipper_id")
+  shipperName   String @map("shipper_name")
+  consigneeId   String @map("consignee_id")
+  consigneeName String @map("consignee_name")
+  notifyParty   Json?  @map("notify_party")
+
+  // Transport
+  vesselName      String? @map("vessel_name")
+  voyageNumber    String? @map("voyage_number")
+  portOfLoading   String  @map("port_of_loading") @db.VarChar(10)
+  portOfDischarge String  @map("port_of_discharge") @db.VarChar(10)
+  placeOfReceipt  String? @map("place_of_receipt")
+  placeOfDelivery String? @map("place_of_delivery")
+
+  // Cargo
+  containers    Json    @default("[]")
+  totalPackages Int     @default(0) @map("total_packages")
+  grossWeight   Decimal @default(0) @map("gross_weight") @db.Decimal(12, 2)
+  measurement   Decimal @default(0) @db.Decimal(12, 3) // CBM
+  description   String?
+
+  // Freight
+  freightTerms  String   @map("freight_terms") @db.VarChar(10) // prepaid, collect
+  freightAmount Decimal? @map("freight_amount") @db.Decimal(15, 2)
+
+  // Dates
+  issuedAt       DateTime? @map("issued_at") @db.Timestamptz
+  surrenderedAt  DateTime? @map("surrendered_at") @db.Timestamptz
+  accomplishedAt DateTime? @map("accomplished_at") @db.Timestamptz
+
+  // Original copies
+  originalCount Int @default(3) @map("original_count")
+
+  remarks String?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([status])
+  @@map("bills_of_lading")
+}
+
+model DeliveryOrder {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  doNumber String @unique @map("do_number")
+  status   String @default("draft") @db.VarChar(20)
+
+  // Reference
+  blNumber  String  @map("bl_number")
+  boeNumber String? @map("boe_number")
+
+  // Parties
+  consigneeId   String  @map("consignee_id")
+  consigneeName String  @map("consignee_name")
+  chaId         String? @map("cha_id")
+  chaName       String? @map("cha_name")
+
+  // Containers
+  containers      Json @default("[]")
+  totalContainers Int  @default(0) @map("total_containers")
+
+  // Validity
+  issuedAt  DateTime @map("issued_at") @db.Timestamptz
+  validFrom DateTime @map("valid_from") @db.Timestamptz
+  validTo   DateTime @map("valid_to") @db.Timestamptz
+
+  // Clearance
+  chargesCleared Boolean   @default(false) @map("charges_cleared")
+  customsCleared Boolean   @default(false) @map("customs_cleared")
+  verifiedAt     DateTime? @map("verified_at") @db.Timestamptz
+  verifiedBy     String?   @map("verified_by")
+
+  // Delivery
+  deliveredAt    DateTime? @map("delivered_at") @db.Timestamptz
+  deliveredTo    String?   @map("delivered_to")
+  gatePassNumber String?   @map("gate_pass_number")
+
+  remarks String?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([status])
+  @@index([blNumber])
+  @@map("delivery_orders")
+}
+
+model EDIMessage {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  messageId   String @unique @map("message_id")
+  messageType String @map("message_type") @db.VarChar(20) // COPARN, CODECO, BAPLIE, IFTMIN, etc.
+  direction   String @db.VarChar(10) // inbound, outbound
+  status      String @default("pending") @db.VarChar(20)
+
+  // Sender/Receiver
+  senderId     String @map("sender_id")
+  senderName   String @map("sender_name")
+  receiverId   String @map("receiver_id")
+  receiverName String @map("receiver_name")
+
+  // Content
+  rawContent  String @map("raw_content")
+  parsedData  Json?  @map("parsed_data")
+  ediStandard String @map("edi_standard") @db.VarChar(10) // EDIFACT, X12, XML
+
+  // Processing
+  sentAt         DateTime? @map("sent_at") @db.Timestamptz
+  receivedAt     DateTime? @map("received_at") @db.Timestamptz
+  acknowledgedAt DateTime? @map("acknowledged_at") @db.Timestamptz
+  processedAt    DateTime? @map("processed_at") @db.Timestamptz
+
+  // Error
+  errorCode    String? @map("error_code")
+  errorMessage String? @map("error_message")
+
+  // Retry
+  retryCount  Int       @default(0) @map("retry_count")
+  nextRetryAt DateTime? @map("next_retry_at") @db.Timestamptz
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([messageType])
+  @@index([direction])
+  @@index([status])
+  @@map("edi_messages")
+}
+
+model Manifest {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  manifestNumber String @unique @map("manifest_number")
+  manifestType   String @map("manifest_type") @db.VarChar(10) // IGM, EGM, import, export
+  status         String @default("draft") @db.VarChar(20)
+
+  // Transport
+  vesselName   String? @map("vessel_name")
+  voyageNumber String? @map("voyage_number")
+  trainNumber  String? @map("train_number")
+
+  // Route
+  portOfLoading   String @map("port_of_loading") @db.VarChar(10)
+  portOfDischarge String @map("port_of_discharge") @db.VarChar(10)
+
+  // Items
+  items         Json    @default("[]")
+  totalItems    Int     @default(0) @map("total_items")
+  totalPackages Int     @default(0) @map("total_packages")
+  totalWeight   Decimal @default(0) @map("total_weight") @db.Decimal(12, 2)
+
+  // Filing
+  filedAt   DateTime? @map("filed_at") @db.Timestamptz
+  filedBy   String?   @map("filed_by")
+  amendedAt DateTime? @map("amended_at") @db.Timestamptz
+  closedAt  DateTime? @map("closed_at") @db.Timestamptz
+
+  remarks String?
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([manifestType])
+  @@index([status])
+  @@map("manifests")
+}
+
+// =============================================================================
+// HARDWARE (RFID / OCR / Weighbridge / Scanners / Printers)
+// =============================================================================
+
+model HardwareDevice {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  deviceCode String @unique @map("device_code")
+  deviceType String @map("device_type") @db.VarChar(20) // rfid_reader, ocr_camera, weighbridge, etc.
+  name       String
+  status     String @default("offline") @db.VarChar(20)
+
+  // Location
+  locationId          String? @map("location_id")
+  locationDescription String? @map("location_description")
+  gateId              String? @map("gate_id") @db.Uuid
+  laneId              String? @map("lane_id") @db.Uuid
+
+  // Connection
+  ipAddress  String? @map("ip_address")
+  port       Int?
+  protocol   String? @db.VarChar(10) // tcp, udp, http, mqtt, modbus, serial
+  serialPort String? @map("serial_port")
+  baudRate   Int?    @map("baud_rate")
+
+  // Device info
+  manufacturer    String?
+  model           String?
+  firmwareVersion String? @map("firmware_version")
+  serialNumber    String? @map("serial_number")
+
+  // Monitoring
+  lastHeartbeat DateTime? @map("last_heartbeat") @db.Timestamptz
+  lastReadTime  DateTime? @map("last_read_time") @db.Timestamptz
+  totalReads    Int       @default(0) @map("total_reads")
+  errorCount    Int       @default(0) @map("error_count")
+  uptimePercent Decimal?  @map("uptime_percent") @db.Decimal(5, 2)
+
+  // Calibration
+  lastCalibrationDate    DateTime? @map("last_calibration_date") @db.Timestamptz
+  nextCalibrationDue     DateTime? @map("next_calibration_due") @db.Timestamptz
+  calibrationCertificate String?   @map("calibration_certificate")
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility   Facility          @relation(fields: [facilityId], references: [id])
+  rfidReads  RFIDRead[]
+  ocrReads   OCRRead[]
+  weighReads WeighbridgeRead[]
+  scanReads  ScanRead[]
+  printJobs  PrintJob[]
+
+  @@index([facilityId])
+  @@index([deviceType])
+  @@index([status])
+  @@map("hardware_devices")
+}
+
+model RFIDRead {
+  id       String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  deviceId String   @map("device_id") @db.Uuid
+  tagId    String   @map("tag_id")
+  tagType  String   @map("tag_type") @db.VarChar(20) // container, vehicle, equipment, personnel, seal
+  readTime DateTime @map("read_time") @db.Timestamptz
+
+  // Signal
+  frequency   String? @db.VarChar(5) // lf, hf, uhf, shf
+  rssi        Int? // signal strength dBm
+  antennaPort Int?    @map("antenna_port")
+
+  // Resolved entity
+  entityType   String? @map("entity_type") @db.VarChar(20)
+  entityId     String? @map("entity_id") @db.Uuid
+  entityNumber String? @map("entity_number")
+
+  // Gate context
+  gateId    String? @map("gate_id") @db.Uuid
+  laneId    String? @map("lane_id") @db.Uuid
+  direction String? @db.VarChar(5) // in, out
+
+  metadata Json?
+
+  // Relations
+  device HardwareDevice @relation(fields: [deviceId], references: [id])
+
+  @@index([deviceId])
+  @@index([readTime])
+  @@index([tagId])
+  @@map("rfid_reads")
+}
+
+model OCRRead {
+  id           String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  deviceId     String   @map("device_id") @db.Uuid
+  captureType  String   @map("capture_type") @db.VarChar(20) // container_number, license_plate, etc.
+  capturedText String   @map("captured_text")
+  confidence   Decimal  @db.Decimal(5, 2) // 0-100
+  readTime     DateTime @map("read_time") @db.Timestamptz
+
+  // Image
+  imageUrl    String? @map("image_url")
+  imageWidth  Int?    @map("image_width")
+  imageHeight Int?    @map("image_height")
+  boundingBox Json?   @map("bounding_box")
+
+  // Validation
+  validated     Boolean   @default(false)
+  validatedText String?   @map("validated_text")
+  validatedBy   String?   @map("validated_by")
+  validatedAt   DateTime? @map("validated_at") @db.Timestamptz
+
+  // Context
+  gateId        String? @map("gate_id") @db.Uuid
+  laneId        String? @map("lane_id") @db.Uuid
+  transactionId String? @map("transaction_id") @db.Uuid
+
+  metadata Json?
+
+  // Relations
+  device HardwareDevice @relation(fields: [deviceId], references: [id])
+
+  @@index([deviceId])
+  @@index([readTime])
+  @@index([captureType])
+  @@map("ocr_reads")
+}
+
+model WeighbridgeRead {
+  id       String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  deviceId String   @map("device_id") @db.Uuid
+  readType String   @map("read_type") @db.VarChar(10) // gross, tare, net
+  weight   Decimal  @db.Decimal(12, 2) // kg
+  unit     String   @default("kg") @db.VarChar(5)
+  stable   Boolean  @default(false)
+  readTime DateTime @map("read_time") @db.Timestamptz
+
+  // Vehicle
+  vehicleNumber   String? @map("vehicle_number")
+  containerNumber String? @map("container_number") @db.VarChar(11)
+
+  // Transaction
+  transactionId String? @map("transaction_id") @db.Uuid
+  gateId        String? @map("gate_id") @db.Uuid
+
+  // Overweight check
+  maxAllowed       Decimal? @map("max_allowed") @db.Decimal(12, 2)
+  overweight       Boolean  @default(false)
+  overweightAmount Decimal? @map("overweight_amount") @db.Decimal(12, 2)
+
+  // Calibration
+  calibrationValid Boolean  @default(true) @map("calibration_valid")
+  zeroDrift        Decimal? @map("zero_drift") @db.Decimal(8, 2)
+
+  metadata Json?
+
+  // Relations
+  device HardwareDevice @relation(fields: [deviceId], references: [id])
+
+  @@index([deviceId])
+  @@index([readTime])
+  @@map("weighbridge_reads")
+}
+
+model ScanRead {
+  id       String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  deviceId String   @map("device_id") @db.Uuid
+  scanType String   @map("scan_type") @db.VarChar(20) // barcode_1d, barcode_2d, qr, datamatrix
+  format   String?  @db.VarChar(20) // code128, qr, pdf417, etc.
+  data     String
+  readTime DateTime @map("read_time") @db.Timestamptz
+
+  // Context
+  entityType  String? @map("entity_type")
+  entityId    String? @map("entity_id") @db.Uuid
+  operationId String? @map("operation_id") @db.Uuid
+
+  metadata Json?
+
+  // Relations
+  device HardwareDevice @relation(fields: [deviceId], references: [id])
+
+  @@index([deviceId])
+  @@index([readTime])
+  @@map("scan_reads")
+}
+
+model PrintJob {
+  id       String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  deviceId String @map("device_id") @db.Uuid
+  jobType  String @map("job_type") @db.VarChar(20) // container_label, gate_pass, delivery_order, etc.
+  status   String @default("queued") @db.VarChar(20)
+
+  // Content
+  templateId  String? @map("template_id")
+  data        Json?
+  documentUrl String? @map("document_url")
+
+  // Output
+  copies      Int     @default(1)
+  pageSize    String? @map("page_size")
+  orientation String? @db.VarChar(10) // portrait, landscape
+
+  // Timing
+  queuedAt    DateTime  @map("queued_at") @db.Timestamptz
+  startedAt   DateTime? @map("started_at") @db.Timestamptz
+  completedAt DateTime? @map("completed_at") @db.Timestamptz
+
+  failureReason String? @map("failure_reason")
+  printedBy     String? @map("printed_by")
+
+  metadata Json?
+
+  // Relations
+  device HardwareDevice @relation(fields: [deviceId], references: [id])
+
+  @@index([deviceId])
+  @@index([status])
+  @@map("print_jobs")
+}
+
+// =============================================================================
+// IoT (Sensors / Reefer Monitoring / GPS / Environmental)
+// =============================================================================
+
+model IoTSensor {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  sensorCode String @unique @map("sensor_code")
+  sensorType String @map("sensor_type") @db.VarChar(30) // temperature, humidity, pressure, motion, door, smoke, etc.
+  status     String @default("inactive") @db.VarChar(20)
+
+  // Location
+  mountedOn     String? @map("mounted_on") // container_id, equipment_id, zone_id
+  mountedOnType String? @map("mounted_on_type") @db.VarChar(20)
+  locationDesc  String? @map("location_desc")
+
+  // Configuration
+  readingInterval Int    @default(60) @map("reading_interval") // seconds
+  thresholds      Json   @default("{}") // min, max, alertThreshold
+  unit            String @db.VarChar(10)
+
+  // Battery
+  batteryLevel      Decimal?  @map("battery_level") @db.Decimal(5, 2)
+  batteryVoltage    Decimal?  @map("battery_voltage") @db.Decimal(5, 3)
+  lastBatteryUpdate DateTime? @map("last_battery_update") @db.Timestamptz
+
+  // Communication
+  protocol    String?   @db.VarChar(10) // mqtt, lora, zigbee, bluetooth, wifi
+  deviceEUI   String?   @map("device_eui")
+  lastContact DateTime? @map("last_contact") @db.Timestamptz
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility        @relation(fields: [facilityId], references: [id])
+  readings SensorReading[]
+
+  @@index([facilityId])
+  @@index([sensorType])
+  @@index([status])
+  @@map("iot_sensors")
+}
+
+model SensorReading {
+  id       String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  sensorId String   @map("sensor_id") @db.Uuid
+  value    Decimal  @db.Decimal(12, 4)
+  unit     String   @db.VarChar(10)
+  readTime DateTime @map("read_time") @db.Timestamptz
+
+  // Quality
+  quality   String? @db.VarChar(10) // good, suspect, bad
+  isAlert   Boolean @default(false) @map("is_alert")
+  alertType String? @map("alert_type") @db.VarChar(20)
+
+  metadata Json?
+
+  // Relations
+  sensor IoTSensor @relation(fields: [sensorId], references: [id])
+
+  @@index([sensorId])
+  @@index([readTime])
+  @@index([isAlert])
+  @@map("sensor_readings")
+}
+
+model ReeferProfile {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  containerId     String @map("container_id") @db.Uuid
+  containerNumber String @map("container_number") @db.VarChar(11)
+
+  // Temperature
+  setTemperature  Decimal @map("set_temperature") @db.Decimal(6, 2)
+  minTemperature  Decimal @map("min_temperature") @db.Decimal(6, 2)
+  maxTemperature  Decimal @map("max_temperature") @db.Decimal(6, 2)
+  temperatureUnit String  @default("celsius") @map("temperature_unit") @db.VarChar(10)
+
+  // Ventilation
+  ventilationSetting String?  @map("ventilation_setting") @db.VarChar(20) // open, closed, 25%, 50%, 75%
+  humiditySetting    Decimal? @map("humidity_setting") @db.Decimal(5, 2)
+
+  // Atmosphere
+  o2Level  Decimal? @map("o2_level") @db.Decimal(5, 2)
+  co2Level Decimal? @map("co2_level") @db.Decimal(5, 2)
+
+  // Power
+  pluggedIn   Boolean   @default(false) @map("plugged_in")
+  pluggedAt   DateTime? @map("plugged_at") @db.Timestamptz
+  unpluggedAt DateTime? @map("unplugged_at") @db.Timestamptz
+  powerSource String?   @map("power_source") @db.VarChar(10) // shore, genset
+
+  // Monitoring
+  currentTemperature Decimal?  @map("current_temperature") @db.Decimal(6, 2)
+  currentHumidity    Decimal?  @map("current_humidity") @db.Decimal(5, 2)
+  lastReadingAt      DateTime? @map("last_reading_at") @db.Timestamptz
+
+  // Alarms
+  alarms     Json @default("[]")
+  alarmCount Int  @default(0) @map("alarm_count")
+
+  // Cargo
+  cargoDescription String? @map("cargo_description")
+  cargoType        String? @map("cargo_type") @db.VarChar(30)
+
+  status String @default("active") @db.VarChar(20)
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([containerId])
+  @@index([status])
+  @@map("reefer_profiles")
+}
+
+model GPSTrack {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  entityType String @map("entity_type") @db.VarChar(20) // equipment, vehicle, container
+  entityId   String @map("entity_id") @db.Uuid
+
+  // Position
+  latitude  Decimal  @db.Decimal(10, 7)
+  longitude Decimal  @db.Decimal(10, 7)
+  altitude  Decimal? @db.Decimal(8, 2)
+  speed     Decimal? @db.Decimal(8, 2) // km/h
+  heading   Decimal? @db.Decimal(5, 2) // degrees
+  accuracy  Decimal? @db.Decimal(8, 2) // meters
+
+  timestamp DateTime @db.Timestamptz
+
+  // Geofence
+  insideFacility Boolean @default(true) @map("inside_facility")
+  zoneId         String? @map("zone_id") @db.Uuid
+
+  metadata Json?
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([entityType, entityId])
+  @@index([timestamp])
+  @@map("gps_tracks")
+}
+
+model EnvironmentalZone {
+  id         String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  tenantId   String @map("tenant_id")
+  facilityId String @map("facility_id") @db.Uuid
+
+  zoneCode String @unique @map("zone_code")
+  name     String
+  zoneType String @map("zone_type") @db.VarChar(20) // indoor, outdoor, reefer_yard, hazmat, warehouse
+
+  // Thresholds
+  temperatureMin Decimal? @map("temperature_min") @db.Decimal(6, 2)
+  temperatureMax Decimal? @map("temperature_max") @db.Decimal(6, 2)
+  humidityMin    Decimal? @map("humidity_min") @db.Decimal(5, 2)
+  humidityMax    Decimal? @map("humidity_max") @db.Decimal(5, 2)
+
+  // Current readings
+  currentTemperature Decimal?  @map("current_temperature") @db.Decimal(6, 2)
+  currentHumidity    Decimal?  @map("current_humidity") @db.Decimal(5, 2)
+  lastReadingAt      DateTime? @map("last_reading_at") @db.Timestamptz
+
+  // Sensors
+  attachedSensors String[] @map("attached_sensors") @db.Uuid
+
+  status String @default("active") @db.VarChar(20)
+
+  // Audit
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  // Relations
+  facility Facility @relation(fields: [facilityId], references: [id])
+
+  @@index([facilityId])
+  @@index([zoneType])
+  @@map("environmental_zones")
+}

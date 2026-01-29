@@ -1,0 +1,31 @@
+import { defineConfig } from 'tsup';
+
+export default defineConfig({
+  entry: {
+    index: 'src/index.ts',
+    'config/index': 'src/config/index.ts',
+    'core/index': 'src/core/index.ts',
+    'containers/index': 'src/containers/index.ts',
+    'yard/index': 'src/yard/index.ts',
+    'gate/index': 'src/gate/index.ts',
+    'rail/index': 'src/rail/index.ts',
+    'road/index': 'src/road/index.ts',
+    'waterfront/index': 'src/waterfront/index.ts',
+    'equipment/index': 'src/equipment/index.ts',
+    'billing/index': 'src/billing/index.ts',
+    'customs/index': 'src/customs/index.ts',
+    'analytics/index': 'src/analytics/index.ts',
+    'operations/index': 'src/operations/index.ts',
+    'documentation/index': 'src/documentation/index.ts',
+    'hardware/index': 'src/hardware/index.ts',
+    'iot/index': 'src/iot/index.ts',
+    'api/index': 'src/api/index.ts',
+  },
+  format: ['cjs', 'esm'],
+  dts: true,
+  splitting: false,
+  sourcemap: true,
+  clean: true,
+  treeshake: true,
+  minify: false,
+});
