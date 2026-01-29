@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "ankrICD Mobile",
+    "slug": "ankr-icd-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "ankr-icd",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow ankrICD to access the camera for scanning barcodes and container numbers"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
