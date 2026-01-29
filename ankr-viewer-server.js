@@ -12,6 +12,7 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 const eonClient = require('./ankr-viewer-eon-client');
+const { documentsHomePage, projectDetailPage, documentViewerPage } = require('./ankr-viewer-html');
 
 const app = express();
 const PORT = process.env.PORT || process.env.ANKR_VIEWER_PORT || 3080;
@@ -902,6 +903,144 @@ app.get('/api/eon/stats', async (req, res) => {
     res.json(stats || { error: 'Eon not available' });
   } catch (error) {
     res.json({ error: 'Eon not available' });
+  }
+});
+
+// Helper: find a markdown file by its title (for eon search results that return titles, not paths)
+const _titleCache = new Map(); // title -> filePath, cached for 60s
+let _titleCacheTime = 0;
+function findDocByTitle(root, targetTitle) {
+  // Rebuild cache every 60s
+  if (Date.now() - _titleCacheTime > 60000) {
+    _titleCache.clear();
+    _titleCacheTime = Date.now();
+    function scan(dir) {
+      try {
+        for (const item of fs.readdirSync(dir)) {
+          const fp = path.join(dir, item);
+          const st = fs.statSync(fp);
+          if (st.isDirectory()) { scan(fp); continue; }
+          if (!item.endsWith('.md')) continue;
+          try {
+            const content = fs.readFileSync(fp, 'utf-8');
+            const parsed = matter(content);
+            const title = (parsed.data.title || item.replace('.md', '')).toLowerCase();
+            _titleCache.set(title, fp);
+            // Also index by normalized title (strip special chars)
+            _titleCache.set(title.replace(/[^\w\s-]/g, '').replace(/\s+/g, ' ').trim(), fp);
+            // Also index by filename without extension
+            _titleCache.set(item.replace('.md', '').toLowerCase(), fp);
+          } catch(e) {}
+        }
+      } catch(e) {}
+    }
+    scan(root);
+  }
+  // Try exact match first, then normalized
+  if (_titleCache.has(targetTitle)) return _titleCache.get(targetTitle);
+  // Normalize: strip emojis, special chars, extra spaces
+  const normalized = targetTitle.replace(/[^\w\s-]/g, '').replace(/\s+/g, ' ').trim();
+  if (_titleCache.has(normalized)) return _titleCache.get(normalized);
+  // Partial match: find title containing the search term
+  for (const [key, val] of _titleCache) {
+    if (key.includes(targetTitle) || targetTitle.includes(key)) return val;
+  }
+  return null;
+}
+
+// ============================================
+// HTML PAGES — Document Portal
+// ============================================
+
+// Redirect root to docs portal
+app.get('/', (req, res) => res.redirect('/project/documents/'));
+
+// Internal helper: fetch JSON from own API
+function selfFetch(apiPath) {
+  return new Promise((resolve) => {
+    const http = require('http');
+    http.get(`http://localhost:${PORT}${apiPath}`, (resp) => {
+      let body = '';
+      resp.on('data', c => body += c);
+      resp.on('end', () => { try { resolve(JSON.parse(body)); } catch(e) { resolve(null); } });
+    }).on('error', () => resolve(null));
+  });
+}
+
+// Documents Home: /project/documents/
+app.get('/project/documents/', async (req, res) => {
+  try {
+    const projects = (await selfFetch('/api/projects')) || [];
+    res.send(documentsHomePage(projects));
+  } catch (err) {
+    res.send(documentsHomePage([]));
+  }
+});
+
+// Project Detail: /project/documents/:id
+app.get('/project/documents/:id', async (req, res) => {
+  try {
+    const projects = (await selfFetch('/api/projects')) || [];
+    const project = projects.find(p => p.id === req.params.id);
+    if (!project) {
+      return res.status(404).send(`<html><body style="background:#0a0a0f;color:#fff;font-family:sans-serif;padding:4rem;text-align:center"><h1>Project not found</h1><a href="/project/documents/" style="color:#7c3aed">Back to docs</a></body></html>`);
+    }
+    res.send(projectDetailPage(project, projects.slice(0, 6)));
+  } catch (err) {
+    res.status(500).send('Error loading project');
+  }
+});
+
+// Document Viewer: /view/...
+// Use middleware-style to capture any path including slashes
+app.use('/view', async (req, res, next) => {
+  if (req.method !== 'GET') return next();
+  try {
+    const docPath = decodeURIComponent(req.path.startsWith('/') ? req.path.slice(1) : req.path);
+    if (!docPath) return next();
+    const fullPath = path.join(DOCS_ROOT, docPath);
+
+    if (!fullPath.startsWith(DOCS_ROOT)) {
+      return res.status(403).send('Forbidden');
+    }
+
+    // Resolve file: try direct path, .md extension, or title-based search
+    let resolvedPath = fullPath;
+    if (!fs.existsSync(resolvedPath) && !path.extname(resolvedPath)) {
+      resolvedPath = fullPath + '.md';
+    }
+    // If still not found, search by title across all .md files
+    if (!fs.existsSync(resolvedPath)) {
+      const target = docPath.toLowerCase().replace(/\.md$/, '');
+      resolvedPath = findDocByTitle(DOCS_ROOT, target);
+    }
+    if (!resolvedPath || !fs.existsSync(resolvedPath)) {
+      return res.status(404).send(`<html><body style="background:#0a0a0f;color:#fff;font-family:sans-serif;padding:4rem;text-align:center"><h1>Document not found</h1><p style="color:#666">${docPath.replace(/</g,'&lt;')}</p><a href="/project/documents/" style="color:#7c3aed">Back to docs</a></body></html>`);
+    }
+
+    const content = fs.readFileSync(resolvedPath, 'utf-8');
+    const parsed = matter(content);
+    const fileName = path.basename(resolvedPath);
+
+    const doc = {
+      title: parsed.data.title || fileName.replace('.md', ''),
+      content: parsed.content,
+      frontmatter: parsed.data,
+      fileName,
+      path: docPath,
+    };
+
+    // Fetch related docs
+    let relatedDocs = [];
+    try {
+      const relData = await selfFetch(`/api/search/related?path=${encodeURIComponent(docPath)}&limit=5`);
+      relatedDocs = relData?.results || [];
+    } catch(e) {}
+
+    res.send(documentViewerPage(doc, relatedDocs));
+  } catch (err) {
+    console.error('Error rendering doc:', err);
+    res.status(500).send('Error loading document');
   }
 });
 
