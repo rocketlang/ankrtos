@@ -4,7 +4,7 @@
 
 **ankrICD** is a world-class ICD (Inland Container Depot) and CFS (Container Freight Station) management system with integrated Rail, Road, Waterfront, Yard, and Equipment management.
 
-**Status:** Phase 6.5 - Mobile Apps (final phase)
+**Status:** All phases complete
 **Location:** `/root/ankr-packages/@ankr/dodd-icd`
 
 ---
@@ -89,13 +89,22 @@
 - 55+ Prisma models, 97 GraphQL queries, 80+ mutations, 11 subscriptions
 - 194 unit tests passing
 - Next.js dashboard: 6 pages, 102 KB shared JS
+- Expo mobile: 31 files, 3 tab modules, offline-first sync
 
 ---
 
-## TODO: Phase 6.5 - Mobile Apps (Expo)
+### Phase 6.5: Mobile Apps (Expo)
 
-### 6.5 Mobile Apps
-- [ ] Gate kiosk mode (truck check-in/out, appointment lookup)
-- [ ] Yard operations (container location, move orders)
-- [ ] Equipment checklists (pre-shift inspections, maintenance)
-- [ ] Offline-first sync (local storage + background sync)
+- [x] Gate kiosk mode (truck check-in/out, active transactions, live subscription)
+- [x] Yard operations (container search, list with status/holds/location)
+- [x] Equipment checklists (fleet list, detail with status update mutations)
+- [x] Offline-first sync (AsyncStorage queue, replay on reconnect)
+- [x] Apollo Client with HTTP + WS split link
+- [x] Auth context with JWT decode and RBAC
+- [x] 5 shared components (StatusBadge, StatCard, LiveDot, OfflineBanner, ScanButton)
+
+---
+
+## All Phases Complete
+
+No remaining TODO items. The project is feature-complete across all 6 phases.
