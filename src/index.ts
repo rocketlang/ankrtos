@@ -28,6 +28,9 @@ export * from './config';
 // Core Event System
 export * from './core';
 
+// Database & Repository Layer
+export * from './db';
+
 // Type Definitions
 export * from './types';
 

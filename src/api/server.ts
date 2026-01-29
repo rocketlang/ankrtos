@@ -17,6 +17,9 @@ import websocket from '@fastify/websocket';
 import { typeDefs } from './schema/typeDefs';
 import { resolvers } from './resolvers';
 import { VERSION } from '../index';
+import authPlugin from './auth/plugin';
+import type { AuthConfig } from './auth/types';
+import { initEventBridge } from './subscriptions/event-bridge';
 
 // -----------------------------------------------------------------------------
 // Server Configuration
@@ -32,11 +35,13 @@ export interface ICDServerOptions {
   };
   graphqlPath?: string;
   subscriptions?: boolean;
+  /** JWT auth configuration — disabled by default */
+  auth?: AuthConfig;
   /** Extract tenantId from request (header, JWT, etc.) */
   tenantExtractor?: (req: FastifyRequest) => string;
 }
 
-const DEFAULT_OPTIONS: Required<ICDServerOptions> = {
+const DEFAULT_OPTIONS: Required<Omit<ICDServerOptions, 'auth'>> & { auth?: AuthConfig } = {
   port: 4070,
   host: '0.0.0.0',
   logger: true,
@@ -73,6 +78,11 @@ export async function buildICDServer(
     credentials: options.cors?.credentials ?? true,
   });
 
+  // -- Auth Plugin (optional, disabled by default) --
+  if (options.auth) {
+    await app.register(authPlugin, { authConfig: options.auth });
+  }
+
   // -- WebSocket (required for subscriptions) --
   if (options.subscriptions) {
     await app.register(websocket);
@@ -86,13 +96,22 @@ export async function buildICDServer(
     path: options.graphqlPath,
     subscription: options.subscriptions
       ? {
-          onConnect: () => ({ tenantId: 'default' }),
+          onConnect: (data: { payload?: { tenantId?: string } }) => ({
+            tenantId: data.payload?.tenantId ?? 'default',
+          }),
         }
       : false,
     context: (req: FastifyRequest) => ({
-      tenantId: options.tenantExtractor(req),
+      tenantId: req.authContext?.tenantId ?? options.tenantExtractor(req),
+      authContext: req.authContext,
     }),
   });
+
+  // -- Event Bridge: ICDEventBus → GraphQL Subscriptions --
+  if (options.subscriptions) {
+    // Mercurius decorates app.graphql at runtime after registration
+    initEventBridge(app as any);
+  }
 
   // -- Health Check (REST) --
   app.get('/health', async () => ({

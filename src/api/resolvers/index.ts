@@ -23,10 +23,13 @@ import { getIoTManager } from '../../iot';
 import { getSystemInfo, VERSION } from '../../index';
 
 import type { MercuriusContext } from 'mercurius';
+import { subscriptionResolvers } from '../subscriptions';
+import type { AuthContext } from '../auth/types';
 
-// Extend context with tenant info
+// Extend context with tenant info and optional auth
 interface GQLContext extends MercuriusContext {
   tenantId?: string;
+  authContext?: AuthContext;
 }
 
 // Helper: extract tenantId from context
@@ -1169,4 +1172,5 @@ const Mutation = {
 export const resolvers = {
   Query,
   Mutation,
+  Subscription: subscriptionResolvers,
 };
