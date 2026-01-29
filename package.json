@@ -7,94 +7,94 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./config": {
+      "types": "./dist/config/index.d.ts",
       "import": "./dist/config/index.mjs",
-      "require": "./dist/config/index.js",
-      "types": "./dist/config/index.d.ts"
+      "require": "./dist/config/index.js"
     },
     "./core": {
+      "types": "./dist/core/index.d.ts",
       "import": "./dist/core/index.mjs",
-      "require": "./dist/core/index.js",
-      "types": "./dist/core/index.d.ts"
+      "require": "./dist/core/index.js"
     },
     "./containers": {
+      "types": "./dist/containers/index.d.ts",
       "import": "./dist/containers/index.mjs",
-      "require": "./dist/containers/index.js",
-      "types": "./dist/containers/index.d.ts"
+      "require": "./dist/containers/index.js"
     },
     "./yard": {
+      "types": "./dist/yard/index.d.ts",
       "import": "./dist/yard/index.mjs",
-      "require": "./dist/yard/index.js",
-      "types": "./dist/yard/index.d.ts"
+      "require": "./dist/yard/index.js"
     },
     "./gate": {
+      "types": "./dist/gate/index.d.ts",
       "import": "./dist/gate/index.mjs",
-      "require": "./dist/gate/index.js",
-      "types": "./dist/gate/index.d.ts"
+      "require": "./dist/gate/index.js"
     },
     "./rail": {
+      "types": "./dist/rail/index.d.ts",
       "import": "./dist/rail/index.mjs",
-      "require": "./dist/rail/index.js",
-      "types": "./dist/rail/index.d.ts"
+      "require": "./dist/rail/index.js"
     },
     "./road": {
+      "types": "./dist/road/index.d.ts",
       "import": "./dist/road/index.mjs",
-      "require": "./dist/road/index.js",
-      "types": "./dist/road/index.d.ts"
+      "require": "./dist/road/index.js"
     },
     "./waterfront": {
+      "types": "./dist/waterfront/index.d.ts",
       "import": "./dist/waterfront/index.mjs",
-      "require": "./dist/waterfront/index.js",
-      "types": "./dist/waterfront/index.d.ts"
+      "require": "./dist/waterfront/index.js"
     },
     "./equipment": {
+      "types": "./dist/equipment/index.d.ts",
       "import": "./dist/equipment/index.mjs",
-      "require": "./dist/equipment/index.js",
-      "types": "./dist/equipment/index.d.ts"
+      "require": "./dist/equipment/index.js"
     },
     "./billing": {
+      "types": "./dist/billing/index.d.ts",
       "import": "./dist/billing/index.mjs",
-      "require": "./dist/billing/index.js",
-      "types": "./dist/billing/index.d.ts"
+      "require": "./dist/billing/index.js"
     },
     "./customs": {
+      "types": "./dist/customs/index.d.ts",
       "import": "./dist/customs/index.mjs",
-      "require": "./dist/customs/index.js",
-      "types": "./dist/customs/index.d.ts"
+      "require": "./dist/customs/index.js"
     },
     "./analytics": {
+      "types": "./dist/analytics/index.d.ts",
       "import": "./dist/analytics/index.mjs",
-      "require": "./dist/analytics/index.js",
-      "types": "./dist/analytics/index.d.ts"
+      "require": "./dist/analytics/index.js"
     },
     "./operations": {
+      "types": "./dist/operations/index.d.ts",
       "import": "./dist/operations/index.mjs",
-      "require": "./dist/operations/index.js",
-      "types": "./dist/operations/index.d.ts"
+      "require": "./dist/operations/index.js"
     },
     "./documentation": {
+      "types": "./dist/documentation/index.d.ts",
       "import": "./dist/documentation/index.mjs",
-      "require": "./dist/documentation/index.js",
-      "types": "./dist/documentation/index.d.ts"
+      "require": "./dist/documentation/index.js"
     },
     "./hardware": {
+      "types": "./dist/hardware/index.d.ts",
       "import": "./dist/hardware/index.mjs",
-      "require": "./dist/hardware/index.js",
-      "types": "./dist/hardware/index.d.ts"
+      "require": "./dist/hardware/index.js"
     },
     "./iot": {
+      "types": "./dist/iot/index.d.ts",
       "import": "./dist/iot/index.mjs",
-      "require": "./dist/iot/index.js",
-      "types": "./dist/iot/index.d.ts"
+      "require": "./dist/iot/index.js"
     },
     "./api": {
+      "types": "./dist/api/index.d.ts",
       "import": "./dist/api/index.mjs",
-      "require": "./dist/api/index.js",
-      "types": "./dist/api/index.d.ts"
+      "require": "./dist/api/index.js"
     }
   },
   "scripts": {
