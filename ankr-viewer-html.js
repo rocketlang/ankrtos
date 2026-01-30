@@ -19,7 +19,7 @@ function htmlHead(title, extra = '') {
 <style>
 *{font-family:'Inter',system-ui,sans-serif}
 code,pre{font-family:'JetBrains Mono','Fira Code',monospace}
-body{background:#0a0a0f;color:#e4e4e7}
+body{background:#0a0a0f;color:#e4e4e7;overflow-x:hidden}
 ::-webkit-scrollbar{width:6px;height:6px}
 ::-webkit-scrollbar-track{background:transparent}
 ::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
@@ -38,14 +38,67 @@ body{background:#0a0a0f;color:#e4e4e7}
 .doc-content pre{background:#111118;border:1px solid #23232d;border-radius:8px;padding:1rem;overflow-x:auto;margin:1rem 0;font-size:.8125rem;line-height:1.6}
 .doc-content pre code{background:none;padding:0;color:#d4d4d8}
 .doc-content blockquote{border-left:3px solid #7c3aed;padding:.5rem 1rem;margin:1rem 0;background:#12121a;border-radius:0 6px 6px 0;color:#a1a1aa}
-.doc-content table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.875rem}
+.doc-content table{display:block;width:100%;border-collapse:collapse;margin:1rem 0;font-size:.875rem;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .doc-content th{background:#16161d;padding:.5rem .75rem;text-align:left;border:1px solid #23232d;font-weight:600;color:#d4d4d8}
 .doc-content td{padding:.5rem .75rem;border:1px solid #23232d;color:#a1a1aa}
-.doc-content a{color:#a78bfa;text-decoration:underline;text-underline-offset:2px}
+.doc-content a{color:#a78bfa;text-decoration:underline;text-underline-offset:2px;word-break:break-word;overflow-wrap:break-word}
 .doc-content a:hover{color:#c4b5fd}
 .doc-content hr{border:none;border-top:1px solid #23232d;margin:1.5rem 0}
 .doc-content img{max-width:100%;border-radius:8px;margin:1rem 0}
 .highlight{background:rgba(124,58,237,0.15);padding:0 2px;border-radius:2px}
+.doc-content{overflow-wrap:break-word;word-wrap:break-word}
+
+/* Callout blocks */
+.callout{border-radius:8px;padding:12px 16px;margin:1rem 0;border-left:4px solid;display:flex;gap:10px;align-items:flex-start}
+.callout-icon{flex-shrink:0;margin-top:2px}
+.callout-note{background:#1e293b;border-color:#3b82f6;color:#93c5fd}
+.callout-warning{background:#2d1f0e;border-color:#f59e0b;color:#fcd34d}
+.callout-tip{background:#0f2d1e;border-color:#22c55e;color:#86efac}
+.callout-important{background:#2d0f1e;border-color:#ef4444;color:#fca5a5}
+
+/* Code copy button */
+.code-block-wrapper{position:relative}
+.code-copy-btn{position:absolute;top:8px;right:8px;padding:4px 8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:6px;color:#aaa;font-size:11px;cursor:pointer;opacity:0;transition:opacity .2s}
+.code-block-wrapper:hover .code-copy-btn{opacity:1}
+.code-copy-btn:hover{background:rgba(255,255,255,0.2);color:#fff}
+.code-lang-badge{position:absolute;top:8px;left:12px;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:.5px}
+
+/* Flashcard flip */
+.flashcard{perspective:1000px;cursor:pointer}
+.flashcard-inner{position:relative;width:100%;min-height:160px;transition:transform .5s;transform-style:preserve-3d}
+.flashcard.flipped .flashcard-inner{transform:rotateY(180deg)}
+.flashcard-front,.flashcard-back{position:absolute;width:100%;min-height:160px;backface-visibility:hidden;border-radius:12px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center}
+.flashcard-front{background:#1a1a2e;border:1px solid #2d2d44}
+.flashcard-back{background:#1e293b;border:1px solid #334155;transform:rotateY(180deg);color:#93c5fd}
+
+/* Mind map tree */
+.mindmap-node{padding:4px 0;cursor:pointer}
+.mindmap-toggle{display:inline-block;width:16px;text-align:center;color:#666;cursor:pointer}
+.mindmap-label{margin-left:4px}
+.mindmap-children{margin-left:20px;border-left:1px solid #2d2d44;padding-left:8px}
+
+/* Light theme overrides */
+html.light body{background:#fafafa;color:#1a1a2e}
+html.light .glass{background:rgba(255,255,255,0.9);border-color:rgba(0,0,0,0.08)}
+html.light .doc-content p{color:#374151}
+html.light .doc-content h1{color:#111827}
+html.light .doc-content h2{color:#1f2937;border-color:#e5e7eb}
+html.light .doc-content h3{color:#374151}
+html.light .doc-content h4{color:#4b5563}
+html.light .doc-content code{background:#f3f4f6;color:#7c3aed}
+html.light .doc-content pre{background:#f8f9fa;border-color:#e5e7eb}
+html.light .doc-content pre code{color:#374151}
+html.light .doc-content blockquote{background:#f0f0ff;border-color:#7c3aed;color:#4b5563}
+html.light .doc-content a{color:#7c3aed}
+html.light .doc-content th{background:#f3f4f6;color:#374151;border-color:#e5e7eb}
+html.light .doc-content td{color:#4b5563;border-color:#e5e7eb}
+html.light .doc-content ul,html.light .doc-content ol,html.light .doc-content li{color:#4b5563}
+html.light nav.sticky{background:rgba(255,255,255,0.9);border-color:#e5e7eb}
+html.light .callout-note{background:#eff6ff;color:#1e40af}
+html.light .callout-warning{background:#fffbeb;color:#92400e}
+html.light .callout-tip{background:#f0fdf4;color:#166534}
+html.light .callout-important{background:#fef2f2;color:#991b1b}
+html.light footer{border-color:#e5e7eb;color:#9ca3af}
 </style>
 ${extra}
 </head>`;
@@ -68,7 +121,7 @@ function navbar(active = '') {
     <div class="flex items-center gap-4">
       <button onclick="document.getElementById('search-modal').classList.remove('hidden');document.getElementById('search-input').focus()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-sm text-gray-400 transition-colors cursor-pointer">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        Search docs...
+        <span class="hidden sm:inline">Search docs...</span>
         <kbd class="hidden sm:inline px-1.5 py-0.5 text-[10px] bg-white/10 rounded ml-2">Ctrl+K</kbd>
       </button>
       <a href="/api/health" target="_blank" class="text-xs text-gray-500 hover:text-gray-400">API</a>
@@ -210,32 +263,80 @@ document.addEventListener('keydown', function(e) {
 // ============================================
 // PAGE: Documents Home (/project/documents/)
 // ============================================
-function documentsHomePage(projects) {
+function documentsHomePage(projects, categories, categoryOrder) {
+  categories = categories || {};
+  categoryOrder = categoryOrder || [];
+
   const featured = projects.filter(p => p.featured);
-  const rest = projects.filter(p => !p.featured);
+  const totalDocs = projects.reduce((s,p) => s + (p.fileCount || 0), 0);
+  const totalProducts = projects.length;
 
-  let projectCards = '';
-  for (const p of featured) {
-    projectCards += projectCard(p, true);
-  }
-  for (const p of rest) {
-    projectCards += projectCard(p, false);
+  // Group non-featured by category
+  const grouped = {};
+  for (const p of projects) {
+    if (p.featured) continue;
+    const cat = p.category || 'infra';
+    if (!grouped[cat]) grouped[cat] = [];
+    grouped[cat].push(p);
   }
 
-  return htmlHead('Documents') + `
+  // Build category sections in order
+  const usedCats = categoryOrder.filter(c => grouped[c] && grouped[c].length > 0);
+  // Add any categories not in the predefined order
+  for (const c of Object.keys(grouped)) {
+    if (!usedCats.includes(c)) usedCats.push(c);
+  }
+
+  // Build category tab buttons
+  const tabButtons = usedCats.map(c => {
+    const meta = categories[c] || {};
+    const label = meta.label || c.charAt(0).toUpperCase() + c.slice(1);
+    const count = (grouped[c] || []).length + (c === usedCats[0] ? 0 : 0); // just category count
+    return `<button onclick="filterCat('${esc(c)}')" data-cat="${esc(c)}" class="cat-tab px-3 py-1.5 text-xs font-medium rounded-full border border-white/10 text-gray-400 hover:text-white hover:border-white/20 transition-all whitespace-nowrap">${esc(label)} <span class="text-gray-600">${(grouped[c]||[]).length}</span></button>`;
+  }).join('\n      ');
+
+  // Build category sections HTML
+  let categorySections = '';
+  for (const cat of usedCats) {
+    const meta = categories[cat] || {};
+    const label = meta.label || cat.charAt(0).toUpperCase() + cat.slice(1);
+    const color = meta.color || 'gray';
+    const items = grouped[cat] || [];
+
+    categorySections += `
+    <div class="cat-section mb-10" data-category="${esc(cat)}">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-1 h-5 rounded-full bg-${esc(color)}-500"></div>
+        <h2 class="text-sm font-semibold text-gray-300 uppercase tracking-wider">${esc(label)}</h2>
+        <span class="text-xs text-gray-600">${items.length} product${items.length !== 1 ? 's' : ''}</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        ${items.map(p => projectCard(p, false)).join('')}
+      </div>
+    </div>`;
+  }
+
+  // Status legend
+  const statusCounts = {};
+  for (const p of projects) {
+    const s = p.status || 'unknown';
+    statusCounts[s] = (statusCounts[s] || 0) + 1;
+  }
+
+  return htmlHead('ANKR Documentation Portal') + `
 <body class="min-h-screen">
 ${navbar('docs')}
 ${searchModal()}
 
 <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-  <!-- Hero / Search -->
+  <!-- Hero -->
   <div class="text-center mb-10">
-    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">ANKR Documentation</h1>
-    <p class="text-gray-400 mb-6 max-w-xl mx-auto">Browse project reports, architecture docs, TODOs, and investor materials across the ANKR ecosystem.</p>
+    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">ANKR Product Ecosystem</h1>
+    <p class="text-gray-400 mb-6 max-w-2xl mx-auto">Browse documentation, architecture, progress, and investor materials across all ANKR products — from live platforms to projects in development.</p>
     <div class="max-w-xl mx-auto">
       <div class="relative">
         <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <input id="hero-search" type="text" placeholder="Search all documents... (Ctrl+K)" autocomplete="off"
+        <input id="hero-search" type="text" placeholder="Search all documents..." autocomplete="off"
           class="w-full pl-12 pr-4 py-3.5 bg-card border border-border rounded-xl text-base placeholder:text-gray-600 outline-none search-glow transition-all focus:border-brand/50"
           onfocus="document.getElementById('search-modal').classList.remove('hidden');document.getElementById('search-input').focus();this.blur()">
       </div>
@@ -243,48 +344,102 @@ ${searchModal()}
   </div>
 
   <!-- Stats bar -->
-  <div class="flex items-center justify-center gap-6 mb-8 text-sm text-gray-500">
-    <span><strong class="text-gray-300">${projects.length}</strong> projects</span>
-    <span><strong class="text-gray-300">${projects.reduce((s,p) => s + (p.fileCount || 0), 0)}</strong> documents</span>
+  <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-4 text-sm text-gray-500">
+    <span><strong class="text-gray-300">${totalProducts}</strong> products</span>
+    <span><strong class="text-gray-300">${totalDocs}</strong> documents</span>
+    <span><strong class="text-gray-300">${usedCats.length}</strong> categories</span>
     <span id="eon-badge"></span>
   </div>
 
+  <!-- Status legend -->
+  <div class="flex flex-wrap items-center justify-center gap-3 mb-8 text-xs text-gray-500">
+    ${statusCounts.live ? `<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Live (${statusCounts.live})</span>` : ''}
+    ${statusCounts.beta ? `<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Beta (${statusCounts.beta})</span>` : ''}
+    ${statusCounts.development ? `<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-500"></span> In Development (${statusCounts.development})</span>` : ''}
+    ${statusCounts.poc ? `<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-cyan-500"></span> POC (${statusCounts.poc})</span>` : ''}
+    ${statusCounts.planned ? `<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-gray-500"></span> Planned (${statusCounts.planned})</span>` : ''}
+  </div>
+
   ${featured.length > 0 ? `
-  <!-- Featured Projects -->
-  <div class="mb-8">
-    <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+  <!-- Featured / Flagship Products -->
+  <div class="mb-10">
+    <div class="flex items-center gap-3 mb-4">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-      Featured
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Flagship Products</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
       ${featured.map(p => projectCard(p, true)).join('')}
     </div>
   </div>` : ''}
 
-  <!-- All Projects -->
-  <div>
-    <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">All Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      ${rest.map(p => projectCard(p, false)).join('')}
-    </div>
+  <!-- Category Filter Tabs -->
+  <div class="flex items-center gap-2 mb-6 overflow-x-auto pb-2">
+    <button onclick="filterCat('all')" data-cat="all" class="cat-tab active px-3 py-1.5 text-xs font-medium rounded-full border border-brand/50 text-brand transition-all whitespace-nowrap">All Products <span class="text-brand/60">${projects.length - featured.length}</span></button>
+    ${tabButtons}
+  </div>
+
+  <!-- Category Grouped Sections -->
+  <div id="category-sections">
+    ${categorySections}
   </div>
 </main>
 
 <footer class="border-t border-border mt-16 py-6 text-center text-xs text-gray-600">
-  ANKR Labs &middot; Documentation Portal &middot; Powered by eon hybrid search
+  ANKR Labs &middot; Product Ecosystem Portal &middot; Powered by eon hybrid search
 </footer>
 
 <script>
+// EON badge
 fetch('/api/health').then(r=>r.json()).then(d=>{
   const badge = document.getElementById('eon-badge');
   if(d.eon && d.eon.available) {
-    badge.innerHTML='<span class="flex items-center gap-1 text-emerald-400"><span class="w-2 h-2 bg-emerald-400 rounded-full"></span> AI Search Active</span>';
+    badge.innerHTML='<span class="flex items-center gap-1 text-emerald-400"><span class="w-2 h-2 bg-emerald-400 rounded-full"></span> AI Search</span>';
   } else {
     badge.innerHTML='<span class="text-amber-400">Regex mode</span>';
   }
 });
+
+// Desktop: show Ctrl+K hint in hero search
+if (window.matchMedia('(min-width:640px)').matches) {
+  var hs = document.getElementById('hero-search');
+  if (hs) hs.placeholder = 'Search all documents... (Ctrl+K)';
+}
+
+// Category filter
+function filterCat(cat) {
+  document.querySelectorAll('.cat-tab').forEach(t => {
+    t.classList.remove('active');
+    t.classList.remove('border-brand/50', 'text-brand');
+    t.classList.add('border-white/10', 'text-gray-400');
+  });
+  const active = document.querySelector('.cat-tab[data-cat="'+cat+'"]');
+  if (active) {
+    active.classList.add('active', 'border-brand/50', 'text-brand');
+    active.classList.remove('border-white/10', 'text-gray-400');
+  }
+  document.querySelectorAll('.cat-section').forEach(s => {
+    if (cat === 'all') {
+      s.style.display = '';
+    } else {
+      s.style.display = s.dataset.category === cat ? '' : 'none';
+    }
+  });
+}
 </script>
 </body></html>`;
+}
+
+// Status badge helper
+function statusBadge(status) {
+  const map = {
+    live:        { color: 'emerald', label: 'Live' },
+    beta:        { color: 'blue',    label: 'Beta' },
+    development: { color: 'amber',   label: 'In Dev' },
+    poc:         { color: 'cyan',    label: 'POC' },
+    planned:     { color: 'gray',    label: 'Planned' },
+  };
+  const s = map[status] || map.planned;
+  return `<span class="flex items-center gap-1 text-[10px] text-${s.color}-400"><span class="w-1.5 h-1.5 rounded-full bg-${s.color}-500"></span>${s.label}</span>`;
 }
 
 function projectCard(p, featured) {
@@ -298,27 +453,37 @@ function projectCard(p, featured) {
     `<span class="text-[10px] px-1.5 py-0.5 bg-white/5 text-gray-500 rounded-full">${esc(t)}</span>`
   ).join('');
 
-  const href = p.path ? '/project/documents/' + p.id : '/project/documents/' + p.id;
+  const href = '/project/documents/' + p.id;
+  const hasCode = p.codePaths && p.codePaths.length > 0;
+  const hasDocs = (p.fileCount || 0) > 0;
 
   return `
 <a href="${href}" class="block glass rounded-xl p-5 ${border} transition-all hover:bg-white/[0.02] group">
   <div class="flex items-start justify-between mb-2">
-    <div class="flex items-center gap-2">
-      ${featured ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>' : ''}
-      <h3 class="font-semibold text-white group-hover:text-brand transition-colors">${esc(p.title)}</h3>
+    <div class="flex items-center gap-2 min-w-0">
+      ${featured ? '<svg class="flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>' : ''}
+      <h3 class="font-semibold text-white group-hover:text-brand transition-colors truncate">${esc(p.title)}</h3>
     </div>
-    <span class="text-xs text-gray-600">${p.fileCount || 0} docs</span>
+    <div class="flex items-center gap-2 flex-shrink-0 ml-2">
+      ${statusBadge(p.status || 'planned')}
+    </div>
   </div>
   ${p.description ? `<p class="text-sm text-gray-400 line-clamp-2 mb-2">${esc(p.description)}</p>` : ''}
   ${statsHtml}
-  <div class="flex flex-wrap gap-1 mt-3">${tagsHtml}</div>
+  <div class="flex items-center justify-between mt-3">
+    <div class="flex flex-wrap gap-1">${tagsHtml}</div>
+    <div class="flex items-center gap-2 text-[10px] text-gray-600 flex-shrink-0">
+      ${hasDocs ? `<span class="flex items-center gap-1"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/></svg>${p.fileCount}</span>` : ''}
+      ${hasCode ? `<span class="flex items-center gap-1 text-brand/50"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>${p.codePaths.length}</span>` : ''}
+    </div>
+  </div>
 </a>`;
 }
 
 // ============================================
 // PAGE: Project Detail (/project/documents/:id)
 // ============================================
-function projectDetailPage(project, relatedProjects) {
+function projectDetailPage(project, relatedProjects, isAdmin) {
   const statsHtml = project.stats && Object.keys(project.stats).length > 0
     ? Object.entries(project.stats).map(([k,v]) =>
         `<div class="glass rounded-lg p-3 text-center">
@@ -328,16 +493,40 @@ function projectDetailPage(project, relatedProjects) {
       ).join('')
     : '';
 
-  const filesHtml = (project.files || []).map(f => `
-    <a href="/view/${encodeURIComponent(f.path)}" class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/[0.04] transition-colors group">
+  const filesHtml = (project.files || []).map(f => {
+    const dl = f.downloadable !== false;
+    const hidden = f.isHidden || false;
+
+    // Download icon or lock icon
+    const dlIcon = dl
+      ? `<a href="/api/file/raw?path=${encodeURIComponent(f.path)}" download onclick="event.stopPropagation()" class="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity text-gray-500 hover:text-white" title="Download">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>`
+      : `<span class="flex-shrink-0 text-gray-700" title="Download restricted">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </span>`;
+
+    // Admin: eye toggle + download toggle
+    const adminIcons = isAdmin ? `
+      <button onclick="event.preventDefault();event.stopPropagation();toggleFileHide('${esc(f.path)}',this)" class="flex-shrink-0 p-1 rounded hover:bg-white/10 transition-colors ${hidden ? 'text-red-400' : 'text-emerald-400'}" title="${hidden ? 'Hidden - click to show' : 'Visible - click to hide'}">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${hidden ? '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>' : '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>'}</svg>
+      </button>
+      <button onclick="event.preventDefault();event.stopPropagation();toggleFileDl('${esc(f.path)}',this)" class="flex-shrink-0 p-1 rounded hover:bg-white/10 transition-colors ${dl ? 'text-emerald-400' : 'text-red-400'}" title="${dl ? 'Download allowed - click to block' : 'Download blocked - click to allow'}">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${dl ? '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>' : '<rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>'}</svg>
+      </button>` : '';
+
+    return `
+    <a href="/view/${encodeURIComponent(f.path)}" class="flex items-center gap-3 p-3 rounded-lg hover:bg-white/[0.04] transition-colors group ${hidden ? 'opacity-50' : ''}">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" class="flex-shrink-0"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
       <div class="flex-1 min-w-0">
         <div class="font-medium text-sm text-gray-200 group-hover:text-white truncate">${esc(f.title || f.name)}</div>
-        <div class="text-xs text-gray-600">${f.size ? (f.size / 1024).toFixed(1) + ' KB' : ''} ${f.category ? '&middot; ' + esc(f.category) : ''}</div>
+        <div class="text-xs text-gray-600">${f.size ? (f.size / 1024).toFixed(1) + ' KB' : ''} ${f.category ? '&middot; ' + esc(f.category) : ''}${f.source === 'auto' ? ' &middot; <span class="text-amber-500">from source</span>' : ''}</div>
       </div>
+      ${adminIcons}
+      ${dlIcon}
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" class="flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity"><path d="m9 18 6-6-6-6"/></svg>
-    </a>
-  `).join('');
+    </a>`;
+  }).join('');
 
   const tagsHtml = (project.tags || []).map(t =>
     `<span class="text-xs px-2 py-1 bg-white/5 text-gray-400 rounded-full">${esc(t)}</span>`
@@ -398,6 +587,43 @@ ${searchModal()}
 <footer class="border-t border-border mt-16 py-6 text-center text-xs text-gray-600">
   ANKR Labs &middot; Documentation Portal
 </footer>
+
+${isAdmin ? `<script>
+function getAdminKey() {
+  return new URLSearchParams(window.location.search).get('_admin') || '';
+}
+function toggleFileHide(filePath, btn) {
+  const key = getAdminKey();
+  if (!key) return alert('Admin key required (?_admin=key)');
+  const isHidden = btn.classList.contains('text-red-400');
+  fetch('/api/admin/hide', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'x-ankr-admin': key },
+    body: JSON.stringify({ path: filePath, hidden: !isHidden })
+  }).then(r => r.json()).then(d => {
+    if (d.success) {
+      const row = btn.closest('a');
+      if (d.hidden) { btn.classList.replace('text-emerald-400','text-red-400'); row.classList.add('opacity-50'); }
+      else { btn.classList.replace('text-red-400','text-emerald-400'); row.classList.remove('opacity-50'); }
+    }
+  });
+}
+function toggleFileDl(filePath, btn) {
+  const key = getAdminKey();
+  if (!key) return alert('Admin key required (?_admin=key)');
+  const isAllowed = btn.classList.contains('text-emerald-400');
+  fetch('/api/admin/download', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'x-ankr-admin': key },
+    body: JSON.stringify({ path: filePath, downloadable: !isAllowed })
+  }).then(r => r.json()).then(d => {
+    if (d.success) {
+      if (d.downloadable) btn.classList.replace('text-red-400','text-emerald-400');
+      else btn.classList.replace('text-emerald-400','text-red-400');
+    }
+  });
+}
+</script>` : ''}
 </body></html>`;
 }
 
@@ -416,33 +642,94 @@ function documentViewerPage(doc, relatedDocs) {
     ? '<div class="glass rounded-lg p-4 mb-6 text-sm">'
       + '<div class="text-xs text-gray-500 uppercase tracking-wider mb-2">Metadata</div>'
       + Object.entries(doc.frontmatter).filter(([k]) => !['title','content'].includes(k)).slice(0, 8).map(([k,v]) =>
-          `<div class="flex items-start gap-2 py-1"><span class="text-gray-500 min-w-[80px]">${esc(k)}:</span><span class="text-gray-300">${esc(Array.isArray(v) ? v.join(', ') : String(v))}</span></div>`
+          `<div class="flex flex-col sm:flex-row items-start gap-1 sm:gap-2 py-1"><span class="text-gray-500 text-xs sm:min-w-[80px]">${esc(k)}:</span><span class="text-gray-300 break-all">${esc(Array.isArray(v) ? v.join(', ') : String(v))}</span></div>`
         ).join('')
       + '</div>'
     : '';
 
-  return htmlHead(doc.title || 'Document', '<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>') + `
+  const canDownload = doc.downloadable !== false;
+  const downloadBtn = canDownload
+    ? `<a href="/api/file/raw?path=${encodeURIComponent(doc.path)}" download class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-sm text-gray-400 hover:text-white transition-colors">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download
+      </a>`
+    : `<span class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-sm text-gray-600 cursor-not-allowed" title="Download restricted">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Restricted
+      </span>`;
+
+  // Admin bar: visibility + download controls
+  const adminBar = doc.isAdmin ? `
+    <div class="flex flex-wrap items-center gap-3 mb-4 p-3 rounded-lg bg-amber-500/10 border border-amber-500/20 text-xs">
+      <span class="text-amber-400 font-semibold">ADMIN</span>
+      <button onclick="toggleHide()" id="hide-btn" class="px-2 py-1 rounded ${doc.isHidden ? 'bg-red-500/20 text-red-400' : 'bg-emerald-500/20 text-emerald-400'} hover:opacity-80 transition-opacity">
+        ${doc.isHidden ? 'Hidden from public' : 'Visible to public'}
+      </button>
+      <button onclick="toggleDownload()" id="dl-btn" class="px-2 py-1 rounded ${canDownload ? 'bg-emerald-500/20 text-emerald-400' : 'bg-red-500/20 text-red-400'} hover:opacity-80 transition-opacity">
+        ${canDownload ? 'Download allowed' : 'Download blocked'}
+      </button>
+    </div>` : '';
+
+  const extraHead = `
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism-tomorrow.min.css">
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+// Theme restoration IIFE — prevent flash
+(function(){var t=localStorage.getItem('ankr-theme')||'dark';document.documentElement.className=t;})();
+</script>`;
+
+  return htmlHead(doc.title || 'Document', extraHead) + `
 <body class="min-h-screen">
+<!-- Reading progress bar -->
+<div id="reading-progress" class="fixed top-14 left-0 h-0.5 bg-brand z-50 transition-all" style="width:0%"></div>
+
 ${navbar()}
 ${searchModal()}
 
-<main class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-  <!-- Breadcrumb -->
-  <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6 flex-wrap">
-    <a href="/project/documents/" class="hover:text-gray-300 transition-colors">Docs</a>
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
-    <span class="text-gray-300 truncate">${esc(doc.title || doc.fileName)}</span>
-  </nav>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 py-8" id="main-content">
+  <!-- Breadcrumb + Actions -->
+  <div class="flex items-center justify-between mb-6 flex-wrap gap-2">
+    <nav class="flex items-center gap-2 text-sm text-gray-500 flex-wrap">
+      <a href="/project/documents/" class="hover:text-gray-300 transition-colors">Docs</a>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+      <span class="text-gray-300 truncate">${esc(doc.title || doc.fileName)}</span>
+    </nav>
+    <div class="flex items-center gap-2">
+      <!-- Bookmark star -->
+      <button id="bookmark-btn" onclick="toggleBookmark()" class="flex items-center gap-1 px-2 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-sm text-gray-400 hover:text-amber-400 transition-colors" title="Bookmark (b)">
+        <svg id="bookmark-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </button>
+      <!-- Focus mode -->
+      <button onclick="toggleFocusMode()" class="flex items-center gap-1 px-2 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-sm text-gray-400 hover:text-white transition-colors" title="Focus mode (f)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+      </button>
+      <!-- Theme toggle -->
+      <button onclick="toggleTheme()" class="flex items-center gap-1 px-2 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-sm text-gray-400 hover:text-white transition-colors" title="Theme (t)">
+        <svg id="theme-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <!-- AI Panel toggle -->
+      <button onclick="toggleAIPanel()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand/20 hover:bg-brand/30 border border-brand/30 text-sm text-brand hover:text-white transition-colors" title="AI Assistant (a)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2V6a4 4 0 0 1 4-4z"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></svg>
+        AI
+      </button>
+      ${downloadBtn}
+    </div>
+  </div>
+
+  ${adminBar}
 
   <div class="flex gap-8">
     <!-- Main Content -->
-    <article class="flex-1 min-w-0">
+    <article id="article-content" class="flex-1 min-w-0 max-w-full overflow-hidden">
       ${frontmatterHtml}
       <div id="doc-content" class="doc-content"></div>
     </article>
 
     <!-- Sidebar -->
-    <aside class="hidden lg:block w-64 flex-shrink-0">
+    <aside id="doc-sidebar" class="hidden lg:block w-64 flex-shrink-0">
       <div class="sticky top-20">
         <!-- Table of Contents -->
         <div class="mb-6">
@@ -451,38 +738,164 @@ ${searchModal()}
         </div>
 
         ${relatedHtml ? `
-        <div>
+        <div class="mb-6">
           <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Related</h3>
           <div class="space-y-1">${relatedHtml}</div>
         </div>` : ''}
+
+        <!-- Backlinks section -->
+        <div id="backlinks-section" class="mb-6">
+          <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Linked from</h3>
+          <div id="backlinks-list" class="text-sm space-y-1">
+            <span class="text-xs text-gray-600">Loading...</span>
+          </div>
+        </div>
       </div>
     </aside>
   </div>
 </main>
+
+<!-- AI Panel (fixed right) -->
+<div id="ai-panel" class="hidden fixed right-0 top-14 bottom-0 w-96 max-w-full z-40 border-l border-border flex flex-col" style="background:var(--ai-bg,#0f0f14)">
+  <!-- AI Header -->
+  <div class="flex items-center justify-between px-4 py-3 border-b border-border">
+    <div class="flex items-center gap-2">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2V6a4 4 0 0 1 4-4z"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></svg>
+      <span class="font-semibold text-sm">AI Assistant</span>
+    </div>
+    <button onclick="toggleAIPanel()" class="p-1 hover:bg-white/10 rounded transition-colors">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- AI Tabs -->
+  <div class="flex overflow-x-auto border-b border-border text-xs">
+    <button onclick="switchAITab('chat')" class="ai-tab px-3 py-2 whitespace-nowrap border-b-2 border-brand text-brand" data-tab="chat">Chat</button>
+    <button onclick="switchAITab('summary')" class="ai-tab px-3 py-2 whitespace-nowrap border-b-2 border-transparent text-gray-500 hover:text-gray-300" data-tab="summary">Summary</button>
+    <button onclick="switchAITab('keypoints')" class="ai-tab px-3 py-2 whitespace-nowrap border-b-2 border-transparent text-gray-500 hover:text-gray-300" data-tab="keypoints">Key Points</button>
+    <button onclick="switchAITab('quiz')" class="ai-tab px-3 py-2 whitespace-nowrap border-b-2 border-transparent text-gray-500 hover:text-gray-300" data-tab="quiz">Quiz</button>
+    <button onclick="switchAITab('flashcards')" class="ai-tab px-3 py-2 whitespace-nowrap border-b-2 border-transparent text-gray-500 hover:text-gray-300" data-tab="flashcards">Flashcards</button>
+    <button onclick="switchAITab('mindmap')" class="ai-tab px-3 py-2 whitespace-nowrap border-b-2 border-transparent text-gray-500 hover:text-gray-300" data-tab="mindmap">Mind Map</button>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="flex-1 overflow-y-auto p-4" id="ai-tab-content">
+    <!-- Chat tab (default) -->
+    <div id="ai-content-chat">
+      <div id="chat-messages" class="space-y-3 mb-4">
+        <div class="text-sm text-gray-500 text-center py-8">Ask me anything about this document</div>
+      </div>
+    </div>
+    <div id="ai-content-summary" class="hidden"><div class="text-center py-8"><button onclick="generateSummary()" class="px-4 py-2 bg-brand/20 hover:bg-brand/30 text-brand rounded-lg text-sm transition-colors">Generate Summary</button></div></div>
+    <div id="ai-content-keypoints" class="hidden"><div class="text-center py-8"><button onclick="generateKeypoints()" class="px-4 py-2 bg-brand/20 hover:bg-brand/30 text-brand rounded-lg text-sm transition-colors">Extract Key Points</button></div></div>
+    <div id="ai-content-quiz" class="hidden"><div class="text-center py-8"><button onclick="generateQuiz()" class="px-4 py-2 bg-brand/20 hover:bg-brand/30 text-brand rounded-lg text-sm transition-colors">Generate Quiz</button></div></div>
+    <div id="ai-content-flashcards" class="hidden"><div class="text-center py-8"><button onclick="generateFlashcards()" class="px-4 py-2 bg-brand/20 hover:bg-brand/30 text-brand rounded-lg text-sm transition-colors">Generate Flashcards</button></div></div>
+    <div id="ai-content-mindmap" class="hidden"><div class="text-center py-8"><button onclick="generateMindmap()" class="px-4 py-2 bg-brand/20 hover:bg-brand/30 text-brand rounded-lg text-sm transition-colors">Generate Mind Map</button></div></div>
+  </div>
+
+  <!-- Chat input (visible only on chat tab) -->
+  <div id="chat-input-bar" class="border-t border-border p-3">
+    <div class="flex gap-2">
+      <input id="chat-input" type="text" placeholder="Ask about this document..." class="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-brand/50 transition-colors" onkeydown="if(event.key==='Enter')sendChat()">
+      <button onclick="sendChat()" class="px-3 py-2 bg-brand hover:bg-brand/80 text-white rounded-lg text-sm transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Keyboard shortcuts help modal -->
+<div id="shortcuts-modal" class="hidden fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm flex items-center justify-center px-4" onclick="if(event.target===this)this.classList.add('hidden')">
+  <div class="glass rounded-2xl w-full max-w-md shadow-2xl border border-white/10 overflow-hidden p-6 fade-in">
+    <h2 class="text-lg font-bold text-white mb-4">Keyboard Shortcuts</h2>
+    <div class="space-y-2 text-sm">
+      <div class="flex justify-between"><span class="text-gray-400">Scroll down / up</span><span class="text-gray-300"><kbd class="px-1.5 py-0.5 bg-white/10 rounded text-xs">j</kbd> / <kbd class="px-1.5 py-0.5 bg-white/10 rounded text-xs">k</kbd></span></div>
+      <div class="flex justify-between"><span class="text-gray-400">Toggle bookmark</span><kbd class="px-1.5 py-0.5 bg-white/10 rounded text-xs text-gray-300">b</kbd></div>
+      <div class="flex justify-between"><span class="text-gray-400">Focus mode</span><kbd class="px-1.5 py-0.5 bg-white/10 rounded text-xs text-gray-300">f</kbd></div>
+      <div class="flex justify-between"><span class="text-gray-400">Theme toggle</span><kbd class="px-1.5 py-0.5 bg-white/10 rounded text-xs text-gray-300">t</kbd></div>
+      <div class="flex justify-between"><span class="text-gray-400">AI panel</span><kbd class="px-1.5 py-0.5 bg-white/10 rounded text-xs text-gray-300">a</kbd></div>
+      <div class="flex justify-between"><span class="text-gray-400">Search</span><span class="text-gray-300"><kbd class="px-1.5 py-0.5 bg-white/10 rounded text-xs">Ctrl</kbd>+<kbd class="px-1.5 py-0.5 bg-white/10 rounded text-xs">K</kbd></span></div>
+      <div class="flex justify-between"><span class="text-gray-400">Show shortcuts</span><kbd class="px-1.5 py-0.5 bg-white/10 rounded text-xs text-gray-300">?</kbd></div>
+    </div>
+    <button onclick="document.getElementById('shortcuts-modal').classList.add('hidden')" class="mt-6 w-full py-2 bg-white/10 hover:bg-white/15 rounded-lg text-sm text-gray-300 transition-colors">Close</button>
+  </div>
+</div>
 
 <footer class="border-t border-border mt-16 py-6 text-center text-xs text-gray-600">
   ANKR Labs &middot; Documentation Portal
 </footer>
 
 <script>
+const DOC_PATH = ${JSON.stringify(doc.path || '')};
+const DOC_TITLE = ${JSON.stringify(doc.title || doc.fileName || '')};
 const rawContent = ${JSON.stringify(doc.content || '')};
 const contentEl = document.getElementById('doc-content');
 const tocEl = document.getElementById('toc');
 
-// Render markdown
+// ── Markdown Rendering ──
 if (typeof marked !== 'undefined') {
-  marked.setOptions({
-    gfm: true,
-    breaks: false,
-    headerIds: true,
-  });
+  marked.setOptions({ gfm: true, breaks: false, headerIds: true });
   contentEl.innerHTML = marked.parse(rawContent);
 } else {
-  // Fallback: basic rendering
   contentEl.innerHTML = '<pre style="white-space:pre-wrap">' + rawContent.replace(/</g,'&lt;') + '</pre>';
 }
 
-// Build TOC from rendered headings
+// ── Post-render: Callout blocks ──
+contentEl.querySelectorAll('blockquote').forEach(bq => {
+  const html = bq.innerHTML;
+  const calloutMatch = html.match(/^\\s*<p>\\s*\\[!(NOTE|WARNING|TIP|IMPORTANT)\\]/i);
+  if (calloutMatch) {
+    const type = calloutMatch[1].toLowerCase();
+    const icons = { note: '\u2139\uFE0F', warning: '\u26A0\uFE0F', tip: '\uD83D\uDCA1', important: '\u2757' };
+    const div = document.createElement('div');
+    div.className = 'callout callout-' + type;
+    div.innerHTML = '<span class="callout-icon">' + (icons[type]||'') + '</span><div>' + html.replace(calloutMatch[0], '<p>') + '</div>';
+    bq.replaceWith(div);
+  }
+});
+
+// ── Post-render: Code blocks with copy + lang badge ──
+contentEl.querySelectorAll('pre').forEach(pre => {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'code-block-wrapper';
+  const code = pre.querySelector('code');
+  const lang = code ? (code.className.match(/language-(\\w+)/)||[])[1] || '' : '';
+  pre.parentNode.insertBefore(wrapper, pre);
+  wrapper.appendChild(pre);
+  if (lang) {
+    const badge = document.createElement('span');
+    badge.className = 'code-lang-badge';
+    badge.textContent = lang;
+    wrapper.appendChild(badge);
+  }
+  const btn = document.createElement('button');
+  btn.className = 'code-copy-btn';
+  btn.textContent = 'Copy';
+  btn.onclick = function() {
+    navigator.clipboard.writeText(pre.textContent).then(() => { btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = 'Copy', 1500); });
+  };
+  wrapper.appendChild(btn);
+});
+
+// ── Post-render: Mermaid diagrams ──
+if (typeof mermaid !== 'undefined') {
+  mermaid.initialize({ startOnLoad: false, theme: 'dark' });
+  contentEl.querySelectorAll('code.language-mermaid').forEach((code, i) => {
+    const pre = code.parentElement;
+    const div = document.createElement('div');
+    div.className = 'mermaid';
+    div.textContent = code.textContent;
+    pre.replaceWith(div);
+  });
+  mermaid.run();
+}
+
+// ── Post-render: Prism syntax highlighting ──
+if (typeof Prism !== 'undefined') {
+  Prism.highlightAllUnder(contentEl);
+}
+
+// ── Build TOC ──
 const headings = contentEl.querySelectorAll('h1, h2, h3');
 headings.forEach((h, i) => {
   const id = 'heading-' + i;
@@ -496,8 +909,476 @@ headings.forEach((h, i) => {
   a.textContent = h.textContent;
   tocEl.appendChild(a);
 });
+
+// ── Reading Progress Bar ──
+window.addEventListener('scroll', function() {
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = h > 0 ? Math.min((window.scrollY / h) * 100, 100) : 0;
+  document.getElementById('reading-progress').style.width = pct + '%';
+});
+
+// ── Bookmark ──
+let isBookmarked = false;
+(function checkBookmark() {
+  fetch('/api/bookmarks').then(r=>r.json()).then(bm => {
+    isBookmarked = bm.some(b => b.path === DOC_PATH);
+    updateBookmarkIcon();
+  }).catch(()=>{});
+})();
+function updateBookmarkIcon() {
+  const icon = document.getElementById('bookmark-icon');
+  const btn = document.getElementById('bookmark-btn');
+  if (isBookmarked) {
+    icon.setAttribute('fill', '#f59e0b');
+    icon.setAttribute('stroke', '#f59e0b');
+    btn.classList.add('text-amber-400');
+  } else {
+    icon.setAttribute('fill', 'none');
+    icon.setAttribute('stroke', 'currentColor');
+    btn.classList.remove('text-amber-400');
+  }
+}
+function toggleBookmark() {
+  if (isBookmarked) {
+    fetch('/api/bookmarks?path=' + encodeURIComponent(DOC_PATH), { method: 'DELETE' }).then(() => {
+      isBookmarked = false; updateBookmarkIcon();
+    });
+  } else {
+    fetch('/api/bookmarks', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: DOC_PATH, name: DOC_TITLE }) }).then(() => {
+      isBookmarked = true; updateBookmarkIcon();
+    });
+  }
+}
+
+// ── Focus Mode ──
+let focusMode = false;
+function toggleFocusMode() {
+  focusMode = !focusMode;
+  const sidebar = document.getElementById('doc-sidebar');
+  const article = document.getElementById('article-content');
+  const nav = document.querySelector('nav.sticky');
+  const main = document.getElementById('main-content');
+  if (focusMode) {
+    if (sidebar) sidebar.style.display = 'none';
+    if (nav) nav.style.display = 'none';
+    main.style.maxWidth = '900px';
+    article.style.fontSize = '1.05rem';
+    document.getElementById('reading-progress').style.top = '0';
+  } else {
+    if (sidebar) sidebar.style.display = '';
+    if (nav) nav.style.display = '';
+    main.style.maxWidth = '';
+    article.style.fontSize = '';
+    document.getElementById('reading-progress').style.top = '3.5rem';
+  }
+}
+
+// ── Theme Toggle ──
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.className === 'light' ? 'light' : 'dark';
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.className = next;
+  localStorage.setItem('ankr-theme', next);
+}
+
+// ── AI Panel ──
+let aiPanelOpen = false;
+let currentAITab = 'chat';
+const chatHistory = [];
+
+function toggleAIPanel() {
+  aiPanelOpen = !aiPanelOpen;
+  const panel = document.getElementById('ai-panel');
+  const main = document.getElementById('main-content');
+  if (aiPanelOpen) {
+    panel.classList.remove('hidden');
+    main.style.marginRight = '24rem';
+  } else {
+    panel.classList.add('hidden');
+    main.style.marginRight = '';
+  }
+}
+
+function switchAITab(tab) {
+  currentAITab = tab;
+  document.querySelectorAll('.ai-tab').forEach(t => {
+    t.classList.remove('border-brand', 'text-brand');
+    t.classList.add('border-transparent', 'text-gray-500');
+  });
+  const active = document.querySelector('.ai-tab[data-tab="'+tab+'"]');
+  if (active) {
+    active.classList.add('border-brand', 'text-brand');
+    active.classList.remove('border-transparent', 'text-gray-500');
+  }
+  document.querySelectorAll('[id^="ai-content-"]').forEach(el => el.classList.add('hidden'));
+  const content = document.getElementById('ai-content-' + tab);
+  if (content) content.classList.remove('hidden');
+  document.getElementById('chat-input-bar').style.display = tab === 'chat' ? '' : 'none';
+}
+
+function aiLoading(container) {
+  container.innerHTML = '<div class="flex items-center gap-2 py-4 justify-center"><div class="w-4 h-4 border-2 border-brand border-t-transparent rounded-full animate-spin"></div><span class="text-sm text-gray-500">Thinking...</span></div>';
+}
+
+// ── Chat ──
+async function sendChat() {
+  const input = document.getElementById('chat-input');
+  const msg = input.value.trim();
+  if (!msg) return;
+  input.value = '';
+  const messagesEl = document.getElementById('chat-messages');
+  messagesEl.innerHTML += '<div class="flex justify-end"><div class="bg-brand/20 text-brand rounded-lg px-3 py-2 text-sm max-w-[80%]">' + escHtml(msg) + '</div></div>';
+  messagesEl.innerHTML += '<div id="chat-loading" class="flex items-center gap-2"><div class="w-3 h-3 border-2 border-brand border-t-transparent rounded-full animate-spin"></div><span class="text-xs text-gray-500">Thinking...</span></div>';
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+  chatHistory.push({ role: 'user', content: msg });
+  try {
+    const resp = await fetch('/api/ai/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: DOC_PATH, message: msg, history: chatHistory.slice(-10) }) });
+    const data = await resp.json();
+    const reply = data.reply || data.error || 'No response';
+    chatHistory.push({ role: 'assistant', content: reply });
+    const loading = document.getElementById('chat-loading');
+    if (loading) loading.remove();
+    const rendered = typeof marked !== 'undefined' ? marked.parse(reply) : escHtml(reply);
+    messagesEl.innerHTML += '<div class="bg-white/5 rounded-lg px-3 py-2 text-sm doc-content">' + rendered + '</div>';
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  } catch(e) {
+    const loading = document.getElementById('chat-loading');
+    if (loading) loading.remove();
+    messagesEl.innerHTML += '<div class="text-red-400 text-sm">Error: ' + escHtml(e.message) + '</div>';
+  }
+}
+
+// ── Summary ──
+async function generateSummary() {
+  const el = document.getElementById('ai-content-summary');
+  aiLoading(el);
+  try {
+    const resp = await fetch('/api/ai/summarize', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: DOC_PATH }) });
+    const data = await resp.json();
+    const rendered = typeof marked !== 'undefined' ? marked.parse(data.summary || 'No summary generated') : escHtml(data.summary || '');
+    el.innerHTML = '<div class="doc-content text-sm">' + rendered + '</div>';
+  } catch(e) { el.innerHTML = '<div class="text-red-400 text-sm">Error generating summary</div>'; }
+}
+
+// ── Key Points ──
+async function generateKeypoints() {
+  const el = document.getElementById('ai-content-keypoints');
+  aiLoading(el);
+  try {
+    const resp = await fetch('/api/ai/keypoints', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: DOC_PATH }) });
+    const data = await resp.json();
+    const rendered = typeof marked !== 'undefined' ? marked.parse(data.keypoints || 'No key points extracted') : escHtml(data.keypoints || '');
+    el.innerHTML = '<div class="doc-content text-sm">' + rendered + '</div>';
+  } catch(e) { el.innerHTML = '<div class="text-red-400 text-sm">Error extracting key points</div>'; }
+}
+
+// ── Quiz ──
+let quizScore = 0;
+let quizTotal = 0;
+async function generateQuiz() {
+  const el = document.getElementById('ai-content-quiz');
+  aiLoading(el);
+  quizScore = 0; quizTotal = 0;
+  try {
+    const resp = await fetch('/api/ai/quiz', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: DOC_PATH, count: 5 }) });
+    const data = await resp.json();
+    const questions = data.questions || [];
+    if (questions.length === 0) { el.innerHTML = '<div class="text-gray-500 text-sm">Could not generate quiz</div>'; return; }
+    quizTotal = questions.length;
+    let html = '<div id="quiz-score" class="text-sm text-gray-400 mb-3">Score: 0/' + quizTotal + '</div>';
+    questions.forEach((q, qi) => {
+      html += '<div class="mb-4 p-3 rounded-lg bg-white/5 border border-white/5">';
+      html += '<div class="font-medium text-sm mb-2 text-gray-200">' + (qi+1) + '. ' + escHtml(q.question) + '</div>';
+      const opts = q.options || {};
+      for (const [key, val] of Object.entries(opts)) {
+        html += '<button onclick="checkQuizAnswer(this,\\'' + key + '\\',\\'' + (q.answer||'').replace(/'/g,"\\\\'") + '\\','+qi+')" class="block w-full text-left px-3 py-1.5 rounded text-sm my-1 bg-white/5 hover:bg-white/10 text-gray-300 transition-colors quiz-opt-'+qi+'" data-key="'+key+'">';
+        html += '<span class="font-medium text-brand mr-2">' + key.toUpperCase() + '.</span>' + escHtml(val);
+        html += '</button>';
+      }
+      html += '<div id="quiz-explanation-'+qi+'" class="hidden text-xs text-gray-500 mt-2 p-2 bg-white/[0.02] rounded"></div>';
+      html += '</div>';
+    });
+    el.innerHTML = html;
+  } catch(e) { el.innerHTML = '<div class="text-red-400 text-sm">Error generating quiz</div>'; }
+}
+function checkQuizAnswer(btn, selected, correct, qi) {
+  const allOpts = document.querySelectorAll('.quiz-opt-' + qi);
+  allOpts.forEach(o => {
+    o.disabled = true;
+    o.style.pointerEvents = 'none';
+    if (o.dataset.key === correct) { o.classList.add('bg-emerald-500/20'); o.classList.remove('bg-white/5'); }
+    else if (o === btn && selected !== correct) { o.classList.add('bg-red-500/20'); o.classList.remove('bg-white/5'); }
+  });
+  if (selected === correct) quizScore++;
+  document.getElementById('quiz-score').textContent = 'Score: ' + quizScore + '/' + quizTotal;
+  const expl = document.getElementById('quiz-explanation-' + qi);
+  if (expl) { expl.classList.remove('hidden'); expl.textContent = selected === correct ? 'Correct!' : 'Incorrect. The answer is ' + correct.toUpperCase() + '.'; }
+}
+
+// ── Flashcards ──
+let flashcards = [];
+let currentCard = 0;
+async function generateFlashcards() {
+  const el = document.getElementById('ai-content-flashcards');
+  aiLoading(el);
+  try {
+    const resp = await fetch('/api/ai/flashcards', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: DOC_PATH, count: 8 }) });
+    const data = await resp.json();
+    flashcards = data.flashcards || [];
+    if (flashcards.length === 0) { el.innerHTML = '<div class="text-gray-500 text-sm">Could not generate flashcards</div>'; return; }
+    currentCard = 0;
+    renderFlashcard(el);
+  } catch(e) { el.innerHTML = '<div class="text-red-400 text-sm">Error generating flashcards</div>'; }
+}
+function renderFlashcard(el) {
+  if (!el) el = document.getElementById('ai-content-flashcards');
+  const card = flashcards[currentCard];
+  el.innerHTML = '<div class="text-xs text-gray-500 mb-2 text-center">' + (currentCard+1) + ' / ' + flashcards.length + '</div>'
+    + '<div class="flashcard" onclick="this.classList.toggle(\\\'flipped\\\')">'
+    + '<div class="flashcard-inner">'
+    + '<div class="flashcard-front"><div class="text-sm text-gray-200">' + escHtml(card.front) + '</div></div>'
+    + '<div class="flashcard-back"><div class="text-sm">' + escHtml(card.back) + '</div></div>'
+    + '</div></div>'
+    + '<div class="flex justify-center gap-3 mt-4">'
+    + '<button onclick="prevFlashcard()" class="px-3 py-1.5 bg-white/10 hover:bg-white/15 rounded text-sm text-gray-300 transition-colors">&larr; Prev</button>'
+    + '<button onclick="nextFlashcard()" class="px-3 py-1.5 bg-white/10 hover:bg-white/15 rounded text-sm text-gray-300 transition-colors">Next &rarr;</button>'
+    + '</div>'
+    + '<div class="text-xs text-gray-600 text-center mt-2">Click card to flip</div>';
+}
+function nextFlashcard() { currentCard = (currentCard + 1) % flashcards.length; renderFlashcard(); }
+function prevFlashcard() { currentCard = (currentCard - 1 + flashcards.length) % flashcards.length; renderFlashcard(); }
+
+// ── Mind Map ──
+async function generateMindmap() {
+  const el = document.getElementById('ai-content-mindmap');
+  aiLoading(el);
+  try {
+    const resp = await fetch('/api/ai/mindmap', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: DOC_PATH }) });
+    const data = await resp.json();
+    if (!data.mindmap) { el.innerHTML = '<div class="text-gray-500 text-sm">Could not generate mind map</div>'; return; }
+    el.innerHTML = '<div class="text-sm">' + renderMindmapNode(data.mindmap, 0) + '</div>';
+  } catch(e) { el.innerHTML = '<div class="text-red-400 text-sm">Error generating mind map</div>'; }
+}
+function renderMindmapNode(node, depth) {
+  if (!node) return '';
+  const hasChildren = node.children && node.children.length > 0;
+  const colors = ['text-brand', 'text-emerald-400', 'text-amber-400', 'text-cyan-400', 'text-pink-400'];
+  const color = colors[depth % colors.length];
+  let html = '<div class="mindmap-node">';
+  html += '<span class="mindmap-toggle" onclick="this.parentElement.querySelector(\\'.mindmap-children\\')&&this.parentElement.querySelector(\\'.mindmap-children\\').classList.toggle(\\'.hidden\\')">' + (hasChildren ? '\u25BC' : '\u2022') + '</span>';
+  html += '<span class="mindmap-label ' + color + ' font-medium">' + escHtml(node.label) + '</span>';
+  if (hasChildren) {
+    html += '<div class="mindmap-children">';
+    for (const child of node.children) {
+      html += renderMindmapNode(child, depth + 1);
+    }
+    html += '</div>';
+  }
+  html += '</div>';
+  return html;
+}
+
+// ── Backlinks ──
+(function loadBacklinks() {
+  fetch('/api/backlinks?path=' + encodeURIComponent(DOC_PATH)).then(r=>r.json()).then(data => {
+    const el = document.getElementById('backlinks-list');
+    if (!data.backlinks || data.backlinks.length === 0) {
+      el.innerHTML = '<span class="text-xs text-gray-600">No backlinks found</span>';
+      return;
+    }
+    el.innerHTML = data.backlinks.map(bl =>
+      '<a href="/view/' + encodeURIComponent(bl.path) + '" class="block p-2 rounded hover:bg-white/[0.04] transition-colors">'
+      + '<div class="text-sm text-gray-300 font-medium truncate">' + escHtml(bl.title) + '</div>'
+      + '<div class="text-xs text-gray-600 truncate">' + escHtml(bl.excerpt) + '</div>'
+      + '</a>'
+    ).join('');
+  }).catch(()=>{
+    document.getElementById('backlinks-list').innerHTML = '<span class="text-xs text-gray-600">Could not load</span>';
+  });
+})();
+
+// ── Keyboard Shortcuts ──
+document.addEventListener('keydown', function(e) {
+  // Skip if in input or textarea
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
+  // Ctrl+K already handled by search modal
+  if ((e.ctrlKey || e.metaKey) && e.key === 'k') return;
+  switch(e.key) {
+    case 'j': window.scrollBy(0, 100); e.preventDefault(); break;
+    case 'k': window.scrollBy(0, -100); e.preventDefault(); break;
+    case 'b': toggleBookmark(); e.preventDefault(); break;
+    case 'f': toggleFocusMode(); e.preventDefault(); break;
+    case 't': toggleTheme(); e.preventDefault(); break;
+    case 'a': toggleAIPanel(); e.preventDefault(); break;
+    case '?': document.getElementById('shortcuts-modal').classList.toggle('hidden'); e.preventDefault(); break;
+  }
+});
+
+// ── HTML escape helper ──
+function escHtml(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Admin toggle functions ──
+function getAdminKey() {
+  return new URLSearchParams(window.location.search).get('_admin') || '';
+}
+function toggleHide() {
+  const key = getAdminKey();
+  if (!key) return alert('Admin key required (?_admin=key)');
+  const btn = document.getElementById('hide-btn');
+  const isCurrentlyHidden = btn.textContent.trim().startsWith('Hidden');
+  fetch('/api/admin/hide', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'x-ankr-admin': key },
+    body: JSON.stringify({ path: DOC_PATH, hidden: !isCurrentlyHidden })
+  }).then(r => r.json()).then(d => {
+    if (d.success) {
+      btn.textContent = d.hidden ? 'Hidden from public' : 'Visible to public';
+      btn.className = 'px-2 py-1 rounded hover:opacity-80 transition-opacity ' + (d.hidden ? 'bg-red-500/20 text-red-400' : 'bg-emerald-500/20 text-emerald-400');
+    }
+  });
+}
+function toggleDownload() {
+  const key = getAdminKey();
+  if (!key) return alert('Admin key required (?_admin=key)');
+  const btn = document.getElementById('dl-btn');
+  const isCurrentlyAllowed = btn.textContent.trim().startsWith('Download allowed');
+  fetch('/api/admin/download', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'x-ankr-admin': key },
+    body: JSON.stringify({ path: DOC_PATH, downloadable: !isCurrentlyAllowed })
+  }).then(r => r.json()).then(d => {
+    if (d.success) {
+      btn.textContent = d.downloadable ? 'Download allowed' : 'Download blocked';
+      btn.className = 'px-2 py-1 rounded hover:opacity-80 transition-opacity ' + (d.downloadable ? 'bg-emerald-500/20 text-emerald-400' : 'bg-red-500/20 text-red-400');
+    }
+  });
+}
+
+// ── Track recent file ──
+fetch('/api/recent', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: DOC_PATH, name: DOC_TITLE }) }).catch(()=>{});
 </script>
 </body></html>`;
 }
 
-module.exports = { documentsHomePage, projectDetailPage, documentViewerPage, esc };
+// ============================================
+// PAGE: Knowledge Graph (/project/documents/_graph)
+// ============================================
+function knowledgeGraphPage(graphData) {
+  const nodes = graphData.nodes || [];
+  const edges = graphData.edges || [];
+
+  return htmlHead('Knowledge Graph') + `
+<body class="min-h-screen">
+${navbar('graph')}
+${searchModal()}
+
+<div class="flex h-[calc(100vh-3.5rem)]">
+  <!-- Left sidebar -->
+  <div class="w-72 border-r border-border flex flex-col bg-surface/50">
+    <div class="p-4 border-b border-border">
+      <h2 class="text-sm font-semibold text-white mb-3">Knowledge Graph</h2>
+      <input id="graph-search" type="text" placeholder="Filter nodes..." class="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-brand/50 transition-colors" oninput="filterGraph(this.value)">
+    </div>
+    <div class="p-4 border-b border-border text-xs text-gray-500">
+      <div class="flex items-center gap-2 mb-1"><span class="w-3 h-3 rounded-full bg-amber-500"></span> Folder</div>
+      <div class="flex items-center gap-2 mb-1"><span class="w-3 h-3 rounded-full bg-blue-500"></span> Document</div>
+      <div class="flex items-center gap-2 mb-1"><span class="w-3 h-3 rounded bg-gray-700" style="width:20px;height:2px"></span> Contains (dashed)</div>
+      <div class="flex items-center gap-2"><span class="w-3 h-3 rounded bg-purple-500" style="width:20px;height:2px"></span> Links to (solid)</div>
+      <div class="mt-2 text-gray-600">${nodes.length} nodes &middot; ${edges.length} edges</div>
+    </div>
+    <div id="node-info" class="p-4 flex-1 overflow-y-auto">
+      <p class="text-xs text-gray-600">Click a node to view details</p>
+    </div>
+  </div>
+
+  <!-- Graph canvas -->
+  <div id="graph-container" class="flex-1"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vis-network@9/standalone/umd/vis-network.min.js"></script>
+<script>
+const graphNodes = ${JSON.stringify(nodes)};
+const graphEdges = ${JSON.stringify(edges)};
+
+// Build vis-network datasets
+const visNodes = new vis.DataSet(graphNodes.map(n => ({
+  id: n.id,
+  label: n.label.length > 25 ? n.label.slice(0, 22) + '...' : n.label,
+  title: n.label + (n.connections ? ' (' + n.connections + ' links)' : ''),
+  color: n.type === 'category' ? { background: '#f59e0b', border: '#d97706' } : { background: '#3b82f6', border: '#2563eb' },
+  size: n.size || 10,
+  font: { color: '#e4e4e7', size: n.type === 'category' ? 12 : 10 },
+  shape: n.type === 'category' ? 'dot' : 'dot',
+  _type: n.type,
+  _fullLabel: n.label,
+  _category: n.category || '',
+  _connections: n.connections || 0,
+})));
+
+const visEdges = new vis.DataSet(graphEdges.map((e, i) => ({
+  id: 'e' + i,
+  from: e.source,
+  to: e.target,
+  dashes: e.type === 'contains',
+  color: e.type === 'links-to' ? { color: '#a855f7', opacity: 0.7 } : { color: '#333', opacity: 0.3 },
+  arrows: e.type === 'links-to' ? { to: { enabled: true, scaleFactor: 0.5 } } : {},
+  width: e.type === 'links-to' ? 1.5 : 0.5,
+})));
+
+const container = document.getElementById('graph-container');
+const network = new vis.Network(container, { nodes: visNodes, edges: visEdges }, {
+  physics: {
+    forceAtlas2Based: { gravitationalConstant: -30, centralGravity: 0.005, springLength: 100, springConstant: 0.08 },
+    solver: 'forceAtlas2Based',
+    stabilization: { iterations: 150 },
+  },
+  interaction: { hover: true, tooltipDelay: 200, zoomView: true },
+  layout: { improvedLayout: true },
+});
+
+// Click handler: show info + navigate on double-click
+network.on('click', function(params) {
+  if (params.nodes.length > 0) {
+    const nodeId = params.nodes[0];
+    const node = visNodes.get(nodeId);
+    const infoEl = document.getElementById('node-info');
+    infoEl.innerHTML = '<div class="mb-3"><div class="text-sm font-semibold text-white mb-1">' + escG(node._fullLabel) + '</div>'
+      + '<div class="text-xs text-gray-500 mb-1">Type: ' + (node._type === 'category' ? 'Folder' : 'Document') + '</div>'
+      + (node._connections > 0 ? '<div class="text-xs text-purple-400 mb-1">' + node._connections + ' link connections</div>' : '')
+      + '<div class="text-xs text-gray-600 break-all">' + escG(nodeId) + '</div>'
+      + '</div>'
+      + (node._type === 'document' ? '<a href="/view/' + encodeURIComponent(nodeId) + '" class="block px-3 py-2 bg-brand/20 hover:bg-brand/30 text-brand text-sm rounded-lg text-center transition-colors">Open Document</a>' : '');
+  }
+});
+
+network.on('doubleClick', function(params) {
+  if (params.nodes.length > 0) {
+    const nodeId = params.nodes[0];
+    const node = visNodes.get(nodeId);
+    if (node._type === 'document') {
+      window.location.href = '/view/' + encodeURIComponent(nodeId);
+    }
+  }
+});
+
+function filterGraph(query) {
+  const q = query.toLowerCase();
+  visNodes.forEach(n => {
+    const match = !q || n._fullLabel.toLowerCase().includes(q) || n.id.toLowerCase().includes(q);
+    visNodes.update({ id: n.id, hidden: !match });
+  });
+}
+
+function escG(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+</script>
+</body></html>`;
+}
+
+module.exports = { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage, esc };

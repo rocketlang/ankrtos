@@ -12,7 +12,11 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 const eonClient = require('./ankr-viewer-eon-client');
-const { documentsHomePage, projectDetailPage, documentViewerPage } = require('./ankr-viewer-html');
+const { getRegistry, getCategories, getCategoryOrder } = require('./ankr-product-registry');
+const access = require('./ankr-viewer-access');
+const { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage } = require('./ankr-viewer-html');
+
+const autoDiscoveredFiles = new Map(); // virtual path → absolute path
 
 const app = express();
 const PORT = process.env.PORT || process.env.ANKR_VIEWER_PORT || 3080;
@@ -21,6 +25,7 @@ const DOCS_ROOT = process.env.DOCS_ROOT || '/root/ankr-universe-docs';
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use((req, res, next) => { req.isAdmin = access.isAdmin(req); next(); });
 
 // Health check
 app.get('/api/health', async (req, res) => {
@@ -130,12 +135,21 @@ app.get('/api/file', (req, res) => {
   }
 });
 
-// Raw file download
+// Raw file download (access-controlled)
 app.get('/api/file/raw', (req, res) => {
   try {
     const requestedPath = req.query.path;
     if (!requestedPath) {
       return res.status(400).json({ error: 'Path parameter required' });
+    }
+
+    // Handle auto-discovered files
+    if (requestedPath.startsWith('_auto/')) {
+      const absPath = autoDiscoveredFiles.get(requestedPath);
+      if (!absPath || !fs.existsSync(absPath)) {
+        return res.status(404).json({ error: 'File not found' });
+      }
+      return res.sendFile(absPath);
     }
 
     const fullPath = path.join(DOCS_ROOT, requestedPath);
@@ -146,6 +160,16 @@ app.get('/api/file/raw', (req, res) => {
 
     if (!fs.existsSync(fullPath)) {
       return res.status(404).json({ error: 'File not found' });
+    }
+
+    // Access control: hidden docs return 404 for public
+    if (!req.isAdmin && access.isHidden(requestedPath)) {
+      return res.status(404).json({ error: 'File not found' });
+    }
+
+    // Access control: download-blocked docs return 403 for public
+    if (!req.isAdmin && !access.isDownloadable(requestedPath)) {
+      return res.status(403).json({ error: 'Download not permitted for this document' });
     }
 
     res.sendFile(fullPath);
@@ -364,6 +388,8 @@ app.get('/api/search', async (req, res) => {
       source = 'regex-fallback';
     }
 
+    // Access control: filter hidden docs from search results
+    results = access.filterSearchResults(results, req.isAdmin);
     results = results.slice(0, limit);
     const grouped = groupByProject(results);
 
@@ -433,6 +459,21 @@ app.get('/api/knowledge/graph', (req, res) => {
               target: nodeId,
               type: 'contains'
             });
+
+            // Extract markdown links and wikilinks for link edges
+            const mdLinkRe = /\[([^\]]*)\]\(([^)]+)\)/g;
+            const wikiLinkRe = /\[\[([^\]]+)\]\]/g;
+            let m;
+            while ((m = mdLinkRe.exec(content)) !== null) {
+              const target = m[2].replace(/^\.?\/?/, '').replace(/\.md$/, '');
+              if (!target.startsWith('http') && target.length > 0) {
+                edges.push({ source: nodeId, target: target + '.md', type: 'links-to' });
+              }
+            }
+            while ((m = wikiLinkRe.exec(content)) !== null) {
+              const target = m[1].replace(/\.md$/, '');
+              edges.push({ source: nodeId, target: target + '.md', type: 'links-to' });
+            }
           } catch (err) {
             // Skip
           }
@@ -442,7 +483,29 @@ app.get('/api/knowledge/graph', (req, res) => {
 
     scanDirectory(DOCS_ROOT);
 
-    res.json({ nodes, edges });
+    // Post-process: filter link edges to valid targets, compute connections
+    const nodeIds = new Set(nodes.map(n => n.id));
+    const validEdges = edges.filter(e => {
+      if (e.type === 'links-to') return nodeIds.has(e.target);
+      return true;
+    });
+
+    // Compute connection count per node
+    const connCount = {};
+    for (const e of validEdges) {
+      if (e.type === 'links-to') {
+        connCount[e.source] = (connCount[e.source] || 0) + 1;
+        connCount[e.target] = (connCount[e.target] || 0) + 1;
+      }
+    }
+    for (const n of nodes) {
+      n.connections = connCount[n.id] || 0;
+      if (n.type === 'document') {
+        n.size = 8 + Math.min(n.connections * 3, 20);
+      }
+    }
+
+    res.json({ nodes, edges: validEdges });
   } catch (error) {
     console.error('Error generating graph:', error);
     res.status(500).json({ error: error.message });
@@ -539,6 +602,373 @@ app.post('/api/recent', (req, res) => {
 
   res.json({ success: true });
 });
+
+// ── AI Proxy Helper + Document Reader ──
+const AI_PROXY_URL = process.env.AI_PROXY_URL || 'http://localhost:4444';
+
+async function callAI(systemPrompt, userPrompt, options = {}) {
+  const maxTokens = options.maxTokens || 800;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 30000);
+  try {
+    const http = require('http');
+    const url = new URL(AI_PROXY_URL + '/v1/chat/completions');
+    const body = JSON.stringify({
+      model: options.model || 'auto',
+      messages: [
+        { role: 'system', content: systemPrompt },
+        ...(options.history || []),
+        { role: 'user', content: userPrompt },
+      ],
+      max_tokens: maxTokens,
+      temperature: options.temperature || 0.3,
+    });
+    return await new Promise((resolve, reject) => {
+      const req = (url.protocol === 'https:' ? require('https') : http).request(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) },
+        signal: controller.signal,
+      }, (resp) => {
+        let data = '';
+        resp.on('data', c => data += c);
+        resp.on('end', () => {
+          try {
+            const parsed = JSON.parse(data);
+            resolve(parsed.choices?.[0]?.message?.content || '');
+          } catch (e) {
+            reject(new Error('Invalid AI response'));
+          }
+        });
+      });
+      req.on('error', reject);
+      req.write(body);
+      req.end();
+    });
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+function readDocContent(docPath) {
+  // Try direct path
+  let fullPath = path.join(DOCS_ROOT, docPath);
+  if (fs.existsSync(fullPath) && !fs.statSync(fullPath).isDirectory()) {
+    return fs.readFileSync(fullPath, 'utf-8');
+  }
+  // Try adding .md extension
+  if (!path.extname(fullPath)) {
+    fullPath = fullPath + '.md';
+    if (fs.existsSync(fullPath)) return fs.readFileSync(fullPath, 'utf-8');
+  }
+  // Try auto-discovered files
+  if (docPath.startsWith('_auto/')) {
+    const absPath = autoDiscoveredFiles.get(docPath);
+    if (absPath && fs.existsSync(absPath)) return fs.readFileSync(absPath, 'utf-8');
+  }
+  // Try title-based lookup
+  const resolved = findDocByTitle(DOCS_ROOT, docPath.toLowerCase().replace(/\.md$/, ''));
+  if (resolved && fs.existsSync(resolved)) return fs.readFileSync(resolved, 'utf-8');
+  return null;
+}
+
+// ── AI Endpoints ──
+
+app.post('/api/ai/summarize', async (req, res) => {
+  try {
+    const content = readDocContent(req.body.path || '');
+    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const truncated = content.slice(0, 8000);
+    const result = await callAI(
+      'You are a concise document summarizer. Provide a 3-5 bullet point summary of the key points. Use markdown bullet points.',
+      `Summarize this document:\n\n${truncated}`,
+      { maxTokens: 500 }
+    );
+    res.json({ summary: result });
+  } catch (e) {
+    console.error('[AI Summarize]', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.post('/api/ai/chat', async (req, res) => {
+  try {
+    const content = readDocContent(req.body.path || '');
+    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const truncated = content.slice(0, 6000);
+    const message = req.body.message || '';
+    const history = (req.body.history || []).slice(-10);
+    const result = await callAI(
+      `You are a helpful assistant answering questions about a document. Ground your answers in the document content. If the answer is not in the document, say so. Be concise.\n\nDocument content:\n${truncated}`,
+      message,
+      { maxTokens: 800, history }
+    );
+    res.json({ reply: result });
+  } catch (e) {
+    console.error('[AI Chat]', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.post('/api/ai/quiz', async (req, res) => {
+  try {
+    const content = readDocContent(req.body.path || '');
+    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const truncated = content.slice(0, 8000);
+    const count = req.body.count || 5;
+    const result = await callAI(
+      `You generate multiple-choice quiz questions from documents. Return ONLY a valid JSON array of objects, no markdown fences. Each object: {"question":"...","options":{"a":"...","b":"...","c":"...","d":"..."},"answer":"a","explanation":"..."}`,
+      `Generate ${count} multiple-choice questions from this document:\n\n${truncated}`,
+      { maxTokens: 2000, temperature: 0.5 }
+    );
+    try {
+      const cleaned = result.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+      const questions = JSON.parse(cleaned);
+      res.json({ questions });
+    } catch {
+      res.json({ questions: [], raw: result });
+    }
+  } catch (e) {
+    console.error('[AI Quiz]', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.post('/api/ai/flashcards', async (req, res) => {
+  try {
+    const content = readDocContent(req.body.path || '');
+    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const truncated = content.slice(0, 8000);
+    const count = req.body.count || 8;
+    const result = await callAI(
+      `You generate flashcards from documents. Return ONLY a valid JSON array of objects, no markdown fences. Each object: {"front":"question or term","back":"answer or definition"}`,
+      `Generate ${count} flashcards from this document:\n\n${truncated}`,
+      { maxTokens: 1500, temperature: 0.4 }
+    );
+    try {
+      const cleaned = result.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+      const flashcards = JSON.parse(cleaned);
+      res.json({ flashcards });
+    } catch {
+      res.json({ flashcards: [], raw: result });
+    }
+  } catch (e) {
+    console.error('[AI Flashcards]', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.post('/api/ai/keypoints', async (req, res) => {
+  try {
+    const content = readDocContent(req.body.path || '');
+    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const truncated = content.slice(0, 8000);
+    const result = await callAI(
+      'You extract key takeaways from documents. Provide 8-12 key points as a numbered list using markdown. Each point should be concise (1-2 sentences).',
+      `Extract the key takeaways from this document:\n\n${truncated}`,
+      { maxTokens: 600 }
+    );
+    res.json({ keypoints: result });
+  } catch (e) {
+    console.error('[AI Keypoints]', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
+app.post('/api/ai/mindmap', async (req, res) => {
+  try {
+    const content = readDocContent(req.body.path || '');
+    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const truncated = content.slice(0, 8000);
+    const result = await callAI(
+      `You create hierarchical mind maps from documents. Return ONLY a valid JSON object, no markdown fences. Format: {"label":"Root Topic","children":[{"label":"Subtopic","children":[{"label":"Detail"}]}]}. Use 2-4 top-level children, each with 1-3 sub-children.`,
+      `Create a mind map for this document:\n\n${truncated}`,
+      { maxTokens: 1500, temperature: 0.4 }
+    );
+    try {
+      const cleaned = result.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+      const mindmap = JSON.parse(cleaned);
+      res.json({ mindmap });
+    } catch {
+      res.json({ mindmap: null, raw: result });
+    }
+  } catch (e) {
+    console.error('[AI Mindmap]', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// ── Backlinks Endpoint ──
+app.get('/api/backlinks', (req, res) => {
+  try {
+    const targetPath = req.query.path || '';
+    if (!targetPath) return res.json({ backlinks: [], count: 0 });
+
+    const backlinks = [];
+    const targetBasename = path.basename(targetPath, '.md').toLowerCase();
+    const targetNormalized = targetPath.replace(/\.md$/, '').toLowerCase();
+
+    function scanForBacklinks(dir) {
+      let items;
+      try { items = fs.readdirSync(dir); } catch { return; }
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        let st;
+        try { st = fs.statSync(fullPath); } catch { continue; }
+        if (st.isDirectory()) { scanForBacklinks(fullPath); continue; }
+        if (!item.endsWith('.md')) continue;
+        const relativePath = path.relative(DOCS_ROOT, fullPath);
+        // Skip self
+        if (relativePath === targetPath || relativePath === targetPath + '.md') continue;
+        try {
+          const content = fs.readFileSync(fullPath, 'utf-8');
+          const parsed = matter(content);
+          // Check markdown links [text](target) and wikilinks [[target]]
+          const mdLinkRe = /\[([^\]]*)\]\(([^)]+)\)/g;
+          const wikiLinkRe = /\[\[([^\]]+)\]\]/g;
+          let found = false;
+          let match;
+          while ((match = mdLinkRe.exec(content)) !== null) {
+            const linkTarget = match[2].replace(/\.md$/, '').toLowerCase();
+            if (linkTarget.includes(targetBasename) || linkTarget.includes(targetNormalized)) {
+              found = true;
+              break;
+            }
+          }
+          if (!found) {
+            while ((match = wikiLinkRe.exec(content)) !== null) {
+              const linkTarget = match[1].replace(/\.md$/, '').toLowerCase();
+              if (linkTarget.includes(targetBasename) || linkTarget.includes(targetNormalized)) {
+                found = true;
+                break;
+              }
+            }
+          }
+          if (found) {
+            const title = parsed.data.title || item.replace('.md', '');
+            const excerpt = parsed.content.replace(/^#.+\n/, '').slice(0, 120).trim();
+            backlinks.push({ path: relativePath, title, excerpt });
+          }
+        } catch { /* skip */ }
+      }
+    }
+
+    scanForBacklinks(DOCS_ROOT);
+    res.json({ backlinks, count: backlinks.length });
+  } catch (e) {
+    console.error('[Backlinks]', e.message);
+    res.json({ backlinks: [], count: 0 });
+  }
+});
+
+// ── Auto-discovery: scan codePaths for high-value docs ──
+function autoDiscoverFromCodePaths(registry, existingWithFiles) {
+  const SKIP_DIRS = new Set(['node_modules', '.next', 'build', 'dist', '.git', '.cache', '.turbo', 'coverage', '__pycache__', '.output']);
+  const HIGH_VALUE_PATTERNS = [
+    /^README\.md$/i,
+    /ARCHITECTURE/i,
+    /API[-_]?SPEC/i,
+    /VISION/i,
+    /BUSINESS[-_]?MODEL/i,
+    /SLIDES/i,
+    /SDK/i,
+    /HARDWARE/i,
+    /TODO/i,
+    /ROADMAP/i,
+    /MVP/i,
+    /BUDGET/i,
+    /SETUP/i,
+    /DATA[-_]?MODEL/i,
+    /DESIGN/i,
+    /CHANGELOG/i,
+    /CONTRIBUTING/i,
+    /MIGRATION/i,
+    /DEPLOYMENT/i,
+    /GETTING[-_]?STARTED/i,
+    /OVERVIEW/i,
+    /GUIDE/i,
+    /PROJECT[-_]?REPORT/i,
+    /IMPLEMENTATION/i,
+  ];
+  const SERVICE_README_RE = /\/services?[-_][^/]+\/README\.md$/;
+
+  const result = {}; // productId → [fileObjects]
+  autoDiscoveredFiles.clear();
+
+  for (const product of registry) {
+    if (!product.codePaths || product.codePaths.length === 0) continue;
+    // Skip products that already have curated files from passes 1-3
+    if (existingWithFiles.has(product.id)) continue;
+
+    const files = [];
+    const seenNames = new Set();
+
+    for (const codePath of product.codePaths) {
+      const absBase = path.resolve('/root', codePath.replace(/\/$/, ''));
+      if (!fs.existsSync(absBase)) continue;
+
+      function scan(dir, depth) {
+        if (depth > 6) return;
+        let entries;
+        try { entries = fs.readdirSync(dir); } catch { return; }
+        for (const entry of entries) {
+          const fullPath = path.join(dir, entry);
+          let st;
+          try { st = fs.statSync(fullPath); } catch { continue; }
+
+          if (st.isDirectory()) {
+            if (SKIP_DIRS.has(entry)) continue;
+            scan(fullPath, depth + 1);
+            continue;
+          }
+
+          if (!entry.endsWith('.md')) continue;
+          if (st.size < 1024) continue; // skip stubs < 1KB
+          if (files.length >= 25) return; // cap per product
+          if (seenNames.has(entry.toLowerCase())) continue;
+
+          // Skip service-level monorepo READMEs
+          const relToBase = path.relative(absBase, fullPath);
+          if (SERVICE_README_RE.test('/' + relToBase)) continue;
+
+          // Include if: in /docs/ subdir, or top-level README, or matches high-value pattern
+          const inDocsDir = relToBase.includes('/docs/') || relToBase.includes('\\docs\\') || relToBase.startsWith('docs/') || relToBase.startsWith('docs\\');
+          const isTopReadme = relToBase === 'README.md';
+          const isHighValue = HIGH_VALUE_PATTERNS.some(re => re.test(entry));
+
+          if (!inDocsDir && !isTopReadme && !isHighValue) continue;
+
+          seenNames.add(entry.toLowerCase());
+
+          // Read title from frontmatter
+          let title = entry.replace('.md', '');
+          try {
+            const content = fs.readFileSync(fullPath, 'utf-8');
+            const parsed = matter(content);
+            if (parsed.data.title) title = parsed.data.title;
+          } catch {}
+
+          const virtualPath = `_auto/${product.id}/${entry}`;
+          autoDiscoveredFiles.set(virtualPath, fullPath);
+
+          files.push({
+            name: entry,
+            path: virtualPath,
+            title,
+            size: st.size,
+            category: product.category || 'documentation',
+            source: 'auto',
+          });
+        }
+      }
+      scan(absBase, 0);
+    }
+
+    if (files.length > 0) {
+      result[product.id] = files;
+    }
+  }
+  return result;
+}
 
 // List all projects with metadata from .viewerrc
 app.get('/api/projects', (req, res) => {
@@ -774,6 +1204,92 @@ app.get('/api/projects', (req, res) => {
       }
     } catch(e) {}
 
+    // ── Pass 3.5: Auto-discover docs from codePaths ──
+    try {
+      const registry = getRegistry();
+      const existingWithFiles = new Set(
+        projects.filter(p => (p.files || []).length > 0).map(p => p.id)
+      );
+      const autoFiles = autoDiscoverFromCodePaths(registry, existingWithFiles);
+      for (const [productId, files] of Object.entries(autoFiles)) {
+        const existing = projects.find(p => p.id === productId);
+        if (existing) {
+          // Product exists from passes 1-3 but with 0 files — append
+          existing.files = (existing.files || []).concat(files);
+          existing.fileCount = existing.files.length;
+          existing.hasAutoDiscoveredDocs = true;
+        } else {
+          // Not yet in projects list — will be added by Pass 4
+          // Store temporarily so Pass 4 can pick them up
+          const regEntry = registry.find(r => r.id === productId);
+          if (regEntry) {
+            projects.push({
+              id: productId,
+              path: '',
+              title: regEntry.title || productId,
+              description: regEntry.description || '',
+              category: regEntry.category || 'infra',
+              status: regEntry.status || 'planned',
+              featured: regEntry.featured || false,
+              priority: regEntry.priority || 99,
+              tags: regEntry.tags || [],
+              stats: regEntry.stats || {},
+              files,
+              fileCount: files.length,
+              codePaths: regEntry.codePaths || [],
+              hasAutoDiscoveredDocs: true,
+            });
+          }
+        }
+      }
+    } catch (e) {
+      console.error('Auto-discovery error:', e.message);
+    }
+
+    // ── Pass 4: Merge product registry ──
+    // Registry defines ALL known products with rich metadata.
+    // - If a product was already discovered in passes 1-3, merge registry metadata on top
+    // - If a product was NOT discovered, add it with fileCount 0 (still shows in the portal)
+    try {
+      const registry = getRegistry();
+      for (const reg of registry) {
+        const existing = projects.find(p => p.id === reg.id);
+        if (existing) {
+          // Merge: registry metadata wins (better titles, descriptions, categories)
+          existing.title = reg.title || existing.title;
+          existing.description = reg.description || existing.description;
+          existing.category = reg.category || existing.category;
+          existing.status = reg.status || existing.status;
+          existing.featured = reg.featured != null ? reg.featured : existing.featured;
+          existing.priority = reg.priority != null ? reg.priority : existing.priority;
+          existing.tags = reg.tags && reg.tags.length ? reg.tags : existing.tags;
+          if (reg.stats && Object.keys(reg.stats).length) {
+            existing.stats = { ...existing.stats, ...reg.stats };
+          }
+          existing.codePaths = reg.codePaths || [];
+        } else {
+          // New product from registry — no docs discovered yet
+          projects.push({
+            id: reg.id,
+            path: '',
+            title: reg.title,
+            description: reg.description || '',
+            category: reg.category || 'infra',
+            status: reg.status || 'planned',
+            featured: reg.featured || false,
+            priority: reg.priority || 99,
+            tags: reg.tags || [],
+            stats: reg.stats || {},
+            files: [],
+            fileCount: 0,
+            codePaths: reg.codePaths || [],
+          });
+        }
+      }
+    } catch (e) {
+      console.error('Registry merge error:', e.message);
+    }
+
     // Sort by priority (lower = higher priority), then featured first
     projects.sort((a, b) => {
       if (a.featured && !b.featured) return -1;
@@ -781,7 +1297,19 @@ app.get('/api/projects', (req, res) => {
       return (a.priority || 99) - (b.priority || 99);
     });
 
-    res.json(projects);
+    // Access control: filter hidden files from project listings for public users
+    if (!req.isAdmin) {
+      for (const p of projects) {
+        p.files = access.filterFiles(p.files || [], false);
+        p.fileCount = p.files.length;
+      }
+    }
+
+    // Attach category metadata for frontend grouping
+    const categories = getCategories();
+    const categoryOrder = getCategoryOrder();
+
+    res.json({ projects, categories, categoryOrder, isAdmin: req.isAdmin });
   } catch (error) {
     console.error('Error listing projects:', error);
     res.status(500).json({ error: error.message });
@@ -1038,10 +1566,11 @@ function findDocByTitle(root, targetTitle) {
 app.get('/', (req, res) => res.redirect('/project/documents/'));
 
 // Internal helper: fetch JSON from own API
-function selfFetch(apiPath) {
+function selfFetch(apiPath, headers) {
   return new Promise((resolve) => {
     const http = require('http');
-    http.get(`http://localhost:${PORT}${apiPath}`, (resp) => {
+    const opts = { hostname: 'localhost', port: PORT, path: apiPath, headers: headers || {} };
+    http.get(opts, (resp) => {
       let body = '';
       resp.on('data', c => body += c);
       resp.on('end', () => { try { resolve(JSON.parse(body)); } catch(e) { resolve(null); } });
@@ -1049,25 +1578,94 @@ function selfFetch(apiPath) {
   });
 }
 
+// ── Admin API Endpoints ──
+
+// Get full access config
+app.get('/api/admin/access', (req, res) => {
+  if (!req.isAdmin) return res.status(401).json({ error: 'Unauthorized' });
+  res.json(access.getAccessConfig());
+});
+
+// Toggle document visibility
+app.post('/api/admin/hide', (req, res) => {
+  if (!req.isAdmin) return res.status(401).json({ error: 'Unauthorized' });
+  const { path: docPath, hidden } = req.body || {};
+  if (!docPath) return res.status(400).json({ error: 'path required' });
+  access.setHidden(docPath, hidden !== false);
+  res.json({ success: true, path: docPath, hidden: access.isHidden(docPath) });
+});
+
+// Toggle document download permission
+app.post('/api/admin/download', (req, res) => {
+  if (!req.isAdmin) return res.status(401).json({ error: 'Unauthorized' });
+  const { path: docPath, downloadable } = req.body || {};
+  if (!docPath) return res.status(400).json({ error: 'path required' });
+  access.setDownloadable(docPath, downloadable !== false);
+  res.json({ success: true, path: docPath, downloadable: access.isDownloadable(docPath) });
+});
+
+// Bulk operations
+app.post('/api/admin/bulk', (req, res) => {
+  if (!req.isAdmin) return res.status(401).json({ error: 'Unauthorized' });
+  const { paths, action } = req.body || {};
+  if (!paths || !Array.isArray(paths) || !action) {
+    return res.status(400).json({ error: 'paths (array) and action (hide|show|block-download|allow-download) required' });
+  }
+  let count = 0;
+  for (const p of paths) {
+    if (action === 'hide') { access.setHidden(p, true); count++; }
+    else if (action === 'show') { access.setHidden(p, false); count++; }
+    else if (action === 'block-download') { access.setDownloadable(p, false); count++; }
+    else if (action === 'allow-download') { access.setDownloadable(p, true); count++; }
+  }
+  res.json({ success: true, action, count });
+});
+
+// Knowledge Graph Page: /project/documents/_graph
+app.get('/project/documents/_graph', async (req, res) => {
+  try {
+    const graphData = await selfFetch('/api/knowledge/graph');
+    res.send(knowledgeGraphPage(graphData || { nodes: [], edges: [] }));
+  } catch (err) {
+    res.status(500).send('Error loading graph');
+  }
+});
+
 // Documents Home: /project/documents/
 app.get('/project/documents/', async (req, res) => {
   try {
-    const projects = (await selfFetch('/api/projects')) || [];
-    res.send(documentsHomePage(projects));
+    const data = (await selfFetch('/api/projects')) || {};
+    const projects = data.projects || data || [];
+    const categories = data.categories || {};
+    const categoryOrder = data.categoryOrder || [];
+    res.send(documentsHomePage(projects, categories, categoryOrder));
   } catch (err) {
-    res.send(documentsHomePage([]));
+    res.send(documentsHomePage([], {}, []));
   }
 });
 
 // Project Detail: /project/documents/:id
 app.get('/project/documents/:id', async (req, res) => {
   try {
-    const projects = (await selfFetch('/api/projects')) || [];
+    const adminHeader = req.isAdmin ? { 'x-ankr-admin': process.env.ANKR_ADMIN_KEY || 'ankr-admin-2026' } : {};
+    const data = (await selfFetch('/api/projects', adminHeader)) || {};
+    const projects = data.projects || data || [];
     const project = projects.find(p => p.id === req.params.id);
     if (!project) {
       return res.status(404).send(`<html><body style="background:#0a0a0f;color:#fff;font-family:sans-serif;padding:4rem;text-align:center"><h1>Project not found</h1><a href="/project/documents/" style="color:#7c3aed">Back to docs</a></body></html>`);
     }
-    res.send(projectDetailPage(project, projects.slice(0, 6)));
+    // Annotate files with access info for admin UI
+    if (req.isAdmin) {
+      for (const f of (project.files || [])) {
+        f.isHidden = access.isHidden(f.path);
+        f.downloadable = access.isDownloadable(f.path);
+      }
+    } else {
+      for (const f of (project.files || [])) {
+        f.downloadable = access.isDownloadable(f.path);
+      }
+    }
+    res.send(projectDetailPage(project, projects.slice(0, 6), req.isAdmin));
   } catch (err) {
     res.status(500).send('Error loading project');
   }
@@ -1080,6 +1678,34 @@ app.use('/view', async (req, res, next) => {
   try {
     const docPath = decodeURIComponent(req.path.startsWith('/') ? req.path.slice(1) : req.path);
     if (!docPath) return next();
+
+    // Handle auto-discovered files from codePaths
+    if (docPath.startsWith('_auto/')) {
+      const absPath = autoDiscoveredFiles.get(docPath);
+      if (!absPath || !fs.existsSync(absPath)) {
+        return res.status(404).send(`<html><body style="background:#0a0a0f;color:#fff;font-family:sans-serif;padding:4rem;text-align:center"><h1>Document not found</h1><p style="color:#666">${docPath.replace(/</g,'&lt;')}</p><a href="/project/documents/" style="color:#7c3aed">Back to docs</a></body></html>`);
+      }
+      const content = fs.readFileSync(absPath, 'utf-8');
+      const parsed = matter(content);
+      const fileName = path.basename(absPath);
+      const doc = {
+        title: parsed.data.title || fileName.replace('.md', ''),
+        content: parsed.content,
+        frontmatter: parsed.data,
+        fileName,
+        path: docPath,
+        downloadable: false,
+        isAdmin: req.isAdmin,
+        isHidden: false,
+      };
+      let relatedDocs = [];
+      try {
+        const relData = await selfFetch(`/api/search/related?path=${encodeURIComponent(docPath)}&limit=5`);
+        relatedDocs = relData?.results || [];
+      } catch(e) {}
+      return res.send(documentViewerPage(doc, relatedDocs));
+    }
+
     const fullPath = path.join(DOCS_ROOT, docPath);
 
     if (!fullPath.startsWith(DOCS_ROOT)) {
@@ -1100,9 +1726,17 @@ app.use('/view', async (req, res, next) => {
       return res.status(404).send(`<html><body style="background:#0a0a0f;color:#fff;font-family:sans-serif;padding:4rem;text-align:center"><h1>Document not found</h1><p style="color:#666">${docPath.replace(/</g,'&lt;')}</p><a href="/project/documents/" style="color:#7c3aed">Back to docs</a></body></html>`);
     }
 
+    // Access control: hidden docs return 404 for public users
+    const relPath = path.relative(DOCS_ROOT, resolvedPath);
+    if (!req.isAdmin && access.isHidden(relPath)) {
+      return res.status(404).send(`<html><body style="background:#0a0a0f;color:#fff;font-family:sans-serif;padding:4rem;text-align:center"><h1>Document not found</h1><p style="color:#666">${docPath.replace(/</g,'&lt;')}</p><a href="/project/documents/" style="color:#7c3aed">Back to docs</a></body></html>`);
+    }
+
     const content = fs.readFileSync(resolvedPath, 'utf-8');
     const parsed = matter(content);
     const fileName = path.basename(resolvedPath);
+
+    const downloadable = req.isAdmin || access.isDownloadable(relPath);
 
     const doc = {
       title: parsed.data.title || fileName.replace('.md', ''),
@@ -1110,6 +1744,9 @@ app.use('/view', async (req, res, next) => {
       frontmatter: parsed.data,
       fileName,
       path: docPath,
+      downloadable,
+      isAdmin: req.isAdmin,
+      isHidden: access.isHidden(relPath),
     };
 
     // Fetch related docs
