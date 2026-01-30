@@ -99,6 +99,32 @@ html.light .callout-warning{background:#fffbeb;color:#92400e}
 html.light .callout-tip{background:#f0fdf4;color:#166534}
 html.light .callout-important{background:#fef2f2;color:#991b1b}
 html.light footer{border-color:#e5e7eb;color:#9ca3af}
+
+/* Light theme: general page overrides */
+html.light .text-white{color:#111827!important}
+html.light .text-gray-200{color:#374151!important}
+html.light .text-gray-300{color:#4b5563!important}
+html.light .text-gray-400{color:#6b7280!important}
+html.light .text-gray-500{color:#9ca3af!important}
+html.light .text-gray-600{color:#d1d5db!important}
+html.light .bg-card,html.light .bg-surface{background:#fff!important}
+html.light .border-border{border-color:#e5e7eb!important}
+html.light .bg-surface\/50{background:rgba(255,255,255,0.5)!important}
+html.light input,html.light select,html.light textarea{background:#f9fafb!important;border-color:#d1d5db!important;color:#111827!important}
+html.light input::placeholder{color:#9ca3af!important}
+html.light kbd{background:#e5e7eb!important;color:#6b7280!important}
+html.light .bg-white\/5,html.light .bg-white\/\[0\.02\],html.light .bg-white\/\[0\.03\],html.light .bg-white\/\[0\.04\]{background:rgba(0,0,0,0.03)!important}
+html.light .bg-white\/10,html.light .bg-white\/15{background:rgba(0,0,0,0.06)!important}
+html.light .border-white\/5,html.light .border-white\/10,html.light .border-white\/15{border-color:rgba(0,0,0,0.08)!important}
+html.light .divide-white\/5>*+*{border-color:rgba(0,0,0,0.06)!important}
+html.light .hover\:bg-white\/\[0\.04\]:hover{background:rgba(0,0,0,0.04)!important}
+html.light .hover\:bg-white\/\[0\.03\]:hover{background:rgba(0,0,0,0.03)!important}
+html.light .hover\:bg-white\/10:hover{background:rgba(0,0,0,0.06)!important}
+html.light .hover\:text-white:hover{color:#111827!important}
+html.light .hover\:text-gray-300:hover{color:#374151!important}
+html.light .shadow-2xl{box-shadow:0 25px 50px -12px rgba(0,0,0,0.15)!important}
+html.light #search-modal{background:rgba(0,0,0,0.3)!important}
+html.light .bg-black\/70{background:rgba(0,0,0,0.3)!important}
 </style>
 <script>(function(){var t=localStorage.getItem('ankr-theme')||'dark';document.documentElement.className=t;})()</script>
 ${extra}
@@ -232,7 +258,7 @@ function renderSearchResults(data, query) {
 }
 
 function searchResultItem(doc, query) {
-  const isProject = doc._isProject || doc.path.match(/^project\/documents\/[^/]+$/);
+  const isProject = doc._isProject || (doc.path.startsWith('project/documents/') && doc.path.split('/').length === 3);
   const href = isProject ? '/' + doc.path : '/view/' + encodeURIComponent(doc.path);
   const icon = isProject
     ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" class="mt-0.5 flex-shrink-0"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>'
