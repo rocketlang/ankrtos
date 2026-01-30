@@ -1,0 +1,322 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// === Auth & Tenant ===
+
+model Organization {
+  id        String   @id @default(cuid())
+  name      String
+  code      String   @unique
+  type      String   @default("shipowner") // shipowner, charterer, broker, agent, cha
+  country   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  users    User[]
+  vessels  Vessel[]
+  charters Charter[]
+  companies Company[]
+
+  @@map("organizations")
+}
+
+model User {
+  id             String   @id @default(cuid())
+  email          String   @unique
+  name           String
+  passwordHash   String
+  role           String   @default("operator") // admin, manager, operator, viewer
+  organizationId String
+  isActive       Boolean  @default(true)
+  lastLoginAt    DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  vendorRatings VendorRating[]
+
+  @@map("users")
+}
+
+// === Maritime Core ===
+
+model Vessel {
+  id             String   @id @default(cuid())
+  imo            String   @unique // IMO number (7 digits)
+  name           String
+  type           String   // bulk_carrier, tanker, container, general_cargo, etc.
+  flag           String   // Country flag (ISO 3166-1 alpha-2)
+  classificationSociety String? // DNV, LR, BV, ABS, etc.
+  dwt            Float?   // Deadweight tonnage
+  grt            Float?   // Gross registered tonnage
+  nrt            Float?   // Net registered tonnage
+  loa            Float?   // Length overall (meters)
+  beam           Float?   // Beam (meters)
+  draft          Float?   // Draft (meters)
+  yearBuilt      Int?
+  status         String   @default("active") // active, laid_up, scrapped
+  organizationId String
+
+  organization Organization @relation(fields: [organizationId], references: [id])
+  voyages      Voyage[]
+  charters     Charter[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("vessels")
+}
+
+model Port {
+  id        String  @id @default(cuid())
+  unlocode  String  @unique // UN/LOCODE (e.g., INMUN, SGSIN)
+  name      String
+  country   String  // ISO 3166-1 alpha-2
+  latitude  Float?
+  longitude Float?
+  timezone  String? // IANA timezone
+  type      String  @default("seaport") // seaport, river_port, dry_port, anchorage
+
+  voyageDepartures    Voyage[]            @relation("DeparturePort")
+  voyageArrivals      Voyage[]            @relation("ArrivalPort")
+  milestones          VoyageMilestone[]
+  disbursementAccounts DisbursementAccount[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("ports")
+}
+
+model Company {
+  id             String   @id @default(cuid())
+  name           String
+  type           String   // charterer, owner, broker, agent, cha, bunker_supplier, stevedore
+  country        String?
+  address        String?
+  contactEmail   String?
+  contactPhone   String?
+  organizationId String
+
+  organization  Organization @relation(fields: [organizationId], references: [id])
+  chartersAsCharterer Charter[] @relation("Charterer")
+  chartersAsBroker    Charter[] @relation("Broker")
+  vendorRatings       VendorRating[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("companies")
+}
+
+model Cargo {
+  id          String  @id @default(cuid())
+  commodity   String  // e.g., "Iron Ore Fines", "Wheat", "Crude Oil"
+  hsCode      String? // Harmonized System code
+  quantity    Float   // In MT (metric tonnes)
+  packaging   String  @default("bulk") // bulk, bagged, containerized, liquid
+  description String?
+
+  charterParties CharterParty[]
+  voyages        Voyage[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("cargoes")
+}
+
+// === Chartering ===
+
+model Charter {
+  id             String   @id @default(cuid())
+  reference      String   @unique // Internal reference number
+  type           String   // voyage, time, bareboat, coa
+  status         String   @default("draft") // draft, on_subs, fixed, executed, completed, cancelled
+  vesselId       String?
+  chartererId    String?
+  brokerId       String?
+  organizationId String
+  laycanStart    DateTime? // Laydays cancelling start
+  laycanEnd      DateTime? // Laydays cancelling end
+  fixtureDate    DateTime?
+  freightRate    Float?
+  freightUnit    String?   // per_mt, lumpsum, daily
+  currency       String    @default("USD")
+  notes          String?
+
+  vessel       Vessel?       @relation(fields: [vesselId], references: [id])
+  charterer    Company?      @relation("Charterer", fields: [chartererId], references: [id])
+  broker       Company?      @relation("Broker", fields: [brokerId], references: [id])
+  organization Organization  @relation(fields: [organizationId], references: [id])
+  charterParty CharterParty?
+  voyages      Voyage[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("charters")
+}
+
+model CharterParty {
+  id         String  @id @default(cuid())
+  charterId  String  @unique
+  formType   String? // GENCON, ASBATANKVOY, BALTIME, SHELLVOY, etc.
+  content    String? // Full C/P text (markdown or structured)
+  cargoId    String?
+  loadPort   String?
+  dischargePort String?
+
+  charter Charter @relation(fields: [charterId], references: [id])
+  cargo   Cargo?  @relation(fields: [cargoId], references: [id])
+  clauses CharterPartyClauses[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("charter_parties")
+}
+
+model Clause {
+  id       String @id @default(cuid())
+  code     String @unique // e.g., "BIMCO-WAR", "GENCON-CL42"
+  title    String
+  body     String // Clause text
+  category String // demurrage, laytime, insurance, war, ice, piracy, etc.
+  source   String? // BIMCO, P&I, custom
+
+  charterPartyClauses CharterPartyClauses[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("clauses")
+}
+
+model CharterPartyClauses {
+  id             String @id @default(cuid())
+  charterPartyId String
+  clauseId       String
+  orderIndex     Int    @default(0)
+  amendments     String? // Any amendments to standard clause
+
+  charterParty CharterParty @relation(fields: [charterPartyId], references: [id])
+  clause       Clause       @relation(fields: [clauseId], references: [id])
+
+  @@unique([charterPartyId, clauseId])
+  @@map("charter_party_clauses")
+}
+
+// === Voyage ===
+
+model Voyage {
+  id              String   @id @default(cuid())
+  voyageNumber    String   @unique
+  vesselId        String
+  charterId       String?
+  cargoId         String?
+  departurePortId String?
+  arrivalPortId   String?
+  status          String   @default("planned") // planned, in_progress, completed, cancelled
+  etd             DateTime? // Estimated time of departure
+  eta             DateTime? // Estimated time of arrival
+  atd             DateTime? // Actual time of departure
+  ata             DateTime? // Actual time of arrival
+
+  vessel        Vessel    @relation(fields: [vesselId], references: [id])
+  charter       Charter?  @relation(fields: [charterId], references: [id])
+  cargo         Cargo?    @relation(fields: [cargoId], references: [id])
+  departurePort Port?     @relation("DeparturePort", fields: [departurePortId], references: [id])
+  arrivalPort   Port?     @relation("ArrivalPort", fields: [arrivalPortId], references: [id])
+  milestones    VoyageMilestone[]
+  disbursementAccounts DisbursementAccount[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("voyages")
+}
+
+model VoyageMilestone {
+  id        String   @id @default(cuid())
+  voyageId  String
+  portId    String?
+  type      String   // departure, arrival, nor_tendered, berthed, loading_commenced,
+                     // loading_completed, discharge_commenced, discharge_completed, sailed
+  planned   DateTime?
+  actual    DateTime?
+  notes     String?
+
+  voyage Voyage @relation(fields: [voyageId], references: [id])
+  port   Port?  @relation(fields: [portId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("voyage_milestones")
+}
+
+// === DA Desk ===
+
+model DisbursementAccount {
+  id        String @id @default(cuid())
+  voyageId  String
+  portId    String
+  type      String @default("pda") // pda (proforma), fda (final)
+  status    String @default("draft") // draft, submitted, approved, disputed, settled
+  currency  String @default("USD")
+  totalAmount Float @default(0)
+  notes     String?
+
+  voyage    Voyage @relation(fields: [voyageId], references: [id])
+  port      Port   @relation(fields: [portId], references: [id])
+  lineItems DaLineItem[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("disbursement_accounts")
+}
+
+model DaLineItem {
+  id                    String @id @default(cuid())
+  disbursementAccountId String
+  category              String // port_dues, pilotage, towage, berth_hire, agency_fee, etc.
+  description           String
+  amount                Float
+  currency              String @default("USD")
+  tariffReference       String? // Reference to official tariff
+  notes                 String?
+
+  disbursementAccount DisbursementAccount @relation(fields: [disbursementAccountId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("da_line_items")
+}
+
+// === Vendor ===
+
+model VendorRating {
+  id        String @id @default(cuid())
+  companyId String
+  userId    String // Rated by
+  rating    Int    // 1-5
+  category  String // reliability, cost, communication, speed
+  comment   String?
+
+  company Company @relation(fields: [companyId], references: [id])
+  user    User    @relation(fields: [userId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("vendor_ratings")
+}
