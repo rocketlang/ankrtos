@@ -11,6 +11,7 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
+const { execSync } = require('child_process');
 const eonClient = require('./ankr-viewer-eon-client');
 const { getRegistry, getCategories, getCategoryOrder } = require('./ankr-product-registry');
 const access = require('./ankr-viewer-access');
@@ -21,6 +22,23 @@ const autoDiscoveredFiles = new Map(); // virtual path → absolute path
 const app = express();
 const PORT = process.env.PORT || process.env.ANKR_VIEWER_PORT || 3080;
 const DOCS_ROOT = process.env.DOCS_ROOT || '/root/ankr-universe-docs';
+
+// Pratham QA Book (268 pages, chunked & vectorized)
+const PRATHAM_BOOK_PDF = '/root/ankr-labs-nx/packages/ankr-interact/data/pdfs/6 Bookset QA - Comprehensive Book with First page (ISBN).pdf';
+const PRATHAM_BOOK_ID = 'pratham-1769195982617-92x93sy70';
+
+// Cache for extracted PDF text
+let _prathamBookTextCache = null;
+function getPrathamBookText() {
+  if (_prathamBookTextCache) return _prathamBookTextCache;
+  try {
+    _prathamBookTextCache = execSync(`pdftotext "${PRATHAM_BOOK_PDF}" -`, { maxBuffer: 50 * 1024 * 1024, encoding: 'utf-8' });
+    return _prathamBookTextCache;
+  } catch (e) {
+    console.error('Failed to extract PDF text:', e.message);
+    return null;
+  }
+}
 
 // Middleware
 app.use(cors());
@@ -650,6 +668,10 @@ async function callAI(systemPrompt, userPrompt, options = {}) {
 }
 
 function readDocContent(docPath) {
+  // Special: Pratham QA book (vectorized PDF)
+  if (docPath === '_book/pratham-qa') {
+    return getPrathamBookText();
+  }
   // Try direct path
   let fullPath = path.join(DOCS_ROOT, docPath);
   if (fs.existsSync(fullPath) && !fs.statSync(fullPath).isDirectory()) {
@@ -1712,7 +1734,25 @@ app.get('/project/documents/pratham/_showcase', (req, res) => {
         });
       }
     }
-    res.send(prathamShowcasePage(files));
+    // Book metadata for the 268-page QA textbook
+    const book = {
+      id: PRATHAM_BOOK_ID,
+      title: 'Comprehensive Book on Quantitative Aptitude',
+      subtitle: 'For Undergraduate Entrance Exams',
+      isbn: '978-81-19992-59-1',
+      pages: 268,
+      editions: 17,
+      editionRange: '2009\u20132025',
+      price: '\u20B93,950',
+      publisher: 'PRATHAM Test Prep',
+      publisherFull: 'PRATHAM Test Prep, a unit of International Institute of Financial Markets Limited',
+      address: 'HS 13, 2nd Floor, Kailash Colony Main Market, Delhi 110048',
+      sizeMB: '4.8',
+      path: '_book/pratham-qa',
+      thumbnailUrl: '/ankr-interact/data/thumbnails/6 Bookset QA - Comprehensive Book with First page (ISBN).jpg',
+      chunking: { chunkSize: 2000, overlap: 200, model: 'nomic-embed-text' },
+    };
+    res.send(prathamShowcasePage(files, book));
   } catch (err) {
     console.error('Error rendering Pratham showcase:', err);
     res.status(500).send('Error loading showcase');
@@ -1840,6 +1880,7 @@ app.use('/view', async (req, res, next) => {
 
 // Static file serving for direct access
 app.use('/docs', express.static(DOCS_ROOT));
+app.use('/ankr-interact/data', express.static('/root/ankr-labs-nx/packages/ankr-interact/data'));
 
 // Auto-ingest all docs into eon on startup
 async function autoIngestDocs() {

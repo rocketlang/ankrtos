@@ -1371,8 +1371,9 @@ fetch('/api/recent', { method: 'POST', headers: { 'Content-Type': 'application/j
 // ============================================
 // PAGE: Pratham Showcase (/project/documents/pratham/_showcase)
 // ============================================
-function prathamShowcasePage(files) {
+function prathamShowcasePage(files, book) {
   files = files || [];
+  book = book || {};
   const fileCount = files.length;
 
   const docOptions = files.map(f =>
@@ -1391,38 +1392,80 @@ function prathamShowcasePage(files) {
     </a>
   `).join('');
 
-  return htmlHead('Pratham Education x ANKR AI Tutor') + `
+  return htmlHead('Pratham QA Book \u00D7 ANKR AI Tutor') + `
 <body class="min-h-screen">
 ${navbar()}
 ${searchModal()}
 
 <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-  <!-- Hero Section -->
-  <div class="text-center mb-12">
-    <div class="inline-block px-3 py-1 bg-brand/20 text-brand text-xs font-medium rounded-full mb-4">AI-Powered Education</div>
-    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">Pratham Education x ANKR AI Tutor</h1>
-    <p class="text-gray-400 max-w-2xl mx-auto mb-6">Experience AI-powered learning with 8 distinct modes — from instant summaries and quizzes to Fermi estimation exercises and Socratic guided discovery.</p>
-    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm">
-      <div class="text-center"><div class="text-2xl font-bold text-white">${fileCount}</div><div class="text-gray-500 text-xs">Documents</div></div>
-      <div class="text-center"><div class="text-2xl font-bold text-white">268</div><div class="text-gray-500 text-xs">Page PDF</div></div>
-      <div class="text-center"><div class="text-2xl font-bold text-white">8</div><div class="text-gray-500 text-xs">AI Modes</div></div>
-      <div class="text-center"><div class="text-2xl font-bold text-amber-400">72.8%</div><div class="text-gray-500 text-xs">Cost Savings</div></div>
+  <!-- Hero Section: Book Focus -->
+  <div class="mb-12">
+    <div class="glass rounded-2xl border border-brand/20 overflow-hidden">
+      <div class="flex flex-col md:flex-row">
+        <!-- Book Cover -->
+        <div class="md:w-64 flex-shrink-0 bg-gradient-to-br from-brand/10 to-amber-500/10 flex items-center justify-center p-8">
+          ${book.thumbnailUrl
+            ? `<img src="${esc(book.thumbnailUrl)}" alt="Book Cover" class="w-44 rounded-lg shadow-2xl border border-white/10" onerror="this.parentElement.innerHTML='<div class=\\'w-44 h-56 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-6xl\\'>\\uD83D\\uDCD8</div>'">`
+            : '<div class="w-44 h-56 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-6xl">\\uD83D\\uDCD8</div>'}
+        </div>
+        <!-- Book Details -->
+        <div class="flex-1 p-6 sm:p-8">
+          <div class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-medium rounded-full mb-3">Chunked &amp; Vectorized \u2022 RAG-Ready</div>
+          <h1 class="text-2xl sm:text-3xl font-bold text-white mb-2">${esc(book.title || 'Quantitative Aptitude')}</h1>
+          <p class="text-gray-400 mb-4">${esc(book.subtitle || 'For Undergraduate Entrance Exams')}</p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-5">
+            <div><div class="text-xl font-bold text-white">${book.pages || 268}</div><div class="text-gray-500 text-xs">Pages</div></div>
+            <div><div class="text-xl font-bold text-white">${book.editions || 17}</div><div class="text-gray-500 text-xs">Editions (${esc(book.editionRange || '2009\u20132025')})</div></div>
+            <div><div class="text-xl font-bold text-white">8</div><div class="text-gray-500 text-xs">AI Modes</div></div>
+            <div><div class="text-xl font-bold text-amber-400">72.8%</div><div class="text-gray-500 text-xs">Cost Savings vs Fermi.ai</div></div>
+          </div>
+          <div class="flex flex-wrap gap-3 text-xs text-gray-400">
+            <span class="bg-white/5 px-2.5 py-1 rounded-full">ISBN: ${esc(book.isbn || '978-81-19992-59-1')}</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded-full">${esc(book.publisher || 'PRATHAM Test Prep')}</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded-full">${esc(book.price || '\u20B93,950')}</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded-full">${esc(book.sizeMB || '4.8')} MB PDF</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Live AI Demo Section -->
-  <div class="glass rounded-2xl p-6 mb-10 border border-brand/20">
-    <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2V6a4 4 0 0 1 4-4z"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></svg>
-      Live AI Demo
-    </h2>
-    <div class="mb-4">
-      <label class="text-xs text-gray-400 mb-1 block">Select a Pratham document:</label>
-      <select id="showcase-doc" class="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2.5 text-sm text-gray-200 outline-none focus:border-brand/50 transition-colors">
-        <option value="">-- Choose a document --</option>
-        ${docOptions}
-      </select>
+  <!-- RAG Pipeline Visualization -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-4">RAG Pipeline: How the Book Was Processed</h2>
+    <div class="glass rounded-xl p-5 border border-white/10">
+      <div class="flex flex-wrap items-center justify-center gap-2 text-sm">
+        <div class="bg-blue-500/15 text-blue-400 px-4 py-2.5 rounded-lg font-medium text-center">
+          <div class="text-lg mb-0.5">\uD83D\uDCD6</div>PDF Upload<div class="text-[10px] text-blue-400/60 mt-0.5">${book.pages || 268} pages</div>
+        </div>
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" class="text-gray-600 flex-shrink-0"><path d="M2 8h18m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="bg-purple-500/15 text-purple-400 px-4 py-2.5 rounded-lg font-medium text-center">
+          <div class="text-lg mb-0.5">\u2702\uFE0F</div>Text Chunking<div class="text-[10px] text-purple-400/60 mt-0.5">${book.chunking ? book.chunking.chunkSize : 2000} chars / ${book.chunking ? book.chunking.overlap : 200} overlap</div>
+        </div>
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" class="text-gray-600 flex-shrink-0"><path d="M2 8h18m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="bg-amber-500/15 text-amber-400 px-4 py-2.5 rounded-lg font-medium text-center">
+          <div class="text-lg mb-0.5">\uD83E\uDDE0</div>Embeddings<div class="text-[10px] text-amber-400/60 mt-0.5">${esc((book.chunking && book.chunking.model) || 'nomic-embed-text')}</div>
+        </div>
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" class="text-gray-600 flex-shrink-0"><path d="M2 8h18m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="bg-emerald-500/15 text-emerald-400 px-4 py-2.5 rounded-lg font-medium text-center">
+          <div class="text-lg mb-0.5">\uD83D\uDDC4\uFE0F</div>pgvector Store<div class="text-[10px] text-emerald-400/60 mt-0.5">PostgreSQL + vector</div>
+        </div>
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" class="text-gray-600 flex-shrink-0"><path d="M2 8h18m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="bg-brand/15 text-brand px-4 py-2.5 rounded-lg font-medium text-center">
+          <div class="text-lg mb-0.5">\uD83E\uDD16</div>AI Tutor<div class="text-[10px] text-brand/60 mt-0.5">8 modes ready</div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Live AI Demo Section (Book-Focused) -->
+  <div class="glass rounded-2xl p-6 mb-10 border border-brand/20">
+    <h2 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2V6a4 4 0 0 1 4-4z"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></svg>
+      Live AI Demo \u2014 Quantitative Aptitude Book
+    </h2>
+    <p class="text-xs text-gray-500 mb-4">All 8 AI modes running on the ${book.pages || 268}-page vectorized textbook. Try each mode below.</p>
+    <input type="hidden" id="showcase-doc" value="${esc(book.path || '_book/pratham-qa')}">
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
       <button onclick="showcaseAction('summary')" class="px-3 py-2 bg-brand/20 hover:bg-brand/30 text-brand rounded-lg text-sm transition-colors font-medium">Summary</button>
       <button onclick="showcaseAction('keypoints')" class="px-3 py-2 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 rounded-lg text-sm transition-colors font-medium">Key Points</button>
@@ -1436,19 +1479,19 @@ ${searchModal()}
     <!-- Socratic input (shown only for socratic mode) -->
     <div id="showcase-socratic-input" class="hidden mb-4">
       <div class="flex gap-2">
-        <input id="showcase-socratic-msg" type="text" placeholder="Ask a question for Socratic guidance..." class="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-emerald-500/50 transition-colors" onkeydown="if(event.key==='Enter')showcaseSocratic()">
+        <input id="showcase-socratic-msg" type="text" placeholder="e.g. How do I find the HCF of two numbers?" class="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-emerald-500/50 transition-colors" onkeydown="if(event.key==='Enter')showcaseSocratic()">
         <button onclick="showcaseSocratic()" class="px-3 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm transition-colors">Send</button>
       </div>
     </div>
     <!-- Chat input (shown only for chat mode) -->
     <div id="showcase-chat-input" class="hidden mb-4">
       <div class="flex gap-2">
-        <input id="showcase-chat-msg" type="text" placeholder="Ask about the document..." class="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-brand/50 transition-colors" onkeydown="if(event.key==='Enter')showcaseChat()">
+        <input id="showcase-chat-msg" type="text" placeholder="e.g. Explain compound interest formula..." class="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-brand/50 transition-colors" onkeydown="if(event.key==='Enter')showcaseChat()">
         <button onclick="showcaseChat()" class="px-3 py-2 bg-brand hover:bg-brand/80 text-white rounded-lg text-sm transition-colors">Send</button>
       </div>
     </div>
-    <div id="showcase-results" class="min-h-[100px] rounded-lg bg-white/[0.02] border border-white/5 p-4">
-      <div class="text-sm text-gray-600 text-center py-4">Select a document and click an AI mode above to see it in action</div>
+    <div id="showcase-results" class="min-h-[100px] max-h-[400px] overflow-y-auto rounded-lg bg-white/[0.02] border border-white/5 p-4">
+      <div class="text-sm text-gray-600 text-center py-4">Click any AI mode above to demo it on the QA textbook</div>
     </div>
   </div>
 
@@ -1469,14 +1512,15 @@ ${searchModal()}
           <tr><td class="p-3 border border-white/10 text-gray-300">Devices</td><td class="p-3 border border-white/10 text-gray-400">Web browser</td><td class="p-3 border border-brand/10 text-gray-200">Web + Mobile + Offline</td></tr>
           <tr><td class="p-3 border border-white/10 text-gray-300">Languages</td><td class="p-3 border border-white/10 text-gray-400">English only</td><td class="p-3 border border-brand/10 text-gray-200">Hindi + 10 Indian languages</td></tr>
           <tr><td class="p-3 border border-white/10 text-gray-300">AI Modes</td><td class="p-3 border border-white/10 text-gray-400">3 (Summary, Quiz, Chat)</td><td class="p-3 border border-brand/10 text-gray-200">8 modes (+ Fermi, Socratic, Flashcards, Mind Map, Key Points)</td></tr>
-          <tr><td class="p-3 border border-white/10 text-gray-300">Custom Content</td><td class="p-3 border border-white/10 text-gray-400">Limited PDF upload</td><td class="p-3 border border-brand/10 text-gray-200">Full PDF/document ingestion + knowledge base</td></tr>
+          <tr><td class="p-3 border border-white/10 text-gray-300">Custom Content</td><td class="p-3 border border-white/10 text-gray-400">Limited PDF upload</td><td class="p-3 border border-brand/10 text-gray-200">Full PDF chunking + vector embeddings + RAG</td></tr>
+          <tr><td class="p-3 border border-white/10 text-gray-300">Book Support</td><td class="p-3 border border-white/10 text-gray-400">No textbook ingestion</td><td class="p-3 border border-brand/10 text-gray-200">${book.pages || 268}-page PDF \u2192 chunked \u2192 vectorized \u2192 8 AI modes</td></tr>
           <tr><td class="p-3 border border-white/10 text-gray-300">Analytics</td><td class="p-3 border border-white/10 text-gray-400">Basic</td><td class="p-3 border border-brand/10 text-gray-200">Teacher dashboard + student progress tracking</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- Pedagogical Approach Cards -->
+  <!-- Pedagogical Approach Cards (Math-focused) -->
   <div class="mb-10">
     <h2 class="text-lg font-bold text-white mb-4">Pedagogical Approaches</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -1485,10 +1529,10 @@ ${searchModal()}
           <div class="w-8 h-8 rounded-lg bg-brand/20 flex items-center justify-center text-brand text-sm font-bold">E</div>
           <h3 class="font-semibold text-white">Explain Mode</h3>
         </div>
-        <p class="text-sm text-gray-400 mb-3">Direct step-by-step explanations tailored to the student's level.</p>
+        <p class="text-sm text-gray-400 mb-3">Direct step-by-step explanations for quantitative aptitude concepts.</p>
         <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-2">
-          <div class="text-brand">Student: "What is photosynthesis?"</div>
-          <div class="text-gray-300">AI: "Photosynthesis is how plants make food from sunlight. Here are the 3 key steps: 1) Light absorption..."</div>
+          <div class="text-brand">Student: "How do I find LCM of 12 and 18?"</div>
+          <div class="text-gray-300">AI: "Step 1: Prime factorize \u2014 12 = 2\u00B2\u00D73, 18 = 2\u00D73\u00B2. Step 2: Take highest power of each: 2\u00B2\u00D73\u00B2 = 36. LCM = 36."</div>
         </div>
       </div>
       <div class="glass rounded-xl p-5 border border-emerald-500/20">
@@ -1496,10 +1540,10 @@ ${searchModal()}
           <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-sm font-bold">S</div>
           <h3 class="font-semibold text-white">Socratic Mode</h3>
         </div>
-        <p class="text-sm text-gray-400 mb-3">Guided discovery through probing questions — never gives direct answers.</p>
+        <p class="text-sm text-gray-400 mb-3">Guided discovery through probing questions \u2014 never gives direct answers.</p>
         <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-2">
-          <div class="text-emerald-400">Student: "What is photosynthesis?"</div>
-          <div class="text-gray-300">AI: "What do you think plants need to grow? Where does a plant get its energy from?"</div>
+          <div class="text-emerald-400">Student: "What is probability?"</div>
+          <div class="text-gray-300">AI: "When you flip a coin, how many possible outcomes are there? And how many of those are \u2018heads\u2019? What ratio does that give you?"</div>
         </div>
       </div>
       <div class="glass rounded-xl p-5 border border-amber-500/20">
@@ -1509,24 +1553,40 @@ ${searchModal()}
         </div>
         <p class="text-sm text-gray-400 mb-3">Real-world estimation exercises that build quantitative intuition.</p>
         <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-2">
-          <div class="text-amber-400">Exercise: "How many leaves does a typical neem tree have?"</div>
-          <div class="text-gray-300">Step 1: Estimate branches (~50). Step 2: Twigs per branch (~20). Step 3: Leaves per twig (~10)...</div>
+          <div class="text-amber-400">Exercise: "How many math problems can a student solve in one year?"</div>
+          <div class="text-gray-300">Step 1: Study days \u2248 300. Step 2: Problems/day \u2248 20. Step 3: Total \u2248 6,000 problems/year.</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Document Grid -->
+  <!-- Book Topics (what's inside the QA book) -->
   <div class="mb-10">
-    <h2 class="text-lg font-bold text-white mb-4">Pratham Documents (${fileCount})</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-      ${docGrid || '<div class="col-span-full text-center text-gray-600 py-8">No documents found</div>'}
+    <h2 class="text-lg font-bold text-white mb-4">Topics Covered in the Book</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+      ${['Number System', 'HCF & LCM', 'Percentages', 'Profit & Loss', 'Simple & Compound Interest', 'Ratio & Proportion', 'Time & Work', 'Speed, Time & Distance', 'Algebra', 'Linear Equations', 'Quadratic Equations', 'Progressions (AP/GP)', 'Permutation & Combination', 'Probability', 'Geometry & Mensuration', 'Data Interpretation'].map(topic => `
+        <div class="glass rounded-lg px-4 py-3 border border-white/5 hover:border-brand/20 transition-colors">
+          <div class="text-sm text-gray-200">${topic}</div>
+        </div>
+      `).join('')}
     </div>
+  </div>
+
+  <!-- Also: Supplementary Documents -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-2">Supplementary Documents</h2>
+    <p class="text-xs text-gray-500 mb-4">${fileCount} Pratham project documents (demos, proposals, guides)</p>
+    <details class="group">
+      <summary class="cursor-pointer text-sm text-brand hover:text-brand/80 transition-colors mb-3">Show ${fileCount} documents \u25BE</summary>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-3">
+        ${docGrid || '<div class="col-span-full text-center text-gray-600 py-8">No documents found</div>'}
+      </div>
+    </details>
   </div>
 </main>
 
 <footer class="border-t border-border mt-16 py-6 text-center text-xs text-gray-600">
-  ANKR Labs &middot; Pratham Education x AI Tutor Showcase
+  ANKR Labs &middot; Pratham Test Prep QA Book \u00D7 AI Tutor Showcase
 </footer>
 
 <script>
@@ -1535,7 +1595,7 @@ var showcaseChatHistory = [];
 
 function getSelectedDoc() {
   var sel = document.getElementById('showcase-doc');
-  if (!sel || !sel.value) { alert('Please select a document first'); return null; }
+  if (!sel || !sel.value) { alert('No document configured'); return null; }
   return sel.value;
 }
 
@@ -1548,8 +1608,8 @@ function showcaseAction(mode) {
   if (!docPath) return;
   document.getElementById('showcase-socratic-input').classList.add('hidden');
   document.getElementById('showcase-chat-input').classList.add('hidden');
-  if (mode === 'socratic') { document.getElementById('showcase-socratic-input').classList.remove('hidden'); showcaseSocraticHistory = []; document.getElementById('showcase-results').innerHTML = '<div class="text-sm text-emerald-400/70 text-center py-8">Type a question below — the Socratic tutor will guide you to the answer</div>'; return; }
-  if (mode === 'chat') { document.getElementById('showcase-chat-input').classList.remove('hidden'); showcaseChatHistory = []; document.getElementById('showcase-results').innerHTML = '<div class="text-sm text-gray-500 text-center py-8">Type a question below to chat about the document</div>'; return; }
+  if (mode === 'socratic') { document.getElementById('showcase-socratic-input').classList.remove('hidden'); showcaseSocraticHistory = []; document.getElementById('showcase-results').innerHTML = '<div class="text-sm text-emerald-400/70 text-center py-8">Ask a Quantitative Aptitude question below \u2014 the Socratic tutor will guide you to discover the answer</div>'; return; }
+  if (mode === 'chat') { document.getElementById('showcase-chat-input').classList.remove('hidden'); showcaseChatHistory = []; document.getElementById('showcase-results').innerHTML = '<div class="text-sm text-gray-500 text-center py-8">Ask any question about the QA textbook \u2014 percentages, algebra, probability, and more</div>'; return; }
   showcaseLoading();
   var apiMode = mode === 'summary' ? 'summarize' : mode;
   var endpoint = '/api/ai/' + apiMode;
