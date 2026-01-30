@@ -100,6 +100,7 @@ html.light .callout-tip{background:#f0fdf4;color:#166534}
 html.light .callout-important{background:#fef2f2;color:#991b1b}
 html.light footer{border-color:#e5e7eb;color:#9ca3af}
 </style>
+<script>(function(){var t=localStorage.getItem('ankr-theme')||'dark';document.documentElement.className=t;})()</script>
 ${extra}
 </head>`;
 }
@@ -123,6 +124,9 @@ function navbar(active = '') {
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
         <span class="hidden sm:inline">Search docs...</span>
         <kbd class="hidden sm:inline px-1.5 py-0.5 text-[10px] bg-white/10 rounded ml-2">Ctrl+K</kbd>
+      </button>
+      <button onclick="toggleTheme()" class="p-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-gray-400 hover:text-white transition-colors" title="Toggle theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
       <a href="/api/health" target="_blank" class="text-xs text-gray-500 hover:text-gray-400">API</a>
     </div>
@@ -257,6 +261,13 @@ document.addEventListener('keydown', function(e) {
     document.getElementById('search-modal').classList.add('hidden');
   }
 });
+
+// Global theme toggle (available on all pages via searchModal)
+function toggleTheme() {
+  var next = document.documentElement.className === 'light' ? 'dark' : 'light';
+  document.documentElement.className = next;
+  localStorage.setItem('ankr-theme', next);
+}
 </script>`;
 }
 
@@ -562,6 +573,21 @@ ${searchModal()}
     <div class="flex flex-wrap gap-2">${tagsHtml}</div>
   </div>
 
+  ${project.id === 'pratham' ? `
+  <!-- Showcase Banner -->
+  <a href="/project/documents/pratham/_showcase" class="block mb-8 p-4 rounded-xl bg-gradient-to-r from-brand/20 to-amber-500/10 border border-brand/30 hover:border-brand/50 transition-all group">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-brand/30 flex items-center justify-center flex-shrink-0">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2V6a4 4 0 0 1 4-4z"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></svg>
+      </div>
+      <div>
+        <div class="font-semibold text-white group-hover:text-brand transition-colors">AI Tutor Showcase</div>
+        <div class="text-sm text-gray-400">Try 8 AI modes live — Summary, Quiz, Fermi, Socratic & more</div>
+      </div>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" class="ml-auto flex-shrink-0 group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+  </a>` : ''}
+
   ${statsHtml ? `
   <!-- Stats Grid -->
   <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 mb-8">
@@ -675,11 +701,7 @@ function documentViewerPage(doc, relatedDocs) {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism-tomorrow.min.css">
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-// Theme restoration IIFE — prevent flash
-(function(){var t=localStorage.getItem('ankr-theme')||'dark';document.documentElement.className=t;})();
-</script>`;
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>`;
 
   return htmlHead(doc.title || 'Document', extraHead) + `
 <body class="min-h-screen">
@@ -776,6 +798,8 @@ ${searchModal()}
     <button onclick="switchAITab('quiz')" class="ai-tab px-3 py-2 whitespace-nowrap border-b-2 border-transparent text-gray-500 hover:text-gray-300" data-tab="quiz">Quiz</button>
     <button onclick="switchAITab('flashcards')" class="ai-tab px-3 py-2 whitespace-nowrap border-b-2 border-transparent text-gray-500 hover:text-gray-300" data-tab="flashcards">Flashcards</button>
     <button onclick="switchAITab('mindmap')" class="ai-tab px-3 py-2 whitespace-nowrap border-b-2 border-transparent text-gray-500 hover:text-gray-300" data-tab="mindmap">Mind Map</button>
+    <button onclick="switchAITab('fermi')" class="ai-tab px-3 py-2 whitespace-nowrap border-b-2 border-transparent text-amber-500/60 hover:text-amber-400" data-tab="fermi">Fermi</button>
+    <button onclick="switchAITab('socratic')" class="ai-tab px-3 py-2 whitespace-nowrap border-b-2 border-transparent text-emerald-500/60 hover:text-emerald-400" data-tab="socratic">Socratic</button>
   </div>
 
   <!-- Tab Content -->
@@ -791,13 +815,19 @@ ${searchModal()}
     <div id="ai-content-quiz" class="hidden"><div class="text-center py-8"><button onclick="generateQuiz()" class="px-4 py-2 bg-brand/20 hover:bg-brand/30 text-brand rounded-lg text-sm transition-colors">Generate Quiz</button></div></div>
     <div id="ai-content-flashcards" class="hidden"><div class="text-center py-8"><button onclick="generateFlashcards()" class="px-4 py-2 bg-brand/20 hover:bg-brand/30 text-brand rounded-lg text-sm transition-colors">Generate Flashcards</button></div></div>
     <div id="ai-content-mindmap" class="hidden"><div class="text-center py-8"><button onclick="generateMindmap()" class="px-4 py-2 bg-brand/20 hover:bg-brand/30 text-brand rounded-lg text-sm transition-colors">Generate Mind Map</button></div></div>
+    <div id="ai-content-fermi" class="hidden"><div class="text-center py-8"><button onclick="generateFermi()" class="px-4 py-2 bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 rounded-lg text-sm transition-colors">Generate Fermi Exercise</button></div></div>
+    <div id="ai-content-socratic" class="hidden">
+      <div id="socratic-messages" class="space-y-3 mb-4">
+        <div class="text-sm text-emerald-400/70 text-center py-8">Ask a question — I'll guide you to the answer</div>
+      </div>
+    </div>
   </div>
 
   <!-- Chat input (visible only on chat tab) -->
   <div id="chat-input-bar" class="border-t border-border p-3">
     <div class="flex gap-2">
       <input id="chat-input" type="text" placeholder="Ask about this document..." class="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-brand/50 transition-colors" onkeydown="if(event.key==='Enter')sendChat()">
-      <button onclick="sendChat()" class="px-3 py-2 bg-brand hover:bg-brand/80 text-white rounded-lg text-sm transition-colors">
+      <button onclick="currentAITab==='socratic'?sendSocratic():sendChat()" class="px-3 py-2 bg-brand hover:bg-brand/80 text-white rounded-lg text-sm transition-colors">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
       </button>
     </div>
@@ -1003,18 +1033,29 @@ function toggleAIPanel() {
 function switchAITab(tab) {
   currentAITab = tab;
   document.querySelectorAll('.ai-tab').forEach(t => {
-    t.classList.remove('border-brand', 'text-brand');
+    t.classList.remove('border-brand', 'text-brand', 'border-amber-500', 'text-amber-400', 'border-emerald-500', 'text-emerald-400');
     t.classList.add('border-transparent', 'text-gray-500');
   });
   const active = document.querySelector('.ai-tab[data-tab="'+tab+'"]');
   if (active) {
-    active.classList.add('border-brand', 'text-brand');
+    if (tab === 'fermi') { active.classList.add('border-amber-500', 'text-amber-400'); }
+    else if (tab === 'socratic') { active.classList.add('border-emerald-500', 'text-emerald-400'); }
+    else { active.classList.add('border-brand', 'text-brand'); }
     active.classList.remove('border-transparent', 'text-gray-500');
   }
   document.querySelectorAll('[id^="ai-content-"]').forEach(el => el.classList.add('hidden'));
   const content = document.getElementById('ai-content-' + tab);
   if (content) content.classList.remove('hidden');
-  document.getElementById('chat-input-bar').style.display = tab === 'chat' ? '' : 'none';
+  document.getElementById('chat-input-bar').style.display = (tab === 'chat' || tab === 'socratic') ? '' : 'none';
+  // Update input placeholder for socratic vs chat
+  var chatInput = document.getElementById('chat-input');
+  if (tab === 'socratic') {
+    chatInput.placeholder = 'Ask a question — Socratic mode...';
+    chatInput.onkeydown = function(event) { if(event.key==='Enter') sendSocratic(); };
+  } else {
+    chatInput.placeholder = 'Ask about this document...';
+    chatInput.onkeydown = function(event) { if(event.key==='Enter') sendChat(); };
+  }
 }
 
 function aiLoading(container) {
@@ -1179,6 +1220,69 @@ function renderMindmapNode(node, depth) {
   return html;
 }
 
+// ── Fermi Estimation ──
+async function generateFermi() {
+  const el = document.getElementById('ai-content-fermi');
+  aiLoading(el);
+  try {
+    const resp = await fetch('/api/ai/fermi', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: DOC_PATH }) });
+    const data = await resp.json();
+    const fermi = data.fermi;
+    if (!fermi) { el.innerHTML = '<div class="text-gray-500 text-sm">' + (data.raw ? '<div class="doc-content text-sm">' + (typeof marked !== 'undefined' ? marked.parse(data.raw) : escHtml(data.raw)) + '</div>' : 'Could not generate Fermi exercise') + '</div>'; return; }
+    let html = '<div class="space-y-3">';
+    html += '<div class="p-3 rounded-lg bg-amber-500/10 border border-amber-500/20"><div class="font-semibold text-amber-300 text-sm mb-1">Fermi Question</div><div class="text-sm text-gray-200">' + escHtml(fermi.question) + '</div></div>';
+    html += '<div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-3 mb-1">Estimation Steps</div>';
+    (fermi.steps || []).forEach(function(s, i) {
+      html += '<details class="group"><summary class="flex items-center gap-2 cursor-pointer p-2 rounded-lg bg-white/5 hover:bg-white/10 text-sm transition-colors">';
+      html += '<span class="flex-shrink-0 w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 text-xs flex items-center justify-center font-bold">' + (i+1) + '</span>';
+      html += '<span class="text-gray-200">' + escHtml(s.step) + '</span>';
+      html += '<svg class="ml-auto w-4 h-4 text-gray-500 group-open:rotate-180 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>';
+      html += '</summary>';
+      html += '<div class="ml-7 mt-1 mb-2 text-xs space-y-1">';
+      if (s.estimate) html += '<div class="text-amber-300 font-medium">Estimate: ' + escHtml(s.estimate) + '</div>';
+      if (s.reasoning) html += '<div class="text-gray-400">' + escHtml(s.reasoning) + '</div>';
+      html += '</div></details>';
+    });
+    if (fermi.finalAnswer) {
+      html += '<div class="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20 mt-2"><div class="text-xs font-semibold text-emerald-400 mb-1">Final Answer</div><div class="text-sm text-gray-200">' + escHtml(fermi.finalAnswer) + '</div></div>';
+    }
+    if (fermi.realWorldConnection) {
+      html += '<div class="p-3 rounded-lg bg-blue-500/10 border border-blue-500/20 mt-2"><div class="text-xs font-semibold text-blue-400 mb-1">Real-World Connection</div><div class="text-sm text-gray-300">' + escHtml(fermi.realWorldConnection) + '</div></div>';
+    }
+    html += '</div>';
+    el.innerHTML = html;
+  } catch(e) { el.innerHTML = '<div class="text-red-400 text-sm">Error generating Fermi exercise</div>'; }
+}
+
+// ── Socratic Dialog ──
+const socraticHistory = [];
+async function sendSocratic() {
+  const input = document.getElementById('chat-input');
+  const msg = input.value.trim();
+  if (!msg) return;
+  input.value = '';
+  const messagesEl = document.getElementById('socratic-messages');
+  messagesEl.innerHTML += '<div class="flex justify-end"><div class="bg-emerald-500/20 text-emerald-300 rounded-lg px-3 py-2 text-sm max-w-[80%]">' + escHtml(msg) + '</div></div>';
+  messagesEl.innerHTML += '<div id="socratic-loading" class="flex items-center gap-2"><div class="w-3 h-3 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin"></div><span class="text-xs text-gray-500">Thinking...</span></div>';
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+  socraticHistory.push({ role: 'user', content: msg });
+  try {
+    const resp = await fetch('/api/ai/socratic', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: DOC_PATH, message: msg, history: socraticHistory.slice(-10) }) });
+    const data = await resp.json();
+    const reply = data.reply || data.error || 'No response';
+    socraticHistory.push({ role: 'assistant', content: reply });
+    const loading = document.getElementById('socratic-loading');
+    if (loading) loading.remove();
+    const rendered = typeof marked !== 'undefined' ? marked.parse(reply) : escHtml(reply);
+    messagesEl.innerHTML += '<div class="bg-emerald-500/5 border border-emerald-500/10 rounded-lg px-3 py-2 text-sm doc-content">' + rendered + '</div>';
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  } catch(e) {
+    const loading = document.getElementById('socratic-loading');
+    if (loading) loading.remove();
+    messagesEl.innerHTML += '<div class="text-red-400 text-sm">Error: ' + escHtml(e.message) + '</div>';
+  }
+}
+
 // ── Backlinks ──
 (function loadBacklinks() {
   fetch('/api/backlinks?path=' + encodeURIComponent(DOC_PATH)).then(r=>r.json()).then(data => {
@@ -1260,6 +1364,388 @@ function toggleDownload() {
 
 // ── Track recent file ──
 fetch('/api/recent', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: DOC_PATH, name: DOC_TITLE }) }).catch(()=>{});
+</script>
+</body></html>`;
+}
+
+// ============================================
+// PAGE: Pratham Showcase (/project/documents/pratham/_showcase)
+// ============================================
+function prathamShowcasePage(files) {
+  files = files || [];
+  const fileCount = files.length;
+
+  const docOptions = files.map(f =>
+    `<option value="${esc(f.path)}">${esc(f.title)}</option>`
+  ).join('');
+
+  const docGrid = files.map(f => `
+    <a href="/view/${encodeURIComponent(f.path)}" class="glass rounded-lg p-4 hover:bg-white/[0.03] border border-border hover:border-white/15 transition-all block">
+      <div class="flex items-start gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" class="flex-shrink-0 mt-0.5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <div class="min-w-0">
+          <div class="text-sm font-medium text-gray-200 truncate">${esc(f.title)}</div>
+          <div class="text-xs text-gray-600 mt-1">${f.size ? (f.size / 1024).toFixed(1) + ' KB' : ''}</div>
+        </div>
+      </div>
+    </a>
+  `).join('');
+
+  return htmlHead('Pratham Education x ANKR AI Tutor') + `
+<body class="min-h-screen">
+${navbar()}
+${searchModal()}
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+  <!-- Hero Section -->
+  <div class="text-center mb-12">
+    <div class="inline-block px-3 py-1 bg-brand/20 text-brand text-xs font-medium rounded-full mb-4">AI-Powered Education</div>
+    <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">Pratham Education x ANKR AI Tutor</h1>
+    <p class="text-gray-400 max-w-2xl mx-auto mb-6">Experience AI-powered learning with 8 distinct modes — from instant summaries and quizzes to Fermi estimation exercises and Socratic guided discovery.</p>
+    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm">
+      <div class="text-center"><div class="text-2xl font-bold text-white">${fileCount}</div><div class="text-gray-500 text-xs">Documents</div></div>
+      <div class="text-center"><div class="text-2xl font-bold text-white">268</div><div class="text-gray-500 text-xs">Page PDF</div></div>
+      <div class="text-center"><div class="text-2xl font-bold text-white">8</div><div class="text-gray-500 text-xs">AI Modes</div></div>
+      <div class="text-center"><div class="text-2xl font-bold text-amber-400">72.8%</div><div class="text-gray-500 text-xs">Cost Savings</div></div>
+    </div>
+  </div>
+
+  <!-- Live AI Demo Section -->
+  <div class="glass rounded-2xl p-6 mb-10 border border-brand/20">
+    <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2V6a4 4 0 0 1 4-4z"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></svg>
+      Live AI Demo
+    </h2>
+    <div class="mb-4">
+      <label class="text-xs text-gray-400 mb-1 block">Select a Pratham document:</label>
+      <select id="showcase-doc" class="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2.5 text-sm text-gray-200 outline-none focus:border-brand/50 transition-colors">
+        <option value="">-- Choose a document --</option>
+        ${docOptions}
+      </select>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+      <button onclick="showcaseAction('summary')" class="px-3 py-2 bg-brand/20 hover:bg-brand/30 text-brand rounded-lg text-sm transition-colors font-medium">Summary</button>
+      <button onclick="showcaseAction('keypoints')" class="px-3 py-2 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 rounded-lg text-sm transition-colors font-medium">Key Points</button>
+      <button onclick="showcaseAction('quiz')" class="px-3 py-2 bg-purple-500/20 hover:bg-purple-500/30 text-purple-400 rounded-lg text-sm transition-colors font-medium">Quiz Me</button>
+      <button onclick="showcaseAction('flashcards')" class="px-3 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-400 rounded-lg text-sm transition-colors font-medium">Flashcards</button>
+      <button onclick="showcaseAction('mindmap')" class="px-3 py-2 bg-pink-500/20 hover:bg-pink-500/30 text-pink-400 rounded-lg text-sm transition-colors font-medium">Mind Map</button>
+      <button onclick="showcaseAction('fermi')" class="px-3 py-2 bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 rounded-lg text-sm transition-colors font-medium">Fermi Estimation</button>
+      <button onclick="showcaseAction('socratic')" class="px-3 py-2 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 rounded-lg text-sm transition-colors font-medium">Socratic Dialog</button>
+      <button onclick="showcaseAction('chat')" class="px-3 py-2 bg-gray-500/20 hover:bg-gray-500/30 text-gray-300 rounded-lg text-sm transition-colors font-medium">Chat</button>
+    </div>
+    <!-- Socratic input (shown only for socratic mode) -->
+    <div id="showcase-socratic-input" class="hidden mb-4">
+      <div class="flex gap-2">
+        <input id="showcase-socratic-msg" type="text" placeholder="Ask a question for Socratic guidance..." class="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-emerald-500/50 transition-colors" onkeydown="if(event.key==='Enter')showcaseSocratic()">
+        <button onclick="showcaseSocratic()" class="px-3 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm transition-colors">Send</button>
+      </div>
+    </div>
+    <!-- Chat input (shown only for chat mode) -->
+    <div id="showcase-chat-input" class="hidden mb-4">
+      <div class="flex gap-2">
+        <input id="showcase-chat-msg" type="text" placeholder="Ask about the document..." class="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-brand/50 transition-colors" onkeydown="if(event.key==='Enter')showcaseChat()">
+        <button onclick="showcaseChat()" class="px-3 py-2 bg-brand hover:bg-brand/80 text-white rounded-lg text-sm transition-colors">Send</button>
+      </div>
+    </div>
+    <div id="showcase-results" class="min-h-[100px] rounded-lg bg-white/[0.02] border border-white/5 p-4">
+      <div class="text-sm text-gray-600 text-center py-4">Select a document and click an AI mode above to see it in action</div>
+    </div>
+  </div>
+
+  <!-- Fermi vs ANKR Comparison -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-4">Fermi.ai vs ANKR AI Tutor</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr>
+            <th class="text-left p-3 bg-white/5 border border-white/10 text-gray-400 font-medium">Feature</th>
+            <th class="text-left p-3 bg-white/5 border border-white/10 text-gray-400 font-medium">Fermi.ai</th>
+            <th class="text-left p-3 bg-brand/10 border border-brand/20 text-brand font-medium">ANKR AI Tutor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="p-3 border border-white/10 text-gray-300">Cost</td><td class="p-3 border border-white/10 text-gray-400">$8/student/month</td><td class="p-3 border border-brand/10 text-emerald-400">$2.18/student/month (72.8% less)</td></tr>
+          <tr><td class="p-3 border border-white/10 text-gray-300">Devices</td><td class="p-3 border border-white/10 text-gray-400">Web browser</td><td class="p-3 border border-brand/10 text-gray-200">Web + Mobile + Offline</td></tr>
+          <tr><td class="p-3 border border-white/10 text-gray-300">Languages</td><td class="p-3 border border-white/10 text-gray-400">English only</td><td class="p-3 border border-brand/10 text-gray-200">Hindi + 10 Indian languages</td></tr>
+          <tr><td class="p-3 border border-white/10 text-gray-300">AI Modes</td><td class="p-3 border border-white/10 text-gray-400">3 (Summary, Quiz, Chat)</td><td class="p-3 border border-brand/10 text-gray-200">8 modes (+ Fermi, Socratic, Flashcards, Mind Map, Key Points)</td></tr>
+          <tr><td class="p-3 border border-white/10 text-gray-300">Custom Content</td><td class="p-3 border border-white/10 text-gray-400">Limited PDF upload</td><td class="p-3 border border-brand/10 text-gray-200">Full PDF/document ingestion + knowledge base</td></tr>
+          <tr><td class="p-3 border border-white/10 text-gray-300">Analytics</td><td class="p-3 border border-white/10 text-gray-400">Basic</td><td class="p-3 border border-brand/10 text-gray-200">Teacher dashboard + student progress tracking</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Pedagogical Approach Cards -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-4">Pedagogical Approaches</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="glass rounded-xl p-5 border border-brand/20">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-8 h-8 rounded-lg bg-brand/20 flex items-center justify-center text-brand text-sm font-bold">E</div>
+          <h3 class="font-semibold text-white">Explain Mode</h3>
+        </div>
+        <p class="text-sm text-gray-400 mb-3">Direct step-by-step explanations tailored to the student's level.</p>
+        <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-2">
+          <div class="text-brand">Student: "What is photosynthesis?"</div>
+          <div class="text-gray-300">AI: "Photosynthesis is how plants make food from sunlight. Here are the 3 key steps: 1) Light absorption..."</div>
+        </div>
+      </div>
+      <div class="glass rounded-xl p-5 border border-emerald-500/20">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-sm font-bold">S</div>
+          <h3 class="font-semibold text-white">Socratic Mode</h3>
+        </div>
+        <p class="text-sm text-gray-400 mb-3">Guided discovery through probing questions — never gives direct answers.</p>
+        <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-2">
+          <div class="text-emerald-400">Student: "What is photosynthesis?"</div>
+          <div class="text-gray-300">AI: "What do you think plants need to grow? Where does a plant get its energy from?"</div>
+        </div>
+      </div>
+      <div class="glass rounded-xl p-5 border border-amber-500/20">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 text-sm font-bold">F</div>
+          <h3 class="font-semibold text-white">Fermi Mode</h3>
+        </div>
+        <p class="text-sm text-gray-400 mb-3">Real-world estimation exercises that build quantitative intuition.</p>
+        <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-2">
+          <div class="text-amber-400">Exercise: "How many leaves does a typical neem tree have?"</div>
+          <div class="text-gray-300">Step 1: Estimate branches (~50). Step 2: Twigs per branch (~20). Step 3: Leaves per twig (~10)...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Document Grid -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-4">Pratham Documents (${fileCount})</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      ${docGrid || '<div class="col-span-full text-center text-gray-600 py-8">No documents found</div>'}
+    </div>
+  </div>
+</main>
+
+<footer class="border-t border-border mt-16 py-6 text-center text-xs text-gray-600">
+  ANKR Labs &middot; Pratham Education x AI Tutor Showcase
+</footer>
+
+<script>
+var showcaseSocraticHistory = [];
+var showcaseChatHistory = [];
+
+function getSelectedDoc() {
+  var sel = document.getElementById('showcase-doc');
+  if (!sel || !sel.value) { alert('Please select a document first'); return null; }
+  return sel.value;
+}
+
+function showcaseLoading() {
+  document.getElementById('showcase-results').innerHTML = '<div class="flex items-center gap-2 py-8 justify-center"><div class="w-5 h-5 border-2 border-brand border-t-transparent rounded-full animate-spin"></div><span class="text-sm text-gray-500">AI is thinking...</span></div>';
+}
+
+function showcaseAction(mode) {
+  var docPath = getSelectedDoc();
+  if (!docPath) return;
+  document.getElementById('showcase-socratic-input').classList.add('hidden');
+  document.getElementById('showcase-chat-input').classList.add('hidden');
+  if (mode === 'socratic') { document.getElementById('showcase-socratic-input').classList.remove('hidden'); showcaseSocraticHistory = []; document.getElementById('showcase-results').innerHTML = '<div class="text-sm text-emerald-400/70 text-center py-8">Type a question below — the Socratic tutor will guide you to the answer</div>'; return; }
+  if (mode === 'chat') { document.getElementById('showcase-chat-input').classList.remove('hidden'); showcaseChatHistory = []; document.getElementById('showcase-results').innerHTML = '<div class="text-sm text-gray-500 text-center py-8">Type a question below to chat about the document</div>'; return; }
+  showcaseLoading();
+  var apiMode = mode === 'summary' ? 'summarize' : mode;
+  var endpoint = '/api/ai/' + apiMode;
+  var body = { path: docPath };
+  if (mode === 'quiz') body.count = 5;
+  if (mode === 'flashcards') body.count = 8;
+  fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+    .then(function(r) { return r.json(); })
+    .then(function(data) { renderShowcaseResult(mode, data); })
+    .catch(function(e) { document.getElementById('showcase-results').innerHTML = '<div class="text-red-400 text-sm text-center py-4">Error: ' + e.message + '</div>'; });
+}
+
+function renderShowcaseResult(mode, data) {
+  var el = document.getElementById('showcase-results');
+  if (mode === 'summary' || mode === 'summarize') {
+    var text = data.summary || 'No summary generated';
+    el.innerHTML = '<div class="doc-content text-sm">' + simpleMarkdown(text) + '</div>';
+  } else if (mode === 'keypoints') {
+    var text = data.keypoints || 'No key points extracted';
+    el.innerHTML = '<div class="doc-content text-sm">' + simpleMarkdown(text) + '</div>';
+  } else if (mode === 'quiz') {
+    renderShowcaseQuiz(data.questions || [], el);
+  } else if (mode === 'flashcards') {
+    renderShowcaseFlashcards(data.flashcards || [], el);
+  } else if (mode === 'mindmap') {
+    if (data.mindmap) { el.innerHTML = '<div class="text-sm">' + renderShowcaseMindmap(data.mindmap, 0) + '</div>'; }
+    else { el.innerHTML = '<div class="text-gray-500 text-sm">Could not generate mind map</div>'; }
+  } else if (mode === 'fermi') {
+    renderShowcaseFermi(data.fermi || data, el);
+  } else {
+    el.innerHTML = '<div class="text-gray-500 text-sm">' + JSON.stringify(data).slice(0, 500) + '</div>';
+  }
+}
+
+function simpleMarkdown(text) {
+  return text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\\*\\*(.+?)\\*\\*/g, '<strong>$1</strong>')
+    .replace(/\\*(.+?)\\*/g, '<em>$1</em>')
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    .replace(/^\\d+\\. (.+)$/gm, '<li>$1</li>')
+    .replace(/\\n/g, '<br>');
+}
+
+function escShowcase(s) { return s ? String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;') : ''; }
+
+var showcaseQuizScore = 0;
+function renderShowcaseQuiz(questions, el) {
+  if (questions.length === 0) { el.innerHTML = '<div class="text-gray-500 text-sm">Could not generate quiz</div>'; return; }
+  showcaseQuizScore = 0;
+  var html = '<div id="sq-score" class="text-sm text-gray-400 mb-3">Score: 0/' + questions.length + '</div>';
+  questions.forEach(function(q, qi) {
+    html += '<div class="mb-3 p-3 rounded-lg bg-white/5 border border-white/5">';
+    html += '<div class="font-medium text-sm mb-2 text-gray-200">' + (qi+1) + '. ' + escShowcase(q.question) + '</div>';
+    var opts = q.options || {};
+    for (var key in opts) {
+      html += '<button onclick="checkShowcaseQuiz(this,\\''+key+'\\',\\''+((q.answer||'').replace(/'/g,"\\\\'"))+'\\','+qi+')" class="block w-full text-left px-3 py-1.5 rounded text-sm my-1 bg-white/5 hover:bg-white/10 text-gray-300 transition-colors sq-opt-'+qi+'" data-key="'+key+'">';
+      html += '<span class="font-medium text-brand mr-2">' + key.toUpperCase() + '.</span>' + escShowcase(opts[key]);
+      html += '</button>';
+    }
+    html += '<div id="sq-expl-'+qi+'" class="hidden text-xs text-gray-500 mt-2 p-2 bg-white/[0.02] rounded"></div>';
+    html += '</div>';
+  });
+  el.innerHTML = html;
+}
+function checkShowcaseQuiz(btn, selected, correct, qi) {
+  document.querySelectorAll('.sq-opt-' + qi).forEach(function(o) {
+    o.disabled = true; o.style.pointerEvents = 'none';
+    if (o.dataset.key === correct) { o.classList.add('bg-emerald-500/20'); o.classList.remove('bg-white/5'); }
+    else if (o === btn && selected !== correct) { o.classList.add('bg-red-500/20'); o.classList.remove('bg-white/5'); }
+  });
+  if (selected === correct) showcaseQuizScore++;
+  var scoreEl = document.getElementById('sq-score');
+  if (scoreEl) scoreEl.textContent = 'Score: ' + showcaseQuizScore + '/' + document.querySelectorAll('[id^="sq-expl-"]').length;
+  var expl = document.getElementById('sq-expl-' + qi);
+  if (expl) { expl.classList.remove('hidden'); expl.textContent = selected === correct ? 'Correct!' : 'Incorrect. The answer is ' + correct.toUpperCase() + '.'; }
+}
+
+var showcaseCards = [], showcaseCardIdx = 0;
+function renderShowcaseFlashcards(cards, el) {
+  if (cards.length === 0) { el.innerHTML = '<div class="text-gray-500 text-sm">Could not generate flashcards</div>'; return; }
+  showcaseCards = cards; showcaseCardIdx = 0;
+  renderOneShowcaseCard(el);
+}
+function renderOneShowcaseCard(el) {
+  if (!el) el = document.getElementById('showcase-results');
+  var card = showcaseCards[showcaseCardIdx];
+  el.innerHTML = '<div class="text-xs text-gray-500 mb-2 text-center">' + (showcaseCardIdx+1) + ' / ' + showcaseCards.length + '</div>'
+    + '<div class="flashcard" onclick="this.classList.toggle(\\'flipped\\')">'
+    + '<div class="flashcard-inner">'
+    + '<div class="flashcard-front"><div class="text-sm text-gray-200">' + escShowcase(card.front) + '</div></div>'
+    + '<div class="flashcard-back"><div class="text-sm">' + escShowcase(card.back) + '</div></div>'
+    + '</div></div>'
+    + '<div class="flex justify-center gap-3 mt-4">'
+    + '<button onclick="showcaseCardIdx=(showcaseCardIdx-1+showcaseCards.length)%showcaseCards.length;renderOneShowcaseCard()" class="px-3 py-1.5 bg-white/10 hover:bg-white/15 rounded text-sm text-gray-300 transition-colors">&larr; Prev</button>'
+    + '<button onclick="showcaseCardIdx=(showcaseCardIdx+1)%showcaseCards.length;renderOneShowcaseCard()" class="px-3 py-1.5 bg-white/10 hover:bg-white/15 rounded text-sm text-gray-300 transition-colors">Next &rarr;</button>'
+    + '</div>'
+    + '<div class="text-xs text-gray-600 text-center mt-2">Click card to flip</div>';
+}
+
+function renderShowcaseMindmap(node, depth) {
+  if (!node) return '';
+  var hasChildren = node.children && node.children.length > 0;
+  var colors = ['text-brand', 'text-emerald-400', 'text-amber-400', 'text-cyan-400', 'text-pink-400'];
+  var color = colors[depth % colors.length];
+  var html = '<div class="mindmap-node">';
+  html += '<span class="mindmap-toggle">' + (hasChildren ? '\\u25BC' : '\\u2022') + '</span>';
+  html += '<span class="mindmap-label ' + color + ' font-medium">' + escShowcase(node.label) + '</span>';
+  if (hasChildren) {
+    html += '<div class="mindmap-children">';
+    for (var i = 0; i < node.children.length; i++) { html += renderShowcaseMindmap(node.children[i], depth + 1); }
+    html += '</div>';
+  }
+  html += '</div>';
+  return html;
+}
+
+function renderShowcaseFermi(fermi, el) {
+  if (!fermi || !fermi.question) { el.innerHTML = '<div class="text-gray-500 text-sm">Could not generate Fermi exercise</div>'; return; }
+  var html = '<div class="space-y-3">';
+  html += '<div class="p-3 rounded-lg bg-amber-500/10 border border-amber-500/20"><div class="font-semibold text-amber-300 text-sm mb-1">Fermi Question</div><div class="text-sm text-gray-200">' + escShowcase(fermi.question) + '</div></div>';
+  html += '<div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mt-3 mb-1">Estimation Steps</div>';
+  (fermi.steps || []).forEach(function(s, i) {
+    html += '<details class="group"><summary class="flex items-center gap-2 cursor-pointer p-2 rounded-lg bg-white/5 hover:bg-white/10 text-sm transition-colors">';
+    html += '<span class="flex-shrink-0 w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 text-xs flex items-center justify-center font-bold">' + (i+1) + '</span>';
+    html += '<span class="text-gray-200">' + escShowcase(s.step) + '</span></summary>';
+    html += '<div class="ml-7 mt-1 mb-2 text-xs space-y-1">';
+    if (s.estimate) html += '<div class="text-amber-300 font-medium">Estimate: ' + escShowcase(s.estimate) + '</div>';
+    if (s.reasoning) html += '<div class="text-gray-400">' + escShowcase(s.reasoning) + '</div>';
+    html += '</div></details>';
+  });
+  if (fermi.finalAnswer) html += '<div class="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20 mt-2"><div class="text-xs font-semibold text-emerald-400 mb-1">Final Answer</div><div class="text-sm text-gray-200">' + escShowcase(fermi.finalAnswer) + '</div></div>';
+  if (fermi.realWorldConnection) html += '<div class="p-3 rounded-lg bg-blue-500/10 border border-blue-500/20 mt-2"><div class="text-xs font-semibold text-blue-400 mb-1">Real-World Connection</div><div class="text-sm text-gray-300">' + escShowcase(fermi.realWorldConnection) + '</div></div>';
+  html += '</div>';
+  el.innerHTML = html;
+}
+
+function showcaseSocratic() {
+  var input = document.getElementById('showcase-socratic-msg');
+  var msg = input.value.trim();
+  if (!msg) return;
+  var docPath = getSelectedDoc();
+  if (!docPath) return;
+  input.value = '';
+  var el = document.getElementById('showcase-results');
+  el.innerHTML += '<div class="flex justify-end mb-2"><div class="bg-emerald-500/20 text-emerald-300 rounded-lg px-3 py-2 text-sm max-w-[80%]">' + escShowcase(msg) + '</div></div>';
+  el.innerHTML += '<div id="sc-load" class="flex items-center gap-2 mb-2"><div class="w-3 h-3 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin"></div><span class="text-xs text-gray-500">Thinking...</span></div>';
+  el.scrollTop = el.scrollHeight;
+  showcaseSocraticHistory.push({ role: 'user', content: msg });
+  fetch('/api/ai/socratic', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: docPath, message: msg, history: showcaseSocraticHistory.slice(-10) }) })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var reply = data.reply || data.error || 'No response';
+      showcaseSocraticHistory.push({ role: 'assistant', content: reply });
+      var loading = document.getElementById('sc-load');
+      if (loading) loading.remove();
+      el.innerHTML += '<div class="bg-emerald-500/5 border border-emerald-500/10 rounded-lg px-3 py-2 text-sm mb-2">' + simpleMarkdown(reply) + '</div>';
+      el.scrollTop = el.scrollHeight;
+    })
+    .catch(function(e) {
+      var loading = document.getElementById('sc-load');
+      if (loading) loading.remove();
+      el.innerHTML += '<div class="text-red-400 text-sm mb-2">Error: ' + e.message + '</div>';
+    });
+}
+
+function showcaseChat() {
+  var input = document.getElementById('showcase-chat-msg');
+  var msg = input.value.trim();
+  if (!msg) return;
+  var docPath = getSelectedDoc();
+  if (!docPath) return;
+  input.value = '';
+  var el = document.getElementById('showcase-results');
+  el.innerHTML += '<div class="flex justify-end mb-2"><div class="bg-brand/20 text-brand rounded-lg px-3 py-2 text-sm max-w-[80%]">' + escShowcase(msg) + '</div></div>';
+  el.innerHTML += '<div id="sc-chat-load" class="flex items-center gap-2 mb-2"><div class="w-3 h-3 border-2 border-brand border-t-transparent rounded-full animate-spin"></div><span class="text-xs text-gray-500">Thinking...</span></div>';
+  el.scrollTop = el.scrollHeight;
+  showcaseChatHistory.push({ role: 'user', content: msg });
+  fetch('/api/ai/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ path: docPath, message: msg, history: showcaseChatHistory.slice(-10) }) })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var reply = data.reply || data.error || 'No response';
+      showcaseChatHistory.push({ role: 'assistant', content: reply });
+      var loading = document.getElementById('sc-chat-load');
+      if (loading) loading.remove();
+      el.innerHTML += '<div class="bg-white/5 rounded-lg px-3 py-2 text-sm mb-2">' + simpleMarkdown(reply) + '</div>';
+      el.scrollTop = el.scrollHeight;
+    })
+    .catch(function(e) {
+      var loading = document.getElementById('sc-chat-load');
+      if (loading) loading.remove();
+      el.innerHTML += '<div class="text-red-400 text-sm mb-2">Error: ' + e.message + '</div>';
+    });
+}
 </script>
 </body></html>`;
 }
@@ -1381,4 +1867,4 @@ function escG(s) {
 </body></html>`;
 }
 
-module.exports = { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage, esc };
+module.exports = { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage, prathamShowcasePage, esc };

@@ -14,7 +14,7 @@ const matter = require('gray-matter');
 const eonClient = require('./ankr-viewer-eon-client');
 const { getRegistry, getCategories, getCategoryOrder } = require('./ankr-product-registry');
 const access = require('./ankr-viewer-access');
-const { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage } = require('./ankr-viewer-html');
+const { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage, prathamShowcasePage } = require('./ankr-viewer-html');
 
 const autoDiscoveredFiles = new Map(); // virtual path → absolute path
 
@@ -793,6 +793,50 @@ app.post('/api/ai/mindmap', async (req, res) => {
     }
   } catch (e) {
     console.error('[AI Mindmap]', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// ── Fermi Estimation Endpoint ──
+app.post('/api/ai/fermi', async (req, res) => {
+  try {
+    const content = readDocContent(req.body.path || '');
+    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const truncated = content.slice(0, 8000);
+    const result = await callAI(
+      'You are a Fermi estimation tutor. Given the document content, create a Fermi estimation exercise related to a real-world topic from the document. Break the estimation into 4-6 logical steps. Return ONLY valid JSON: {"question":"...","steps":[{"step":"...","estimate":"...","reasoning":"..."}],"finalAnswer":"...","realWorldConnection":"..."}',
+      `Create a Fermi estimation exercise based on this document:\n\n${truncated}`,
+      { maxTokens: 1500, temperature: 0.5 }
+    );
+    try {
+      const cleaned = result.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+      const fermi = JSON.parse(cleaned);
+      res.json({ fermi });
+    } catch {
+      res.json({ fermi: null, raw: result });
+    }
+  } catch (e) {
+    console.error('[AI Fermi]', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// ── Socratic Dialog Endpoint ──
+app.post('/api/ai/socratic', async (req, res) => {
+  try {
+    const content = readDocContent(req.body.path || '');
+    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const truncated = content.slice(0, 6000);
+    const message = req.body.message || '';
+    const history = (req.body.history || []).slice(-10);
+    const result = await callAI(
+      `You are a Socratic tutor. NEVER give direct answers. Ask probing questions that guide the student to discover the answer. Use the document as context. Ask one question at a time. If the student seems stuck after 3 exchanges, give a gentle hint framed as a question. Always encourage thinking.\n\nDocument content:\n${truncated}`,
+      message,
+      { maxTokens: 600, history }
+    );
+    res.json({ reply: result });
+  } catch (e) {
+    console.error('[AI Socratic]', e.message);
     res.status(500).json({ error: e.message });
   }
 });
@@ -1641,6 +1685,37 @@ app.get('/project/documents/', async (req, res) => {
     res.send(documentsHomePage(projects, categories, categoryOrder));
   } catch (err) {
     res.send(documentsHomePage([], {}, []));
+  }
+});
+
+// Pratham Showcase: /project/documents/pratham/_showcase
+app.get('/project/documents/pratham/_showcase', (req, res) => {
+  try {
+    const prathamDir = path.join(DOCS_ROOT, 'project', 'documents', 'pratham');
+    const files = [];
+    if (fs.existsSync(prathamDir)) {
+      for (const f of fs.readdirSync(prathamDir)) {
+        if (!f.endsWith('.md') || f === 'index.md' || f.startsWith('.')) continue;
+        const fp = path.join(prathamDir, f);
+        const st = fs.statSync(fp);
+        let title = f.replace('.md', '');
+        try {
+          const content = fs.readFileSync(fp, 'utf-8');
+          const parsed = matter(content);
+          if (parsed.data.title) title = parsed.data.title;
+        } catch (e) {}
+        files.push({
+          name: f,
+          path: 'project/documents/pratham/' + f,
+          title,
+          size: st.size,
+        });
+      }
+    }
+    res.send(prathamShowcasePage(files));
+  } catch (err) {
+    console.error('Error rendering Pratham showcase:', err);
+    res.status(500).send('Error loading showcase');
   }
 });
 
