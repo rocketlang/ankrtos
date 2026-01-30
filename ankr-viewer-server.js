@@ -406,6 +406,36 @@ app.get('/api/search', async (req, res) => {
       source = 'regex-fallback';
     }
 
+    // Inject project-level results: match query against project names
+    try {
+      const projData = (await selfFetch('/api/projects')) || {};
+      const allProjects = projData.projects || projData || [];
+      const lq = query.toLowerCase();
+      for (const p of allProjects) {
+        const titleMatch = (p.title || '').toLowerCase().includes(lq);
+        const idMatch = (p.id || '').toLowerCase().includes(lq);
+        const tagMatch = (p.tags || []).some(t => t.toLowerCase().includes(lq));
+        if (titleMatch || idMatch || tagMatch) {
+          // Add the project itself as a top result
+          const alreadyHas = results.some(r => r.project === p.id && r.score >= 200);
+          if (!alreadyHas) {
+            results.unshift({
+              path: `project/documents/${p.id}`,
+              name: p.title || p.id,
+              excerpt: p.description || '',
+              category: p.category || 'project',
+              tags: p.tags || [],
+              project: p.id,
+              score: 300,
+              size: 0,
+              modified: null,
+              _isProject: true,
+            });
+          }
+        }
+      }
+    } catch (e) { /* project injection is best-effort */ }
+
     // Access control: filter hidden docs from search results
     results = access.filterSearchResults(results, req.isAdmin);
     results = results.slice(0, limit);

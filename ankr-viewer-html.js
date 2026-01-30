@@ -232,18 +232,23 @@ function renderSearchResults(data, query) {
 }
 
 function searchResultItem(doc, query) {
-  const href = doc.path.endsWith('.md') ? '/view/' + encodeURIComponent(doc.path) : '/view/' + encodeURIComponent(doc.path);
+  const isProject = doc._isProject || doc.path.match(/^project\/documents\/[^/]+$/);
+  const href = isProject ? '/' + doc.path : '/view/' + encodeURIComponent(doc.path);
+  const icon = isProject
+    ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" class="mt-0.5 flex-shrink-0"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>'
+    : '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" class="mt-0.5 flex-shrink-0"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>';
   const excerpt = (doc.excerpt || '').slice(0, 140);
   const similarity = doc.similarity ? '<span class="text-[10px] px-1.5 py-0.5 bg-emerald-500/20 text-emerald-300 rounded-full">' + doc.similarity + '%</span>' : '';
   const score = doc.score ? '<span class="text-[10px] px-1.5 py-0.5 bg-purple-500/20 text-purple-300 rounded-full">score ' + doc.score + '</span>' : '';
   const tags = (doc.tags || []).slice(0, 2).map(t => '<span class="text-[10px] px-1.5 py-0.5 bg-cyan-500/15 text-cyan-400 rounded-full">' + esc(t) + '</span>').join('');
+  const projectBadge = isProject ? '<span class="text-[10px] px-1.5 py-0.5 bg-amber-500/20 text-amber-300 rounded-full">Project</span>' : '';
 
   return '<a href="' + href + '" class="flex items-start gap-3 px-4 py-3 hover:bg-white/[0.04] transition-colors">'
-    + '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" class="mt-0.5 flex-shrink-0"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>'
+    + icon
     + '<div class="flex-1 min-w-0">'
     + '<div class="font-medium text-sm text-gray-200 truncate">' + esc(doc.name) + '</div>'
     + (excerpt ? '<div class="text-xs text-gray-500 mt-0.5 line-clamp-1">' + esc(excerpt) + '</div>' : '')
-    + '<div class="flex items-center gap-1.5 mt-1 flex-wrap">' + tags + similarity + score + '</div>'
+    + '<div class="flex items-center gap-1.5 mt-1 flex-wrap">' + projectBadge + tags + similarity + score + '</div>'
     + '</div></a>';
 }
 
@@ -382,6 +387,27 @@ ${searchModal()}
       ${featured.map(p => projectCard(p, true)).join('')}
     </div>
   </div>` : ''}
+
+  <!-- Pratham AI Showcase Banner -->
+  <a href="/project/documents/pratham/_showcase" class="block mb-10 rounded-2xl overflow-hidden bg-gradient-to-r from-brand/10 via-amber-500/5 to-emerald-500/10 border border-brand/20 hover:border-brand/40 transition-all group">
+    <div class="flex flex-col sm:flex-row items-center gap-4 p-5">
+      <div class="w-12 h-12 rounded-xl bg-brand/20 flex items-center justify-center flex-shrink-0">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2V6a4 4 0 0 1 4-4z"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></svg>
+      </div>
+      <div class="flex-1 text-center sm:text-left">
+        <div class="font-bold text-white text-lg group-hover:text-brand transition-colors">Pratham QA Book \u00D7 ANKR AI Tutor</div>
+        <div class="text-sm text-gray-400">268-page textbook chunked, vectorized & ready for 8 AI modes \u2014 Summary, Quiz, Fermi, Socratic & more</div>
+      </div>
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <div class="hidden sm:flex gap-2 text-xs">
+          <span class="px-2 py-1 bg-brand/20 text-brand rounded-full">RAG</span>
+          <span class="px-2 py-1 bg-amber-500/20 text-amber-400 rounded-full">Live Demo</span>
+          <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded-full">8 AI Modes</span>
+        </div>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" class="group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+    </div>
+  </a>
 
   <!-- Category Filter Tabs -->
   <div class="flex items-center gap-2 mb-6 overflow-x-auto pb-2">
