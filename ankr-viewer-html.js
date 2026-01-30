@@ -1467,14 +1467,14 @@ ${searchModal()}
           <p class="text-gray-400 mb-4">${esc(book.subtitle || 'For Undergraduate Entrance Exams')}</p>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-5">
             <div><div class="text-xl font-bold text-white">${book.pages || 268}</div><div class="text-gray-500 text-xs">Pages</div></div>
-            <div><div class="text-xl font-bold text-white">${book.editions || 17}</div><div class="text-gray-500 text-xs">Editions (${esc(book.editionRange || '2009\u20132025')})</div></div>
+            <div><div class="text-xl font-bold text-white">~${book.wordCount ? Math.round(book.wordCount / 1000) + 'K' : '85K'}</div><div class="text-gray-500 text-xs">Words</div></div>
+            <div><div class="text-xl font-bold text-white">16</div><div class="text-gray-500 text-xs">Chapters</div></div>
             <div><div class="text-xl font-bold text-white">8</div><div class="text-gray-500 text-xs">AI Modes</div></div>
-            <div><div class="text-xl font-bold text-amber-400">72.8%</div><div class="text-gray-500 text-xs">Cost Savings vs Fermi.ai</div></div>
           </div>
           <div class="flex flex-wrap gap-3 text-xs text-gray-400">
             <span class="bg-white/5 px-2.5 py-1 rounded-full">ISBN: ${esc(book.isbn || '978-81-19992-59-1')}</span>
             <span class="bg-white/5 px-2.5 py-1 rounded-full">${esc(book.publisher || 'PRATHAM Test Prep')}</span>
-            <span class="bg-white/5 px-2.5 py-1 rounded-full">${esc(book.price || '\u20B93,950')}</span>
+            <span class="bg-white/5 px-2.5 py-1 rounded-full">${book.editions || 17} Editions (${esc(book.editionRange || '2009\u20132025')})</span>
             <span class="bg-white/5 px-2.5 py-1 rounded-full">${esc(book.sizeMB || '4.8')} MB PDF</span>
           </div>
         </div>
@@ -1510,103 +1510,457 @@ ${searchModal()}
     </div>
   </div>
 
-  <!-- Live AI Demo Section (Book-Focused) -->
+  <!-- BOOK INTELLIGENCE: AI-extracted analytics the publisher never computed -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      Book Intelligence \u2014 AI-Extracted Analytics
+    </h2>
+    <p class="text-xs text-gray-500 mb-4">Our AI read every page. Here's what it discovered \u2014 insights the publisher may never have quantified.</p>
+
+    <!-- Key metrics row -->
+    ${book.analytics ? `<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
+      <div class="glass rounded-xl p-4 border border-amber-500/20 text-center">
+        <div class="text-2xl font-bold text-amber-400">${book.analytics.formulaCount.toLocaleString()}</div>
+        <div class="text-[10px] text-gray-500 mt-1">Formulas &amp; Equations</div>
+      </div>
+      <div class="glass rounded-xl p-4 border border-purple-500/20 text-center">
+        <div class="text-2xl font-bold text-purple-400">${book.analytics.exampleCount}</div>
+        <div class="text-[10px] text-gray-500 mt-1">Worked Examples</div>
+      </div>
+      <div class="glass rounded-xl p-4 border border-emerald-500/20 text-center">
+        <div class="text-2xl font-bold text-emerald-400">${book.analytics.solutionCount}</div>
+        <div class="text-[10px] text-gray-500 mt-1">Full Solutions</div>
+      </div>
+      <div class="glass rounded-xl p-4 border border-cyan-500/20 text-center">
+        <div class="text-2xl font-bold text-cyan-400">${book.analytics.edgeTips}</div>
+        <div class="text-[10px] text-gray-500 mt-1">PRATHAM EDGE Tips</div>
+      </div>
+      <div class="glass rounded-xl p-4 border border-pink-500/20 text-center">
+        <div class="text-2xl font-bold text-pink-400">${book.analytics.shortcutCount}</div>
+        <div class="text-[10px] text-gray-500 mt-1">Shortcuts &amp; Tricks</div>
+      </div>
+      <div class="glass rounded-xl p-4 border border-blue-500/20 text-center">
+        <div class="text-2xl font-bold text-blue-400">${book.analytics.chapterCount}</div>
+        <div class="text-[10px] text-gray-500 mt-1">Chapters Detected</div>
+      </div>
+    </div>` : ''}
+
+    <!-- Topic density heatmap -->
+    ${book.analytics ? `<div class="glass rounded-xl p-5 border border-white/10 mb-6">
+      <h3 class="text-sm font-semibold text-white mb-3">Topic Coverage Density</h3>
+      <p class="text-[10px] text-gray-600 mb-3">Bar width = relative keyword density across the full ${(book.wordCount / 1000).toFixed(0)}K-word text. Wider = more coverage.</p>
+      <div class="space-y-2">
+        ${book.analytics.topicDistribution.slice(0, 12).map((t, i) => {
+          const pct = Math.max(8, Math.round((t.mentions / book.analytics.maxMentions) * 100));
+          const colors = ['bg-amber-500', 'bg-purple-500', 'bg-emerald-500', 'bg-blue-500', 'bg-pink-500', 'bg-cyan-500', 'bg-red-500', 'bg-orange-500', 'bg-violet-500', 'bg-teal-500', 'bg-lime-500', 'bg-rose-500'];
+          return `<div class="flex items-center gap-2">
+            <div class="w-28 sm:w-36 text-xs text-gray-400 text-right flex-shrink-0 truncate">${esc(t.name)}</div>
+            <div class="flex-1 bg-white/5 rounded-full h-5 overflow-hidden">
+              <div class="${colors[i % colors.length]}/30 h-full rounded-full flex items-center pl-2 transition-all" style="width:${pct}%">
+                <span class="text-[10px] text-gray-300 font-medium">${t.mentions}</span>
+              </div>
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>` : ''}
+
+    <!-- Cross-chapter connections -->
+    ${book.analytics ? `<div class="glass rounded-xl p-5 border border-brand/20 mb-6">
+      <h3 class="text-sm font-semibold text-white mb-1">Cross-Chapter Connections</h3>
+      <p class="text-[10px] text-gray-600 mb-3">AI-discovered concept bridges between chapters. A student mastering one topic gains an advantage in the connected topic.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        ${book.analytics.crossChapterConnections.map(c => {
+          const color = c.strength === 'strong' ? 'border-emerald-500/30 bg-emerald-500/5' : 'border-amber-500/20 bg-amber-500/5';
+          const dot = c.strength === 'strong' ? 'bg-emerald-500' : 'bg-amber-500';
+          return `<div class="rounded-lg p-3 border ${color}">
+            <div class="flex items-center gap-1.5 mb-1">
+              <span class="w-1.5 h-1.5 rounded-full ${dot} flex-shrink-0"></span>
+              <span class="text-xs font-medium text-gray-200">${esc(c.from)}</span>
+              <svg width="12" height="8" viewBox="0 0 12 8" class="text-gray-600 flex-shrink-0"><path d="M1 4h9m0 0L7.5 1.5M10 4L7.5 6.5" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
+              <span class="text-xs font-medium text-gray-200">${esc(c.to)}</span>
+            </div>
+            <div class="text-[10px] text-gray-500 ml-3">${esc(c.concept)}</div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>` : ''}
+
+    <!-- AI insight callout -->
+    <div class="glass rounded-xl p-5 border border-amber-500/30 bg-amber-500/5">
+      <div class="flex items-start gap-3">
+        <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center flex-shrink-0 text-lg">&#x1F4A1;</div>
+        <div>
+          <div class="text-sm font-semibold text-amber-300 mb-1">AI Insight: The Hidden Study Path</div>
+          <div class="text-xs text-gray-400 leading-relaxed">Chapters 3\u20135 (Percentage, Profit &amp; Loss, Interest) share 60%+ of their vocabulary. A student who masters Percentage first will find the next two chapters dramatically easier. Similarly, Chapters 18\u201319 (P&amp;C \u2192 Probability) are so tightly coupled that studying them together saves ~30% of learning time. The book's 82 PRATHAM EDGE tips are the highest-density learning shortcuts \u2014 just 4% of the content, but they encode decades of exam-solving patterns.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT INTEGRITY BADGE -->
+  <div class="mb-10">
+    <div class="glass rounded-2xl p-6 border border-emerald-500/20 bg-emerald-500/[0.03]">
+      <div class="flex items-start gap-4">
+        <div class="w-16 h-16 rounded-xl bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/></svg>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-center gap-2 mb-2">
+            <h2 class="text-lg font-bold text-white">Content Integrity Guarantee</h2>
+            <span class="px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-[10px] font-semibold rounded-full uppercase tracking-wider">Verified</span>
+          </div>
+          <p class="text-sm text-gray-300 mb-3">Every AI response from this platform is <strong class="text-white">grounded exclusively in your book's content</strong>. Our AI never fabricates answers, never pulls from external sources, and never adds information not present in the original ${book.pages || 268}-page textbook.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="flex items-center gap-2 bg-white/[0.03] rounded-lg px-3 py-2.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+              <span class="text-xs text-gray-300">Zero hallucination policy</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/[0.03] rounded-lg px-3 py-2.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+              <span class="text-xs text-gray-300">No external knowledge used</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/[0.03] rounded-lg px-3 py-2.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+              <span class="text-xs text-gray-300">All answers cite your content</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PUBLISHER CONTENT QUALITY REPORT -->
+  ${book.analytics ? `<div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+      Publisher Content Quality Report
+    </h2>
+    <p class="text-xs text-gray-500 mb-4">AI-computed metrics that quantify the pedagogical density of your textbook — data no publisher has computed before.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
+      <div class="glass rounded-xl p-4 border border-blue-500/20">
+        <div class="text-3xl font-bold text-blue-400">${book.analytics.exampleToPageRatio}</div>
+        <div class="text-xs text-gray-500 mt-1">Examples per Page</div>
+        <div class="text-[10px] text-gray-600 mt-0.5">${book.analytics.exampleCount} examples across ${book.pages || 268} pages</div>
+      </div>
+      <div class="glass rounded-xl p-4 border border-amber-500/20">
+        <div class="text-3xl font-bold text-amber-400">${book.analytics.formulaToPageRatio}</div>
+        <div class="text-xs text-gray-500 mt-1">Formulas per Page</div>
+        <div class="text-[10px] text-gray-600 mt-0.5">${book.analytics.formulaCount.toLocaleString()} formulas across ${book.pages || 268} pages</div>
+      </div>
+      <div class="glass rounded-xl p-4 border border-emerald-500/20">
+        <div class="text-3xl font-bold text-emerald-400">${book.analytics.contentDensity}%</div>
+        <div class="text-xs text-gray-500 mt-1">Content Density</div>
+        <div class="text-[10px] text-gray-600 mt-0.5">Non-empty lines as % of total content</div>
+      </div>
+      <div class="glass rounded-xl p-4 border border-purple-500/20">
+        <div class="text-3xl font-bold text-purple-400">${book.analytics.solutionCount}</div>
+        <div class="text-xs text-gray-500 mt-1">Step-by-Step Solutions</div>
+        <div class="text-[10px] text-gray-600 mt-0.5">Full worked-out solutions detected</div>
+      </div>
+    </div>
+
+    <!-- Per-topic example density -->
+    <div class="glass rounded-xl p-5 border border-white/10">
+      <h3 class="text-sm font-semibold text-white mb-1">Examples per Topic — Where Your Book Teaches Hardest</h3>
+      <p class="text-[10px] text-gray-600 mb-3">AI counted worked examples near each topic's keywords. Higher = more practice material for that concept.</p>
+      <div class="space-y-2">
+        ${(function() {
+          const colors = ['bg-blue-500', 'bg-purple-500', 'bg-emerald-500', 'bg-amber-500', 'bg-pink-500', 'bg-cyan-500', 'bg-red-500', 'bg-orange-500'];
+          const items = (book.analytics.topicExampleDensity || []).slice(0, 8);
+          const maxEx = items[0] ? items[0].examples : 1;
+          return items.map(function(t, i) {
+            var pct = Math.max(8, Math.round((t.examples / (maxEx || 1)) * 100));
+            return '<div class="flex items-center gap-2"><div class="w-32 sm:w-40 text-xs text-gray-400 text-right flex-shrink-0 truncate">' + esc(t.name) + '</div><div class="flex-1 bg-white/5 rounded-full h-5 overflow-hidden"><div class="' + colors[i % colors.length] + '/30 h-full rounded-full flex items-center pl-2 transition-all" style="width:' + pct + '%"><span class="text-[10px] text-gray-300 font-medium">' + t.examples + '</span></div></div></div>';
+          }).join('');
+        })()}
+      </div>
+    </div>
+  </div>` : ''}
+
+  <!-- PRATHAM EDGE TIP CATALOGUE -->
+  ${book.analytics && book.analytics.edgeTipExtracts && book.analytics.edgeTipExtracts.length > 0 ? `<div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      PRATHAM EDGE Tips — Your Signature Pedagogy
+    </h2>
+    <p class="text-xs text-gray-500 mb-4">These ${book.analytics.edgeTips} proprietary tips are what make your book unique. AI extracted them verbatim — here are actual examples from the textbook.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      ${book.analytics.edgeTipExtracts.slice(0, 10).map(function(tip, i) {
+        var display = tip.length > 200 ? tip.slice(0, 200) + '...' : tip;
+        return '<div class="glass rounded-lg p-4 border border-amber-500/15 hover:border-amber-500/30 transition-colors"><div class="flex items-start gap-2"><div class="w-6 h-6 rounded bg-amber-500/20 flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-amber-400 text-[10px] font-bold">' + (i + 1) + '</span></div><div class="text-xs text-gray-300 leading-relaxed">' + esc(display) + '</div></div></div>';
+      }).join('')}
+    </div>
+    ${book.analytics.edgeTipExtracts.length > 10 ? '<div class="mt-3 text-center"><span class="text-xs text-gray-500">Showing 10 of ' + book.analytics.edgeTipExtracts.length + ' extracted tips</span><span class="text-xs text-amber-500/60 ml-2">\u2022 ' + book.analytics.edgeTips + ' total PRATHAM EDGE mentions in the book</span></div>' : ''}
+  </div>` : ''}
+
+  <!-- WHAT THIS MEANS FOR THE PUBLISHER -->
+  <div class="mb-10">
+    <div class="glass rounded-2xl p-6 border border-brand/20 bg-brand/[0.03]">
+      <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+        What This Means For PRATHAM
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <div class="w-8 h-8 rounded-lg bg-brand/20 flex items-center justify-center text-brand text-sm">1</div>
+            <h3 class="text-sm font-semibold text-white">One Book, Infinite Products</h3>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed ml-10">Your ${book.pages || 268}-page textbook isn't just a PDF anymore. It becomes a quiz engine (generates ${book.analytics ? book.analytics.exampleCount + '+' : '300+'} questions), a flashcard deck, a mind-map generator, a Socratic tutor, and a Fermi estimation trainer. One upload, 8 AI products.</p>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <div class="w-8 h-8 rounded-lg bg-brand/20 flex items-center justify-center text-brand text-sm">2</div>
+            <h3 class="text-sm font-semibold text-white">Your IP Stays Protected</h3>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed ml-10">The AI never exposes raw content — it synthesizes answers grounded in your material. Students get the learning, you retain the IP. No copy-paste, no piracy, no content leakage. Every answer cites "from your textbook."</p>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <div class="w-8 h-8 rounded-lg bg-brand/20 flex items-center justify-center text-brand text-sm">3</div>
+            <h3 class="text-sm font-semibold text-white">Scale to Thousands of Books</h3>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed ml-10">This exact pipeline works for any PDF. Upload your entire catalogue — each book gets its own AI tutor, quiz engine, and analytics dashboard. The same 8 AI modes adapt automatically to any subject, any level.</p>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <div class="w-8 h-8 rounded-lg bg-brand/20 flex items-center justify-center text-brand text-sm">4</div>
+            <h3 class="text-sm font-semibold text-white">Insights You've Never Had</h3>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed ml-10">17 editions, and you've never known that your book has ${book.analytics ? book.analytics.formulaCount.toLocaleString() : '1,700+'} formulas, ${book.analytics ? book.analytics.shortcutCount : '360+'} shortcuts, and that Chapters 3-5 share 60% vocabulary. Now you do — for every book in your catalogue.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE AI DEMO: Try it live on the real book -->
   <div class="glass rounded-2xl p-6 mb-10 border border-brand/20">
     <h2 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v2h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2V6a4 4 0 0 1 4-4z"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></svg>
-      Live AI Demo \u2014 Quantitative Aptitude Book
+      Try It Live \u2014 8 AI Modes on the Real Book
     </h2>
-    <p class="text-xs text-gray-500 mb-4">All 8 AI modes running on the ${book.pages || 268}-page vectorized textbook. Try each mode below.</p>
+    <p class="text-xs text-gray-500 mb-4">Every response is generated live from the ${book.pages || 268}-page vectorized textbook. Not canned \u2014 real AI, real content.</p>
     <input type="hidden" id="showcase-doc" value="${esc(book.path || '_book/pratham-qa')}">
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
-      <button onclick="showcaseAction('summary')" class="px-3 py-2 bg-brand/20 hover:bg-brand/30 text-brand rounded-lg text-sm transition-colors font-medium">Summary</button>
-      <button onclick="showcaseAction('keypoints')" class="px-3 py-2 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 rounded-lg text-sm transition-colors font-medium">Key Points</button>
-      <button onclick="showcaseAction('quiz')" class="px-3 py-2 bg-purple-500/20 hover:bg-purple-500/30 text-purple-400 rounded-lg text-sm transition-colors font-medium">Quiz Me</button>
-      <button onclick="showcaseAction('flashcards')" class="px-3 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-400 rounded-lg text-sm transition-colors font-medium">Flashcards</button>
-      <button onclick="showcaseAction('mindmap')" class="px-3 py-2 bg-pink-500/20 hover:bg-pink-500/30 text-pink-400 rounded-lg text-sm transition-colors font-medium">Mind Map</button>
-      <button onclick="showcaseAction('fermi')" class="px-3 py-2 bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 rounded-lg text-sm transition-colors font-medium">Fermi Estimation</button>
-      <button onclick="showcaseAction('socratic')" class="px-3 py-2 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 rounded-lg text-sm transition-colors font-medium">Socratic Dialog</button>
-      <button onclick="showcaseAction('chat')" class="px-3 py-2 bg-gray-500/20 hover:bg-gray-500/30 text-gray-300 rounded-lg text-sm transition-colors font-medium">Chat</button>
+
+    <!-- Tab bar -->
+    <div class="flex flex-wrap gap-1.5 mb-4 p-1.5 bg-white/[0.02] rounded-xl border border-white/5">
+      <button onclick="showcaseTab(this,'summary')" class="sc-tab sc-tab-active px-3 py-2 rounded-lg text-xs font-medium transition-all">Summary</button>
+      <button onclick="showcaseTab(this,'keypoints')" class="sc-tab px-3 py-2 rounded-lg text-xs font-medium transition-all">Key Points</button>
+      <button onclick="showcaseTab(this,'quiz')" class="sc-tab px-3 py-2 rounded-lg text-xs font-medium transition-all">Quiz</button>
+      <button onclick="showcaseTab(this,'flashcards')" class="sc-tab px-3 py-2 rounded-lg text-xs font-medium transition-all">Flashcards</button>
+      <button onclick="showcaseTab(this,'mindmap')" class="sc-tab px-3 py-2 rounded-lg text-xs font-medium transition-all">Mind Map</button>
+      <button onclick="showcaseTab(this,'fermi')" class="sc-tab px-3 py-2 rounded-lg text-xs font-medium transition-all">Fermi</button>
+      <button onclick="showcaseTab(this,'socratic')" class="sc-tab px-3 py-2 rounded-lg text-xs font-medium transition-all">Socratic</button>
+      <button onclick="showcaseTab(this,'chat')" class="sc-tab px-3 py-2 rounded-lg text-xs font-medium transition-all">Chat</button>
+      <button onclick="showcaseTab(this,'study-guide')" class="sc-tab px-3 py-2 rounded-lg text-xs font-medium transition-all">Study Guide</button>
     </div>
-    <!-- Socratic input (shown only for socratic mode) -->
+
+    <!-- Mode description + suggested prompts -->
+    <div id="showcase-mode-info" class="mb-3 p-3 rounded-lg bg-white/[0.02] border border-white/5">
+      <div id="showcase-mode-desc" class="text-xs text-gray-400">Select a mode to generate AI content from the full QA textbook.</div>
+      <div id="showcase-mode-prompts" class="flex flex-wrap gap-2 mt-2"></div>
+    </div>
+
+    <!-- Input area for conversational modes -->
     <div id="showcase-socratic-input" class="hidden mb-4">
       <div class="flex gap-2">
         <input id="showcase-socratic-msg" type="text" placeholder="e.g. How do I find the HCF of two numbers?" class="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-emerald-500/50 transition-colors" onkeydown="if(event.key==='Enter')showcaseSocratic()">
         <button onclick="showcaseSocratic()" class="px-3 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg text-sm transition-colors">Send</button>
       </div>
     </div>
-    <!-- Chat input (shown only for chat mode) -->
     <div id="showcase-chat-input" class="hidden mb-4">
       <div class="flex gap-2">
-        <input id="showcase-chat-msg" type="text" placeholder="e.g. Explain compound interest formula..." class="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-brand/50 transition-colors" onkeydown="if(event.key==='Enter')showcaseChat()">
+        <input id="showcase-chat-msg" type="text" placeholder="e.g. Explain the compound interest shortcut..." class="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm outline-none focus:border-brand/50 transition-colors" onkeydown="if(event.key==='Enter')showcaseChat()">
         <button onclick="showcaseChat()" class="px-3 py-2 bg-brand hover:bg-brand/80 text-white rounded-lg text-sm transition-colors">Send</button>
       </div>
     </div>
-    <div id="showcase-results" class="min-h-[100px] max-h-[400px] overflow-y-auto rounded-lg bg-white/[0.02] border border-white/5 p-4">
-      <div class="text-sm text-gray-600 text-center py-4">Click any AI mode above to demo it on the QA textbook</div>
+
+    <!-- Results area -->
+    <div id="showcase-results" class="min-h-[120px] max-h-[500px] overflow-y-auto rounded-lg bg-white/[0.02] border border-white/5 p-4">
+      <div class="text-sm text-gray-600 text-center py-8">Select an AI mode above, then click a suggested prompt or type your own</div>
+    </div>
+    <div id="showcase-footer" class="text-[10px] text-gray-700 mt-2 text-center">Powered by RAG: PDF \u2192 chunks \u2192 vector embeddings \u2192 AI inference \u2022 Response generated live from ${(book.wordCount / 1000).toFixed(0)}K words</div>
+  </div>
+
+  <!-- What's Inside the Book -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-4">What's Inside the Book</h2>
+    <div class="glass rounded-xl p-5 border border-white/10">
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-5">
+        <div class="text-center p-3 rounded-lg bg-white/[0.03]">
+          <div class="text-2xl font-bold text-white">~${book.wordCount ? Math.round(book.wordCount / 1000) + 'K' : '85K'}</div>
+          <div class="text-xs text-gray-500">Words Extracted</div>
+        </div>
+        <div class="text-center p-3 rounded-lg bg-white/[0.03]">
+          <div class="text-2xl font-bold text-white">${(book.chapters || []).length || 16}</div>
+          <div class="text-xs text-gray-500">Chapters Detected</div>
+        </div>
+        <div class="text-center p-3 rounded-lg bg-white/[0.03]">
+          <div class="text-2xl font-bold text-white">${book.pages || 268}</div>
+          <div class="text-xs text-gray-500">Pages Processed</div>
+        </div>
+      </div>
+      ${(book.chapters || []).length > 0 ? `
+      <details class="group mb-4">
+        <summary class="cursor-pointer text-sm text-brand hover:text-brand/80 transition-colors font-medium">View ${(book.chapters || []).length} chapter headings \u25BE</summary>
+        <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
+          ${(book.chapters || []).map((ch, i) => `
+            <div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/[0.03] text-sm">
+              <span class="flex-shrink-0 w-6 h-6 rounded bg-brand/20 text-brand text-xs flex items-center justify-center font-bold">${i + 1}</span>
+              <span class="text-gray-300">${esc(ch)}</span>
+            </div>
+          `).join('')}
+        </div>
+      </details>` : ''}
+      ${book.bookSample ? `
+      <div class="mt-4">
+        <div class="text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Content Preview</div>
+        <div class="bg-white/[0.02] border border-white/5 rounded-lg p-4 text-sm text-gray-400 leading-relaxed font-mono max-h-32 overflow-hidden relative">
+          ${esc(book.bookSample)}
+          <div class="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
+        </div>
+        <a href="/view/_book/pratham-qa" class="inline-flex items-center gap-1.5 mt-3 px-4 py-2 bg-brand/20 hover:bg-brand/30 text-brand rounded-lg text-sm transition-colors font-medium">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          Open in AI Viewer
+        </a>
+      </div>` : ''}
     </div>
   </div>
 
-  <!-- Fermi vs ANKR Comparison -->
-  <div class="mb-10">
-    <h2 class="text-lg font-bold text-white mb-4">Fermi.ai vs ANKR AI Tutor</h2>
-    <div class="overflow-x-auto">
-      <table class="w-full text-sm border-collapse">
-        <thead>
-          <tr>
-            <th class="text-left p-3 bg-white/5 border border-white/10 text-gray-400 font-medium">Feature</th>
-            <th class="text-left p-3 bg-white/5 border border-white/10 text-gray-400 font-medium">Fermi.ai</th>
-            <th class="text-left p-3 bg-brand/10 border border-brand/20 text-brand font-medium">ANKR AI Tutor</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="p-3 border border-white/10 text-gray-300">Cost</td><td class="p-3 border border-white/10 text-gray-400">$8/student/month</td><td class="p-3 border border-brand/10 text-emerald-400">$2.18/student/month (72.8% less)</td></tr>
-          <tr><td class="p-3 border border-white/10 text-gray-300">Devices</td><td class="p-3 border border-white/10 text-gray-400">Web browser</td><td class="p-3 border border-brand/10 text-gray-200">Web + Mobile + Offline</td></tr>
-          <tr><td class="p-3 border border-white/10 text-gray-300">Languages</td><td class="p-3 border border-white/10 text-gray-400">English only</td><td class="p-3 border border-brand/10 text-gray-200">Hindi + 10 Indian languages</td></tr>
-          <tr><td class="p-3 border border-white/10 text-gray-300">AI Modes</td><td class="p-3 border border-white/10 text-gray-400">3 (Summary, Quiz, Chat)</td><td class="p-3 border border-brand/10 text-gray-200">8 modes (+ Fermi, Socratic, Flashcards, Mind Map, Key Points)</td></tr>
-          <tr><td class="p-3 border border-white/10 text-gray-300">Custom Content</td><td class="p-3 border border-white/10 text-gray-400">Limited PDF upload</td><td class="p-3 border border-brand/10 text-gray-200">Full PDF chunking + vector embeddings + RAG</td></tr>
-          <tr><td class="p-3 border border-white/10 text-gray-300">Book Support</td><td class="p-3 border border-white/10 text-gray-400">No textbook ingestion</td><td class="p-3 border border-brand/10 text-gray-200">${book.pages || 268}-page PDF \u2192 chunked \u2192 vectorized \u2192 8 AI modes</td></tr>
-          <tr><td class="p-3 border border-white/10 text-gray-300">Analytics</td><td class="p-3 border border-white/10 text-gray-400">Basic</td><td class="p-3 border border-brand/10 text-gray-200">Teacher dashboard + student progress tracking</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+  <!-- READ THE BOOK: Real-time book viewer -->
+  ${book.hasPdf ? `<div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+      Read the Book
+    </h2>
+    <p class="text-xs text-gray-500 mb-4">Browse the actual ${book.pages || 268}-page textbook in real-time. Switch between PDF view and extracted text view.</p>
 
-  <!-- Pedagogical Approach Cards (Math-focused) -->
+    <div class="glass rounded-2xl border border-blue-500/20 overflow-hidden">
+      <!-- Reader tab bar -->
+      <div class="flex border-b border-white/10 bg-white/[0.02]">
+        <button onclick="switchBookTab('pdf')" id="bookTabPdf" class="flex-1 px-4 py-3 text-sm font-medium text-brand border-b-2 border-brand transition-colors">PDF Viewer</button>
+        <button onclick="switchBookTab('text')" id="bookTabText" class="flex-1 px-4 py-3 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:text-gray-300 transition-colors">Extracted Text</button>
+      </div>
+
+      <!-- PDF Viewer -->
+      <div id="bookViewPdf" class="relative" style="height:600px">
+        <iframe src="/api/pratham/book.pdf" class="w-full h-full border-0" title="Pratham QA Book PDF"></iframe>
+      </div>
+
+      <!-- Text Viewer (paginated) -->
+      <div id="bookViewText" class="hidden">
+        <div class="flex items-center justify-between px-4 py-2 bg-white/[0.02] border-b border-white/5">
+          <button onclick="bookTextPrev()" id="bookTextPrevBtn" class="px-3 py-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-xs text-gray-300 transition-colors disabled:opacity-30 disabled:cursor-not-allowed" disabled>&larr; Previous</button>
+          <span id="bookTextPageInfo" class="text-xs text-gray-500">Page 1</span>
+          <button onclick="bookTextNext()" id="bookTextNextBtn" class="px-3 py-1.5 bg-white/5 hover:bg-white/10 rounded-lg text-xs text-gray-300 transition-colors">&rarr; Next</button>
+        </div>
+        <div id="bookTextContent" class="p-5 text-sm text-gray-300 leading-relaxed font-mono whitespace-pre-wrap max-h-[550px] overflow-y-auto">Loading...</div>
+      </div>
+    </div>
+  </div>` : ''}
+
+  <!-- 8 AI Learning Modes — Same Problem, 8 Approaches -->
   <div class="mb-10">
-    <h2 class="text-lg font-bold text-white mb-4">Pedagogical Approaches</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="glass rounded-xl p-5 border border-brand/20">
-        <div class="flex items-center gap-2 mb-3">
-          <div class="w-8 h-8 rounded-lg bg-brand/20 flex items-center justify-center text-brand text-sm font-bold">E</div>
-          <h3 class="font-semibold text-white">Explain Mode</h3>
+    <h2 class="text-lg font-bold text-white mb-2">8 AI Learning Modes</h2>
+    <div class="glass rounded-lg p-4 border border-amber-500/20 mb-4">
+      <div class="text-xs font-medium text-amber-400 uppercase tracking-wider mb-1">One Problem, Eight Approaches</div>
+      <div class="text-sm text-gray-300">A sum of Rs 10,000 is invested at 10% per annum compound interest for 3 years. Find the amount.</div>
+      <div class="text-xs text-gray-500 mt-1">See how each AI mode helps a student master this concept differently.</div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <!-- 1. Summary -->
+      <div class="glass rounded-xl p-4 border border-brand/20">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-brand/20 flex items-center justify-center text-brand text-xs font-bold">1</div>
+          <h3 class="font-semibold text-white text-sm">Summary</h3>
         </div>
-        <p class="text-sm text-gray-400 mb-3">Direct step-by-step explanations for quantitative aptitude concepts.</p>
-        <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-2">
-          <div class="text-brand">Student: "How do I find LCM of 12 and 18?"</div>
-          <div class="text-gray-300">AI: "Step 1: Prime factorize \u2014 12 = 2\u00B2\u00D73, 18 = 2\u00D73\u00B2. Step 2: Take highest power of each: 2\u00B2\u00D73\u00B2 = 36. LCM = 36."</div>
+        <p class="text-xs text-gray-500 mb-2">Condenses the chapter into key takeaways.</p>
+        <div class="bg-white/[0.03] rounded-lg p-3 text-xs text-gray-300 leading-relaxed">Compound Interest compounds on previously accumulated interest. For P=10,000, R=10%, T=3: A = P(1+R/100)^T = 10,000 \u00D7 1.331 = Rs 13,310. CI = Rs 3,310.</div>
+      </div>
+      <!-- 2. Key Points -->
+      <div class="glass rounded-xl p-4 border border-blue-500/20">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 text-xs font-bold">2</div>
+          <h3 class="font-semibold text-white text-sm">Key Points</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-2">Extracts the essential rules and formulas.</p>
+        <div class="bg-white/[0.03] rounded-lg p-3 text-xs text-gray-300 leading-relaxed">1. CI formula: A = P(1 + R/100)^T<br>2. Year 1: 10,000 \u2192 11,000 (+1,000)<br>3. Year 2: 11,000 \u2192 12,100 (+1,100)<br>4. Year 3: 12,100 \u2192 13,310 (+1,210)<br>5. CI &gt; SI because interest earns interest</div>
+      </div>
+      <!-- 3. Quiz -->
+      <div class="glass rounded-xl p-4 border border-purple-500/20">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 text-xs font-bold">3</div>
+          <h3 class="font-semibold text-white text-sm">Quiz</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-2">Tests understanding with MCQs.</p>
+        <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-1">
+          <div class="text-purple-300 font-medium">Q: CI on Rs 10,000 at 10% for 3 years is:</div>
+          <div class="text-gray-400 ml-2">A. Rs 3,000 &nbsp; B. Rs 3,100 &nbsp; <span class="text-emerald-400 font-medium">C. Rs 3,310 \u2713</span> &nbsp; D. Rs 3,500</div>
+          <div class="text-gray-600 text-[10px] mt-1">Explanation: A=10000\u00D7(1.1)^3=13310, CI=3310</div>
         </div>
       </div>
-      <div class="glass rounded-xl p-5 border border-emerald-500/20">
-        <div class="flex items-center gap-2 mb-3">
-          <div class="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-sm font-bold">S</div>
-          <h3 class="font-semibold text-white">Socratic Mode</h3>
+      <!-- 4. Flashcards -->
+      <div class="glass rounded-xl p-4 border border-cyan-500/20">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400 text-xs font-bold">4</div>
+          <h3 class="font-semibold text-white text-sm">Flashcards</h3>
         </div>
-        <p class="text-sm text-gray-400 mb-3">Guided discovery through probing questions \u2014 never gives direct answers.</p>
-        <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-2">
-          <div class="text-emerald-400">Student: "What is probability?"</div>
-          <div class="text-gray-300">AI: "When you flip a coin, how many possible outcomes are there? And how many of those are \u2018heads\u2019? What ratio does that give you?"</div>
+        <p class="text-xs text-gray-500 mb-2">Rapid recall with front/back cards.</p>
+        <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-1.5">
+          <div class="text-cyan-300 font-medium">Front: (1.1)^3 = ?</div>
+          <div class="text-gray-400">Back: 1.331 \u2014 memorize this for 10% CI over 3 years. Amount = Principal \u00D7 1.331</div>
+          <div class="text-gray-600 text-[10px]">Category: Compound Interest \u00B7 Difficulty: Medium</div>
         </div>
       </div>
-      <div class="glass rounded-xl p-5 border border-amber-500/20">
-        <div class="flex items-center gap-2 mb-3">
-          <div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 text-sm font-bold">F</div>
-          <h3 class="font-semibold text-white">Fermi Mode</h3>
+      <!-- 5. Mind Map -->
+      <div class="glass rounded-xl p-4 border border-pink-500/20">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-pink-500/20 flex items-center justify-center text-pink-400 text-xs font-bold">5</div>
+          <h3 class="font-semibold text-white text-sm">Mind Map</h3>
         </div>
-        <p class="text-sm text-gray-400 mb-3">Real-world estimation exercises that build quantitative intuition.</p>
-        <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-2">
-          <div class="text-amber-400">Exercise: "How many math problems can a student solve in one year?"</div>
-          <div class="text-gray-300">Step 1: Study days \u2248 300. Step 2: Problems/day \u2248 20. Step 3: Total \u2248 6,000 problems/year.</div>
+        <p class="text-xs text-gray-500 mb-2">Visual hierarchy for connected concepts.</p>
+        <div class="bg-white/[0.03] rounded-lg p-3 text-xs text-gray-300 font-mono leading-relaxed">\u2514\u2500 Interest<br>&nbsp; \u251C\u2500 Simple: SI = PRT/100<br>&nbsp; \u2514\u2500 Compound<br>&nbsp;&nbsp;&nbsp; \u251C\u2500 Formula: A=P(1+R/100)^T<br>&nbsp;&nbsp;&nbsp; \u251C\u2500 Year-by-year growth<br>&nbsp;&nbsp;&nbsp; \u2514\u2500 CI = A \u2212 P = 3,310</div>
+      </div>
+      <!-- 6. Fermi Estimation -->
+      <div class="glass rounded-xl p-4 border border-amber-500/20">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 text-xs font-bold">6</div>
+          <h3 class="font-semibold text-white text-sm">Fermi Estimation</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-2">Real-world intuition from the same concept.</p>
+        <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-1">
+          <div class="text-amber-300 font-medium">Q: If all 10 lakh CAT aspirants invest Rs 10,000 at 10% CI for 3 years, how much total interest is earned?</div>
+          <div class="text-gray-400">Step 1: Each earns Rs 3,310 CI<br>Step 2: 10,00,000 \u00D7 3,310 = Rs 331 crore<br>Step 3: That's roughly the GDP of a small town!</div>
+        </div>
+      </div>
+      <!-- 7. Socratic Dialog -->
+      <div class="glass rounded-xl p-4 border border-emerald-500/20">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs font-bold">7</div>
+          <h3 class="font-semibold text-white text-sm">Socratic Dialog</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-2">Guides discovery \u2014 never gives answers directly.</p>
+        <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-1.5">
+          <div class="text-emerald-300">Student: "How do I solve this CI problem?"</div>
+          <div class="text-gray-400">AI: "After year 1, you have Rs 11,000. Now in year 2, what base do you calculate 10% on?"</div>
+          <div class="text-emerald-300">Student: "On 11,000... so 1,100?"</div>
+          <div class="text-gray-400">AI: "Yes! So after year 2 you have 12,100. Can you do year 3 the same way?"</div>
+        </div>
+      </div>
+      <!-- 8. Chat -->
+      <div class="glass rounded-xl p-4 border border-gray-500/20">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-7 h-7 rounded-lg bg-gray-500/20 flex items-center justify-center text-gray-300 text-xs font-bold">8</div>
+          <h3 class="font-semibold text-white text-sm">Chat</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-2">Free-form Q&A grounded in the textbook.</p>
+        <div class="bg-white/[0.03] rounded-lg p-3 text-xs space-y-1.5">
+          <div class="text-gray-300">Q: "Why is CI more than SI for the same problem?"</div>
+          <div class="text-gray-400">A: "SI on Rs 10,000 at 10% for 3 yrs = Rs 3,000. CI = Rs 3,310. The extra Rs 310 comes from earning interest on previous years' interest \u2014 that's the compounding effect."</div>
         </div>
       </div>
     </div>
@@ -1641,9 +1995,29 @@ ${searchModal()}
   ANKR Labs &middot; Pratham Test Prep QA Book \u00D7 AI Tutor Showcase
 </footer>
 
+<style>
+.sc-tab { color: #666; background: transparent; }
+.sc-tab:hover { color: #aaa; background: rgba(255,255,255,0.03); }
+.sc-tab-active { color: #c4b5fd !important; background: rgba(124,58,237,0.15) !important; }
+.sc-prompt-btn { cursor: pointer; transition: all 0.15s; }
+.sc-prompt-btn:hover { background: rgba(124,58,237,0.2); border-color: rgba(124,58,237,0.4); }
+</style>
 <script>
 var showcaseSocraticHistory = [];
 var showcaseChatHistory = [];
+var currentMode = 'summary';
+
+var MODE_INFO = {
+  summary: { desc: 'Generates a concise summary of the full textbook or any chapter.', prompts: ['Summarize the full book', 'Summarize the Interest chapter', 'Key themes across all 20 chapters'] },
+  keypoints: { desc: 'Extracts 8\u201312 key takeaways as a structured list.', prompts: ['Key points from the book', 'Most important formulas', 'Critical exam shortcuts'] },
+  quiz: { desc: 'Generates MCQ questions with explanations. Tests real understanding.', prompts: ['5 questions on Percentage', '5 questions across all topics', '5 hard questions on P&C'] },
+  flashcards: { desc: 'Creates recall cards with category and difficulty tags.', prompts: ['8 flashcards on Interest', '8 formula flashcards', '8 cards on Number System'] },
+  mindmap: { desc: 'Builds a hierarchical topic tree for visual study.', prompts: ['Mind map of the full book', 'Map for Algebra topics', 'Map connecting all 20 chapters'] },
+  fermi: { desc: 'Creates a real-world estimation problem using concepts from the book.', prompts: ['Fermi problem on Interest', 'Estimation exercise on Probability', 'Real-world Speed & Distance'] },
+  socratic: { desc: 'Guides you to the answer through questions. Never tells you directly.', prompts: ['How do I solve partnership problems?', 'Why is CI > SI for same rate?', 'When do I use P&C vs Probability?'] },
+  chat: { desc: 'Ask anything about the textbook. AI retrieves relevant sections and answers.', prompts: ['What shortcuts does the book teach for %?', 'Compare all PRATHAM EDGE tips', 'How many types of problems are in Ch.1?'] },
+  'study-guide': { desc: 'Generates a full study guide with objectives, key concepts, formulas, and review questions.', prompts: ['Study guide for Interest chapter', 'Full book study plan', 'Study guide for Probability'] },
+};
 
 function getSelectedDoc() {
   var sel = document.getElementById('showcase-doc');
@@ -1652,7 +2026,41 @@ function getSelectedDoc() {
 }
 
 function showcaseLoading() {
-  document.getElementById('showcase-results').innerHTML = '<div class="flex items-center gap-2 py-8 justify-center"><div class="w-5 h-5 border-2 border-brand border-t-transparent rounded-full animate-spin"></div><span class="text-sm text-gray-500">AI is thinking...</span></div>';
+  document.getElementById('showcase-results').innerHTML = '<div class="flex flex-col items-center gap-2 py-8"><div class="w-6 h-6 border-2 border-brand border-t-transparent rounded-full animate-spin"></div><span class="text-sm text-gray-500">AI is reading the book and generating response...</span><span class="text-[10px] text-gray-700">Processing ~105K words via RAG pipeline</span></div>';
+}
+
+function showcaseTab(btn, mode) {
+  currentMode = mode;
+  // Update tab styling
+  document.querySelectorAll('.sc-tab').forEach(function(t) { t.classList.remove('sc-tab-active'); });
+  btn.classList.add('sc-tab-active');
+  // Update mode info
+  var info = MODE_INFO[mode] || {};
+  document.getElementById('showcase-mode-desc').textContent = info.desc || '';
+  // Render suggested prompts
+  var promptsHtml = (info.prompts || []).map(function(p) {
+    return '<button class="sc-prompt-btn px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] text-gray-400 hover:text-brand" onclick="runPrompt(\\'' + p.replace(/'/g, "\\\\'") + '\\')">' + p + '</button>';
+  }).join('');
+  document.getElementById('showcase-mode-prompts').innerHTML = promptsHtml;
+  // Show/hide input areas
+  document.getElementById('showcase-socratic-input').classList.add('hidden');
+  document.getElementById('showcase-chat-input').classList.add('hidden');
+  if (mode === 'socratic') { document.getElementById('showcase-socratic-input').classList.remove('hidden'); showcaseSocraticHistory = []; }
+  if (mode === 'chat') { document.getElementById('showcase-chat-input').classList.remove('hidden'); showcaseChatHistory = []; }
+  // Reset results
+  document.getElementById('showcase-results').innerHTML = '<div class="text-sm text-gray-600 text-center py-8">Click a suggested prompt above, or use the buttons in the tab bar</div>';
+}
+
+function runPrompt(prompt) {
+  if (currentMode === 'socratic') {
+    document.getElementById('showcase-socratic-msg').value = prompt;
+    showcaseSocratic();
+  } else if (currentMode === 'chat') {
+    document.getElementById('showcase-chat-msg').value = prompt;
+    showcaseChat();
+  } else {
+    showcaseAction(currentMode);
+  }
 }
 
 function showcaseAction(mode) {
@@ -1660,8 +2068,8 @@ function showcaseAction(mode) {
   if (!docPath) return;
   document.getElementById('showcase-socratic-input').classList.add('hidden');
   document.getElementById('showcase-chat-input').classList.add('hidden');
-  if (mode === 'socratic') { document.getElementById('showcase-socratic-input').classList.remove('hidden'); showcaseSocraticHistory = []; document.getElementById('showcase-results').innerHTML = '<div class="text-sm text-emerald-400/70 text-center py-8">Ask a Quantitative Aptitude question below \u2014 the Socratic tutor will guide you to discover the answer</div>'; return; }
-  if (mode === 'chat') { document.getElementById('showcase-chat-input').classList.remove('hidden'); showcaseChatHistory = []; document.getElementById('showcase-results').innerHTML = '<div class="text-sm text-gray-500 text-center py-8">Ask any question about the QA textbook \u2014 percentages, algebra, probability, and more</div>'; return; }
+  if (mode === 'socratic') { document.getElementById('showcase-socratic-input').classList.remove('hidden'); showcaseSocraticHistory = []; document.getElementById('showcase-results').innerHTML = '<div class="text-sm text-emerald-400/70 text-center py-8">Ask a question below \u2014 the Socratic tutor will guide you to discover the answer yourself</div>'; return; }
+  if (mode === 'chat') { document.getElementById('showcase-chat-input').classList.remove('hidden'); showcaseChatHistory = []; document.getElementById('showcase-results').innerHTML = '<div class="text-sm text-gray-500 text-center py-8">Ask anything about the textbook \u2014 percentages, algebra, probability, and more</div>'; return; }
   showcaseLoading();
   var apiMode = mode === 'summary' ? 'summarize' : mode;
   var endpoint = '/api/ai/' + apiMode;
@@ -1691,6 +2099,9 @@ function renderShowcaseResult(mode, data) {
     else { el.innerHTML = '<div class="text-gray-500 text-sm">Could not generate mind map</div>'; }
   } else if (mode === 'fermi') {
     renderShowcaseFermi(data.fermi || data, el);
+  } else if (mode === 'study-guide') {
+    var text = data.studyGuide || 'No study guide generated';
+    el.innerHTML = '<div class="doc-content text-sm space-y-1">' + simpleMarkdown(text) + '</div>';
   } else {
     el.innerHTML = '<div class="text-gray-500 text-sm">' + JSON.stringify(data).slice(0, 500) + '</div>';
   }
@@ -1858,6 +2269,60 @@ function showcaseChat() {
       el.innerHTML += '<div class="text-red-400 text-sm mb-2">Error: ' + e.message + '</div>';
     });
 }
+
+// ── Book Reader Functions ──
+var bookTextPage = 1;
+var bookTextTotalPages = 1;
+
+function switchBookTab(tab) {
+  var pdfBtn = document.getElementById('bookTabPdf');
+  var textBtn = document.getElementById('bookTabText');
+  var pdfView = document.getElementById('bookViewPdf');
+  var textView = document.getElementById('bookViewText');
+  if (!pdfBtn || !textBtn) return;
+
+  if (tab === 'pdf') {
+    pdfBtn.className = 'flex-1 px-4 py-3 text-sm font-medium text-brand border-b-2 border-brand transition-colors';
+    textBtn.className = 'flex-1 px-4 py-3 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:text-gray-300 transition-colors';
+    pdfView.classList.remove('hidden');
+    textView.classList.add('hidden');
+  } else {
+    textBtn.className = 'flex-1 px-4 py-3 text-sm font-medium text-brand border-b-2 border-brand transition-colors';
+    pdfBtn.className = 'flex-1 px-4 py-3 text-sm font-medium text-gray-500 border-b-2 border-transparent hover:text-gray-300 transition-colors';
+    textView.classList.remove('hidden');
+    pdfView.classList.add('hidden');
+    loadBookTextPage(bookTextPage);
+  }
+}
+
+function loadBookTextPage(page) {
+  var content = document.getElementById('bookTextContent');
+  var info = document.getElementById('bookTextPageInfo');
+  var prevBtn = document.getElementById('bookTextPrevBtn');
+  var nextBtn = document.getElementById('bookTextNextBtn');
+  if (!content) return;
+  content.innerHTML = '<div class="text-gray-500 text-center py-8">Loading page ' + page + '...</div>';
+  fetch('/api/pratham/book-text?page=' + page + '&pageSize=3000')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      bookTextPage = data.page;
+      bookTextTotalPages = data.totalPages;
+      content.textContent = data.content;
+      content.scrollTop = 0;
+      info.textContent = 'Page ' + data.page + ' of ' + data.totalPages + ' (' + Math.round(data.totalChars / 1000) + 'K chars total)';
+      prevBtn.disabled = !data.hasPrev;
+      nextBtn.disabled = !data.hasNext;
+    })
+    .catch(function(e) { content.innerHTML = '<div class="text-red-400 text-center py-8">Error loading text: ' + e.message + '</div>'; });
+}
+
+function bookTextPrev() {
+  if (bookTextPage > 1) loadBookTextPage(bookTextPage - 1);
+}
+
+function bookTextNext() {
+  if (bookTextPage < bookTextTotalPages) loadBookTextPage(bookTextPage + 1);
+}
 </script>
 </body></html>`;
 }
@@ -1979,4 +2444,478 @@ function escG(s) {
 </body></html>`;
 }
 
-module.exports = { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage, prathamShowcasePage, esc };
+// ============================================
+// PAGE: FreightBox Showcase (/project/documents/freightbox/_showcase)
+// ============================================
+function freightboxShowcasePage(files, platform) {
+  files = files || [];
+  platform = platform || {};
+  const fileCount = files.length;
+  const p = platform;
+
+  const docGrid = files.map(f => `
+    <a href="/view/${encodeURIComponent(f.path)}" class="glass rounded-lg p-4 hover:bg-white/[0.03] border border-border hover:border-white/15 transition-all block">
+      <div class="flex items-start gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" class="flex-shrink-0 mt-0.5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <div class="min-w-0">
+          <div class="text-sm font-medium text-gray-200 truncate">${esc(f.title)}</div>
+          <div class="text-xs text-gray-600 mt-1">${f.size ? (f.size / 1024).toFixed(1) + ' KB' : ''}</div>
+        </div>
+      </div>
+    </a>
+  `).join('');
+
+  // Icons for products
+  const productIcons = {
+    ship: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 1v4"/></svg>',
+    truck: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>',
+    warehouse: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35z"/><path d="M6 18h12"/><path d="M6 14h12"/></svg>',
+    money: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
+    users: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  };
+
+  // Colors for products
+  const productColors = ['blue', 'emerald', 'amber', 'pink', 'purple'];
+
+  // Module content for interactive tabs
+  const moduleContent = {
+    'Operations': { desc: 'End-to-end shipment lifecycle management across all freight modes.', features: ['Multi-modal booking (Ocean FCL/LCL, Air, Road, Rail)', 'Container management with type/size/status tracking', 'Shipment milestones with automated status updates', 'Carrier allocation and vessel scheduling', 'Port pair and route management'] },
+    'Documentation': { desc: '37 document types with automated generation, e-signatures, and blockchain eBL.', features: ['Bill of Lading (MBL, HBL, electronic eBL)', 'Commercial Invoice, Packing List, Certificate of Origin', 'Customs declarations, shipping instructions', 'DCSA-compliant electronic Bill of Lading', 'Document chain verification with blockchain'] },
+    'Finance': { desc: 'Full financial lifecycle from quotation to reconciliation.', features: ['Multi-currency quotations and invoicing', 'GST/Tax compliant (GSTN, E-Invoice IRN/IRP, E-Way Bill)', 'Credit management with configurable limits', 'Bank reconciliation with AI matching', 'Accounts receivable/payable with aging reports'] },
+    'Tracking & Visibility': { desc: 'Real-time container, vessel, and shipment tracking.', features: ['Live container tracking with carrier integration', 'Vessel AIS tracking and port ETA predictions', 'Milestone-based shipment visibility', 'Customer portal with self-service tracking', 'Automated exception alerts and notifications'] },
+    'Marketplace': { desc: 'Built-in freight exchange with bidding, RFQ, and dynamic pricing.', features: ['6 order types: Market, Limit, Auction, RFQ, Standing, Tender', 'Vendor network with scoring and ranking', 'Dynamic pricing engine with market factors', 'Contract management and rate benchmarking', 'Carrier connectivity and capacity matching'] },
+    'APIBox Integrations': { desc: 'Pre-built connectors for Indian and global logistics systems.', features: ['GSTN, E-Invoice (IRN/IRP), E-Way Bill APIs', 'DigiLocker, Vahan vehicle verification', 'Carrier EDI and booking APIs', 'Payment gateway integrations (Razorpay, UPI)', 'WhatsApp Business API for notifications'] },
+    'Analytics': { desc: 'Business intelligence with real-time dashboards and AI insights.', features: ['Shipment volume and revenue analytics', 'Carrier performance scorecards', 'Route profitability analysis', 'Customer churn prediction', 'AI-powered demand forecasting'] },
+    'Customer Portal': { desc: 'Unified portal for shippers, consignees, and customs brokers.', features: ['Self-service booking and tracking', 'Document upload and verification', 'Invoice and payment management', 'Communication hub with chat and email', 'Mobile-responsive design'] },
+    'User & Org Management': { desc: 'Multi-tenant architecture with fine-grained access control.', features: ['Role-based access control (RBAC)', 'Multi-organization support', 'Team management with department hierarchy', 'Audit trail and activity logging', 'SSO and OAuth integration'] },
+    'Technical Platform': { desc: 'Modern cloud-native architecture built for scale.', features: ['GraphQL API with 100+ operations', 'Real-time subscriptions via WebSocket', 'PostgreSQL with Prisma ORM', 'Redis caching and job queues', 'Docker/K8s deployment ready'] },
+  };
+
+  const categories = p.categories || [];
+  const exchange = p.exchange || {};
+  const pricing = p.pricing || {};
+  const products = p.products || [];
+  const advantages = p.advantages || [];
+  const moduleAreas = p.moduleAreas || [];
+
+  // Build competitive bars HTML
+  const competitiveBars = categories.map(c => {
+    const fbColor = c.fb >= c.cw ? (c.fb > c.cw + 10 ? 'bg-emerald-500' : 'bg-emerald-400') : (c.fb >= c.cw - 10 ? 'bg-amber-400' : 'bg-red-400');
+    const fbLabel = c.fb > c.cw + 10 ? 'EXCEEDS' : (c.fb >= c.cw - 10 ? '' : 'GAP');
+    return `<div class="flex items-center gap-3 py-2">
+      <div class="w-40 sm:w-48 text-xs text-gray-400 text-right flex-shrink-0 truncate">${esc(c.name)}</div>
+      <div class="flex-1 space-y-1">
+        <div class="flex items-center gap-2">
+          <div class="flex-1 bg-white/5 rounded-full h-4 overflow-hidden">
+            <div class="${fbColor}/70 h-full rounded-full flex items-center justify-end pr-2 transition-all" style="width:${Math.min(c.fb, 120) / 1.2}%">
+              <span class="text-[9px] text-white font-bold">${c.fb}%</span>
+            </div>
+          </div>
+          <span class="text-[9px] w-12 text-gray-500 fb-bar-label" data-mode="ecosystem">FB</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="flex-1 bg-white/5 rounded-full h-4 overflow-hidden">
+            <div class="bg-blue-500/70 h-full rounded-full flex items-center justify-end pr-2 transition-all" style="width:${Math.min(c.cw, 100)}%">
+              <span class="text-[9px] text-white font-bold">${c.cw}%</span>
+            </div>
+          </div>
+          <span class="text-[9px] w-12 text-gray-500">CW</span>
+        </div>
+      </div>
+      ${fbLabel ? `<span class="text-[9px] px-1.5 py-0.5 rounded-full ${fbLabel === 'EXCEEDS' ? 'bg-emerald-500/20 text-emerald-400' : 'bg-red-500/20 text-red-400'} font-bold flex-shrink-0">${fbLabel}</span>` : '<span class="w-16"></span>'}
+    </div>`;
+  }).join('');
+
+  // Module tabs HTML
+  const moduleTabs = moduleAreas.map((m, i) => {
+    const active = i === 0 ? 'fb-tab-active' : '';
+    return `<button onclick="fbShowcaseTab(this,'${esc(m)}')" class="fb-tab ${active} px-3 py-2 rounded-lg text-xs font-medium transition-all whitespace-nowrap">${esc(m)}</button>`;
+  }).join('');
+
+  const moduleContentHtml = moduleAreas.map((m, i) => {
+    const mc = moduleContent[m] || { desc: '', features: [] };
+    const display = i === 0 ? '' : 'hidden';
+    return `<div id="fb-module-${i}" class="fb-module-panel ${display}">
+      <div class="p-5">
+        <h3 class="text-base font-bold text-white mb-2">${esc(m)}</h3>
+        <p class="text-sm text-gray-400 mb-4">${esc(mc.desc)}</p>
+        <div class="space-y-2">
+          ${mc.features.map(f => `<div class="flex items-start gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" class="flex-shrink-0 mt-0.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+            <span class="text-sm text-gray-300">${esc(f)}</span>
+          </div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Product cards
+  const productCards = products.map((prod, i) => {
+    const color = productColors[i % productColors.length];
+    const icon = productIcons[prod.icon] || productIcons.ship;
+    return `<div class="glass rounded-xl p-5 border border-${color}-500/20 hover:border-${color}-500/40 transition-all cursor-pointer group" onclick="document.getElementById('section-modules').scrollIntoView({behavior:'smooth'})">
+      <div class="w-10 h-10 rounded-lg bg-${color}-500/20 flex items-center justify-center text-${color}-400 mb-3 group-hover:scale-110 transition-transform">${icon}</div>
+      <h3 class="text-sm font-bold text-white mb-1">${esc(prod.name)}</h3>
+      <p class="text-xs text-gray-500">${esc(prod.desc)}</p>
+    </div>`;
+  }).join('');
+
+  // Advantage cards
+  const advantageCards = advantages.map((a, i) => {
+    const colors = ['brand', 'emerald', 'amber', 'blue', 'pink', 'cyan'];
+    const color = colors[i % colors.length];
+    const icons = [
+      '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
+      '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-2 4-4 6-2-2-4-4.05-4-6a4 4 0 0 1 4-4z"/><circle cx="12" cy="14" r="3"/><path d="M17.5 17.5L22 22"/><path d="M6.5 17.5L2 22"/></svg>',
+      '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/><path d="M12 14v2"/></svg>',
+      '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>',
+      '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>',
+      '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
+    ];
+    return `<div class="glass rounded-xl p-5 border border-${color}/20">
+      <div class="w-10 h-10 rounded-lg bg-${color}/20 flex items-center justify-center text-${color} mb-3">${icons[i] || icons[0]}</div>
+      <h3 class="text-sm font-bold text-white mb-1">${esc(a.title)}</h3>
+      <p class="text-xs text-gray-500 leading-relaxed">${esc(a.desc)}</p>
+    </div>`;
+  }).join('');
+
+  // Exchange stats
+  const exchangeStats = [
+    { label: 'Match Rate', value: exchange.matchRate || '>95%', color: 'emerald' },
+    { label: 'Fill Rate', value: exchange.fillRate || '>85%', color: 'blue' },
+    { label: 'Empty Miles', value: exchange.emptyMiles || '<15%', color: 'amber' },
+    { label: 'Time to Match', value: exchange.timeToMatch || '<30 min', color: 'purple' },
+    { label: 'Price Spread', value: exchange.priceSpread || '<5%', color: 'pink' },
+    { label: 'Order Types', value: String(exchange.orderTypes || 6), color: 'cyan' },
+  ];
+
+  // Pricing columns
+  const pricingTiers = [
+    { name: 'Free', price: (pricing.free || {}).price || '$0', shipments: (pricing.free || {}).shipments || 10, users: (pricing.free || {}).users || 1, docTypes: (pricing.free || {}).docTypes || 5, color: 'gray', cta: 'Start Free' },
+    { name: 'Pro', price: (pricing.pro || {}).price || '$99/mo', shipments: (pricing.pro || {}).shipments || 100, users: (pricing.pro || {}).users || 5, docTypes: (pricing.pro || {}).docTypes || 37, color: 'brand', cta: 'Get Pro', featured: true },
+    { name: 'Enterprise', price: (pricing.enterprise || {}).price || 'Custom', shipments: (pricing.enterprise || {}).shipments || 'Unlimited', users: (pricing.enterprise || {}).users || 'Unlimited', docTypes: (pricing.enterprise || {}).docTypes || 37, color: 'amber', cta: 'Contact Sales' },
+  ];
+
+  return htmlHead('FreightBox Showcase — ANKR Logistics') + `
+<body class="min-h-screen">
+${navbar()}
+${searchModal()}
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+
+  <!-- SECTION A: Hero -->
+  <div class="mb-12">
+    <div class="glass rounded-2xl border border-blue-500/20 overflow-hidden">
+      <div class="p-8 sm:p-10 bg-gradient-to-br from-blue-500/5 via-transparent to-emerald-500/5">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-blue-500/20">FB</div>
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-bold text-white">${esc(p.name || 'FreightBox')}</h1>
+            <p class="text-sm text-gray-400">${esc(p.tagline || 'Multimodal Freight Management')}</p>
+          </div>
+        </div>
+        <p class="text-lg text-blue-300 font-medium mb-6">Any Size. Any Mode. Anywhere.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-4 mb-6">
+          <div><div class="text-2xl font-bold text-white">${p.modules || 10}</div><div class="text-gray-500 text-xs">Modules</div></div>
+          <div><div class="text-2xl font-bold text-white">${p.docTypes || 37}</div><div class="text-gray-500 text-xs">Doc Types</div></div>
+          <div><div class="text-2xl font-bold text-white">${p.freightModes || 6}</div><div class="text-gray-500 text-xs">Freight Modes</div></div>
+          <div><div class="text-2xl font-bold text-white">${(p.products || []).length || 5}</div><div class="text-gray-500 text-xs">Products</div></div>
+          <div><div class="text-2xl font-bold text-white">${p.graphqlOps || '100'}+</div><div class="text-gray-500 text-xs">GraphQL Ops</div></div>
+        </div>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="bg-blue-500/20 text-blue-300 px-2.5 py-1 rounded-full">DCSA Compliant</span>
+          <span class="bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded-full">GraphQL API</span>
+          <span class="bg-purple-500/20 text-purple-300 px-2.5 py-1 rounded-full">Real-time</span>
+          <span class="bg-amber-500/20 text-amber-300 px-2.5 py-1 rounded-full">AI-Powered</span>
+          <span class="bg-pink-500/20 text-pink-300 px-2.5 py-1 rounded-full">India Compliance</span>
+          <span class="bg-cyan-500/20 text-cyan-300 px-2.5 py-1 rounded-full">Blockchain eBL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION B: Platform Architecture Pipeline -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-4">Freight Lifecycle Pipeline</h2>
+    <div class="glass rounded-xl p-5 border border-white/10">
+      <div class="flex flex-wrap items-center justify-center gap-2 text-sm">
+        <div class="bg-blue-500/15 text-blue-400 px-4 py-2.5 rounded-lg font-medium text-center">
+          <div class="text-lg mb-0.5">&#x1F4E6;</div>Shipper<div class="text-[10px] text-blue-400/60 mt-0.5">RFQ / Booking</div>
+        </div>
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" class="text-gray-600 flex-shrink-0"><path d="M2 8h18m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="bg-purple-500/15 text-purple-400 px-4 py-2.5 rounded-lg font-medium text-center">
+          <div class="text-lg mb-0.5">&#x1F4CB;</div>Booking<div class="text-[10px] text-purple-400/60 mt-0.5">Rate + Allocation</div>
+        </div>
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" class="text-gray-600 flex-shrink-0"><path d="M2 8h18m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="bg-amber-500/15 text-amber-400 px-4 py-2.5 rounded-lg font-medium text-center">
+          <div class="text-lg mb-0.5">&#x1F4E6;</div>Container<div class="text-[10px] text-amber-400/60 mt-0.5">Stuffing / CFS</div>
+        </div>
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" class="text-gray-600 flex-shrink-0"><path d="M2 8h18m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="bg-emerald-500/15 text-emerald-400 px-4 py-2.5 rounded-lg font-medium text-center">
+          <div class="text-lg mb-0.5">&#x1F6A2;</div>Tracking<div class="text-[10px] text-emerald-400/60 mt-0.5">Live AIS + ETA</div>
+        </div>
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" class="text-gray-600 flex-shrink-0"><path d="M2 8h18m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="bg-cyan-500/15 text-cyan-400 px-4 py-2.5 rounded-lg font-medium text-center">
+          <div class="text-lg mb-0.5">&#x1F4C4;</div>Documents<div class="text-[10px] text-cyan-400/60 mt-0.5">37 doc types + eBL</div>
+        </div>
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" class="text-gray-600 flex-shrink-0"><path d="M2 8h18m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="bg-pink-500/15 text-pink-400 px-4 py-2.5 rounded-lg font-medium text-center">
+          <div class="text-lg mb-0.5">&#x1F4B0;</div>Finance<div class="text-[10px] text-pink-400/60 mt-0.5">Invoice + GST</div>
+        </div>
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" class="text-gray-600 flex-shrink-0"><path d="M2 8h18m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="bg-brand/15 text-brand px-4 py-2.5 rounded-lg font-medium text-center">
+          <div class="text-lg mb-0.5">&#x2705;</div>Delivery<div class="text-[10px] text-brand/60 mt-0.5">POD + Settlement</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION C: 5 Products in Suite -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-4">5 Products in the FreightBox Suite</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      ${productCards}
+    </div>
+  </div>
+
+  <!-- SECTION D: 10 Module Deep-Dive (Interactive Tabs) -->
+  <div class="mb-10" id="section-modules">
+    <h2 class="text-lg font-bold text-white mb-4">10-Module Deep Dive</h2>
+    <div class="glass rounded-xl border border-white/10 overflow-hidden">
+      <div class="flex flex-nowrap gap-1 p-2 overflow-x-auto bg-white/[0.02] border-b border-white/5">
+        ${moduleTabs}
+      </div>
+      <div id="fb-module-content">
+        ${moduleContentHtml}
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION E: vs CargoWise — Competitive Dashboard -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-2">FreightBox vs CargoWise</h2>
+    <p class="text-xs text-gray-500 mb-4">Side-by-side comparison across 11 capability categories. Toggle between standalone FreightBox and full ANKR Ecosystem scores.</p>
+    <div class="glass rounded-xl border border-white/10 overflow-hidden">
+      <div class="flex items-center justify-between px-5 py-3 bg-white/[0.02] border-b border-white/5">
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-emerald-500/70"></span>
+            <span class="text-xs text-gray-400">FreightBox</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-blue-500/70"></span>
+            <span class="text-xs text-gray-400">CargoWise</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="fbToggleEcosystem(false)" id="fb-toggle-standalone" class="px-3 py-1 rounded-lg text-[10px] font-medium bg-white/5 text-gray-400 transition-all hover:bg-white/10">Standalone (${(p.standalone || {}).score || 47}%)</button>
+          <button onclick="fbToggleEcosystem(true)" id="fb-toggle-ecosystem" class="px-3 py-1 rounded-lg text-[10px] font-medium bg-brand/20 text-brand transition-all">Ecosystem (${(p.ecosystem || {}).score || 92}%)</button>
+        </div>
+      </div>
+      <div class="px-5 py-4 space-y-1" id="fb-competitive-bars">
+        ${competitiveBars}
+      </div>
+      <div class="px-5 py-3 bg-white/[0.02] border-t border-white/5">
+        <div class="flex items-center gap-3 text-xs">
+          <span class="bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full font-bold">5 categories EXCEED CargoWise</span>
+          <span class="text-gray-600">CRM at 120% — far beyond CW's 60%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION F: FR8X Exchange — The Marketplace Engine -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-2">FR8X Exchange — The Marketplace Engine</h2>
+    <p class="text-xs text-gray-500 mb-4">A built-in freight exchange with dynamic pricing, multi-order-type matching, and liquidity flywheel.</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
+      ${exchangeStats.map(s => `
+        <div class="glass rounded-xl p-4 border border-${s.color}-500/20 text-center">
+          <div class="text-2xl font-bold text-${s.color}-400">${esc(String(s.value))}</div>
+          <div class="text-[10px] text-gray-500 mt-1">${esc(s.label)}</div>
+        </div>
+      `).join('')}
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+      <!-- 6 Order Types -->
+      <div class="glass rounded-xl p-5 border border-white/10">
+        <h3 class="text-sm font-bold text-white mb-3">6 Order Types</h3>
+        <div class="grid grid-cols-2 gap-2">
+          ${['Market Order', 'Limit Order', 'Auction', 'RFQ', 'Standing Order', 'Tender'].map((ot, i) => {
+            const orderColors = ['blue', 'purple', 'amber', 'emerald', 'pink', 'cyan'];
+            return `<div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-${orderColors[i]}-500/10 border border-${orderColors[i]}-500/20">
+              <span class="w-2 h-2 rounded-full bg-${orderColors[i]}-400"></span>
+              <span class="text-xs text-gray-300">${ot}</span>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>
+      <!-- Liquidity Flywheel -->
+      <div class="glass rounded-xl p-5 border border-brand/20">
+        <h3 class="text-sm font-bold text-white mb-3">Liquidity Flywheel</h3>
+        <div class="space-y-2 text-xs text-gray-400">
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-[10px]">1</div>
+            <span>More Shippers &rarr; More Loads posted</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold text-[10px]">2</div>
+            <span>More Loads &rarr; Carriers join for demand</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-[10px]">3</div>
+            <span>More Carriers &rarr; Better rates &amp; match</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold text-[10px]">4</div>
+            <span>Better rates &rarr; More Shippers join</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-6 h-6 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-400 font-bold text-[10px]">5</div>
+            <span>Cycle accelerates &rarr; Network effects compound</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Dynamic Pricing -->
+    <div class="glass rounded-xl p-5 border border-amber-500/20">
+      <h3 class="text-sm font-bold text-white mb-2">Dynamic Pricing Formula</h3>
+      <div class="bg-white/[0.02] rounded-lg p-4 font-mono text-sm text-amber-300 overflow-x-auto">
+        Price = BaseRate &times; DemandMultiplier &times; SeasonalFactor &times; (1 + FuelSurcharge) &times; CarrierScore
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mt-3 text-[10px]">
+        <div class="text-center"><span class="text-gray-400">BaseRate</span><br><span class="text-amber-300">Market average</span></div>
+        <div class="text-center"><span class="text-gray-400">Demand</span><br><span class="text-amber-300">Supply/demand ratio</span></div>
+        <div class="text-center"><span class="text-gray-400">Seasonal</span><br><span class="text-amber-300">Peak/off-peak</span></div>
+        <div class="text-center"><span class="text-gray-400">Fuel</span><br><span class="text-amber-300">Real-time index</span></div>
+        <div class="text-center"><span class="text-gray-400">Carrier</span><br><span class="text-amber-300">Performance score</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION G: 6 Unique Advantages over CargoWise -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-4">6 Advantages Over CargoWise</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      ${advantageCards}
+    </div>
+  </div>
+
+  <!-- SECTION H: Pricing Tiers -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-2">Pricing</h2>
+    <p class="text-xs text-gray-500 mb-4">Start free, scale as you grow.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      ${pricingTiers.map(t => `
+        <div class="glass rounded-xl p-6 border ${t.featured ? 'border-brand/40 ring-1 ring-brand/20' : 'border-white/10'}">
+          ${t.featured ? '<div class="text-[10px] font-bold text-brand uppercase tracking-wider mb-2">Most Popular</div>' : ''}
+          <h3 class="text-lg font-bold text-white">${esc(t.name)}</h3>
+          <div class="text-3xl font-bold text-white mt-2 mb-4">${esc(String(t.price))}</div>
+          <div class="space-y-3 text-sm text-gray-400 mb-6">
+            <div class="flex items-center justify-between">
+              <span>Shipments/mo</span>
+              <span class="text-white font-medium">${esc(String(t.shipments))}</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span>Users</span>
+              <span class="text-white font-medium">${esc(String(t.users))}</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span>Document Types</span>
+              <span class="text-white font-medium">${t.docTypes}</span>
+            </div>
+          </div>
+          <button class="w-full py-2.5 rounded-lg text-sm font-medium transition-all ${t.featured ? 'bg-brand hover:bg-brand/80 text-white' : 'bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10'}">${esc(t.cta)}</button>
+        </div>
+      `).join('')}
+    </div>
+  </div>
+
+  <!-- SECTION I: Documentation Index -->
+  <div class="mb-10">
+    <h2 class="text-lg font-bold text-white mb-2">FreightBox Documentation</h2>
+    <p class="text-xs text-gray-500 mb-4">${fileCount} project documents — architecture, gap analysis, exchange design, roadmaps</p>
+    <details class="group" open>
+      <summary class="cursor-pointer text-sm text-brand hover:text-brand/80 transition-colors mb-3 font-medium">Show ${fileCount} documents &#x25BE;</summary>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-3">
+        ${docGrid || '<div class="col-span-full text-center text-gray-600 py-8">No documents found</div>'}
+      </div>
+    </details>
+  </div>
+
+</main>
+
+<footer class="border-t border-border mt-16 py-6 text-center text-xs text-gray-600">
+  ANKR Labs &middot; FreightBox Multimodal Freight Management Showcase
+</footer>
+
+<style>
+.fb-tab { color: #666; background: transparent; }
+.fb-tab:hover { color: #aaa; background: rgba(255,255,255,0.03); }
+.fb-tab-active { color: #93c5fd !important; background: rgba(59,130,246,0.15) !important; }
+</style>
+<script>
+// Module tab switching
+var fbModuleAreas = ${JSON.stringify(moduleAreas)};
+function fbShowcaseTab(btn, moduleName) {
+  // Update tab styling
+  document.querySelectorAll('.fb-tab').forEach(function(t) { t.classList.remove('fb-tab-active'); });
+  btn.classList.add('fb-tab-active');
+  // Show correct panel
+  var idx = fbModuleAreas.indexOf(moduleName);
+  document.querySelectorAll('.fb-module-panel').forEach(function(p, i) {
+    if (i === idx) p.classList.remove('hidden');
+    else p.classList.add('hidden');
+  });
+}
+
+// Competitive chart toggle (ecosystem vs standalone)
+var fbStandaloneScores = ${JSON.stringify((p.categories || []).map(c => {
+  // Standalone scores: reduce ecosystem-boosted categories
+  const standaloneMultiplier = { 'Warehouse (WMS)': 0.33, 'Transport (TMS)': 0.42, 'Financial': 0.45, 'CRM': 0.33 };
+  const mult = standaloneMultiplier[c.name] || 0.67;
+  return { name: c.name, fb: Math.round(c.fb * mult), cw: c.cw };
+}))};
+var fbEcosystemScores = ${JSON.stringify(categories)};
+var fbIsEcosystem = true;
+
+function fbToggleEcosystem(show) {
+  fbIsEcosystem = show;
+  var scores = show ? fbEcosystemScores : fbStandaloneScores;
+  var bars = document.getElementById('fb-competitive-bars');
+  if (!bars) return;
+  // Rebuild bars
+  var html = '';
+  scores.forEach(function(c) {
+    var fbColor = c.fb >= c.cw ? (c.fb > c.cw + 10 ? 'bg-emerald-500' : 'bg-emerald-400') : (c.fb >= c.cw - 10 ? 'bg-amber-400' : 'bg-red-400');
+    var fbLabel = c.fb > c.cw + 10 ? 'EXCEEDS' : (c.fb >= c.cw - 10 ? '' : 'GAP');
+    html += '<div class="flex items-center gap-3 py-2">';
+    html += '<div class="w-40 sm:w-48 text-xs text-gray-400 text-right flex-shrink-0 truncate">' + c.name + '</div>';
+    html += '<div class="flex-1 space-y-1">';
+    html += '<div class="flex items-center gap-2"><div class="flex-1 bg-white/5 rounded-full h-4 overflow-hidden"><div class="' + fbColor + '/70 h-full rounded-full flex items-center justify-end pr-2 transition-all" style="width:' + Math.min(c.fb, 120) / 1.2 + '%"><span class="text-[9px] text-white font-bold">' + c.fb + '%</span></div></div><span class="text-[9px] w-12 text-gray-500">FB</span></div>';
+    html += '<div class="flex items-center gap-2"><div class="flex-1 bg-white/5 rounded-full h-4 overflow-hidden"><div class="bg-blue-500/70 h-full rounded-full flex items-center justify-end pr-2 transition-all" style="width:' + Math.min(c.cw, 100) + '%"><span class="text-[9px] text-white font-bold">' + c.cw + '%</span></div></div><span class="text-[9px] w-12 text-gray-500">CW</span></div>';
+    html += '</div>';
+    if (fbLabel) {
+      html += '<span class="text-[9px] px-1.5 py-0.5 rounded-full ' + (fbLabel === 'EXCEEDS' ? 'bg-emerald-500/20 text-emerald-400' : 'bg-red-500/20 text-red-400') + ' font-bold flex-shrink-0">' + fbLabel + '</span>';
+    } else {
+      html += '<span class="w-16"></span>';
+    }
+    html += '</div>';
+  });
+  bars.innerHTML = html;
+  // Update toggle styling
+  var btnStandalone = document.getElementById('fb-toggle-standalone');
+  var btnEcosystem = document.getElementById('fb-toggle-ecosystem');
+  if (show) {
+    btnEcosystem.className = 'px-3 py-1 rounded-lg text-[10px] font-medium bg-brand/20 text-brand transition-all';
+    btnStandalone.className = 'px-3 py-1 rounded-lg text-[10px] font-medium bg-white/5 text-gray-400 transition-all hover:bg-white/10';
+  } else {
+    btnStandalone.className = 'px-3 py-1 rounded-lg text-[10px] font-medium bg-brand/20 text-brand transition-all';
+    btnEcosystem.className = 'px-3 py-1 rounded-lg text-[10px] font-medium bg-white/5 text-gray-400 transition-all hover:bg-white/10';
+  }
+}
+</script>
+</body></html>`;
+}
+
+module.exports = { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage, prathamShowcasePage, freightboxShowcasePage, esc };

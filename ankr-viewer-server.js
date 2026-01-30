@@ -15,7 +15,7 @@ const { execSync } = require('child_process');
 const eonClient = require('./ankr-viewer-eon-client');
 const { getRegistry, getCategories, getCategoryOrder } = require('./ankr-product-registry');
 const access = require('./ankr-viewer-access');
-const { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage, prathamShowcasePage } = require('./ankr-viewer-html');
+const { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage, prathamShowcasePage, freightboxShowcasePage } = require('./ankr-viewer-html');
 
 const autoDiscoveredFiles = new Map(); // virtual path → absolute path
 
@@ -723,15 +723,47 @@ function readDocContent(docPath) {
   return null;
 }
 
+// ── Dual-format input helper (ankr.in: {path}, ankrlms: {content, documentName}, chat: {context, messages}) ──
+function resolveAIInput(body) {
+  if (body.path) return readDocContent(body.path);
+  if (body.content) return body.content;
+  if (body.context) return body.context;
+  return null;
+}
+
+// Helper: parse key points string into array
+function parseKeyPointsArray(raw) {
+  if (!raw) return [];
+  // Split on numbered items (1. ... 2. ...) or bullet points (- ...)
+  const lines = raw.split('\n').filter(l => l.trim());
+  return lines
+    .map(l => l.replace(/^\s*(\d+[\.\)]\s*|[-*]\s*)/, '').trim())
+    .filter(l => l.length > 0);
+}
+
+// Helper: add ids and levels to mindmap tree for ankrlms format
+function addIdsAndLevels(node, level, prefix) {
+  if (!node) return node;
+  level = level || 0;
+  prefix = prefix || 'node';
+  const enriched = { id: prefix, label: node.label, level, children: [] };
+  if (node.children && node.children.length > 0) {
+    enriched.children = node.children.map((child, i) =>
+      addIdsAndLevels(child, level + 1, prefix + '-' + i)
+    );
+  }
+  return enriched;
+}
+
 // ── AI Endpoints ──
 
 app.post('/api/ai/summarize', async (req, res) => {
   try {
-    const content = readDocContent(req.body.path || '');
-    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const content = resolveAIInput(req.body);
+    if (!content) return res.status(404).json({ error: 'Document not found or no content provided' });
     const truncated = content.slice(0, 8000);
     const result = await callAI(
-      'You are a concise document summarizer. Provide a 3-5 bullet point summary of the key points. Use markdown bullet points.',
+      'You are a concise document summarizer. Provide a 3-5 bullet point summary of the key points. Use markdown bullet points.\n\nCRITICAL RULES:\n- ONLY use information explicitly stated in the document provided below.\n- Do NOT add external facts, examples, or knowledge from outside this document.\n- If the document is too short or unclear to summarize, say "The provided content does not contain enough information to generate a meaningful summary."\n- When possible, reference specific sections, chapters, or topics from the document.',
       `Summarize this document:\n\n${truncated}`,
       { maxTokens: 500 }
     );
@@ -744,17 +776,28 @@ app.post('/api/ai/summarize', async (req, res) => {
 
 app.post('/api/ai/chat', async (req, res) => {
   try {
-    const content = readDocContent(req.body.path || '');
-    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const content = resolveAIInput(req.body);
+    if (!content) return res.status(404).json({ error: 'Document not found or no content provided' });
     const truncated = content.slice(0, 6000);
-    const message = req.body.message || '';
-    const history = (req.body.history || []).slice(-10);
+    // ankr.in format: {message, history}; ankrlms format: {messages[]}
+    let message = req.body.message || '';
+    let history = (req.body.history || []).slice(-10);
+    // ankrlms sends {messages: [{role, content}]} — extract last user message
+    if (!message && req.body.messages && req.body.messages.length > 0) {
+      const msgs = req.body.messages;
+      // Find last user message
+      for (let i = msgs.length - 1; i >= 0; i--) {
+        if (msgs[i].role === 'user') { message = msgs[i].content; break; }
+      }
+      // Convert messages array to history (all except last user message)
+      history = msgs.slice(0, -1).map(m => ({ role: m.role, content: m.content }));
+    }
     const result = await callAI(
-      `You are a helpful assistant answering questions about a document. Ground your answers in the document content. If the answer is not in the document, say so. Be concise.\n\nDocument content:\n${truncated}`,
+      `You are a helpful assistant answering questions STRICTLY about the document provided below. You must follow these rules:\n\n1. ONLY use information explicitly stated in the document. Never supplement with outside knowledge.\n2. If the question asks about something NOT covered in the document, respond: "This topic is not covered in this document. I can only answer questions based on the content provided."\n3. When quoting or referencing information, indicate which part of the document it comes from (e.g., "According to the section on..." or "The chapter on... states...").\n4. Do NOT guess, speculate, or fill in gaps with external information.\n5. Be concise and direct.\n\nDocument content:\n${truncated}`,
       message,
       { maxTokens: 800, history }
     );
-    res.json({ reply: result });
+    res.json({ reply: result, response: result });
   } catch (e) {
     console.error('[AI Chat]', e.message);
     res.status(500).json({ error: e.message });
@@ -763,19 +806,32 @@ app.post('/api/ai/chat', async (req, res) => {
 
 app.post('/api/ai/quiz', async (req, res) => {
   try {
-    const content = readDocContent(req.body.path || '');
-    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const content = resolveAIInput(req.body);
+    if (!content) return res.status(404).json({ error: 'Document not found or no content provided' });
     const truncated = content.slice(0, 8000);
     const count = req.body.count || 5;
     const result = await callAI(
-      `You generate multiple-choice quiz questions from documents. Return ONLY a valid JSON array of objects, no markdown fences. Each object: {"question":"...","options":{"a":"...","b":"...","c":"...","d":"..."},"answer":"a","explanation":"..."}`,
-      `Generate ${count} multiple-choice questions from this document:\n\n${truncated}`,
+      `You generate multiple-choice quiz questions from documents. Return ONLY a valid JSON array of objects, no markdown fences. Each object: {"question":"...","options":{"a":"...","b":"...","c":"...","d":"..."},"answer":"a","explanation":"...","difficulty":"medium"}\n\nCRITICAL RULES:\n- Every question MUST be answerable solely from the document content provided below.\n- Do NOT create questions about topics, facts, or formulas not explicitly present in the document.\n- Explanations must reference concepts found in the document.\n- Wrong answer options should be plausible but clearly incorrect based on the document content.\n- If the document does not have enough content for ${count} questions, generate fewer rather than inventing questions about external topics.`,
+      `Generate ${count} multiple-choice questions STRICTLY from this document content (do not use external knowledge):\n\n${truncated}`,
       { maxTokens: 2000, temperature: 0.5 }
     );
     try {
       const cleaned = result.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
       const questions = JSON.parse(cleaned);
-      res.json({ questions });
+      // Enrich with ankrlms-compatible fields
+      const enriched = questions.map(q => {
+        const opts = q.options || {};
+        const keys = Object.keys(opts).sort();
+        const optionsArray = keys.map(k => opts[k]);
+        const correctIndex = keys.indexOf((q.answer || '').toLowerCase());
+        return {
+          ...q,
+          optionsArray,
+          correctIndex: correctIndex >= 0 ? correctIndex : 0,
+          difficulty: q.difficulty || 'medium',
+        };
+      });
+      res.json({ questions: enriched });
     } catch {
       res.json({ questions: [], raw: result });
     }
@@ -787,19 +843,26 @@ app.post('/api/ai/quiz', async (req, res) => {
 
 app.post('/api/ai/flashcards', async (req, res) => {
   try {
-    const content = readDocContent(req.body.path || '');
-    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const content = resolveAIInput(req.body);
+    if (!content) return res.status(404).json({ error: 'Document not found or no content provided' });
     const truncated = content.slice(0, 8000);
     const count = req.body.count || 8;
     const result = await callAI(
-      `You generate flashcards from documents. Return ONLY a valid JSON array of objects, no markdown fences. Each object: {"front":"question or term","back":"answer or definition"}`,
-      `Generate ${count} flashcards from this document:\n\n${truncated}`,
+      `You generate flashcards from documents. Return ONLY a valid JSON array of objects, no markdown fences. Each object: {"front":"question or term","back":"answer or definition","category":"topic category","difficulty":"easy|medium|hard"}\n\nCRITICAL RULES:\n- Every flashcard MUST be based on content explicitly found in the document below.\n- The "back" answer must be verifiable from the document text.\n- Do NOT create flashcards about topics, formulas, or facts not present in the document.\n- Use the document's own terminology and notation.\n- If the document has fewer concepts than requested, generate fewer flashcards rather than inventing content.`,
+      `Generate ${count} flashcards STRICTLY from this document content (do not use external knowledge):\n\n${truncated}`,
       { maxTokens: 1500, temperature: 0.4 }
     );
     try {
       const cleaned = result.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
       const flashcards = JSON.parse(cleaned);
-      res.json({ flashcards });
+      // Ensure category and difficulty fields exist
+      const enriched = flashcards.map(c => ({
+        front: c.front,
+        back: c.back,
+        category: c.category || 'General',
+        difficulty: c.difficulty || 'medium',
+      }));
+      res.json({ flashcards: enriched });
     } catch {
       res.json({ flashcards: [], raw: result });
     }
@@ -811,15 +874,15 @@ app.post('/api/ai/flashcards', async (req, res) => {
 
 app.post('/api/ai/keypoints', async (req, res) => {
   try {
-    const content = readDocContent(req.body.path || '');
-    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const content = resolveAIInput(req.body);
+    if (!content) return res.status(404).json({ error: 'Document not found or no content provided' });
     const truncated = content.slice(0, 8000);
     const result = await callAI(
-      'You extract key takeaways from documents. Provide 8-12 key points as a numbered list using markdown. Each point should be concise (1-2 sentences).',
-      `Extract the key takeaways from this document:\n\n${truncated}`,
+      'You extract key takeaways from documents. Provide 8-12 key points as a numbered list using markdown. Each point should be concise (1-2 sentences).\n\nCRITICAL RULES:\n- ONLY extract points that are explicitly stated or directly implied by the document content.\n- Do NOT add external knowledge, common sense additions, or facts not in the document.\n- Each point should be traceable to specific content in the document.\n- If the document has fewer than 8 key points, extract what is available rather than inventing additional points.',
+      `Extract the key takeaways STRICTLY from this document (do not add external knowledge):\n\n${truncated}`,
       { maxTokens: 600 }
     );
-    res.json({ keypoints: result });
+    res.json({ keypoints: result, keyPoints: parseKeyPointsArray(result) });
   } catch (e) {
     console.error('[AI Keypoints]', e.message);
     res.status(500).json({ error: e.message });
@@ -828,20 +891,20 @@ app.post('/api/ai/keypoints', async (req, res) => {
 
 app.post('/api/ai/mindmap', async (req, res) => {
   try {
-    const content = readDocContent(req.body.path || '');
-    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const content = resolveAIInput(req.body);
+    if (!content) return res.status(404).json({ error: 'Document not found or no content provided' });
     const truncated = content.slice(0, 8000);
     const result = await callAI(
-      `You create hierarchical mind maps from documents. Return ONLY a valid JSON object, no markdown fences. Format: {"label":"Root Topic","children":[{"label":"Subtopic","children":[{"label":"Detail"}]}]}. Use 2-4 top-level children, each with 1-3 sub-children.`,
-      `Create a mind map for this document:\n\n${truncated}`,
+      `You create hierarchical mind maps from documents. Return ONLY a valid JSON object, no markdown fences. Format: {"label":"Root Topic","children":[{"label":"Subtopic","children":[{"label":"Detail"}]}]}. Use 2-4 top-level children, each with 1-3 sub-children.\n\nCRITICAL RULES:\n- The mind map MUST only contain topics, subtopics, and details explicitly found in the document.\n- Do NOT add categories, topics, or details from external knowledge.\n- Labels should use the document's own terminology and section names where possible.\n- If the document covers fewer topics, create a smaller map rather than inventing branches.`,
+      `Create a mind map STRICTLY from this document content (do not add external topics):\n\n${truncated}`,
       { maxTokens: 1500, temperature: 0.4 }
     );
     try {
       const cleaned = result.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
       const mindmap = JSON.parse(cleaned);
-      res.json({ mindmap });
+      res.json({ mindmap, mindMap: addIdsAndLevels(mindmap) });
     } catch {
-      res.json({ mindmap: null, raw: result });
+      res.json({ mindmap: null, mindMap: null, raw: result });
     }
   } catch (e) {
     console.error('[AI Mindmap]', e.message);
@@ -852,12 +915,12 @@ app.post('/api/ai/mindmap', async (req, res) => {
 // ── Fermi Estimation Endpoint ──
 app.post('/api/ai/fermi', async (req, res) => {
   try {
-    const content = readDocContent(req.body.path || '');
-    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const content = resolveAIInput(req.body);
+    if (!content) return res.status(404).json({ error: 'Document not found or no content provided' });
     const truncated = content.slice(0, 8000);
     const result = await callAI(
-      'You are a Fermi estimation tutor. Given the document content, create a Fermi estimation exercise related to a real-world topic from the document. Break the estimation into 4-6 logical steps. Return ONLY valid JSON: {"question":"...","steps":[{"step":"...","estimate":"...","reasoning":"..."}],"finalAnswer":"...","realWorldConnection":"..."}',
-      `Create a Fermi estimation exercise based on this document:\n\n${truncated}`,
+      'You are a Fermi estimation tutor. Given the document content, create a Fermi estimation exercise related to a real-world topic from the document. Break the estimation into 4-6 logical steps. Return ONLY valid JSON: {"question":"...","steps":[{"step":"...","estimate":"...","reasoning":"..."}],"finalAnswer":"...","realWorldConnection":"..."}\n\nCRITICAL RULES:\n- The Fermi question MUST be rooted in a concept, formula, or topic explicitly covered in the document.\n- Steps should demonstrate application of methods or formulas found in the document.\n- The realWorldConnection must tie back to the document content.\n- Do NOT create exercises about topics not covered in the document.\n- Clearly state which document concept is being applied in each step.',
+      `Create a Fermi estimation exercise grounded in the concepts from this document (use only topics covered in the document):\n\n${truncated}`,
       { maxTokens: 1500, temperature: 0.5 }
     );
     try {
@@ -876,19 +939,60 @@ app.post('/api/ai/fermi', async (req, res) => {
 // ── Socratic Dialog Endpoint ──
 app.post('/api/ai/socratic', async (req, res) => {
   try {
-    const content = readDocContent(req.body.path || '');
-    if (!content) return res.status(404).json({ error: 'Document not found' });
+    const content = resolveAIInput(req.body);
+    if (!content) return res.status(404).json({ error: 'Document not found or no content provided' });
     const truncated = content.slice(0, 6000);
     const message = req.body.message || '';
     const history = (req.body.history || []).slice(-10);
     const result = await callAI(
-      `You are a Socratic tutor. NEVER give direct answers. Ask probing questions that guide the student to discover the answer. Use the document as context. Ask one question at a time. If the student seems stuck after 3 exchanges, give a gentle hint framed as a question. Always encourage thinking.\n\nDocument content:\n${truncated}`,
+      `You are a Socratic tutor. NEVER give direct answers. Ask probing questions that guide the student to discover the answer. Ask one question at a time. If the student seems stuck after 3 exchanges, give a gentle hint framed as a question. Always encourage thinking.\n\nCRITICAL RULES:\n- ONLY ask questions about concepts, formulas, and topics found in the document below.\n- Guide the student toward answers that exist in the document content.\n- If the student asks about a topic NOT in the document, say: "That topic isn't covered in this material. Let me guide you through something that is — " and redirect to a relevant document topic.\n- Reference specific sections or examples from the document when hinting.\n- Do NOT introduce external concepts, theorems, or methods not present in the document.\n\nDocument content:\n${truncated}`,
       message,
       { maxTokens: 600, history }
     );
     res.json({ reply: result });
   } catch (e) {
     console.error('[AI Socratic]', e.message);
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// ── Study Guide Endpoint ──
+app.post('/api/ai/study-guide', async (req, res) => {
+  try {
+    const content = resolveAIInput(req.body);
+    if (!content) return res.status(404).json({ error: 'Document not found or no content provided' });
+    const truncated = content.slice(0, 8000);
+    const result = await callAI(
+      `You create structured study guides from documents. Generate a comprehensive study guide in markdown with these sections:
+## Learning Objectives
+(3-5 bullet points of what the student should learn)
+
+## Key Concepts
+(Core concepts with brief explanations)
+
+## Important Formulas & Rules
+(If applicable, list key formulas or rules)
+
+## Review Questions
+(5 open-ended review questions)
+
+## Summary
+(2-3 sentence summary of the material)
+
+CRITICAL RULES:
+- EVERY section must be based ONLY on content explicitly found in the document below.
+- Learning Objectives must reflect what the document actually teaches, not what you think it should teach.
+- Key Concepts must come from the document text — do NOT add external definitions or concepts.
+- Formulas & Rules must appear in the document. Do NOT add formulas from external knowledge even if they seem relevant.
+- Review Questions must be answerable from the document content alone.
+- If the document does not contain formulas, omit that section rather than adding external formulas.
+- Use the document's own terminology and notation.`,
+      `Create a study guide STRICTLY from this document content (do not add external knowledge or formulas):\n\n${truncated}`,
+      { maxTokens: 1500 }
+    );
+    res.json({ studyGuide: result });
+  } catch (e) {
+    console.error('[AI Study Guide]', e.message);
     res.status(500).json({ error: e.message });
   }
 });
@@ -1740,6 +1844,151 @@ app.get('/project/documents/', async (req, res) => {
   }
 });
 
+// Helper: extract chapter headings from book text
+function extractChapterHeadings(text) {
+  if (!text) return [];
+  const chapters = [];
+  const lines = text.split('\n');
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (/^(chapter|CHAPTER)\s*[-:]?\s*\d+/i.test(trimmed) ||
+        /^\d+[\.\)]\s+[A-Z]/.test(trimmed) && trimmed.length < 80) {
+      const clean = trimmed.replace(/^(chapter|CHAPTER)\s*[-:]?\s*/i, '').trim();
+      if (clean.length > 2 && clean.length < 80 && !chapters.includes(clean)) {
+        chapters.push(clean);
+      }
+    }
+  }
+  return chapters.slice(0, 30);
+}
+
+// Cache for book analytics
+let _bookAnalyticsCache = null;
+function getBookAnalytics(text) {
+  if (_bookAnalyticsCache) return _bookAnalyticsCache;
+  if (!text) return null;
+  const lines = text.split('\n');
+  // Formula-like lines (variable = expression)
+  const formulaLines = lines.filter(l => /[a-zA-Z]\s*=\s*[a-zA-Z0-9(]/.test(l) && l.length < 200);
+  // Examples & problems
+  const exampleCount = (text.match(/(?:Example|EXAMPLE|Ex\.|Q\.|Ques|Question|problem)\s*[\d.:)]/gi) || []).length;
+  // PRATHAM EDGE tips (signature pedagogical feature)
+  const edgeTips = (text.match(/PRATHAM EDGE/g) || []).length;
+  // Solutions
+  const solutionCount = (text.match(/(?:Sol|Solution|Ans|Answer)\s*[.:)]/gi) || []).length;
+  // Shortcut/trick mentions
+  const shortcutCount = (text.match(/(?:shortcut|trick|quick|technique|tip|edge|hack)/gi) || []).length;
+  // Unique chapter markers
+  const chapterNums = new Set((text.match(/CHAPTER\s+(\d+)/g) || []).map(m => m.replace('CHAPTER ', '')));
+  // Topic distribution: approximate by counting keyword density per topic
+  const topics = [
+    { name: 'Number System', keywords: ['number system', 'digit', 'divisib', 'factor', 'prime', 'hcf', 'lcm', 'remainder'] },
+    { name: 'Averages', keywords: ['average', 'mean', 'weighted average'] },
+    { name: 'Percentage', keywords: ['percent', '%', 'per cent'] },
+    { name: 'Profit & Loss', keywords: ['profit', 'loss', 'cost price', 'selling price', 'markup', 'discount'] },
+    { name: 'Interest', keywords: ['interest', 'compound interest', 'simple interest', 'principal', 'amount'] },
+    { name: 'Ratio & Proportion', keywords: ['ratio', 'proportion', 'varies'] },
+    { name: 'Partnership', keywords: ['partnership', 'partner', 'investment share'] },
+    { name: 'Mixtures', keywords: ['mixture', 'alligation', 'allegation'] },
+    { name: 'Equations', keywords: ['equation', 'quadratic', 'linear equation', 'root', 'polynomial'] },
+    { name: 'Speed & Distance', keywords: ['speed', 'distance', 'train', 'boat', 'stream', 'race'] },
+    { name: 'Time & Work', keywords: ['time and work', 'pipe', 'cistern', 'efficiency'] },
+    { name: 'Clocks & Calendars', keywords: ['clock', 'calendar', 'day of week', 'leap year'] },
+    { name: 'Mensuration', keywords: ['mensuration', 'area', 'volume', 'surface area', 'perimeter', 'cylinder', 'cone', 'sphere'] },
+    { name: 'Geometry', keywords: ['geometry', 'triangle', 'circle', 'angle', 'polygon', 'coordinate'] },
+    { name: 'Trigonometry', keywords: ['trigonometry', 'sin', 'cos', 'tan', 'trigonometric'] },
+    { name: 'Heights & Distances', keywords: ['height', 'elevation', 'depression', 'tower', 'shadow'] },
+    { name: 'Progressions', keywords: ['progression', 'arithmetic progression', 'geometric progression', 'ap', 'gp', 'series'] },
+    { name: 'P & C', keywords: ['permutation', 'combination', 'factorial', 'arrangement', 'selection'] },
+    { name: 'Probability', keywords: ['probability', 'event', 'odds', 'dice', 'card', 'coin'] },
+    { name: 'Data Interpretation', keywords: ['data interpretation', 'bar graph', 'pie chart', 'table', 'line graph', 'caselets'] },
+  ];
+  const lowerText = text.toLowerCase();
+  const topicDist = topics.map(t => {
+    let count = 0;
+    for (const kw of t.keywords) {
+      const re = new RegExp(kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+      count += (lowerText.match(re) || []).length;
+    }
+    return { name: t.name, mentions: count };
+  }).sort((a, b) => b.mentions - a.mentions);
+  const maxMentions = topicDist[0]?.mentions || 1;
+
+  // Cross-chapter connections (topics that share keywords with multiple chapters)
+  const connections = [];
+  const topicKeyMap = {};
+  for (const t of topics) {
+    topicKeyMap[t.name] = t.keywords;
+  }
+  // Find shared concepts between specific topics
+  const sharedConcepts = [
+    { from: 'Percentage', to: 'Profit & Loss', concept: 'Cost price markup uses percentage directly', strength: 'strong' },
+    { from: 'Percentage', to: 'Interest', concept: 'Interest rates are percentage-based calculations', strength: 'strong' },
+    { from: 'Ratio & Proportion', to: 'Partnership', concept: 'Partnership splits use ratio of investments', strength: 'strong' },
+    { from: 'Ratio & Proportion', to: 'Mixtures', concept: 'Alligation is ratio-based weighted mixing', strength: 'strong' },
+    { from: 'Equations', to: 'Speed & Distance', concept: 'Relative speed problems become linear equations', strength: 'medium' },
+    { from: 'Equations', to: 'Time & Work', concept: 'Work-rate problems reduce to equation solving', strength: 'medium' },
+    { from: 'Number System', to: 'P & C', concept: 'Counting principles build on number theory', strength: 'medium' },
+    { from: 'P & C', to: 'Probability', concept: 'Probability uses permutation/combination for counting outcomes', strength: 'strong' },
+    { from: 'Geometry', to: 'Mensuration', concept: 'Area/volume formulas derive from geometric shapes', strength: 'strong' },
+    { from: 'Trigonometry', to: 'Heights & Distances', concept: 'H&D problems are applied trigonometry', strength: 'strong' },
+    { from: 'Progressions', to: 'Interest', concept: 'CI forms a geometric progression, SI forms arithmetic', strength: 'medium' },
+    { from: 'Percentage', to: 'Data Interpretation', concept: 'DI questions require percentage calculations throughout', strength: 'strong' },
+  ];
+
+  // Extract actual PRATHAM EDGE tip text snippets
+  const edgeTipExtracts = [];
+  const edgeRegex = /PRATHAM EDGE[:\s\-]*([^\n]+(?:\n(?!PRATHAM EDGE)[^\n]{5,}){0,3})/gi;
+  let edgeMatch;
+  while ((edgeMatch = edgeRegex.exec(text)) !== null && edgeTipExtracts.length < 20) {
+    const snippet = edgeMatch[1].replace(/\n/g, ' ').trim();
+    if (snippet.length > 15 && snippet.length < 500) {
+      edgeTipExtracts.push(snippet);
+    }
+  }
+
+  // Per-topic example density (how many examples per topic keyword cluster)
+  const topicExampleDensity = topics.slice(0, 10).map(t => {
+    // Scan for Example/Q. near topic keywords
+    let nearExamples = 0;
+    for (const kw of t.keywords) {
+      const kwRe = new RegExp(kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+      let kwMatch;
+      while ((kwMatch = kwRe.exec(lowerText)) !== null) {
+        // Check if "Example" or "Q." appears within 500 chars of this keyword
+        const nearby = text.slice(Math.max(0, kwMatch.index - 250), kwMatch.index + 250).toLowerCase();
+        if (/example|ex\.|q\.|ques|problem/i.test(nearby)) nearExamples++;
+      }
+    }
+    return { name: t.name, examples: nearExamples };
+  }).sort((a, b) => b.examples - a.examples);
+
+  // Content quality metrics for publisher
+  const totalLines = lines.length;
+  const nonEmptyLines = lines.filter(l => l.trim().length > 0).length;
+  const contentDensity = Math.round((nonEmptyLines / totalLines) * 100);
+  const exampleToPageRatio = (exampleCount / 268).toFixed(1);
+  const formulaToPageRatio = (formulaLines.length / 268).toFixed(1);
+
+  _bookAnalyticsCache = {
+    formulaCount: formulaLines.length,
+    exampleCount,
+    edgeTips,
+    solutionCount,
+    shortcutCount,
+    chapterCount: chapterNums.size,
+    topicDistribution: topicDist,
+    maxMentions,
+    crossChapterConnections: sharedConcepts,
+    edgeTipExtracts,
+    topicExampleDensity,
+    contentDensity,
+    exampleToPageRatio,
+    formulaToPageRatio,
+  };
+  return _bookAnalyticsCache;
+}
+
 // Pratham Showcase: /project/documents/pratham/_showcase
 app.get('/project/documents/pratham/_showcase', (req, res) => {
   try {
@@ -1764,6 +2013,14 @@ app.get('/project/documents/pratham/_showcase', (req, res) => {
         });
       }
     }
+
+    // Extract book content for preview
+    const bookText = getPrathamBookText();
+    const bookSample = bookText ? bookText.slice(0, 3000) : '';
+    const chapters = bookText ? extractChapterHeadings(bookText) : [];
+    const wordCount = bookText ? bookText.split(/\s+/).filter(w => w.length > 0).length : 0;
+    const analytics = bookText ? getBookAnalytics(bookText) : null;
+
     // Book metadata for the 268-page QA textbook
     const book = {
       id: PRATHAM_BOOK_ID,
@@ -1773,7 +2030,6 @@ app.get('/project/documents/pratham/_showcase', (req, res) => {
       pages: 268,
       editions: 17,
       editionRange: '2009\u20132025',
-      price: '\u20B93,950',
       publisher: 'PRATHAM Test Prep',
       publisherFull: 'PRATHAM Test Prep, a unit of International Institute of Financial Markets Limited',
       address: 'HS 13, 2nd Floor, Kailash Colony Main Market, Delhi 110048',
@@ -1781,11 +2037,136 @@ app.get('/project/documents/pratham/_showcase', (req, res) => {
       path: '_book/pratham-qa',
       thumbnailUrl: '/ankr-interact/data/thumbnails/6 Bookset QA - Comprehensive Book with First page (ISBN).jpg',
       chunking: { chunkSize: 2000, overlap: 200, model: 'nomic-embed-text' },
+      wordCount,
+      bookSample: bookSample.slice(0, 500),
+      chapters,
+      analytics,
+      hasPdf: fs.existsSync(PRATHAM_BOOK_PDF),
     };
     res.send(prathamShowcasePage(files, book));
   } catch (err) {
     console.error('Error rendering Pratham showcase:', err);
     res.status(500).send('Error loading showcase');
+  }
+});
+
+// Serve Pratham QA Book PDF for inline viewing
+app.get('/api/pratham/book.pdf', (req, res) => {
+  if (!fs.existsSync(PRATHAM_BOOK_PDF)) {
+    return res.status(404).json({ error: 'PDF not found' });
+  }
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', 'inline; filename="Pratham-QA-Comprehensive-Book.pdf"');
+  res.sendFile(PRATHAM_BOOK_PDF);
+});
+
+// Serve paginated text content (for in-page reader)
+app.get('/api/pratham/book-text', (req, res) => {
+  const text = getPrathamBookText();
+  if (!text) return res.status(404).json({ error: 'Could not extract text' });
+  const page = parseInt(req.query.page) || 1;
+  const pageSize = parseInt(req.query.pageSize) || 3000;
+  const start = (page - 1) * pageSize;
+  const chunk = text.slice(start, start + pageSize);
+  const totalPages = Math.ceil(text.length / pageSize);
+  res.json({
+    page,
+    totalPages,
+    totalChars: text.length,
+    content: chunk,
+    hasNext: page < totalPages,
+    hasPrev: page > 1,
+  });
+});
+
+// FreightBox Showcase: /project/documents/freightbox/_showcase
+app.get('/project/documents/freightbox/_showcase', (req, res) => {
+  try {
+    const fbDir = path.join(DOCS_ROOT, 'project', 'documents', 'freightbox');
+    const files = [];
+    if (fs.existsSync(fbDir)) {
+      for (const f of fs.readdirSync(fbDir)) {
+        if (!f.endsWith('.md') || f === 'index.md' || f.startsWith('.')) continue;
+        const fp = path.join(fbDir, f);
+        const st = fs.statSync(fp);
+        let title = f.replace('.md', '');
+        try {
+          const content = fs.readFileSync(fp, 'utf-8');
+          const parsed = matter(content);
+          if (parsed.data.title) title = parsed.data.title;
+        } catch (e) {}
+        files.push({
+          name: f,
+          path: 'project/documents/freightbox/' + f,
+          title,
+          size: st.size,
+        });
+      }
+    }
+
+    const platform = {
+      name: 'FreightBox',
+      tagline: 'Multimodal Freight Management — Ocean, Air, Road, Rail',
+      modules: 10,
+      docTypes: 37,
+      graphqlOps: 100,
+      freightModes: 6,
+      customerSegments: 6,
+      cargoTiers: 5,
+      standalone: { score: 47, cargowise: 88 },
+      ecosystem:  { score: 92, cargowise: 88 },
+      categories: [
+        { name: 'Freight Forwarding', fb: 70, cw: 95 },
+        { name: 'Customs & Compliance', fb: 30, cw: 95 },
+        { name: 'Warehouse (WMS)', fb: 90, cw: 90 },
+        { name: 'Transport (TMS)', fb: 95, cw: 85 },
+        { name: 'Financial', fb: 98, cw: 90 },
+        { name: 'Rate Management', fb: 70, cw: 85 },
+        { name: 'Visibility & Tracking', fb: 90, cw: 80 },
+        { name: 'Carrier Connectivity', fb: 20, cw: 90 },
+        { name: 'Documents', fb: 95, cw: 85 },
+        { name: 'Reporting & Analytics', fb: 85, cw: 85 },
+        { name: 'CRM', fb: 120, cw: 60 },
+      ],
+      exchange: {
+        matchRate: '>95%',
+        fillRate: '>85%',
+        emptyMiles: '<15%',
+        timeToMatch: '<30 min',
+        priceSpread: '<5%',
+        orderTypes: 6,
+      },
+      pricing: {
+        free: { price: '$0', shipments: 10, users: 1, docTypes: 5 },
+        pro:  { price: '$99/mo', shipments: 100, users: 5, docTypes: 37 },
+        enterprise: { price: 'Custom', shipments: 'Unlimited', users: 'Unlimited', docTypes: 37 },
+      },
+      products: [
+        { id: 'fr8x', name: 'Fr8X', desc: 'Freight Exchange (Ocean/Air)', icon: 'ship' },
+        { id: 'fr8xtms', name: 'Fr8XTMS', desc: 'Transport Management (Road/Rail)', icon: 'truck' },
+        { id: 'fr8xwms', name: 'Fr8XWMS', desc: 'Warehouse Management', icon: 'warehouse' },
+        { id: 'fr8xerp', name: 'Fr8XERP', desc: 'Finance & Accounting', icon: 'money' },
+        { id: 'fr8xcrm', name: 'Fr8XCRM', desc: 'Sales & Support CRM', icon: 'users' },
+      ],
+      moduleAreas: [
+        'Operations', 'Documentation', 'Finance', 'Tracking & Visibility',
+        'Marketplace', 'APIBox Integrations', 'Analytics', 'Customer Portal',
+        'User & Org Management', 'Technical Platform'
+      ],
+      advantages: [
+        { title: 'Modern Tech Stack', desc: 'GraphQL, real-time subscriptions, mobile-first, cloud-native vs legacy SOAP' },
+        { title: 'AI/ML Built-In', desc: 'Sales coach, OCR extraction, route optimization, bank reconciliation AI' },
+        { title: 'Blockchain eBL', desc: 'DCSA-compliant electronic Bill of Lading with document chain verification' },
+        { title: 'India Compliance', desc: 'GSTN, E-Invoice IRN/IRP, E-Way Bill, TDS, DigiLocker, Vahan, Schedule III' },
+        { title: 'Built-in Marketplace', desc: 'Vendor network, bidding/RFQ, contract management, carrier scoring' },
+        { title: 'Unified CX', desc: 'Single portal, omnichannel comms, WhatsApp, mobile apps for all stakeholders' },
+      ],
+    };
+
+    res.send(freightboxShowcasePage(files, platform));
+  } catch (err) {
+    console.error('Error rendering FreightBox showcase:', err);
+    res.status(500).send('Error loading FreightBox showcase');
   }
 });
 
@@ -1839,6 +2220,30 @@ app.use('/view', async (req, res, next) => {
         frontmatter: parsed.data,
         fileName,
         path: docPath,
+        downloadable: false,
+        isAdmin: req.isAdmin,
+        isHidden: false,
+      };
+      let relatedDocs = [];
+      try {
+        const relData = await selfFetch(`/api/search/related?path=${encodeURIComponent(docPath)}&limit=5`);
+        relatedDocs = relData?.results || [];
+      } catch(e) {}
+      return res.send(documentViewerPage(doc, relatedDocs));
+    }
+
+    // Special: Pratham QA book (virtual document — viewable, not downloadable)
+    if (docPath === '_book/pratham-qa') {
+      const bookText = getPrathamBookText();
+      if (!bookText) {
+        return res.status(404).send(`<html><body style="background:#0a0a0f;color:#fff;font-family:sans-serif;padding:4rem;text-align:center"><h1>Book content unavailable</h1><p style="color:#666">Could not extract PDF text</p><a href="/project/documents/pratham/_showcase" style="color:#7c3aed">Back to Pratham Showcase</a></body></html>`);
+      }
+      const doc = {
+        title: 'Comprehensive Book on Quantitative Aptitude',
+        content: bookText,
+        frontmatter: { title: 'Comprehensive Book on Quantitative Aptitude', subtitle: 'For Undergraduate Entrance Exams', publisher: 'PRATHAM Test Prep', isbn: '978-81-19992-59-1', pages: 268 },
+        fileName: 'pratham-qa-book.pdf',
+        path: '_book/pratham-qa',
         downloadable: false,
         isAdmin: req.isAdmin,
         isHidden: false,
