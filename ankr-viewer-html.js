@@ -435,6 +435,25 @@ ${searchModal()}
     </div>
   </a>
 
+  <!-- FreightBox Showcase Banner -->
+  <a href="/project/documents/freightbox/_showcase" class="block mb-10 rounded-2xl overflow-hidden bg-gradient-to-r from-blue-500/10 via-emerald-500/5 to-amber-500/10 border border-blue-500/20 hover:border-blue-500/40 transition-all group">
+    <div class="flex flex-col sm:flex-row items-center gap-4 p-5">
+      <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-blue-700/20 flex items-center justify-center flex-shrink-0 text-white font-bold text-lg">FB</div>
+      <div class="flex-1 text-center sm:text-left">
+        <div class="font-bold text-white text-lg group-hover:text-blue-400 transition-colors">FreightBox \u2014 Multimodal Freight Management</div>
+        <div class="text-sm text-gray-400">10 modules, 37 doc types, 5 products \u2014 vs CargoWise competitive dashboard, FR8X Exchange & more</div>
+      </div>
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <div class="hidden sm:flex gap-2 text-xs">
+          <span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded-full">GraphQL</span>
+          <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded-full">5 Products</span>
+          <span class="px-2 py-1 bg-amber-500/20 text-amber-400 rounded-full">AI-Powered</span>
+        </div>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" class="group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+    </div>
+  </a>
+
   <!-- Category Filter Tabs -->
   <div class="flex items-center gap-2 mb-6 overflow-x-auto pb-2">
     <button onclick="filterCat('all')" data-cat="all" class="cat-tab active px-3 py-1.5 text-xs font-medium rounded-full border border-brand/50 text-brand transition-all whitespace-nowrap">All Products <span class="text-brand/60">${projects.length - featured.length}</span></button>
@@ -635,6 +654,19 @@ ${searchModal()}
       <div>
         <div class="font-semibold text-white group-hover:text-brand transition-colors">AI Tutor Showcase</div>
         <div class="text-sm text-gray-400">Try 8 AI modes live — Summary, Quiz, Fermi, Socratic & more</div>
+      </div>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" class="ml-auto flex-shrink-0 group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+  </a>` : ''}
+
+  ${project.id === 'freightbox' ? `
+  <!-- FreightBox Showcase Banner -->
+  <a href="/project/documents/freightbox/_showcase" class="block mb-8 p-4 rounded-xl bg-gradient-to-r from-blue-500/20 to-emerald-500/10 border border-blue-500/30 hover:border-blue-500/50 transition-all group">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/30 to-blue-700/20 flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">FB</div>
+      <div>
+        <div class="font-semibold text-white group-hover:text-blue-400 transition-colors">FreightBox Platform Showcase</div>
+        <div class="text-sm text-gray-400">10 modules, vs CargoWise dashboard, FR8X Exchange, pricing & more</div>
       </div>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" class="ml-auto flex-shrink-0 group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6"/></svg>
     </div>
