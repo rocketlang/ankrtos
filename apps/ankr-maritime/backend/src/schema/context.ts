@@ -14,6 +14,8 @@ export interface AuthUser {
   name: string;
   role: string;
   organizationId: string;
+  branchId?: string;
+  sessionId?: string;
 }
 
 export interface GraphQLContext {
@@ -22,6 +24,17 @@ export interface GraphQLContext {
   loaders: DataLoaders;
   log: ReturnType<typeof createChildLogger>;
   signJwt: (payload: Record<string, unknown>) => string;
+  request?: FastifyRequest;
+  /** Returns the authenticated user's organizationId, or throws if unauthenticated */
+  orgId: () => string;
+  /** Returns org filter clause: { organizationId: orgId } or {} for unauthenticated */
+  orgFilter: () => { organizationId?: string };
+  /** Returns the authenticated user's branchId, or undefined if not assigned */
+  branchId: () => string | undefined;
+  /** Returns branch filter clause: { branchId: branchId } or {} if no branch */
+  branchFilter: () => { branchId?: string };
+  /** Returns combined org + branch filter for multi-tenant queries */
+  tenantFilter: () => { organizationId?: string; branchId?: string };
 }
 
 export async function buildContext(
@@ -48,5 +61,19 @@ export async function buildContext(
     loaders: createLoaders(prisma),
     log,
     signJwt: (payload) => request.server.jwt.sign(payload),
+    request,
+    orgId: () => {
+      if (!user?.organizationId) throw new Error('Authentication required');
+      return user.organizationId;
+    },
+    orgFilter: () => user?.organizationId ? { organizationId: user.organizationId } : {},
+    branchId: () => user?.branchId,
+    branchFilter: () => user?.branchId ? { branchId: user.branchId } : {},
+    tenantFilter: () => {
+      const filter: { organizationId?: string; branchId?: string } = {};
+      if (user?.organizationId) filter.organizationId = user.organizationId;
+      if (user?.branchId) filter.branchId = user.branchId;
+      return filter;
+    },
   };
 }

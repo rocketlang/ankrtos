@@ -1,0 +1,65 @@
+// Email Sender Schema
+// Add to main schema.prisma
+
+model EmailMessage {
+  id             String   @id
+  threadId       String?
+  userId         String
+  organizationId String
+  messageId      String?  // SMTP Message-ID
+  from           String
+  to             String[]
+  cc             String[]  @default([])
+  bcc            String[]  @default([])
+  subject        String
+  body           String    @db.Text
+  html           String?   @db.Text
+  inReplyTo      String?
+  references     String[]  @default([])
+  receivedAt     DateTime  @default(now())
+  isRead         Boolean   @default(false)
+  direction      String    @default("inbound") // inbound, outbound
+  attachments    Json?     // Array of attachment metadata
+
+  thread         EmailThread? @relation(fields: [threadId], references: [id], onDelete: Cascade)
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  @@index([threadId])
+  @@index([userId])
+  @@index([organizationId])
+  @@index([receivedAt])
+  @@index([direction])
+}
+
+model EmailSentLog {
+  id        String   @id @default(cuid())
+  userId    String
+  to        String[]
+  cc        String[]  @default([])
+  bcc       String[]  @default([])
+  subject   String
+  body      String    @db.Text
+  messageId String?   // SMTP Message-ID
+  success   Boolean
+  error     String?   @db.Text
+  sentAt    DateTime  @default(now())
+
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([sentAt])
+  @@index([success])
+}
+
+// Update EmailThread model to include messages relation
+model EmailThread {
+  // ... existing fields ...
+
+  messages       EmailMessage[]  // Add this relation
+
+  // ... rest of model ...
+}

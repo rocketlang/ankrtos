@@ -1,0 +1,419 @@
+{
+  "timestamp": "2026-01-30T10:26:30.256Z",
+  "duration": 66914,
+  "totalApps": 1,
+  "scannedApps": 1,
+  "summary": {
+    "pass": 0,
+    "fail": 1,
+    "warn": 0,
+    "fixed": 0
+  },
+  "apps": [
+    {
+      "app": {
+        "name": "ankr-pulse",
+        "internalUrl": "http://localhost:4320",
+        "publicUrl": "https://pulse.ankr.in",
+        "framework": "vite",
+        "pm2Name": "ankr-pulse",
+        "pm2Status": "online",
+        "pm2Restarts": 15,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-pulse",
+        "healthEndpoint": "/",
+        "port": 4320,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-pulse",
+          "url": "http://localhost:4320/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 43,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "655",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 10:25:23 GMT",
+            "etag": "W/\"28f-SEUUGpihN5I8ZmEl0hh8AngWSQ8\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T10:25:23.540Z"
+        },
+        {
+          "app": "ankr-pulse",
+          "url": "http://localhost:4320/login",
+          "route": "/login",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-type": "text/plain",
+            "date": "Fri, 30 Jan 2026 10:25:23 GMT",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T10:25:23.542Z"
+        },
+        {
+          "app": "ankr-pulse",
+          "url": "http://localhost:4320/dashboard",
+          "route": "/dashboard",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-type": "text/plain",
+            "date": "Fri, 30 Jan 2026 10:25:23 GMT",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T10:25:23.543Z"
+        },
+        {
+          "app": "ankr-pulse",
+          "url": "http://localhost:4320/",
+          "route": "/",
+          "status": "fail",
+          "httpStatus": 200,
+          "loadTime": 821,
+          "jsErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Health API returned: 404",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Health API returned: 404",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Health API returned: 404",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Health API returned: 404"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:4320/ai/api/services/health-all",
+              "method": "GET",
+              "status": 404,
+              "statusText": "Not Found",
+              "type": "api"
+            },
+            {
+              "url": "http://localhost:4320/ai/api/services/health-all",
+              "method": "GET",
+              "status": 404,
+              "statusText": "Not Found",
+              "type": "api"
+            },
+            {
+              "url": "http://localhost:4320/ai/api/services/health-all",
+              "method": "GET",
+              "status": 404,
+              "statusText": "Not Found",
+              "type": "api"
+            },
+            {
+              "url": "http://localhost:4320/ai/api/services/health-all",
+              "method": "GET",
+              "status": 404,
+              "statusText": "Not Found",
+              "type": "api"
+            }
+          ],
+          "screenshot": "/root/ankr-doctor-reports/screenshots/ankr-pulse___1769768724632.png",
+          "blankPage": false,
+          "interactiveElements": 32,
+          "clickResults": [
+            {
+              "selector": "button.p-2.rounded-lg",
+              "text": "☀️",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.p-2.rounded-lg",
+              "text": "🎨",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.\n.px-4",
+              "text": "🖥️\nServices",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.\n.px-4",
+              "text": "📋\nStatus",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.\n.px-4",
+              "text": "⚙️\nPM2",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.\n.px-4",
+              "text": "🔌\nPorts",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.\n.px-4",
+              "text": "📦\nPackages",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.\n.px-4",
+              "text": "🤖\nPEER/Swarm",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.\n.px-4",
+              "text": "💰\nCosts",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.\n.px-4",
+              "text": "📊\nSystem",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.\n.px-4",
+              "text": "🛡️\nSecurity\n2",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.\n.px-4",
+              "text": "📋\nLogs",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.px-3.py-1.5",
+              "text": "🔄 Auto (30s)",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.px-3.py-1.5",
+              "text": "🔃 Refresh",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            }
+          ],
+          "timestamp": "2026-01-30T10:26:26.909Z"
+        },
+        {
+          "app": "ankr-pulse",
+          "url": "http://localhost:4320/login",
+          "route": "/login",
+          "status": "fail",
+          "httpStatus": 404,
+          "loadTime": 510,
+          "jsErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Health API returned: 404",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Health API returned: 404",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:4320/login",
+              "method": "GET",
+              "status": 404,
+              "statusText": "Not Found",
+              "type": "asset"
+            },
+            {
+              "url": "http://localhost:4320/ai/api/services/health-all",
+              "method": "GET",
+              "status": 404,
+              "statusText": "Not Found",
+              "type": "api"
+            },
+            {
+              "url": "http://localhost:4320/ai/api/services/health-all",
+              "method": "GET",
+              "status": 404,
+              "statusText": "Not Found",
+              "type": "api"
+            },
+            {
+              "url": "http://localhost:4320/login",
+              "method": "GET",
+              "status": 404,
+              "statusText": "Not Found",
+              "type": "asset"
+            }
+          ],
+          "screenshot": "/root/ankr-doctor-reports/screenshots/ankr-pulse__login_1769768787449.png",
+          "blankPage": false,
+          "interactiveElements": 1,
+          "clickResults": [
+            {
+              "selector": "a",
+              "text": "/pulse/login",
+              "outcome": "navigation",
+              "newUrl": "http://localhost:4320/pulse/login",
+              "jsErrors": [],
+              "networkErrors": []
+            }
+          ],
+          "timestamp": "2026-01-30T10:26:28.564Z"
+        },
+        {
+          "app": "ankr-pulse",
+          "url": "http://localhost:4320/dashboard",
+          "route": "/dashboard",
+          "status": "fail",
+          "httpStatus": 404,
+          "loadTime": 509,
+          "jsErrors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Health API returned: 404",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Health API returned: 404",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:4320/dashboard",
+              "method": "GET",
+              "status": 404,
+              "statusText": "Not Found",
+              "type": "asset"
+            },
+            {
+              "url": "http://localhost:4320/ai/api/services/health-all",
+              "method": "GET",
+              "status": 404,
+              "statusText": "Not Found",
+              "type": "api"
+            },
+            {
+              "url": "http://localhost:4320/ai/api/services/health-all",
+              "method": "GET",
+              "status": 404,
+              "statusText": "Not Found",
+              "type": "api"
+            },
+            {
+              "url": "http://localhost:4320/dashboard",
+              "method": "GET",
+              "status": 404,
+              "statusText": "Not Found",
+              "type": "asset"
+            }
+          ],
+          "screenshot": "/root/ankr-doctor-reports/screenshots/ankr-pulse__dashboard_1769768789103.png",
+          "blankPage": false,
+          "interactiveElements": 1,
+          "clickResults": [
+            {
+              "selector": "a",
+              "text": "/pulse/dashboard",
+              "outcome": "navigation",
+              "newUrl": "http://localhost:4320/pulse/dashboard",
+              "jsErrors": [],
+              "networkErrors": []
+            }
+          ],
+          "timestamp": "2026-01-30T10:26:30.217Z"
+        }
+      ],
+      "diagnoses": [
+        {
+          "issue": "Empty/minimal response from ankr-pulse",
+          "severity": "medium",
+          "category": "empty_response",
+          "rootCause": "Server returns very little content. May be misconfigured or build output is empty.",
+          "autoFixable": false,
+          "evidence": [
+            "Response length: 0",
+            "Route: /"
+          ]
+        },
+        {
+          "issue": "ankr-pulse failing at /login",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 404 at http://localhost:4320/login. 6 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 404",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Health API returned: 404",
+            "GET http://localhost:4320/login: Not Found",
+            "GET http://localhost:4320/ai/api/services/health-all: Not Found",
+            "GET http://localhost:4320/ai/api/services/health-all: Not Found"
+          ]
+        },
+        {
+          "issue": "ankr-pulse failing at /dashboard",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 404 at http://localhost:4320/dashboard. 6 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 404",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "Health API returned: 404",
+            "GET http://localhost:4320/dashboard: Not Found",
+            "GET http://localhost:4320/ai/api/services/health-all: Not Found",
+            "GET http://localhost:4320/ai/api/services/health-all: Not Found"
+          ]
+        }
+      ],
+      "fixes": [],
+      "overallStatus": "down"
+    }
+  ]
+}

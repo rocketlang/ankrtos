@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next';;
 import { useMutation, gql } from '@apollo/client';
 import { useAuthStore } from '../lib/stores/auth';
 import { useNavigate } from 'react-router-dom';
@@ -41,7 +42,7 @@ export function Login() {
       <div className="bg-maritime-800 border border-maritime-700 rounded-lg p-8 w-full max-w-md">
         <div className="text-center mb-8">
           <span className="text-4xl">&#x2693;</span>
-          <h1 className="text-2xl font-bold text-white mt-2">ankrMrk8X</h1>
+          <h1 className="text-2xl font-bold text-white mt-2">Mari8x</h1>
           <p className="text-maritime-400 text-sm mt-1">Maritime Operations Platform</p>
         </div>
 

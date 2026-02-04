@@ -1,0 +1,508 @@
+// VEDIC ASTROLOGY EXTENSIONS
+
+// ==================== KUNDLI (VEDIC BIRTH CHART) ====================
+
+model Kundli {
+  id          String    @id @default(cuid())
+  userId      String    @unique
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Birth Details
+  birthDate   DateTime
+  birthTime   String    // HH:mm:ss format
+  birthPlace  String
+  birthLat    Float
+  birthLng    Float
+  timezone    String
+
+  // Ayanamsa (for Vedic calculations)
+  ayanamsa    String    @default("LAHIRI") // LAHIRI, RAMAN, KP, etc.
+
+  // Main Chart (Rashi Chart / D1)
+  rashiChart  Json      // House-wise planet positions
+
+  // Divisional Charts (Vargas)
+  d1          Json      // Rashi Chart
+  d2          Json      // Hora Chart (Wealth)
+  d3          Json      // Drekkana (Siblings)
+  d4          Json      // Chaturthamsa (Fortune)
+  d7          Json      // Saptamsa (Children)
+  d9          Json      // Navamsa (Marriage/Spouse)
+  d10         Json      // Dasamsa (Career)
+  d12         Json      // Dwadasamsa (Parents)
+  d16         Json      // Shodasamsa (Vehicles)
+  d20         Json      // Vimsamsa (Spiritual)
+  d24         Json      // Chaturvimsamsa (Education)
+  d27         Json      // Nakshatramsa (Strengths)
+  d30         Json      // Trimsamsa (Evils)
+  d40         Json      // Khavedamsa (Auspicious)
+  d45         Json      // Akshavedamsa (General)
+  d60         Json      // Shashtiamsa (Karma)
+
+  // Planetary Details
+  planets     Json      // { sun: { sign, degree, nakshatra, pada, retrograde }, ... }
+
+  // Nakshatra Details
+  birthNakshatra String
+  birthPada      Int
+  moonNakshatra  String
+  moonPada       Int
+
+  // Lagna (Ascendant)
+  lagna       ZodiacSign
+  lagnaLord   Planet
+
+  // Yogas (Planetary Combinations)
+  yogas       Json      // [{ name, description, strength }]
+
+  // Doshas
+  mangalDosha Boolean   @default(false)
+  kalSarpaDosha Boolean @default(false)
+  pitruDosha  Boolean   @default(false)
+  shrapit Dosha Boolean @default(false)
+
+  // House Lords
+  houseLords  Json      // { 1: "Mars", 2: "Venus", ... }
+
+  // Aspects
+  aspects     Json      // [{ planet1, planet2, aspect, strength }]
+
+  // Dasha System
+  currentDasha String?  // Current running dasha
+  dashas      Json      // Vimshottari Dasha periods
+
+  // Panchang at Birth
+  tithi       String
+  yoga        String
+  karana      String
+  weekDay     String
+
+  // Strength Calculations
+  shadbala    Json      // Six-fold strength of planets
+  ashtakavarga Json      // Ashtakavarga points
+
+  // Generated Analysis
+  analysis    String?   @db.Text
+  predictions String?   @db.Text
+
+  // Metadata
+  generatedAt DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("kundlis")
+}
+
+// ==================== DASHA SYSTEM ====================
+
+model Dasha {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Dasha Type
+  system      DashaSystem @default(VIMSHOTTARI)
+
+  // Period Details
+  planet      Planet
+  startDate   DateTime
+  endDate     DateTime
+
+  // Sub Periods
+  subDasha    Planet?
+  antarDasha  Planet?
+  sukshmaAntar Planet?
+
+  // Predictions
+  predictions String?   @db.Text
+  effects     String[]  // Good, Bad, Mixed
+
+  @@map("dashas")
+}
+
+enum DashaSystem {
+  VIMSHOTTARI
+  YOGINI
+  CHAR_DASHA
+  ASHTOTTARI
+  KALA_CHAKRA
+}
+
+// ==================== PANCHANG (DAILY ALMANAC) ====================
+
+model Panchang {
+  id          String    @id @default(cuid())
+  date        DateTime  @unique
+
+  // Location (for calculation)
+  latitude    Float
+  longitude   Float
+  timezone    String
+
+  // Tithi (Lunar Day)
+  tithi       String
+  tithiStart  String    // HH:mm
+  tithiEnd    String    // HH:mm
+
+  // Nakshatra (Lunar Mansion)
+  nakshatra   String
+  nakshatraLord Planet
+  nakshatraStart String
+  nakshatraEnd String
+
+  // Yoga
+  yoga        String
+  yogaStart   String
+  yogaEnd     String
+
+  // Karana
+  karana      String
+  karanaStart String
+  karanaEnd   String
+
+  // Week Day
+  weekDay     String
+  weekDayLord Planet
+
+  // Sun & Moon
+  sunrise     String
+  sunset      String
+  moonrise    String
+  moonset     String
+  moonSign    ZodiacSign
+
+  // Muhurat (Auspicious Times)
+  abhijit     Json?     // { start, end }
+  rahuKaal    Json      // { start, end }
+  yamaghanda  Json      // { start, end }
+  gulika      Json      // { start, end }
+  durMuhurat  Json[]    // [{ start, end }]
+  shubhMuhurat Json[]   // [{ start, end, purpose }]
+
+  // Festivals & Events
+  festivals   String[]
+  fastingDays String[]
+
+  // Paksha (Fortnight)
+  paksha      String    // Shukla or Krishna
+
+  // Ritu (Season)
+  ritu        String
+
+  // Predictions
+  dailyAdvice String?   @db.Text
+
+  @@map("panchangs")
+}
+
+// ==================== MUHURAT (AUSPICIOUS TIMING) ====================
+
+model Muhurat {
+  id          String    @id @default(cuid())
+  userId      String?
+
+  // Event Details
+  eventType   MuhuratType
+  eventName   String?
+
+  // Timing
+  suggestedDate DateTime
+  suggestedTime String
+  duration    Int?      // Minutes
+
+  // Location
+  location    String
+  latitude    Float
+  longitude   Float
+
+  // Calculations
+  tithi       String
+  nakshatra   String
+  yoga        String
+  considerations String[] // Factors considered
+
+  // Quality Score
+  score       Int       // 0-100
+
+  // Explanation
+  reasoning   String    @db.Text
+
+  createdAt   DateTime  @default(now())
+
+  @@map("muhurats")
+}
+
+enum MuhuratType {
+  MARRIAGE
+  GRIHA_PRAVESH
+  VEHICLE_PURCHASE
+  BUSINESS_START
+  TRAVEL
+  EDUCATION
+  MEDICAL
+  NAMING_CEREMONY
+  THREAD_CEREMONY
+  GENERAL
+}
+
+// ==================== REMEDIES ====================
+
+model Remedy {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Issue/Problem
+  issue       String
+  relatedTo   String?   // Planet, House, Dosha
+
+  // Remedy Type
+  type        RemedyType
+
+  // Remedy Details
+  title       String
+  description String    @db.Text
+  instructions String[] // Step-by-step
+
+  // Mantra
+  mantra      String?
+  mantraCount Int?      // Number of repetitions
+
+  // Gemstone
+  gemstone    String?
+  gemstoneWeight Float? // In carats
+
+  // Fasting
+  fastingDay  String?   // Monday, Tuesday, etc.
+
+  // Charity
+  charityItem String?
+  charityDay  String?
+
+  // Duration
+  startDate   DateTime?
+  duration    Int?      // Days
+
+  // Status
+  isCompleted Boolean   @default(false)
+  progress    Int       @default(0) // 0-100
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("remedies")
+}
+
+enum RemedyType {
+  GEMSTONE
+  MANTRA
+  YANTRA
+  PUJA
+  CHARITY
+  FASTING
+  COLOR_THERAPY
+  DIETARY
+  LIFESTYLE
+}
+
+// ==================== MATCHMAKING (GUN MILAN) ====================
+
+model MatchMaking {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Partner 1 (User)
+  user1Name   String
+  user1Birth  DateTime
+  user1Time   String
+  user1Place  String
+  user1Nakshatra String
+  user1Pada   Int
+
+  // Partner 2
+  user2Name   String
+  user2Birth  DateTime
+  user2Time   String
+  user2Place  String
+  user2Nakshatra String
+  user2Pada   Int
+
+  // Ashtakoot Scores (36 Gunas)
+  varna       Int       // 1/1
+  vashya      Int       // 2/2
+  tara        Int       // 3/3
+  yoni        Int       // 4/4
+  graha       Int       // 5/5
+  gana        Int       // 6/6
+  bhakoot     Int       // 7/7
+  nadi        Int       // 8/8
+  totalScore  Int       // out of 36
+
+  // Mangal Dosha Analysis
+  user1MangalDosha Boolean
+  user2MangalDosha Boolean
+  mangalDoshaMatch Boolean
+
+  // Compatibility Rating
+  rating      String    // Excellent, Good, Average, Poor
+
+  // Recommendations
+  recommendation String @db.Text
+  strengths   String[]
+  challenges  String[]
+  remedies    String[]
+
+  createdAt   DateTime  @default(now())
+
+  @@map("matchmakings")
+}
+
+// ==================== PREDICTIONS ====================
+
+model Prediction {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Prediction Type
+  type        PredictionType
+  category    String    // Career, Marriage, Finance, Health, etc.
+
+  // Time Frame
+  startDate   DateTime
+  endDate     DateTime
+
+  // Based On
+  basedOn     String[]  // Dasha, Transit, Yoga, etc.
+
+  // Prediction Content
+  title       String
+  prediction  String    @db.Text
+  confidence  Int       // 0-100
+
+  // Severity/Impact
+  impact      ImpactLevel
+
+  // AI Enhanced
+  isAiEnhanced Boolean  @default(false)
+
+  createdAt   DateTime  @default(now())
+
+  @@map("predictions")
+}
+
+enum PredictionType {
+  DAILY
+  WEEKLY
+  MONTHLY
+  YEARLY
+  LIFE_EVENT
+  DASHA_BASED
+  TRANSIT_BASED
+}
+
+enum ImpactLevel {
+  VERY_POSITIVE
+  POSITIVE
+  NEUTRAL
+  NEGATIVE
+  VERY_NEGATIVE
+}
+
+// ==================== RTC (REAL-TIME CHAT) ====================
+
+model ChatRoom {
+  id              String    @id @default(cuid())
+
+  consultationId  String    @unique
+  consultation    Consultation @relation(fields: [consultationId], references: [id])
+
+  // Participants
+  userId          String
+  astrologerId    String
+
+  // Status
+  isActive        Boolean   @default(true)
+  startedAt       DateTime  @default(now())
+  endedAt         DateTime?
+
+  // Settings
+  allowFileShare  Boolean   @default(true)
+  allowVoice      Boolean   @default(false)
+  allowVideo      Boolean   @default(false)
+
+  // Relations
+  messages        ChatMessage[]
+
+  @@map("chat_rooms")
+}
+
+model ChatMessage {
+  id          String    @id @default(cuid())
+
+  roomId      String
+  room        ChatRoom  @relation(fields: [roomId], references: [id], onDelete: Cascade)
+
+  // Sender
+  senderId    String
+  senderType  String    // user, astrologer, system
+
+  // Message Content
+  type        MessageType
+  content     String    @db.Text
+  fileUrl     String?
+  metadata    Json?
+
+  // Status
+  isRead      Boolean   @default(false)
+  readAt      DateTime?
+
+  createdAt   DateTime  @default(now())
+
+  @@map("chat_messages")
+  @@index([roomId, createdAt])
+}
+
+enum MessageType {
+  TEXT
+  IMAGE
+  FILE
+  AUDIO
+  VIDEO
+  CHART
+  SYSTEM
+}
+
+// ==================== VEDIC NUMEROLOGY ====================
+
+model Numerology {
+  id          String    @id @default(cuid())
+  userId      String    @unique
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Input
+  fullName    String
+  birthDate   DateTime
+
+  // Calculated Numbers
+  lifePathNumber Int
+  destinyNumber Int
+  soulNumber Int
+  personalityNumber Int
+  maturityNumber Int
+
+  // Lucky Numbers
+  luckyNumbers Int[]
+  luckyColors String[]
+  luckyDays   String[]
+
+  // Analysis
+  analysis    String    @db.Text
+  strengths   String[]
+  challenges  String[]
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("numerologies")
+}

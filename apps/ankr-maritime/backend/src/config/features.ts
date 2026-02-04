@@ -1,10 +1,10 @@
 /**
- * ankrMrk8X Feature Flags — Switchable Enterprise Configuration
+ * Mari8x Feature Flags — Switchable Enterprise Configuration
  *
  * Tiers:
  *   FREE    — Ships by default. Core maritime ops.
  *   PRO     — Advanced ops, analytics, multi-user.
- *   ENTERPRISE — Full platform: DA Desk, Laytime, Claims, P&I, Weather Routing, Mrk8XLLM.
+ *   ENTERPRISE — Full platform: DA Desk, Laytime, Claims, P&I, Weather Routing, Mari8xLLM.
  */
 
 export type FeatureTier = 'free' | 'pro' | 'enterprise';
@@ -42,9 +42,13 @@ const FEATURES: FeatureFlag[] = [
   { key: 'laytime_calculator', name: 'Laytime Calculator', description: 'SHINC/SHEX, weather days, demurrage/despatch', tier: 'enterprise', enabled: false, module: 'laytime' },
   { key: 'claims_management', name: 'Claims Management', description: 'Cargo damage, demurrage, deviation claims', tier: 'enterprise', enabled: false, module: 'claims' },
   { key: 'pi_club_integration', name: 'P&I Club Integration', description: 'Insurance, club correspondence tracking', tier: 'enterprise', enabled: false, module: 'insurance' },
-  { key: 'weather_routing', name: 'Weather Routing', description: 'GFS/ECMWF wind+wave data, optimal route calc', tier: 'enterprise', enabled: false, module: 'routing' },
-  { key: 'sea_routing_engine', name: 'Sea Routing Engine', description: 'Great circle + waypoint maritime routing', tier: 'enterprise', enabled: false, module: 'routing' },
-  { key: 'mrk8x_llm', name: 'Mrk8XLLM', description: 'Domain-specific LLM for clause analysis, voyage optimization', tier: 'enterprise', enabled: false, module: 'ai' },
+  { key: 'weather_routing', name: 'Weather Routing', description: 'GFS/ECMWF wind+wave data, optimal route calc', tier: 'enterprise', enabled: process.env.ENABLE_WEATHER_ROUTING === 'true', module: 'routing' },
+  { key: 'sea_routing_engine', name: 'Sea Routing Engine', description: 'Great circle + waypoint maritime routing', tier: 'enterprise', enabled: process.env.ENABLE_SEA_ROUTING === 'true', module: 'routing' },
+  { key: 'ml_eta_prediction', name: 'ML ETA Prediction', description: 'Machine learning powered ETA with weather and congestion', tier: 'pro', enabled: process.env.ENABLE_ML_ETA === 'true', module: 'voyage' },
+  { key: 'voyage_automation', name: 'Voyage Automation', description: 'Auto-detect milestones and SOF from AIS', tier: 'pro', enabled: process.env.ENABLE_VOYAGE_AUTOMATION === 'true', module: 'voyage' },
+  { key: 'mari8x_llm', name: 'Mari8xLLM', description: 'Domain-specific LLM for clause analysis, voyage optimization', tier: 'enterprise', enabled: false, module: 'ai' },
+  { key: 'rag_search', name: 'RAG Search & Knowledge Engine', description: 'Semantic search, document Q&A, entity extraction', tier: 'enterprise', enabled: process.env.ENABLE_RAG === 'true', module: 'ai' },
+  { key: 'rag_auto_index', name: 'RAG Auto-Indexing', description: 'Automatically index documents on upload', tier: 'enterprise', enabled: process.env.ENABLE_RAG_AUTO_INDEX === 'true', module: 'ai' },
   { key: 'advanced_analytics', name: 'Advanced Analytics', description: 'TCE analysis, market benchmarking, P&L', tier: 'enterprise', enabled: false, module: 'analytics' },
   { key: 'opensea_charts', name: 'OpenSeaMap Charts', description: 'Nautical chart overlay with depth/lights', tier: 'enterprise', enabled: false, module: 'maps' },
   { key: 'edi_integration', name: 'EDI Integration', description: 'BAPLIE, COPARN, CUSCAR messages', tier: 'enterprise', enabled: false, module: 'integration' },
@@ -52,7 +56,7 @@ const FEATURES: FeatureFlag[] = [
 ];
 
 // Active tier — set via env or database per org
-let activeTier: FeatureTier = (process.env.MRK8X_TIER as FeatureTier) || 'free';
+let activeTier: FeatureTier = (process.env.MARI8X_TIER as FeatureTier) || 'free';
 
 export function setTier(tier: FeatureTier) {
   activeTier = tier;

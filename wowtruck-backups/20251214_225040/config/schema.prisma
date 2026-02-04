@@ -1,0 +1,725 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  authUserId           String?   @map("auth_user_id")
+  id                   String    @id @default(uuid())
+  email                String    @unique
+  password             String
+  name                 String
+  phone                String?
+  role                 String    @default("customer")
+  branchId             String?
+  isActive             Boolean   @default(true)
+  lastLogin            DateTime?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+  role_id              String?   @db.Uuid
+  permissions_override Json?     @default("[]")
+  attributes           Json?     @default("{}")
+  kyc_status           String?   @default("pending") @db.VarChar(50)
+  kyc_completed_at     DateTime? @db.Timestamptz(6)
+  branch               Branch?   @relation(fields: [branchId], references: [id])
+  roles                roles?    @relation(fields: [role_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([email])
+  @@index([role])
+  @@index([branchId])
+  @@index([authUserId], map: "idx_wowtruck_user_auth")
+}
+
+model Branch {
+  id        String   @id @default(uuid())
+  name      String
+  code      String   @unique
+  city      String
+  state     String
+  address   String?
+  phone     String?
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  users     User[]
+
+  @@index([code])
+}
+
+model Customer {
+  id                String     @id @default(uuid())
+  customerCode      String     @unique
+  companyName       String
+  contactPerson     String?
+  contactEmail      String?
+  contactPhone      String?
+  gstin             String?
+  pan               String?
+  address           String?
+  city              String?
+  state             String?
+  pincode           String?
+  creditLimit       Float      @default(0)
+  creditUsed        Float      @default(0)
+  paymentTerms      Int        @default(30)
+  status            String     @default("active")
+  createdAt         DateTime   @default(now())
+  updatedAt         DateTime   @updatedAt
+  lead_source       String?    @db.VarChar(50)
+  lead_status       String?    @default("active") @db.VarChar(50)
+  converted_at      DateTime?  @db.Timestamptz(6)
+  assigned_sales_id String?    @db.Uuid
+  contracts         Contract[]
+  invoices          Invoice[]
+  orders            Order[]
+
+  @@index([customerCode])
+  @@index([status])
+  @@index([city])
+}
+
+model Contract {
+  id           String   @id @default(uuid())
+  customerId   String
+  contractNo   String   @unique
+  startDate    DateTime
+  endDate      DateTime
+  terms        String?
+  volumeCommit Float?
+  discountPct  Float?
+  status       String   @default("active")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  customer     Customer @relation(fields: [customerId], references: [id])
+
+  @@index([customerId])
+}
+
+model Vehicle {
+  id              String            @id @default(uuid())
+  vehicleNumber   String            @unique
+  vehicleType     String
+  capacity        Float
+  capacityUnit    String            @default("tons")
+  make            String?
+  model           String?
+  year            Int?
+  chassisNumber   String?
+  engineNumber    String?
+  rcExpiry        DateTime?
+  insuranceExpiry DateTime?
+  fitnessExpiry   DateTime?
+  permitExpiry    DateTime?
+  pucExpiry       DateTime?
+  ownershipType   String            @default("owned")
+  ownerName       String?
+  ownerPhone      String?
+  status          String            @default("available")
+  currentLocation String?
+  lastLatitude    Float?
+  lastLongitude   Float?
+  lastUpdated     DateTime?
+  driverId        String?
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  fuelLogs        FuelLog[]
+  maintenanceLogs MaintenanceLog[]
+  trips           Trip[]
+  driver          Driver?           @relation(fields: [driverId], references: [id])
+  positions       VehiclePosition[]
+
+  @@index([vehicleNumber])
+  @@index([status])
+  @@index([vehicleType])
+}
+
+model Driver {
+  id                 String    @id @default(uuid())
+  name               String
+  phone              String    @unique
+  altPhone           String?
+  email              String?
+  licenseNumber      String
+  licenseType        String?
+  licenseExpiry      DateTime?
+  aadharNumber       String?
+  panNumber          String?
+  address            String?
+  city               String?
+  state              String?
+  pincode            String?
+  emergencyName      String?
+  emergencyPhone     String?
+  status             String    @default("available")
+  rating             Float     @default(4.5)
+  totalTrips         Int       @default(0)
+  totalKms           Float     @default(0)
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+  reputation_score   Decimal?  @default(0) @db.Decimal(3, 2)
+  total_ratings      Int?      @default(0)
+  on_time_percentage Decimal?  @default(0) @db.Decimal(5, 2)
+  tier               String?   @default("standard") @db.VarChar(20)
+  trips              Trip[]
+  vehicles           Vehicle[]
+
+  @@index([phone])
+  @@index([status])
+}
+
+model Order {
+  id                     String                @id @default(uuid())
+  orderNumber            String                @unique
+  lrNumber               String?               @unique
+  customerId             String
+  originAddress          String?
+  originCity             String
+  originState            String?
+  originPincode          String?
+  originLat              Float?
+  originLng              Float?
+  destAddress            String?
+  destCity               String
+  destState              String?
+  destPincode            String?
+  destLat                Float?
+  destLng                Float?
+  cargoType              String?
+  cargoDescription       String?
+  cargoWeight            Float?
+  cargoVolume            Float?
+  cargoValue             Float?
+  packagingType          String?
+  numberOfPackages       Int?
+  rateType               String                @default("per_ton")
+  rateAmount             Float?
+  quotedAmount           Float?
+  distanceKm             Float?
+  tollAmount             Float?
+  loadingCharges         Float?
+  unloadingCharges       Float?
+  otherCharges           Float?
+  bookingDate            DateTime              @default(now())
+  pickupDate             DateTime?
+  expectedDelivery       DateTime?
+  actualDelivery         DateTime?
+  status                 String                @default("pending")
+  priority               String                @default("normal")
+  ewayBillNo             String?
+  ewayBillDate           DateTime?
+  ewayBillExpiry         DateTime?
+  createdAt              DateTime              @default(now())
+  updatedAt              DateTime              @updatedAt
+  workflow_state         String?               @default("requested") @db.VarChar(50)
+  workflow_definition_id String?               @db.Uuid
+  sla_deadline           DateTime?             @db.Timestamptz(6)
+  is_exception           Boolean?              @default(false)
+  exception_reason       String?
+  invoices               Invoice[]
+  customer               Customer              @relation(fields: [customerId], references: [id])
+  workflow_definitions   workflow_definitions? @relation(fields: [workflow_definition_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  documents              OrderDocument[]
+  statusHistory          OrderStatusHistory[]
+  trips                  Trip[]
+
+  @@index([orderNumber])
+  @@index([customerId])
+  @@index([status])
+  @@index([bookingDate])
+}
+
+model OrderDocument {
+  id         String   @id @default(uuid())
+  orderId    String
+  docType    String
+  fileName   String
+  filePath   String
+  mimeType   String?
+  fileSize   Int?
+  uploadedBy String?
+  createdAt  DateTime @default(now())
+  order      Order    @relation(fields: [orderId], references: [id])
+
+  @@index([orderId])
+}
+
+model OrderStatusHistory {
+  id        String   @id @default(uuid())
+  orderId   String
+  status    String
+  remarks   String?
+  updatedBy String?
+  location  String?
+  createdAt DateTime @default(now())
+  order     Order    @relation(fields: [orderId], references: [id])
+
+  @@index([orderId])
+}
+
+model Trip {
+  id                  String         @id @default(uuid())
+  tripNumber          String         @unique
+  orderId             String
+  vehicleId           String
+  driverId            String
+  startLocation       String
+  startLat            Float?
+  startLng            Float?
+  endLocation         String
+  endLat              Float?
+  endLng              Float?
+  plannedRoute        String?
+  actualRoute         String?
+  plannedDistance     Float?
+  actualDistance      Float?
+  plannedDuration     Int?
+  actualDuration      Int?
+  status              String         @default("planned")
+  plannedStart        DateTime?
+  actualStart         DateTime?
+  plannedEnd          DateTime?
+  actualEnd           DateTime?
+  fuelCost            Float?
+  tollCost            Float?
+  driverAllowance     Float?
+  otherCost           Float?
+  podStatus           String?
+  podReceivedAt       DateTime?
+  podReceiverName     String?
+  podSignature        String?
+  podPhotos           String?
+  podRemarks          String?
+  createdAt           DateTime       @default(now())
+  updatedAt           DateTime       @updatedAt
+  trust_score         Decimal?       @db.Decimal(3, 2)
+  pod_verified        Boolean?       @default(false)
+  pod_blockchain_hash String?        @db.VarChar(200)
+  driver              Driver         @relation(fields: [driverId], references: [id])
+  order               Order          @relation(fields: [orderId], references: [id])
+  vehicle             Vehicle        @relation(fields: [vehicleId], references: [id])
+  events              TripEvent[]
+  positions           TripPosition[]
+
+  @@index([tripNumber])
+  @@index([orderId])
+  @@index([vehicleId])
+  @@index([driverId])
+  @@index([status])
+}
+
+model TripPosition {
+  id        String   @id @default(uuid())
+  tripId    String
+  latitude  Float
+  longitude Float
+  speed     Float?
+  heading   Float?
+  accuracy  Float?
+  timestamp DateTime @default(now())
+  trip      Trip     @relation(fields: [tripId], references: [id])
+
+  @@index([tripId])
+  @@index([timestamp])
+}
+
+model TripEvent {
+  id        String   @id @default(uuid())
+  tripId    String
+  eventType String
+  latitude  Float?
+  longitude Float?
+  location  String?
+  remarks   String?
+  duration  Int?
+  createdAt DateTime @default(now())
+  trip      Trip     @relation(fields: [tripId], references: [id])
+
+  @@index([tripId])
+}
+
+model VehiclePosition {
+  id        String   @id @default(uuid())
+  vehicleId String
+  latitude  Float
+  longitude Float
+  speed     Float?
+  heading   Float?
+  altitude  Float?
+  accuracy  Float?
+  ignition  Boolean?
+  odometer  Float?
+  fuelLevel Float?
+  timestamp DateTime @default(now())
+  vehicle   Vehicle  @relation(fields: [vehicleId], references: [id])
+
+  @@index([vehicleId])
+  @@index([timestamp])
+}
+
+model Geofence {
+  id           String   @id @default(uuid())
+  name         String
+  description  String?
+  type         String   @default("polygon")
+  coordinates  String
+  isActive     Boolean  @default(true)
+  alertOnEntry Boolean  @default(true)
+  alertOnExit  Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([name])
+}
+
+model Alert {
+  id         String    @id @default(uuid())
+  vehicleId  String?
+  driverId   String?
+  tripId     String?
+  alertType  String
+  severity   String    @default("info")
+  message    String
+  latitude   Float?
+  longitude  Float?
+  isRead     Boolean   @default(false)
+  isResolved Boolean   @default(false)
+  resolvedBy String?
+  resolvedAt DateTime?
+  createdAt  DateTime  @default(now())
+
+  @@index([vehicleId])
+  @@index([alertType])
+  @@index([isRead])
+}
+
+model Invoice {
+  id            String        @id @default(uuid())
+  invoiceNumber String        @unique
+  customerId    String
+  orderId       String?
+  invoiceDate   DateTime      @default(now())
+  dueDate       DateTime
+  subtotal      Float
+  cgst          Float         @default(0)
+  sgst          Float         @default(0)
+  igst          Float         @default(0)
+  totalTax      Float         @default(0)
+  totalAmount   Float
+  paidAmount    Float         @default(0)
+  balanceAmount Float         @default(0)
+  status        String        @default("draft")
+  placeOfSupply String?
+  reverseCharge Boolean       @default(false)
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  customer      Customer      @relation(fields: [customerId], references: [id])
+  order         Order?        @relation(fields: [orderId], references: [id])
+  lineItems     InvoiceItem[]
+  payments      Payment[]
+
+  @@index([invoiceNumber])
+  @@index([customerId])
+  @@index([status])
+}
+
+model InvoiceItem {
+  id          String  @id @default(uuid())
+  invoiceId   String
+  description String
+  hsnCode     String?
+  quantity    Float   @default(1)
+  unit        String?
+  rate        Float
+  amount      Float
+  taxRate     Float   @default(18)
+  invoice     Invoice @relation(fields: [invoiceId], references: [id])
+
+  @@index([invoiceId])
+}
+
+model Payment {
+  id                   String    @id @default(uuid())
+  invoiceId            String
+  paymentDate          DateTime  @default(now())
+  amount               Float
+  paymentMode          String
+  referenceNo          String?
+  remarks              String?
+  receivedBy           String?
+  createdAt            DateTime  @default(now())
+  milestone_type       String?   @db.VarChar(50)
+  milestone_percentage Decimal?  @db.Decimal(5, 2)
+  escrow_status        String?   @default("none") @db.VarChar(50)
+  released_at          DateTime? @db.Timestamptz(6)
+  invoice              Invoice   @relation(fields: [invoiceId], references: [id])
+
+  @@index([invoiceId])
+}
+
+model Rate {
+  id            String    @id @default(uuid())
+  name          String
+  originCity    String
+  destCity      String
+  vehicleType   String
+  baseRate      Float
+  perKmRate     Float
+  perTonRate    Float?
+  minCharge     Float
+  effectiveFrom DateTime  @default(now())
+  effectiveTo   DateTime?
+  isActive      Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@unique([originCity, destCity, vehicleType])
+  @@index([isActive])
+}
+
+model FuelLog {
+  id        String   @id @default(uuid())
+  vehicleId String
+  fuelDate  DateTime @default(now())
+  fuelType  String   @default("diesel")
+  quantity  Float
+  rate      Float
+  amount    Float
+  odometer  Float?
+  pumpName  String?
+  location  String?
+  filledBy  String?
+  receiptNo String?
+  createdAt DateTime @default(now())
+  vehicle   Vehicle  @relation(fields: [vehicleId], references: [id])
+
+  @@index([vehicleId])
+}
+
+model MaintenanceLog {
+  id          String    @id @default(uuid())
+  vehicleId   String
+  serviceDate DateTime  @default(now())
+  serviceType String
+  description String
+  odometer    Float?
+  cost        Float?
+  vendor      String?
+  nextDueDate DateTime?
+  nextDueKm   Float?
+  createdAt   DateTime  @default(now())
+  vehicle     Vehicle   @relation(fields: [vehicleId], references: [id])
+
+  @@index([vehicleId])
+}
+
+model Notification {
+  id        String    @id @default(uuid())
+  userId    String?
+  channel   String
+  recipient String
+  subject   String?
+  message   String
+  status    String    @default("pending")
+  sentAt    DateTime?
+  error     String?
+  metadata  String?
+  createdAt DateTime  @default(now())
+
+  @@index([userId])
+  @@index([status])
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  userId    String?
+  action    String
+  entity    String
+  entityId  String?
+  oldValue  String?
+  newValue  String?
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([entity])
+  @@index([createdAt])
+}
+
+model Setting {
+  id        String   @id @default(uuid())
+  key       String   @unique
+  value     String
+  category  String?
+  updatedBy String?
+  updatedAt DateTime @updatedAt
+
+  @@index([category])
+}
+
+model License {
+  id           Int      @id @default(autoincrement())
+  licenseKey   String   @unique @map("license_key")
+  customerName String   @default("WowTruck Technologies") @map("customer_name")
+  issuedAt     DateTime @default(now()) @map("issued_at")
+  expiresAt    DateTime @map("expires_at")
+  isActive     Boolean  @default(true) @map("is_active")
+  features     Json     @default("{\"gps\": true, \"reports\": true, \"invoicing\": true}")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  @@map("license")
+}
+
+model auth_audit_log {
+  id          String    @id @default(dbgenerated("extensions.uuid_generate_v4()")) @db.Uuid
+  user_id     String?
+  action      String
+  resource    String?
+  resource_id String?
+  ip_address  String?
+  user_agent  String?
+  metadata    Json?     @default("{}")
+  created_at  DateTime? @default(now()) @db.Timestamptz(6)
+
+  @@index([action], map: "idx_wowtruck_audit_action")
+  @@index([user_id], map: "idx_wowtruck_audit_user")
+}
+
+model auth_role {
+  id          String    @id
+  name        String    @unique
+  permissions Json?     @default("[]")
+  created_at  DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+model auth_session {
+  id         String    @id
+  user_id    String
+  token      String?
+  ip_address String?
+  user_agent String?
+  expires_at DateTime  @db.Timestamptz(6)
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+
+  @@index([expires_at], map: "idx_wowtruck_session_expires")
+  @@index([token], map: "idx_wowtruck_session_token")
+  @@index([user_id], map: "idx_wowtruck_session_user")
+}
+
+model auth_user {
+  id             String    @id @default(dbgenerated("extensions.uuid_generate_v4()")) @db.Uuid
+  email          String    @unique
+  name           String?
+  email_verified Boolean?  @default(false)
+  created_at     DateTime? @default(now()) @db.Timestamptz(6)
+
+  @@index([email], map: "idx_wowtruck_auth_user_email")
+}
+
+model exceptions {
+  id               String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  exception_type   String    @db.VarChar(100)
+  severity         String    @db.VarChar(20)
+  entity_type      String    @db.VarChar(50)
+  entity_id        String    @db.Uuid
+  title            String    @db.VarChar(200)
+  description      String?
+  detected_at      DateTime? @default(now()) @db.Timestamptz(6)
+  detected_by      String?   @db.VarChar(50)
+  assigned_to      String?   @db.Uuid
+  assigned_at      DateTime? @db.Timestamptz(6)
+  status           String?   @default("open") @db.VarChar(50)
+  resolution       String?
+  resolved_by      String?   @db.Uuid
+  resolved_at      DateTime? @db.Timestamptz(6)
+  escalation_level Int?      @default(0)
+  escalated_to     String?   @db.Uuid
+  escalated_at     DateTime? @db.Timestamptz(6)
+  metadata         Json?     @default("{}")
+  created_at       DateTime? @default(now()) @db.Timestamptz(6)
+  updated_at       DateTime? @default(now()) @db.Timestamptz(6)
+
+  @@index([status], map: "idx_exceptions_status")
+}
+
+model permissions {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name        String    @unique @db.VarChar(100)
+  category    String    @db.VarChar(50)
+  description String?
+  created_at  DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+model pincodes {
+  id           Int     @id @default(autoincrement())
+  circlename   String?
+  regionname   String?
+  divisionname String?
+  officename   String?
+  pincode      String? @db.VarChar(10)
+  officetype   String? @db.VarChar(10)
+  delivery     String? @db.VarChar(20)
+  district     String?
+  statename    String?
+  latitude     String?
+  longitude    String?
+
+  @@index([district], map: "idx_pincodes_district")
+  @@index([pincode], map: "idx_pincodes_pincode")
+  @@index([statename], map: "idx_pincodes_state")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model roles {
+  id           String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name         String    @unique @db.VarChar(50)
+  display_name String    @db.VarChar(100)
+  description  String?
+  is_internal  Boolean?  @default(false)
+  is_active    Boolean?  @default(true)
+  created_at   DateTime? @default(now()) @db.Timestamptz(6)
+  updated_at   DateTime? @default(now()) @db.Timestamptz(6)
+  User         User[]
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model trust_events {
+  id              String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  event_type      String    @db.VarChar(100)
+  event_category  String    @db.VarChar(50)
+  entity_type     String    @db.VarChar(50)
+  entity_id       String    @db.Uuid
+  actor_type      String?   @db.VarChar(20)
+  actor_id        String?   @db.Uuid
+  action          String    @db.VarChar(100)
+  description     String?
+  old_value       Json?
+  new_value       Json?
+  metadata        Json?     @default("{}")
+  ip_address      String?   @db.Inet
+  user_agent      String?
+  session_id      String?   @db.VarChar(200)
+  blockchain_hash String?   @db.VarChar(200)
+  created_at      DateTime? @default(now()) @db.Timestamptz(6)
+
+  @@index([entity_type, entity_id], map: "idx_trust_events_entity")
+  @@index([created_at], map: "idx_trust_events_time")
+}
+
+model workflow_definitions {
+  id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name          String    @unique @db.VarChar(100)
+  display_name  String    @db.VarChar(200)
+  description   String?
+  entity_type   String    @db.VarChar(50)
+  initial_state String    @db.VarChar(50)
+  is_active     Boolean?  @default(true)
+  config        Json?     @default("{}")
+  created_at    DateTime? @default(now()) @db.Timestamptz(6)
+  updated_at    DateTime? @default(now()) @db.Timestamptz(6)
+  Order         Order[]
+}

@@ -1,5 +1,6 @@
 import { useQuery, gql } from '@apollo/client';
-import { useState } from 'react';
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next';;
 
 const PORTS_QUERY = gql`
   query Ports {

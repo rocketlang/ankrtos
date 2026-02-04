@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Anil - Documents | ANKR</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --surface-light: #334155;
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent: #22d3ee;
+            --success: #22c55e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--surface-light);
+            margin-bottom: 2rem;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .role {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .document-card {
+            background: var(--surface);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--surface-light);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .document-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+
+        .document-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .document-title a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .document-title a:hover {
+            color: var(--accent);
+        }
+
+        .document-description {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .document-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--surface-light);
+            color: var(--text-muted);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .tag.primary {
+            background: rgba(37, 99, 235, 0.2);
+            color: var(--accent);
+        }
+
+        .sections {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--surface-light);
+        }
+
+        .sections-title {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .sections-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .section-item {
+            color: var(--text-muted);
+            padding: 0.25rem 0;
+        }
+
+        .section-item::before {
+            content: ">";
+            color: var(--accent);
+            margin-right: 0.5rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--surface-light);
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to All Documents</a>
+
+        <header class="header">
+            <div class="author-avatar">BA</div>
+            <h1>Bharat Anil</h1>
+            <p class="role">Principal - Strategic Initiatives</p>
+        </header>
+
+        <!-- Featured Project -->
+        <div style="background: linear-gradient(135deg, rgba(51, 142, 255, 0.1), rgba(16, 185, 129, 0.1)); border: 1px solid rgba(51, 142, 255, 0.3); border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #338eff, #10b981); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.25rem;">V</div>
+                <div>
+                    <h3 style="margin: 0; font-size: 1.25rem;">Vyomo</h3>
+                    <p style="margin: 0; color: var(--text-muted); font-size: 0.875rem;">व्योमो - Momentum in Trade</p>
+                </div>
+                <span style="margin-left: auto; background: rgba(34, 197, 94, 0.2); color: #22c55e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem;">NEW</span>
+            </div>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">India's first AI-powered trading analytics platform. Options, commodities, forex & crypto.</p>
+            <a href="https://vyomo.in" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #338eff; color: white; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; font-weight: 500;">
+                Visit vyomo.in
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+        </div>
+
+        <main>
+            <article class="document-card">
+                <h2 class="document-title">
+                    <a href="../BRAINSTORM.md">Vyomo - Product & Technical Document</a>
+                </h2>
+                <p class="document-description">
+                    Complete product vision for India's first AI-powered, SEBI-aligned options analytics platform.
+                    Covers market analysis, technical architecture, BFC integration, monetization, and 52-week roadmap.
+                </p>
+                <div class="document-meta">
+                    <span class="meta-item">Version 0.1.0-alpha</span>
+                    <span class="meta-item">Created: Jan 19, 2026</span>
+                    <span class="meta-item">Status: Planning</span>
+                </div>
+                <div class="tags">
+                    <span class="tag primary">Product Strategy</span>
+                    <span class="tag primary">Fintech</span>
+                    <span class="tag">SEBI</span>
+                    <span class="tag">AI/ML</span>
+                    <span class="tag">Vernacular</span>
+                </div>
+            </article>
+
+            <article class="document-card">
+                <h2 class="document-title">
+                    <a href="../TODO.md">Vyomo - Implementation Roadmap</a>
+                </h2>
+                <p class="document-description">
+                    Detailed 52-week implementation roadmap with 100+ tasks across 6 phases.
+                    Stack: Fastify, Mercurius, Vite, Prisma, PostgreSQL, TimescaleDB, pgvector.
+                </p>
+                <div class="document-meta">
+                    <span class="meta-item">100+ Tasks</span>
+                    <span class="meta-item">6 Phases</span>
+                    <span class="meta-item">52 Weeks</span>
+                </div>
+                <div class="tags">
+                    <span class="tag primary">Roadmap</span>
+                    <span class="tag">MVP</span>
+                    <span class="tag">Analytics</span>
+                    <span class="tag">AI/ML</span>
+                    <span class="tag">Portfolio</span>
+                </div>
+            </article>
+
+            <article class="document-card">
+                <h2 class="document-title">
+                    <a href="../OPTION-CHAIN-ANALYSIS-POSSIBILITIES.md">Option Chain Time Series Analysis</a>
+                </h2>
+                <p class="document-description">
+                    Comprehensive possibilities document for option chain analytics with 1-minute frequency data.
+                    Covers volatility indicators, flow analysis, Greeks-based signals, ML applications,
+                    alerting systems, and a 12-week implementation roadmap.
+                </p>
+                <div class="document-meta">
+                    <span class="meta-item">Version 1.0</span>
+                    <span class="meta-item">Created: Jan 19, 2026</span>
+                    <span class="meta-item">Data Sources: Kuber, Pratham</span>
+                </div>
+                <div class="tags">
+                    <span class="tag primary">Options Trading</span>
+                    <span class="tag primary">Quantitative Analysis</span>
+                    <span class="tag">Volatility</span>
+                    <span class="tag">Greeks</span>
+                    <span class="tag">Nifty</span>
+                    <span class="tag">BankNifty</span>
+                    <span class="tag">Machine Learning</span>
+                </div>
+                <div class="sections">
+                    <div class="sections-title">Document Sections:</div>
+                    <div class="sections-list">
+                        <span class="section-item">Data Requirements</span>
+                        <span class="section-item">Volatility Analysis</span>
+                        <span class="section-item">Flow & Sentiment</span>
+                        <span class="section-item">Greeks-Based Signals</span>
+                        <span class="section-item">Price Discovery</span>
+                        <span class="section-item">Composite Indicators</span>
+                        <span class="section-item">ML Applications</span>
+                        <span class="section-item">Alerting System</span>
+                        <span class="section-item">Visualization</span>
+                        <span class="section-item">Implementation Roadmap</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="document-card">
+                <h2 class="document-title">
+                    <a href="../Vyomo_Revised_Todo.md">Vyomo - Revised Project Roadmap</a>
+                </h2>
+                <p class="document-description">
+                    Complete project roadmap for Vyomo including completed features (AI Insights, 11 Indian languages,
+                    Swayam Bot), in-progress proprietary algorithms, and future phases covering mobile app,
+                    broker integration, and community features.
+                </p>
+                <div class="document-meta">
+                    <span class="meta-item">Updated: Jan 19, 2026</span>
+                    <span class="meta-item">Status: Active Development</span>
+                    <span class="meta-item">Phase 3: 85% Complete</span>
+                </div>
+                <div class="tags">
+                    <span class="tag primary">Roadmap</span>
+                    <span class="tag primary">AI Insights</span>
+                    <span class="tag">Multi-Language</span>
+                    <span class="tag">Voice Support</span>
+                    <span class="tag">LMS</span>
+                    <span class="tag">Gamification</span>
+                </div>
+            </article>
+
+            <article class="document-card">
+                <h2 class="document-title">
+                    <a href="../Vyomo_RoadMap_Todo.md">Vyomo - Comprehensive Roadmap & Todo</a>
+                </h2>
+                <p class="document-description">
+                    Detailed roadmap with architecture overview, phase status tracking, productization plans
+                    (Equity, IPO, MF, Commodities), business models (B2C, B2B, B2B2C), sprint tasks,
+                    and key metrics. Includes system architecture diagram.
+                </p>
+                <div class="document-meta">
+                    <span class="meta-item">Created: Jan 19, 2026</span>
+                    <span class="meta-item">4 Phases</span>
+                    <span class="meta-item">Phase 3: In Progress</span>
+                </div>
+                <div class="tags">
+                    <span class="tag primary">Roadmap</span>
+                    <span class="tag primary">Architecture</span>
+                    <span class="tag">Productization</span>
+                    <span class="tag">Business Model</span>
+                    <span class="tag">Gamification</span>
+                    <span class="tag">LMS</span>
+                </div>
+                <div class="sections">
+                    <div class="sections-title">Key Sections:</div>
+                    <div class="sections-list">
+                        <span class="section-item">Phase Status Overview</span>
+                        <span class="section-item">Architecture Diagram</span>
+                        <span class="section-item">Gamification System</span>
+                        <span class="section-item">LMS Integration</span>
+                        <span class="section-item">Productization Roadmap</span>
+                        <span class="section-item">Business Models</span>
+                        <span class="section-item">Sprint Tasks</span>
+                        <span class="section-item">Key Metrics</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="document-card">
+                <h2 class="document-title">
+                    <a href="../Vyomo_Proprietary.md">Vyomo - Proprietary Algorithms</a>
+                </h2>
+                <p class="document-description">
+                    Innovative trading algorithms that protect retail traders: Retail Trap Detector,
+                    Manipulation Pattern Recognition, Smart Money Flow Analysis, Volatility Regime Prediction,
+                    GEX Analysis, FII-DII Divergence, and Narrative Cycle Trading.
+                </p>
+                <div class="document-meta">
+                    <span class="meta-item">10 Algorithms</span>
+                    <span class="meta-item">Indian Market Focus</span>
+                    <span class="meta-item">Retail Protection</span>
+                </div>
+                <div class="tags">
+                    <span class="tag primary">Proprietary</span>
+                    <span class="tag primary">Algorithms</span>
+                    <span class="tag">Stop-Loss Hunting</span>
+                    <span class="tag">Manipulation Detection</span>
+                    <span class="tag">GEX</span>
+                    <span class="tag">Smart Money</span>
+                </div>
+                <div class="sections">
+                    <div class="sections-title">Key Algorithms:</div>
+                    <div class="sections-list">
+                        <span class="section-item">Retail Trap Detector</span>
+                        <span class="section-item">Manipulation Pattern (MPR)</span>
+                        <span class="section-item">Smart vs Dumb Money</span>
+                        <span class="section-item">Volatility Regime HMM</span>
+                        <span class="section-item">Expiry Day GEX</span>
+                        <span class="section-item">FII-DII Divergence</span>
+                        <span class="section-item">Liquidity Void Mapping</span>
+                        <span class="section-item">Narrative Cycle Trading</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="document-card">
+                <h2 class="document-title">
+                    <a href="../Vyomo_Project_Traditional.md">Traditional Pattern Trading Guide (Hindi/English)</a>
+                </h2>
+                <p class="document-description">
+                    A layman's guide to chart patterns and technical analysis in simple Hindi and English.
+                    Covers candlestick patterns (Doji, Hammer, Engulfing, Morning/Evening Star), chart patterns
+                    (Head & Shoulders, Double Top/Bottom, Triangles), and indicators (RSI, MACD, Bollinger Bands).
+                </p>
+                <div class="document-meta">
+                    <span class="meta-item">Bilingual Guide</span>
+                    <span class="meta-item">Beginner Friendly</span>
+                    <span class="meta-item">Visual Examples</span>
+                </div>
+                <div class="tags">
+                    <span class="tag primary">Education</span>
+                    <span class="tag primary">Hindi</span>
+                    <span class="tag">Candlesticks</span>
+                    <span class="tag">Chart Patterns</span>
+                    <span class="tag">RSI</span>
+                    <span class="tag">MACD</span>
+                    <span class="tag">Support/Resistance</span>
+                </div>
+                <div class="sections">
+                    <div class="sections-title">Guide Sections:</div>
+                    <div class="sections-list">
+                        <span class="section-item">Candlestick Patterns</span>
+                        <span class="section-item">Chart Patterns</span>
+                        <span class="section-item">Technical Indicators</span>
+                        <span class="section-item">Support & Resistance</span>
+                        <span class="section-item">Volume Analysis</span>
+                        <span class="section-item">Quick Reference Card</span>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <p>ANKR Labs Document Repository | 7 Documents</p>
+            <p>Last updated: January 19, 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -454,6 +454,44 @@ ${searchModal()}
     </div>
   </a>
 
+  <!-- WareXAI Showcase Banner -->
+  <a href="/project/documents/warexai/_showcase" class="block mb-10 rounded-2xl overflow-hidden bg-gradient-to-r from-cyan-500/10 via-blue-500/5 to-emerald-500/10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all group">
+    <div class="flex flex-col sm:flex-row items-center gap-4 p-5">
+      <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/30 to-blue-600/20 flex items-center justify-center flex-shrink-0 text-white font-bold text-lg">WX</div>
+      <div class="flex-1 text-center sm:text-left">
+        <div class="font-bold text-white text-lg group-hover:text-cyan-400 transition-colors">WareXAI \u2014 AI-Powered Warehouse Management</div>
+        <div class="text-sm text-gray-400">80+ modules, 90 models, AI analytics, multi-warehouse networks, mobile workforce & Indian compliance</div>
+      </div>
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <div class="hidden sm:flex gap-2 text-xs">
+          <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 rounded-full">80+ Modules</span>
+          <span class="px-2 py-1 bg-blue-500/20 text-blue-400 rounded-full">AI-Powered</span>
+          <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 rounded-full">GST Native</span>
+        </div>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" class="group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+    </div>
+  </a>
+
+  <!-- SunoSunao Showcase Banner -->
+  <a href="/project/documents/sunosunao/_showcase" class="block mb-10 rounded-2xl overflow-hidden bg-gradient-to-r from-rose-500/10 via-orange-500/5 to-amber-500/10 border border-rose-500/20 hover:border-rose-500/40 transition-all group">
+    <div class="flex flex-col sm:flex-row items-center gap-4 p-5">
+      <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500/30 to-orange-600/20 flex items-center justify-center flex-shrink-0 text-2xl">\u{1F3A4}</div>
+      <div class="flex-1 text-center sm:text-left">
+        <div class="font-bold text-white text-lg group-hover:text-rose-400 transition-colors">SunoSunao \u2014 Voice & Media Platform</div>
+        <div class="text-sm text-gray-400">Voice legacy, podcasts, voicebook & social listening \u2014 AI transcription, 103 languages, voice cloning</div>
+      </div>
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <div class="hidden sm:flex gap-2 text-xs">
+          <span class="px-2 py-1 bg-rose-500/20 text-rose-400 rounded-full">Voice AI</span>
+          <span class="px-2 py-1 bg-orange-500/20 text-orange-400 rounded-full">103 Languages</span>
+          <span class="px-2 py-1 bg-amber-500/20 text-amber-400 rounded-full">Voice Cloning</span>
+        </div>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" class="group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+    </div>
+  </a>
+
   <!-- Category Filter Tabs -->
   <div class="flex items-center gap-2 mb-6 overflow-x-auto pb-2">
     <button onclick="filterCat('all')" data-cat="all" class="cat-tab active px-3 py-1.5 text-xs font-medium rounded-full border border-brand/50 text-brand transition-all whitespace-nowrap">All Products <span class="text-brand/60">${projects.length - featured.length}</span></button>
@@ -667,6 +705,32 @@ ${searchModal()}
       <div>
         <div class="font-semibold text-white group-hover:text-blue-400 transition-colors">FreightBox Platform Showcase</div>
         <div class="text-sm text-gray-400">10 modules, vs CargoWise dashboard, FR8X Exchange, pricing & more</div>
+      </div>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" class="ml-auto flex-shrink-0 group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+  </a>` : ''}
+
+  ${project.id === 'warexai' ? `
+  <!-- WareXAI Showcase Banner -->
+  <a href="/project/documents/warexai/_showcase" class="block mb-8 p-4 rounded-xl bg-gradient-to-r from-cyan-500/20 to-blue-500/10 border border-cyan-500/30 hover:border-cyan-500/50 transition-all group">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500/30 to-blue-600/20 flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">WX</div>
+      <div>
+        <div class="font-semibold text-white group-hover:text-cyan-400 transition-colors">WareXAI Platform Showcase</div>
+        <div class="text-sm text-gray-400">80+ modules, AI analytics, mobile workforce, Indian compliance</div>
+      </div>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" class="ml-auto flex-shrink-0 group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+  </a>` : ''}
+
+  ${project.id === 'sunosunao' ? `
+  <!-- SunoSunao Showcase Banner -->
+  <a href="/project/documents/sunosunao/_showcase" class="block mb-8 p-4 rounded-xl bg-gradient-to-r from-rose-500/20 to-orange-500/10 border border-rose-500/30 hover:border-rose-500/50 transition-all group">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-rose-500/30 to-orange-600/20 flex items-center justify-center flex-shrink-0 text-xl">\u{1F3A4}</div>
+      <div>
+        <div class="font-semibold text-white group-hover:text-rose-400 transition-colors">SunoSunao Platform Showcase</div>
+        <div class="text-sm text-gray-400">Voice legacy, 103 languages, AI transcription, voice cloning & more</div>
       </div>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" class="ml-auto flex-shrink-0 group-hover:translate-x-1 transition-transform"><path d="m9 18 6-6-6-6"/></svg>
     </div>
@@ -2950,4 +3014,359 @@ function fbToggleEcosystem(show) {
 </body></html>`;
 }
 
-module.exports = { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage, prathamShowcasePage, freightboxShowcasePage, esc };
+/* ═══════════════════════════════════════════════════════════════
+   WareXAI Showcase Page
+   ═══════════════════════════════════════════════════════════════ */
+function warexaiShowcasePage(files, platform) {
+  files = files || [];
+  platform = platform || {};
+  const p = platform;
+
+  const docGrid = files.map(f => `
+    <a href="/view/${encodeURIComponent(f.path)}" class="glass rounded-lg p-4 hover:bg-white/[0.03] border border-border hover:border-white/15 transition-all block">
+      <div class="flex items-start gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" class="flex-shrink-0 mt-0.5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <div class="min-w-0">
+          <div class="text-sm font-medium text-gray-200 truncate">${esc(f.title)}</div>
+          <div class="text-xs text-gray-600 mt-1">${f.size ? (f.size / 1024).toFixed(1) + ' KB' : ''}</div>
+        </div>
+      </div>
+    </a>
+  `).join('');
+
+  const tracks = p.tracks || [];
+  const modules = p.modules || [];
+  const techStack = p.techStack || [];
+
+  // Feature track cards
+  const trackCards = tracks.map((t, i) => {
+    const colors = ['blue', 'emerald', 'amber', 'purple'];
+    const c = colors[i % colors.length];
+    return `<div class="glass rounded-xl p-6 border border-${c}-500/20 hover:border-${c}-500/40 transition-all">
+      <div class="w-10 h-10 rounded-lg bg-${c}-500/20 flex items-center justify-center text-${c}-400 mb-3 text-xl">${esc(t.icon)}</div>
+      <h3 class="text-base font-bold text-white mb-2">${esc(t.title)}</h3>
+      <ul class="space-y-1">
+        ${t.features.map(f => `<li class="text-sm text-gray-400 flex items-start gap-2"><span class="text-${c}-400 mt-0.5">&bull;</span>${esc(f)}</li>`).join('')}
+      </ul>
+    </div>`;
+  }).join('');
+
+  // Module category groups
+  const moduleHtml = modules.map(cat => {
+    const pills = cat.items.map(m => `
+      <a href="https://warexai.com${esc(m.href)}" target="_blank" class="flex items-center gap-2 px-3 py-2 bg-white/[0.02] border border-white/5 rounded-lg hover:border-white/15 hover:bg-white/[0.04] transition-all text-sm text-gray-300 hover:text-white">
+        <span class="w-6 h-6 rounded flex items-center justify-center text-[10px] font-bold text-white ${esc(m.color)}">${esc(m.icon)}</span>
+        ${esc(m.title)}
+      </a>
+    `).join('');
+    return `<div class="mb-8">
+      <h4 class="text-xs uppercase tracking-widest text-gray-500 mb-3">${esc(cat.category)}</h4>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">${pills}</div>
+    </div>`;
+  }).join('');
+
+  // Tech stack badges
+  const techBadges = techStack.map(t =>
+    `<span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">${esc(t)}</span>`
+  ).join('');
+
+  // Stats
+  const stats = p.stats || {};
+
+  return `${htmlHead('WareXAI - AI-Powered WMS', '<style>.wx-gradient{background:linear-gradient(135deg,rgba(59,130,246,.08),transparent 60%,rgba(6,182,212,.06))}</style>')}
+<body>
+${navbar('warexai')}
+
+<!-- Hero -->
+<section class="wx-gradient">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-12">
+    <div class="flex items-center gap-3 mb-6">
+      <a href="/project/documents/" class="text-gray-500 hover:text-gray-400 text-sm transition-colors">&larr; All Projects</a>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+      <div class="flex-1">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-600/20">
+            <span class="text-white font-bold text-2xl">W</span>
+          </div>
+          <div>
+            <h1 class="text-3xl font-bold text-white">WareXAI</h1>
+            <p class="text-gray-500 text-sm">AI-Powered Enterprise Warehouse Management</p>
+          </div>
+        </div>
+        <p class="text-gray-400 leading-relaxed max-w-2xl mb-6">
+          End-to-end WMS with real-time inventory tracking, bin-level management,
+          picking &amp; packing workflows, 3PL billing, and full Indian compliance
+          &mdash; GST, E-Way Bill, E-Invoice, FSSAI, and bonded warehouse support.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://warexai.com/login" target="_blank" class="px-5 py-2.5 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20">
+            Start Free Demo
+          </a>
+          <a href="https://warexai.com/dashboard" target="_blank" class="px-5 py-2.5 bg-white/5 border border-white/10 text-white rounded-lg text-sm font-medium hover:bg-white/10 transition-colors">
+            Explore Dashboard
+          </a>
+        </div>
+      </div>
+      <!-- Stats panel -->
+      <div class="glass rounded-xl p-5 border border-border min-w-[240px]">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="text-center"><div class="text-2xl font-bold text-white">${stats.prismaModels || 90}+</div><div class="text-xs text-gray-500">Models</div></div>
+          <div class="text-center"><div class="text-2xl font-bold text-blue-400">${stats.graphqlOps || 200}+</div><div class="text-xs text-gray-500">APIs</div></div>
+          <div class="text-center"><div class="text-2xl font-bold text-cyan-400">${stats.frontendPages || 80}+</div><div class="text-xs text-gray-500">Pages</div></div>
+          <div class="text-center"><div class="text-2xl font-bold text-emerald-400">${stats.mobileScreens || 10}+</div><div class="text-xs text-gray-500">Mobile</div></div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-white/5 text-center">
+          <a href="https://warexai.com" target="_blank" class="text-blue-400 text-xs hover:text-blue-300 transition-colors">warexai.com &nearr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feature Tracks -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+  <h2 class="text-xl font-bold text-white mb-2">Four Capability Tracks</h2>
+  <p class="text-gray-500 text-sm mb-8">From AI-powered forecasting to GST-compliant billing, WareXAI covers every aspect of modern warehouse operations.</p>
+  <div class="grid md:grid-cols-2 gap-4">
+    ${trackCards}
+  </div>
+</section>
+
+<!-- Module Showcase -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+  <h2 class="text-xl font-bold text-white mb-2">80+ WMS Modules</h2>
+  <p class="text-gray-500 text-sm mb-8">Every module from receiving docks to shipping lanes, slotting optimization to drone inventory.</p>
+  ${moduleHtml}
+</section>
+
+<!-- Tech Stack -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+  <h2 class="text-sm uppercase tracking-widest text-gray-500 mb-4 text-center">Built With</h2>
+  <div class="flex flex-wrap justify-center gap-3">
+    ${techBadges}
+  </div>
+</section>
+
+<!-- Documents -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+  <h2 class="text-xl font-bold text-white mb-6">Project Documents</h2>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+    ${docGrid || '<p class="text-gray-600 col-span-3">No documents found.</p>'}
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 text-center">
+  <h2 class="text-2xl font-bold text-white mb-3">Ready to transform your warehouse?</h2>
+  <p class="text-gray-500 text-sm mb-6">Start a free demo with pre-loaded Indian warehouse data.</p>
+  <a href="https://warexai.com/login" target="_blank" class="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-xl font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg shadow-blue-600/20">
+    Start Free Demo
+  </a>
+</section>
+
+<footer class="border-t border-border">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-center text-xs text-gray-600">
+    WareXAI v1.0 &middot; <a href="https://warexai.com" class="hover:text-gray-400">warexai.com</a> &middot; ANKR Labs
+  </div>
+</footer>
+<script>function toggleTheme(){var h=document.documentElement;h.className=h.className==='dark'?'light':'dark';localStorage.setItem('ankr-theme',h.className)}</script>
+</body></html>`;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SunoSunao Showcase Page
+   ═══════════════════════════════════════════════════════════════ */
+function sunosunaoShowcasePage(files, platform) {
+  files = files || [];
+  platform = platform || {};
+  const p = platform;
+  const stats = p.stats || {};
+
+  const docGrid = files.map(f => `
+    <a href="/view/${encodeURIComponent(f.path)}" class="glass rounded-lg p-4 hover:bg-white/[0.03] border border-border hover:border-white/15 transition-all block">
+      <div class="flex items-start gap-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="2" class="flex-shrink-0 mt-0.5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <div class="min-w-0">
+          <div class="text-sm font-medium text-gray-200 truncate">${esc(f.title)}</div>
+          <div class="text-xs text-gray-600 mt-1">${f.size ? (f.size / 1024).toFixed(1) + ' KB' : ''}</div>
+        </div>
+      </div>
+    </a>
+  `).join('');
+
+  const features = p.features || [];
+  const featureCards = features.map((feat, i) => {
+    const colors = ['rose', 'orange', 'amber', 'pink', 'red', 'fuchsia'];
+    const c = colors[i % colors.length];
+    return `<div class="glass rounded-xl p-6 border border-${c}-500/20 hover:border-${c}-500/40 transition-all">
+      <div class="w-10 h-10 rounded-lg bg-${c}-500/20 flex items-center justify-center text-${c}-400 mb-3 text-xl">${esc(feat.icon)}</div>
+      <h3 class="text-base font-bold text-white mb-2">${esc(feat.title)}</h3>
+      <ul class="space-y-1">
+        ${feat.items.map(item => `<li class="text-sm text-gray-400 flex items-start gap-2"><span class="text-${c}-400 mt-0.5">&bull;</span>${esc(item)}</li>`).join('')}
+      </ul>
+    </div>`;
+  }).join('');
+
+  const voiceProviders = p.voiceProviders || [];
+  const providerRows = voiceProviders.map(vp => `
+    <tr class="border-b border-white/5">
+      <td class="py-3 px-4 text-sm font-medium text-white">${esc(vp.name)}</td>
+      <td class="py-3 px-4 text-sm text-gray-400">${esc(vp.languages)}</td>
+      <td class="py-3 px-4 text-sm text-gray-400">${esc(vp.useCase)}</td>
+      <td class="py-3 px-4 text-sm ${vp.cost === 'Free' ? 'text-emerald-400' : 'text-amber-400'}">${esc(vp.cost)}</td>
+    </tr>
+  `).join('');
+
+  const tiers = p.tiers || [];
+  const tierCards = tiers.map((tier, i) => {
+    const isPopular = i === 2;
+    return `<div class="glass rounded-xl p-6 border ${isPopular ? 'border-rose-500/40 ring-1 ring-rose-500/20' : 'border-white/10'} relative">
+      ${isPopular ? '<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-rose-500 text-white text-xs rounded-full font-medium">Popular</div>' : ''}
+      <div class="text-sm font-bold text-white mb-1">${esc(tier.name)}</div>
+      <div class="text-2xl font-bold text-rose-400 mb-3">${esc(tier.price)}</div>
+      <ul class="space-y-2 text-sm text-gray-400">
+        ${tier.features.map(f => `<li class="flex items-start gap-2"><span class="text-emerald-400">&#10003;</span>${esc(f)}</li>`).join('')}
+      </ul>
+    </div>`;
+  }).join('');
+
+  const techStack = p.techStack || [];
+  const techBadges = techStack.map(t =>
+    `<span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300">${esc(t)}</span>`
+  ).join('');
+
+  const useCases = p.useCases || [];
+  const useCaseHtml = useCases.map(uc => `
+    <div class="glass rounded-lg p-4 border border-white/5">
+      <div class="text-lg mb-2">${esc(uc.icon)}</div>
+      <div class="text-sm font-semibold text-white mb-1">${esc(uc.title)}</div>
+      <div class="text-xs text-gray-500">${esc(uc.desc)}</div>
+    </div>
+  `).join('');
+
+  return `${htmlHead('SunoSunao - Voice & Media Platform', '<style>.ss-gradient{background:linear-gradient(135deg,rgba(244,63,94,.08),transparent 60%,rgba(249,115,22,.06))}</style>')}
+<body>
+${navbar('sunosunao')}
+
+<!-- Hero -->
+<section class="ss-gradient">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-12">
+    <div class="flex items-center gap-3 mb-6">
+      <a href="/project/documents/sunosunao" class="text-sm text-gray-500 hover:text-gray-300 transition-colors">&larr; Back to docs</a>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-start gap-8">
+      <div class="flex-1">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-500/30 to-orange-600/20 flex items-center justify-center text-3xl">\u{1F3A4}</div>
+          <div>
+            <h1 class="text-3xl font-bold text-white">SunoSunao</h1>
+            <p class="text-rose-400 text-sm font-medium">\u0938\u0941\u0928\u094B \u0938\u0941\u0928\u093E\u0913 &mdash; Hear & Share</p>
+          </div>
+        </div>
+        <p class="text-gray-400 text-lg leading-relaxed mb-6">${esc(p.tagline || 'Voice-first media platform with audio content, podcasts, voicebook, and social listening powered by AI transcription and recommendation.')}</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-3 py-1.5 bg-rose-500/20 text-rose-400 rounded-full text-xs font-medium">Voice Legacy</span>
+          <span class="px-3 py-1.5 bg-orange-500/20 text-orange-400 rounded-full text-xs font-medium">103 Languages</span>
+          <span class="px-3 py-1.5 bg-amber-500/20 text-amber-400 rounded-full text-xs font-medium">Voice Cloning</span>
+          <span class="px-3 py-1.5 bg-pink-500/20 text-pink-400 rounded-full text-xs font-medium">6 Voice Providers</span>
+        </div>
+      </div>
+      <div class="glass rounded-xl p-5 min-w-[220px]">
+        <div class="text-xs text-gray-500 uppercase tracking-widest mb-3">Platform Stats</div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="text-center"><div class="text-2xl font-bold text-white">${stats.languages || 103}</div><div class="text-xs text-gray-500">Languages</div></div>
+          <div class="text-center"><div class="text-2xl font-bold text-rose-400">${stats.voiceProviders || 6}</div><div class="text-xs text-gray-500">Voice Engines</div></div>
+          <div class="text-center"><div class="text-2xl font-bold text-orange-400">${stats.prismaModels || 13}</div><div class="text-xs text-gray-500">Models</div></div>
+          <div class="text-center"><div class="text-2xl font-bold text-amber-400">${stats.triggerTypes || 4}</div><div class="text-xs text-gray-500">Triggers</div></div>
+        </div>
+        <div class="mt-4 pt-3 border-t border-white/5 text-center">
+          <span class="text-rose-400 text-xs">sunosunao.ankr.in</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Features -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+  <h2 class="text-xl font-bold text-white mb-2">Core Capabilities</h2>
+  <p class="text-gray-500 text-sm mb-8">From voice recording to AI-powered delivery triggers, SunoSunao preserves voices across time and generations.</p>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    ${featureCards}
+  </div>
+</section>
+
+<!-- Voice Engine -->
+${voiceProviders.length ? `
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+  <h2 class="text-xl font-bold text-white mb-2">Voice Engine \u2014 6 Providers</h2>
+  <p class="text-gray-500 text-sm mb-6">Multi-provider voice stack with Indian language specialization and free fallbacks.</p>
+  <div class="glass rounded-xl overflow-hidden border border-white/10">
+    <table class="w-full text-left">
+      <thead><tr class="bg-white/[0.03]">
+        <th class="py-3 px-4 text-xs uppercase tracking-wider text-gray-500">Provider</th>
+        <th class="py-3 px-4 text-xs uppercase tracking-wider text-gray-500">Languages</th>
+        <th class="py-3 px-4 text-xs uppercase tracking-wider text-gray-500">Use Case</th>
+        <th class="py-3 px-4 text-xs uppercase tracking-wider text-gray-500">Cost</th>
+      </tr></thead>
+      <tbody>${providerRows}</tbody>
+    </table>
+  </div>
+</section>` : ''}
+
+<!-- Use Cases -->
+${useCases.length ? `
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+  <h2 class="text-xl font-bold text-white mb-2">Who Uses SunoSunao</h2>
+  <p class="text-gray-500 text-sm mb-6">Voice messages that transcend time &mdash; from grandparents to terminal patients to emigrant families.</p>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+    ${useCaseHtml}
+  </div>
+</section>` : ''}
+
+<!-- Subscription Tiers -->
+${tiers.length ? `
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+  <h2 class="text-xl font-bold text-white mb-2">Subscription Plans</h2>
+  <p class="text-gray-500 text-sm mb-6">From free voice capsules to lifetime storage with unlimited cloning.</p>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    ${tierCards}
+  </div>
+</section>` : ''}
+
+<!-- Tech Stack -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+  <h2 class="text-sm uppercase tracking-widest text-gray-500 mb-4 text-center">Built With</h2>
+  <div class="flex flex-wrap justify-center gap-3">
+    ${techBadges}
+  </div>
+</section>
+
+<!-- Documents -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+  <h2 class="text-xl font-bold text-white mb-6">Project Documents</h2>
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+    ${docGrid || '<p class="text-gray-600 col-span-3">No documents found.</p>'}
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 text-center">
+  <h2 class="text-2xl font-bold text-white mb-3">Preserve Your Voice for Future Generations</h2>
+  <p class="text-gray-500 text-sm mb-6">Record voice messages today. Deliver them tomorrow, on a birthday, or after you're gone.</p>
+  <a href="/project/documents/sunosunao" class="inline-block px-8 py-3 bg-gradient-to-r from-rose-600 to-orange-600 text-white rounded-xl font-semibold hover:from-rose-700 hover:to-orange-700 transition-all shadow-lg shadow-rose-600/20">
+    Explore Documentation
+  </a>
+</section>
+
+<footer class="border-t border-border">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-center text-xs text-gray-600">
+    SunoSunao &middot; \u0938\u0941\u0928\u094B \u0938\u0941\u0928\u093E\u0913 &middot; ANKR Labs
+  </div>
+</footer>
+<script>function toggleTheme(){var h=document.documentElement;h.className=h.className==='dark'?'light':'dark';localStorage.setItem('ankr-theme',h.className)}</script>
+</body></html>`;
+}
+
+module.exports = { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage, prathamShowcasePage, freightboxShowcasePage, warexaiShowcasePage, sunosunaoShowcasePage, esc };

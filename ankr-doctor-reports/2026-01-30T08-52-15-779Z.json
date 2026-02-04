@@ -1,0 +1,182 @@
+{
+  "timestamp": "2026-01-30T08:52:15.779Z",
+  "duration": 3450,
+  "totalApps": 1,
+  "scannedApps": 1,
+  "summary": {
+    "pass": 0,
+    "fail": 0,
+    "warn": 0,
+    "fixed": 1
+  },
+  "apps": [
+    {
+      "app": {
+        "name": "ankr-time-travel",
+        "internalUrl": "http://localhost:3031",
+        "framework": "express",
+        "pm2Name": "ankr-time-travel",
+        "pm2Status": "online",
+        "pm2Restarts": 0,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-time-travel",
+        "healthEndpoint": "/health",
+        "port": 3031,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-time-travel",
+          "url": "http://localhost:3031/health",
+          "route": "/health",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 37,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:3031/health",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T08:52:12.526Z"
+        },
+        {
+          "app": "ankr-time-travel",
+          "url": "http://localhost:3031/",
+          "route": "/",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 1,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:3031/",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T08:52:12.527Z"
+        },
+        {
+          "app": "ankr-time-travel",
+          "url": "http://localhost:3031/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 1,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:3031/graphql?query=%7B__typename%7D",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T08:52:12.528Z"
+        }
+      ],
+      "diagnoses": [
+        {
+          "issue": "Service ankr-time-travel is not responding",
+          "severity": "critical",
+          "category": "service_down",
+          "rootCause": "Service at http://localhost:3031/health returned no response. Process may have crashed.",
+          "autoFixable": true,
+          "fixStrategy": "pm2 restart ankr-time-travel",
+          "evidence": [
+            "HTTP 0",
+            "CONNECTION_ERROR: fetch failed"
+          ]
+        },
+        {
+          "issue": "ankr-time-travel failing at /health",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 0 at http://localhost:3031/health. 1 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 0",
+            "ERROR: fetch failed",
+            "GET http://localhost:3031/health: CONNECTION_ERROR: fetch failed"
+          ]
+        },
+        {
+          "issue": "ankr-time-travel failing at /graphql?query=%7B__typename%7D",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 0 at http://localhost:3031/graphql?query=%7B__typename%7D. 1 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 0",
+            "ERROR: fetch failed",
+            "GET http://localhost:3031/graphql?query=%7B__typename%7D: CONNECTION_ERROR: fetch failed"
+          ]
+        }
+      ],
+      "fixes": [
+        {
+          "action": {
+            "type": "pm2_restart",
+            "command": "pm2 restart ankr-time-travel",
+            "target": "ankr-time-travel",
+            "description": "Restart ankr-time-travel service"
+          },
+          "success": true,
+          "output": "Use --update-env to update environment variables\n[PM2] Applying action restartProcessId on app [ankr-time-travel](ids: [ 41 ])\n[PM2] [ankr-time-travel](41) ✓\n┌────┬──────────────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐\n│ id │ name                     │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │\n├────┼──────────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤\n│ 0  │ ai-proxy                 │ default     │ N/A     │ fork    │ 2260028  │ 2D     │ 1    │ online    │ 0%       │ 44.7mb   │ root     │ disabled │\n│ 27 │ ankr-academy             │ default     │ N/A     │ fork    │ 2292269  │ 2D     │ 2    │ online    │ 0%       │ 44.1mb   │ root     │ disabled │\n│ 37 │ ankr-api-marketplace     │ default     │ N/A     │ fork    │ 2112391  │ 41h    │ 1    │ online    │ 0%       │ 43.8mb   │ root     │ disabled │\n│ 33 │ ankr-bug-predictor       │ default     │ N/A     │ fork    │ 2297572  │ 2D     │ 2    │ online    │ 0%       │ 45.1mb   │ root     │ disabled │\n│ 46 │ ankr-captain-rag         │ default     │ 1.0.0   │ fork    │ 2242862  │ 2D     │ 0    │ online    │ 0%       │ 61.0mb   │ root     │ disabled │\n│ 44 │ ankr-code-music          │ default     │ 1.0.0   │ fork    │ 3348848  │ 0s     │ 606… │ online    │ 0%       │ 59.7mb   │ root     │ disabled │\n│ 39 │ ankr-code-poetry         │ default     │ 1.0.0   │ fork    │ 3348859  │ 0s     │ 130… │ online    │ 0%       │ 46.0mb   │ root     │ disabled │\n│ 32 │ ankr-code-review         │ default     │ N/A     │ fork    │ 2296549  │ 2D     │ 45   │ online    │ 0%       │ 45.0mb   │ root     │ disabled │\n│ 49 │ ankr-command-center      │ default     │ N/A     │ fork    │ 3561715  │ 2D     │ 0    │ online    │ 0%       │ 58.7mb   │ root     │ disabled │\n│ 43 │ ankr-commit-sentiment  ",
+          "duration": 232,
+          "verified": true,
+          "verificationResult": {
+            "app": "ankr-time-travel",
+            "url": "http://localhost:3031/health",
+            "route": "/health",
+            "status": "pass",
+            "httpStatus": 200,
+            "loadTime": 10,
+            "jsErrors": [],
+            "networkErrors": [],
+            "blankPage": false,
+            "interactiveElements": 0,
+            "clickResults": [],
+            "responseBody": "{\"status\":\"ok\",\"service\":\"ankr-time-travel\",\"version\":\"1.0.0\"}",
+            "headers": {
+              "connection": "keep-alive",
+              "content-length": "62",
+              "content-type": "application/json; charset=utf-8",
+              "date": "Fri, 30 Jan 2026 08:52:15 GMT",
+              "keep-alive": "timeout=72",
+              "vary": "Origin"
+            },
+            "timestamp": "2026-01-30T08:52:15.775Z"
+          }
+        }
+      ],
+      "overallStatus": "fixed"
+    }
+  ]
+}

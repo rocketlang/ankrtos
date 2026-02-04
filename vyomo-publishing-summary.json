@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-01-23T18:31:46.237Z",
+  "project": "Vyomo",
+  "total": 41,
+  "published": 41,
+  "failed": 0,
+  "successRate": "100.0%",
+  "failedPackages": [],
+  "byCategory": {
+    "backend": 38,
+    "frontend": 0,
+    "mobile": 0,
+    "shared": 3,
+    "analytics": 0
+  }
+}

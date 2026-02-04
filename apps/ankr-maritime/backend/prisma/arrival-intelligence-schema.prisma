@@ -1,0 +1,406 @@
+// ============================================================================
+// PRE-ARRIVAL INTELLIGENCE SYSTEM
+// ============================================================================
+// This schema adds the core models for the Agent Wedge Strategy:
+// - Vessel arrival tracking (200 NM proximity detection)
+// - Arrival intelligence (ETA, documents, DA forecast, congestion)
+// - Document status tracking
+// - Master alerts & communication
+//
+// Add these models to the main schema.prisma file
+// ============================================================================
+
+// === Vessel Arrival Tracking ===
+
+model VesselArrival {
+  id              String   @id @default(cuid())
+  vesselId        String
+  portId          String
+  triggeredAt     DateTime @default(now())
+
+  // Distance & Position
+  distance        Float    // Distance to port in NM when triggered
+  latitude        Float    // Position when triggered
+  longitude       Float
+
+  // ETA Calculations
+  etaBestCase     DateTime // Fastest possible arrival
+  etaMostLikely   DateTime // Most probable arrival time
+  etaWorstCase    DateTime // Slowest likely arrival
+  etaConfidence   ArrivalConfidence // high, medium, low
+  etaFactors      String[] // Factors affecting ETA: ["weather", "congestion", "speed_variation"]
+
+  // Current Status
+  status          ArrivalStatus @default(APPROACHING)
+  currentDistance Float?        // Updated as vessel approaches
+  lastUpdateAt    DateTime      @default(now())
+
+  // Actual Arrival
+  actualArrivalAt DateTime?
+  actualEtaVariance Float?    // Hours difference from etaMostLikely
+
+  // Relations
+  vessel          Vessel   @relation(fields: [vesselId], references: [id], onDelete: Cascade)
+  port            Port     @relation(fields: [portId], references: [id], onDelete: Cascade)
+
+  intelligence    ArrivalIntelligence?
+  documentStatuses DocumentStatus[]
+  masterAlerts    MasterAlert[]
+  timelineEvents  ArrivalTimelineEvent[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([vesselId, status])
+  @@index([portId, status])
+  @@index([status, etaMostLikely])
+  @@index([triggeredAt])
+  @@map("vessel_arrivals")
+}
+
+enum ArrivalStatus {
+  APPROACHING      // Vessel within 200 NM, heading to port
+  IN_ANCHORAGE    // Vessel at anchorage, waiting for berth
+  BERTHING        // Vessel proceeding to berth
+  BERTHED         // Vessel secured at berth
+  WORKING         // Cargo operations in progress
+  UNBERTHING      // Vessel leaving berth
+  DEPARTED        // Vessel has left port area
+  CANCELLED       // Arrival cancelled/diverted
+}
+
+enum ArrivalConfidence {
+  HIGH    // 90%+ confidence (normal conditions, predictable vessel)
+  MEDIUM  // 70-90% confidence (some uncertainty)
+  LOW     // <70% confidence (bad weather, erratic vessel behavior)
+}
+
+// === Arrival Intelligence ===
+
+model ArrivalIntelligence {
+  id              String   @id @default(cuid())
+  arrivalId       String   @unique
+
+  // Document Intelligence
+  documentsRequired     Int      // Total documents needed
+  documentsMissing      Int      // Documents not yet submitted
+  documentsSubmitted    Int      // Documents submitted
+  documentsApproved     Int      // Documents approved
+  complianceScore       Float    // 0-100 score
+  criticalDocsMissing   String[] // Critical documents still missing
+  nextDocumentDeadline  DateTime? // When is the next deadline?
+
+  // DA Cost Intelligence
+  daEstimateMin         Float?   // Minimum estimated DA cost (USD)
+  daEstimateMax         Float?   // Maximum estimated DA cost (USD)
+  daEstimateMostLikely  Float?   // Most likely DA cost (USD)
+  daConfidence          Float?   // 0-1 confidence score
+  daBreakdown           Json?    // Detailed cost breakdown
+  daFactors             String[] // Factors driving cost estimate
+  daHistoricalComparison String? // Comparison to similar vessels
+
+  // Congestion Intelligence
+  congestionStatus      CongestionStatus @default(GREEN)
+  expectedWaitTimeMin   Float?   // Minimum wait time in hours
+  expectedWaitTimeMax   Float?   // Maximum wait time in hours
+  vesselsInPort         Int?     // Current vessels in port
+  vesselsAtAnchorage    Int?     // Vessels waiting at anchorage
+  congestionFactors     String[] // Reasons for congestion
+
+  // Port Readiness
+  portReadinessScore    String   @default("green") // green, yellow, red
+  berthAvailability     String?  // Expected berth availability
+  pilotAvailability     String?  // Pilot service status
+  tugAvailability       String?  // Tug availability
+
+  // Recommendations
+  recommendations       Json?    // Array of recommendation objects
+  optimizedSpeed        Float?   // Recommended speed to optimize arrival
+
+  // Accuracy Tracking (filled after actual arrival)
+  etaAccuracy           Float?   // Hours variance from predicted
+  daAccuracy            Float?   // Percentage variance from predicted
+  congestionAccuracy    Float?   // Hours variance in wait time
+
+  // Relations
+  arrival         VesselArrival @relation(fields: [arrivalId], references: [id], onDelete: Cascade)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([arrivalId])
+  @@index([congestionStatus])
+  @@index([complianceScore])
+  @@map("arrival_intelligence")
+}
+
+enum CongestionStatus {
+  GREEN   // 0-2h expected wait
+  YELLOW  // 2-8h expected wait
+  RED     // 8+h expected wait
+}
+
+// === Document Status Tracking ===
+
+model DocumentStatus {
+  id              String   @id @default(cuid())
+  arrivalId       String
+  documentType    String   // FAL1, FAL2, BALLAST, ISPS, etc.
+
+  // Requirement Info
+  required        Boolean  @default(true)
+  mandatory       Boolean  @default(true)
+  priority        DocumentPriority
+  deadline        DateTime // When this document is due
+  hoursRemaining  Float?   // Calculated hours until deadline
+
+  // Status Tracking
+  status          DocumentSubmissionStatus @default(NOT_STARTED)
+  submittedAt     DateTime?
+  submittedBy     String?  // userId who submitted
+  approvedAt      DateTime?
+  approvedBy      String?  // userId who approved
+  rejectedAt      DateTime?
+  rejectionReason String?
+
+  // File Info
+  fileUrl         String?
+  fileName        String?
+  fileSize        Int?     // bytes
+
+  // Metadata
+  notes           String?
+  metadata        Json?    // Additional document-specific data
+
+  // Relations
+  arrival         VesselArrival @relation(fields: [arrivalId], references: [id], onDelete: Cascade)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([arrivalId, documentType])
+  @@index([arrivalId, status])
+  @@index([status, deadline])
+  @@index([documentType])
+  @@map("document_statuses")
+}
+
+enum DocumentPriority {
+  CRITICAL   // Must have, blocks operations
+  IMPORTANT  // Should have, may delay
+  ROUTINE    // Nice to have
+}
+
+enum DocumentSubmissionStatus {
+  NOT_STARTED  // Document not yet prepared
+  IN_PROGRESS  // Being prepared by master/agent
+  SUBMITTED    // Submitted for review
+  APPROVED     // Approved by authorities
+  REJECTED     // Rejected, needs resubmission
+  OVERDUE      // Past deadline
+}
+
+// === Master Alerts ===
+
+model MasterAlert {
+  id              String   @id @default(cuid())
+  arrivalId       String
+  vesselId        String
+
+  // Alert Details
+  alertType       MasterAlertType
+  title           String
+  message         String   // Full alert message
+  priority        AlertPriority
+
+  // Delivery Channels
+  channels        String[] // email, sms, whatsapp, push
+  recipientEmail  String?
+  recipientPhone  String?
+
+  // Delivery Status
+  sentAt          DateTime?
+  deliveredAt     DateTime?
+  readAt          DateTime?
+  acknowledgedAt  DateTime?
+
+  // Two-Way Communication
+  repliedAt       DateTime?
+  reply           String?  // Master's reply text
+  replyParsed     Json?    // Parsed intent from reply
+  actionTaken     String?  // What action was taken based on reply
+
+  // Relations
+  arrival         VesselArrival @relation(fields: [arrivalId], references: [id], onDelete: Cascade)
+  vessel          Vessel        @relation(fields: [vesselId], references: [id], onDelete: Cascade)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([arrivalId])
+  @@index([vesselId])
+  @@index([alertType, priority])
+  @@index([sentAt])
+  @@map("master_alerts")
+}
+
+enum MasterAlertType {
+  ARRIVAL_200NM      // Vessel entered 200 NM radius
+  DOCUMENT_MISSING   // Critical document missing
+  DEADLINE_APPROACHING // Document deadline approaching
+  CONGESTION_HIGH    // Port congestion high
+  DA_COST_HIGH       // DA cost higher than expected
+  ETA_CHANGED        // ETA changed significantly
+  PORT_READINESS_RED // Port readiness dropped to RED
+  ACTION_REQUIRED    // General action required
+}
+
+enum AlertPriority {
+  CRITICAL  // Immediate action required
+  HIGH      // Action needed within 24h
+  MEDIUM    // Action needed within 48h
+  LOW       // Informational
+}
+
+// === Arrival Timeline Events ===
+
+model ArrivalTimelineEvent {
+  id              String   @id @default(cuid())
+  arrivalId       String
+  timestamp       DateTime @default(now())
+
+  // Event Details
+  eventType       ArrivalEventType
+  actor           EventActor
+  action          String   // Human-readable action description
+  impact          EventImpact?
+
+  // Event Data
+  metadata        Json?    // Additional event-specific data
+  attachments     String[] // File URLs if any
+  relatedEvents   String[] // IDs of related events
+
+  // Relations
+  arrival         VesselArrival @relation(fields: [arrivalId], references: [id], onDelete: Cascade)
+
+  createdAt       DateTime @default(now())
+
+  @@index([arrivalId, timestamp])
+  @@index([eventType])
+  @@index([actor])
+  @@map("arrival_timeline_events")
+}
+
+enum ArrivalEventType {
+  // System Events
+  ARRIVAL_DETECTED
+  ETA_CALCULATED
+  ETA_UPDATED
+  INTELLIGENCE_GENERATED
+  CONGESTION_DETECTED
+  ALERT_TRIGGERED
+
+  // Document Events
+  DOCUMENT_REQUIRED
+  DOCUMENT_SUBMITTED
+  DOCUMENT_APPROVED
+  DOCUMENT_REJECTED
+  DOCUMENT_OVERDUE
+
+  // Agent Actions
+  PDA_GENERATED
+  MASTER_ALERTED
+  SERVICE_BOOKED
+  FDA_SUBMITTED
+
+  // Master Actions
+  ALERT_ACKNOWLEDGED
+  DOCUMENT_UPLOADED
+  STATUS_UPDATED
+  DELAY_REPORTED
+
+  // Position Events
+  DISTANCE_UPDATED
+  ANCHORAGE_REACHED
+  BERTH_ASSIGNED
+  BERTHING_COMPLETE
+  DEPARTURE
+}
+
+enum EventActor {
+  SYSTEM  // Automated system action
+  AGENT   // Port agent action
+  MASTER  // Vessel master action
+  OWNER   // Ship owner action
+  AUTHORITY // Port authority action
+}
+
+enum EventImpact {
+  CRITICAL  // Significantly affects arrival/costs
+  IMPORTANT // Moderately affects operations
+  INFO      // Informational only
+}
+
+// === DA Forecast Tracking (ML Feedback Loop) ===
+
+model DAForecastAccuracy {
+  id              String   @id @default(cuid())
+  arrivalId       String
+  vesselId        String
+  portId          String
+
+  // Prediction
+  predictedMin    Float
+  predictedMax    Float
+  predictedMostLikely Float
+  predictionConfidence Float
+  predictionDate  DateTime @default(now())
+
+  // Actual (filled after FDA)
+  actualCost      Float?
+  actualDate      DateTime?
+
+  // Accuracy Metrics
+  absoluteError   Float?   // |predicted - actual|
+  percentageError Float?   // (predicted - actual) / actual * 100
+  withinRange     Boolean? // Was actual within predicted range?
+
+  // Features (for ML retraining)
+  vesselGT        Float?
+  vesselLOA       Float?
+  vesselDraft     Float?
+  cargoType       String?
+  season          String?
+  dwellTimeHours  Float?
+
+  // Relations
+  arrival         VesselArrival @relation(fields: [arrivalId], references: [id], onDelete: Cascade)
+  vessel          Vessel        @relation(fields: [vesselId], references: [id], onDelete: Cascade)
+  port            Port          @relation(fields: [portId], references: [id], onDelete: Cascade)
+
+  createdAt       DateTime @default(now())
+
+  @@index([arrivalId])
+  @@index([vesselId])
+  @@index([portId])
+  @@index([predictionDate])
+  @@map("da_forecast_accuracy")
+}
+
+// ============================================================================
+// ADDITIONS TO EXISTING MODELS
+// ============================================================================
+// Add these relations to existing models:
+
+// In Vessel model, add:
+//   arrivals              VesselArrival[]
+//   masterAlerts          MasterAlert[]
+//   daForecastAccuracy    DAForecastAccuracy[]
+
+// In Port model, add:
+//   arrivals              VesselArrival[]
+//   daForecastAccuracy    DAForecastAccuracy[]
+
+// In User model, add (if tracking who submits/approves documents):
+//   documentsSubmitted    DocumentStatus[] @relation("SubmittedBy")
+//   documentsApproved     DocumentStatus[] @relation("ApprovedBy")

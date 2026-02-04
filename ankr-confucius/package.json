@@ -1,0 +1,43 @@
+{
+  "name": "@ankr/eon-confucius",
+  "version": "1.0.0",
+  "description": "ANKR-EON Enhanced Architecture inspired by Confucius Code Agent",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "logistics",
+    "memory",
+    "orchestrator",
+    "ankr",
+    "confucius"
+  ],
+  "author": "ANKR Labs",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.11.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/pg": "^8.10.0",
+    "@types/uuid": "^9.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "pg": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ankr-labs/ankr-eon"
+  }
+}

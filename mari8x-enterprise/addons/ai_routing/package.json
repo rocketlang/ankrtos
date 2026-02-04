@@ -1,0 +1,36 @@
+{
+  "name": "@mari8x-enterprise/ai-routing",
+  "version": "1.0.0",
+  "description": "Mari8XEE - AI-Powered Route Engine",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "test": "vitest"
+  },
+  "keywords": [
+    "mari8x",
+    "enterprise",
+    "ai",
+    "routing",
+    "ais",
+    "ml"
+  ],
+  "author": "RocketLang",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.4",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
+  },
+  "peerDependencies": {
+    "@mari8x/community": "^1.0.0"
+  }
+}

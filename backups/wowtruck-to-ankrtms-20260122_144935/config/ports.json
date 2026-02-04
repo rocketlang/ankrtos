@@ -1,0 +1,148 @@
+{
+  "_meta": {
+    "description": "ANKR Labs - SINGLE SOURCE OF TRUTH for all port assignments",
+    "version": "2.0.0",
+    "updated": "2026-01-20",
+    "author": "ANKR Labs"
+  },
+
+  "reserved": {
+    "_comment": "DO NOT USE these ports - occupied by system services",
+    "ssh": 22,
+    "smtp": 25,
+    "dns": 53,
+    "http": 80,
+    "https": 443,
+    "backup": 1167,
+    "bitninja": 4002
+  },
+
+  "frontend": {
+    "_range": "3000-3099",
+    "wowtruck": 3000,
+    "freightbox": 3001,
+    "erpbharat": 3002,
+    "ankrWebsite": 3003,
+    "driverApp": 3004,
+    "everpure": 3005,
+    "fr8x": 3006,
+    "dodd": 3007,
+    "vyomo": 3010,
+    "bfcWeb": 3020,
+    "bfcCustomer": 3021,
+    "bfcStaff": 3022,
+    "adminPortal": 3030,
+    "sidecar": 3040,
+    "ankrforgeWeb": 3200
+  },
+
+  "backend": {
+    "_range": "4000-4099",
+    "wowtruck": 4000,
+    "compliance": 4001,
+    "freightbox": 4003,
+    "erpbharat": 4004,
+    "eon": 4005,
+    "everpure": 4006,
+    "dodd": 4007,
+    "saathi": 4008,
+    "crm": 4010,
+    "crmBff": 4011,
+    "complymitra": 4015,
+    "bfc": 4020,
+    "vyomo": 4025,
+    "devbrain": 4030,
+    "fr8x": 4050
+  },
+
+  "admin": {
+    "_range": "4200-4299",
+    "omega": 4200,
+    "ankrforge": 4201,
+    "voicebook": 4202,
+    "cockpit": 4210,
+    "sandbox": 4220
+  },
+
+  "dashboard": {
+    "_range": "4300-4399",
+    "cockpitReact": 4310,
+    "pulse": 4320,
+    "pulseControl": 4321,
+    "statusApi": 4100,
+    "monitoring": 4330,
+    "sidecar": 4340,
+    "viewer": 3199
+  },
+
+  "ai": {
+    "_range": "4400-4499",
+    "proxy": 4444,
+    "embeddings": 4450,
+    "judge": 4460,
+    "guardrails": 4470,
+    "security": 4480,
+    "slmRouter": 4490
+  },
+
+  "llm": {
+    "_comment": "Local LLM services",
+    "ollama": 11434
+  },
+
+  "testing": {
+    "_range": "4500-4599",
+    "forge": 4500,
+    "e2e": 4510
+  },
+
+  "dev": {
+    "_range": "5100-5199",
+    "ankrFrontend": 5173,
+    "crmFrontend": 5177,
+    "hrmsFrontend": 5178
+  },
+
+  "registry": {
+    "verdaccio": 4873
+  },
+
+  "database": {
+    "_comment": "5432=Local PG (ankr_crm, ankrforge), 5433=Docker PG (ankr_eon), 5434=TimescaleDB (compliance)",
+    "postgres": 5432,
+    "postgresDocker": 5433,
+    "postgresEon": 5433,
+    "timescale": 5434,
+    "timescaleCompliance": 5434
+  },
+
+  "cache": {
+    "redis": 6379,
+    "redisAlt": 6380,
+    "redisCompliance": 6381
+  },
+
+  "voice": {
+    "_range": "7000-7099",
+    "sunosunaoApi": 7000,
+    "sunosunaoVoice": 7001,
+    "tts": 7010,
+    "stt": 7020
+  },
+
+  "standalone": {
+    "_range": "7700-7799",
+    "bani": 7777,
+    "swayamDashboard": 7780
+  },
+
+  "erp": {
+    "_comment": "ERP systems - Odoo 19 for FreightBox",
+    "odoo": 8019
+  },
+
+  "broker": {
+    "mqtt": 1883,
+    "mqttWs": 9001
+  }
+}

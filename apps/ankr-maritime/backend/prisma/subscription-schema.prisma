@@ -1,0 +1,201 @@
+// Subscription & Pricing Schema
+// Phase 6: Monetization Implementation
+
+enum SubscriptionTier {
+  FREE
+  PRO
+  AGENCY
+  ENTERPRISE
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  PAST_DUE
+  CANCELED
+  TRIALING
+  INCOMPLETE
+}
+
+model Subscription {
+  id                    String              @id @default(cuid())
+  userId                String              @unique
+  tier                  SubscriptionTier    @default(FREE)
+  status                SubscriptionStatus  @default(ACTIVE)
+
+  // Razorpay integration
+  razorpayCustomerId      String?             @unique
+  razorpaySubscriptionId  String?             @unique
+  razorpayPlanId          String?
+
+  // Billing cycle
+  currentPeriodStart    DateTime            @default(now())
+  currentPeriodEnd      DateTime
+  trialEnd              DateTime?
+  cancelAtPeriodEnd     Boolean             @default(false)
+  canceledAt            DateTime?
+
+  // Pricing
+  amount                Float               @default(0)
+  currency              String              @default("USD")
+  interval              String              @default("month") // month or year
+
+  // Promotional
+  couponCode            String?
+  discountPercent       Int?
+  discountEndDate       DateTime?
+
+  // Metadata
+  createdAt             DateTime            @default(now())
+  updatedAt             DateTime            @updatedAt
+
+  // Relations
+  user                  User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  usageRecords          UsageRecord[]
+  invoices              Invoice[]
+
+  @@index([userId])
+  @@index([razorpayCustomerId])
+  @@index([status])
+  @@index([tier])
+}
+
+model UsageRecord {
+  id                String        @id @default(cuid())
+  subscriptionId    String
+  month             String        // YYYY-MM format
+
+  // Usage metrics
+  vesselsTracked    Int           @default(0)
+  pdasGenerated     Int           @default(0)
+  apiCalls          Int           @default(0)
+  smsAlertsSent     Int           @default(0)
+  whatsappAlerts    Int           @default(0)
+
+  // Limits
+  vesselLimit       Int
+  limitExceeded     Boolean       @default(false)
+
+  // Metadata
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  // Relations
+  subscription      Subscription  @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+
+  @@unique([subscriptionId, month])
+  @@index([subscriptionId])
+  @@index([month])
+}
+
+model Invoice {
+  id                  String              @id @default(cuid())
+  subscriptionId      String
+
+  // Razorpay
+  razorpayInvoiceId   String?             @unique
+  razorpayPaymentId   String?
+
+  // Invoice details
+  invoiceNumber       String              @unique
+  amount              Float
+  currency            String              @default("USD")
+  status              String              @default("draft") // draft, open, paid, void, uncollectible
+
+  // Dates
+  periodStart         DateTime
+  periodEnd           DateTime
+  dueDate             DateTime?
+  paidAt              DateTime?
+
+  // Line items (JSON)
+  lineItems           Json?
+
+  // Files
+  invoicePdfUrl       String?
+
+  // Metadata
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+
+  // Relations
+  subscription        Subscription        @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+
+  @@index([subscriptionId])
+  @@index([status])
+  @@index([razorpayInvoiceId])
+}
+
+model PaymentMethod {
+  id                String        @id @default(cuid())
+  userId            String
+
+  // Razorpay
+  razorpayPaymentMethodId String    @unique
+
+  // Card details
+  type              String        // card, bank_account, etc.
+  last4             String?
+  brand             String?       // visa, mastercard, etc.
+  expiryMonth       Int?
+  expiryYear        Int?
+
+  // Status
+  isDefault         Boolean       @default(false)
+
+  // Metadata
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  // Relations
+  user              User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([razorpayPaymentMethodId])
+}
+
+model FeatureUsage {
+  id                String        @id @default(cuid())
+  userId            String
+  feature           String        // e.g., "auto_pda", "api_access", "multi_user"
+  timestamp         DateTime      @default(now())
+  allowed           Boolean       // Was the feature access allowed?
+  tier              SubscriptionTier
+
+  // Context
+  metadata          Json?
+
+  // Relations
+  user              User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([feature])
+  @@index([timestamp])
+}
+
+model Coupon {
+  id                String        @id @default(cuid())
+  code              String        @unique
+  discountPercent   Int
+  discountAmount    Float?
+  currency          String?
+
+  // Validity
+  validFrom         DateTime      @default(now())
+  validUntil        DateTime?
+  maxRedemptions    Int?
+  timesRedeemed     Int           @default(0)
+
+  // Restrictions
+  tiers             String[]      // Which tiers can use this coupon
+  firstTimeOnly     Boolean       @default(false)
+
+  // Status
+  active            Boolean       @default(true)
+
+  // Metadata
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  @@index([code])
+  @@index([active])
+}

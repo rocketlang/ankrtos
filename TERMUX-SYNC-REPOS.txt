@@ -1,0 +1,84 @@
+===========================================
+  SYNC ANKR REPOS ON TERMUX 📱
+  (For existing Termux setup)
+===========================================
+
+QUICK SYNC (Copy-Paste This)
+---------------------------------------
+cd ~/projects
+
+# Clone missing repos only
+repos="ankr-universe ankr-labs-nx ankr-ai-gateway ankr-sandbox ankr-skill-loader ankrcode bani swayam power-erp everpure-whatsapp-bot"
+
+for repo in $repos; do
+  if [ -d "$repo" ]; then
+    echo "✅ $repo (exists, updating...)"
+    cd "$repo"
+    git pull
+    cd ..
+  else
+    echo "📥 $repo (cloning...)"
+    git clone git@github.com:rocketlang/${repo}.git
+  fi
+done
+
+echo "🎉 Sync complete!"
+
+
+ONE-LINER (Even Faster)
+---------------------------------------
+cd ~/projects && for r in ankr-universe ankr-labs-nx ankr-ai-gateway ankr-sandbox ankr-skill-loader ankrcode bani swayam power-erp everpure-whatsapp-bot; do [ -d "$r" ] && (cd "$r" && git pull && cd ..) || git clone git@github.com:rocketlang/${r}.git; done
+
+
+CHECK WHAT YOU HAVE
+---------------------------------------
+cd ~/projects
+ls -d */ 2>/dev/null | sed 's/\///'
+
+
+UPDATE ALL EXISTING REPOS
+---------------------------------------
+cd ~/projects
+for d in */; do
+  echo "📦 $d"
+  cd "$d"
+  git pull
+  cd ..
+done
+
+
+NEW REPOS (Created Recently)
+---------------------------------------
+These might be new:
+- ankr-universe (orchestration, CI/CD)
+- ankr-labs-nx (main monorepo)
+- ankr-ai-gateway (AI services)
+- ankrcode (Claude Code alternative)
+
+
+CLONE SPECIFIC REPO
+---------------------------------------
+cd ~/projects
+git clone git@github.com:rocketlang/REPO_NAME.git
+
+
+VIEW RECENT COMMITS
+---------------------------------------
+cd ~/projects/ankr-universe
+git log --oneline -10
+git show HEAD
+
+
+TROUBLESHOOTING
+---------------------------------------
+If you get "Permission denied":
+- Your SSH key is already set up on server
+- Need to add same key to phone:
+  cat ~/.ssh/id_ed25519.pub
+  (Add to GitHub if different device)
+
+If repos are in different folder:
+- Find them: find ~ -name ".git" -type d
+- Move them: mv /old/path ~/projects/
+
+===========================================

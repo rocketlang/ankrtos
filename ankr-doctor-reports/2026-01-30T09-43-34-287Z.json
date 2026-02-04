@@ -1,0 +1,103 @@
+{
+  "timestamp": "2026-01-30T09:43:34.287Z",
+  "duration": 222,
+  "totalApps": 1,
+  "scannedApps": 1,
+  "summary": {
+    "pass": 0,
+    "fail": 0,
+    "warn": 1,
+    "fixed": 0
+  },
+  "apps": [
+    {
+      "app": {
+        "name": "ankr-pulse",
+        "internalUrl": "http://localhost:4320",
+        "publicUrl": "https://pulse.ankr.in",
+        "framework": "vite",
+        "pm2Name": "ankr-pulse",
+        "pm2Status": "online",
+        "pm2Restarts": 15,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-pulse",
+        "healthEndpoint": "/",
+        "port": 4320,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-pulse",
+          "url": "http://localhost:4320/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 46,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "655",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:34 GMT",
+            "etag": "W/\"28f-SEUUGpihN5I8ZmEl0hh8AngWSQ8\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:34.283Z"
+        },
+        {
+          "app": "ankr-pulse",
+          "url": "http://localhost:4320/login",
+          "route": "/login",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-type": "text/plain",
+            "date": "Fri, 30 Jan 2026 09:43:34 GMT",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:34.285Z"
+        },
+        {
+          "app": "ankr-pulse",
+          "url": "http://localhost:4320/dashboard",
+          "route": "/dashboard",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-type": "text/plain",
+            "date": "Fri, 30 Jan 2026 09:43:34 GMT",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:34.287Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    }
+  ]
+}

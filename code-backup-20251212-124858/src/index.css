@@ -1,0 +1,203 @@
+/* Import WowTruck Unified Theme - MUST BE FIRST */
+@import './styles/globals.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   THEME SYSTEM - Supports switching via data-theme attribute
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Light Theme */
+:root, [data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border: #e5e7eb;
+  --accent: #f97316;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --border: #374151;
+}
+
+/* WowTruck Purple */
+[data-theme="wowtruck"] {
+  --bg-primary: #0F0F1A;
+  --bg-secondary: #1A1A2E;
+  --bg-tertiary: #252536;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255,255,255,0.7);
+  --border: rgba(255,255,255,0.08);
+  --accent: #8B5CF6;
+  --accent-secondary: #EC4899;
+}
+
+/* Orange Theme */
+[data-theme="orange"] {
+  --bg-primary: #1E293B;
+  --bg-secondary: #0F172A;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --border: #334155;
+  --accent: #F97316;
+}
+
+/* Neon Theme */
+[data-theme="neon"] {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --text-primary: #00ff88;
+  --text-secondary: #00cc6a;
+  --border: #00ff8833;
+  --accent: #00ff88;
+}
+
+/* Accent overrides */
+.accent-orange { --accent: #f97316; }
+.accent-blue { --accent: #3b82f6; }
+.accent-purple { --accent: #8B5CF6; }
+.accent-pink { --accent: #EC4899; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+/* Spinner */
+.spinner {
+  border: 3px solid var(--bg-secondary);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  width: 24px; height: 24px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ANKR Theme CSS Variables - Auto-applied to all pages
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* These are set by ThemeContext and inherited by all components */
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --border-color: #334155;
+  --accent-color: #f97316;
+}
+
+/* Utility classes that use CSS variables */
+.theme-bg-primary { background-color: var(--bg-primary); }
+.theme-bg-secondary { background-color: var(--bg-secondary); }
+.theme-bg-card { background-color: var(--bg-card); }
+.theme-text-primary { color: var(--text-primary); }
+.theme-text-secondary { color: var(--text-secondary); }
+.theme-border { border-color: var(--border-color); }
+
+/* Override common Tailwind classes to use theme */
+.bg-gray-100, .bg-gray-200 {
+  background-color: var(--bg-secondary) !important;
+}
+.bg-gray-800, .bg-gray-900 {
+  background-color: var(--bg-card) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   GLASS EFFECT CARDS - Modern frosted glass look
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Glass card effect - works on any theme background */
+.glass-card, 
+.bg-white,
+.bg-gray-100 {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Light theme - use darker glass */
+.light-mode .glass-card,
+.light-mode .bg-white,
+.light-mode .bg-gray-100 {
+  background: rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Ensure text is readable */
+.glass-card * {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   WowTruck 2.0 - Mobile CSS v3 (Balanced)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+@media (max-width: 768px) {
+  main { padding: 0.75rem !important; }
+  
+  .rounded-xl, .rounded-lg { padding: 0.75rem; }
+  
+  .bg-gradient-to-r, .bg-gradient-to-br { padding: 1rem !important; }
+  
+  .flex.gap-4, .flex.gap-6 { gap: 0.5rem !important; }
+  
+  .text-2xl { font-size: 1.25rem !important; }
+  .text-xl { font-size: 1.1rem !important; }
+  
+  .grid.grid-cols-4, .grid.grid-cols-5 {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+  
+  .grid button, .grid > a { 
+    padding: 0.5rem !important; 
+    font-size: 0.7rem !important; 
+  }
+  
+  .grid svg { width: 1.5rem !important; height: 1.5rem !important; }
+  
+  .recharts-wrapper { max-width: 100% !important; }
+}
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .fixed.bottom-0 { padding-bottom: env(safe-area-inset-bottom); }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FINAL FIX: Stats Row Overflow
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Force the welcome card to not overflow */
+  .bg-gradient-to-r, .bg-gradient-to-br, [class*="bg-gradient"] {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Stats text - force smaller */
+  .text-lg, .text-xl, .text-2xl {
+    font-size: clamp(0.75rem, 3vw, 1rem) !important;
+  }
+  
+  /* Revenue specifically */
+  [class*="Revenue"], [class*="revenue"] {
+    font-size: 0.75rem !important;
+  }
+}

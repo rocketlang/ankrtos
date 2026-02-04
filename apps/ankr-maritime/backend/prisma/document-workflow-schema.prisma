@@ -1,0 +1,195 @@
+// Port Agent Document Workflow Schema
+// Add to main schema.prisma
+
+model DocumentTemplate {
+  id          String   @id @default(cuid())
+  code        String   @unique // e.g., "FAL1", "FAL2", "ISPS_ARRIVAL"
+  name        String   // e.g., "General Declaration (FAL 1)"
+  category    String   // "pre_arrival", "arrival", "departure"
+  imoForm     Boolean  @default(false) // Is it an IMO FAL convention form?
+  mandatory   Boolean  @default(true)
+
+  // Template structure (JSON)
+  templateJson Json    // Structure of the form
+
+  // Metadata
+  description String?
+  version     String   @default("1.0")
+  applicableCountries String[] // Empty = all countries
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  documents   VesselDocument[]
+
+  @@map("document_templates")
+}
+
+model VesselDocument {
+  id          String   @id @default(cuid())
+
+  // Document identification
+  templateId  String
+  template    DocumentTemplate @relation(fields: [templateId], references: [id])
+  documentNumber String  // Auto-generated: DOC-2026-001
+
+  // Associated entities
+  vesselId    String
+  vessel      Vessel   @relation(fields: [vesselId], references: [id])
+
+  voyageId    String?
+  voyage      Voyage?  @relation(fields: [voyageId], references: [id])
+
+  portCallId  String?
+  // portCall PortCall? @relation(fields: [portCallId], references: [id])
+
+  // Document data (auto-filled + manual edits)
+  documentData Json    // Filled form data
+
+  // Status tracking
+  status      String   @default("draft") // draft, review, submitted, approved, rejected
+  fillProgress Float   @default(0.0)     // 0.0 to 1.0 (0% to 100%)
+  autoFillSource String?               // "vessel_master_data", "crew_list", etc.
+
+  // Agent workflow
+  submittedToAgent Boolean @default(false)
+  submittedToAgentAt DateTime?
+  agentId     String?
+  // agent    PortAgent? @relation(fields: [agentId], references: [id])
+  agentResponse String?  // "approved", "corrections_needed", "rejected"
+  agentComments String?
+
+  // Authority submission
+  submittedToAuthority Boolean @default(false)
+  submittedToAuthorityAt DateTime?
+  authorityReference String?  // Reference number from authorities
+
+  // Validation
+  validationErrors Json?
+  validationWarnings Json?
+  lastValidatedAt DateTime?
+
+  // Audit trail
+  createdBy   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  submittedBy String?
+
+  // Soft delete
+  deleted     Boolean  @default(false)
+  deletedAt   DateTime?
+
+  // Organization (multi-tenancy)
+  organizationId String
+
+  @@map("vessel_documents")
+  @@index([vesselId])
+  @@index([voyageId])
+  @@index([templateId])
+  @@index([status])
+  @@index([organizationId])
+}
+
+model DocumentWorkflow {
+  id          String   @id @default(cuid())
+
+  // Workflow identification
+  name        String   // e.g., "Singapore Pre-Arrival Package"
+  portId      String?
+  // port     Port?    @relation(fields: [portId], references: [id])
+  countryCode String?  // ISO country code
+
+  // Required documents for this workflow
+  requiredDocuments String[] // Template codes: ["FAL1", "FAL2", ...]
+
+  // Timing
+  submitBeforeHours Int @default(24) // How many hours before arrival
+
+  // Active/inactive
+  active      Boolean  @default(true)
+
+  // Metadata
+  description String?
+  specialInstructions String?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Organization
+  organizationId String?
+
+  @@map("document_workflows")
+  @@index([portId])
+  @@index([countryCode])
+}
+
+model DocumentSubmission {
+  id          String   @id @default(cuid())
+
+  // Submission details
+  vesselId    String
+  vessel      Vessel   @relation(fields: [vesselId], references: [id])
+
+  voyageId    String
+  voyage      Voyage   @relation(fields: [voyageId], references: [id])
+
+  portId      String?
+  // port     Port?    @relation(fields: [portId], references: [id])
+
+  // Documents in this submission
+  documentIds String[] // Array of VesselDocument IDs
+
+  // Submission tracking
+  status      String   @default("preparing") // preparing, ready, submitted, accepted, rejected
+  submittedAt DateTime?
+  acknowledgedAt DateTime?
+
+  // Agent details
+  agentId     String?
+  agentName   String?
+  agentEmail  String?
+  agentPhone  String?
+
+  // Authority reference
+  authorityReference String?
+  authorityComments String?
+
+  // Metadata
+  createdBy   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Organization
+  organizationId String
+
+  @@map("document_submissions")
+  @@index([vesselId])
+  @@index([voyageId])
+  @@index([status])
+  @@index([organizationId])
+}
+
+model AutoFillLog {
+  id          String   @id @default(cuid())
+
+  documentId  String
+  // document VesselDocument @relation(fields: [documentId], references: [id])
+
+  // What was auto-filled
+  fieldsFilled String[] // Array of field paths: "vessel.name", "crew.count"
+  dataSource  String   // "vessel_master", "crew_list", "voyage_data"
+
+  // Accuracy tracking
+  confidence  Float    @default(1.0) // 0.0 to 1.0
+  manualEdits Int      @default(0)   // How many fields were manually edited
+
+  // Timing
+  fillDuration Int     // Milliseconds taken to auto-fill
+
+  createdAt   DateTime @default(now())
+
+  @@map("auto_fill_logs")
+  @@index([documentId])
+  @@index([createdAt])
+}

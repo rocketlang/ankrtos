@@ -103,7 +103,7 @@ export function Features() {
 
       <div className="mt-8 bg-maritime-800 border border-maritime-700 rounded-md p-4">
         <p className="text-maritime-400 text-xs">
-          Set <code className="text-blue-400">MRK8X_TIER=pro</code> or <code className="text-blue-400">MRK8X_TIER=enterprise</code> in backend .env to unlock higher tiers.
+          Set <code className="text-blue-400">MARI8X_TIER=pro</code> or <code className="text-blue-400">MARI8X_TIER=enterprise</code> in backend .env to unlock higher tiers.
         </p>
       </div>
     </div>

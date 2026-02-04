@@ -1,0 +1,135 @@
+NYPE 2015 TIME CHARTER PARTY
+
+NEW YORK PRODUCE EXCHANGE TIME CHARTER
+
+Date: January 15, 2026
+Place: Singapore
+
+PARTIES:
+Owners: Pacific Shipping Corporation
+Address: 123 Marina Bay, Singapore
+Contact: ops@pacificship.com
+
+Charterers: Global Maritime Trading Ltd
+Address: 456 Wall Street, New York, USA
+Contact: charter@globalmaritrade.com
+
+Broker: Maritime Brokers Asia Pte Ltd
+Commission: 2.5% on hire
+
+VESSEL DETAILS:
+Name: MV PACIFIC STAR
+Flag: Marshall Islands
+IMO: 9876543
+Call Sign: V7XY2
+Classification: DNV GL
+Built: 2018, South Korea (Hyundai Heavy Industries)
+GRT/NRT: 45,000 / 28,000
+DWT: 75,000 MT on summer draft
+LOA/Beam: 225m / 32m
+Draft: 12.5m (loaded), 6.8m (ballast)
+Speed: 14.5 knots laden, 15.5 knots ballast (weather permitting)
+Fuel Consumption:
+  - Main Engine: 28 MT IFO 380 per day at sea laden
+  - Main Engine: 25 MT IFO 380 per day at sea ballast
+  - Auxiliary: 3 MT MGO per day at sea, 2 MT MGO per day in port
+
+CHARTER TERMS:
+Charter Period: 12 months +/- 30 days (at Charterers' option)
+Delivery: Singapore, Singapore
+Laycan: February 1-10, 2026
+Redelivery: Same range as delivery port, +/- 90 days
+
+HIRE RATE:
+Base Hire: USD 18,500 per day
+Payment: Semi-monthly in advance
+Currency: United States Dollars (USD)
+Payment Method: TT to Owners' account
+Account Details: HSBC Singapore, SWIFT: HSBCSGSG
+Account Number: 123-456789-001
+
+OFF-HIRE PROVISIONS:
+- Drydocking: 30 days maximum off-hire allowance
+- Repairs: Off-hire for time lost exceeding 24 hours
+- Breakdown: Main engine or steering gear failure
+- Crew deficiency: Insufficient or unqualified crew
+- Surveys: Class or flag state detention
+
+BUNKERS:
+Delivery: Charterers to take over and pay for bunkers on board at delivery
+  - Estimated IFO 380: 800 MT at USD 450/MT
+  - Estimated MGO: 150 MT at USD 650/MT
+Redelivery: Similar quantities, Owners to take over and pay
+Tolerance: +/- 5% on all grades
+
+CARGO RESTRICTIONS:
+Excluded: Acids, explosives, nuclear materials, hazardous waste
+Grain capacity: 85,000 cubic meters
+Container capacity: 4,200 TEU (if container fitted)
+Heavy Lifts: Max 80 MT per lift
+Reefer plugs: 300 (if applicable)
+
+GEOGRAPHICAL TRADING LIMITS:
+Worldwide trading except:
+- War zones (as per JWC Listed Areas)
+- Ice-bound ports (November to April, Baltic/Great Lakes)
+- US Gulf during hurricane season (without additional insurance)
+
+BUNKER ADJUSTMENT CLAUSE:
+Base price: IFO 380 at USD 400/MT
+Adjustment: USD 50 per MT deviation
+Formula: Daily consumption x price difference / base price
+
+WAR RISKS:
+Additional insurance: For Charterers' account
+Notice: 48 hours for entry into high-risk zones
+ISPS compliance: Mandatory
+
+SPEED AND PERFORMANCE WARRANTY:
+Speed: 14.5 knots laden on 28 MT/day IFO 380
+Weather: Beaufort Force 4 or below, no swell
+Temperature: Sea water not exceeding 25°C
+Performance claims: Based on noon reports over 30-day average
+
+MAINTENANCE:
+Drydocking: 1 occasion during charter period (max 30 days off-hire)
+Class surveys: Owners' responsibility
+Vetting inspections: Charterers may require SIRE inspection
+
+LAW AND ARBITRATION:
+Governing Law: English Law
+Arbitration: London Maritime Arbitrators Association (LMAA)
+Three arbitrators: One each party, third by agreement
+Venue: London, England
+
+SPECIAL CLAUSES:
+1. BIMCO War Risks Clause 2013
+2. BIMCO Piracy Clause 2013
+3. BIMCO Cyber Security Clause 2019
+4. Charterers to provide detailed voyage instructions 7 days before each voyage
+5. All port costs, agencies, and disbursements for Charterers' account
+6. Owners retain responsibility for crew wages, insurance, and maintenance
+
+PAYMENT TERMS:
+First hire installment due: 2 banking days before delivery
+Subsequent hire: 15th and 30th of each month
+Late payment: 5% annual interest on overdue amounts
+Bank charges: For payer's account
+
+SIGNATURES:
+
+For Owners:
+_______________________
+Captain James Wilson
+Managing Director
+Pacific Shipping Corporation
+
+For Charterers:
+_______________________
+Mr. Robert Chen
+Commercial Director
+Global Maritime Trading Ltd
+
+Broker:
+_______________________
+Maritime Brokers Asia Pte Ltd

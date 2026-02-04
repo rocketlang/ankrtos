@@ -1,0 +1,1075 @@
+#!/usr/bin/env node
+/**
+ * ANKR-CTL v3.0 - Universal Service Orchestrator (Node.js)
+ * =========================================================
+ * NO HARDCODING - All config from:
+ *   - /root/.ankr/config/ports.json (port assignments)
+ *   - /root/.ankr/config/services.json (service definitions)
+ *
+ * Usage: ankr-ctl <command> [service]
+ *
+ * Commands:
+ *   start [service]   - Start all or specific service
+ *   stop [service]    - Stop all or specific service
+ *   restart [service] - Restart service
+ *   status [service]  - Show status
+ *   health            - Health check all services
+ *   ports             - Show port allocations
+ *   conflicts         - Check for port conflicts
+ *
+ * Author: ANKR Labs | Jai Guru Ji
+ */
+
+const fs = require('fs');
+const path = require('path');
+const { spawn, execSync } = require('child_process');
+
+// Paths
+const CONFIG_DIR = '/root/.ankr/config';
+const PORTS_FILE = path.join(CONFIG_DIR, 'ports.json');
+const SERVICES_FILE = path.join(CONFIG_DIR, 'services.json');
+const DATABASES_FILE = path.join(CONFIG_DIR, 'databases.json');
+const CREDENTIALS_FILE = path.join(CONFIG_DIR, 'credentials.env');
+const PID_DIR = '/root/.ankr/pids';
+const LOG_DIR = '/root/.ankr/logs';
+const LOCK_DIR = '/root/.ankr/locks';
+const RESTART_DIR = '/root/.ankr/restarts';
+
+// Ensure directories exist
+[PID_DIR, LOG_DIR, LOCK_DIR, RESTART_DIR].forEach(dir => {
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+});
+
+// Colors
+const colors = {
+  red: '\x1b[31m',
+  green: '\x1b[32m',
+  yellow: '\x1b[33m',
+  blue: '\x1b[34m',
+  cyan: '\x1b[36m',
+  reset: '\x1b[0m',
+};
+
+function log(type, msg) {
+  const prefix = {
+    info: `${colors.blue}[INFO]${colors.reset}`,
+    ok: `${colors.green}[OK]${colors.reset}`,
+    warn: `${colors.yellow}[WARN]${colors.reset}`,
+    error: `${colors.red}[ERROR]${colors.reset}`,
+  };
+  console.log(`${prefix[type] || ''} ${msg}`);
+}
+
+// Load configs
+function loadPorts() {
+  try {
+    return JSON.parse(fs.readFileSync(PORTS_FILE, 'utf-8'));
+  } catch (e) {
+    log('error', `Failed to load ports.json: ${e.message}`);
+    process.exit(1);
+  }
+}
+
+function loadServices() {
+  try {
+    return JSON.parse(fs.readFileSync(SERVICES_FILE, 'utf-8'));
+  } catch (e) {
+    log('error', `Failed to load services.json: ${e.message}`);
+    process.exit(1);
+  }
+}
+
+// Load databases config
+function loadDatabases() {
+  try {
+    if (!fs.existsSync(DATABASES_FILE)) return null;
+    return JSON.parse(fs.readFileSync(DATABASES_FILE, 'utf-8'));
+  } catch {
+    return null;
+  }
+}
+
+// Load credentials from .env file
+function loadCredentials() {
+  const creds = {};
+  try {
+    if (!fs.existsSync(CREDENTIALS_FILE)) return creds;
+    const content = fs.readFileSync(CREDENTIALS_FILE, 'utf-8');
+    for (const line of content.split('\n')) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) continue;
+      const match = trimmed.match(/^([A-Z_][A-Z0-9_]*)=(.*)$/);
+      if (match) {
+        let value = match[2];
+        // Handle ${VAR:-default} syntax
+        if (value.startsWith('${') && value.includes(':-')) {
+          const defaultVal = value.match(/:-([^}]*)\}/)?.[1] || '';
+          value = defaultVal;
+        }
+        creds[match[1]] = value;
+      }
+    }
+  } catch {}
+  return creds;
+}
+
+// Build DATABASE_URL for a service from databases.json
+function getDatabaseUrl(serviceName, databases, credentials) {
+  if (!databases) return null;
+
+  for (const [dbName, dbConfig] of Object.entries(databases.databases || {})) {
+    if (dbConfig.apps && dbConfig.apps.includes(serviceName)) {
+      const server = databases.servers[dbConfig.server];
+      if (!server) continue;
+
+      const password = credentials[dbConfig.password_env] || '';
+      const schema = dbConfig.schema ? `?schema=${dbConfig.schema}` : '';
+
+      return `postgresql://${dbConfig.user}:${password}@${server.host}:${server.port}/${dbConfig.name}${schema}`;
+    }
+  }
+  return null;
+}
+
+// Resolve port from path (e.g., 'backend.wowtruck' -> 4000)
+function resolvePort(portPath, ports) {
+  const parts = portPath.split('.');
+  let current = ports;
+  for (const part of parts) {
+    if (current[part] === undefined) {
+      throw new Error(`Port path not found: ${portPath}`);
+    }
+    current = current[part];
+  }
+  if (typeof current !== 'number') {
+    throw new Error(`Port path '${portPath}' does not resolve to a number`);
+  }
+  return current;
+}
+
+/**
+ * Build inter-service URLs from ports.json
+ * This eliminates hardcoding in all apps!
+ *
+ * Example output:
+ *   AI_PROXY_URL: 'http://localhost:4444'
+ *   EON_URL: 'http://localhost:4005'
+ *   ANKRTMS_URL: 'http://localhost:4000'
+ */
+function buildServiceUrls(ports) {
+  const host = process.env.API_HOST || 'localhost';
+  const urls = {};
+
+  // Core services - most commonly referenced
+  const mappings = {
+    // AI Services
+    'AI_PROXY_URL': 'ai.proxy',
+    'AI_PROXY_PORT': 'ai.proxy',
+    'AI_SECURITY_URL': 'ai.security',
+
+    // Backend Services
+    'EON_URL': 'backend.eon',
+    'EON_PORT': 'backend.eon',
+    'ANKRTMS_URL': 'backend.wowtruck',
+    'ANKRTMS_BACKEND_URL': 'backend.wowtruck',
+    'FREIGHTBOX_URL': 'backend.freightbox',
+    'FREIGHTBOX_BACKEND_URL': 'backend.freightbox',
+    'BFC_URL': 'backend.bfc',
+    'BFC_BACKEND_URL': 'backend.bfc',
+    'CRM_URL': 'backend.crm',
+    'CRM_BACKEND_URL': 'backend.crm',
+    'CRM_BFF_URL': 'backend.crmBff',
+    'COMPLIANCE_URL': 'backend.compliance',
+    'COMPLYMITRA_URL': 'backend.complymitra',
+    'SAATHI_URL': 'backend.saathi',
+    'EVERPURE_URL': 'backend.everpure',
+    'ERPBHARAT_URL': 'backend.erpbharat',
+
+    // Registry
+    'VERDACCIO_URL': 'registry.verdaccio',
+    'NPM_REGISTRY': 'registry.verdaccio',
+
+    // Voice/Standalone
+    'BANI_URL': 'standalone.bani',
+    'SWAYAM_URL': 'standalone.bani',
+
+    // Databases
+    'POSTGRES_PORT': 'database.postgres',
+    'TIMESCALE_PORT': 'database.timescale',
+    'REDIS_PORT': 'cache.redis',
+
+    // LLM Services
+    'OLLAMA_URL': 'llm.ollama',
+    'OLLAMA_PORT': 'llm.ollama',
+    'SLM_ROUTER_URL': 'ai.slmRouter',
+  };
+
+  for (const [envName, portPath] of Object.entries(mappings)) {
+    try {
+      const port = resolvePort(portPath, ports);
+      if (envName.endsWith('_PORT')) {
+        urls[envName] = String(port);
+      } else if (envName === 'NPM_REGISTRY') {
+        urls[envName] = `http://${host}:${port}`;
+      } else {
+        urls[envName] = `http://${host}:${port}`;
+      }
+    } catch {
+      // Port not defined, skip
+    }
+  }
+
+  return urls;
+}
+
+// Check if port is in use
+function isPortInUse(port) {
+  try {
+    execSync(`fuser ${port}/tcp 2>/dev/null`, { encoding: 'utf-8' });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// Get PID using port
+function getPidByPort(port) {
+  try {
+    const output = execSync(`fuser ${port}/tcp 2>/dev/null`, { encoding: 'utf-8' });
+    return output.trim().split(/\s+/)[0];
+  } catch {
+    return null;
+  }
+}
+
+// Check restart rate limit
+function checkRestartLimit(serviceName) {
+  const restartFile = path.join(RESTART_DIR, `${serviceName}.restarts`);
+  const now = Date.now();
+  const window = 300000; // 5 minutes
+  const maxRestarts = 5;
+
+  let restarts = [];
+  if (fs.existsSync(restartFile)) {
+    restarts = fs.readFileSync(restartFile, 'utf-8')
+      .trim()
+      .split('\n')
+      .filter(t => t && (now - parseInt(t)) < window);
+  }
+
+  if (restarts.length >= maxRestarts) {
+    log('error', `${serviceName} has restarted ${restarts.length} times in last 5 minutes. Cooling down...`);
+    return false;
+  }
+
+  restarts.push(String(now));
+  fs.writeFileSync(restartFile, restarts.join('\n'));
+  return true;
+}
+
+// Check if service is running
+function isServiceRunning(serviceName) {
+  const pidFile = path.join(PID_DIR, `${serviceName}.pid`);
+  if (!fs.existsSync(pidFile)) return false;
+
+  const pid = fs.readFileSync(pidFile, 'utf-8').trim();
+  try {
+    process.kill(parseInt(pid), 0);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// Get service PID
+function getServicePid(serviceName) {
+  const pidFile = path.join(PID_DIR, `${serviceName}.pid`);
+  if (fs.existsSync(pidFile)) {
+    return fs.readFileSync(pidFile, 'utf-8').trim();
+  }
+  return null;
+}
+
+// Start a service
+function startService(serviceName, serviceConfig, ports, databases = null, credentials = {}) {
+  if (!serviceConfig.enabled) {
+    log('warn', `${serviceName} is disabled`);
+    return false;
+  }
+
+  if (isServiceRunning(serviceName)) {
+    log('warn', `${serviceName} is already running (PID: ${getServicePid(serviceName)})`);
+    return true;
+  }
+
+  if (!checkRestartLimit(serviceName)) {
+    return false;
+  }
+
+  // Resolve port from path
+  let port;
+  try {
+    port = resolvePort(serviceConfig.portPath, ports);
+  } catch (e) {
+    log('error', `${serviceName}: ${e.message}`);
+    return false;
+  }
+
+  // Check reserved ports (4002=BitNinja, 1167=Backup)
+  const reservedPorts = ports.reserved || {};
+  const reservedValues = Object.values(reservedPorts).filter(v => typeof v === 'number');
+  if (reservedValues.includes(port)) {
+    const reservedName = Object.entries(reservedPorts).find(([_, v]) => v === port)?.[0];
+    log('error', `${serviceName}: Port ${port} is RESERVED (${reservedName}). Cannot use!`);
+    return false;
+  }
+
+  // Kill any process on the port
+  if (isPortInUse(port)) {
+    log('warn', `Port ${port} in use, killing existing process...`);
+    try {
+      execSync(`fuser -k ${port}/tcp 2>/dev/null`);
+    } catch {}
+    // Wait for port to be released
+    let attempts = 0;
+    while (isPortInUse(port) && attempts < 10) {
+      execSync('sleep 1');
+      attempts++;
+    }
+  }
+
+  // Check path exists
+  if (!fs.existsSync(serviceConfig.path)) {
+    log('error', `Path '${serviceConfig.path}' does not exist for ${serviceName}`);
+    return false;
+  }
+
+  log('info', `Starting ${serviceName} on port ${port}...`);
+  log('info', `  Path: ${serviceConfig.path}`);
+  log('info', `  Command: ${serviceConfig.command}`);
+
+  // Build inter-service URLs from ports.json (NO HARDCODING!)
+  const serviceUrls = buildServiceUrls(ports);
+
+  // Prepare service-specific env vars (replace ${PORT} placeholders)
+  const serviceEnv = {};
+  if (serviceConfig.env) {
+    for (const [key, value] of Object.entries(serviceConfig.env)) {
+      serviceEnv[key] = String(value).replace(/\$\{PORT\}/g, String(port));
+    }
+  }
+
+  // Auto-inject DATABASE_URL from databases.json if not already specified
+  if (!serviceEnv.DATABASE_URL && databases) {
+    const dbUrl = getDatabaseUrl(serviceName, databases, credentials);
+    if (dbUrl) {
+      serviceEnv.DATABASE_URL = dbUrl;
+      log('info', `  DB: Auto-injected from databases.json`);
+    }
+  }
+
+  // Inject credentials from credentials.env
+  const credentialEnv = {};
+  for (const [key, value] of Object.entries(credentials)) {
+    if (!key.includes('PASSWORD') && !key.includes('SECRET')) {
+      credentialEnv[key] = value;  // Only inject non-sensitive env vars
+    }
+  }
+
+  // Prepare environment
+  const env = {
+    ...process.env,
+    PORT: String(port),
+    NODE_ENV: 'production',
+    ...credentialEnv, // Inject credentials (non-sensitive)
+    ...serviceUrls,   // Inject all service URLs
+    ...serviceEnv,    // Service-specific overrides (with ${PORT} replaced)
+  };
+
+  // Replace ${PORT} in command
+  let command = serviceConfig.command.replace(/\$\{PORT\}/g, String(port));
+
+  // Start process
+  const logFile = fs.openSync(path.join(LOG_DIR, `${serviceName}.log`), 'a');
+  const errFile = fs.openSync(path.join(LOG_DIR, `${serviceName}.err`), 'a');
+
+  const [cmd, ...args] = command.split(/\s+/);
+  const child = spawn(cmd, args, {
+    cwd: serviceConfig.path,
+    env,
+    detached: true,
+    stdio: ['ignore', logFile, errFile],
+  });
+
+  child.unref();
+
+  // Save PID
+  fs.writeFileSync(path.join(PID_DIR, `${serviceName}.pid`), String(child.pid));
+
+  // Wait and verify
+  execSync('sleep 3');
+
+  if (isServiceRunning(serviceName)) {
+    log('ok', `${serviceName} started (PID: ${child.pid}, Port: ${port})`);
+    return true;
+  } else {
+    log('error', `${serviceName} failed to start. Check logs: ${path.join(LOG_DIR, `${serviceName}.err`)}`);
+    return false;
+  }
+}
+
+// Stop a service
+function stopService(serviceName, serviceConfig, ports) {
+  const pidFile = path.join(PID_DIR, `${serviceName}.pid`);
+  let port;
+  try {
+    port = resolvePort(serviceConfig.portPath, ports);
+  } catch {
+    log('warn', `Could not resolve port for ${serviceName}`);
+    return false;
+  }
+
+  if (!fs.existsSync(pidFile)) {
+    // Try to kill by port
+    const pid = getPidByPort(port);
+    if (pid) {
+      log('info', `Found process on port ${port} (PID: ${pid}), killing...`);
+      try {
+        process.kill(parseInt(pid), 'SIGTERM');
+        execSync('sleep 2');
+        process.kill(parseInt(pid), 'SIGKILL');
+      } catch {}
+    } else {
+      log('warn', `${serviceName} is not running`);
+    }
+    return true;
+  }
+
+  const pid = fs.readFileSync(pidFile, 'utf-8').trim();
+  log('info', `Stopping ${serviceName} (PID: ${pid})...`);
+
+  try {
+    // Graceful shutdown
+    process.kill(parseInt(pid), 'SIGTERM');
+
+    // Wait up to 10 seconds
+    let attempts = 0;
+    while (attempts < 10) {
+      try {
+        process.kill(parseInt(pid), 0);
+        execSync('sleep 1');
+        attempts++;
+      } catch {
+        break;
+      }
+    }
+
+    // Force kill if still running
+    try {
+      process.kill(parseInt(pid), 'SIGKILL');
+    } catch {}
+  } catch {}
+
+  // Also kill any process on the port
+  try {
+    execSync(`fuser -k ${port}/tcp 2>/dev/null`);
+  } catch {}
+
+  fs.unlinkSync(pidFile);
+  log('ok', `${serviceName} stopped`);
+  return true;
+}
+
+// Show status
+function showStatus(filter, services, ports) {
+  console.log('');
+  console.log('╔══════════════════════════════════════════════════════════════════════════════╗');
+  console.log('║                        ANKR SERVICES STATUS (v3.0)                           ║');
+  console.log('╠══════════════════════════════════════════════════════════════════════════════╣');
+  console.log('║ SERVICE                   │ PORT   │ STATUS   │ PID      │ MEMORY          ║');
+  console.log('╠══════════════════════════════════════════════════════════════════════════════╣');
+
+  const serviceList = services.services;
+  for (const [name, config] of Object.entries(serviceList)) {
+    if (filter && filter !== name) continue;
+
+    let port = '-';
+    try {
+      port = resolvePort(config.portPath, ports);
+    } catch {}
+
+    let status = 'STOPPED';
+    let statusColor = colors.red;
+    let pid = '-';
+    let memory = '-';
+
+    if (!config.enabled) {
+      status = 'DISABLED';
+      statusColor = colors.yellow;
+    } else if (isServiceRunning(name)) {
+      pid = getServicePid(name);
+      status = 'RUNNING';
+      statusColor = colors.green;
+      try {
+        const mem = execSync(`ps -o rss= -p ${pid} 2>/dev/null`, { encoding: 'utf-8' }).trim();
+        memory = `${(parseInt(mem) / 1024).toFixed(1)} MB`;
+      } catch {}
+    }
+
+    const paddedName = name.padEnd(25);
+    const paddedPort = String(port).padEnd(6);
+    const paddedStatus = status.padEnd(8);
+    const paddedPid = String(pid).padEnd(8);
+    const paddedMem = memory.padEnd(15);
+
+    console.log(`║ ${paddedName} │ ${paddedPort} │ ${statusColor}${paddedStatus}${colors.reset} │ ${paddedPid} │ ${paddedMem} ║`);
+  }
+
+  console.log('╚══════════════════════════════════════════════════════════════════════════════╝');
+
+  // Summary
+  const enabled = Object.entries(serviceList).filter(([_, c]) => c.enabled);
+  const running = enabled.filter(([n]) => isServiceRunning(n)).length;
+  console.log(`\n  ${colors.green}Running:${colors.reset} ${running}/${enabled.length} services\n`);
+}
+
+// Show ports
+function showPorts(ports) {
+  console.log('');
+  console.log('╔══════════════════════════════════════════════════════════════════════════════╗');
+  console.log('║                        PORT ALLOCATIONS (from ports.json)                    ║');
+  console.log('╠══════════════════════════════════════════════════════════════════════════════╣');
+
+  const categories = ['frontend', 'backend', 'admin', 'dashboard', 'ai', 'voice', 'standalone', 'registry', 'database', 'cache'];
+
+  for (const cat of categories) {
+    if (!ports[cat]) continue;
+
+    console.log(`║ ${colors.cyan}${cat.toUpperCase().padEnd(76)}${colors.reset} ║`);
+
+    for (const [name, port] of Object.entries(ports[cat])) {
+      if (name.startsWith('_')) continue;
+      const fullPath = `${cat}.${name}`;
+      console.log(`║   ${fullPath.padEnd(30)} : ${String(port).padEnd(6)}                                  ║`);
+    }
+  }
+
+  console.log('╚══════════════════════════════════════════════════════════════════════════════╝');
+}
+
+// Health check
+function healthCheck(services, ports) {
+  console.log('');
+  log('info', 'Running health checks...\n');
+
+  const serviceList = services.services;
+  for (const [name, config] of Object.entries(serviceList)) {
+    if (!config.enabled) continue;
+
+    let port;
+    try {
+      port = resolvePort(config.portPath, ports);
+    } catch {
+      console.log(`  ${name.padEnd(25)} : ${colors.yellow}NO PORT${colors.reset}`);
+      continue;
+    }
+
+    if (!isServiceRunning(name)) {
+      console.log(`  ${name.padEnd(25)} : ${colors.red}DOWN${colors.reset} (not running)`);
+      continue;
+    }
+
+    const endpoint = config.healthEndpoint || '/health';
+    const url = `http://localhost:${port}${endpoint}`;
+
+    try {
+      const response = execSync(`curl -s -o /dev/null -w "%{http_code}" --connect-timeout 3 "${url}" 2>/dev/null`, { encoding: 'utf-8' }).trim();
+
+      if (response === '200') {
+        console.log(`  ${name.padEnd(25)} : ${colors.green}HEALTHY${colors.reset} (${url})`);
+      } else {
+        console.log(`  ${name.padEnd(25)} : ${colors.red}UNHEALTHY${colors.reset} (HTTP ${response})`);
+      }
+    } catch {
+      console.log(`  ${name.padEnd(25)} : ${colors.yellow}UNREACHABLE${colors.reset} (timeout)`);
+    }
+  }
+  console.log('');
+}
+
+// Show injected env vars
+function showEnvVars(ports) {
+  console.log('');
+  console.log('╔══════════════════════════════════════════════════════════════════════════════╗');
+  console.log('║              ENV VARS INJECTED BY ANKR-CTL (from ports.json)                 ║');
+  console.log('╠══════════════════════════════════════════════════════════════════════════════╣');
+
+  const urls = buildServiceUrls(ports);
+  for (const [name, value] of Object.entries(urls).sort()) {
+    console.log(`║ ${colors.cyan}${name.padEnd(25)}${colors.reset} = ${value.padEnd(47)} ║`);
+  }
+
+  console.log('╚══════════════════════════════════════════════════════════════════════════════╝');
+  console.log('');
+  console.log(`  ${colors.green}All services started via ankr-ctl receive these env vars automatically.${colors.reset}`);
+  console.log(`  ${colors.yellow}Apps should use process.env.XXX instead of hardcoded URLs.${colors.reset}`);
+  console.log('');
+}
+
+// Show apps with frontend/backend ports and domains
+function showApps(ports) {
+  console.log('');
+  console.log('╔════════════════════════════════════════════════════════════════════════════════════════════════╗');
+  console.log('║                          ANKR APPS - FRONTEND, BACKEND & DOMAINS                                ║');
+  console.log('╠════════════════════════════════════════════════════════════════════════════════════════════════╣');
+  console.log(`║ ${'APP'.padEnd(18)} │ ${'FRONT'.padEnd(6)} │ ${'BACK'.padEnd(6)} │ ${'DB PORT'.padEnd(8)} │ ${'DOMAIN'.padEnd(30)} │ ${'STATUS'.padEnd(8)} ║`);
+  console.log('╠════════════════════════════════════════════════════════════════════════════════════════════════╣');
+
+  // Define apps with their port mappings and domains
+  const apps = [
+    { name: 'WowTruck (TMS)', frontend: 'frontend.wowtruck', backend: 'backend.wowtruck', db: '5433', domain: 'wowtruck.ankr.in' },
+    { name: 'FreightBox', frontend: 'frontend.freightbox', backend: 'backend.freightbox', db: '5433', domain: 'freightbox.ankr.in' },
+    { name: 'Odoo FreightBox', frontend: '-', backend: 'erp.odoo', db: '5433', domain: 'odoo.freightbox.org' },
+    { name: 'Fr8X Exchange', frontend: 'frontend.fr8x', backend: 'backend.fr8x', db: '5433', domain: 'fr8x.org' },
+    { name: 'DODD ERP', frontend: 'frontend.dodd', backend: 'backend.dodd', db: '5433', domain: 'dodd-erp.org' },
+    { name: 'BFC Banking', frontend: 'frontend.bfcWeb', backend: 'backend.bfc', db: '5433', domain: 'bfc.ankr.in' },
+    { name: 'CRM', frontend: 'dev.crmFrontend', backend: 'backend.crm', db: '5432', domain: 'crm.ankr.in' },
+    { name: 'Compliance', frontend: '-', backend: 'backend.compliance', db: '5434', domain: 'compliance.ankr.digital' },
+    { name: 'ComplyMitra', frontend: '-', backend: 'backend.complymitra', db: '-', domain: 'complymitra.ankr.in' },
+    { name: 'ERP Bharat', frontend: 'frontend.erpbharat', backend: 'backend.erpbharat', db: '5433', domain: 'erpbharat.in' },
+    { name: 'Vyomo', frontend: 'frontend.vyomo', backend: 'backend.vyomo', db: '-', domain: 'vyomo.in' },
+    { name: 'EverPure', frontend: 'frontend.everpure', backend: 'backend.everpure', db: '-', domain: 'ever-pure.in' },
+    { name: 'AnkrForge', frontend: 'frontend.ankrforgeWeb', backend: 'admin.ankrforge', db: '5432', domain: 'forge.ankr.in' },
+    { name: 'ANKR Website', frontend: 'frontend.ankrWebsite', backend: '-', db: '-', domain: 'ankr.in' },
+    { name: 'ANKR Pulse', frontend: 'dashboard.pulse', backend: '-', db: '-', domain: 'pulse.ankr.in' },
+    { name: 'SunoSunao', frontend: '-', backend: 'voice.sunosunaoApi', db: '-', domain: 'sunosunao.ankr.in' },
+    { name: 'BANI AI', frontend: '-', backend: 'standalone.bani', db: '-', domain: 'baniai.io' },
+    { name: 'Swayam Dash', frontend: 'standalone.swayamDashboard', backend: '-', db: '-', domain: 'swayam.ankr.in' },
+    { name: 'EON Memory', frontend: '-', backend: 'backend.eon', db: '5433', domain: 'eon.ankr.in' },
+    { name: 'AI Proxy', frontend: '-', backend: 'ai.proxy', db: '-', domain: 'ai.ankr.in' },
+    { name: 'Saathi', frontend: '-', backend: 'backend.saathi', db: '-', domain: 'saathi.ankr.in' },
+    { name: 'Verdaccio', frontend: '-', backend: 'registry.verdaccio', db: '-', domain: 'npm.ankr.in' },
+  ];
+
+  for (const app of apps) {
+    let fePort = '-';
+    let bePort = '-';
+
+    if (app.frontend && app.frontend !== '-') {
+      try { fePort = String(resolvePort(app.frontend, ports)); } catch { fePort = '?'; }
+    }
+    if (app.backend && app.backend !== '-') {
+      try { bePort = String(resolvePort(app.backend, ports)); } catch { bePort = '?'; }
+    }
+
+    // Check if backend is running
+    let status = '-';
+    let statusColor = colors.yellow;
+    if (bePort !== '-' && bePort !== '?') {
+      try {
+        execSync(`fuser ${bePort}/tcp 2>/dev/null`, { encoding: 'utf-8' });
+        status = 'RUNNING';
+        statusColor = colors.green;
+      } catch {
+        status = 'STOPPED';
+        statusColor = colors.red;
+      }
+    }
+
+    const name = app.name.padEnd(18);
+    const fe = fePort === '-' ? colors.yellow + '-'.padEnd(6) + colors.reset : colors.green + fePort.padEnd(6) + colors.reset;
+    const be = bePort === '-' ? colors.yellow + '-'.padEnd(6) + colors.reset : colors.cyan + bePort.padEnd(6) + colors.reset;
+    const db = (app.db || '-').padEnd(8);
+    const domain = colors.blue + (app.domain || '-').padEnd(30) + colors.reset;
+    const st = statusColor + status.padEnd(8) + colors.reset;
+
+    console.log(`║ ${name} │ ${fe} │ ${be} │ ${db} │ ${domain} │ ${st} ║`);
+  }
+
+  console.log('╠════════════════════════════════════════════════════════════════════════════════════════════════╣');
+  console.log('║                                    DATABASE SERVERS                                             ║');
+  console.log('╠════════════════════════════════════════════════════════════════════════════════════════════════╣');
+  console.log(`║ ${colors.cyan}PostgreSQL (Local)${colors.reset}   │ 5432 │ ankr_crm, ankrforge              │ postgres/ankr : indrA@0612      ║`);
+  console.log(`║ ${colors.cyan}PostgreSQL (Docker)${colors.reset}  │ 5433 │ ankr_eon (WowTruck,BFC,EON,Fr8X) │ ankr : indrA@0612               ║`);
+  console.log(`║ ${colors.cyan}TimescaleDB${colors.reset}          │ 5434 │ compliance                       │ ankr : ankrSecure2025           ║`);
+  console.log(`║ ${colors.cyan}Redis${colors.reset}                │ 6379 │ cache                            │ -                               ║`);
+  console.log('╚════════════════════════════════════════════════════════════════════════════════════════════════╝');
+  console.log('');
+}
+
+// Validate database connections with metadata
+function validateDatabases(databases, credentials) {
+  console.log('');
+  console.log('╔══════════════════════════════════════════════════════════════════════════════════════════════════╗');
+  console.log('║                          DATABASE IDENTITY VALIDATION                                              ║');
+  console.log('╠══════════════════════════════════════════════════════════════════════════════════════════════════╣');
+  console.log(`║ ${'DATABASE'.padEnd(20)} │ ${'SERVER'.padEnd(15)} │ ${'STATUS'.padEnd(12)} │ ${'APPS'.padEnd(40)} ║`);
+  console.log('╠══════════════════════════════════════════════════════════════════════════════════════════════════╣');
+
+  if (!databases) {
+    console.log('║  databases.json not found                                                                          ║');
+    console.log('╚══════════════════════════════════════════════════════════════════════════════════════════════════╝');
+    return;
+  }
+
+  for (const [dbName, dbConfig] of Object.entries(databases.databases || {})) {
+    const server = databases.servers[dbConfig.server];
+    if (!server) continue;
+
+    const password = credentials[dbConfig.password_env] || '';
+    const apps = (dbConfig.apps || []).join(',');
+
+    // Test connection and validate metadata
+    let status = 'UNKNOWN';
+    let statusColor = colors.yellow;
+    let registeredApps = '';
+
+    try {
+      // Check if _ankr_metadata table exists and validate
+      const cmd = `PGPASSWORD="${password}" psql -h ${server.host} -p ${server.port} -U ${dbConfig.user} -d ${dbConfig.name} -t -c "SELECT value FROM _ankr_metadata WHERE key='apps'" 2>/dev/null`;
+      const result = execSync(cmd, { encoding: 'utf-8' }).trim();
+
+      if (result) {
+        registeredApps = result;
+        // Verify metadata matches config
+        const configApps = new Set(apps.split(','));
+        const metaApps = new Set(result.split(','));
+        const match = [...configApps].every(a => metaApps.has(a));
+
+        if (match) {
+          status = 'VALID';
+          statusColor = colors.green;
+        } else {
+          status = 'MISMATCH';
+          statusColor = colors.red;
+        }
+      } else {
+        status = 'NO_META';
+        statusColor = colors.yellow;
+      }
+    } catch (e) {
+      status = 'CONN_ERR';
+      statusColor = colors.red;
+    }
+
+    const appsDisplay = registeredApps.length > 40 ? registeredApps.substring(0, 37) + '...' : registeredApps || '-';
+    console.log(`║ ${dbName.padEnd(20)} │ ${dbConfig.server.padEnd(15)} │ ${statusColor}${status.padEnd(12)}${colors.reset} │ ${appsDisplay.padEnd(40)} ║`);
+  }
+
+  console.log('╠══════════════════════════════════════════════════════════════════════════════════════════════════╣');
+  console.log(`║ ${colors.green}VALID${colors.reset}     = Metadata matches config    ${colors.yellow}NO_META${colors.reset}  = No _ankr_metadata table                       ║`);
+  console.log(`║ ${colors.red}MISMATCH${colors.reset}  = Config/metadata differ      ${colors.red}CONN_ERR${colors.reset} = Cannot connect to database                      ║`);
+  console.log('╚══════════════════════════════════════════════════════════════════════════════════════════════════╝');
+  console.log('');
+  console.log(`  ${colors.yellow}To initialize metadata:${colors.reset} /root/.ankr/scripts/init-db-metadata.sh`);
+  console.log('');
+}
+
+// Initialize database metadata (wrapper for shell script)
+function initDatabaseMetadata() {
+  console.log('');
+  log('info', 'Initializing database metadata...');
+  try {
+    execSync('/root/.ankr/scripts/init-db-metadata.sh', { stdio: 'inherit' });
+  } catch (e) {
+    log('error', `Failed to initialize: ${e.message}`);
+  }
+}
+
+// Show database identity for a specific app
+function showDbIdentity(appName, databases, credentials) {
+  console.log('');
+  log('info', `Looking up database identity for: ${appName}`);
+
+  if (!databases) {
+    log('error', 'databases.json not found');
+    return;
+  }
+
+  for (const [dbName, dbConfig] of Object.entries(databases.databases || {})) {
+    if (dbConfig.apps && dbConfig.apps.includes(appName)) {
+      const server = databases.servers[dbConfig.server];
+      const password = credentials[dbConfig.password_env] || '';
+
+      console.log('');
+      console.log(`  ${colors.cyan}App:${colors.reset}       ${appName}`);
+      console.log(`  ${colors.cyan}Database:${colors.reset}  ${dbConfig.name}`);
+      console.log(`  ${colors.cyan}Server:${colors.reset}    ${dbConfig.server} (${server.host}:${server.port})`);
+      console.log(`  ${colors.cyan}User:${colors.reset}      ${dbConfig.user}`);
+
+      // Query metadata
+      try {
+        const cmd = `PGPASSWORD="${password}" psql -h ${server.host} -p ${server.port} -U ${dbConfig.user} -d ${dbConfig.name} -t -c "SELECT key, value FROM _ankr_metadata ORDER BY key" 2>/dev/null`;
+        const result = execSync(cmd, { encoding: 'utf-8' }).trim();
+
+        if (result) {
+          console.log(`  ${colors.cyan}Metadata:${colors.reset}`);
+          for (const line of result.split('\n')) {
+            const [key, value] = line.split('|').map(s => s.trim());
+            if (key && value) {
+              console.log(`    ${key.padEnd(20)}: ${value}`);
+            }
+          }
+        }
+      } catch {
+        console.log(`  ${colors.yellow}Metadata:${colors.reset}  Not initialized (run: ankr-ctl db init)`);
+      }
+
+      const url = getDatabaseUrl(appName, databases, credentials);
+      const maskedUrl = url ? url.replace(/:([^:@]+)@/, ':****@') : 'N/A';
+      console.log(`  ${colors.cyan}DATABASE_URL:${colors.reset} ${maskedUrl}`);
+      console.log('');
+      return;
+    }
+  }
+
+  log('warn', `No database mapping found for app: ${appName}`);
+  console.log('');
+}
+
+// Show database mappings
+function showDatabases(databases, credentials) {
+  console.log('');
+  console.log('╔══════════════════════════════════════════════════════════════════════════════════════════════════╗');
+  console.log('║                          DATABASE CONFIGURATION (from databases.json)                             ║');
+  console.log('╠══════════════════════════════════════════════════════════════════════════════════════════════════╣');
+
+  if (!databases) {
+    console.log('║  databases.json not found - using legacy DATABASE_URL from services.json                         ║');
+    console.log('╚══════════════════════════════════════════════════════════════════════════════════════════════════╝');
+    return;
+  }
+
+  // Show servers
+  console.log(`║ ${colors.cyan}DATABASE SERVERS${colors.reset}                                                                                    ║`);
+  for (const [name, server] of Object.entries(databases.servers || {})) {
+    const container = server.container ? ` (${server.container})` : '';
+    console.log(`║   ${name.padEnd(20)} │ ${server.type.padEnd(12)} │ Port ${String(server.port).padEnd(5)} │ ${server.description}${container.padEnd(20)} ║`);
+  }
+
+  console.log('╠══════════════════════════════════════════════════════════════════════════════════════════════════╣');
+  console.log(`║ ${colors.cyan}DATABASE MAPPINGS${colors.reset}                                                                                   ║`);
+  console.log('╠══════════════════════════════════════════════════════════════════════════════════════════════════╣');
+  console.log(`║ ${'DATABASE'.padEnd(18)} │ ${'SERVER'.padEnd(16)} │ ${'USER'.padEnd(10)} │ ${'APPS'.padEnd(45)} ║`);
+  console.log('╠══════════════════════════════════════════════════════════════════════════════════════════════════╣');
+
+  for (const [dbName, dbConfig] of Object.entries(databases.databases || {})) {
+    const apps = (dbConfig.apps || []).join(', ');
+    const appsDisplay = apps.length > 45 ? apps.substring(0, 42) + '...' : apps;
+    console.log(`║ ${dbName.padEnd(18)} │ ${dbConfig.server.padEnd(16)} │ ${dbConfig.user.padEnd(10)} │ ${appsDisplay.padEnd(45)} ║`);
+  }
+
+  console.log('╠══════════════════════════════════════════════════════════════════════════════════════════════════╣');
+  console.log(`║ ${colors.cyan}AUTO-GENERATED DATABASE_URLs${colors.reset}                                                                        ║`);
+  console.log('╠══════════════════════════════════════════════════════════════════════════════════════════════════╣');
+
+  const allApps = new Set();
+  for (const dbConfig of Object.values(databases.databases || {})) {
+    (dbConfig.apps || []).forEach(app => allApps.add(app));
+  }
+
+  for (const app of [...allApps].sort()) {
+    const url = getDatabaseUrl(app, databases, credentials);
+    if (url) {
+      // Mask password in display
+      const maskedUrl = url.replace(/:([^:@]+)@/, ':****@');
+      console.log(`║ ${colors.green}${app.padEnd(25)}${colors.reset} │ ${maskedUrl.substring(0, 65).padEnd(65)} ║`);
+    }
+  }
+
+  console.log('╚══════════════════════════════════════════════════════════════════════════════════════════════════╝');
+  console.log('');
+  console.log(`  ${colors.yellow}Tip:${colors.reset} DATABASE_URL is auto-injected when starting services via ankr-ctl`);
+  console.log(`  ${colors.yellow}Config:${colors.reset} ${DATABASES_FILE}`);
+  console.log(`  ${colors.yellow}Credentials:${colors.reset} ${CREDENTIALS_FILE}`);
+  console.log('');
+}
+
+// Main
+function main() {
+  const args = process.argv.slice(2);
+  const command = args[0];
+  const serviceName = args[1];
+
+  const ports = loadPorts();
+  const services = loadServices();
+  const databases = loadDatabases();
+  const credentials = loadCredentials();
+
+  switch (command) {
+    case 'start':
+      if (serviceName) {
+        const config = services.services[serviceName];
+        if (!config) {
+          log('error', `Service '${serviceName}' not found`);
+          process.exit(1);
+        }
+        startService(serviceName, config, ports, databases, credentials);
+      } else {
+        log('info', 'Starting all enabled services...');
+        for (const [name, config] of Object.entries(services.services)) {
+          if (config.enabled) {
+            startService(name, config, ports, databases, credentials);
+            execSync('sleep 1');
+          }
+        }
+      }
+      break;
+
+    case 'stop':
+      if (serviceName) {
+        const config = services.services[serviceName];
+        if (!config) {
+          log('error', `Service '${serviceName}' not found`);
+          process.exit(1);
+        }
+        stopService(serviceName, config, ports);
+      } else {
+        log('info', 'Stopping all services...');
+        for (const [name, config] of Object.entries(services.services)) {
+          stopService(name, config, ports);
+        }
+      }
+      break;
+
+    case 'restart':
+      if (serviceName) {
+        const config = services.services[serviceName];
+        if (!config) {
+          log('error', `Service '${serviceName}' not found`);
+          process.exit(1);
+        }
+        stopService(serviceName, config, ports);
+        execSync('sleep 2');
+        startService(serviceName, config, ports, databases, credentials);
+      } else {
+        log('info', 'Restarting all enabled services...');
+        for (const [name, config] of Object.entries(services.services)) {
+          if (config.enabled) {
+            stopService(name, config, ports);
+            execSync('sleep 1');
+            startService(name, config, ports, databases, credentials);
+            execSync('sleep 1');
+          }
+        }
+      }
+      break;
+
+    case 'status':
+      showStatus(serviceName, services, ports);
+      break;
+
+    case 'ports':
+      showPorts(ports);
+      break;
+
+    case 'health':
+      healthCheck(services, ports);
+      break;
+
+    case 'env':
+      showEnvVars(ports);
+      break;
+
+    case 'apps':
+      showApps(ports);
+      break;
+
+    case 'db':
+    case 'databases':
+      // Handle db subcommands: db, db validate, db init, db identity <app>
+      const dbSubCmd = serviceName; // reuse serviceName as subcommand
+      const dbArg = args[2];
+
+      if (dbSubCmd === 'validate') {
+        validateDatabases(databases, credentials);
+      } else if (dbSubCmd === 'init') {
+        initDatabaseMetadata();
+      } else if (dbSubCmd === 'identity' && dbArg) {
+        // Resolve app aliases from config (or fallback to input)
+        const appAliases = databases?.appAliases || {};
+        const resolvedApp = appAliases[dbArg.toLowerCase()] || dbArg;
+        showDbIdentity(resolvedApp, databases, credentials);
+      } else if (dbSubCmd === 'url' && dbArg) {
+        // Just show the DATABASE_URL for an app
+        const appAliases = databases?.appAliases || {};
+        const resolvedApp = appAliases[dbArg.toLowerCase()] || dbArg;
+        const url = getDatabaseUrl(resolvedApp, databases, credentials);
+        if (url) {
+          console.log(url);
+        } else {
+          log('error', `No database mapping for: ${dbArg}`);
+          process.exit(1);
+        }
+      } else {
+        showDatabases(databases, credentials);
+      }
+      break;
+
+    case 'start-all':
+      // Alias for systemd - starts all enabled services
+      log('info', 'Starting all enabled services (systemd trigger)...');
+      for (const [name, config] of Object.entries(services.services)) {
+        if (config.enabled) {
+          startService(name, config, ports, databases, credentials);
+          execSync('sleep 1');
+        }
+      }
+      log('success', 'All services started');
+      break;
+
+    case 'stop-all':
+      // Alias for systemd - stops all services
+      log('info', 'Stopping all services (systemd trigger)...');
+      for (const [name, config] of Object.entries(services.services)) {
+        stopService(name, config, ports);
+      }
+      log('success', 'All services stopped');
+      break;
+
+    default:
+      console.log('');
+      console.log('╔══════════════════════════════════════════════════════════════════════════════╗');
+      console.log('║            ANKR-CTL v3.0 - Universal Service Orchestrator                    ║');
+      console.log('║                      NO HARDCODING - Central Config                          ║');
+      console.log('╚══════════════════════════════════════════════════════════════════════════════╝');
+      console.log('');
+      console.log('Usage: ankr-ctl <command> [service]');
+      console.log('');
+      console.log('Commands:');
+      console.log('  start [service]   - Start all or specific service');
+      console.log('  stop [service]    - Stop all or specific service');
+      console.log('  restart [service] - Restart service');
+      console.log('  status [service]  - Show status');
+      console.log('  health            - Health check all services');
+      console.log('  ports             - Show port allocations');
+      console.log('  apps              - Show apps with frontend/backend ports');
+      console.log('  db                - Show database configurations & mappings');
+      console.log('  db validate       - Validate database identity metadata');
+      console.log('  db init           - Initialize _ankr_metadata in all databases');
+      console.log('  db identity <app> - Show database identity for an app');
+      console.log('  db url <app>      - Output DATABASE_URL for an app (for scripts)');
+      console.log('  env               - Show injected env vars (NO HARDCODING!)');
+      console.log('');
+      console.log('App aliases (for db commands):');
+      console.log('  freightbox      -> freightbox-backend (Original Freight Mgmt)');
+      console.log('  fr8x            -> fr8x-backend (Freight Exchange)');
+      console.log('  odoo, odoo-fb   -> odoo-freightbox (Odoo ERP Module)');
+      console.log('  wowtruck        -> wowtruck-backend');
+      console.log('  bfc -> bfc-api, eon -> ankr-eon');
+      console.log('');
+      console.log('Config files:');
+      console.log(`  Ports:       ${PORTS_FILE}`);
+      console.log(`  Services:    ${SERVICES_FILE}`);
+      console.log(`  Databases:   ${DATABASES_FILE}`);
+      console.log(`  Credentials: ${CREDENTIALS_FILE}`);
+      console.log('');
+      console.log('Package for apps: @ankr/ports');
+      console.log('  import { getPort, getUrl } from "@ankr/ports";');
+      console.log('  const port = getPort("backend.wowtruck"); // 4000');
+      console.log('');
+      break;
+  }
+}
+
+main();

@@ -1,0 +1,481 @@
+// CoralsAstrology Database Schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ==================== USER MANAGEMENT ====================
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  password      String
+  firstName     String
+  lastName      String?
+  phone         String?
+  avatar        String?
+  role          UserRole  @default(USER)
+
+  // Birth Details
+  birthDate     DateTime?
+  birthTime     String?   // HH:mm format
+  birthPlace    String?
+  birthLat      Float?
+  birthLng      Float?
+  timezone      String?
+
+  // Calculated Astrology
+  sunSign       ZodiacSign?
+  moonSign      ZodiacSign?
+  ascendant     ZodiacSign?
+
+  // Preferences
+  language      String    @default("en")
+  notifyDaily   Boolean   @default(true)
+  notifyWeekly  Boolean   @default(true)
+
+  // Subscription
+  isPremium     Boolean   @default(false)
+  premiumUntil  DateTime?
+
+  // Metadata
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  lastLoginAt   DateTime?
+  isActive      Boolean   @default(true)
+
+  // Relations
+  birthChart    BirthChart?
+  readings      Reading[]
+  consultations Consultation[]
+  payments      Payment[]
+  savedHoroscopes SavedHoroscope[]
+  compatibilityChecks CompatibilityCheck[]
+
+  @@map("users")
+}
+
+enum UserRole {
+  USER
+  ASTROLOGER
+  ADMIN
+}
+
+enum ZodiacSign {
+  ARIES
+  TAURUS
+  GEMINI
+  CANCER
+  LEO
+  VIRGO
+  LIBRA
+  SCORPIO
+  SAGITTARIUS
+  CAPRICORN
+  AQUARIUS
+  PISCES
+}
+
+// ==================== BIRTH CHART ====================
+
+model BirthChart {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Chart Data (stored as JSON for flexibility)
+  planets     Json     // { sun: { sign, degree, house }, moon: {...}, ... }
+  houses      Json     // { 1: { sign, degree }, 2: {...}, ... }
+  aspects     Json     // [{ planet1, planet2, aspect, orb }, ...]
+
+  // Calculated Fields
+  sunSign     ZodiacSign
+  moonSign    ZodiacSign
+  ascendant   ZodiacSign
+
+  // Chart Metadata
+  chartType   String   @default("natal") // natal, transit, synastry
+  calculatedAt DateTime @default(now())
+
+  @@map("birth_charts")
+}
+
+// ==================== HOROSCOPES ====================
+
+model Horoscope {
+  id          String      @id @default(cuid())
+  zodiacSign  ZodiacSign
+  period      Period
+  date        DateTime    // Start date of the period
+
+  // Content
+  overview    String      @db.Text
+  love        String?     @db.Text
+  career      String?     @db.Text
+  finance     String?     @db.Text
+  health      String?     @db.Text
+  lucky       Json?       // { color, number, time }
+
+  // Ratings
+  loveRating      Int?    @default(3) // 1-5 stars
+  careerRating    Int?    @default(3)
+  financeRating   Int?    @default(3)
+  healthRating    Int?    @default(3)
+
+  // AI Generated
+  isAiGenerated Boolean @default(false)
+
+  // Metadata
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  publishedAt DateTime?
+  isPublished Boolean   @default(false)
+  authorId    String?
+
+  // Relations
+  savedBy     SavedHoroscope[]
+
+  @@unique([zodiacSign, period, date])
+  @@map("horoscopes")
+}
+
+enum Period {
+  DAILY
+  WEEKLY
+  MONTHLY
+  YEARLY
+}
+
+model SavedHoroscope {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  horoscopeId String
+  horoscope   Horoscope @relation(fields: [horoscopeId], references: [id], onDelete: Cascade)
+  savedAt     DateTime  @default(now())
+
+  @@unique([userId, horoscopeId])
+  @@map("saved_horoscopes")
+}
+
+// ==================== AI READINGS ====================
+
+model Reading {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Reading Type
+  type        ReadingType
+  question    String?   @db.Text
+
+  // Input Context
+  inputData   Json      // Birth chart, transit data, etc.
+
+  // AI Response
+  content     String    @db.Text
+  insights    Json?     // Structured insights
+
+  // Metadata
+  model       String    @default("gpt-4") // AI model used
+  tokens      Int?
+  createdAt   DateTime  @default(now())
+
+  @@map("readings")
+}
+
+enum ReadingType {
+  BIRTH_CHART_ANALYSIS
+  DAILY_GUIDANCE
+  COMPATIBILITY
+  CAREER_FORECAST
+  LOVE_FORECAST
+  TRANSIT_ANALYSIS
+  QUESTION_ANSWER
+}
+
+// ==================== ASTROLOGERS ====================
+
+model Astrologer {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  password      String
+
+  // Profile
+  firstName     String
+  lastName      String
+  displayName   String
+  avatar        String?
+  bio           String?   @db.Text
+
+  // Expertise
+  specializations String[] // Vedic, Western, KP, etc.
+  languages     String[]   // en, hi, ta, etc.
+  experience    Int        // Years of experience
+
+  // Ratings
+  rating        Float     @default(0)
+  reviewCount   Int       @default(0)
+
+  // Availability
+  isAvailable   Boolean   @default(true)
+  hourlyRate    Int       // In rupees/dollars
+
+  // Verification
+  isVerified    Boolean   @default(false)
+  verifiedAt    DateTime?
+
+  // Metadata
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  isActive      Boolean   @default(true)
+
+  // Relations
+  consultations Consultation[]
+  availability  AstrologerAvailability[]
+  reviews       Review[]
+
+  @@map("astrologers")
+}
+
+model AstrologerAvailability {
+  id            String    @id @default(cuid())
+  astrologerId  String
+  astrologer    Astrologer @relation(fields: [astrologerId], references: [id], onDelete: Cascade)
+
+  dayOfWeek     Int       // 0 = Sunday, 6 = Saturday
+  startTime     String    // HH:mm format
+  endTime       String    // HH:mm format
+
+  isActive      Boolean   @default(true)
+
+  @@map("astrologer_availability")
+}
+
+// ==================== CONSULTATIONS ====================
+
+model Consultation {
+  id            String    @id @default(cuid())
+
+  userId        String
+  user          User      @relation(fields: [userId], references: [id])
+
+  astrologerId  String
+  astrologer    Astrologer @relation(fields: [astrologerId], references: [id])
+
+  // Scheduling
+  scheduledAt   DateTime
+  duration      Int       @default(30) // Minutes
+
+  // Status
+  status        ConsultationStatus @default(PENDING)
+
+  // Communication
+  meetingLink   String?
+  notes         String?   @db.Text
+
+  // Payment
+  amount        Int
+  paymentId     String?
+  paymentStatus PaymentStatus @default(PENDING)
+
+  // Metadata
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  cancelledAt   DateTime?
+  cancellationReason String?
+
+  // Relations
+  review        Review?
+
+  @@map("consultations")
+}
+
+enum ConsultationStatus {
+  PENDING
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+model Review {
+  id              String    @id @default(cuid())
+
+  consultationId  String    @unique
+  consultation    Consultation @relation(fields: [consultationId], references: [id])
+
+  astrologerId    String
+  astrologer      Astrologer @relation(fields: [astrologerId], references: [id])
+
+  rating          Int       // 1-5 stars
+  comment         String?   @db.Text
+
+  createdAt       DateTime  @default(now())
+
+  @@map("reviews")
+}
+
+// ==================== PAYMENTS ====================
+
+model Payment {
+  id            String    @id @default(cuid())
+
+  userId        String
+  user          User      @relation(fields: [userId], references: [id])
+
+  // Payment Details
+  amount        Int
+  currency      String    @default("INR")
+
+  // Gateway
+  gateway       String    // razorpay, stripe
+  gatewayId     String?   // Gateway transaction ID
+
+  // Purpose
+  purpose       PaymentPurpose
+  referenceId   String?   // Consultation ID, Subscription ID, etc.
+
+  // Status
+  status        PaymentStatus @default(PENDING)
+
+  // Metadata
+  metadata      Json?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@map("payments")
+}
+
+enum PaymentPurpose {
+  CONSULTATION
+  SUBSCRIPTION
+  READING
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCESS
+  FAILED
+  REFUNDED
+}
+
+// ==================== COMPATIBILITY ====================
+
+model CompatibilityCheck {
+  id          String    @id @default(cuid())
+
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Partner Details
+  partnerName String
+  partnerBirthDate DateTime
+  partnerBirthTime String?
+  partnerBirthPlace String?
+
+  // Compatibility Scores
+  overallScore    Int   // 0-100
+  loveScore       Int
+  emotionalScore  Int
+  intellectualScore Int
+  physicalScore   Int
+
+  // Analysis
+  analysis    String    @db.Text
+  strengths   String[]
+  challenges  String[]
+  advice      String?   @db.Text
+
+  createdAt   DateTime  @default(now())
+
+  @@map("compatibility_checks")
+}
+
+// ==================== PLANETARY TRANSITS ====================
+
+model Transit {
+  id          String    @id @default(cuid())
+
+  planet      Planet
+  fromSign    ZodiacSign
+  toSign      ZodiacSign
+
+  startDate   DateTime
+  endDate     DateTime
+
+  // Impact
+  title       String
+  description String    @db.Text
+  affectedSigns String[] // Array of zodiac signs most affected
+
+  createdAt   DateTime  @default(now())
+
+  @@map("transits")
+}
+
+enum Planet {
+  SUN
+  MOON
+  MERCURY
+  VENUS
+  MARS
+  JUPITER
+  SATURN
+  URANUS
+  NEPTUNE
+  PLUTO
+  RAHU
+  KETU
+}
+
+// ==================== BLOG & CONTENT ====================
+
+model Article {
+  id          String    @id @default(cuid())
+
+  title       String
+  slug        String    @unique
+  content     String    @db.Text
+  excerpt     String?
+
+  // SEO
+  metaTitle   String?
+  metaDescription String?
+
+  // Categorization
+  category    String
+  tags        String[]
+
+  // Media
+  coverImage  String?
+
+  // Publishing
+  authorId    String
+  publishedAt DateTime?
+  isPublished Boolean   @default(false)
+
+  // Analytics
+  views       Int       @default(0)
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("articles")
+}
+
+// ==================== ADMIN & ANALYTICS ====================
+
+model SystemConfig {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     Json
+  updatedAt DateTime @updatedAt
+
+  @@map("system_config")
+}

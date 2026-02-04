@@ -1,0 +1,132 @@
+{
+  "author": {
+    "name": "Bharat Anil",
+    "id": "bharat-anil",
+    "role": "Principal - Strategic Initiatives",
+    "created": "2026-01-19"
+  },
+  "documents": [
+    {
+      "id": "option-chain-analysis-possibilities",
+      "title": "Option Chain Time Series Analysis - Comprehensive Possibilities Document",
+      "filename": "OPTION-CHAIN-ANALYSIS-POSSIBILITIES.md",
+      "url": "https://ankr.in/project/documents/OPTION-CHAIN-ANALYSIS-POSSIBILITIES.md",
+      "description": "Complete guide to option chain analytics: volatility indicators, flow analysis, Greeks-based signals, ML applications, and implementation roadmap",
+      "category": "trading-analytics",
+      "tags": [
+        "options",
+        "derivatives",
+        "volatility",
+        "greeks",
+        "implied-volatility",
+        "gamma-exposure",
+        "put-call-ratio",
+        "market-microstructure",
+        "quantitative-trading",
+        "nifty",
+        "banknifty"
+      ],
+      "version": "1.0",
+      "created": "2026-01-19",
+      "lastUpdated": "2026-01-19",
+      "dataSource": ["Kuber", "Pratham"],
+      "frequency": "1-minute",
+      "sections": [
+        "Data Requirements",
+        "Volatility Analysis Indicators",
+        "Flow & Sentiment Indicators",
+        "Greeks-Based Signals",
+        "Price Discovery & Arbitrage",
+        "Advanced Composite Indicators",
+        "Machine Learning Applications",
+        "Real-Time Alerting System",
+        "Visualization & Dashboards",
+        "Implementation Roadmap"
+      ]
+    },
+    {
+      "id": "vyomo-brainstorm",
+      "title": "Vyomo - Comprehensive Product & Technical Document",
+      "filename": "BRAINSTORM.md",
+      "url": "https://ankr.in/project/documents/BRAINSTORM.md",
+      "description": "Vyomo (व्योमो) - Momentum in Trade. Complete product vision for India's first AI-powered trading analytics platform. Options, commodities, forex, crypto.",
+      "category": "product-strategy",
+      "tags": [
+        "product",
+        "strategy",
+        "options-platform",
+        "fintech",
+        "sebi",
+        "retail-trading",
+        "ai",
+        "vernacular",
+        "b2c",
+        "b2b"
+      ],
+      "version": "0.1.0-alpha",
+      "created": "2026-01-19",
+      "lastUpdated": "2026-01-19",
+      "sections": [
+        "Vision & Mission",
+        "Market Analysis",
+        "Product Concepts",
+        "Technical Architecture",
+        "Data Strategy",
+        "Feature Breakdown",
+        "BFC Integration",
+        "Monetization",
+        "Regulatory Compliance",
+        "Competitive Landscape",
+        "Roadmap"
+      ],
+      "relatedProjects": ["@vyomo/api", "@vyomo/web", "@vyomo/core", "@ankr/bfc"]
+    },
+    {
+      "id": "vyomo-todo",
+      "title": "Vyomo - Project TODO & Implementation Plan",
+      "filename": "TODO.md",
+      "url": "https://ankr.in/project/documents/TODO.md",
+      "description": "Detailed 52-week implementation roadmap with 100+ tasks across 6 phases: Foundation, MVP, Advanced Analytics, AI/ML, Portfolio & Risk, Scale & Launch",
+      "category": "project-management",
+      "tags": [
+        "todo",
+        "roadmap",
+        "implementation",
+        "tasks",
+        "milestones",
+        "development"
+      ],
+      "version": "1.0",
+      "created": "2026-01-19",
+      "lastUpdated": "2026-01-19",
+      "phases": [
+        "Phase 0: Foundation (Weeks 1-4)",
+        "Phase 1: MVP (Weeks 5-12)",
+        "Phase 2: Advanced Analytics (Weeks 13-20)",
+        "Phase 3: AI & ML (Weeks 21-28)",
+        "Phase 4: Portfolio & Risk (Weeks 29-36)",
+        "Phase 5: Education & Social (Weeks 37-44)",
+        "Phase 6: Scale & Launch (Weeks 45-52)"
+      ],
+      "stack": ["Fastify", "Mercurius", "Vite", "Prisma", "PostgreSQL", "TimescaleDB", "pgvector"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "vyomo",
+      "name": "Vyomo - AI Trading Analytics Platform",
+      "domain": "vyomo.in",
+      "status": "planning",
+      "packages": [
+        "@vyomo/api",
+        "@vyomo/web",
+        "@vyomo/core"
+      ]
+    }
+  ],
+  "metadata": {
+    "indexVersion": "1.1",
+    "lastUpdated": "2026-01-19T11:30:00Z",
+    "totalDocuments": 3
+  }
+}

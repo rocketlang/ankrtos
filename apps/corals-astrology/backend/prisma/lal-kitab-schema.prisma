@@ -1,0 +1,354 @@
+// LAL KITAB (RED BOOK) ASTROLOGY SYSTEM
+// Unique Indian astrology system with practical remedies
+
+// ==================== LAL KITAB KUNDLI ====================
+
+model LalKitabKundli {
+  id          String    @id @default(cuid())
+  userId      String    @unique
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Birth Details
+  birthDate   DateTime
+  birthTime   String
+  birthPlace  String
+  birthLat    Float
+  birthLng    Float
+
+  // Lal Kitab Chart (House-wise planets)
+  houses      Json      // { 1: ["Sun", "Mercury"], 2: ["Moon"], ... }
+
+  // Planetary Positions (Lal Kitab specific)
+  planets     Json      // { Sun: { house, isDebilitated, isExalted, isPakka, isKaccha }, ... }
+
+  // Varshphal (Annual Chart)
+  varshphal   Json?
+
+  // Debts (Rinas) - Unique to Lal Kitab
+  fatherDebt      Boolean   @default(false)  // Pitri Rina
+  motherDebt      Boolean   @default(false)  // Matri Rina
+  brotherDebt     Boolean   @default(false)  // Bhratri Rina
+  womanDebt       Boolean   @default(false)  // Stri Rina
+  selfDebt        Boolean   @default(false)  // Atma Rina
+
+  // Debts Analysis
+  debtsAnalysis   Json      // Detailed debt analysis
+
+  // Blind Planets (Andhe Grah)
+  blindPlanets    String[]  // Planets that are "blind"
+
+  // Sleeping Planets (Sone Grah)
+  sleepingPlanets String[]
+
+  // Pakka & Kaccha Houses
+  pakkaHouses     Int[]     // Strong houses
+  kacchaHouses    Int[]     // Weak houses
+
+  // Taveez (Amulets) Recommendations
+  taveez          Json[]    // [{ planet, design, material, day }]
+
+  // Lal Kitab Yogas
+  yogas           Json[]    // Special combinations
+
+  // Aspects (Lal Kitab specific - different from Vedic)
+  aspects         Json      // Unique aspect system
+
+  // Predictions
+  predictions     String    @db.Text
+  warnings        String[]
+  opportunities   String[]
+
+  // Remedies
+  remedies        LalKitabRemedy[]
+
+  // Metadata
+  generatedAt     DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@map("lal_kitab_kundlis")
+}
+
+// ==================== LAL KITAB REMEDIES ====================
+
+model LalKitabRemedy {
+  id              String    @id @default(cuid())
+
+  kundliId        String
+  kundli          LalKitabKundli @relation(fields: [kundliId], references: [id], onDelete: Cascade)
+
+  // Problem
+  issue           String
+  affectedPlanet  String
+  affectedHouse   Int
+
+  // Remedy Type
+  type            LalKitabRemedyType
+
+  // Remedy Details
+  title           String
+  description     String    @db.Text
+  instructions    String[]  // Step-by-step
+
+  // Timing
+  startDay        String?   // Monday, Tuesday, etc.
+  duration        Int?      // Days
+  time            String?   // Best time to perform
+
+  // Materials Needed
+  materials       String[]
+
+  // Cost
+  estimatedCost   String?   // "Free", "₹10", "₹100", etc.
+
+  // Difficulty
+  difficulty      RemedyDifficulty
+
+  // Effectiveness
+  effectiveness   Int       // 1-10 scale
+
+  // Status
+  isActive        Boolean   @default(true)
+  isCompleted     Boolean   @default(false)
+  completedAt     DateTime?
+
+  // Notes
+  userNotes       String?   @db.Text
+
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@map("lal_kitab_remedies")
+}
+
+enum LalKitabRemedyType {
+  DONATION        // Dan (charity)
+  WATER_REMEDY    // Flowing water remedies
+  FEEDING         // Feeding animals/birds
+  BURIAL          // Burying items
+  IMMERSION       // Immersing in water
+  WEARING         // Wearing specific items
+  TAVEEZ          // Amulets
+  WORSHIP         // Puja/prayers
+  BEHAVIORAL      // Lifestyle changes
+  AVOIDANCE       // Things to avoid
+  OFFERING        // Offerings to deities
+  PLANTATION      // Planting trees
+  ANIMALS         // Animal-related remedies
+}
+
+enum RemedyDifficulty {
+  VERY_EASY       // Can do immediately
+  EASY            // Simple, no special requirements
+  MODERATE        // Requires some effort
+  DIFFICULT       // Needs planning
+  VERY_DIFFICULT  // Complex or expensive
+}
+
+// ==================== LAL KITAB VARSHPHAL ====================
+
+model LalKitabVarshphal {
+  id              String    @id @default(cuid())
+  userId          String
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Year Details
+  year            Int
+  startDate       DateTime
+  endDate         DateTime
+
+  // Annual Chart
+  annualChart     Json
+
+  // Predictions by Area
+  health          String    @db.Text
+  wealth          String    @db.Text
+  career          String    @db.Text
+  family          String    @db.Text
+  relationships   String    @db.Text
+  education       String    @db.Text
+
+  // Important Dates
+  auspiciousDates DateTime[]
+  inauspiciousDates DateTime[]
+
+  // Month-wise Predictions
+  monthlyPredictions Json  // { 1: {...}, 2: {...}, ... }
+
+  // Remedies for the Year
+  yearlyRemedies  String[]
+
+  // Overall Rating
+  overallRating   Int       // 0-100
+
+  createdAt       DateTime  @default(now())
+
+  @@unique([userId, year])
+  @@map("lal_kitab_varshphals")
+}
+
+// ==================== LAL KITAB PRASHNA ====================
+
+model LalKitabPrashna {
+  id              String    @id @default(cuid())
+  userId          String?
+  user            User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Question Details
+  question        String    @db.Text
+  category        String    // Marriage, Career, Health, etc.
+
+  // Prashna Time
+  prashnaDate     DateTime
+  prashnaTime     String
+  location        String
+  latitude        Float
+  longitude       Float
+
+  // Prashna Chart
+  prashnaChart    Json
+
+  // Answer
+  answer          String    @db.Text
+  timeframe       String?   // When will it happen
+  probability     Int?      // Confidence 0-100
+
+  // Remedies
+  remedies        String[]
+
+  createdAt       DateTime  @default(now())
+
+  @@map("lal_kitab_prashnas")
+}
+
+// ==================== LAL KITAB COMPATIBILITY ====================
+
+model LalKitabCompatibility {
+  id              String    @id @default(cuid())
+  userId          String
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Partner 1
+  person1Name     String
+  person1Birth    DateTime
+  person1Time     String
+  person1Place    String
+
+  // Partner 2
+  person2Name     String
+  person2Birth    DateTime
+  person2Time     String
+  person2Place    String
+
+  // Compatibility Analysis
+  overallScore    Int       // 0-100
+
+  // Area-wise Scores
+  mentalCompatibility     Int
+  physicalCompatibility   Int
+  emotionalCompatibility  Int
+  financialCompatibility  Int
+  familyCompatibility     Int
+
+  // Lal Kitab Specific Checks
+  debtCompatibility Boolean // Do debts match?
+  houseCompatibility Int    // House lord compatibility
+
+  // Analysis
+  strengths       String[]
+  challenges      String[]
+  recommendations String    @db.Text
+
+  // Remedies
+  remedies        String[]
+
+  // Marriage Muhurat Suggestions
+  auspiciousDates DateTime[]
+
+  createdAt       DateTime  @default(now())
+
+  @@map("lal_kitab_compatibility")
+}
+
+// ==================== LAL KITAB TAVEEZ ====================
+
+model LalKitabTaveez {
+  id              String    @id @default(cuid())
+
+  // Taveez Details
+  name            String
+  purpose         String
+  planet          String
+
+  // Design
+  symbol          String    @db.Text
+  mantra          String?
+  number          Int?
+
+  // Material & Construction
+  material        String    // Paper, metal, cloth
+  color           String
+  shape           String
+
+  // How to Use
+  instructions    String[]  @db.Text
+  wearingDay      String
+  wearingTime     String
+
+  // Effectiveness
+  duration        Int       // Days it remains effective
+  renewalRequired Boolean
+
+  // Image
+  imageUrl        String?
+
+  createdAt       DateTime  @default(now())
+
+  @@map("lal_kitab_taveez")
+}
+
+// ==================== LAL KITAB ARTICLES ====================
+
+model LalKitabArticle {
+  id              String    @id @default(cuid())
+
+  title           String
+  slug            String    @unique
+  content         String    @db.Text
+  excerpt         String?
+
+  // Category
+  category        LalKitabCategory
+
+  // SEO
+  metaTitle       String?
+  metaDescription String?
+
+  // Media
+  coverImage      String?
+
+  // Engagement
+  views           Int       @default(0)
+  likes           Int       @default(0)
+
+  // Publishing
+  isPublished     Boolean   @default(false)
+  publishedAt     DateTime?
+
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@map("lal_kitab_articles")
+}
+
+enum LalKitabCategory {
+  BASICS
+  REMEDIES
+  PLANETS
+  HOUSES
+  DEBTS
+  VARSHPHAL
+  PRASHNA
+  TAVEEZ
+  YOGAS
+  CASE_STUDIES
+}

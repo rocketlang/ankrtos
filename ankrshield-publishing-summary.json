@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-01-23T18:18:08.530Z",
+  "project": "ANKRShield",
+  "total": 25,
+  "published": 24,
+  "failed": 1,
+  "successRate": "96.0%",
+  "failedPackages": [
+    "@ankrshield/auth-jwt"
+  ],
+  "byCategory": {
+    "security": 2,
+    "backend": 4,
+    "frontend": 18,
+    "shared": 1
+  }
+}

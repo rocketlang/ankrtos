@@ -1,0 +1,3434 @@
+2026/01/20 20:04:00 [warn] 278554#278554: protocol options redefined for 0.0.0.0:443 in /etc/nginx/sites-enabled/ankr-crm:108
+2026/01/20 20:04:00 [warn] 278554#278554: protocol options redefined for 0.0.0.0:443 in /etc/nginx/sites-enabled/bani.ankr.in:8
+2026/01/20 20:04:00 [warn] 278554#278554: protocol options redefined for 0.0.0.0:443 in /etc/nginx/sites-enabled/complymitra:9
+2026/01/20 20:04:00 [warn] 278554#278554: protocol options redefined for 0.0.0.0:443 in /etc/nginx/sites-enabled/pulse.ankr.in:11
+2026/01/20 20:04:00 [warn] 278554#278554: protocol options redefined for 0.0.0.0:443 in /etc/nginx/sites-enabled/saathi.ankr.in:19
+2026/01/20 20:04:00 [warn] 278554#278554: protocol options redefined for 0.0.0.0:443 in /etc/nginx/sites-enabled/swayam:8
+2026/01/20 20:04:00 [warn] 278554#278554: protocol options redefined for 0.0.0.0:443 in /etc/nginx/sites-enabled/vyomo.in:11
+2026/01/20 20:04:00 [warn] 278554#278554: protocol options redefined for 0.0.0.0:443 in /etc/nginx/sites-enabled/wowtruck:9
+2026/01/20 20:04:00 [warn] 278554#278554: protocol options redefined for 0.0.0.0:443 in /etc/nginx/sites-enabled/wowtruck:221
+2026/01/20 20:04:00 [warn] 278554#278554: conflicting server name "ankr.in" on 0.0.0.0:80, ignored
+2026/01/20 20:04:00 [warn] 278554#278554: conflicting server name "www.ankr.in" on 0.0.0.0:80, ignored
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+# configuration file /etc/nginx/nginx.conf:
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+error_log /var/log/nginx/error.log;
+include /etc/nginx/modules-enabled/*.conf;
+
+events {
+	worker_connections 768;
+	# multi_accept on;
+}
+
+http {
+    limit_req_zone $binary_remote_addr zone=antiscrapenew:10m rate=10r/s;
+
+	##
+	# Basic Settings
+	##
+
+	sendfile on;
+	tcp_nopush on;
+	types_hash_max_size 2048;
+	# server_tokens off;
+
+	# server_names_hash_bucket_size 64;
+	# server_name_in_redirect off;
+
+	include /etc/nginx/mime.types;
+	default_type application/octet-stream;
+
+	##
+	# SSL Settings
+	##
+
+	ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE
+	ssl_prefer_server_ciphers on;
+
+	##
+	# Logging Settings
+	##
+
+	access_log /var/log/nginx/access.log;
+
+	##
+	# Gzip Settings
+	##
+
+	gzip on;
+
+	# gzip_vary on;
+	# gzip_proxied any;
+	# gzip_comp_level 6;
+	# gzip_buffers 16 8k;
+	# gzip_http_version 1.1;
+	# gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+
+	##
+	# Virtual Host Configs
+	##
+
+	include /etc/nginx/conf.d/*.conf;
+	include /etc/nginx/sites-enabled/*;
+}
+
+
+#mail {
+#	# See sample authentication script at:
+#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
+#
+#	# auth_http localhost/auth.php;
+#	# pop3_capabilities "TOP" "USER";
+#	# imap_capabilities "IMAP4rev1" "UIDPLUS";
+#
+#	server {
+#		listen     localhost:110;
+#		protocol   pop3;
+#		proxy      on;
+#	}
+#
+#	server {
+#		listen     localhost:143;
+#		protocol   imap;
+#		proxy      on;
+#	}
+#}
+
+# configuration file /etc/nginx/mime.types:
+
+types {
+    text/html                                        html htm shtml;
+    text/css                                         css;
+    text/xml                                         xml;
+    image/gif                                        gif;
+    image/jpeg                                       jpeg jpg;
+    application/javascript                           js;
+    application/atom+xml                             atom;
+    application/rss+xml                              rss;
+
+    text/mathml                                      mml;
+    text/plain                                       txt md;
+    text/vnd.sun.j2me.app-descriptor                 jad;
+    text/vnd.wap.wml                                 wml;
+    text/x-component                                 htc;
+
+    image/avif                                       avif;
+    image/png                                        png;
+    image/svg+xml                                    svg svgz;
+    image/tiff                                       tif tiff;
+    image/vnd.wap.wbmp                               wbmp;
+    image/webp                                       webp;
+    image/x-icon                                     ico;
+    image/x-jng                                      jng;
+    image/x-ms-bmp                                   bmp;
+
+    font/woff                                        woff;
+    font/woff2                                       woff2;
+
+    application/java-archive                         jar war ear;
+    application/json                                 json;
+    application/mac-binhex40                         hqx;
+    application/msword                               doc;
+    application/pdf                                  pdf;
+    application/postscript                           ps eps ai;
+    application/rtf                                  rtf;
+    application/vnd.apple.mpegurl                    m3u8;
+    application/vnd.google-earth.kml+xml             kml;
+    application/vnd.google-earth.kmz                 kmz;
+    application/vnd.ms-excel                         xls;
+    application/vnd.ms-fontobject                    eot;
+    application/vnd.ms-powerpoint                    ppt;
+    application/vnd.oasis.opendocument.graphics      odg;
+    application/vnd.oasis.opendocument.presentation  odp;
+    application/vnd.oasis.opendocument.spreadsheet   ods;
+    application/vnd.oasis.opendocument.text          odt;
+    application/vnd.openxmlformats-officedocument.presentationml.presentation
+                                                     pptx;
+    application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+                                                     xlsx;
+    application/vnd.openxmlformats-officedocument.wordprocessingml.document
+                                                     docx;
+    application/vnd.wap.wmlc                         wmlc;
+    application/wasm                                 wasm;
+    application/x-7z-compressed                      7z;
+    application/x-cocoa                              cco;
+    application/x-java-archive-diff                  jardiff;
+    application/x-java-jnlp-file                     jnlp;
+    application/x-makeself                           run;
+    application/x-perl                               pl pm;
+    application/x-pilot                              prc pdb;
+    application/x-rar-compressed                     rar;
+    application/x-redhat-package-manager             rpm;
+    application/x-sea                                sea;
+    application/x-shockwave-flash                    swf;
+    application/x-stuffit                            sit;
+    application/x-tcl                                tcl tk;
+    application/x-x509-ca-cert                       der pem crt;
+    application/x-xpinstall                          xpi;
+    application/xhtml+xml                            xhtml;
+    application/xspf+xml                             xspf;
+    application/zip                                  zip;
+
+    application/octet-stream                         bin exe dll;
+    application/octet-stream                         deb;
+    application/octet-stream                         dmg;
+    application/octet-stream                         iso img;
+    application/octet-stream                         msi msp msm;
+
+    audio/midi                                       mid midi kar;
+    audio/mpeg                                       mp3;
+    audio/ogg                                        ogg;
+    audio/x-m4a                                      m4a;
+    audio/x-realaudio                                ra;
+
+    video/3gpp                                       3gpp 3gp;
+    video/mp2t                                       ts;
+    video/mp4                                        mp4;
+    video/mpeg                                       mpeg mpg;
+    video/ogg                                        ogv;
+    video/quicktime                                  mov;
+    video/webm                                       webm;
+    video/x-flv                                      flv;
+    video/x-m4v                                      m4v;
+    video/x-matroska                                 mkv;
+    video/x-mng                                      mng;
+    video/x-ms-asf                                   asx asf;
+    video/x-ms-wmv                                   wmv;
+    video/x-msvideo                                  avi;
+}
+
+# configuration file /etc/nginx/sites-enabled/ankr-compliance:
+server {
+    listen 80;
+    server_name compliance.ankr.digital;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name compliance.ankr.digital;
+
+    ssl_certificate /etc/letsencrypt/live/compliance.ankr.digital/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/compliance.ankr.digital/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    # GraphQL API
+    location /graphql {
+        proxy_pass http://127.0.0.1:4001;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # Health check
+    location /health {
+        proxy_pass http://127.0.0.1:4001;
+    }
+
+    # AI Proxy - handle both /ai and /ai/
+    location /ai {
+        proxy_pass http://127.0.0.1:4444/api/ai;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 60s;
+    }
+
+    # Root - redirect to health or graphql
+    location = / {
+        return 302 /health;
+    }
+
+    # Catch-all for other routes
+    location / {
+        proxy_pass http://127.0.0.1:4001;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+
+# configuration file /etc/letsencrypt/options-ssl-nginx.conf:
+# This file contains important security parameters. If you modify this file
+# manually, Certbot will be unable to automatically provide future security
+# updates. Instead, Certbot will print and log an error message with a path to
+# the up-to-date file that you will need to refer to when manually updating
+# this file. Contents are based on https://ssl-config.mozilla.org
+
+ssl_session_cache shared:le_nginx_SSL:10m;
+ssl_session_timeout 1440m;
+ssl_session_tickets off;
+
+ssl_protocols TLSv1.2 TLSv1.3;
+ssl_prefer_server_ciphers off;
+
+ssl_ciphers "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384";
+
+# configuration file /etc/nginx/sites-enabled/ankr-compliance-web:
+server {
+    listen 80;
+    server_name app.compliance.ankr.digital;
+    return 301 https://$server_name$request_uri;
+}
+server {
+    listen 443 ssl;
+    server_name app.compliance.ankr.digital;
+    ssl_certificate /etc/letsencrypt/live/app.compliance.ankr.digital/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/app.compliance.ankr.digital/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    root /var/www/ankr-compliance;
+    index index.html;
+
+    # GraphQL API
+    location /graphql {
+        proxy_pass http://127.0.0.1:4001;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # AI Proxy - handles both /ai and /ai/
+    location /ai {
+        proxy_pass http://127.0.0.1:4444/api/ai;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 60s;
+    }
+
+    # Static files
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Cache static assets
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/ankr-crm:
+# ANKR CRM - Multi-tenant CRM Application
+
+upstream ankr_crm_bff {
+    server 127.0.0.1:4011;
+    keepalive 64;
+}
+
+upstream ankr_crm_frontend {
+    server 127.0.0.1:5177;
+    keepalive 64;
+}
+
+# HTTP - redirect to HTTPS
+server {
+    listen 80;
+    server_name crm.ankr.in;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+# bharatcrm.org HTTP - redirect to HTTPS
+server {
+    listen 80;
+    server_name bharatcrm.org www.bharatcrm.org;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+# HTTPS server
+server {
+    listen 443 ssl http2;
+    server_name crm.ankr.in;
+
+    ssl_certificate /etc/ssl/cloudflare/ankr-origin.crt;
+    ssl_certificate_key /etc/ssl/cloudflare/ankr-origin.key;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    # Security headers
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+
+    location /graphql {
+        proxy_pass http://ankr_crm_bff/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    location /graphiql {
+        proxy_pass http://ankr_crm_bff/graphiql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    location /health {
+        proxy_pass http://ankr_crm_bff/health;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    # ANKR Interact - Knowledge Browser
+    location /interact/ {
+        proxy_pass http://localhost:3199/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+    location /interact {
+        return 301 /interact/;
+    }
+
+    location / {
+        proxy_pass http://ankr_crm_frontend;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_connect_timeout 60s;
+        proxy_send_timeout 60s;
+        proxy_read_timeout 60s;
+    }
+}
+
+# bharatcrm.org HTTPS server (Cloudflare Origin Certificate)
+server {
+    listen 443 ssl http2;
+    server_name bharatcrm.org www.bharatcrm.org;
+
+    ssl_certificate /etc/ssl/cloudflare/bharatcrm/origin.crt;
+    ssl_certificate_key /etc/ssl/cloudflare/bharatcrm/origin.key;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    # Security headers
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+
+    location /graphql {
+        proxy_pass http://ankr_crm_bff/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    location /graphiql {
+        proxy_pass http://ankr_crm_bff/graphiql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    location /health {
+        proxy_pass http://ankr_crm_bff/health;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    # ANKR Interact - Knowledge Browser
+    location /interact/ {
+        proxy_pass http://localhost:3199/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+    location /interact {
+        return 301 /interact/;
+    }
+
+    location / {
+        proxy_pass http://ankr_crm_frontend;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_connect_timeout 60s;
+        proxy_send_timeout 60s;
+        proxy_read_timeout 60s;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/ankr-crm-complymitra:
+# ComplyMitra CRM - White-label CRM Instance
+
+upstream ankr_crm_bff_complymitra {
+    server 127.0.0.1:4014;
+    keepalive 64;
+}
+
+upstream ankr_crm_frontend_complymitra {
+    server 127.0.0.1:5177;
+    keepalive 64;
+}
+
+# HTTP - redirect to HTTPS
+server {
+    listen 80;
+    server_name crm.complymitra.in;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+# HTTPS server
+server {
+    listen 443 ssl http2;
+    server_name crm.complymitra.in;
+
+    ssl_certificate /etc/ssl/cloudflare/ankr-origin.crt;
+    ssl_certificate_key /etc/ssl/cloudflare/ankr-origin.key;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    location /graphql {
+        proxy_pass http://ankr_crm_bff_complymitra/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location / {
+        proxy_pass http://ankr_crm_frontend_complymitra;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/ankr-crm-freightbox:
+# FreightBox CRM - White-label CRM Instance
+
+upstream ankr_crm_bff_freightbox {
+    server 127.0.0.1:4013;
+    keepalive 64;
+}
+
+upstream ankr_crm_frontend_freightbox {
+    server 127.0.0.1:5176;
+    keepalive 64;
+}
+
+# HTTP - redirect to HTTPS
+server {
+    listen 80;
+    server_name crm.freightbox.ankr.in;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+# HTTPS server
+server {
+    listen 443 ssl http2;
+    server_name crm.freightbox.ankr.in;
+
+    ssl_certificate /etc/ssl/cloudflare/ankr-origin.crt;
+    ssl_certificate_key /etc/ssl/cloudflare/ankr-origin.key;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    location /graphql {
+        proxy_pass http://ankr_crm_bff_freightbox/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location / {
+        proxy_pass http://ankr_crm_frontend_freightbox;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/ankr-crm-wowtruck:
+# WowTruck CRM - White-label CRM Instance
+
+upstream ankr_crm_bff_wowtruck {
+    server 127.0.0.1:4012;
+    keepalive 64;
+}
+
+upstream ankr_crm_frontend_wowtruck {
+    server 127.0.0.1:5175;
+    keepalive 64;
+}
+
+# HTTP - redirect to HTTPS
+server {
+    listen 80;
+    server_name crm.wowtruck.ankr.in;
+    include snippets/anti-scrape.conf;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+# HTTPS server
+server {
+    listen 443 ssl http2;
+    server_name crm.wowtruck.ankr.in;
+    include snippets/anti-scrape.conf;
+
+    ssl_certificate /etc/ssl/cloudflare/ankr-origin.crt;
+    ssl_certificate_key /etc/ssl/cloudflare/ankr-origin.key;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    location /graphql {
+        proxy_pass http://ankr_crm_bff_wowtruck/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location / {
+        proxy_pass http://ankr_crm_frontend_wowtruck;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+}
+
+# configuration file /etc/nginx/snippets/anti-scrape.conf:
+# Anti-scraping protection
+# Block common scrapers/bots by User-Agent
+if ($http_user_agent ~* (Scrapy|Curl|HttpClient|Python-urllib|libwww|wget|Go-http|Java|curl|python|scrapy|bot|crawler|spider|scraper|harvest|collect|extract|grab|fetch)) {
+    return 403;
+}
+
+# Rate limit per IP
+limit_req zone=antiscrapenew burst=20 nodelay;
+
+# Block if no User-Agent
+if ($http_user_agent = "") {
+    return 403;
+}
+
+# Block direct IP access
+if ($host ~* "^\d+\.\d+\.\d+\.\d+$") {
+    return 403;
+}
+
+# configuration file /etc/nginx/sites-enabled/ankr.in:
+server {
+    listen 80;
+    listen [::]:80;
+    server_name ankr.in www.ankr.in;
+
+    root /var/www/ankr-landing;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    location /packages {
+        alias /var/www/ankr.in/packages;
+        index index.html;
+        try_files $uri $uri/ /packages/index.html;
+    }
+
+    location /downloads {
+        alias /var/www/ankr.in/downloads;
+        autoindex on;
+    }
+
+    # AI Proxy for translations and AI services
+    location /ai/ {
+        proxy_pass http://localhost:4444/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_cache_bypass $http_upgrade;
+        proxy_read_timeout 120s;
+    }
+
+    # API proxy to Saathi
+    location /api/ {
+        proxy_pass http://localhost:4008/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    # ANKR Viewer - Document Browser
+    location /viewer {
+        proxy_pass http://localhost:3199;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    location /viewer/api {
+        proxy_pass http://localhost:3199/api;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/ankrforge.in:
+# AnkrForge - Custom-Fit-as-a-Service Platform
+# "Forged For You"
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name ankrforge.in www.ankrforge.in forge.ankr.in;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name forge.ankr.in;
+
+    ssl_certificate /etc/letsencrypt/live/forge.ankr.in/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/forge.ankr.in/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256;
+    ssl_prefer_server_ciphers off;
+
+    # Frontend (React/Vite on port 3200)
+    location / {
+        proxy_pass http://localhost:3200;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    # Vite HMR WebSocket
+    location /ws {
+        proxy_pass http://localhost:3200;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_read_timeout 86400;
+    }
+
+    # API (Fastify on port 4201)
+    location /api/ {
+        proxy_pass http://localhost:4201/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+
+        # File upload limits
+        client_max_body_size 100M;
+    }
+
+    # Health check
+    location /health {
+        proxy_pass http://localhost:4201/health;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    # Swagger docs
+    location /docs {
+        proxy_pass http://localhost:4201/docs;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    # Static assets caching
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+        proxy_pass http://localhost:3200;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # Security headers
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+}
+
+# configuration file /etc/nginx/sites-enabled/ankrlabs.org:
+# ANKR Labs - ankrlabs.org
+# Next-Gen AI & Frugal Computing
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name ankrlabs.org www.ankrlabs.org;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name ankrlabs.org www.ankrlabs.org;
+
+    # SSL Configuration
+    ssl_certificate /etc/ssl/ankrlabs/ankrlabs.org.crt;
+    ssl_certificate_key /etc/ssl/ankrlabs/ankrlabs.org.key;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384;
+    ssl_prefer_server_ciphers off;
+
+    root /var/www/ankrlabs.org;
+    index index.html;
+
+    # Security headers
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+
+    # Gzip compression
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_types text/plain text/css text/xml text/javascript application/javascript application/json application/xml;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # AI Proxy for translations and chat
+    location /api/ai/ {
+        proxy_pass http://localhost:4444/v1/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Content-Type $content_type;
+        proxy_read_timeout 120s;
+        proxy_connect_timeout 60s;
+
+        # CORS for JavaScript requests
+        add_header 'Access-Control-Allow-Origin' '*' always;
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS' always;
+        add_header 'Access-Control-Allow-Headers' 'Content-Type, Authorization' always;
+
+        if ($request_method = 'OPTIONS') {
+            add_header 'Access-Control-Allow-Origin' '*';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+            add_header 'Access-Control-Allow-Headers' 'Content-Type, Authorization';
+            add_header 'Content-Length' 0;
+            return 204;
+        }
+    }
+
+    # EON Memory API
+    location /api/eon/ {
+        proxy_pass http://localhost:4005/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Content-Type $content_type;
+
+        add_header 'Access-Control-Allow-Origin' '*' always;
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS' always;
+        add_header 'Access-Control-Allow-Headers' 'Content-Type' always;
+
+        if ($request_method = 'OPTIONS') {
+            add_header 'Access-Control-Allow-Origin' '*';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+            add_header 'Access-Control-Allow-Headers' 'Content-Type';
+            return 204;
+        }
+    }
+
+    # Swayam ConversationAI API (Real Intelligence)
+    location /api/swayam/ {
+        proxy_pass http://localhost:4002/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Content-Type $content_type;
+        proxy_read_timeout 120s;
+        proxy_connect_timeout 60s;
+
+        add_header 'Access-Control-Allow-Origin' '*' always;
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, DELETE, OPTIONS' always;
+        add_header 'Access-Control-Allow-Headers' 'Content-Type, Authorization' always;
+
+        if ($request_method = 'OPTIONS') {
+            add_header 'Access-Control-Allow-Origin' '*';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, DELETE, OPTIONS';
+            add_header 'Access-Control-Allow-Headers' 'Content-Type, Authorization';
+            add_header 'Content-Length' 0;
+            return 204;
+        }
+    }
+
+    # ========================================
+    # ankrBFC - Banking Finance Customer Platform
+    # ========================================
+
+    # BFC Admin Dashboard (Vite + React)
+    location /bfc/ {
+        proxy_pass http://localhost:3020/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    # BFC GraphQL API
+    location /bfc/graphql {
+        proxy_pass http://localhost:4020/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Content-Type $content_type;
+        proxy_read_timeout 120s;
+
+        add_header 'Access-Control-Allow-Origin' '*' always;
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS' always;
+        add_header 'Access-Control-Allow-Headers' 'Content-Type, Authorization' always;
+
+        if ($request_method = 'OPTIONS') {
+            add_header 'Access-Control-Allow-Origin' '*';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+            add_header 'Access-Control-Allow-Headers' 'Content-Type, Authorization';
+            return 204;
+        }
+    }
+
+    # BFC GraphQL Playground
+    location /bfc/graphiql {
+        proxy_pass http://localhost:4020/graphiql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # BFC Customer App (Expo Web)
+    location /bfc/customer/ {
+        proxy_pass http://localhost:8081/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    # BFC Staff App (Expo Web)
+    location /bfc/staff/ {
+        proxy_pass http://localhost:8082/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    # BFC API Health
+    location /bfc/health {
+        proxy_pass http://localhost:4020/health;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    # Cache static assets
+    location ~* \.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2)$ {
+        expires 30d;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # Health check
+    location /health {
+        return 200 'OK';
+        add_header Content-Type text/plain;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/bani.ankr.in:
+server {
+    listen 80;
+    server_name bani.ankr.in;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name bani.ankr.in;
+
+    ssl_certificate /etc/letsencrypt/live/bani.ankr.in/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/bani.ankr.in/privkey.pem;
+
+    location / {
+        proxy_pass http://localhost:7777/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    location /voice/ {
+        proxy_pass http://localhost:7777/voice/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+    }
+
+    location /bridge/ {
+        proxy_pass http://localhost:7777/bridge/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+    }
+
+    location /health {
+        proxy_pass http://localhost:7777/health;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    location /translate {
+        proxy_pass http://localhost:7777/translate;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/baniai:
+server {
+    server_name baniai.io www.baniai.io;
+    root /var/www/baniai;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Admin Dashboard
+    location /admin.html {
+        proxy_pass http://localhost:7777/admin.html;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # Voice Clone API
+    location /voice/ {
+        proxy_pass http://localhost:7777/voice/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # Bridge Calls API
+    location /bridge/ {
+        proxy_pass http://localhost:7777/bridge/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # API endpoints
+    location /api/ {
+        proxy_pass http://localhost:7777/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # Direct API access
+    location /health {
+        proxy_pass http://localhost:7777/health;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    location /translate {
+        proxy_pass http://localhost:7777/translate;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    location /admin/ {
+        proxy_pass http://localhost:7777/admin/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # WebSocket
+    location /ws {
+        proxy_pass http://localhost:7777;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/baniai.io/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/baniai.io/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+server {
+    if ($host = www.baniai.io) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    if ($host = baniai.io) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    listen 80;
+    server_name baniai.io www.baniai.io;
+    return 404; # managed by Certbot
+}
+
+# configuration file /etc/nginx/sites-enabled/complymitra:
+# ComplyMitra - Landing Page
+server {
+    listen 80;
+    server_name complymitra.in www.complymitra.in;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name complymitra.in www.complymitra.in;
+    
+    ssl_certificate /etc/letsencrypt/live/complymitra.in/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/complymitra.in/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    
+    root /var/www/complymitra;
+    index index.html;
+    
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+
+# ComplyMitra App
+server {
+    listen 80;
+    server_name app.complymitra.in;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name app.complymitra.in;
+    
+    ssl_certificate /etc/letsencrypt/live/app.complymitra.in/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/app.complymitra.in/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    
+    root /var/www/ankr-compliance;
+    index index.html;
+    
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+    
+    location /graphql {
+        proxy_pass http://localhost:4001/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+    
+    location /ai {
+        proxy_pass http://localhost:4444/api/ai;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/default:
+
+# Driver App (Saathi) - WowTruck PWA
+server {
+    listen 3003;
+    server_name localhost;
+    
+    root /var/www/driver-app;
+    index index.html;
+    
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+    
+    # Service Worker & PWA
+    location /sw.js {
+        add_header Cache-Control "no-cache";
+    }
+    
+    location /manifest.json {
+        add_header Cache-Control "no-cache";
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/digimitra.guru:
+# DigiMitra - ankrBFC Banking Finance Platform
+# Dedicated domain for BFC services
+
+upstream bfc_dashboard {
+    server 127.0.0.1:3020;
+    keepalive 64;
+}
+
+upstream bfc_api {
+    server 127.0.0.1:4020;
+    keepalive 64;
+}
+
+upstream bfc_customer {
+    server 127.0.0.1:8081;
+    keepalive 32;
+}
+
+upstream bfc_staff {
+    server 127.0.0.1:8082;
+    keepalive 32;
+}
+
+# HTTP - redirect to HTTPS (will be updated after SSL cert)
+server {
+    listen 80;
+    listen [::]:80;
+    server_name digimitra.guru www.digimitra.guru;
+
+    # For certbot challenge
+    location /.well-known/acme-challenge/ {
+        root /var/www/html;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+# HTTPS - Main BFC Platform
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name digimitra.guru www.digimitra.guru;
+
+    # SSL Certificate
+    ssl_certificate /etc/letsencrypt/live/digimitra.guru/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/digimitra.guru/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384;
+    ssl_prefer_server_ciphers off;
+    ssl_session_timeout 1d;
+
+    # Security headers
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
+    # Gzip compression
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_types text/plain text/css text/xml application/json application/javascript application/xml image/svg+xml;
+
+    # Root - Admin Dashboard (Static files)
+    root /root/ankr-bfc/apps/bfc-web/dist;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Static assets with caching
+    location /assets/ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # GraphQL API
+    location /graphql {
+        proxy_pass http://bfc_api/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Content-Type $content_type;
+        proxy_read_timeout 120s;
+        proxy_connect_timeout 60s;
+
+        # WebSocket for subscriptions
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+
+        # CORS
+        add_header 'Access-Control-Allow-Origin' '*' always;
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS' always;
+        add_header 'Access-Control-Allow-Headers' 'Content-Type, Authorization' always;
+
+        if ($request_method = 'OPTIONS') {
+            add_header 'Access-Control-Allow-Origin' '*';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+            add_header 'Access-Control-Allow-Headers' 'Content-Type, Authorization';
+            return 204;
+        }
+    }
+
+    # GraphQL Playground
+    location /graphiql {
+        proxy_pass http://bfc_api/graphiql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # Customer Mobile App
+    location /customer {
+        proxy_pass http://bfc_customer/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    # Staff Mobile App
+    location /staff {
+        proxy_pass http://bfc_staff/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    # API Health check
+    location /health {
+        proxy_pass http://bfc_api/health;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    # API Ready check
+    location /ready {
+        proxy_pass http://bfc_api/ready;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    # Error pages
+    error_page 502 503 504 /50x.html;
+    location = /50x.html {
+        root /var/www/html;
+        internal;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/dodd:
+# DODD - Document Platform
+# Frontend: 3007, Backend: 4007
+
+upstream dodd_frontend {
+    server 127.0.0.1:3007;
+    keepalive 64;
+}
+
+upstream dodd_backend {
+    server 127.0.0.1:4007;
+    keepalive 32;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name dodd.ankr.in dodd.ankrlabs.in;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name dodd.ankr.in dodd.ankrlabs.in;
+
+    # Cloudflare Origin SSL (*.ankr.in wildcard)
+    ssl_certificate /etc/ssl/cloudflare/ankr.in.pem;
+    ssl_certificate_key /etc/ssl/cloudflare/ankr.in.key;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256;
+    ssl_prefer_server_ciphers off;
+
+    # Security headers
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
+    # Gzip compression
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_types text/plain text/css text/xml application/json application/javascript application/rss+xml application/atom+xml image/svg+xml;
+
+    # GraphQL API
+    location /graphql {
+        proxy_pass http://dodd_backend/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    # REST API
+    location /api/ {
+        proxy_pass http://dodd_backend/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # Document uploads
+    location /uploads/ {
+        proxy_pass http://dodd_backend/uploads/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        client_max_body_size 50M;
+    }
+
+    # Next.js static files
+    location /_next/static {
+        proxy_pass http://dodd_frontend;
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    # All other requests to frontend
+    location / {
+        proxy_pass http://dodd_frontend;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_cache_bypass $http_upgrade;
+
+        # Timeouts
+        proxy_connect_timeout 60s;
+        proxy_send_timeout 60s;
+        proxy_read_timeout 60s;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/dodd-erp.org:
+# DODD ERP - Nginx Configuration (Cloudflare SSL)
+# Domain: dodd-erp.org
+# SSL: Cloudflare Origin Certificate (valid until 2041)
+#
+# Installation:
+#   1. Copy SSL certs to /etc/ssl/cloudflare/
+#   2. Copy config to /etc/nginx/sites-available/dodd-erp.org
+#   3. ln -s /etc/nginx/sites-available/dodd-erp.org /etc/nginx/sites-enabled/
+#   4. nginx -t && systemctl reload nginx
+#
+# Cloudflare Settings:
+#   - SSL/TLS mode: Full (Strict)
+#   - Always Use HTTPS: On
+#   - Minimum TLS Version: 1.2
+
+# Rate limiting zone
+limit_req_zone $binary_remote_addr zone=dodd_limit:10m rate=10r/s;
+
+# Redirect HTTP to HTTPS
+server {
+    listen 80;
+    listen [::]:80;
+    server_name dodd-erp.org www.dodd-erp.org docs.dodd-erp.org demo.dodd-erp.org;
+
+    location / {
+        return 301 https://$server_name$request_uri;
+    }
+}
+
+# Main HTTPS server
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name dodd-erp.org www.dodd-erp.org;
+
+    # Cloudflare Origin Certificate
+    ssl_certificate /etc/ssl/cloudflare/dodd-erp.org.pem;
+    ssl_certificate_key /etc/ssl/cloudflare/dodd-erp.org.key;
+
+    # SSL Configuration
+    ssl_session_timeout 1d;
+    ssl_session_cache shared:SSL:50m;
+    ssl_session_tickets off;
+
+    # Modern SSL configuration (Cloudflare compatible)
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
+    ssl_prefer_server_ciphers off;
+
+    # Security headers (some handled by Cloudflare, but good to have)
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
+    # Root directory
+    root /var/www/dodd-erp.org/public;
+    index index.html;
+
+    # Logging
+    access_log /var/log/nginx/dodd-erp.org.access.log;
+    error_log /var/log/nginx/dodd-erp.org.error.log;
+
+    # Gzip compression
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_types text/plain text/css text/xml application/json application/javascript application/rss+xml application/atom+xml image/svg+xml;
+
+    # Main site
+    location / {
+        limit_req zone=dodd_limit burst=20 nodelay;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Downloads directory - allow directory listing
+    location /downloads/ {
+        alias /var/www/dodd-erp.org/downloads/;
+        autoindex on;
+        autoindex_exact_size off;
+        autoindex_localtime on;
+        autoindex_format html;
+
+        # Cache downloads
+        expires 1h;
+        add_header Cache-Control "public, no-transform";
+
+        # Allow large file downloads
+        client_max_body_size 500M;
+
+        # Types for download
+        types {
+            application/zip zip;
+            application/pdf pdf;
+            text/markdown md;
+            text/plain txt;
+        }
+    }
+
+    # Documentation
+    location /docs/ {
+        alias /var/www/dodd-erp.org/docs/;
+        autoindex on;
+        autoindex_exact_size off;
+        autoindex_localtime on;
+
+        # Cache docs
+        expires 1h;
+    }
+
+    # API documentation (if using Swagger/OpenAPI)
+    location /api/ {
+        alias /var/www/dodd-erp.org/api/;
+        index index.html;
+    }
+
+    # Static assets caching
+    location ~* \.(jpg|jpeg|png|gif|ico|css|js|svg|woff|woff2|ttf|eot)$ {
+        expires 30d;
+        add_header Cache-Control "public, no-transform";
+    }
+
+    # Block access to hidden files
+    location ~ /\. {
+        deny all;
+    }
+
+    # Health check endpoint (for Cloudflare)
+    location /health {
+        access_log off;
+        return 200 "OK";
+        add_header Content-Type text/plain;
+    }
+
+    # Robots.txt
+    location = /robots.txt {
+        log_not_found off;
+        access_log off;
+    }
+
+    # Favicon
+    location = /favicon.ico {
+        log_not_found off;
+        access_log off;
+    }
+}
+
+# Documentation subdomain
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name docs.dodd-erp.org;
+
+    # Cloudflare Origin Certificate (wildcard covers *.dodd-erp.org)
+    ssl_certificate /etc/ssl/cloudflare/dodd-erp.org.pem;
+    ssl_certificate_key /etc/ssl/cloudflare/dodd-erp.org.key;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+
+    root /var/www/dodd-erp.org/docs-site;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+
+# Demo subdomain (proxy to app server)
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name demo.dodd-erp.org;
+
+    # Cloudflare Origin Certificate (wildcard covers *.dodd-erp.org)
+    ssl_certificate /etc/ssl/cloudflare/dodd-erp.org.pem;
+    ssl_certificate_key /etc/ssl/cloudflare/dodd-erp.org.key;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+        proxy_read_timeout 86400;
+
+        # Cloudflare headers
+        proxy_set_header CF-Connecting-IP $http_cf_connecting_ip;
+        proxy_set_header CF-IPCountry $http_cf_ipcountry;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/erpbharat:
+server {
+    listen 80;
+    listen [::]:80;
+    server_name erpbharat.org www.erpbharat.org;
+
+    root /root/power-erp/apps/web/dist;
+    index index.html;
+
+    # Gzip compression
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_proxied expired no-cache no-store private auth;
+    gzip_types text/plain text/css text/xml text/javascript application/x-javascript application/xml application/javascript application/json;
+
+    # Security headers
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+
+    # Cache static assets
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        try_files $uri =404;
+    }
+
+    # SPA routing
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    location /health {
+        return 200 'OK';
+        add_header Content-Type text/plain;
+    }
+
+    # API proxy
+    location /graphql {
+        proxy_pass http://127.0.0.1:3002/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    location /api {
+        proxy_pass http://127.0.0.1:3002;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # ANKR Interact - Knowledge Browser
+    location /interact/ {
+        proxy_pass http://localhost:3199/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+    location /interact {
+        return 301 /interact/;
+    }
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name erpbharat.org www.erpbharat.org;
+
+    ssl_certificate /etc/ssl/erpbharat/cert.pem;
+    ssl_certificate_key /etc/ssl/erpbharat/key.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+
+    root /root/power-erp/apps/web/dist;
+    index index.html;
+
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_proxied expired no-cache no-store private auth;
+    gzip_types text/plain text/css text/xml text/javascript application/x-javascript application/xml application/javascript application/json;
+
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        try_files $uri =404;
+    }
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    location /health {
+        return 200 'OK';
+        add_header Content-Type text/plain;
+    }
+
+    # API proxy
+    location /graphql {
+        proxy_pass http://127.0.0.1:3002/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    location /api {
+        proxy_pass http://127.0.0.1:3002;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # ANKR Interact - Knowledge Browser
+    location /interact/ {
+        proxy_pass http://localhost:3199/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+    location /interact {
+        return 301 /interact/;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/everpure:
+server {
+    listen 80;
+    server_name ever-pure.in www.ever-pure.in;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name ever-pure.in www.ever-pure.in;
+
+    ssl_certificate /etc/letsencrypt/live/ever-pure.in/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/ever-pure.in/privkey.pem;
+
+    # Main shop - root
+    root /var/www/everpure/landing;
+    index index.html;
+
+    # Admin assets - MUST come before /admin/
+    location ^~ /admin/assets/ {
+        alias /var/www/everpure/admin/assets/;
+        expires 7d;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # Admin panel - NO CACHE for HTML
+    location ^~ /admin/ {
+        alias /var/www/everpure/admin/;
+        index index.html;
+        try_files $uri $uri/ /admin/index.html;
+        
+        # Disable caching for admin HTML
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+        add_header Pragma "no-cache";
+        add_header Expires "0";
+    }
+
+    # API routes
+    location /api/ {
+        proxy_pass http://localhost:4006/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    # GraphQL
+    location /graphql {
+        proxy_pass http://localhost:4006/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    # Images with caching
+    location /images/ {
+        expires 7d;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # Main assets (for shop)
+    location /assets/ {
+        expires 7d;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # SPA fallback for main site
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/fr8x.org:
+# Fr8X Freight Exchange Platform
+# Frontend: 3006, Backend: 4050
+
+upstream fr8x_frontend {
+    server 127.0.0.1:3006;
+    keepalive 64;
+}
+
+upstream fr8x_backend {
+    server 127.0.0.1:4050;
+    keepalive 32;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name fr8x.org www.fr8x.org app.fr8x.org;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name fr8x.org www.fr8x.org app.fr8x.org;
+
+    ssl_certificate /etc/ssl/cloudflare/fr8x.org.pem;
+    ssl_certificate_key /etc/ssl/cloudflare/fr8x.org.key;
+    ssl_protocols TLSv1.2 TLSv1.3;
+
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+
+    gzip on;
+    gzip_vary on;
+    gzip_types text/plain text/css application/json application/javascript;
+
+    # GraphQL API
+    location /graphql {
+        proxy_pass http://fr8x_backend/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    # GraphiQL
+    location /graphiql {
+        proxy_pass http://fr8x_backend/graphiql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    # Health check
+    location /health {
+        proxy_pass http://fr8x_backend/health;
+    }
+
+    # REST API
+    location /api/ {
+        proxy_pass http://fr8x_backend/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # Webhooks
+    location /webhooks/ {
+        proxy_pass http://fr8x_backend/webhooks/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    # Redirect root to /app
+    location = / {
+        return 302 /app;
+    }
+
+    # Next.js app with basePath
+    location /app {
+        proxy_pass http://fr8x_frontend/app;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    # Next.js static files
+    location /_next/ {
+        proxy_pass http://fr8x_frontend;
+        proxy_http_version 1.1;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    # Fallback for other paths
+    location / {
+        proxy_pass http://fr8x_frontend;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/freightbox:
+# FreightBox Dashboard - Next.js 14 App
+# Upstream for load balancing (single instance for now)
+upstream freightbox_dashboard {
+    server 127.0.0.1:3001;
+    keepalive 64;
+}
+
+server {
+    listen 80;
+    server_name freightbox.org www.freightbox.org freightbox.ankr.in freightbox.ankrlabs.in xchg.freightbox.org;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name freightbox.org www.freightbox.org freightbox.ankr.in freightbox.ankrlabs.in xchg.freightbox.org;
+
+    ssl_certificate /etc/letsencrypt/live/freightbox.org/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/freightbox.org/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    # Security headers
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
+    # Gzip compression
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_types text/plain text/css text/xml application/json application/javascript application/rss+xml application/atom+xml image/svg+xml;
+
+    # Next.js static files (immutable cache)
+    location /_next/static {
+        proxy_pass http://freightbox_dashboard;
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    # Next.js image optimization
+    location /_next/image {
+        proxy_pass http://freightbox_dashboard;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # GraphQL API (FreightBox BFF)
+    location /graphql {
+        proxy_pass http://127.0.0.1:4003/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    # GraphiQL IDE for development
+    location /graphiql {
+        proxy_pass http://127.0.0.1:4003/graphiql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # NextAuth API routes (must be before general /api/)
+    location /api/auth/ {
+        proxy_pass http://freightbox_dashboard;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # Next.js API routes (tracking, docchain, ais, shipments)
+    location /api/ {
+        proxy_pass http://freightbox_dashboard;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # Redirect xchg.freightbox.org root to /xchg
+    location = / {
+        if ($host = "xchg.freightbox.org") {
+            return 301 /xchg;
+        }
+        proxy_pass http://freightbox_dashboard;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # Static downloads folder
+    location /downloads {
+        alias /var/www/freightbox/downloads;
+        autoindex on;
+        add_header Cache-Control "public, max-age=3600";
+    }
+
+    # All other requests to Next.js
+    location / {
+        proxy_pass http://freightbox_dashboard;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_cache_bypass $http_upgrade;
+
+        # Timeouts
+        proxy_connect_timeout 60s;
+        proxy_send_timeout 60s;
+        proxy_read_timeout 60s;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/powerpbox-odoo19:
+upstream odoo19_powerpbox {
+    server 127.0.0.1:8019;
+}
+
+server {
+    listen 80;
+    server_name powerpbox.net;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name powerpbox.net;
+    
+    ssl_certificate /etc/letsencrypt/live/powerpbox.net/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/powerpbox.net/privkey.pem;
+    
+    location / {
+        proxy_pass http://odoo19_powerpbox;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_redirect off;
+    }
+    
+    location /websocket {
+        proxy_pass http://odoo19_powerpbox;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    client_max_body_size 100M;
+}
+
+# configuration file /etc/nginx/sites-enabled/pulse.ankr.in:
+# pulse.ankr.in - ANKR Pulse Dashboard
+# 🫀 Heart of ankr-labs monitoring
+
+server {
+    listen 80;
+    server_name pulse.ankr.in;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name pulse.ankr.in;
+
+    # Cloudflare Origin Certificate
+    ssl_certificate /etc/ssl/cloudflare/ankr.in.pem;
+    ssl_certificate_key /etc/ssl/cloudflare/ankr.in.key;
+
+    # Proxy to Vite dev server
+    location / {
+        proxy_pass http://127.0.0.1:4320;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # WebSocket support for HMR
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    # Port Status API
+    location /api/ports/ {
+        proxy_pass http://127.0.0.1:4100/api/ports/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # PM2 API
+    location /api/pm2 {
+        proxy_pass http://127.0.0.1:4100/api/pm2;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # AI Proxy API (for service health, packages, etc.)
+    location /ai/ {
+        proxy_pass http://127.0.0.1:4444/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/report.fr8x.org:
+server {
+    listen 80;
+    listen [::]:80;
+    server_name report.fr8x.org;
+
+    root /var/www/fr8x.org;
+    index index.html;
+
+    # Serve markdown files with proper content type
+    location ~ \.md$ {
+        default_type text/plain;
+        charset utf-8;
+    }
+
+    # Serve zip files
+    location ~ \.zip$ {
+        default_type application/zip;
+    }
+
+    # Main location
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # CORS headers for Cloudflare
+    add_header Access-Control-Allow-Origin "*";
+    add_header X-Content-Type-Options "nosniff";
+
+    # Gzip compression
+    gzip on;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml;
+}
+
+# configuration file /etc/nginx/sites-enabled/saathi.ankr.in:
+# Saathi - WowTruck Driver App with AI Assistant
+
+# HTTP - redirect to HTTPS
+server {
+    listen 80;
+    server_name saathi.ankr.in;
+
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
+
+# HTTPS server
+server {
+    listen 443 ssl http2;
+    server_name saathi.ankr.in;
+
+    ssl_certificate /etc/ssl/cloudflare/ankr-origin.crt;
+    ssl_certificate_key /etc/ssl/cloudflare/ankr-origin.key;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    root /var/www/saathi.ankr.in;
+    index index.html;
+
+    # Security headers
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+
+    # Gzip compression
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 256;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+
+    # AI Proxy API endpoints
+    location /api/ai/ {
+        proxy_pass http://127.0.0.1:4444/api/ai/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_connect_timeout 120s;
+        proxy_send_timeout 120s;
+        proxy_read_timeout 120s;
+    }
+
+    # WowTruck Backend Auth API (port 4000) - OTP Login
+    location /api/auth/ {
+        proxy_pass http://127.0.0.1:4000/api/auth/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_connect_timeout 60s;
+        proxy_send_timeout 60s;
+        proxy_read_timeout 60s;
+    }
+
+    # Saathi Server API (port 4002) - Geo, RFQ, Toll, Routes
+    location /api/ {
+        proxy_pass http://127.0.0.1:4002/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_connect_timeout 60s;
+        proxy_send_timeout 60s;
+        proxy_read_timeout 60s;
+    }
+
+    location /health {
+        proxy_pass http://127.0.0.1:4002/health;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    # WowTruck GraphQL API (for real trip data)
+    location /graphql {
+        proxy_pass http://127.0.0.1:4000/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_connect_timeout 30s;
+        proxy_send_timeout 30s;
+        proxy_read_timeout 30s;
+    }
+
+    # Service Worker
+    location /sw.js {
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+        try_files $uri =404;
+    }
+
+    # Static assets with caching
+    location /assets/ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        try_files $uri =404;
+    }
+
+    # PWA manifest and icons
+    location ~* \.(json|png|ico|webp)$ {
+        expires 1d;
+        add_header Cache-Control "public";
+        try_files $uri =404;
+    }
+
+    # Swayam-Saathi Project Report
+    location /report {
+        alias /var/www/fr8x.org;
+        index index.html;
+
+        # Serve markdown files with proper content type
+        location ~ \.md$ {
+            default_type text/plain;
+            charset utf-8;
+        }
+
+        # Serve zip files
+        location ~ \.zip$ {
+            default_type application/zip;
+        }
+
+        try_files $uri $uri/ /report/index.html;
+    }
+
+    # SPA fallback
+    location / {
+        try_files $uri $uri/ /index.html;
+        add_header Cache-Control "no-cache";
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/sunosunao.ankr.in:
+server {
+    listen 80;
+    server_name sunosunao.ankr.in;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name sunosunao.ankr.in;
+
+    ssl_certificate /etc/letsencrypt/live/sunosunao.ankr.in/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/sunosunao.ankr.in/privkey.pem;
+
+    # API routes - proxy to backend
+    location /auth/ {
+        proxy_pass http://127.0.0.1:7070;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    location /family {
+        proxy_pass http://127.0.0.1:7070;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /stories {
+        proxy_pass http://127.0.0.1:7070;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /messages {
+        proxy_pass http://127.0.0.1:7070;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /upload {
+        proxy_pass http://127.0.0.1:7070;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        client_max_body_size 50M;
+    }
+
+    location /graphql {
+        proxy_pass http://127.0.0.1:7070;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /health {
+        proxy_pass http://127.0.0.1:7070;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    location /contacts {
+        proxy_pass http://127.0.0.1:7070;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # Frontend static files
+    location / {
+        root /var/www/sunosunao;
+        index index.html;
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Cache static assets
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2)$ {
+        root /var/www/sunosunao;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/swayam:
+server {
+    listen 80;
+    server_name swayam.digimitra.guru;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name swayam.digimitra.guru;
+
+    ssl_certificate /etc/letsencrypt/live/swayam.digimitra.guru/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/swayam.digimitra.guru/privkey.pem;
+
+    root /var/www/swayam;
+    index index.html;
+
+    # Frontend
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # SWAYAM COMMAND CENTER DASHBOARD
+    location /dashboard {
+        proxy_pass http://localhost:7780/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /dashboard/api {
+        proxy_pass http://localhost:7780/api;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    location /dashboard/ws {
+        proxy_pass http://localhost:7780/ws;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_read_timeout 86400;
+    }
+
+    # SWAYAM VOICE AI (BANI WebSocket)
+    location /swayam {
+        proxy_pass http://localhost:7777;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_read_timeout 86400;
+        proxy_send_timeout 86400;
+    }
+
+    # WowTruck WebSocket endpoint
+    location /wowtruck {
+        proxy_pass http://localhost:7777;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_read_timeout 86400;
+        proxy_send_timeout 86400;
+    }
+
+    # ComplyMitra WebSocket endpoint
+    location /complymitra {
+        proxy_pass http://localhost:7777;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_read_timeout 86400;
+        proxy_send_timeout 86400;
+    }
+
+    # FreightBox WebSocket endpoint
+    location /freightbox {
+        proxy_pass http://localhost:7777;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_read_timeout 86400;
+        proxy_send_timeout 86400;
+    }
+
+    # ERP WebSocket endpoint
+    location /erp {
+        proxy_pass http://localhost:7777;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_read_timeout 86400;
+        proxy_send_timeout 86400;
+    }
+
+    # CRM WebSocket endpoint
+    location /crm {
+        proxy_pass http://localhost:7777;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_read_timeout 86400;
+        proxy_send_timeout 86400;
+    }
+
+    # BANI Voice WebSocket endpoint
+    location /bani {
+        proxy_pass http://localhost:7777;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_read_timeout 86400;
+        proxy_send_timeout 86400;
+    }
+
+    # Saathi (Driver) WebSocket endpoint
+    location /saathi {
+        proxy_pass http://localhost:7777;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_read_timeout 86400;
+        proxy_send_timeout 86400;
+    }
+
+    # MCP Stats and Tools endpoints
+    location /mcp/ {
+        proxy_pass http://localhost:7777/mcp/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # Learning API endpoints
+    location /api/learning/ {
+        proxy_pass http://localhost:7777/api/learning/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # API Keys endpoints
+    location /api/keys {
+        proxy_pass http://localhost:7777/api/keys;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Content-Type $content_type;
+    }
+
+    # API Usage endpoints
+    location /api/usage/ {
+        proxy_pass http://localhost:7777/api/usage/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # Channel integrations API
+    location /api/channels {
+        proxy_pass http://localhost:7777/api/channels;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Content-Type $content_type;
+    }
+
+    # Channel webhooks
+    location /webhook/ {
+        proxy_pass http://localhost:7777/webhook/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Content-Type $content_type;
+        proxy_set_header X-Slack-Signature $http_x_slack_signature;
+        proxy_set_header X-Slack-Request-Timestamp $http_x_slack_request_timestamp;
+    }
+
+    # Prometheus metrics
+    location /metrics {
+        proxy_pass http://localhost:7777/metrics;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # TTS endpoint for streaming audio
+    location /tts {
+        proxy_pass http://localhost:7777/tts;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header Content-Type $content_type;
+    }
+
+    location /ws {
+        proxy_pass http://localhost:7777/ws;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_read_timeout 86400;
+    }
+
+    # GRAPHQL (WowTruck Backend - port 4000)
+    location /graphql {
+        proxy_pass http://localhost:4000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    location /graphiql {
+        proxy_pass http://localhost:4000;
+        proxy_set_header Host $host;
+    }
+
+    location /health {
+        proxy_pass http://localhost:7777;
+    }
+
+    # NPM Registry Home
+    location = /npm-home {
+        alias /var/www/npm-registry/discover.html;
+        default_type text/html;
+    }
+
+    location /npm-home/ {
+        alias /var/www/npm-registry/;
+        index discover.html;
+    }
+
+    # NPM Registry Proxy
+    location /npm/ {
+        proxy_pass http://localhost:4873/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        client_max_body_size 100M;
+        proxy_read_timeout 600;
+        proxy_send_timeout 600;
+    }
+
+    # ═══════════════════════════════════════════════════════════════
+    # UNIVERSAL TUTOR (AI-Proxy port 4444)
+    # ═══════════════════════════════════════════════════════════════
+    location /tutor {
+        proxy_pass http://localhost:4444/tutor;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /api/tutor/ {
+        proxy_pass http://localhost:4444/api/tutor/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # AI Proxy full access
+    location /ai/ {
+        proxy_pass http://localhost:4444/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/swayam.ankr.in:
+server {
+    listen 80;
+    server_name swayam.ankr.in;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name swayam.ankr.in;
+
+    ssl_certificate /etc/letsencrypt/live/swayam.ankr.in/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/swayam.ankr.in/privkey.pem;
+
+    location / {
+        proxy_pass http://localhost:7780/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    location /api {
+        proxy_pass http://localhost:7777/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    location /ws {
+        proxy_pass http://localhost:7777/ws;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/vyomo.in:
+server {
+    listen 80;
+    listen [::]:80;
+    server_name vyomo.in www.vyomo.in;
+
+    # Redirect to HTTPS
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name vyomo.in www.vyomo.in;
+
+    # Cloudflare Origin SSL Certificate
+    ssl_certificate /etc/ssl/certs/vyomo.in.pem;
+    ssl_certificate_key /etc/ssl/private/vyomo.in.key;
+    ssl_session_timeout 1d;
+    ssl_session_cache shared:SSL:50m;
+    ssl_session_tickets off;
+
+    # Modern SSL configuration
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
+    ssl_prefer_server_ciphers off;
+
+    root /var/www/vyomo-landing;
+    index index.html;
+
+    # Security headers
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+
+    # Gzip compression
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_proxied expired no-cache no-store private auth;
+    gzip_types text/plain text/css text/xml text/javascript application/x-javascript application/xml application/javascript application/json;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Cache static assets
+    location ~* \.(jpg|jpeg|png|gif|ico|css|js|svg|woff|woff2)$ {
+        expires 30d;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # API proxy (for future use)
+    location /api/ {
+        proxy_pass http://localhost:4020/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+    # GraphQL endpoint
+    location /graphql {
+        proxy_pass http://localhost:4020/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+# configuration file /etc/nginx/sites-enabled/wowtruck:
+# ANKR Labs - ankr.in
+server {
+    listen 80;
+    server_name ankr.in www.ankr.in;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name ankr.in www.ankr.in;
+
+    ssl_certificate /etc/letsencrypt/live/wowtruck.ankr.in/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/wowtruck.ankr.in/privkey.pem;
+
+    # Security headers (HSTS, CSP, etc.)
+    include snippets/security-headers.conf;
+
+    root /var/www/ankr-landing;
+
+    location = / {
+        try_files /index.html =404;
+    }
+
+    # Cockpit React App
+    location /cockpit/ {
+        alias /var/www/ankr-landing/cockpit/;
+        index index.html;
+        try_files $uri $uri/ /cockpit/index.html;
+    }
+    location /cockpit {
+        return 301 /cockpit/;
+    }
+
+    # Pulse
+    location /pulse/ {
+        alias /var/www/ankr-landing/pulse/;
+        index index.html;
+        try_files $uri $uri/ /pulse/index.html;
+    }
+    location /pulse {
+        return 301 /pulse/;
+    }
+
+    # Downloads
+    location /downloads/ {
+        alias /var/www/ankr-landing/downloads/;
+        autoindex on;
+        add_header Content-Disposition "attachment";
+    }
+    location /downloads {
+        return 301 /downloads/;
+    }
+
+    # Library - Product Documentation
+    location /library/ {
+        alias /var/www/ankr-landing/library/;
+        index index.html;
+        try_files $uri $uri/ /library/index.html;
+    }
+    location /library {
+        return 301 /library/;
+    }
+
+    location /pentest-report.pdf {
+        # Bypass anti-scrape for PDF download
+        alias /root/pentest-report-full.pdf;
+        add_header Content-Type application/pdf;
+    }
+
+    # Project Documents - ANKR Interact Knowledge Browser
+    # Serve static document files directly (html, md, pdf, etc.)
+    location ~ ^/project/documents/(.+\.(html|htm|md|pdf|txt|doc|docx|xls|xlsx|ppt|pptx|png|jpg|jpeg|gif|svg|json|xml|csv))$ {
+        alias /var/www/ankr-landing/project/documents/$1;
+        add_header 'Access-Control-Allow-Origin' '*' always;
+    }
+
+    # Proxy API requests to ANKR Interact
+    location /project/documents/api/ {
+        proxy_pass http://localhost:3199/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+        add_header 'Access-Control-Allow-Origin' '*' always;
+    }
+
+    # Serve ANKR Interact HTML UI
+    location = /project/documents/ {
+        alias /var/www/ankr-landing/project/documents/;
+        index index.html;
+        try_files /index.html =404;
+        add_header 'Access-Control-Allow-Origin' '*' always;
+    }
+
+    location /project/documents {
+        return 301 /project/documents/;
+    }
+    location /project {
+        return 301 /project/documents/;
+    }
+
+    # Directory listing for browsing folders
+    location ~ ^/project/documents/(.+)/$ {
+        alias /var/www/ankr-landing/project/documents/$1/;
+        autoindex on;
+        autoindex_exact_size off;
+        add_header 'Access-Control-Allow-Origin' '*' always;
+    }
+
+
+    # Package Catalog
+    location /packages/ {
+        alias /var/www/ankr-landing/packages/;
+        index index.html;
+        try_files $uri $uri/ =404;
+        add_header 'Access-Control-Allow-Origin' '*' always;
+        add_header 'Cache-Control' 'no-cache, no-store, must-revalidate' always;
+    }
+    location /packages {
+        return 301 /packages/;
+    }
+
+    # Verdaccio API Proxy (for package catalog)
+    location /npm-api/ {
+        proxy_pass http://localhost:4873/-/verdaccio/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        add_header 'Access-Control-Allow-Origin' '*' always;
+    }
+    location /npm/ {
+        proxy_pass http://localhost:4873/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        add_header 'Access-Control-Allow-Origin' '*' always;
+    }
+
+    # EON Memory API (for waitlist form submissions)
+    # Maps /api/eon/* to /api/* on EON service
+    location /api/eon/ {
+        proxy_pass http://localhost:4005/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Content-Type $content_type;
+
+        # CORS for form submissions
+        add_header 'Access-Control-Allow-Origin' '*' always;
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS' always;
+        add_header 'Access-Control-Allow-Headers' 'Content-Type, Authorization' always;
+
+        # Handle preflight requests
+        if ($request_method = 'OPTIONS') {
+            add_header 'Access-Control-Allow-Origin' '*';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+            add_header 'Access-Control-Allow-Headers' 'Content-Type, Authorization';
+            add_header 'Content-Length' 0;
+            add_header 'Content-Type' 'text/plain';
+            return 204;
+        }
+    }
+
+    # ANKR Viewer - Document Browser
+    location /viewer/ {
+        proxy_pass http://localhost:3199/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+
+        # CORS
+        add_header 'Access-Control-Allow-Origin' '*' always;
+    }
+    location /viewer {
+        return 301 /viewer/;
+    }
+
+    # ANKR Interact - Alias to /viewer
+    location /interact/ {
+        proxy_pass http://localhost:3199/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+        add_header 'Access-Control-Allow-Origin' '*' always;
+    }
+    location /interact {
+        return 301 /interact/;
+    }
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+
+# ═══════════════════════════════════════════════════════════════════════════
+# WowTruck 2.0 - Transport Management System
+# ═══════════════════════════════════════════════════════════════════════════
+
+server {
+    listen 80;
+    server_name wowtruck.ankr.in;
+    include snippets/anti-scrape.conf;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name wowtruck.ankr.in;
+    include snippets/anti-scrape.conf;
+
+    ssl_certificate /etc/letsencrypt/live/wowtruck.ankr.in/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/wowtruck.ankr.in/privkey.pem;
+
+    # Security headers (HSTS, CSP, etc.)
+    include snippets/security-headers.conf;
+
+    # Frontend - Production Build
+    root /root/ankr-labs-nx/apps/wowtruck/frontend/dist;
+    index index.html;
+
+    location /pentest-report.pdf {
+        # Bypass anti-scrape for PDF download
+        alias /root/pentest-report-full.pdf;
+        add_header Content-Type application/pdf;
+    }
+
+    location / {
+        try_files $uri $uri/ /index.html;
+
+        # Disable caching for HTML
+        add_header Cache-Control "no-store, no-cache, must-revalidate" always;
+        # CRITICAL: Re-include security headers (nginx doesn't inherit add_header)
+        include snippets/security-headers.conf;
+    }
+
+    # Cache static assets
+    location /assets/ {
+        expires 1y;
+        add_header Cache-Control "public, immutable" always;
+        include snippets/security-headers.conf;
+    }
+
+    # Block sensitive files
+    location ~ /\. {
+        deny all;
+        return 404;
+    }
+    location ~ \.(env|git|sql|bak|backup|log)$ {
+        deny all;
+        return 404;
+    }
+
+    # GraphQL API (port 4000)
+    location /graphql {
+        proxy_pass http://localhost:4000/graphql;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    # Health Check
+    location /health {
+        proxy_pass http://localhost:4000/health;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+    }
+
+    # WebSocket for real-time updates
+    location /ws {
+        proxy_pass http://localhost:4000/ws;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_read_timeout 86400;
+    }
+
+    # PDF API routes
+    location /api/pdf/ {
+        proxy_pass http://localhost:4000/api/pdf/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # Chat API routes
+    location /api/chat/ {
+        proxy_pass http://localhost:4000/api/chat/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # OTP Auth routes (Twilio)
+    location /api/auth/ {
+        proxy_pass http://localhost:4000/api/auth/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+    # Auth routes
+    location /auth/ {
+        proxy_pass http://localhost:4000/auth/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # QR Login routes
+    location /api/qr-login/ {
+        proxy_pass http://localhost:4000/api/qr-login/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # DocChain API routes (document processing & blockchain)
+    location /api/docchain/ {
+        proxy_pass http://localhost:4000/api/docchain/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        client_max_body_size 50M;
+    }
+
+    # Document API routes
+    location /api/document/ {
+        proxy_pass http://localhost:4000/api/document/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        client_max_body_size 50M;
+    }
+
+    # QR Codes page
+    location /qr-codes {
+        alias /var/www/wowtruck/;
+        index qr-codes.html;
+        try_files $uri $uri/ /qr-codes.html;
+    }
+
+    # Demo & Documentation
+    location /demo {
+        alias /var/www/wowtruck/;
+        index demo-slides.html;
+        try_files $uri $uri/ /demo-slides.html;
+    }
+
+    # Presentation slides (downloadable)
+    location /slides {
+        alias /var/www/wowtruck/;
+        index slides.html;
+        try_files $uri $uri/ /slides.html;
+    }
+
+    # Capability document (downloadable)
+    location /capabilities {
+        alias /var/www/wowtruck/;
+        index wowtruck-capabilities.html;
+        try_files $uri $uri/ /wowtruck-capabilities.html;
+    }
+
+    # Shortcut /docs
+    location /docs {
+        alias /var/www/wowtruck/;
+        index wowtruck-capabilities.html;
+        try_files $uri $uri/ /wowtruck-capabilities.html;
+    }
+
+    # Download all docs as ZIP
+    location /download {
+        alias /var/www/wowtruck/;
+        try_files /wowtruck-docs.zip =404;
+        add_header Content-Disposition "attachment; filename=wowtruck-docs.zip";
+    }
+
+    # Email template
+    location /email {
+        alias /var/www/wowtruck/;
+        index email-template.html;
+        try_files $uri $uri/ /email-template.html;
+    }
+
+    # Plain text email (for copy-paste)
+    location /email.txt {
+        alias /var/www/wowtruck/email-plain.txt;
+        default_type text/plain;
+    }
+}
+
+# configuration file /etc/nginx/snippets/security-headers.conf:
+# ANKR Security Headers - Generated by ankr-security-service
+# HSTS - Force HTTPS for 1 year, include subdomains
+add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+
+# CSP - Content Security Policy (adjust per site if needed)
+add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https: wss:; frame-ancestors 'self'; base-uri 'self'; form-action 'self';" always;
+
+# X-Content-Type-Options - Prevent MIME sniffing
+add_header X-Content-Type-Options "nosniff" always;
+
+# X-Frame-Options - Prevent clickjacking
+add_header X-Frame-Options "SAMEORIGIN" always;
+
+# Referrer-Policy - Control referrer information
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+
+# Permissions-Policy - Control browser features
+add_header Permissions-Policy "geolocation=(self), microphone=(self), camera=(self)" always;
+
+# Hide server version
+server_tokens off;
+

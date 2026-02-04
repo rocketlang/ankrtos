@@ -1,0 +1,82 @@
+===========================================
+  ANKR TERMUX QUICK START 📱
+===========================================
+
+STEP 1: Setup Termux (First Time Only)
+---------------------------------------
+pkg update && pkg upgrade -y
+pkg install git openssh nano -y
+mkdir -p ~/projects
+cd ~/projects
+
+
+STEP 2: Generate SSH Key
+---------------------------------------
+ssh-keygen -t ed25519 -C "your@email.com"
+(Press Enter 3 times)
+
+cat ~/.ssh/id_ed25519.pub
+(Copy the output)
+
+Add to GitHub:
+https://github.com/settings/keys
+
+
+STEP 3: Clone All Repos (One Command Each)
+---------------------------------------
+cd ~/projects
+
+git clone git@github.com:rocketlang/ankr-universe.git
+git clone git@github.com:rocketlang/ankr-labs-nx.git
+git clone git@github.com:rocketlang/ankr-ai-gateway.git
+git clone git@github.com:rocketlang/ankr-sandbox.git
+git clone git@github.com:rocketlang/ankr-skill-loader.git
+git clone git@github.com:rocketlang/ankrcode.git
+git clone git@github.com:rocketlang/bani.git
+git clone git@github.com:rocketlang/swayam.git
+git clone git@github.com:rocketlang/power-erp.git
+git clone git@github.com:rocketlang/everpure-whatsapp-bot.git
+
+
+STEP 4: Daily Commands
+---------------------------------------
+cd ~/projects                    # Go to projects
+cd ankr-universe                 # Enter a repo
+git status                       # Check status
+git log --oneline -10            # View commits
+git pull                         # Update repo
+nano file.md                     # Edit file
+
+
+STEP 5: Auto-Update All Repos
+---------------------------------------
+cd ~/projects
+for d in */; do cd "$d"; git pull; cd ..; done
+
+
+TERMUX SHORTCUTS
+---------------------------------------
+Volume Down + C = Ctrl+C (cancel)
+Volume Down + L = Clear screen
+Volume Down + Q = Extra keys
+Swipe keyboard = Switch tabs
+
+
+REPO URLs (For Reference)
+---------------------------------------
+https://github.com/rocketlang/ankr-universe
+https://github.com/rocketlang/ankr-labs-nx
+https://github.com/rocketlang/ankr-ai-gateway
+https://github.com/rocketlang/ankrcode
+https://github.com/rocketlang/bani
+https://github.com/rocketlang/swayam
+https://github.com/rocketlang/power-erp
+
+
+TROUBLESHOOTING
+---------------------------------------
+"Permission denied" → Add SSH key to GitHub
+"Repository not found" → Check repo exists
+"git: command not found" → Run: pkg install git
+
+===========================================

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ALERT_TITLE}}</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .email-wrapper {
+      width: 100%;
+      background-color: #f3f4f6;
+      padding: 20px 0;
+    }
+
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .email-header {
+      background: linear-gradient(135deg, {{PRIORITY_COLOR}} 0%, #1e40af 100%);
+      color: #ffffff;
+      padding: 30px 40px;
+      text-align: center;
+    }
+
+    .email-header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 10px 0;
+      line-height: 1.2;
+    }
+
+    .header-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .priority-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 10px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+
+    .email-content {
+      padding: 40px;
+    }
+
+    .alert-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .alert-message {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #374151;
+      white-space: pre-wrap;
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #f9fafb;
+      border-left: 4px solid {{PRIORITY_COLOR}};
+      border-radius: 4px;
+    }
+
+    .cta-section {
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(to bottom, #ffffff, #f9fafb);
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+
+    .cta-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 15px;
+    }
+
+    .cta-instruction {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    .reply-keywords {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .keyword-box {
+      padding: 12px 24px;
+      background-color: #ffffff;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      color: {{PRIORITY_COLOR}};
+      transition: all 0.2s;
+    }
+
+    .keyword-box:hover {
+      background-color: {{PRIORITY_COLOR}};
+      color: #ffffff;
+      border-color: {{PRIORITY_COLOR}};
+    }
+
+    .keyword-description {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 15px;
+    }
+
+    .info-box {
+      background-color: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    .info-box p {
+      margin: 0;
+      font-size: 14px;
+      color: #1e40af;
+    }
+
+    .warning-box {
+      background-color: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    .warning-box p {
+      margin: 0;
+      font-size: 14px;
+      color: #92400e;
+    }
+
+    .email-footer {
+      background-color: #111827;
+      color: #9ca3af;
+      padding: 30px 40px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .footer-logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .footer-links {
+      margin: 20px 0;
+    }
+
+    .footer-links a {
+      color: #60a5fa;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-meta {
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #374151;
+    }
+
+    /* Mobile responsive */
+    @media only screen and (max-width: 600px) {
+      .email-container {
+        margin: 0;
+        border-radius: 0;
+      }
+
+      .email-header,
+      .email-content,
+      .email-footer {
+        padding: 20px;
+      }
+
+      .email-header h1 {
+        font-size: 22px;
+      }
+
+      .alert-title {
+        font-size: 20px;
+      }
+
+      .alert-message {
+        font-size: 14px;
+        padding: 15px;
+      }
+
+      .reply-keywords {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .keyword-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-wrapper">
+    <div class="email-container">
+      <!-- Header -->
+      <div class="email-header">
+        <div class="header-icon">🚢</div>
+        <h1>Mari8X Alert</h1>
+        <div class="priority-badge">{{ALERT_PRIORITY}} Priority</div>
+      </div>
+
+      <!-- Content -->
+      <div class="email-content">
+        <h2 class="alert-title">{{ALERT_TITLE}}</h2>
+
+        <div class="alert-message">{{ALERT_MESSAGE}}</div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+          <div class="cta-title">📬 Quick Reply Required</div>
+          <p class="cta-instruction">Reply to this email with one of the following keywords:</p>
+
+          <div class="reply-keywords">
+            <div class="keyword-box">READY</div>
+            <div class="keyword-box">DELAY</div>
+            <div class="keyword-box">QUESTION</div>
+          </div>
+
+          <p class="keyword-description">
+            <strong>READY</strong> - All documents complete<br>
+            <strong>DELAY [hours]</strong> - Report ETA delay<br>
+            <strong>QUESTION</strong> - Need assistance
+          </p>
+        </div>
+
+        <!-- Info Box -->
+        <div class="info-box">
+          <p>
+            <strong>💡 Tip:</strong> Simply reply to this email with your status.
+            Your response will automatically update the system and notify your port agent.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="email-footer">
+        <div class="footer-logo">Mari8X</div>
+        <p>Maritime Intelligence Platform</p>
+
+        <div class="footer-links">
+          <a href="https://mari8x.com">Website</a>
+          <a href="https://mari8x.com/support">Support</a>
+          <a href="https://mari8x.com/docs">Documentation</a>
+        </div>
+
+        <p>&copy; {{CURRENT_YEAR}} Mari8X. All rights reserved.</p>
+
+        <div class="footer-meta">
+          <p>Alert ID: {{ALERT_ID}}</p>
+          <p>This is an automated alert. Please do not reply to unsubscribe.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tracking Pixel -->
+  {{TRACKING_PIXEL}}
+</body>
+</html>

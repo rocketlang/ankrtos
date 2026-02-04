@@ -1,0 +1,15 @@
+┌────┬──────────────────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name                     │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├────┼──────────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 13 │ ai-proxy                 │ default     │ N/A     │ fork    │ 4092289  │ 77m    │ 8    │ online    │ 0%       │ 63.1mb   │ root     │ disabled │
+│ 6  │ ankr-chroma-server       │ default     │ N/A     │ fork    │ 0        │ 0      │ 30   │ errored   │ 0%       │ 0b       │ root     │ disabled │
+│ 7  │ ankr-devbrain            │ default     │ 2.1.0   │ fork    │ 4003000  │ 22h    │ 4    │ online    │ 0%       │ 76.9mb   │ root     │ disabled │
+│ 4  │ ankr-eon-sync            │ default     │ N/A     │ fork    │ 0        │ 0      │ 0    │ stopped   │ 0%       │ 0b       │ root     │ disabled │
+│ 1  │ ankr-evolution-api       │ default     │ N/A     │ fork    │ 3898494  │ 2D     │ 4    │ online    │ 0%       │ 79.7mb   │ root     │ disabled │
+│ 5  │ ankr-evolution-health    │ default     │ N/A     │ fork    │ 3877887  │ 2D     │ 0    │ online    │ 0%       │ 44.4mb   │ root     │ disabled │
+│ 3  │ ankr-evolution-idle      │ default     │ N/A     │ fork    │ 0        │ 0      │ 0    │ stopped   │ 0%       │ 0b       │ root     │ disabled │
+│ 2  │ ankr-evolution-night     │ default     │ N/A     │ fork    │ 0        │ 0      │ 0    │ stopped   │ 0%       │ 0b       │ root     │ disabled │
+│ 9  │ devbrain-api             │ default     │ 2.2.0   │ fork    │ 1894706  │ 12h    │ 0    │ online    │ 0%       │ 65.6mb   │ root     │ disabled │
+│ 11 │ wowtruck-backend         │ default     │ N/A     │ fork    │ 114434   │ 11m    │ 11   │ online    │ 0%       │ 63.8mb   │ root     │ disabled │
+│ 10 │ wowtruck-frontend        │ default     │ N/A     │ fork    │ 1990546  │ 11h    │ 0    │ online    │ 0%       │ 84.9mb   │ root     │ disabled │
+└────┴──────────────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘

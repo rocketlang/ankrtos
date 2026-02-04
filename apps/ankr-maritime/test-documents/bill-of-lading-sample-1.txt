@@ -1,0 +1,161 @@
+BILL OF LADING
+
+B/L Number: MAEU-SGN-202600123
+Date of Issue: January 20, 2026
+Place of Issue: Singapore
+
+CARRIER:
+Maersk Line Singapore Pte Ltd
+1 Maritime Square, Singapore 099253
+Tel: +65 6222 3456
+Email: customer.service.sg@maersk.com
+
+SHIPPER:
+Singapore Steel Industries Pte Ltd
+Block 123, Tuas Industrial Estate
+Singapore 638456
+Contact: Mr. David Tan
+Tel: +65 9123 4567
+
+CONSIGNEE:
+ABC Manufacturing Corporation
+123 Harbor Avenue
+Long Beach, California 90802, USA
+Tel: +1 562 555 1234
+
+NOTIFY PARTY:
+ABC Manufacturing Corporation
+(Same as consignee)
+Additional: freight.forwarder@abc-mfg.com
+
+VESSEL AND VOYAGE:
+Vessel Name: MAERSK ESSEX
+IMO: 9543210
+Voyage Number: 026E
+Flag: Denmark
+
+PORT OF LOADING:
+Singapore (SGSIN)
+Date: January 22, 2026
+
+PORT OF DISCHARGE:
+Long Beach, California (USLGB)
+ETA: February 15, 2026
+
+PLACE OF RECEIPT:
+Shipper's factory - Tuas, Singapore
+
+PLACE OF DELIVERY:
+ABC Manufacturing - Long Beach, CA
+
+CARGO DESCRIPTION:
+Marks and Numbers: ABC/SGN/2026/001-100
+Container Numbers: MAEU1234567 (40'HC), MAEU2345678 (40'HC), MAEU3456789 (40'HC)
+
+Description of Goods:
+Steel Coils - Cold Rolled
+Quality: ASTM A1008 Grade 50
+Dimensions: Various widths 1000-1500mm, thickness 0.8-2.0mm
+Packaging: Steel strapping, waterproof wrapping, wooden cradles
+
+Number of Packages: 300 coils total
+- Container 1: 100 coils
+- Container 2: 100 coils
+- Container 3: 100 coils
+
+Gross Weight: 75,000 KGS (75 MT)
+- Container 1: 25,000 KGS
+- Container 2: 25,000 KGS
+- Container 3: 25,000 KGS
+
+Measurement: 120 CBM (40 cubic meters per container)
+
+FREIGHT DETAILS:
+Freight Terms: PREPAID
+Freight Amount: USD 4,500.00 (USD 1,500 per container)
+Currency: United States Dollars
+Paid at: Singapore
+Payment Method: Wire Transfer
+Reference: INV-SGN-2026-0123
+
+Additional Charges:
+- Documentation Fee: USD 75.00
+- Seal Fee: USD 30.00 (USD 10 per container)
+- Terminal Handling Charge: USD 450.00 (USD 150 per container)
+- ISPS Security Fee: USD 45.00
+Total Charges: USD 5,100.00
+
+CLAUSES AND CONDITIONS:
+1. Shipped on Board: January 22, 2026
+2. Clean on Board: No exceptions or remarks
+3. Original B/Ls: 3 originals issued
+4. Surrender: One original B/L must be surrendered at destination
+5. Negotiable: This is a negotiable document of title
+6. Carrier's Lien: Carrier has lien on cargo for freight and charges
+7. General Average: York-Antwerp Rules 2016 apply
+8. Jurisdiction: Any dispute shall be subject to English Law and London arbitration
+
+SHIPPER'S DECLARATION:
+The shipper declares that:
+- Contents are as described above
+- Goods are properly packed and secured
+- No dangerous goods included (non-hazardous cargo)
+- All customs declarations are accurate
+- Export licenses obtained where required
+
+CARRIER'S RECEIPT:
+Received the goods described above in apparent good order and condition
+(unless otherwise stated) for carriage subject to carrier's standard terms
+and conditions available at www.maersk.com/terms
+
+Container Seal Numbers:
+- MAEU1234567: Seal #SG123456
+- MAEU2345678: Seal #SG123457
+- MAEU3456789: Seal #SG123458
+
+SPECIAL INSTRUCTIONS:
+- Handle with care - heavy goods
+- Keep dry - no exposure to rain/moisture
+- Stack maximum 2 high
+- Deliver to consignee's warehouse directly
+- Notify consignee 48 hours before arrival
+
+HAZMAT DECLARATION:
+☐ Dangerous Goods (IMO Class ____)
+☑ Non-Hazardous Cargo
+
+TEMPERATURE CONTROLLED:
+☐ Reefer Container (Set point: __°C)
+☑ Dry Container (Ambient)
+
+SIGNED FOR THE CARRIER:
+Maersk Line Singapore Pte Ltd
+
+_______________________
+Authorized Signature
+Ms. Sarah Lim
+Operations Manager
+Date: January 20, 2026
+
+Place: Singapore
+
+RECEIVED BY SHIPPER:
+Singapore Steel Industries Pte Ltd
+
+_______________________
+Mr. David Tan
+Logistics Manager
+Date: January 20, 2026
+
+---
+
+IMPORTANT NOTICES:
+1. This B/L is subject to Carrier's standard terms and conditions
+2. Claims must be submitted within 9 months of delivery
+3. Liability limited as per Hague-Visby Rules
+4. Original B/L required for cargo release
+5. Any amendments require Carrier's written approval
+
+For inquiries: tracking@maersk.com or +65 6222 3456
+Track your shipment: www.maersk.com/tracking
+Reference: MAEU-SGN-202600123

@@ -1,0 +1,327 @@
+{
+  "_meta": {
+    "description": "ANKR Labs - Database Configuration Registry",
+    "version": "2.0.0",
+    "updated": "2026-01-20",
+    "verified": true,
+    "features": ["app-aliases", "prisma-paths", "auto-backup"],
+    "note": "VERIFIED from .env files and Prisma schemas - DO NOT CREATE NEW DBs"
+  },
+
+  "servers": {
+    "local-postgres": {
+      "type": "postgresql",
+      "host": "localhost",
+      "port": 5432,
+      "description": "Local PostgreSQL - MAIN server for most apps"
+    },
+    "docker-postgres": {
+      "type": "postgresql",
+      "host": "localhost",
+      "port": 5433,
+      "description": "Docker PostgreSQL - Odoo, SunoSunao"
+    },
+    "timescale": {
+      "type": "timescaledb",
+      "host": "localhost",
+      "port": 5434,
+      "description": "TimescaleDB for compliance time-series data"
+    }
+  },
+
+  "appAliases": {
+    "_comment": "Canonical app name mappings - VERIFIED from .env files",
+    "wowtruck": "wowtruck-backend",
+    "tms": "wowtruck-backend",
+    "freightbox": "freightbox-backend",
+    "freight-box": "freightbox-backend",
+    "fr8x": "fr8x-backend",
+    "fr8-x": "fr8x-backend",
+    "odoo": "odoo-freightbox",
+    "odoo-freightbox": "odoo-freightbox",
+    "odoo-fb": "odoo-freightbox",
+    "bfc": "bfc-api",
+    "banking": "bfc-api",
+    "eon": "ankr-eon",
+    "devbrain": "ankr-devbrain",
+    "sidecar": "sidecar-backend",
+    "crm": "ankr-crm",
+    "compliance": "ankr-compliance",
+    "complymitra": "ankr-compliance",
+    "forge": "ankr-forge",
+    "ankrforge": "ankr-forge",
+    "everpure": "everpure-backend",
+    "erpbharat": "erpbharat-backend",
+    "power-erp": "erpbharat-backend",
+    "sunosunao": "sunosunao-api",
+    "swayam": "swayam-api",
+    "bani": "swayam-api",
+    "baniai": "swayam-api",
+    "vyomo": "vyomo-api",
+    "options": "vyomo-api",
+    "dodd": "dodd-backend",
+    "viewer": "ankr-viewer",
+    "interact": "ankr-viewer",
+    "ankr-interact": "ankr-viewer",
+    "knowledge": "ankr-viewer",
+    "notebookllm": "ankr-viewer"
+  },
+
+  "databases": {
+    "wowtruck": {
+      "server": "local-postgres",
+      "name": "wowtruck",
+      "schema": "wowtruck",
+      "user": "ankr",
+      "password": "indrA@0612",
+      "tables": 182,
+      "description": "WowTruck TMS Platform",
+      "apps": ["wowtruck-backend"],
+      "prisma": "/root/ankr-labs-nx/apps/wowtruck/backend/prisma/schema.prisma",
+      "env": "/root/ankr-labs-nx/apps/wowtruck/backend/.env"
+    },
+    "freightbox": {
+      "server": "local-postgres",
+      "name": "freightbox",
+      "schema": "public",
+      "user": "ankr",
+      "password": "indrA@0612",
+      "tables": 39,
+      "description": "FreightBox - Freight Management System",
+      "apps": ["freightbox-backend"],
+      "prisma": "/root/ankr-labs-nx/apps/freightbox/backend/prisma/schema.prisma",
+      "env": "/root/ankr-labs-nx/apps/freightbox/backend/.env"
+    },
+    "fr8x": {
+      "server": "local-postgres",
+      "name": "fr8x",
+      "schema": "public",
+      "user": "ankr",
+      "password": "indrA@0612",
+      "tables": 87,
+      "description": "Fr8X - Freight Exchange Platform",
+      "apps": ["fr8x-backend"],
+      "prisma": "/root/ankr-labs-nx/apps/fr8x/backend/prisma/schema.prisma",
+      "env": "/root/ankr-labs-nx/apps/fr8x/backend/.env"
+    },
+    "bfc": {
+      "server": "local-postgres",
+      "name": "bfc",
+      "schema": "public",
+      "user": "ankr",
+      "password": "indrA@0612",
+      "tables": 71,
+      "description": "BFC - Banking for Companies",
+      "apps": ["bfc-api"],
+      "prisma": "/root/ankr-bfc/prisma/schema.prisma",
+      "env": "/root/ankr-bfc/.env"
+    },
+    "ankr_eon": {
+      "server": "local-postgres",
+      "name": "ankr_eon",
+      "schema": "public",
+      "user": "ankr",
+      "password": "indrA@0612",
+      "tables": 46,
+      "description": "EON Memory System + DevBrain + Sidecar",
+      "apps": ["ankr-eon", "ankr-devbrain", "sidecar-backend"],
+      "prisma": "/root/ankr-labs-nx/packages/ankr-eon/prisma/schema.prisma",
+      "env": "/root/ankr-labs-nx/packages/ankr-eon/.env"
+    },
+    "ankr_crm": {
+      "server": "local-postgres",
+      "name": "ankr_crm",
+      "schema": "public",
+      "user": "postgres",
+      "password": "indrA@0612",
+      "tables": 54,
+      "description": "ANKR CRM Backend",
+      "apps": ["ankr-crm"],
+      "prisma": "/root/ankr-labs-nx/packages/ankr-crm-prisma/prisma/schema.prisma"
+    },
+    "ankrforge": {
+      "server": "local-postgres",
+      "name": "ankrforge",
+      "schema": "public",
+      "user": "ankr",
+      "password": "indrA@0612",
+      "tables": 12,
+      "description": "AnkrForge API",
+      "apps": ["ankr-forge"],
+      "prisma": "/root/ankr-forge/prisma/schema.prisma",
+      "env": "/root/ankr-forge/.env"
+    },
+    "dodd": {
+      "server": "local-postgres",
+      "name": "dodd",
+      "schema": "public",
+      "user": "ankr",
+      "password": "indrA@0612",
+      "tables": 27,
+      "description": "DODD Backend",
+      "apps": ["dodd-backend"],
+      "prisma": "/root/ankr-labs-nx/apps/dodd-backend/prisma/schema.prisma",
+      "env": "/root/ankr-labs-nx/apps/dodd-backend/.env"
+    },
+    "swayam": {
+      "server": "local-postgres",
+      "name": "swayam",
+      "schema": "public",
+      "user": "ankr",
+      "password": "indrA@0612",
+      "tables": 5,
+      "description": "Swayam/BANI Voice AI Platform",
+      "apps": ["swayam-api"],
+      "prisma": "/root/swayam/prisma/schema.prisma",
+      "env": "/root/swayam/.env"
+    },
+    "vyomo": {
+      "server": "local-postgres",
+      "name": "vyomo",
+      "schema": "public",
+      "user": "postgres",
+      "password": "postgres",
+      "tables": 17,
+      "description": "Vyomo Options Trading Platform",
+      "apps": ["vyomo-api"],
+      "prisma": "/root/ankr-options-standalone/apps/vyomo-api/prisma/schema.prisma",
+      "env": "/root/ankr-options-standalone/.env"
+    },
+    "everpure": {
+      "server": "local-postgres",
+      "name": "everpure",
+      "schema": "public",
+      "user": "everpure",
+      "password": "everpure2025",
+      "tables": 31,
+      "description": "EverPure E-commerce Backend",
+      "apps": ["everpure-backend"],
+      "prisma": "/root/everpure-backend/prisma/schema.prisma",
+      "env": "/root/everpure-backend/.env"
+    },
+    "erpbharat": {
+      "server": "local-postgres",
+      "name": "erpbharat",
+      "schema": "public",
+      "user": "erpbharat",
+      "password": "ErpBharat2026",
+      "tables": 56,
+      "description": "ERP Bharat (Power ERP)",
+      "apps": ["erpbharat-backend"],
+      "prisma": "/root/power-erp/prisma/schema.prisma",
+      "env": "/root/power-erp/.env"
+    },
+    "compliance": {
+      "server": "timescale",
+      "name": "compliance",
+      "schema": "public",
+      "user": "ankr",
+      "password": "ankrSecure2025",
+      "tables": 90,
+      "description": "CompyMitra Compliance Platform (TimescaleDB)",
+      "apps": ["ankr-compliance"],
+      "prisma": "/root/ankr-compliance/libs/database/prisma/schema.prisma",
+      "env": "/root/ankr-compliance/.env"
+    },
+    "odoo_freightbox": {
+      "server": "docker-postgres",
+      "name": "odoo_freightbox",
+      "user": "ankr",
+      "password": "indrA@0612",
+      "tables": 640,
+      "description": "Odoo FreightBox Module (ERP)",
+      "apps": ["odoo-freightbox"],
+      "note": "Odoo 18 managed - no Prisma"
+    },
+    "sunosunao": {
+      "server": "docker-postgres",
+      "name": "sunosunao",
+      "user": "ankr",
+      "password": "indrA@0612",
+      "tables": 11,
+      "description": "SunoSunao Voice AI",
+      "apps": ["sunosunao-api"],
+      "prisma": "/root/ankr-labs-nx/packages/sunosunao/prisma/schema.prisma",
+      "env": "/root/ankr-labs-nx/packages/sunosunao/.env"
+    },
+    "ankr_viewer": {
+      "server": "local-postgres",
+      "name": "ankr_viewer",
+      "schema": "public",
+      "user": "ankr",
+      "password": "indrA@0612",
+      "tables": 14,
+      "description": "ANKR Viewer - Knowledge Management (Obsidian/Notion hybrid)",
+      "apps": ["ankr-viewer"],
+      "prisma": "/root/ankr-labs-nx/packages/ankr-viewer/prisma/schema.prisma",
+      "env": "/root/ankr-labs-nx/packages/ankr-viewer/.env"
+    }
+  },
+
+  "appGroups": {
+    "logistics": {
+      "description": "Freight & Logistics Apps (3 SEPARATE systems)",
+      "apps": {
+        "freightbox-backend": "FreightBox - Original (5432/freightbox, 39 tables)",
+        "fr8x-backend": "Fr8X - Exchange Platform (5432/fr8x, 87 tables)",
+        "odoo-freightbox": "Odoo FreightBox - ERP Module (5433/odoo_freightbox, 640 tables)"
+      }
+    },
+    "tms": {
+      "description": "Transport Management",
+      "apps": {
+        "wowtruck-backend": "WowTruck TMS (5432/wowtruck, 182 tables)"
+      }
+    },
+    "ai-memory": {
+      "description": "AI Memory & Learning Systems",
+      "apps": {
+        "ankr-eon": "EON Memory System (5432/ankr_eon)",
+        "ankr-devbrain": "DevBrain AI (5432/ankr_eon)",
+        "sidecar-backend": "Sidecar Service (5432/ankr_eon)"
+      }
+    },
+    "voice-ai": {
+      "description": "Voice AI Platforms",
+      "apps": {
+        "swayam-api": "Swayam/BANI (5432/swayam, 5 tables)",
+        "sunosunao-api": "SunoSunao (5433/sunosunao, 11 tables)"
+      }
+    },
+    "fintech": {
+      "description": "Financial Technology",
+      "apps": {
+        "bfc-api": "BFC Banking (5432/bfc, 71 tables)",
+        "vyomo-api": "Vyomo Options (5432/vyomo, 17 tables)"
+      }
+    },
+    "business": {
+      "description": "Business Applications",
+      "apps": {
+        "ankr-crm": "CRM Backend (5432/ankr_crm, 54 tables)",
+        "ankr-forge": "AnkrForge (5432/ankrforge, 12 tables)",
+        "everpure-backend": "EverPure E-commerce (5432/everpure, 31 tables)",
+        "erpbharat-backend": "ERP Bharat (5432/erpbharat, 56 tables)"
+      }
+    },
+    "compliance": {
+      "description": "Compliance & Regulatory",
+      "apps": {
+        "ankr-compliance": "CompyMitra (5434/compliance, 90 tables - TimescaleDB)"
+      }
+    }
+  },
+
+  "backup": {
+    "script": "/root/.ankr/scripts/db-backup.sh",
+    "cron": "0 2 * * *",
+    "location": "/root/ankr-backups/daily",
+    "retention_days": 7
+  },
+
+  "recovery": {
+    "restore_script": "/root/.ankr/scripts/db-restore.sh",
+    "reinit_script": "/root/.ankr/scripts/db-reinit.sh",
+    "note": "All apps with Prisma can reinitialize empty DB with: npx prisma db push --force-reset"
+  }
+}

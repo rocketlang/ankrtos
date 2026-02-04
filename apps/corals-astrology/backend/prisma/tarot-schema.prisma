@@ -1,0 +1,137 @@
+// TAROT CARDS SYSTEM
+
+// ==================== TAROT DECK ====================
+
+model TarotCard {
+  id          String    @id @default(cuid())
+
+  // Card Identity
+  name        String    @unique
+  number      Int?      // 0-21 for Major Arcana, 1-14 for Minor
+  suit        TarotSuit?
+  arcana      TarotArcana
+
+  // Card Details
+  keywords    String[]
+  uprightMeaning String @db.Text
+  reversedMeaning String @db.Text
+
+  // Imagery
+  imageUrl    String
+  symbolism   String    @db.Text
+
+  // Associations
+  element     String?   // Fire, Water, Air, Earth
+  astroSign   ZodiacSign?
+  planet      Planet?
+  numerology  Int?
+
+  // Metadata
+  createdAt   DateTime  @default(now())
+
+  @@map("tarot_cards")
+}
+
+enum TarotSuit {
+  CUPS        // Water - Emotions
+  WANDS       // Fire - Action
+  SWORDS      // Air - Thoughts
+  PENTACLES   // Earth - Material
+}
+
+enum TarotArcana {
+  MAJOR       // 22 Major Arcana cards
+  MINOR       // 56 Minor Arcana cards
+}
+
+// ==================== TAROT READINGS ====================
+
+model TarotReading {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Spread Details
+  spreadType  TarotSpreadType
+  question    String?   @db.Text
+  category    String?   // Love, Career, Finance, General
+
+  // Cards Drawn
+  cards       Json      // [{ cardId, position, isReversed }]
+
+  // Interpretation
+  interpretation String @db.Text
+  advice      String?   @db.Text
+
+  // AI Enhanced
+  isAiGenerated Boolean @default(false)
+  aiModel     String?   @default("gpt-4")
+
+  // Metadata
+  createdAt   DateTime  @default(now())
+  isSaved     Boolean   @default(false)
+
+  // Relations
+  notes       TarotNote[]
+
+  @@map("tarot_readings")
+}
+
+enum TarotSpreadType {
+  SINGLE_CARD
+  THREE_CARD
+  CELTIC_CROSS
+  RELATIONSHIP
+  CAREER_PATH
+  YES_NO
+  CHAKRA_SPREAD
+  HORSESHOE
+  PAST_PRESENT_FUTURE
+}
+
+model TarotNote {
+  id          String    @id @default(cuid())
+  readingId   String
+  reading     TarotReading @relation(fields: [readingId], references: [id], onDelete: Cascade)
+
+  note        String    @db.Text
+  createdAt   DateTime  @default(now())
+
+  @@map("tarot_notes")
+}
+
+// ==================== DAILY TAROT ====================
+
+model DailyTarot {
+  id          String    @id @default(cuid())
+  date        DateTime  @unique
+  cardId      String
+
+  // Daily Message
+  message     String    @db.Text
+  advice      String    @db.Text
+
+  createdAt   DateTime  @default(now())
+
+  @@map("daily_tarot")
+}
+
+// ==================== TAROT JOURNAL ====================
+
+model TarotJournal {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  date        DateTime
+  cardId      String
+  isReversed  Boolean   @default(false)
+
+  reflection  String    @db.Text
+  mood        String?
+  outcome     String?   @db.Text
+
+  createdAt   DateTime  @default(now())
+
+  @@map("tarot_journal")
+}

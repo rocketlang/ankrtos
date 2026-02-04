@@ -15,7 +15,7 @@ const { execSync } = require('child_process');
 const eonClient = require('./ankr-viewer-eon-client');
 const { getRegistry, getCategories, getCategoryOrder } = require('./ankr-product-registry');
 const access = require('./ankr-viewer-access');
-const { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage, prathamShowcasePage, freightboxShowcasePage } = require('./ankr-viewer-html');
+const { documentsHomePage, projectDetailPage, documentViewerPage, knowledgeGraphPage, prathamShowcasePage, freightboxShowcasePage, warexaiShowcasePage, sunosunaoShowcasePage } = require('./ankr-viewer-html');
 
 const autoDiscoveredFiles = new Map(); // virtual path → absolute path
 
@@ -262,7 +262,7 @@ function regexSearch(query) {
 
 // Known product names for fuzzy title matching
 const KNOWN_PRODUCTS = [
-  'icd', 'wms', 'bfc', 'wowtruck', 'freightbox', 'fr8x', 'complymitra',
+  'icd', 'wms', 'warexai', 'bfc', 'wowtruck', 'freightbox', 'fr8x', 'complymitra',
   'flowcanvas', 'bani', 'sunosunao', 'swayam', 'vyomo', 'everpure',
   'ankrshield', 'kinara', 'openclaude', 'opencode', 'rocketlang',
   'confucius', 'eon', 'universe', 'forge', 'scmbox', 'powererp',
@@ -2167,6 +2167,274 @@ app.get('/project/documents/freightbox/_showcase', (req, res) => {
   } catch (err) {
     console.error('Error rendering FreightBox showcase:', err);
     res.status(500).send('Error loading FreightBox showcase');
+  }
+});
+
+// WareXAI Showcase: /project/documents/warexai/_showcase
+app.get('/project/documents/warexai/_showcase', (req, res) => {
+  try {
+    const wxDir = path.join(DOCS_ROOT, 'project', 'documents', 'warexai');
+    const files = [];
+    if (fs.existsSync(wxDir)) {
+      for (const f of fs.readdirSync(wxDir)) {
+        if (!f.endsWith('.md') || f === 'index.md' || f.startsWith('.')) continue;
+        const fp = path.join(wxDir, f);
+        const st = fs.statSync(fp);
+        let title = f.replace('.md', '').replace(/-/g, ' ');
+        try {
+          const content = fs.readFileSync(fp, 'utf-8');
+          const parsed = matter(content);
+          if (parsed.data.title) title = parsed.data.title;
+        } catch (e) {}
+        files.push({
+          name: f,
+          path: 'project/documents/warexai/' + f,
+          title,
+          size: st.size,
+        });
+      }
+    }
+
+    const platform = {
+      name: 'WareXAI',
+      tagline: 'AI-Powered Enterprise Warehouse Management',
+      stats: {
+        prismaModels: 90,
+        graphqlOps: 200,
+        frontendPages: 80,
+        mobileScreens: 10,
+        modules: 80,
+        documents: files.length,
+      },
+      techStack: ['Next.js 15', 'Fastify', 'GraphQL', 'Prisma', 'PostgreSQL', 'Expo'],
+      tracks: [
+        {
+          icon: '\u{1F9E0}',
+          title: 'Analytics & AI',
+          features: [
+            'Demand forecasting with ML models',
+            'Anomaly detection on inventory movements',
+            'Stockout & overstock prediction',
+            'AI-powered slotting optimization',
+          ],
+        },
+        {
+          icon: '\u{1F3E2}',
+          title: 'Enterprise',
+          features: [
+            'Multi-warehouse network management',
+            'Cross-docking and flow-through',
+            'Wave & batch optimization',
+            'Inter-warehouse transfers',
+          ],
+        },
+        {
+          icon: '\u{1F4F1}',
+          title: 'Mobile Workforce',
+          features: [
+            'Batch barcode scanning (camera + BLE)',
+            'Offline-first mobile operations',
+            'Push notifications for task alerts',
+            'Voice-directed picking',
+          ],
+        },
+        {
+          icon: '\u{1F4CB}',
+          title: 'Compliance',
+          features: [
+            'GST with HSN code management',
+            'Bonded warehouse & customs support',
+            'FSSAI food safety tracking',
+            'Cold chain & dangerous goods logging',
+          ],
+        },
+      ],
+      modules: [
+        {
+          category: 'Core',
+          items: [
+            { href: '/inventory', icon: 'I', title: 'Inventory', color: 'bg-cyan-600' },
+            { href: '/receiving', icon: 'R', title: 'Receiving', color: 'bg-green-600' },
+            { href: '/shipping', icon: 'S', title: 'Shipping', color: 'bg-orange-600' },
+            { href: '/picking', icon: 'K', title: 'Picking', color: 'bg-lime-600' },
+            { href: '/packing', icon: 'B', title: 'Packing', color: 'bg-emerald-600' },
+          ],
+        },
+        {
+          category: 'Operations',
+          items: [
+            { href: '/tasks', icon: 'T', title: 'Tasks', color: 'bg-amber-600' },
+            { href: '/putaway', icon: 'U', title: 'Putaway', color: 'bg-teal-600' },
+            { href: '/replenishment', icon: 'R', title: 'Replenishment', color: 'bg-sky-600' },
+            { href: '/cycle-count', icon: 'C', title: 'Cycle Count', color: 'bg-purple-600' },
+            { href: '/slotting', icon: 'S', title: 'Slotting', color: 'bg-fuchsia-600' },
+          ],
+        },
+        {
+          category: 'Billing & Compliance',
+          items: [
+            { href: '/customers', icon: '3', title: '3PL Billing', color: 'bg-pink-600' },
+            { href: '/compliance', icon: 'G', title: 'GST', color: 'bg-rose-600' },
+            { href: '/eway-bill', icon: 'E', title: 'E-Way Bill', color: 'bg-red-600' },
+            { href: '/e-invoice', icon: 'V', title: 'E-Invoice', color: 'bg-orange-600' },
+            { href: '/fssai', icon: 'F', title: 'FSSAI', color: 'bg-yellow-600' },
+          ],
+        },
+        {
+          category: 'Advanced',
+          items: [
+            { href: '/ai-assistant', icon: 'A', title: 'AI Assistant', color: 'bg-violet-600' },
+            { href: '/voice-pick', icon: 'V', title: 'Voice Pick', color: 'bg-indigo-600' },
+            { href: '/digital-twin', icon: 'D', title: 'Digital Twin', color: 'bg-blue-600' },
+            { href: '/rfid', icon: 'R', title: 'RFID', color: 'bg-cyan-600' },
+            { href: '/drone-count', icon: 'X', title: 'Drone Count', color: 'bg-teal-600' },
+          ],
+        },
+        {
+          category: 'Enterprise',
+          items: [
+            { href: '/networks', icon: 'N', title: 'Networks', color: 'bg-blue-600' },
+            { href: '/transfers', icon: 'T', title: 'Transfers', color: 'bg-indigo-600' },
+            { href: '/cross-dock', icon: 'X', title: 'Cross-Dock', color: 'bg-violet-600' },
+            { href: '/flow-canvas', icon: 'F', title: 'Flow Canvas', color: 'bg-fuchsia-600' },
+            { href: '/automations', icon: 'Z', title: 'Automations', color: 'bg-orange-600' },
+          ],
+        },
+      ],
+    };
+
+    res.send(warexaiShowcasePage(files, platform));
+  } catch (err) {
+    console.error('Error rendering WareXAI showcase:', err);
+    res.status(500).send('Error loading WareXAI showcase');
+  }
+});
+
+// SunoSunao Showcase: /project/documents/sunosunao/_showcase
+app.get('/project/documents/sunosunao/_showcase', (req, res) => {
+  try {
+    const ssDir = path.join(DOCS_ROOT, 'project', 'documents', 'sunosunao');
+    const files = [];
+    if (fs.existsSync(ssDir)) {
+      for (const f of fs.readdirSync(ssDir)) {
+        if (!f.endsWith('.md') || f === 'index.md' || f.startsWith('.')) continue;
+        const fp = path.join(ssDir, f);
+        const st = fs.statSync(fp);
+        let title = f.replace('.md', '').replace(/-/g, ' ');
+        try {
+          const content = fs.readFileSync(fp, 'utf-8');
+          const parsed = matter(content);
+          if (parsed.data.title) title = parsed.data.title;
+        } catch (e) {}
+        files.push({
+          name: f,
+          path: 'project/documents/sunosunao/' + f,
+          title,
+          size: st.size,
+        });
+      }
+    }
+
+    const platform = {
+      name: 'SunoSunao',
+      tagline: 'Voice-first media platform with audio content, podcasts, voicebook, and social listening powered by AI transcription and recommendation.',
+      stats: {
+        languages: 103,
+        voiceProviders: 6,
+        prismaModels: 13,
+        triggerTypes: 4,
+        documents: files.length,
+      },
+      techStack: ['Fastify 5', 'React 19', 'GraphQL', 'Prisma', 'PostgreSQL', 'Redis', 'Cloudflare R2', 'Tailwind CSS 4'],
+      features: [
+        {
+          icon: '\u{1F3A4}',
+          title: 'Voice Message Recording',
+          items: [
+            'Browser-based MediaRecorder API',
+            'Unlimited length recordings',
+            'Multi-chapter voice stories',
+            'Transcription & translation',
+          ],
+        },
+        {
+          icon: '\u{1F46A}',
+          title: 'Family Groups & Beneficiaries',
+          items: [
+            'Hierarchical family management',
+            'Relationship & generation tracking',
+            'Bulk contact import',
+            'Multiple recipients per message',
+          ],
+        },
+        {
+          icon: '\u{23F0}',
+          title: 'Delivery Trigger System',
+          items: [
+            'Date-based scheduled delivery',
+            'Birthday-triggered messages',
+            'Age-triggered milestones',
+            'Death-triggered final words',
+          ],
+        },
+        {
+          icon: '\u{1F9EC}',
+          title: 'Voice Cloning',
+          items: [
+            'Coqui XTTS integration',
+            'Ethical consent-first model',
+            'Quality scoring (0-100)',
+            'Celebrity blocking safeguards',
+          ],
+        },
+        {
+          icon: '\u{1F30D}',
+          title: '103 Languages',
+          items: [
+            '21 Indian languages native',
+            '82 international languages',
+            'Sarvam AI for Hindi TTS',
+            'Meta MMS universal fallback',
+          ],
+        },
+        {
+          icon: '\u{1F512}',
+          title: 'Security & Safety',
+          items: [
+            'OTP-based phone authentication',
+            'Voice clone abuse prevention',
+            'Financial fraud filtering',
+            'Full audit trail + watermarking',
+          ],
+        },
+      ],
+      voiceProviders: [
+        { name: 'Sarvam AI', languages: '11 Indian', useCase: 'Primary Indian TTS', cost: '$0.0018/char' },
+        { name: 'VibeVoice', languages: 'English', useCase: 'English premium', cost: 'Free' },
+        { name: 'IndicF5', languages: '21 Indian', useCase: 'Regional fallback', cost: 'Free' },
+        { name: 'Coqui XTTS', languages: '16', useCase: 'Voice cloning', cost: 'Free' },
+        { name: 'Whisper', languages: '100+', useCase: 'Speech-to-text', cost: 'Free' },
+        { name: 'Meta MMS', languages: '1100+', useCase: 'Universal fallback', cost: 'Free' },
+      ],
+      tiers: [
+        { name: 'Free', price: '\u20B90', features: ['5 messages/month', '2 min each', '1 year storage'] },
+        { name: 'Family', price: '\u20B999/mo', features: ['Unlimited messages', '5 family members', '5 year storage'] },
+        { name: 'Legacy', price: '\u20B9999/yr', features: ['Voice cloning', 'Priority delivery', '50 year storage'] },
+        { name: 'Forever', price: '\u20B99,999', features: ['Lifetime storage', 'Unlimited cloning', 'One-time payment'] },
+      ],
+      useCases: [
+        { icon: '\u{1F475}', title: 'Grandparents', desc: 'Leave voice for milestones' },
+        { icon: '\u{1F3E5}', title: 'Terminal Patients', desc: 'Be present for future events' },
+        { icon: '\u{2708}\uFE0F', title: 'Emigrants', desc: 'Preserve voices across geography' },
+        { icon: '\u{1F476}', title: 'Young Parents', desc: 'Record as children grow' },
+        { icon: '\u{1F3DB}\uFE0F', title: 'Communities', desc: 'Preserve oral traditions' },
+      ],
+    };
+
+    res.send(sunosunaoShowcasePage(files, platform));
+  } catch (err) {
+    console.error('Error rendering SunoSunao showcase:', err);
+    res.status(500).send('Error loading SunoSunao showcase');
   }
 });
 

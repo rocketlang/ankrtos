@@ -1,0 +1,147 @@
+// Universal Messaging Schema
+// Multi-channel AI Assistant (Email, WhatsApp, Slack, Teams, WebChat, Tickets)
+// Add to main schema.prisma
+
+model UniversalThread {
+  id              String   @id @default(cuid())
+  channel         String   // email, whatsapp, slack, teams, webchat, ticket, sms
+  participantId   String   // Email address, phone number, username, etc.
+  participantName String?  // Display name
+  subject         String?  // Email subject or conversation topic
+  userId          String
+  organizationId  String
+  messageCount    Int      @default(1)
+  isRead          Boolean  @default(false)
+  isStarred       Boolean  @default(false)
+  isPinned        Boolean  @default(false)
+  labels          String[] @default([])
+  lastMessageAt   DateTime @default(now())
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  messages        Message[]
+  user            User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  organization    Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@index([channel, participantId])
+  @@index([userId])
+  @@index([organizationId])
+  @@index([lastMessageAt])
+  @@index([isRead])
+}
+
+model Message {
+  id               String   @id
+  channel          String   // email, whatsapp, slack, teams, webchat, ticket, sms
+  channelMessageId String   // Original message ID from channel
+  threadId         String
+  userId           String
+  organizationId   String
+  from             String   // Email, phone, username
+  fromName         String?  // Display name
+  to               String[] // Recipients
+  content          String   @db.Text
+  contentType      String   @default("text") // text, image, document, voice, video, audio, sticker
+  mediaUrl         String?  // URL to media file
+  mediaMetadata    Json?    // { filename, mimeType, size, duration, width, height }
+  direction        String   // inbound, outbound
+  status           String   @default("received") // received, sent, delivered, read, failed
+  aiGenerated      Boolean  @default(false)
+  aiDraftId        String?  // Link to ResponseDraft if AI-generated
+  receivedAt       DateTime @default(now())
+  metadata         Json?    // Channel-specific metadata
+
+  thread           UniversalThread @relation(fields: [threadId], references: [id], onDelete: Cascade)
+  user             User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  organization     Organization    @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@index([channel, channelMessageId])
+  @@index([threadId])
+  @@index([userId])
+  @@index([organizationId])
+  @@index([receivedAt])
+  @@index([direction])
+  @@index([status])
+}
+
+// Update User model to include messaging preferences
+model User {
+  // ... existing fields ...
+
+  // Messaging preferences
+  preferredChannels        String[] @default(["email"]) // Preferred channels for notifications
+  whatsappNumber           String?  // WhatsApp phone number
+  slackUserId              String?  // Slack user ID
+  teamsUserId              String?  // Microsoft Teams user ID
+  messagingAutoRespond     Boolean  @default(true) // Auto-respond to messages
+  messagingResponseStyle   String   @default("query_reply") // Default AI response style
+  messagingSignature       String?  @db.Text // Signature for all channels
+
+  // Relations
+  universalThreads         UniversalThread[]
+  messages                 Message[]
+
+  // ... rest of model ...
+}
+
+// Update Organization model to include channel configurations
+model Organization {
+  // ... existing fields ...
+
+  // WhatsApp Configuration
+  whatsappPhoneNumberId    String?
+  whatsappAccessToken      String?
+  whatsappWebhookToken     String?
+  whatsappEnabled          Boolean  @default(false)
+
+  // Slack Configuration
+  slackWorkspaceId         String?
+  slackBotToken            String?
+  slackAppToken            String?
+  slackEnabled             Boolean  @default(false)
+
+  // Teams Configuration
+  teamsAppId               String?
+  teamsAppPassword         String?
+  teamsTenantId            String?
+  teamsEnabled             Boolean  @default(false)
+
+  // WebChat Configuration
+  webchatEnabled           Boolean  @default(false)
+  webchatTheme             Json?    // { primaryColor, position, greeting }
+
+  // Channel Statistics
+  messagesReceivedEmail    Int      @default(0)
+  messagesReceivedWhatsApp Int      @default(0)
+  messagesReceivedSlack    Int      @default(0)
+  messagesReceivedTeams    Int      @default(0)
+  messagesReceivedWebChat  Int      @default(0)
+  messagesReceivedTicket   Int      @default(0)
+
+  // Relations
+  universalThreads         UniversalThread[]
+  messages                 Message[]
+
+  // ... rest of model ...
+}
+
+// Channel Webhook Logs (for debugging)
+model ChannelWebhookLog {
+  id             String   @id @default(cuid())
+  channel        String
+  organizationId String?
+  payload        Json     // Raw webhook payload
+  processed      Boolean  @default(false)
+  error          String?  @db.Text
+  receivedAt     DateTime @default(now())
+
+  @@index([channel, organizationId])
+  @@index([receivedAt])
+}
+
+// Migration notes:
+// 1. EmailThread → UniversalThread (gradual migration)
+// 2. EmailMessage → Message (with channel field)
+// 3. Keep EmailThread/EmailMessage for backward compatibility during transition
+// 4. Add dual-write logic to populate both schemas
+// 5. Eventually deprecate EmailThread/EmailMessage

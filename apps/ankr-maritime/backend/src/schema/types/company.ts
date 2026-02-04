@@ -6,6 +6,7 @@ builder.prismaObject('Company', {
     name: t.exposeString('name'),
     type: t.exposeString('type'),
     country: t.exposeString('country', { nullable: true }),
+    city: t.exposeString('city', { nullable: true }),
     address: t.exposeString('address', { nullable: true }),
     contactEmail: t.exposeString('contactEmail', { nullable: true }),
     contactPhone: t.exposeString('contactPhone', { nullable: true }),
@@ -19,7 +20,7 @@ builder.queryField('companies', (t) =>
   t.prismaField({
     type: ['Company'],
     resolve: (query, _root, _args, ctx) =>
-      ctx.prisma.company.findMany({ ...query, orderBy: { name: 'asc' } }),
+      ctx.prisma.company.findMany({ ...query, where: ctx.orgFilter(), orderBy: { name: 'asc' } }),
   }),
 );
 
@@ -40,6 +41,7 @@ builder.mutationField('createCompany', (t) =>
       name: t.arg.string({ required: true }),
       type: t.arg.string({ required: true }),
       country: t.arg.string(),
+      city: t.arg.string(),
       address: t.arg.string(),
       contactEmail: t.arg.string(),
       contactPhone: t.arg.string(),
@@ -53,6 +55,7 @@ builder.mutationField('createCompany', (t) =>
           name: args.name,
           type: args.type,
           country: args.country ?? undefined,
+          city: args.city ?? undefined,
           address: args.address ?? undefined,
           contactEmail: args.contactEmail ?? undefined,
           contactPhone: args.contactPhone ?? undefined,

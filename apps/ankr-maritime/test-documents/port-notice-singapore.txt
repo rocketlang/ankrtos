@@ -1,0 +1,242 @@
+PORT NOTICE - SINGAPORE
+
+Maritime and Port Authority of Singapore (MPA)
+Notice to Mariners No. 26/2026
+
+Date of Issue: January 25, 2026
+Effective From: February 1, 2026, 0000 hrs
+Valid Until: Further notice
+
+SUBJECT: PORT OPERATIONS AND BERTHING PROCEDURES - SINGAPORE PORT
+
+1. PORT CONGESTION ALERT
+Current Status: MODERATE CONGESTION
+- Container terminals: 2-3 days waiting time
+- Bulk terminals: 1-2 days waiting time
+- Tanker berths: Normal operations
+- Anchorages: 85% occupancy
+
+Vessels are advised to confirm berth availability 72 hours prior to arrival.
+
+2. ANCHORAGE AREAS
+Eastern Anchorage (EA):
+- Available berths: 45
+- Current occupancy: 38 vessels
+- Suitable for: Bulk carriers, general cargo
+- Depth: 15-25 meters
+- Coordinates: 1°13'N, 104°05'E
+
+Western Anchorage (WA):
+- Available berths: 60
+- Current occupancy: 52 vessels
+- Suitable for: Container vessels, tankers
+- Depth: 20-30 meters
+- Coordinates: 1°12'N, 103°48'E
+
+3. PILOTAGE REQUIREMENTS
+Compulsory Pilotage:
+- All vessels over 500 GT
+- All vessels carrying dangerous goods
+- All vessels with drafts exceeding 10 meters
+
+Pilot Boarding Grounds:
+- Eastern Pilot Boarding Ground (EPG): 1°14'N, 104°08'E
+- Western Pilot Boarding Ground (WPG): 1°12'N, 103°42'E
+
+Booking Requirements:
+- Minimum 4 hours advance notice
+- 24 hours for dangerous goods carriers
+- 48 hours for LNG/LPG vessels
+
+Contact: Singapore Pilots (24/7)
+Tel: +65 6325 2489
+Email: pilots@mpa.gov.sg
+VHF Channel 12
+
+4. TRAFFIC SEPARATION SCHEME
+Singapore Strait TSS:
+- Strictly enforce separation scheme
+- Speed limit: 12 knots through strait
+- No anchoring in traffic lanes
+- Report to VTIS on VHF Channel 10
+
+Reporting Points:
+- Point Alpha: 1°16'N, 103°50'E (Westbound)
+- Point Bravo: 1°10'N, 104°24'E (Eastbound)
+
+5. TERMINAL OPERATIONS
+PSA Terminals:
+- Tanjong Pagar: Normal operations
+- Keppel: Normal operations
+- Brani: Normal operations
+- Pasir Panjang (Phases 1-4): Normal operations
+
+Jurong Port:
+- Bulk terminals: Normal operations
+- Steel terminal: 24-hour delays due to equipment maintenance
+- Cement terminal: Normal operations
+
+6. BUNKERING OPERATIONS
+Designated Bunker Areas:
+- EA-1, EA-2, EA-3 (Eastern Anchorage)
+- WA-1, WA-2 (Western Anchorage)
+
+Bunker Suppliers:
+- Over 50 licensed bunker suppliers available
+- Average delivery time: 6-8 hours from order
+- Bunker quality testing: Mandatory for all deliveries
+
+Fuel Specifications Available:
+- VLSFO (0.5% sulfur) - Compliant with IMO 2020
+- LSMGO (Marine Gas Oil) - For auxiliary use
+- MGO (0.1% sulfur) - For ECA transit
+
+7. DANGEROUS GOODS REGULATIONS
+Pre-arrival Notification:
+- Mandatory 48 hours before arrival
+- Submit DG manifest to MPA
+- Obtain berth assignment confirmation
+
+Segregation Requirements:
+- Class 1 (Explosives): Dedicated berths only
+- Class 3 (Flammable liquids): Minimum 100m separation
+- Class 7 (Radioactive): Special permission required
+
+8. WEATHER AND TIDES
+Current Season: Northeast Monsoon
+Expected Conditions:
+- Wind: NE 15-20 knots, gusts to 25 knots
+- Sea state: Moderate, 1.5-2.5 meter swells
+- Visibility: Generally good, 5-10 nm
+- Rain: Intermittent thunderstorms afternoon/evening
+
+Tidal Information (February 2026):
+Spring Tides: Feb 2-5, Feb 16-19
+High Water (HW): Up to 3.2 meters above chart datum
+Low Water (LW): Down to 0.3 meters above chart datum
+
+9. ENVIRONMENTAL REGULATIONS
+MARPOL Compliance:
+- Zero discharge of garbage within port limits
+- Oily water discharge strictly prohibited
+- Reception facilities available at all terminals
+- Garbage disposal: Book 24 hours in advance
+
+Emission Control:
+- Shore power available at selected berths
+- Low-sulfur fuel mandatory (0.5% max)
+- Vessels at berth: Minimize auxiliary engine use
+
+10. PORT SECURITY (ISPS CODE)
+Security Level: MARSEC Level 1 (Normal)
+Requirements:
+- Valid ISSC certificate mandatory
+- SSP (Ship Security Plan) onboard
+- Security drills: Verify before arrival
+- ID checks: All crew/visitors
+
+Restricted Areas:
+- Military installations: Keep clear 500m
+- Petroleum terminals: No photography
+- LNG terminals: Enhanced security checks
+
+11. SHIP-TO-SHIP (STS) OPERATIONS
+Designated STS Areas:
+- Eastern STS Zone: 1°15'N, 104°10'E
+- Western STS Zone: 1°11'N, 103°44'E
+
+Requirements:
+- Apply 7 days in advance
+- Submit STS plan and checklist
+- Minimum fender requirements: 6 pneumatic fenders
+- Certified STS provider mandatory
+
+12. NAVIGATION WARNINGS
+Temporary Restrictions:
+- Feb 3-5, 2026: Naval exercises, area 1°20'N to 1°30'N, 104°E to 105°E
+  Vessels advised to avoid area or proceed with caution
+
+- Feb 10-12, 2026: Cable laying operations, vicinity 1°16'N, 104°02'E
+  Mariners keep clear 500 meters
+
+Buoys Out of Position:
+- Eastern Anchorage Buoy EA-12: Unlit (repair scheduled Feb 8)
+- Western Fairway Buoy WF-8: Off station (will be replaced Feb 10)
+
+13. CONTACT INFORMATION
+Port Operations Centre (POC):
+Tel: +65 6325 2488 (24/7)
+Email: poc@mpa.gov.sg
+VHF Channel: 10, 12, 14
+
+Vessel Traffic Information System (VTIS):
+VHF Channel: 10 (Primary)
+Tel: +65 6226 5539
+
+Port Health Authority:
+Tel: +65 6325 2509
+Email: health@mpa.gov.sg
+(Notify 4 hours before arrival if illness onboard)
+
+Immigration and Customs:
+Tel: +65 6391 6100
+Email: customs@mpa.gov.sg
+
+Emergency Services:
+Marine Police: +65 6226 3333
+Coast Guard: +65 6325 2000
+Fire & Rescue: 995
+Ambulance: 995
+
+14. SHORE LEAVE AND CREW CHANGE
+Current COVID-19 Protocols:
+- Crew changes: Permitted with prior approval
+- Shore leave: Restricted to designated crew centers
+- Health screening: Mandatory for all crew changes
+- Quarantine: As per current regulations
+
+Crew Change Approval:
+- Apply 14 days before arrival
+- Submit crew list and health declarations
+- Designated crew change terminals only
+
+15. WASTE DISPOSAL FACILITIES
+Reception Facilities Available:
+- Oily waste: All terminals
+- Garbage: Collection service available
+- Sewage: Pump-out available at designated berths
+- Cargo residues: Specialized disposal companies
+
+Booking:
+Tel: +65 6234 5678
+Email: waste@singaporeport.com
+Notice: Minimum 24 hours
+
+16. SHIP CHANDLERS AND SERVICES
+Services Available:
+- Provisions and stores: 50+ suppliers
+- Ship repairs: Multiple shipyards and workshops
+- Medical services: Ship doctors available
+- Spare parts: Global sourcing network
+- Crew welfare: Seamen's mission, internet cafes
+
+Contact Directory: www.mpa.gov.sg/services
+
+---
+
+This notice supersedes all previous notices on this subject.
+
+For latest updates and real-time information:
+Website: www.mpa.gov.sg
+Mobile App: MPA Mobile
+Twitter: @MPA_sg
+
+Maritime and Port Authority of Singapore
+460 Alexandra Road, #19-00
+PSA Building, Singapore 119963
+
+Issued by: Harbour Master's Office
+Date: January 25, 2026
+Reference: MN-026-2026
+
+END OF NOTICE

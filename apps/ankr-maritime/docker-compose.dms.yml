@@ -1,0 +1,69 @@
+# Docker Compose for Mari8X Hybrid DMS
+# Services: MinIO, Ollama, PostgreSQL (already running)
+
+version: '3.8'
+
+services:
+  # MinIO - S3-compatible object storage
+  minio:
+    image: minio/minio:latest
+    container_name: mari8x-minio
+    ports:
+      - "9000:9000"  # API
+      - "9001:9001"  # Console UI
+    environment:
+      MINIO_ROOT_USER: mari8x
+      MINIO_ROOT_PASSWORD: mari8x_secure_2026
+    volumes:
+      - minio-data:/data
+      - minio-config:/root/.minio
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    restart: unless-stopped
+
+  # Ollama - Local LLM server (CPU mode)
+  ollama:
+    image: ollama/ollama:latest
+    container_name: mari8x-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+    restart: unless-stopped
+    # GPU support disabled - running in CPU mode
+
+  # Redis - Caching for RAG results
+  redis:
+    image: redis:7-alpine
+    container_name: mari8x-redis
+    ports:
+      - "6382:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes --maxmemory 512mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+
+volumes:
+  minio-data:
+    driver: local
+  minio-config:
+    driver: local
+  ollama-data:
+    driver: local
+  redis-data:
+    driver: local
+
+networks:
+  default:
+    name: mari8x-network

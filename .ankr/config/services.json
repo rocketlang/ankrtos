@@ -637,6 +637,105 @@
       "healthEndpoint": "/health",
       "enabled": true,
       "pm2Name": "ankr-code-music"
+    },
+    "ankr-maritime-backend": {
+      "portPath": "backend.ankrMaritime",
+      "path": "/root/apps/ankr-maritime/backend",
+      "command": "npx tsx src/main.ts",
+      "description": "Mrk8X Maritime Operations API (Fastify + Mercurius GraphQL + Pothos + Prisma)",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "pm2Name": "ankr-maritime-backend",
+      "env": {
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_maritime",
+        "JWT_SECRET": "mrk8x-jwt-secret-2026",
+        "FRONTEND_URL": "http://localhost:3008"
+      },
+      "_features": [
+        "18 Prisma models (Vessel, Port, Charter, Voyage, DA, Laytime, etc.)",
+        "17 GraphQL type files with code-first Pothos schema",
+        "Charter state machine (draft > on_subs > fixed > executed > completed)",
+        "Laytime demurrage/despatch calculation engine",
+        "Sea route calculator with Haversine + great circle",
+        "Notification system with polling",
+        "Vendor rating aggregation"
+      ]
+    },
+    "ankr-maritime-frontend": {
+      "portPath": "frontend.ankrMaritime",
+      "path": "/root/apps/ankr-maritime/frontend",
+      "command": "npx vite --host 0.0.0.0 --port ${PORT}",
+      "description": "Mrk8X Maritime Operations Dashboard (React 19 + Vite + Apollo + TailwindCSS)",
+      "healthEndpoint": "/",
+      "enabled": true,
+      "pm2Name": "ankr-maritime-frontend",
+      "_features": [
+        "11 routes: Dashboard, Vessels, Ports, Port Map, Route Calculator, Companies, Chartering, Voyages, DA Desk, Laytime, Features",
+        "MapLibre GL JS + OpenStreetMap (OSS, no API key)",
+        "Vendor ratings with star picker",
+        "Charter Party builder with clause library",
+        "Notification bell with polling",
+        "Free/Pro/Enterprise tier feature flags"
+      ]
+    },
+    "ankr-wms-backend": {
+      "portPath": "backend.ankrWms",
+      "path": "/root/ankr-labs-nx/apps/ankr-wms/backend",
+      "command": "npx tsx src/main.ts",
+      "description": "AnkrWMS Enterprise Warehouse Management API (Fastify + Mercurius GraphQL + Prisma)",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "pm2Name": "ankr-wms-backend",
+      "env": {
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_wms",
+        "JWT_SECRET": "ankr-wms-jwt-secret-2026",
+        "PORT": "4060"
+      },
+      "_features": [
+        "475+ GraphQL operations (queries, mutations, subscriptions)",
+        "40+ warehouse modules: Inventory, Picking, Packing, Shipping, Receiving, Cycle Count",
+        "3PL multi-tenant billing engine",
+        "Indian compliance: GST, HSN, e-Way Bill, e-Invoice",
+        "Bin-level LPN tracking with barcode/RFID",
+        "Workflow engine with 5 templates",
+        "Automation engine with 8 rule templates",
+        "Visual Flow Canvas designer",
+        "Interactive Setup Wizards (5 wizards)"
+      ]
+    },
+    "ankr-wms-frontend": {
+      "portPath": "frontend.ankrWms",
+      "path": "/root/ankr-labs-nx/apps/ankr-wms/frontend",
+      "command": "npm run dev",
+      "description": "AnkrWMS Enterprise WMS Dashboard (Next.js 15 + React 19 + TailwindCSS)",
+      "healthEndpoint": "/",
+      "enabled": true,
+      "pm2Name": "ankr-wms-frontend",
+      "_features": [
+        "20+ page modules: Dashboard, Warehouses, Products, Inventory, Picking, Packing, Shipping",
+        "Flow Canvas visual workflow designer with drag-and-drop nodes",
+        "Workflow management dashboard",
+        "Automation rules engine UI",
+        "Interactive Setup Wizards with multi-step forms",
+        "Barcode scanner interface",
+        "Dark theme with Tailwind CSS"
+      ]
+    },
+    "ankr-doctor": {
+      "portPath": "knowledgeBase.doctor",
+      "path": "/root/ankr-labs-nx/apps/ankr-doctor",
+      "command": "node dist/index.js watch --interval 30",
+      "description": "Automated E2E Scanner & Healer - scans all ANKR frontends, diagnoses issues, auto-fixes",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "pm2Name": "ankr-doctor",
+      "_features": [
+        "HTTP + Playwright deep scan of all apps",
+        "11-rule diagnosis engine (Prisma, deps, service_down, port_conflict, etc.)",
+        "Auto-fix with safety guards and verification",
+        "JSON reports + Telegram alerts",
+        "Watch mode with configurable interval"
+      ]
     }
   }
 }

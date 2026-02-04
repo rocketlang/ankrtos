@@ -1,0 +1,272 @@
+// ============================================================================
+// Email Organizer Schema Extension
+// Extends existing EmailMessage model with folders, threading, and AI features
+// ============================================================================
+
+// Email Folders - Gmail/Outlook style folder hierarchy
+model EmailFolder {
+  id             String   @id @default(cuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  name           String // Folder display name
+  type           String // system, custom, bucket
+  icon           String? // Icon name (e.g., 'Inbox', 'Star', 'Send')
+  color          String? // Color code for UI
+  position       Int     @default(0) // Sort order
+
+  // Hierarchy support
+  parentId       String?
+  parent         EmailFolder?  @relation("FolderHierarchy", fields: [parentId], references: [id], onDelete: Cascade)
+  children       EmailFolder[] @relation("FolderHierarchy")
+
+  // Auto-routing rules (JSON)
+  rules          Json? // {conditions: [{field, operator, value}], action: 'move'}
+
+  // Counters (denormalized for performance)
+  unreadCount    Int     @default(0)
+  totalCount     Int     @default(0)
+
+  // Relations
+  emails         EmailMessage[] @relation("EmailFolder")
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@unique([userId, name])
+  @@index([userId])
+  @@index([organizationId])
+  @@index([type])
+  @@index([parentId])
+  @@map("email_folders")
+}
+
+// Email Threads - Conversation grouping
+model EmailThread {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  organizationId  String
+  organization    Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  // Thread metadata
+  subject         String // Normalized subject (without Re:, Fwd:, etc.)
+  participants    String[] // All email addresses in thread
+  messageCount    Int     @default(0)
+  unreadCount     Int     @default(0)
+
+  // Threading identifiers
+  firstMessageId  String?
+  latestMessageId String?
+
+  // Classification (from latest message)
+  category        String? // fixture, operations, claims, etc.
+  urgency         String? // critical, high, medium, low
+  urgencyScore    Int?    // 0-100
+  actionable      String? // requires_response, requires_approval, etc.
+
+  // UI metadata
+  labels          String[] // User-applied labels
+  isStarred       Boolean  @default(false)
+  isArchived      Boolean  @default(false)
+
+  // Relations
+  messages        EmailMessage[] @relation("EmailThread")
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+  @@index([organizationId])
+  @@index([category])
+  @@index([urgency])
+  @@index([isStarred])
+  @@map("email_threads")
+}
+
+// Enhanced Email Message (extends existing EmailMessage)
+// Note: Add these fields to existing EmailMessage model
+/*
+  // Add to EmailMessage model:
+
+  // Folder relation (replace folder string with relation)
+  folderId        String?
+  folder          EmailFolder? @relation("EmailFolder", fields: [folderId], references: [id])
+
+  // Thread relation (replace threadId string with relation)
+  threadId        String?
+  thread          EmailThread? @relation("EmailThread", fields: [threadId], references: [id])
+
+  // Email intelligence (from parser)
+  entities        Json? // {vessel: [...], port: [...], cargo: [...], etc.}
+  category        String? // From parser categoryConfig
+  urgency         String? // critical, high, medium, low
+  urgencyScore    Int? // 0-100
+  actionable      String? // requires_response, requires_approval, requires_action, informational
+  bucketId        String? // From parser bucketConfig
+  confidence      Float? // Overall parsing confidence
+
+  // AI Summary (enhanced from existing aiSummary)
+  summary         String? // One-line concise summary
+  keyPoints       String[] // Bullet points of key information
+  action          String? // Required action (e.g., "Requires urgent response")
+
+  // Email headers (for threading)
+  inReplyTo       String? // In-Reply-To header
+  references      String[] // References header (array of message IDs)
+
+  // Status tracking
+  readAt          DateTime? // When email was read
+  archivedAt      DateTime? // When email was archived
+  trashedAt       DateTime? // When email was moved to trash
+
+  // Relations
+  responseDrafts  ResponseDraft[] @relation("EmailDrafts")
+  notifications   EmailNotification[] @relation("EmailNotifications")
+*/
+
+// AI Response Drafts
+model ResponseDraft {
+  id             String   @id @default(cuid())
+  emailId        String
+  email          EmailMessage @relation("EmailDrafts", fields: [emailId], references: [id], onDelete: Cascade)
+
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  // Response content
+  style          String // acknowledge, query_reply, formal, concise, friendly, etc.
+  subject        String
+  body           String
+
+  // Context used for generation
+  contextDocs    Json? // Documents retrieved from vector DB
+  contextKnowledge Json? // Company knowledge from PageIndex
+  threadHistory  Json? // Previous messages in thread
+
+  // Status
+  status         String   @default("draft") // draft, reviewed, edited, sent, discarded
+  confidence     Float? // AI confidence in this response
+
+  // User edits (for ML feedback)
+  edits          ResponseEdit[] @relation("DraftEdits")
+
+  // Tracking
+  sentAt         DateTime?
+  deliveredAt    DateTime?
+  readAt         DateTime?
+  repliedAt      DateTime?
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([emailId])
+  @@index([userId])
+  @@index([organizationId])
+  @@index([status])
+  @@map("response_drafts")
+}
+
+// Response Edits (ML feedback loop)
+model ResponseEdit {
+  id             String   @id @default(cuid())
+  draftId        String
+  draft          ResponseDraft @relation("DraftEdits", fields: [draftId], references: [id], onDelete: Cascade)
+
+  field          String // subject, body, style
+  originalValue  String @db.Text
+  editedValue    String @db.Text
+  reason         String? // Optional reason for edit
+
+  editedAt       DateTime @default(now())
+
+  @@index([draftId])
+  @@map("response_edits")
+}
+
+// Email Notifications (multi-channel)
+model EmailNotification {
+  id             String   @id @default(cuid())
+  emailId        String?
+  email          EmailMessage? @relation("EmailNotifications", fields: [emailId], references: [id], onDelete: Cascade)
+
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  organizationId String
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  // Notification content
+  type           String // new_email, urgent_email, deadline_approaching, response_required, mentioned
+  title          String
+  body           String?
+  channels       String[] // email, sms, slack, teams, push
+
+  // Status
+  sentAt         DateTime @default(now())
+  readAt         DateTime?
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([userId])
+  @@index([organizationId])
+  @@index([emailId])
+  @@index([type])
+  @@map("email_notifications")
+}
+
+// Email Folder Rules (for auto-filing)
+model EmailFolderRule {
+  id             String   @id @default(cuid())
+  folderId       String
+  // folder         EmailFolder @relation(fields: [folderId], references: [id], onDelete: Cascade)
+
+  userId         String
+  organizationId String
+
+  // Rule conditions (JSON)
+  conditions     Json // [{field: 'category', operator: 'equals', value: 'fixture'}]
+
+  // Rule metadata
+  name           String
+  description    String?
+  enabled        Boolean  @default(true)
+  priority       Int     @default(0) // Higher priority rules run first
+
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([folderId])
+  @@index([userId])
+  @@map("email_folder_rules")
+}
+
+// Add relations to User model
+/*
+model User {
+  // ... existing fields ...
+
+  // Email organizer relations
+  emailFolders       EmailFolder[]
+  emailThreads       EmailThread[]
+  responseDrafts     ResponseDraft[]
+  emailNotifications EmailNotification[]
+}
+*/
+
+// Add relations to Organization model
+/*
+model Organization {
+  // ... existing fields ...
+
+  // Email organizer relations
+  emailFolders       EmailFolder[]
+  emailThreads       EmailThread[]
+  responseDrafts     ResponseDraft[]
+  emailNotifications EmailNotification[]
+}
+*/

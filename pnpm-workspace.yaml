@@ -1,0 +1,10 @@
+packages:
+  - apps/*
+  - libs/*
+  - ../ankr-labs-nx/packages/ankr-oauth
+  - ../ankr-labs-nx/packages/ankr-iam
+  - ../ankr-labs-nx/packages/ankr-security
+  - ../ankr-labs-nx/packages/ankr-wire
+
+onlyBuiltDependencies:
+  - '@pnpm/exe'

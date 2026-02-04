@@ -1,0 +1,197 @@
+LAYTIME CALCULATION AND TIME SHEET
+
+Voyage: MV OCEAN STAR - Singapore to New York
+Charter Party: GENCON 2022 dated March 10, 2026
+Cargo: 50,000 MT Steel Coils
+Laytime Allowed: 72 hours SHINC (Sundays and Holidays Included)
+
+===== LOADING PORT: SINGAPORE (SGSIN) =====
+
+Notice of Readiness (NOR) Tendered:
+Date: March 15, 2026
+Time: 0800 hours (Local Time SGT, UTC+8)
+Status: Vessel all fast, holds clean and ready
+Accepted: Yes, by Terminal Superintendent
+
+Laytime Commencement:
+As per charter party: NOR+6 hours (if tendered before 1600 hrs)
+Commenced: March 15, 2026, 1400 hours SGT
+
+Loading Operations:
+
+Day 1 - March 15 (Saturday):
+1400-1800 hours: Loading in progress (4 hours)
+1800-2000 hours: Rain delay, operations suspended (2 hours)
+2000-2400 hours: Loading resumed (4 hours)
+Time counted: 8 hours (rain included per SHINC)
+
+Day 2 - March 16 (Sunday):
+0000-0800 hours: Loading continued (8 hours)
+0800-1200 hours: Terminal closed for shift change (4 hours - not counted, terminal delay)
+1200-1800 hours: Loading continued (6 hours)
+1800-2000 hours: Crane breakdown (2 hours - not counted, terminal equipment)
+2000-2400 hours: Loading continued (4 hours)
+Time counted: 18 hours (Sunday included per SHINC)
+
+Day 3 - March 17 (Monday):
+0000-1000 hours: Loading continued (10 hours)
+1000-1030 hours: Cargo tally dispute, loading suspended (0.5 hours - not counted)
+1030-1600 hours: Loading continued (5.5 hours)
+Loading Completed: 1600 hours
+Time counted: 15.5 hours
+
+All Fast (Loading Complete): March 17, 2026, 1600 hours
+
+LOADING PORT SUMMARY:
+Laytime commenced: March 15, 1400 hrs
+Laytime ended: March 17, 1600 hrs
+Total elapsed time: 50 hours
+Time not counted:
+  - Terminal shift change: 4 hours
+  - Crane breakdown: 2 hours
+  - Cargo tally dispute: 0.5 hours
+  Total: 6.5 hours
+
+Laytime used (loading): 50 - 6.5 = 43.5 hours
+
+===== DISCHARGE PORT: NEW YORK (USNYC) =====
+
+Arrival at Pilot Station: April 15, 2026, 0600 hours EST (UTC-5)
+
+Notice of Readiness (NOR) Tendered:
+Date: April 15, 2026
+Time: 1400 hours EST (after berthing)
+Status: Vessel alongside, hatches opened, ready to discharge
+Accepted: Yes, by Stevedore Superintendent
+
+Laytime Commencement:
+As per charter party: NOR+6 hours
+Commenced: April 15, 2026, 2000 hours EST
+
+Discharge Operations:
+
+Day 1 - April 15 (Tuesday):
+2000-2400 hours: Discharge in progress (4 hours)
+Time counted: 4 hours
+
+Day 2 - April 16 (Wednesday):
+0000-0600 hours: Discharge continued (6 hours)
+0600-0800 hours: Stevedore meal break (2 hours - counts as used time per CP)
+0800-1200 hours: Discharge continued (4 hours)
+1200-1300 hours: Lunch break (1 hour - counts as used time)
+1300-1700 hours: Discharge continued (4 hours)
+1700-1900 hours: Labor shift change (2 hours - counts as used time)
+1900-2400 hours: Discharge continued (5 hours)
+Time counted: 24 hours
+
+Day 3 - April 17 (Thursday):
+0000-0900 hours: Discharge continued (9 hours)
+0900-1000 hours: Found damaged cargo, surveyor called (1 hour - not counted)
+1000-1200 hours: Discharge continued (2 hours)
+1200-1300 hours: Lunch break (1 hour - counted)
+1300-1600 hours: Discharge continued (3 hours)
+Discharge Completed: 1600 hours
+Time counted: 15 hours (excluding damage survey)
+
+All Discharged: April 17, 2026, 1600 hours EST
+
+DISCHARGE PORT SUMMARY:
+Laytime commenced: April 15, 2000 hrs
+Laytime ended: April 17, 1600 hrs
+Total elapsed time: 44 hours
+Time not counted:
+  - Damage survey: 1 hour
+Laytime used (discharge): 44 - 1 = 43 hours
+
+===== FINAL LAYTIME CALCULATION =====
+
+Total Laytime Allowed: 72 hours SHINC
+Laytime used at loading: 43.5 hours
+Laytime used at discharge: 43 hours
+Total laytime used: 86.5 hours
+
+Laytime balance: 72 - 86.5 = -14.5 hours
+
+Result: DEMURRAGE due
+
+Demurrage time: 14.5 hours
+Demurrage rate: USD 15,000 per day (as per charter party)
+Demurrage rate per hour: USD 15,000 / 24 = USD 625/hour
+
+DEMURRAGE CALCULATION:
+14.5 hours × USD 625/hour = USD 9,062.50
+
+===== DESPATCH CALCULATION (IF APPLICABLE) =====
+
+If laytime had been saved (which it wasn't in this case):
+Despatch rate: USD 7,500 per day (as per charter party)
+Despatch paid on: Laytime saved at discharge port only (if FHINC)
+(Not applicable in this case as demurrage incurred)
+
+===== TIME SHEET SUMMARY =====
+
+Voyage: Singapore to New York
+Vessel: MV OCEAN STAR
+Charter Party: GENCON 2022
+
+LOADING PORT (Singapore):
+NOR tendered: March 15, 0800 hrs
+Laytime commenced: March 15, 1400 hrs
+Loading completed: March 17, 1600 hrs
+Laytime used: 43.5 hours
+
+DISCHARGE PORT (New York):
+NOR tendered: April 15, 1400 hrs
+Laytime commenced: April 15, 2000 hrs
+Discharge completed: April 17, 1600 hrs
+Laytime used: 43 hours
+
+TOTAL:
+Laytime allowed: 72 hours SHINC
+Laytime used: 86.5 hours
+Demurrage: 14.5 hours
+
+AMOUNT DUE TO OWNERS:
+Demurrage: USD 9,062.50
+
+Payment terms: As per charter party
+- Due within 30 days of completion of discharge
+- Bank details: [Owner's bank account details]
+
+SUPPORTING DOCUMENTS:
+1. Notice of Readiness (loading) - March 15, 0800 hrs
+2. Notice of Readiness (discharge) - April 15, 1400 hrs
+3. Statement of Facts (loading port) - certified by agents
+4. Statement of Facts (discharge port) - certified by agents
+5. Time sheets (loading and discharge)
+6. Weather reports (for rain delays)
+7. Terminal correspondence (shift changes, equipment breakdown)
+8. Cargo damage survey report (discharge)
+
+Prepared by: Pacific Shipping Corporation
+Date: April 25, 2026
+
+Submitted to: Global Maritime Trading Ltd
+Attention: Mr. Robert Chen, Commercial Director
+
+For any queries or disputes regarding this calculation, please refer to:
+- Charter Party GENCON 2022 dated March 10, 2026
+- BIMCO laytime definitions
+- Relevant case law (if applicable)
+
+Charterers' comments and objections (if any) should be submitted within 14 days.
+
+===== NOTES AND DEFINITIONS =====
+
+SHINC: Sundays and Holidays Included in laytime counting
+NOR: Notice of Readiness
+CP: Charter Party
+FHINC: Fridays and Holidays Included (for despatch calculation)
+
+Weather Delays: Counted as used laytime per SHINC terms
+Terminal Delays: Not counted if due to terminal equipment/operations
+Cargo Damage Surveys: Typically not counted (cargo receiver's time)
+Meal and Shift Breaks: As per local custom and charter party terms
+
+This calculation is subject to final agreement between Owners and Charterers.
+Any amendments or adjustments to be mutually agreed in writing.

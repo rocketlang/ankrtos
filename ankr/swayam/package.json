@@ -1,0 +1,27 @@
+{
+  "name": "@ankr/swayam",
+  "version": "1.0.0",
+  "description": "ANKR Agent Skills - AI agent capabilities for the ANKR ecosystem",
+  "type": "module",
+  "scripts": {
+    "build": "tsx packages/skill-build/src/build.ts",
+    "validate": "tsx packages/skill-build/src/validate.ts",
+    "install-skills": "tsx packages/skill-build/src/install.ts",
+    "package": "tsx packages/skill-build/src/package.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0",
+    "yaml": "^2.3.4",
+    "glob": "^10.3.10"
+  },
+  "keywords": [
+    "ankr",
+    "agent-skills",
+    "ai-agent",
+    "claude-code",
+    "mcp"
+  ],
+  "author": "ANKR",
+  "license": "MIT"
+}

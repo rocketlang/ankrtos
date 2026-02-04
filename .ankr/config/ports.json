@@ -26,6 +26,7 @@
     "fr8x": 3006,
     "dodd": 3007,
     "ankrMaritime": 3008,
+    "ankrWms": 3060,
     "vyomo": 3010,
     "bfcWeb": 3020,
     "bfcCustomer": 3021,
@@ -52,7 +53,8 @@
     "vyomo": 4025,
     "devbrain": 4030,
     "fr8x": 4050,
-    "ankrMaritime": 4051
+    "ankrMaritime": 4051,
+    "ankrWms": 4060
   },
   "admin": {
     "_range": "4200-4299",

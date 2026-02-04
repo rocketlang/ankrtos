@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-01-23T18:31:06.776Z",
+  "project": "Fr8X",
+  "total": 89,
+  "published": 89,
+  "failed": 0,
+  "successRate": "100.0%",
+  "failedPackages": [],
+  "byCategory": {
+    "backend": 72,
+    "frontend": 0,
+    "shared": 17
+  }
+}

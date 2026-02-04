@@ -1,0 +1,545 @@
+/**
+ * ═══════════════════════════════════════════════════════════════════════════
+ * FleetAnalytics Page - Full FleetView Dashboard
+ * ═══════════════════════════════════════════════════════════════════════════
+ * 
+ * Location: Fleet → Fleet Analytics
+ * Path: /fleet/analytics
+ * 
+ * Features:
+ * - Vehicle Utilization breakdown
+ * - Demurrage tracking
+ * - Trip Performance
+ * - Maintenance Alerts
+ * 
+ * 🙏 Jai Guru Ji | © 2025 ANKR Labs
+ */
+
+import { useState, useEffect } from 'react';
+import {
+  Truck, Clock, AlertTriangle, TrendingUp, TrendingDown,
+  Gauge, MapPin, Wrench, Fuel, Timer, Activity, RefreshCw,
+  ChevronDown, ChevronUp, Download, Filter
+} from 'lucide-react';
+
+// ═══════════════════════════════════════════════════════════════════════════
+// TYPES
+// ═══════════════════════════════════════════════════════════════════════════
+
+interface FleetMetrics {
+  totalVehicles: number;
+  runningLoaded: number;
+  runningEmpty: number;
+  idleAtClient: number;
+  idleBetweenTrips: number;
+  maintenance: number;
+  parked: number;
+  utilizationPercent: number;
+  
+  totalDemurrageHours: number;
+  avgDemurragePerTrip: number;
+  demurrageCost: number;
+  topDemurrageLocations: { name: string; hours: number; cost: number }[];
+  
+  avgTripTime: number;
+  benchmarkTripTime: number;
+  tripTimeVariance: number;
+  onTimeDeliveryPercent: number;
+  
+  criticalAlerts: number;
+  warningAlerts: number;
+  upcomingService: number;
+  
+  alerts: Alert[];
+}
+
+interface Alert {
+  id: string;
+  type: 'critical' | 'warning' | 'info';
+  vehicle: string;
+  message: string;
+  action: string;
+  time: string;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// MOCK DATA (Replace with GraphQL)
+// ═══════════════════════════════════════════════════════════════════════════
+
+const generateMockMetrics = (totalVehicles: number): FleetMetrics => {
+  const runningLoaded = Math.floor(totalVehicles * 0.35);
+  const runningEmpty = Math.floor(totalVehicles * 0.08);
+  const idleAtClient = Math.floor(totalVehicles * 0.12);
+  const idleBetweenTrips = Math.floor(totalVehicles * 0.18);
+  const maintenance = Math.floor(totalVehicles * 0.07);
+  const parked = totalVehicles - runningLoaded - runningEmpty - idleAtClient - idleBetweenTrips - maintenance;
+  
+  return {
+    totalVehicles,
+    runningLoaded,
+    runningEmpty,
+    idleAtClient,
+    idleBetweenTrips,
+    maintenance,
+    parked,
+    utilizationPercent: Math.round((runningLoaded / totalVehicles) * 100),
+    
+    totalDemurrageHours: 847,
+    avgDemurragePerTrip: 4.2,
+    demurrageCost: 254100,
+    topDemurrageLocations: [
+      { name: 'Tata Steel Jamshedpur', hours: 124, cost: 37200 },
+      { name: 'Reliance Nagpur', hours: 98, cost: 29400 },
+      { name: 'Amazon Bhiwandi', hours: 76, cost: 22800 },
+      { name: 'Maruti Gurgaon', hours: 65, cost: 19500 },
+      { name: 'JSW Bellary', hours: 58, cost: 17400 },
+    ],
+    
+    avgTripTime: 52,
+    benchmarkTripTime: 44,
+    tripTimeVariance: 18,
+    onTimeDeliveryPercent: 78,
+    
+    criticalAlerts: 2,
+    warningAlerts: 5,
+    upcomingService: 12,
+    
+    alerts: [
+      { id: '1', type: 'critical', vehicle: 'MH-12-AB-1234', message: 'Engine Overheating - Coolant temp: 112°C', action: 'STOP IMMEDIATELY', time: '2 min ago' },
+      { id: '2', type: 'critical', vehicle: 'MH-12-CD-5678', message: 'Brake Pad Critical - Remaining: 8%', action: 'Service within 24h', time: '15 min ago' },
+      { id: '3', type: 'warning', vehicle: 'MH-04-EF-9012', message: 'Low Fuel - 12% remaining', action: 'Refuel at next station', time: '30 min ago' },
+      { id: '4', type: 'warning', vehicle: 'GJ-01-GH-3456', message: 'Service Due - 500km remaining', action: 'Schedule service', time: '1 hr ago' },
+      { id: '5', type: 'warning', vehicle: 'RJ-14-IJ-7890', message: 'Tire Pressure Low - Front Left', action: 'Check at next stop', time: '2 hr ago' },
+    ]
+  };
+};
+
+// ═══════════════════════════════════════════════════════════════════════════
+// MAIN COMPONENT
+// ═══════════════════════════════════════════════════════════════════════════
+
+export default function FleetAnalytics() {
+  const [metrics, setMetrics] = useState<FleetMetrics | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [timeRange, setTimeRange] = useState<'today' | 'week' | 'month'>('today');
+  const [expandedSection, setExpandedSection] = useState<string | null>('utilization');
+
+  useEffect(() => {
+    // TODO: Replace with GraphQL query
+    // query { fleetMetrics(range: $timeRange) { ... } }
+    setLoading(true);
+    setTimeout(() => {
+      setMetrics(generateMockMetrics(155));
+      setLoading(false);
+    }, 500);
+  }, [timeRange]);
+
+  if (loading || !metrics) {
+    return (
+      <div className="min-h-screen bg-[#0F172A] flex items-center justify-center">
+        <div className="text-center">
+          <RefreshCw className="w-8 h-8 text-cyan-400 animate-spin mx-auto mb-4" />
+          <p className="text-slate-400">Loading Fleet Analytics...</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-[#0F172A] text-white p-6">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h1 className="text-2xl font-bold flex items-center gap-3">
+            <Gauge className="w-8 h-8 text-cyan-400" />
+            Fleet Analytics
+          </h1>
+          <p className="text-slate-400 mt-1">Real-time fleet utilization and performance metrics</p>
+        </div>
+        <div className="flex items-center gap-3">
+          {/* Time Range Filter */}
+          <div className="flex bg-slate-800 rounded-lg p-1">
+            {(['today', 'week', 'month'] as const).map(range => (
+              <button
+                key={range}
+                onClick={() => setTimeRange(range)}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  timeRange === range 
+                    ? 'bg-cyan-500 text-white' 
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                {range.charAt(0).toUpperCase() + range.slice(1)}
+              </button>
+            ))}
+          </div>
+          <button className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors">
+            <Download className="w-5 h-5" />
+          </button>
+          <button 
+            onClick={() => setMetrics(generateMockMetrics(155))}
+            className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
+          >
+            <RefreshCw className="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+
+      {/* Summary Cards */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <SummaryCard
+          title="Fleet Utilization"
+          value={`${metrics.utilizationPercent}%`}
+          subtitle="Target: 75%"
+          icon={<Activity className="w-5 h-5" />}
+          color={metrics.utilizationPercent >= 70 ? 'green' : metrics.utilizationPercent >= 50 ? 'yellow' : 'red'}
+          trend={metrics.utilizationPercent >= 75 ? 'up' : 'down'}
+          trendValue={`${Math.abs(75 - metrics.utilizationPercent)}%`}
+        />
+        <SummaryCard
+          title="Total Demurrage"
+          value={`${metrics.totalDemurrageHours}h`}
+          subtitle={`₹${(metrics.demurrageCost / 1000).toFixed(0)}K cost`}
+          icon={<Clock className="w-5 h-5" />}
+          color="yellow"
+          trend="up"
+          trendValue="12%"
+        />
+        <SummaryCard
+          title="On-Time Delivery"
+          value={`${metrics.onTimeDeliveryPercent}%`}
+          subtitle="Target: 90%"
+          icon={<TrendingUp className="w-5 h-5" />}
+          color={metrics.onTimeDeliveryPercent >= 85 ? 'green' : 'yellow'}
+          trend={metrics.onTimeDeliveryPercent >= 90 ? 'up' : 'down'}
+          trendValue={`${Math.abs(90 - metrics.onTimeDeliveryPercent)}%`}
+        />
+        <SummaryCard
+          title="Active Alerts"
+          value={`${metrics.criticalAlerts + metrics.warningAlerts}`}
+          subtitle={`${metrics.criticalAlerts} critical`}
+          icon={<AlertTriangle className="w-5 h-5" />}
+          color={metrics.criticalAlerts > 0 ? 'red' : 'green'}
+        />
+      </div>
+
+      {/* Main Content */}
+      <div className="grid lg:grid-cols-3 gap-6">
+        {/* Left Column - Utilization & Demurrage */}
+        <div className="lg:col-span-2 space-y-6">
+          {/* Utilization Section */}
+          <CollapsibleSection
+            title="Vehicle Utilization"
+            icon={<Truck className="w-5 h-5 text-cyan-400" />}
+            expanded={expandedSection === 'utilization'}
+            onToggle={() => setExpandedSection(expandedSection === 'utilization' ? null : 'utilization')}
+            badge={`${metrics.utilizationPercent}%`}
+            badgeColor={metrics.utilizationPercent >= 70 ? 'green' : 'yellow'}
+          >
+            <div className="space-y-4">
+              <UtilizationBar label="Running (Loaded)" value={metrics.runningLoaded} total={metrics.totalVehicles} color="bg-green-500" icon={<Truck className="w-4 h-4" />} />
+              <UtilizationBar label="Running (Empty)" value={metrics.runningEmpty} total={metrics.totalVehicles} color="bg-blue-500" icon={<Truck className="w-4 h-4" />} />
+              <UtilizationBar label="Idle at Client" value={metrics.idleAtClient} total={metrics.totalVehicles} color="bg-yellow-500" icon={<MapPin className="w-4 h-4" />} />
+              <UtilizationBar label="Idle (Between Trips)" value={metrics.idleBetweenTrips} total={metrics.totalVehicles} color="bg-orange-500" icon={<Clock className="w-4 h-4" />} />
+              <UtilizationBar label="Maintenance" value={metrics.maintenance} total={metrics.totalVehicles} color="bg-red-500" icon={<Wrench className="w-4 h-4" />} />
+              <UtilizationBar label="Parked/Off" value={metrics.parked} total={metrics.totalVehicles} color="bg-slate-500" icon={<Timer className="w-4 h-4" />} />
+              
+              <div className="mt-4 p-4 bg-cyan-500/10 border border-cyan-500/30 rounded-lg">
+                <p className="text-sm text-cyan-400">
+                  💡 <strong>Insight:</strong> Reducing "Idle at Client" by 50% could improve utilization to 41% (+6%) and save ₹1.5L/month
+                </p>
+              </div>
+            </div>
+          </CollapsibleSection>
+
+          {/* Demurrage Section */}
+          <CollapsibleSection
+            title="Demurrage Analysis"
+            icon={<Clock className="w-5 h-5 text-yellow-400" />}
+            expanded={expandedSection === 'demurrage'}
+            onToggle={() => setExpandedSection(expandedSection === 'demurrage' ? null : 'demurrage')}
+            badge={`${metrics.totalDemurrageHours}h`}
+            badgeColor="yellow"
+          >
+            <div className="space-y-4">
+              <div className="grid grid-cols-3 gap-4">
+                <div className="p-4 bg-slate-800/50 rounded-lg text-center">
+                  <p className="text-3xl font-bold text-yellow-400">{metrics.totalDemurrageHours}</p>
+                  <p className="text-xs text-slate-400">Total Hours</p>
+                </div>
+                <div className="p-4 bg-slate-800/50 rounded-lg text-center">
+                  <p className="text-3xl font-bold text-orange-400">{metrics.avgDemurragePerTrip}h</p>
+                  <p className="text-xs text-slate-400">Avg/Trip</p>
+                </div>
+                <div className="p-4 bg-slate-800/50 rounded-lg text-center">
+                  <p className="text-3xl font-bold text-red-400">₹{(metrics.demurrageCost/1000).toFixed(0)}K</p>
+                  <p className="text-xs text-slate-400">Est. Loss</p>
+                </div>
+              </div>
+
+              <h4 className="text-sm font-medium text-slate-300">Top Detention Locations</h4>
+              <div className="space-y-2">
+                {metrics.topDemurrageLocations.map((loc, idx) => (
+                  <div key={idx} className="flex items-center justify-between p-3 bg-slate-800/30 rounded-lg hover:bg-slate-800/50 transition-colors">
+                    <div className="flex items-center gap-3">
+                      <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                        idx === 0 ? 'bg-red-500' : idx === 1 ? 'bg-orange-500' : 'bg-yellow-500'
+                      }`}>
+                        {idx + 1}
+                      </span>
+                      <span className="text-sm text-white">{loc.name}</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-yellow-400 font-medium">{loc.hours}h</p>
+                      <p className="text-xs text-slate-500">₹{(loc.cost/1000).toFixed(1)}K</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="p-4 bg-yellow-500/10 border border-yellow-500/30 rounded-lg">
+                <p className="text-sm text-yellow-400">
+                  💡 <strong>Recommendation:</strong> Negotiate better unloading slots with Tata Steel. Potential saving: ₹45,000/month
+                </p>
+              </div>
+            </div>
+          </CollapsibleSection>
+
+          {/* Trip Performance */}
+          <CollapsibleSection
+            title="Trip Performance"
+            icon={<TrendingUp className="w-5 h-5 text-green-400" />}
+            expanded={expandedSection === 'performance'}
+            onToggle={() => setExpandedSection(expandedSection === 'performance' ? null : 'performance')}
+            badge={`${metrics.onTimeDeliveryPercent}% OTD`}
+            badgeColor={metrics.onTimeDeliveryPercent >= 85 ? 'green' : 'yellow'}
+          >
+            <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="p-4 bg-slate-800/50 rounded-lg">
+                  <p className="text-slate-400 text-xs mb-1">Benchmark Trip Time</p>
+                  <p className="text-3xl font-bold text-green-400">{metrics.benchmarkTripTime}h</p>
+                  <p className="text-xs text-slate-500">Google Maps + 15%</p>
+                </div>
+                <div className="p-4 bg-slate-800/50 rounded-lg">
+                  <p className="text-slate-400 text-xs mb-1">Actual Avg Trip Time</p>
+                  <p className="text-3xl font-bold text-yellow-400">{metrics.avgTripTime}h</p>
+                  <p className="text-xs text-red-400">+{metrics.tripTimeVariance}% variance</p>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm text-slate-300">On-Time Delivery Rate</span>
+                  <span className="text-white font-medium">{metrics.onTimeDeliveryPercent}%</span>
+                </div>
+                <div className="h-4 bg-slate-700 rounded-full overflow-hidden">
+                  <div 
+                    className={`h-full transition-all duration-500 ${
+                      metrics.onTimeDeliveryPercent >= 90 ? 'bg-green-500' : 
+                      metrics.onTimeDeliveryPercent >= 75 ? 'bg-yellow-500' : 'bg-red-500'
+                    }`}
+                    style={{ width: `${metrics.onTimeDeliveryPercent}%` }}
+                  />
+                </div>
+                <div className="flex justify-between mt-1 text-xs text-slate-500">
+                  <span>0%</span>
+                  <span className="text-green-400">Target: 90%</span>
+                  <span>100%</span>
+                </div>
+              </div>
+            </div>
+          </CollapsibleSection>
+        </div>
+
+        {/* Right Column - Alerts */}
+        <div className="space-y-6">
+          {/* Maintenance Alerts */}
+          <div className="bg-[#1E293B] rounded-xl border border-slate-700">
+            <div className="p-4 border-b border-slate-700 flex items-center justify-between">
+              <h3 className="font-semibold flex items-center gap-2">
+                <AlertTriangle className="w-5 h-5 text-red-400" />
+                Active Alerts
+              </h3>
+              <div className="flex items-center gap-2">
+                <span className="px-2 py-1 bg-red-500/20 text-red-400 rounded-full text-xs font-medium">
+                  {metrics.criticalAlerts} Critical
+                </span>
+                <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-medium">
+                  {metrics.warningAlerts} Warning
+                </span>
+              </div>
+            </div>
+            <div className="p-4 space-y-3 max-h-[500px] overflow-y-auto">
+              {metrics.alerts.map(alert => (
+                <div 
+                  key={alert.id}
+                  className={`p-3 rounded-lg border ${
+                    alert.type === 'critical' 
+                      ? 'bg-red-500/10 border-red-500/30' 
+                      : 'bg-yellow-500/10 border-yellow-500/30'
+                  }`}
+                >
+                  <div className="flex items-start gap-3">
+                    <AlertTriangle className={`w-5 h-5 mt-0.5 ${
+                      alert.type === 'critical' ? 'text-red-400' : 'text-yellow-400'
+                    }`} />
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between">
+                        <p className="text-sm font-medium text-white">{alert.vehicle}</p>
+                        <span className="text-xs text-slate-500">{alert.time}</span>
+                      </div>
+                      <p className="text-xs text-slate-400 mt-1">{alert.message}</p>
+                      <p className={`text-xs mt-1 font-medium ${
+                        alert.type === 'critical' ? 'text-red-400' : 'text-yellow-400'
+                      }`}>
+                        Action: {alert.action}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Stats */}
+          <div className="bg-[#1E293B] rounded-xl border border-slate-700 p-4">
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <Wrench className="w-5 h-5 text-blue-400" />
+              Maintenance Schedule
+            </h3>
+            <div className="space-y-3">
+              <div className="flex items-center justify-between p-3 bg-red-500/10 rounded-lg">
+                <span className="text-sm">Overdue</span>
+                <span className="text-red-400 font-bold">3</span>
+              </div>
+              <div className="flex items-center justify-between p-3 bg-yellow-500/10 rounded-lg">
+                <span className="text-sm">Due This Week</span>
+                <span className="text-yellow-400 font-bold">7</span>
+              </div>
+              <div className="flex items-center justify-between p-3 bg-blue-500/10 rounded-lg">
+                <span className="text-sm">Scheduled</span>
+                <span className="text-blue-400 font-bold">{metrics.upcomingService}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SUB-COMPONENTS
+// ═══════════════════════════════════════════════════════════════════════════
+
+interface SummaryCardProps {
+  title: string;
+  value: string;
+  subtitle: string;
+  icon: React.ReactNode;
+  color: 'green' | 'yellow' | 'red' | 'blue';
+  trend?: 'up' | 'down';
+  trendValue?: string;
+}
+
+function SummaryCard({ title, value, subtitle, icon, color, trend, trendValue }: SummaryCardProps) {
+  const colors = {
+    green: 'from-green-500/20 to-green-500/5 border-green-500/30',
+    yellow: 'from-yellow-500/20 to-yellow-500/5 border-yellow-500/30',
+    red: 'from-red-500/20 to-red-500/5 border-red-500/30',
+    blue: 'from-blue-500/20 to-blue-500/5 border-blue-500/30',
+  };
+  
+  const textColors = {
+    green: 'text-green-400',
+    yellow: 'text-yellow-400',
+    red: 'text-red-400',
+    blue: 'text-blue-400',
+  };
+
+  return (
+    <div className={`bg-gradient-to-br ${colors[color]} rounded-xl p-4 border`}>
+      <div className="flex items-center justify-between mb-2">
+        <span className={textColors[color]}>{icon}</span>
+        {trend && (
+          <span className={`flex items-center gap-1 text-xs ${trend === 'up' ? 'text-green-400' : 'text-red-400'}`}>
+            {trend === 'up' ? <TrendingUp className="w-3 h-3" /> : <TrendingDown className="w-3 h-3" />}
+            {trendValue}
+          </span>
+        )}
+      </div>
+      <p className={`text-2xl font-bold ${textColors[color]}`}>{value}</p>
+      <p className="text-xs text-slate-400 mt-1">{title}</p>
+      <p className="text-xs text-slate-500">{subtitle}</p>
+    </div>
+  );
+}
+
+interface CollapsibleSectionProps {
+  title: string;
+  icon: React.ReactNode;
+  expanded: boolean;
+  onToggle: () => void;
+  badge: string;
+  badgeColor: 'green' | 'yellow' | 'red';
+  children: React.ReactNode;
+}
+
+function CollapsibleSection({ title, icon, expanded, onToggle, badge, badgeColor, children }: CollapsibleSectionProps) {
+  const badgeColors = {
+    green: 'bg-green-500/20 text-green-400',
+    yellow: 'bg-yellow-500/20 text-yellow-400',
+    red: 'bg-red-500/20 text-red-400',
+  };
+
+  return (
+    <div className="bg-[#1E293B] rounded-xl border border-slate-700 overflow-hidden">
+      <button
+        onClick={onToggle}
+        className="w-full p-4 flex items-center justify-between hover:bg-slate-800/50 transition-colors"
+      >
+        <div className="flex items-center gap-3">
+          {icon}
+          <span className="font-semibold">{title}</span>
+          <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${badgeColors[badgeColor]}`}>
+            {badge}
+          </span>
+        </div>
+        {expanded ? <ChevronUp className="w-5 h-5 text-slate-400" /> : <ChevronDown className="w-5 h-5 text-slate-400" />}
+      </button>
+      {expanded && (
+        <div className="p-4 pt-0 border-t border-slate-700">
+          {children}
+        </div>
+      )}
+    </div>
+  );
+}
+
+interface UtilizationBarProps {
+  label: string;
+  value: number;
+  total: number;
+  color: string;
+  icon: React.ReactNode;
+}
+
+function UtilizationBar({ label, value, total, color, icon }: UtilizationBarProps) {
+  const percent = Math.round((value / total) * 100);
+  
+  return (
+    <div>
+      <div className="flex items-center justify-between text-sm mb-1">
+        <span className="text-slate-300 flex items-center gap-2">
+          {icon}
+          {label}
+        </span>
+        <span className="text-white font-medium">{value} <span className="text-slate-500">({percent}%)</span></span>
+      </div>
+      <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
+        <div className={`h-full ${color} transition-all duration-500`} style={{ width: `${percent}%` }} />
+      </div>
+    </div>
+  );
+}

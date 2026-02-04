@@ -1,0 +1,848 @@
+{
+  "timestamp": "2026-01-30T09:59:11.578Z",
+  "duration": 82154,
+  "totalApps": 1,
+  "scannedApps": 1,
+  "summary": {
+    "pass": 0,
+    "fail": 0,
+    "warn": 1,
+    "fixed": 0
+  },
+  "apps": [
+    {
+      "app": {
+        "name": "freightbox-frontend",
+        "internalUrl": "http://localhost:3001",
+        "publicUrl": "https://freightbox.org",
+        "backendUrl": "http://localhost:4003",
+        "framework": "next",
+        "pm2Name": "freightbox-frontend",
+        "pm2Status": "errored",
+        "pm2Restarts": 15,
+        "status": "erroring",
+        "path": "/root/ankr-labs-nx/apps/freightbox/frontend",
+        "healthEndpoint": "/",
+        "port": 3001,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 46,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "s-maxage=31536000",
+            "connection": "keep-alive",
+            "content-encoding": "gzip",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:57:49 GMT",
+            "etag": "\"67ccfu0qy8otg\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+            "x-nextjs-cache": "HIT",
+            "x-nextjs-prerender": "1, 1",
+            "x-nextjs-stale-time": "300",
+            "x-powered-by": "Next.js"
+          },
+          "timestamp": "2026-01-30T09:57:49.640Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/login",
+          "route": "/login",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 4,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "s-maxage=31536000",
+            "connection": "keep-alive",
+            "content-encoding": "gzip",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:57:49 GMT",
+            "etag": "\"ic4etwz1gi8bx\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+            "x-nextjs-cache": "HIT",
+            "x-nextjs-prerender": "1, 1",
+            "x-nextjs-stale-time": "300",
+            "x-powered-by": "Next.js"
+          },
+          "timestamp": "2026-01-30T09:57:49.646Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/dashboard",
+          "route": "/dashboard",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 5,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "s-maxage=31536000",
+            "connection": "keep-alive",
+            "content-encoding": "gzip",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:57:49 GMT",
+            "etag": "\"ic4etwz1gi8bx\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+            "x-nextjs-cache": "HIT",
+            "x-nextjs-prerender": "1, 1",
+            "x-nextjs-stale-time": "300",
+            "x-powered-by": "Next.js"
+          },
+          "timestamp": "2026-01-30T09:57:49.652Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/api/health",
+          "route": "/api/health",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 3,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "connection": "keep-alive",
+            "content-encoding": "gzip",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:57:49 GMT",
+            "etag": "\"zv6wice4i57if\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+            "x-nextjs-cache": "HIT",
+            "x-nextjs-prerender": "1, 1",
+            "x-nextjs-stale-time": "300",
+            "x-powered-by": "Next.js"
+          },
+          "timestamp": "2026-01-30T09:57:49.655Z"
+        },
+        {
+          "app": "freightbox-frontend::backend",
+          "url": "http://localhost:4003/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "42",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:57:49 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:57:49.657Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 200,
+          "loadTime": 680,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 22,
+          "clickResults": [
+            {
+              "selector": "a.text-slate-300.hover:text-white",
+              "text": "Features",
+              "outcome": "navigation",
+              "newUrl": "http://localhost:3001/#features",
+              "jsErrors": [],
+              "networkErrors": []
+            }
+          ],
+          "timestamp": "2026-01-30T09:57:51.777Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/dashboard",
+          "route": "/dashboard",
+          "status": "warn",
+          "httpStatus": 200,
+          "loadTime": 570,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 8,
+          "clickResults": [
+            {
+              "selector": "button.p-2.rounded-lg",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.absolute.right-3",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.flex",
+              "text": "Sign in",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Super Admin:admin@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Operations:operations@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Finance:finance@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Documentation:docs@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Customer Portal:shipper@acmecorp.com",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            }
+          ],
+          "timestamp": "2026-01-30T09:58:00.656Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/dashboard/analytics",
+          "route": "/dashboard/analytics",
+          "status": "warn",
+          "httpStatus": 200,
+          "loadTime": 564,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 8,
+          "clickResults": [
+            {
+              "selector": "button.p-2.rounded-lg",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.absolute.right-3",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.flex",
+              "text": "Sign in",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Super Admin:admin@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Operations:operations@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Finance:finance@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Documentation:docs@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Customer Portal:shipper@acmecorp.com",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            }
+          ],
+          "timestamp": "2026-01-30T09:58:09.572Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/dashboard/apibox",
+          "route": "/dashboard/apibox",
+          "status": "warn",
+          "httpStatus": 200,
+          "loadTime": 580,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 8,
+          "clickResults": [
+            {
+              "selector": "button.p-2.rounded-lg",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.absolute.right-3",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.flex",
+              "text": "Sign in",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Super Admin:admin@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Operations:operations@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Finance:finance@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Documentation:docs@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Customer Portal:shipper@acmecorp.com",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            }
+          ],
+          "timestamp": "2026-01-30T09:58:18.435Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/dashboard/apibox/dgft",
+          "route": "/dashboard/apibox/dgft",
+          "status": "warn",
+          "httpStatus": 200,
+          "loadTime": 561,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 8,
+          "clickResults": [
+            {
+              "selector": "button.p-2.rounded-lg",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.absolute.right-3",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.flex",
+              "text": "Sign in",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Super Admin:admin@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Operations:operations@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Finance:finance@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Documentation:docs@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Customer Portal:shipper@acmecorp.com",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            }
+          ],
+          "timestamp": "2026-01-30T09:58:27.251Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/dashboard/apibox/digilocker",
+          "route": "/dashboard/apibox/digilocker",
+          "status": "warn",
+          "httpStatus": 200,
+          "loadTime": 565,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 8,
+          "clickResults": [
+            {
+              "selector": "button.p-2.rounded-lg",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.absolute.right-3",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.flex",
+              "text": "Sign in",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Super Admin:admin@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Operations:operations@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Finance:finance@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Documentation:docs@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Customer Portal:shipper@acmecorp.com",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            }
+          ],
+          "timestamp": "2026-01-30T09:58:36.138Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/dashboard/apibox/eway-bill",
+          "route": "/dashboard/apibox/eway-bill",
+          "status": "warn",
+          "httpStatus": 200,
+          "loadTime": 559,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 8,
+          "clickResults": [
+            {
+              "selector": "button.p-2.rounded-lg",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.absolute.right-3",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.flex",
+              "text": "Sign in",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Super Admin:admin@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Operations:operations@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Finance:finance@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Documentation:docs@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Customer Portal:shipper@acmecorp.com",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            }
+          ],
+          "timestamp": "2026-01-30T09:58:44.958Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/dashboard/apibox/gstn",
+          "route": "/dashboard/apibox/gstn",
+          "status": "warn",
+          "httpStatus": 200,
+          "loadTime": 566,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 8,
+          "clickResults": [
+            {
+              "selector": "button.p-2.rounded-lg",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.absolute.right-3",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.flex",
+              "text": "Sign in",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Super Admin:admin@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Operations:operations@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Finance:finance@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Documentation:docs@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Customer Portal:shipper@acmecorp.com",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            }
+          ],
+          "timestamp": "2026-01-30T09:58:53.802Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/dashboard/apibox/icegate",
+          "route": "/dashboard/apibox/icegate",
+          "status": "warn",
+          "httpStatus": 200,
+          "loadTime": 570,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 8,
+          "clickResults": [
+            {
+              "selector": "button.p-2.rounded-lg",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.absolute.right-3",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.flex",
+              "text": "Sign in",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Super Admin:admin@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Operations:operations@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Finance:finance@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Documentation:docs@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Customer Portal:shipper@acmecorp.com",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            }
+          ],
+          "timestamp": "2026-01-30T09:59:02.674Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/dashboard/apibox/vahan",
+          "route": "/dashboard/apibox/vahan",
+          "status": "warn",
+          "httpStatus": 200,
+          "loadTime": 578,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 8,
+          "clickResults": [
+            {
+              "selector": "button.p-2.rounded-lg",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.absolute.right-3",
+              "text": "",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.flex",
+              "text": "Sign in",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Super Admin:admin@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Operations:operations@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Finance:finance@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Documentation:docs@freightbox.org",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            },
+            {
+              "selector": "button.w-full.text-left",
+              "text": "Customer Portal:shipper@acmecorp.com",
+              "outcome": "noop",
+              "jsErrors": [],
+              "networkErrors": []
+            }
+          ],
+          "timestamp": "2026-01-30T09:59:11.532Z"
+        }
+      ],
+      "diagnoses": [
+        {
+          "issue": "Empty/minimal response from freightbox-frontend",
+          "severity": "medium",
+          "category": "empty_response",
+          "rootCause": "Server returns very little content. May be misconfigured or build output is empty.",
+          "autoFixable": false,
+          "evidence": [
+            "Response length: 0",
+            "Route: /"
+          ]
+        }
+      ],
+      "fixes": [],
+      "overallStatus": "degraded"
+    }
+  ]
+}

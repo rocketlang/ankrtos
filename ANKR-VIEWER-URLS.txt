@@ -1,0 +1,63 @@
+ANKR VIEWER - Mari8X Documentation Access
+==========================================
+
+✅ Viewer is RUNNING on port 3080
+
+MAIN URLS
+=========
+
+Mari8X Main Index:
+http://localhost:3080/project/documents/ankr-maritime
+
+Strategic Document (18,000 lines):
+http://localhost:3080/project/documents/ankr-maritime/MARI8X-STRATEGIC-FEATURES-FEB2026
+
+Quick Access Guide:
+http://localhost:3080/project/documents/ankr-maritime/QUICK-ACCESS-FEB1-DOCS
+
+Session Summary:
+http://localhost:3080/project/documents/ankr-maritime/SESSION-COMPLETE-FEB1-2026-FINAL
+
+Alphabetical Index:
+http://localhost:3080/project/documents/ankr-maritime/MARI8X-DOCS-INDEX-ALPHABETICAL
+
+PHASE COMPLETIONS
+=================
+
+Phase 3 Chartering:
+http://localhost:3080/project/documents/ankr-maritime/PHASE3-CHARTERING-COMPLETE
+
+Phase 8 AI Frontend:
+http://localhost:3080/project/documents/ankr-maritime/PHASE8-AI-FRONTEND-COMPLETE
+
+Phase 9 S&P:
+http://localhost:3080/project/documents/ankr-maritime/PHASE9-SNP-COMPLETE
+
+PROGRESS TRACKING
+=================
+
+Progress Tracking:
+http://localhost:3080/project/documents/ankr-maritime/PROGRESS-TRACKING-FEB1-2026
+
+What's New:
+http://localhost:3080/project/documents/ankr-maritime/WHATS-NEW-FEB1-2026
+
+Testing Status:
+http://localhost:3080/project/documents/ankr-maritime/TESTING-STATUS-FEB1-2026
+
+Backend Fix Guide:
+http://localhost:3080/project/documents/ankr-maritime/BACKEND-FIX-GUIDE
+
+VERIFICATION
+============
+
+✅ Viewer running on: http://localhost:3080
+✅ PostgreSQL connections cleaned
+✅ All 12 documents published
+✅ Index created
+
+Published: February 1, 2026
+Total Documents: 164+
+Session Docs: 12
+
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>

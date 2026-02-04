@@ -16,14 +16,23 @@ builder.prismaObject('Voyage', {
     ata: t.expose('ata', { type: 'DateTime', nullable: true }),
     createdAt: t.expose('createdAt', { type: 'DateTime' }),
     updatedAt: t.expose('updatedAt', { type: 'DateTime' }),
+    vessel: t.relation('vessel'),
+    departurePort: t.relation('departurePort', { nullable: true }),
+    arrivalPort: t.relation('arrivalPort', { nullable: true }),
   }),
 });
 
 builder.queryField('voyages', (t) =>
   t.prismaField({
     type: ['Voyage'],
-    resolve: (query, _root, _args, ctx) =>
-      ctx.prisma.voyage.findMany({ ...query, orderBy: { createdAt: 'desc' } }),
+    resolve: (query, _root, _args, ctx) => {
+      const orgId = ctx.user?.organizationId;
+      return ctx.prisma.voyage.findMany({
+        ...query,
+        where: orgId ? { vessel: { organizationId: orgId } } : {},
+        orderBy: { createdAt: 'desc' },
+      });
+    },
   }),
 );
 

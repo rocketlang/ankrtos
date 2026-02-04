@@ -1,0 +1,374 @@
+{
+  "_meta": {
+    "description": "ANKR Service Registry - References ports.json via portPath (NO hardcoding)",
+    "version": "2.0.0",
+    "portsFile": "./ports.json"
+  },
+
+  "services": {
+    "ai-proxy": {
+      "portPath": "ai.proxy",
+      "path": "/root/ankr-labs-nx/apps/ai-proxy",
+      "command": "npx tsx src/server.ts",
+      "description": "Central AI Gateway",
+      "healthEndpoint": "/health",
+      "enabled": true
+    },
+
+    "ankr-compliance-api": {
+      "portPath": "backend.compliance",
+      "path": "/root/ankr-compliance",
+      "command": "node dist/apps/api/main.js",
+      "description": "Compliance API (GraphQL)",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "env": {
+        "DATABASE_URL": "postgresql://ankr:ankrSecure2025@localhost:5434/compliance"
+      }
+    },
+
+    "complymitra-api": {
+      "portPath": "backend.complymitra",
+      "path": "/root/ankr-labs-nx/apps/complymitra-api",
+      "command": "npx tsx src/index.ts",
+      "description": "ComplyMitra Tools API",
+      "healthEndpoint": "/health",
+      "enabled": true
+    },
+
+    "ankr-crm-backend": {
+      "portPath": "backend.crm",
+      "path": "/root/ankr-labs-nx/apps/ankr-crm/backend",
+      "command": "npx tsx src/index.ts",
+      "description": "CRM Backend API",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "env": {
+        "DATABASE_URL": "postgresql://postgres:indrA@0612@localhost:5432/ankr_crm"
+      }
+    },
+
+    "ankr-crm-bff": {
+      "portPath": "backend.crmBff",
+      "path": "/root/ankr-labs-nx/apps/ankr-crm/bff",
+      "command": "npx tsx src/index.ts",
+      "description": "CRM BFF (GraphQL Gateway)",
+      "healthEndpoint": "/health",
+      "enabled": true
+    },
+
+    "ankr-crm-frontend": {
+      "portPath": "dev.crmFrontend",
+      "path": "/root/ankr-labs-nx/apps/ankr-crm/frontend",
+      "command": "npx vite --host 0.0.0.0 --port ${PORT}",
+      "description": "CRM Frontend (Vite)",
+      "healthEndpoint": "/",
+      "enabled": true
+    },
+
+    "wowtruck-backend": {
+      "portPath": "backend.wowtruck",
+      "path": "/root/ankr-labs-nx/apps/wowtruck/backend",
+      "command": "npx tsx src/index.ts",
+      "description": "WowTruck TMS Backend",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "env": {
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/wowtruck?schema=wowtruck"
+      }
+    },
+
+    "swayam-bani": {
+      "portPath": "standalone.bani",
+      "path": "/root/swayam/api-bani",
+      "command": "npx tsx server.ts",
+      "description": "BANI Voice AI Server",
+      "healthEndpoint": "/health",
+      "enabled": true
+    },
+
+    "swayam-dashboard": {
+      "portPath": "standalone.swayamDashboard",
+      "path": "/root/swayam",
+      "command": "npx serve -s . -l ${PORT}",
+      "description": "Swayam Dashboard (Static)",
+      "healthEndpoint": "/",
+      "enabled": true
+    },
+
+    "saathi-server": {
+      "portPath": "backend.saathi",
+      "path": "/root/ankr-labs-nx/apps/saathi-server",
+      "command": "npx tsx src/main.ts",
+      "description": "Saathi Server (Fastify)",
+      "healthEndpoint": "/health",
+      "enabled": true
+    },
+
+    "verdaccio": {
+      "portPath": "registry.verdaccio",
+      "path": "/root/ankr-labs-nx",
+      "command": "npx verdaccio --config /root/.config/verdaccio/config.yaml",
+      "description": "Local NPM Registry",
+      "healthEndpoint": "/-/ping",
+      "enabled": true
+    },
+
+    "ankr-eon": {
+      "portPath": "backend.eon",
+      "path": "/root/ankr-labs-nx/packages/ankr-eon",
+      "command": "npx tsx src/server.ts",
+      "description": "EON Memory & Learning System",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "env": {
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_eon?schema=public"
+      }
+    },
+
+    "ankr-viewer": {
+      "portPath": "dashboard.viewer",
+      "path": "/root/ankr-labs-nx/packages/ankr-viewer",
+      "command": "npx tsx src/server/index.ts",
+      "description": "ANKR Interact - Knowledge Browser & NotebookLLM",
+      "healthEndpoint": "/",
+      "enabled": true,
+      "critical": true,
+      "autoStart": true,
+      "pm2Name": "ankr-viewer",
+      "alias": "ankr-interact",
+      "publicUrl": "https://ankr.in/project/documents/",
+      "env": {
+        "ANKR_VIEWER_PORT": "${PORT}",
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_viewer?schema=public"
+      }
+    },
+
+    "ankr-security": {
+      "portPath": "ai.security",
+      "path": "/root/ankr-labs-nx/packages/ankr-security",
+      "command": "node dist/server.js",
+      "description": "ANKR Security Gateway",
+      "healthEndpoint": "/health",
+      "enabled": false,
+      "_note": "Disabled - needs npm run build"
+    },
+
+    "bfc-api": {
+      "portPath": "backend.bfc",
+      "path": "/root/ankr-bfc/apps/bfc-api",
+      "command": "node dist/main.js",
+      "description": "BFC Banking Finance API",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "env": {
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/bfc"
+      }
+    },
+
+    "freightbox-backend": {
+      "portPath": "backend.freightbox",
+      "path": "/root/ankr-labs-nx/apps/freightbox/backend",
+      "command": "npx tsx src/main.ts",
+      "description": "Freightbox BFF (GraphQL)",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "maxMemory": "256M"
+    },
+
+    "freightbox-frontend": {
+      "portPath": "frontend.freightbox",
+      "path": "/root/ankr-labs-nx/apps/freightbox/frontend",
+      "command": "node node_modules/next/dist/bin/next start -p ${PORT}",
+      "description": "Freightbox Dashboard (Next.js)",
+      "healthEndpoint": "/",
+      "enabled": true
+    },
+
+    "erpbharat-api": {
+      "portPath": "backend.erpbharat",
+      "path": "/root/power-erp/apps/api",
+      "command": "npx tsx src/index.ts",
+      "description": "ERP Bharat API",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "env": {
+        "API_PORT": "${PORT}",
+        "API_HOST": "0.0.0.0",
+        "DATABASE_URL": "postgresql://erpbharat:ErpBharat2026@localhost:5432/erpbharat?schema=public",
+        "JWT_SECRET": "ankr-erp-jwt-secret-2026",
+        "JWT_REFRESH_SECRET": "ankr-erp-refresh-secret-2026"
+      }
+    },
+
+    "everpure-api": {
+      "portPath": "backend.everpure",
+      "path": "/root/everpure-backend",
+      "command": "npx tsx src/server.ts",
+      "description": "Ever Pure E-commerce API",
+      "healthEndpoint": "/health",
+      "enabled": true
+    },
+
+    "ankrforge-api": {
+      "portPath": "admin.ankrforge",
+      "path": "/root/ankr-forge/apps/forge-api",
+      "command": "npx tsx src/index.ts",
+      "description": "AnkrForge API",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "env": {
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankrforge"
+      }
+    },
+
+    "ankrforge-web": {
+      "portPath": "frontend.ankrforgeWeb",
+      "path": "/root/ankr-forge/apps/forge-web",
+      "command": "npx vite --host 0.0.0.0 --port ${PORT}",
+      "description": "AnkrForge Web Frontend",
+      "healthEndpoint": "/",
+      "enabled": true
+    },
+
+    "fr8x-backend": {
+      "portPath": "backend.fr8x",
+      "path": "/root/ankr-labs-nx/apps/fr8x/backend",
+      "command": "npx tsx src/main.ts",
+      "description": "Fr8X Freight Exchange API",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "env": {
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/fr8x?schema=public"
+      }
+    },
+
+    "fr8x-frontend": {
+      "portPath": "frontend.fr8x",
+      "path": "/root/ankr-labs-nx",
+      "command": "pnpm --filter @ankr/fr8x-frontend dev",
+      "description": "Fr8X Freight Exchange Web",
+      "healthEndpoint": "/app",
+      "enabled": true,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+
+    "driver-app": {
+      "portPath": "frontend.driverApp",
+      "path": "/root/ankr-labs-nx/apps/driver-app",
+      "command": "npx expo start --web",
+      "description": "Driver Mobile App",
+      "healthEndpoint": "/",
+      "enabled": false
+    },
+
+    "ankr-pulse": {
+      "portPath": "dashboard.pulse",
+      "path": "/root/ankr-labs-nx/apps/ankr-pulse",
+      "command": "npx vite --host 0.0.0.0 --port ${PORT}",
+      "description": "Real-time Observability Dashboard",
+      "healthEndpoint": "/",
+      "enabled": true
+    },
+
+    "devbrain": {
+      "portPath": "backend.devbrain",
+      "path": "/root/ankr-labs-nx/packages/ankr-devbrain",
+      "command": "node devbrain-api.js",
+      "description": "DevBrain Code Search API",
+      "healthEndpoint": "/health",
+      "enabled": true
+    },
+
+    "ankr-website": {
+      "portPath": "frontend.ankrWebsite",
+      "path": "/root/ankr-labs-nx/apps/ankr-website",
+      "command": "node node_modules/next/dist/bin/next start -p ${PORT}",
+      "description": "ANKR Labs Website (Next.js)",
+      "healthEndpoint": "/",
+      "enabled": false,
+      "_note": "Disabled - needs pnpm install first"
+    },
+
+    "pulse-control": {
+      "portPath": "dashboard.pulseControl",
+      "path": "/root/ankr-labs-nx/apps/ankr-pulse-control",
+      "command": "npx tsx src/index.ts",
+      "description": "Pulse Control Service",
+      "healthEndpoint": "/health",
+      "enabled": false,
+      "_note": "Disabled - src/index.ts missing"
+    },
+
+    "ankr-slm-router": {
+      "portPath": "ai.slmRouter",
+      "path": "/root/ankr-labs-nx/packages/ankr-slm-router",
+      "command": "node dist/mcp/server.js",
+      "description": "SLM Router (MCP stdio server - used by Claude)",
+      "healthEndpoint": "/health",
+      "enabled": false,
+      "_note": "MCP server runs via stdio, not HTTP - used by .mcp.json",
+      "env": {
+        "OLLAMA_URL": "http://localhost:11434"
+      }
+    },
+
+    "odoo-freightbox": {
+      "portPath": "erp.odoo",
+      "path": "/root/odoo-evolution/odoo-18",
+      "command": "python3 odoo-bin -c /root/odoo-evolution/odoo19.conf",
+      "description": "Odoo 19 FreightBox ERP",
+      "healthEndpoint": "/web/health",
+      "enabled": true,
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+
+    "sunosunao-api": {
+      "portPath": "voice.sunosunaoApi",
+      "path": "/root/ankr-labs-nx/packages/sunosunao/backend",
+      "command": "npx tsx src/server-simple.ts",
+      "description": "SunoSunao Voice AI Backend",
+      "healthEndpoint": "/health",
+      "enabled": false,
+      "_note": "Disabled - needs: cd path && npx prisma generate",
+      "env": {
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5433/ankr_eon"
+      }
+    },
+
+    "vyomo-api": {
+      "portPath": "backend.vyomo",
+      "path": "/root/ankr-options-standalone/apps/vyomo-api",
+      "command": "npx tsx watch src/main.ts",
+      "description": "Vyomo Options Trading API (GraphQL)",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "env": {
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5433/ankr_eon"
+      }
+    },
+
+    "vyomo-web": {
+      "portPath": "frontend.vyomo",
+      "path": "/root/ankr-options-standalone/apps/vyomo-web",
+      "command": "npx vite --host 0.0.0.0 --port ${PORT}",
+      "description": "Vyomo Options Trading Frontend (React)",
+      "healthEndpoint": "/",
+      "enabled": true
+    },
+
+    "dodd-backend": {
+      "portPath": "backend.dodd",
+      "path": "/root/odoo-evolution/dodd-v2",
+      "command": "echo 'DODD uses Odoo - start via odoo-freightbox'",
+      "description": "DODD ERP (Odoo-based)",
+      "healthEndpoint": "/",
+      "enabled": false,
+      "_note": "DODD is Odoo-based, uses same instance as FreightBox"
+    }
+  }
+}

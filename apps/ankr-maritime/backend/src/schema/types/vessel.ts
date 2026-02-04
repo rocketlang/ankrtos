@@ -1,4 +1,5 @@
 import { builder } from '../builder.js';
+import { autoEnrichmentService } from '../../services/auto-enrichment.service.js';
 
 builder.prismaObject('Vessel', {
   fields: (t) => ({
@@ -26,7 +27,7 @@ builder.queryField('vessels', (t) =>
   t.prismaField({
     type: ['Vessel'],
     resolve: (query, _root, _args, ctx) =>
-      ctx.prisma.vessel.findMany({ ...query, orderBy: { name: 'asc' } }),
+      ctx.prisma.vessel.findMany({ ...query, where: ctx.orgFilter(), orderBy: { name: 'asc' } }),
   }),
 );
 
@@ -35,8 +36,22 @@ builder.queryField('vessel', (t) =>
     type: 'Vessel',
     nullable: true,
     args: { id: t.arg.string({ required: true }) },
-    resolve: (query, _root, args, ctx) =>
-      ctx.prisma.vessel.findUnique({ ...query, where: { id: args.id } }),
+    resolve: async (query, _root, args, ctx) => {
+      const vessel = await ctx.prisma.vessel.findUnique({ ...query, where: { id: args.id } });
+
+      // Trigger enrichment if vessel has IMO and user is querying it
+      if (vessel?.imoNumber) {
+        await autoEnrichmentService.queueEnrichment({
+          source: 'user_query',
+          vesselId: vessel.id,
+          imoNumber: vessel.imoNumber,
+          vesselName: vessel.name || undefined,
+          priority: 'high', // User is waiting for data
+        });
+      }
+
+      return vessel;
+    },
   }),
 );
 
@@ -45,8 +60,22 @@ builder.queryField('vesselByImo', (t) =>
     type: 'Vessel',
     nullable: true,
     args: { imo: t.arg.string({ required: true }) },
-    resolve: (query, _root, args, ctx) =>
-      ctx.prisma.vessel.findUnique({ ...query, where: { imo: args.imo } }),
+    resolve: async (query, _root, args, ctx) => {
+      const vessel = await ctx.prisma.vessel.findUnique({ ...query, where: { imo: args.imo } });
+
+      // Trigger enrichment when querying by IMO (clear user intent to get vessel data)
+      if (vessel) {
+        await autoEnrichmentService.queueEnrichment({
+          source: 'user_query',
+          vesselId: vessel.id,
+          imoNumber: vessel.imoNumber || args.imo,
+          vesselName: vessel.name || undefined,
+          priority: 'high', // User is waiting for data
+        });
+      }
+
+      return vessel;
+    },
   }),
 );
 

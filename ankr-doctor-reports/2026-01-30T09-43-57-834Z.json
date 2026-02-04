@@ -1,0 +1,4868 @@
+{
+  "timestamp": "2026-01-30T09:43:57.834Z",
+  "duration": 668,
+  "totalApps": 53,
+  "scannedApps": 53,
+  "summary": {
+    "pass": 16,
+    "fail": 6,
+    "warn": 31,
+    "fixed": 0
+  },
+  "apps": [
+    {
+      "app": {
+        "name": "ai-proxy",
+        "internalUrl": "http://localhost:4444",
+        "publicUrl": "https://swayam.digimitra.guru",
+        "framework": "static",
+        "pm2Name": "ai-proxy",
+        "pm2Status": "online",
+        "pm2Restarts": 1,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ai-proxy",
+        "healthEndpoint": "/health",
+        "port": 4444,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ai-proxy",
+          "url": "http://localhost:4444/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 38,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "115",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.364Z"
+        },
+        {
+          "app": "ai-proxy",
+          "url": "http://localhost:4444/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [
+            "Error: '+e}btn.disabled=false;btn.textContent='🚀 Send'}"
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "6059",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.367Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-compliance-api",
+        "internalUrl": "http://localhost:4001",
+        "publicUrl": "https://complymitra.in",
+        "framework": "express",
+        "pm2Name": "ankr-compliance-api",
+        "pm2Status": "stopped",
+        "pm2Restarts": 0,
+        "status": "stopped",
+        "path": "/root/ankr-compliance",
+        "healthEndpoint": "/health",
+        "port": 4001,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-compliance-api",
+          "url": "http://localhost:4001/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.369Z"
+        },
+        {
+          "app": "ankr-compliance-api",
+          "url": "http://localhost:4001/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "181",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.371Z"
+        },
+        {
+          "app": "ankr-compliance-api",
+          "url": "http://localhost:4001/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "31",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.372Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "complymitra-api",
+        "internalUrl": "http://localhost:4015",
+        "framework": "express",
+        "pm2Name": "complymitra-api",
+        "pm2Status": "stopped",
+        "pm2Restarts": 0,
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/apps/complymitra-api",
+        "healthEndpoint": "/health",
+        "port": 4015,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "complymitra-api",
+          "url": "http://localhost:4015/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "703",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.373Z"
+        },
+        {
+          "app": "complymitra-api",
+          "url": "http://localhost:4015/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.374Z"
+        },
+        {
+          "app": "complymitra-api",
+          "url": "http://localhost:4015/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.375Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-crm-backend",
+        "internalUrl": "http://localhost:4010",
+        "framework": "express",
+        "pm2Name": "ankr-crm-backend",
+        "pm2Status": "stopped",
+        "pm2Restarts": 0,
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/apps/ankr-crm/backend",
+        "healthEndpoint": "/health",
+        "port": 4010,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-crm-backend",
+          "url": "http://localhost:4010/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "54",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72"
+          },
+          "timestamp": "2026-01-30T09:43:57.378Z"
+        },
+        {
+          "app": "ankr-crm-backend",
+          "url": "http://localhost:4010/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72"
+          },
+          "timestamp": "2026-01-30T09:43:57.379Z"
+        },
+        {
+          "app": "ankr-crm-backend",
+          "url": "http://localhost:4010/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "31",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72"
+          },
+          "timestamp": "2026-01-30T09:43:57.380Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-crm-bff",
+        "internalUrl": "http://localhost:4011",
+        "publicUrl": "https://crm.ankr.in",
+        "framework": "express",
+        "pm2Name": "ankr-crm-bff",
+        "pm2Status": "stopped",
+        "pm2Restarts": 0,
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/apps/ankr-crm/bff",
+        "healthEndpoint": "/health",
+        "port": 4011,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-crm-bff",
+          "url": "http://localhost:4011/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 5,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "79",
+            "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+            "content-type": "application/json; charset=utf-8",
+            "cross-origin-opener-policy": "same-origin",
+            "cross-origin-resource-policy": "same-origin",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "origin-agent-cluster": "?1",
+            "referrer-policy": "no-referrer",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "vary": "Origin",
+            "x-content-type-options": "nosniff",
+            "x-dns-prefetch-control": "off",
+            "x-download-options": "noopen",
+            "x-frame-options": "SAMEORIGIN",
+            "x-permitted-cross-domain-policies": "none",
+            "x-xss-protection": "0"
+          },
+          "timestamp": "2026-01-30T09:43:57.385Z"
+        },
+        {
+          "app": "ankr-crm-bff",
+          "url": "http://localhost:4011/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+            "content-type": "application/json; charset=utf-8",
+            "cross-origin-opener-policy": "same-origin",
+            "cross-origin-resource-policy": "same-origin",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "origin-agent-cluster": "?1",
+            "referrer-policy": "no-referrer",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "vary": "Origin",
+            "x-content-type-options": "nosniff",
+            "x-dns-prefetch-control": "off",
+            "x-download-options": "noopen",
+            "x-frame-options": "SAMEORIGIN",
+            "x-permitted-cross-domain-policies": "none",
+            "x-xss-protection": "0"
+          },
+          "timestamp": "2026-01-30T09:43:57.386Z"
+        },
+        {
+          "app": "ankr-crm-bff",
+          "url": "http://localhost:4011/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "31",
+            "content-security-policy": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+            "content-type": "application/json; charset=utf-8",
+            "cross-origin-opener-policy": "same-origin",
+            "cross-origin-resource-policy": "same-origin",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "origin-agent-cluster": "?1",
+            "referrer-policy": "no-referrer",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "vary": "Origin",
+            "x-content-type-options": "nosniff",
+            "x-dns-prefetch-control": "off",
+            "x-download-options": "noopen",
+            "x-frame-options": "SAMEORIGIN",
+            "x-permitted-cross-domain-policies": "none",
+            "x-ratelimit-limit": "100",
+            "x-ratelimit-remaining": "98",
+            "x-ratelimit-reset": "21",
+            "x-xss-protection": "0"
+          },
+          "timestamp": "2026-01-30T09:43:57.387Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-crm-frontend",
+        "internalUrl": "http://localhost:5177",
+        "publicUrl": "https://crm.ankr.in",
+        "backendUrl": "http://localhost:4010",
+        "framework": "vite",
+        "pm2Name": "ankr-crm-frontend",
+        "pm2Status": "stopped",
+        "pm2Restarts": 0,
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/apps/ankr-crm/frontend",
+        "healthEndpoint": "/",
+        "port": 5177,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-crm-frontend",
+          "url": "http://localhost:5177/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 3,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "414",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"19e-OFA8MoIfhSD+/vvhyZOhuKytq5U\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.390Z"
+        },
+        {
+          "app": "ankr-crm-frontend",
+          "url": "http://localhost:5177/login",
+          "route": "/login",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 5,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "414",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"19e-OFA8MoIfhSD+/vvhyZOhuKytq5U\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.395Z"
+        },
+        {
+          "app": "ankr-crm-frontend",
+          "url": "http://localhost:5177/dashboard",
+          "route": "/dashboard",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "414",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"19e-OFA8MoIfhSD+/vvhyZOhuKytq5U\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.396Z"
+        },
+        {
+          "app": "ankr-crm-frontend::backend",
+          "url": "http://localhost:4010/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 5,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "54",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72"
+          },
+          "timestamp": "2026-01-30T09:43:57.401Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "ankrtms-backend",
+        "internalUrl": "http://localhost:4000",
+        "publicUrl": "https://swayam.digimitra.guru",
+        "framework": "express",
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/apps/ankrtms/backend",
+        "healthEndpoint": "/health",
+        "port": 4000,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankrtms-backend",
+          "url": "http://localhost:4000/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 4,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "100",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.405Z"
+        },
+        {
+          "app": "ankrtms-backend",
+          "url": "http://localhost:4000/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.406Z"
+        },
+        {
+          "app": "ankrtms-backend",
+          "url": "http://localhost:4000/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "31",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.407Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "swayam-bani",
+        "internalUrl": "http://localhost:7777",
+        "publicUrl": "https://swayam.ankr.in",
+        "framework": "static",
+        "pm2Name": "swayam-bani",
+        "pm2Status": "waiting restart",
+        "pm2Restarts": 19084,
+        "status": "stopped",
+        "path": "/root/swayam/api-bani",
+        "healthEndpoint": "/health",
+        "port": 7777,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "swayam-bani",
+          "url": "http://localhost:7777/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "195",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.409Z"
+        },
+        {
+          "app": "swayam-bani",
+          "url": "http://localhost:7777/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 200,
+          "loadTime": 5,
+          "jsErrors": [
+            "error: #ef4444; --border: #334155;",
+            "Error: ' + e.error;",
+            "Error: ' + escapeHtml(msg.error || 'Unknown error') + '"
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "42742",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.415Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "swayam-dashboard",
+        "internalUrl": "http://localhost:7780",
+        "publicUrl": "https://swayam.ankr.in",
+        "framework": "static",
+        "pm2Name": "swayam-dashboard",
+        "pm2Status": "online",
+        "pm2Restarts": 1,
+        "status": "online",
+        "path": "/root/swayam",
+        "healthEndpoint": "/",
+        "port": 7780,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "swayam-dashboard",
+          "url": "http://localhost:7780/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 5,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "accept-ranges": "bytes",
+            "connection": "keep-alive",
+            "content-disposition": "inline; filename=\"index.html\"",
+            "content-encoding": "gzip",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "\"6eee4b1fc669292443d9a8522115980c8df66664\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Accept-Encoding"
+          },
+          "timestamp": "2026-01-30T09:43:57.421Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "saathi-server",
+        "internalUrl": "http://localhost:4008",
+        "framework": "express",
+        "pm2Name": "saathi-server",
+        "pm2Status": "stopped",
+        "pm2Restarts": 0,
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/apps/saathi-server",
+        "healthEndpoint": "/health",
+        "port": 4008,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "saathi-server",
+          "url": "http://localhost:4008/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "89",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.423Z"
+        },
+        {
+          "app": "saathi-server",
+          "url": "http://localhost:4008/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "105",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.425Z"
+        },
+        {
+          "app": "saathi-server",
+          "url": "http://localhost:4008/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.425Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "verdaccio",
+        "internalUrl": "http://localhost:4873",
+        "publicUrl": "https://swayam.digimitra.guru",
+        "framework": "unknown",
+        "pm2Name": "verdaccio",
+        "pm2Status": "stopped",
+        "pm2Restarts": 0,
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx",
+        "healthEndpoint": "/-/ping",
+        "port": 4873,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "verdaccio",
+          "url": "http://localhost:4873/-/ping",
+          "route": "/-/ping",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-origin": "*",
+            "connection": "keep-alive",
+            "content-length": "3",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "\"8a80554c91d9fca8acb82f023de02f11\"",
+            "keep-alive": "timeout=60",
+            "vary": "Accept-Encoding",
+            "x-powered-by": "hidden"
+          },
+          "timestamp": "2026-01-30T09:43:57.427Z"
+        },
+        {
+          "app": "verdaccio",
+          "url": "http://localhost:4873/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-origin": "*",
+            "connection": "keep-alive",
+            "content-encoding": "gzip",
+            "content-security-policy": "connect-src 'self'",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"50c-R7JrdymMkdLmJBKjG/I94EDT3Cs\"",
+            "keep-alive": "timeout=60",
+            "transfer-encoding": "chunked",
+            "vary": "Accept-Encoding",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "deny",
+            "x-powered-by": "hidden",
+            "x-xss-protection": "1; mode=block"
+          },
+          "timestamp": "2026-01-30T09:43:57.429Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "ankr-eon",
+        "internalUrl": "http://localhost:4005",
+        "publicUrl": "https://ankrlabs.org",
+        "framework": "static",
+        "pm2Name": "ankr-eon",
+        "pm2Status": "stopped",
+        "pm2Restarts": 0,
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/packages/ankr-eon",
+        "healthEndpoint": "/health",
+        "port": 4005,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-eon",
+          "url": "http://localhost:4005/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 10,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-origin": "*",
+            "connection": "keep-alive",
+            "content-length": "141",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"8d-2Jy94fB55OMKHds4leYmRphLZR8\"",
+            "keep-alive": "timeout=5",
+            "x-powered-by": "Express"
+          },
+          "timestamp": "2026-01-30T09:43:57.439Z"
+        },
+        {
+          "app": "ankr-eon",
+          "url": "http://localhost:4005/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-origin": "*",
+            "connection": "keep-alive",
+            "content-length": "139",
+            "content-security-policy": "default-src 'none'",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=5",
+            "x-content-type-options": "nosniff",
+            "x-powered-by": "Express"
+          },
+          "timestamp": "2026-01-30T09:43:57.440Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-viewer",
+        "internalUrl": "http://localhost:3199",
+        "publicUrl": "https://ankr.in/project/documents/",
+        "framework": "static",
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/packages/ankr-interact",
+        "healthEndpoint": "/",
+        "port": 3199,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-viewer",
+          "url": "http://localhost:3199/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 3,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "accept-ranges": "bytes",
+            "access-control-allow-credentials": "true",
+            "cache-control": "public, max-age=0",
+            "connection": "keep-alive",
+            "content-length": "161141",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"27575-19bd72fe204\"",
+            "keep-alive": "timeout=72",
+            "last-modified": "Mon, 19 Jan 2026 16:56:38 GMT",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.444Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "ankr-docs-server",
+        "internalUrl": "http://localhost:3080",
+        "publicUrl": "https://ankr.in/api/",
+        "framework": "static",
+        "pm2Name": "ankr-docs-server",
+        "pm2Status": "online",
+        "pm2Restarts": 33,
+        "status": "online",
+        "path": "/root",
+        "healthEndpoint": "/api/health",
+        "port": 3080,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-docs-server",
+          "url": "http://localhost:3080/api/health",
+          "route": "/api/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 6,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-origin": "*",
+            "connection": "keep-alive",
+            "content-length": "135",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"87-3MF4+ROblVhJEO9mk6CjGpjH9nU\"",
+            "keep-alive": "timeout=5",
+            "x-powered-by": "Express"
+          },
+          "timestamp": "2026-01-30T09:43:57.450Z"
+        },
+        {
+          "app": "ankr-docs-server",
+          "url": "http://localhost:3080/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 151,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-origin": "*",
+            "connection": "keep-alive",
+            "content-length": "110273",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"1aec1-iPzSLpwOZ7E21YaUAyMXC0BbsT4\"",
+            "keep-alive": "timeout=5",
+            "x-powered-by": "Express"
+          },
+          "timestamp": "2026-01-30T09:43:57.601Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "bfc-api",
+        "internalUrl": "http://localhost:4020",
+        "publicUrl": "https://vyomo.in",
+        "framework": "express",
+        "pm2Name": "bfc-api",
+        "pm2Status": "stopped",
+        "pm2Restarts": 0,
+        "status": "stopped",
+        "path": "/root/ankr-bfc/apps/bfc-api",
+        "healthEndpoint": "/health",
+        "port": 4020,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "bfc-api",
+          "url": "http://localhost:4020/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 4,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "97",
+            "content-type": "application/json; charset=utf-8",
+            "cross-origin-opener-policy": "same-origin",
+            "cross-origin-resource-policy": "same-origin",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "origin-agent-cluster": "?1",
+            "referrer-policy": "no-referrer",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "vary": "Origin",
+            "x-content-type-options": "nosniff",
+            "x-dns-prefetch-control": "off",
+            "x-download-options": "noopen",
+            "x-frame-options": "SAMEORIGIN",
+            "x-permitted-cross-domain-policies": "none",
+            "x-ratelimit-limit": "100",
+            "x-ratelimit-remaining": "97",
+            "x-ratelimit-reset": "21",
+            "x-xss-protection": "0"
+          },
+          "timestamp": "2026-01-30T09:43:57.605Z"
+        },
+        {
+          "app": "bfc-api",
+          "url": "http://localhost:4020/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 2,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "cross-origin-opener-policy": "same-origin",
+            "cross-origin-resource-policy": "same-origin",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "origin-agent-cluster": "?1",
+            "referrer-policy": "no-referrer",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "vary": "Origin",
+            "x-content-type-options": "nosniff",
+            "x-dns-prefetch-control": "off",
+            "x-download-options": "noopen",
+            "x-frame-options": "SAMEORIGIN",
+            "x-permitted-cross-domain-policies": "none",
+            "x-xss-protection": "0"
+          },
+          "timestamp": "2026-01-30T09:43:57.607Z"
+        },
+        {
+          "app": "bfc-api",
+          "url": "http://localhost:4020/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "31",
+            "content-type": "application/json; charset=utf-8",
+            "cross-origin-opener-policy": "same-origin",
+            "cross-origin-resource-policy": "same-origin",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "origin-agent-cluster": "?1",
+            "referrer-policy": "no-referrer",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "vary": "Origin",
+            "x-content-type-options": "nosniff",
+            "x-dns-prefetch-control": "off",
+            "x-download-options": "noopen",
+            "x-frame-options": "SAMEORIGIN",
+            "x-permitted-cross-domain-policies": "none",
+            "x-ratelimit-limit": "100",
+            "x-ratelimit-remaining": "96",
+            "x-ratelimit-reset": "21",
+            "x-xss-protection": "0"
+          },
+          "timestamp": "2026-01-30T09:43:57.608Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "freightbox-backend",
+        "internalUrl": "http://localhost:4003",
+        "publicUrl": "https://freightbox.org",
+        "framework": "express",
+        "pm2Name": "freightbox-backend",
+        "pm2Status": "online",
+        "pm2Restarts": 0,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/freightbox/backend",
+        "healthEndpoint": "/health",
+        "port": 4003,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "freightbox-backend",
+          "url": "http://localhost:4003/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "42",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.609Z"
+        },
+        {
+          "app": "freightbox-backend",
+          "url": "http://localhost:4003/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.610Z"
+        },
+        {
+          "app": "freightbox-backend",
+          "url": "http://localhost:4003/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "31",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.611Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "freightbox-frontend",
+        "internalUrl": "http://localhost:3001",
+        "publicUrl": "https://freightbox.org",
+        "backendUrl": "http://localhost:4003",
+        "framework": "next",
+        "pm2Name": "freightbox-frontend",
+        "pm2Status": "stopped",
+        "pm2Restarts": 0,
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/apps/freightbox/frontend",
+        "healthEndpoint": "/",
+        "port": 3001,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 6,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "s-maxage=31536000",
+            "connection": "keep-alive",
+            "content-encoding": "gzip",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "\"67ccfu0qy8otg\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+            "x-nextjs-cache": "HIT",
+            "x-nextjs-prerender": "1, 1",
+            "x-nextjs-stale-time": "300",
+            "x-powered-by": "Next.js"
+          },
+          "timestamp": "2026-01-30T09:43:57.617Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/login",
+          "route": "/login",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 3,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "s-maxage=31536000",
+            "connection": "keep-alive",
+            "content-encoding": "gzip",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "\"ic4etwz1gi8bx\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+            "x-nextjs-cache": "HIT",
+            "x-nextjs-prerender": "1, 1",
+            "x-nextjs-stale-time": "300",
+            "x-powered-by": "Next.js"
+          },
+          "timestamp": "2026-01-30T09:43:57.620Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/dashboard",
+          "route": "/dashboard",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 4,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "s-maxage=31536000",
+            "connection": "keep-alive",
+            "content-encoding": "gzip",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "\"ic4etwz1gi8bx\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+            "x-nextjs-cache": "HIT",
+            "x-nextjs-prerender": "1, 1",
+            "x-nextjs-stale-time": "300",
+            "x-powered-by": "Next.js"
+          },
+          "timestamp": "2026-01-30T09:43:57.624Z"
+        },
+        {
+          "app": "freightbox-frontend",
+          "url": "http://localhost:3001/api/health",
+          "route": "/api/health",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "connection": "keep-alive",
+            "content-encoding": "gzip",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "\"zv6wice4i57if\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding",
+            "x-nextjs-cache": "HIT",
+            "x-nextjs-prerender": "1, 1",
+            "x-nextjs-stale-time": "300",
+            "x-powered-by": "Next.js"
+          },
+          "timestamp": "2026-01-30T09:43:57.626Z"
+        },
+        {
+          "app": "freightbox-frontend::backend",
+          "url": "http://localhost:4003/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "42",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.627Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "erpbharat-api",
+        "internalUrl": "http://localhost:4004",
+        "framework": "express",
+        "pm2Name": "erpbharat-api",
+        "pm2Status": "online",
+        "pm2Restarts": 70,
+        "status": "online",
+        "path": "/root/power-erp/apps/api",
+        "healthEndpoint": "/health",
+        "port": 4004,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "erpbharat-api",
+          "url": "http://localhost:4004/health",
+          "route": "/health",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 5,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:4004/health",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.632Z"
+        },
+        {
+          "app": "erpbharat-api",
+          "url": "http://localhost:4004/",
+          "route": "/",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 1,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:4004/",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.633Z"
+        },
+        {
+          "app": "erpbharat-api",
+          "url": "http://localhost:4004/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 0,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:4004/graphql?query=%7B__typename%7D",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.633Z"
+        }
+      ],
+      "diagnoses": [
+        {
+          "issue": "Service erpbharat-api is not responding",
+          "severity": "critical",
+          "category": "service_down",
+          "rootCause": "Service at http://localhost:4004/health returned no response. Process may have crashed.",
+          "autoFixable": true,
+          "fixStrategy": "pm2 restart erpbharat-api",
+          "evidence": [
+            "HTTP 0",
+            "CONNECTION_ERROR: fetch failed"
+          ]
+        },
+        {
+          "issue": "erpbharat-api failing at /health",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 0 at http://localhost:4004/health. 1 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 0",
+            "ERROR: fetch failed",
+            "GET http://localhost:4004/health: CONNECTION_ERROR: fetch failed"
+          ]
+        },
+        {
+          "issue": "erpbharat-api failing at /graphql?query=%7B__typename%7D",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 0 at http://localhost:4004/graphql?query=%7B__typename%7D. 1 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 0",
+            "ERROR: fetch failed",
+            "GET http://localhost:4004/graphql?query=%7B__typename%7D: CONNECTION_ERROR: fetch failed"
+          ]
+        }
+      ],
+      "fixes": [],
+      "overallStatus": "down"
+    },
+    {
+      "app": {
+        "name": "everpure-api",
+        "internalUrl": "http://localhost:4006",
+        "publicUrl": "https://ever-pure.in",
+        "framework": "static",
+        "pm2Name": "everpure-api",
+        "pm2Status": "online",
+        "pm2Restarts": 70,
+        "status": "online",
+        "path": "/root/everpure-backend",
+        "healthEndpoint": "/health",
+        "port": 4006,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "everpure-api",
+          "url": "http://localhost:4006/health",
+          "route": "/health",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 1,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:4006/health",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.634Z"
+        },
+        {
+          "app": "everpure-api",
+          "url": "http://localhost:4006/",
+          "route": "/",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 0,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:4006/",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.634Z"
+        }
+      ],
+      "diagnoses": [
+        {
+          "issue": "Service everpure-api is not responding",
+          "severity": "critical",
+          "category": "service_down",
+          "rootCause": "Service at http://localhost:4006/health returned no response. Process may have crashed.",
+          "autoFixable": true,
+          "fixStrategy": "pm2 restart everpure-api",
+          "evidence": [
+            "HTTP 0",
+            "CONNECTION_ERROR: fetch failed"
+          ]
+        },
+        {
+          "issue": "everpure-api failing at /health",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 0 at http://localhost:4006/health. 1 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 0",
+            "ERROR: fetch failed",
+            "GET http://localhost:4006/health: CONNECTION_ERROR: fetch failed"
+          ]
+        }
+      ],
+      "fixes": [],
+      "overallStatus": "down"
+    },
+    {
+      "app": {
+        "name": "ankrforge-api",
+        "internalUrl": "http://localhost:4201",
+        "publicUrl": "https://ankrforge.in",
+        "framework": "express",
+        "pm2Name": "ankrforge-api",
+        "pm2Status": "stopped",
+        "pm2Restarts": 0,
+        "status": "stopped",
+        "path": "/root/ankr-forge/apps/forge-api",
+        "healthEndpoint": "/health",
+        "port": 4201,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankrforge-api",
+          "url": "http://localhost:4201/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3200,https://ankrforge.in",
+            "connection": "keep-alive",
+            "content-length": "98",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72"
+          },
+          "timestamp": "2026-01-30T09:43:57.636Z"
+        },
+        {
+          "app": "ankrforge-api",
+          "url": "http://localhost:4201/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3200,https://ankrforge.in",
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72"
+          },
+          "timestamp": "2026-01-30T09:43:57.637Z"
+        },
+        {
+          "app": "ankrforge-api",
+          "url": "http://localhost:4201/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "access-control-allow-origin": "http://localhost:3200,https://ankrforge.in",
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72"
+          },
+          "timestamp": "2026-01-30T09:43:57.637Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankrforge-web",
+        "internalUrl": "http://localhost:3200",
+        "publicUrl": "https://ankrforge.in",
+        "framework": "vite",
+        "pm2Name": "ankrforge-web",
+        "pm2Status": "stopped",
+        "pm2Restarts": 0,
+        "status": "stopped",
+        "path": "/root/ankr-forge/apps/forge-web",
+        "healthEndpoint": "/",
+        "port": 3200,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankrforge-web",
+          "url": "http://localhost:3200/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "814",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"32e-Xx9BBx/21+Ghf9ff44CePA+edDk\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.639Z"
+        },
+        {
+          "app": "ankrforge-web",
+          "url": "http://localhost:3200/login",
+          "route": "/login",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 3,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "814",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"32e-Xx9BBx/21+Ghf9ff44CePA+edDk\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.642Z"
+        },
+        {
+          "app": "ankrforge-web",
+          "url": "http://localhost:3200/dashboard",
+          "route": "/dashboard",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "814",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"32e-Xx9BBx/21+Ghf9ff44CePA+edDk\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.643Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "fr8x-backend",
+        "internalUrl": "http://localhost:4050",
+        "publicUrl": "https://fr8x.org",
+        "framework": "express",
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/apps/fr8x/backend",
+        "healthEndpoint": "/health",
+        "port": 4050,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "fr8x-backend",
+          "url": "http://localhost:4050/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "79",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.645Z"
+        },
+        {
+          "app": "fr8x-backend",
+          "url": "http://localhost:4050/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "213",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.646Z"
+        },
+        {
+          "app": "fr8x-backend",
+          "url": "http://localhost:4050/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "31",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.647Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "fr8x-frontend",
+        "internalUrl": "http://localhost:3006",
+        "publicUrl": "https://fr8x.org",
+        "backendUrl": "http://localhost:4050",
+        "framework": "unknown",
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx",
+        "healthEndpoint": "/app",
+        "port": 3006,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "fr8x-frontend",
+          "url": "http://localhost:3006/app",
+          "route": "/app",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 21,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-store, must-revalidate",
+            "connection": "keep-alive",
+            "content-encoding": "gzip",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=5",
+            "link": "</app/_next/static/media/36966cca54120369-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </app/_next/static/media/bb3ef058b751a6ad-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </app/_next/static/media/e4af272ccee01ff0-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\"",
+            "transfer-encoding": "chunked",
+            "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Accept-Encoding",
+            "x-content-type-options": "nosniff",
+            "x-dns-prefetch-control": "on",
+            "x-powered-by": "Next.js"
+          },
+          "timestamp": "2026-01-30T09:43:57.668Z"
+        },
+        {
+          "app": "fr8x-frontend",
+          "url": "http://localhost:3006/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 14,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-store, must-revalidate",
+            "connection": "keep-alive",
+            "content-encoding": "gzip",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=5",
+            "link": "</app/_next/static/media/36966cca54120369-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </app/_next/static/media/bb3ef058b751a6ad-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </app/_next/static/media/e4af272ccee01ff0-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\"",
+            "transfer-encoding": "chunked",
+            "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Accept-Encoding",
+            "x-powered-by": "Next.js"
+          },
+          "timestamp": "2026-01-30T09:43:57.682Z"
+        },
+        {
+          "app": "fr8x-frontend::backend",
+          "url": "http://localhost:4050/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "79",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.683Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-pulse",
+        "internalUrl": "http://localhost:4320",
+        "publicUrl": "https://pulse.ankr.in",
+        "framework": "vite",
+        "pm2Name": "ankr-pulse",
+        "pm2Status": "online",
+        "pm2Restarts": 15,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-pulse",
+        "healthEndpoint": "/",
+        "port": 4320,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-pulse",
+          "url": "http://localhost:4320/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 10,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "655",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"28f-SEUUGpihN5I8ZmEl0hh8AngWSQ8\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.693Z"
+        },
+        {
+          "app": "ankr-pulse",
+          "url": "http://localhost:4320/login",
+          "route": "/login",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-type": "text/plain",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.693Z"
+        },
+        {
+          "app": "ankr-pulse",
+          "url": "http://localhost:4320/dashboard",
+          "route": "/dashboard",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-type": "text/plain",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.694Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-status-api",
+        "internalUrl": "http://localhost:4100",
+        "publicUrl": "https://pulse.ankr.in",
+        "framework": "express",
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/apps/ankr-status-api",
+        "healthEndpoint": "/health",
+        "port": 4100,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-status-api",
+          "url": "http://localhost:4100/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-origin": "*",
+            "connection": "keep-alive",
+            "content-length": "43",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72"
+          },
+          "timestamp": "2026-01-30T09:43:57.695Z"
+        },
+        {
+          "app": "ankr-status-api",
+          "url": "http://localhost:4100/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-origin": "*",
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72"
+          },
+          "timestamp": "2026-01-30T09:43:57.696Z"
+        },
+        {
+          "app": "ankr-status-api",
+          "url": "http://localhost:4100/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-origin": "*",
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72"
+          },
+          "timestamp": "2026-01-30T09:43:57.697Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "devbrain",
+        "internalUrl": "http://localhost:4030",
+        "framework": "express",
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/packages/ankr-devbrain",
+        "healthEndpoint": "/health",
+        "port": 4030,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "devbrain",
+          "url": "http://localhost:4030/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-origin": "*",
+            "connection": "keep-alive",
+            "content-length": "157",
+            "content-type": "application/json",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=5"
+          },
+          "timestamp": "2026-01-30T09:43:57.698Z"
+        },
+        {
+          "app": "devbrain",
+          "url": "http://localhost:4030/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-origin": "*",
+            "connection": "keep-alive",
+            "content-length": "247",
+            "content-type": "application/json",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=5"
+          },
+          "timestamp": "2026-01-30T09:43:57.699Z"
+        },
+        {
+          "app": "devbrain",
+          "url": "http://localhost:4030/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-origin": "*",
+            "connection": "keep-alive",
+            "content-length": "247",
+            "content-type": "application/json",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=5"
+          },
+          "timestamp": "2026-01-30T09:43:57.700Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "odoo-freightbox",
+        "internalUrl": "http://localhost:8019",
+        "publicUrl": "https://powerpbox.net",
+        "framework": "unknown",
+        "status": "stopped",
+        "path": "/root/odoo-evolution/odoo-18",
+        "healthEndpoint": "/web/health",
+        "port": 8019,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "odoo-freightbox",
+          "url": "http://localhost:8019/web/health",
+          "route": "/web/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 5,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-store",
+            "connection": "close",
+            "content-length": "18",
+            "content-type": "application/json",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "server": "Werkzeug/3.0.1 Python/3.12.3",
+            "x-content-type-options": "nosniff"
+          },
+          "timestamp": "2026-01-30T09:43:57.705Z"
+        },
+        {
+          "app": "odoo-freightbox",
+          "url": "http://localhost:8019/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 14,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "close",
+            "content-length": "37455",
+            "content-type": "text/html; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "server": "Werkzeug/3.0.1 Python/3.12.3",
+            "set-cookie": "session_id=5L_6nXyokCswD9cfVBuLsBneApY5y1wu9Avy2NrVeD8qdmQJlcAwtx8HvVUBjpCMnf5J7BXTzcgTyu5HZfd1; Expires=Sat, 30 Jan 2027 09:43:57 GMT; Max-Age=604800; HttpOnly; Path=/",
+            "x-content-type-options": "nosniff"
+          },
+          "timestamp": "2026-01-30T09:43:57.719Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "vyomo-api",
+        "internalUrl": "http://localhost:4025",
+        "framework": "express",
+        "status": "stopped",
+        "path": "/root/ankr-options-standalone/apps/vyomo-api",
+        "healthEndpoint": "/health",
+        "port": 4025,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "vyomo-api",
+          "url": "http://localhost:4025/health",
+          "route": "/health",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 1,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:4025/health",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.720Z"
+        },
+        {
+          "app": "vyomo-api",
+          "url": "http://localhost:4025/",
+          "route": "/",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 0,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:4025/",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.720Z"
+        },
+        {
+          "app": "vyomo-api",
+          "url": "http://localhost:4025/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 1,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:4025/graphql?query=%7B__typename%7D",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.721Z"
+        }
+      ],
+      "diagnoses": [
+        {
+          "issue": "Service vyomo-api is not responding",
+          "severity": "critical",
+          "category": "service_down",
+          "rootCause": "Service at http://localhost:4025/health returned no response. Process may have crashed.",
+          "autoFixable": true,
+          "fixStrategy": "ankr-ctl restart vyomo-api",
+          "evidence": [
+            "HTTP 0",
+            "CONNECTION_ERROR: fetch failed"
+          ]
+        },
+        {
+          "issue": "vyomo-api failing at /health",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 0 at http://localhost:4025/health. 1 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 0",
+            "ERROR: fetch failed",
+            "GET http://localhost:4025/health: CONNECTION_ERROR: fetch failed"
+          ]
+        },
+        {
+          "issue": "vyomo-api failing at /graphql?query=%7B__typename%7D",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 0 at http://localhost:4025/graphql?query=%7B__typename%7D. 1 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 0",
+            "ERROR: fetch failed",
+            "GET http://localhost:4025/graphql?query=%7B__typename%7D: CONNECTION_ERROR: fetch failed"
+          ]
+        }
+      ],
+      "fixes": [],
+      "overallStatus": "down"
+    },
+    {
+      "app": {
+        "name": "vyomo-web",
+        "internalUrl": "http://localhost:3010",
+        "framework": "vite",
+        "status": "stopped",
+        "path": "/root/ankr-options-standalone/apps/vyomo-web",
+        "healthEndpoint": "/",
+        "port": 3010,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "vyomo-web",
+          "url": "http://localhost:3010/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 5,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "828",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"33c-ynhx+14oQInwbMuVBVjh+l/b5gQ\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.726Z"
+        },
+        {
+          "app": "vyomo-web",
+          "url": "http://localhost:3010/login",
+          "route": "/login",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 9,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "828",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"33c-ynhx+14oQInwbMuVBVjh+l/b5gQ\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.736Z"
+        },
+        {
+          "app": "vyomo-web",
+          "url": "http://localhost:3010/dashboard",
+          "route": "/dashboard",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "828",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"33c-ynhx+14oQInwbMuVBVjh+l/b5gQ\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.737Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "ankr-interact-frontend",
+        "internalUrl": "http://localhost:5173",
+        "publicUrl": "https://ankrlms.ankr.in",
+        "framework": "vite",
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/packages/ankr-interact",
+        "healthEndpoint": "/",
+        "port": 5173,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-interact-frontend",
+          "url": "http://localhost:5173/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 4,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "505",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"1f9-xFz1wYKc/2k6rRht7vtM1rxrt14\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.741Z"
+        },
+        {
+          "app": "ankr-interact-frontend",
+          "url": "http://localhost:5173/login",
+          "route": "/login",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-type": "text/plain",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.742Z"
+        },
+        {
+          "app": "ankr-interact-frontend",
+          "url": "http://localhost:5173/dashboard",
+          "route": "/dashboard",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-type": "text/plain",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.743Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "openclaude-backend",
+        "internalUrl": "http://localhost:4000",
+        "publicUrl": "https://swayam.digimitra.guru",
+        "framework": "unknown",
+        "status": "stopped",
+        "path": "/tmp/claude/-root/9cd484e6-d30a-45a9-ad7c-7ec2b1115731/scratchpad/mock-graphql-server",
+        "healthEndpoint": "/graphql",
+        "port": 4000,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "openclaude-backend",
+          "url": "http://localhost:4000/graphql",
+          "route": "/graphql",
+          "status": "warn",
+          "httpStatus": 400,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "52",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.744Z"
+        },
+        {
+          "app": "openclaude-backend",
+          "url": "http://localhost:4000/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.744Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "openclaude-ide",
+        "internalUrl": "http://localhost:5200",
+        "framework": "unknown",
+        "status": "stopped",
+        "path": "/root/openclaude-ide/examples/browser",
+        "healthEndpoint": "/",
+        "port": 5200,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "openclaude-ide",
+          "url": "http://localhost:5200/",
+          "route": "/",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 0,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:5200/",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.745Z"
+        }
+      ],
+      "diagnoses": [
+        {
+          "issue": "Service openclaude-ide is not responding",
+          "severity": "critical",
+          "category": "service_down",
+          "rootCause": "Service at http://localhost:5200/ returned no response. Process may have crashed.",
+          "autoFixable": true,
+          "fixStrategy": "ankr-ctl restart openclaude-ide",
+          "evidence": [
+            "HTTP 0",
+            "CONNECTION_ERROR: fetch failed"
+          ]
+        },
+        {
+          "issue": "openclaude-ide failing at /",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 0 at http://localhost:5200/. 1 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 0",
+            "ERROR: fetch failed",
+            "GET http://localhost:5200/: CONNECTION_ERROR: fetch failed"
+          ]
+        }
+      ],
+      "fixes": [],
+      "overallStatus": "down"
+    },
+    {
+      "app": {
+        "name": "ankr-docs-portal",
+        "internalUrl": "http://localhost:3015",
+        "framework": "vite",
+        "pm2Name": "ankr-docs-portal",
+        "pm2Status": "online",
+        "pm2Restarts": 2,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-docs-portal",
+        "healthEndpoint": "/",
+        "port": 3015,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-docs-portal",
+          "url": "http://localhost:3015/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"327-iXeCzANiDG9yDu4O5KNeUbHl1Yo\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.747Z"
+        },
+        {
+          "app": "ankr-docs-portal",
+          "url": "http://localhost:3015/login",
+          "route": "/login",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"327-iXeCzANiDG9yDu4O5KNeUbHl1Yo\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.748Z"
+        },
+        {
+          "app": "ankr-docs-portal",
+          "url": "http://localhost:3015/dashboard",
+          "route": "/dashboard",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"327-iXeCzANiDG9yDu4O5KNeUbHl1Yo\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.749Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "ankr-slack-bot",
+        "internalUrl": "http://localhost:3016",
+        "framework": "express",
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/apps/ankr-slack-bot",
+        "healthEndpoint": "/health",
+        "port": 3016,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-slack-bot",
+          "url": "http://localhost:3016/health",
+          "route": "/health",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 1,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:3016/health",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.750Z"
+        },
+        {
+          "app": "ankr-slack-bot",
+          "url": "http://localhost:3016/",
+          "route": "/",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 1,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:3016/",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.751Z"
+        },
+        {
+          "app": "ankr-slack-bot",
+          "url": "http://localhost:3016/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 1,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:3016/graphql?query=%7B__typename%7D",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.752Z"
+        }
+      ],
+      "diagnoses": [
+        {
+          "issue": "Service ankr-slack-bot is not responding",
+          "severity": "critical",
+          "category": "service_down",
+          "rootCause": "Service at http://localhost:3016/health returned no response. Process may have crashed.",
+          "autoFixable": true,
+          "fixStrategy": "ankr-ctl restart ankr-slack-bot",
+          "evidence": [
+            "HTTP 0",
+            "CONNECTION_ERROR: fetch failed"
+          ]
+        },
+        {
+          "issue": "ankr-slack-bot failing at /health",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 0 at http://localhost:3016/health. 1 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 0",
+            "ERROR: fetch failed",
+            "GET http://localhost:3016/health: CONNECTION_ERROR: fetch failed"
+          ]
+        },
+        {
+          "issue": "ankr-slack-bot failing at /graphql?query=%7B__typename%7D",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 0 at http://localhost:3016/graphql?query=%7B__typename%7D. 1 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 0",
+            "ERROR: fetch failed",
+            "GET http://localhost:3016/graphql?query=%7B__typename%7D: CONNECTION_ERROR: fetch failed"
+          ]
+        }
+      ],
+      "fixes": [],
+      "overallStatus": "down"
+    },
+    {
+      "app": {
+        "name": "ankr-voice-search",
+        "internalUrl": "http://localhost:3017",
+        "framework": "express",
+        "pm2Name": "ankr-voice-search",
+        "pm2Status": "online",
+        "pm2Restarts": 47763,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-voice-search",
+        "healthEndpoint": "/health",
+        "port": 3017,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-voice-search",
+          "url": "http://localhost:3017/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 3,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "109",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.755Z"
+        },
+        {
+          "app": "ankr-voice-search",
+          "url": "http://localhost:3017/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.756Z"
+        },
+        {
+          "app": "ankr-voice-search",
+          "url": "http://localhost:3017/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.756Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-academy",
+        "internalUrl": "http://localhost:3018",
+        "framework": "vite",
+        "pm2Name": "ankr-academy",
+        "pm2Status": "online",
+        "pm2Restarts": 2,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-academy",
+        "healthEndpoint": "/",
+        "port": 3018,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-academy",
+          "url": "http://localhost:3018/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"32b-fDn/LwsqGXfxXlk4W0NHXMG5qlQ\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.758Z"
+        },
+        {
+          "app": "ankr-academy",
+          "url": "http://localhost:3018/login",
+          "route": "/login",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"32b-fDn/LwsqGXfxXlk4W0NHXMG5qlQ\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.759Z"
+        },
+        {
+          "app": "ankr-academy",
+          "url": "http://localhost:3018/dashboard",
+          "route": "/dashboard",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 0,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"32b-fDn/LwsqGXfxXlk4W0NHXMG5qlQ\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.759Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "ankr-copilot",
+        "internalUrl": "http://localhost:3019",
+        "framework": "express",
+        "pm2Name": "ankr-copilot",
+        "pm2Status": "online",
+        "pm2Restarts": 68494,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-copilot",
+        "healthEndpoint": "/health",
+        "port": 3019,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-copilot",
+          "url": "http://localhost:3019/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 10,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "196",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.769Z"
+        },
+        {
+          "app": "ankr-copilot",
+          "url": "http://localhost:3019/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.770Z"
+        },
+        {
+          "app": "ankr-copilot",
+          "url": "http://localhost:3019/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.771Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-marketplace",
+        "internalUrl": "http://localhost:3020",
+        "publicUrl": "https://ankrlabs.org",
+        "framework": "vite",
+        "pm2Name": "ankr-marketplace",
+        "pm2Status": "online",
+        "pm2Restarts": 3,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-marketplace",
+        "healthEndpoint": "/",
+        "port": 3020,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-marketplace",
+          "url": "http://localhost:3020/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 5,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"283-v992wlm17mAfh5FS3Cb5QtEIJNk\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.776Z"
+        },
+        {
+          "app": "ankr-marketplace",
+          "url": "http://localhost:3020/login",
+          "route": "/login",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"283-v992wlm17mAfh5FS3Cb5QtEIJNk\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.777Z"
+        },
+        {
+          "app": "ankr-marketplace",
+          "url": "http://localhost:3020/dashboard",
+          "route": "/dashboard",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"283-v992wlm17mAfh5FS3Cb5QtEIJNk\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.778Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "ankr-test-recorder",
+        "internalUrl": "http://localhost:3021",
+        "framework": "vite",
+        "pm2Name": "ankr-test-recorder",
+        "pm2Status": "online",
+        "pm2Restarts": 2,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-test-recorder",
+        "healthEndpoint": "/",
+        "port": 3021,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-test-recorder",
+          "url": "http://localhost:3021/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"253-WL4fyhRPyeKTvNkDSCas5p7oZFg\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.780Z"
+        },
+        {
+          "app": "ankr-test-recorder",
+          "url": "http://localhost:3021/login",
+          "route": "/login",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"253-WL4fyhRPyeKTvNkDSCas5p7oZFg\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.782Z"
+        },
+        {
+          "app": "ankr-test-recorder",
+          "url": "http://localhost:3021/dashboard",
+          "route": "/dashboard",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 0,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"253-WL4fyhRPyeKTvNkDSCas5p7oZFg\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.782Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "ankr-code-review",
+        "internalUrl": "http://localhost:3022",
+        "framework": "express",
+        "pm2Name": "ankr-code-review",
+        "pm2Status": "online",
+        "pm2Restarts": 45,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-code-review",
+        "healthEndpoint": "/health",
+        "port": 3022,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-code-review",
+          "url": "http://localhost:3022/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "196",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.784Z"
+        },
+        {
+          "app": "ankr-code-review",
+          "url": "http://localhost:3022/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.784Z"
+        },
+        {
+          "app": "ankr-code-review",
+          "url": "http://localhost:3022/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.785Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-bug-predictor",
+        "internalUrl": "http://localhost:3023",
+        "framework": "express",
+        "pm2Name": "ankr-bug-predictor",
+        "pm2Status": "online",
+        "pm2Restarts": 2,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-bug-predictor",
+        "healthEndpoint": "/health",
+        "port": 3023,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-bug-predictor",
+          "url": "http://localhost:3023/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "124",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.787Z"
+        },
+        {
+          "app": "ankr-bug-predictor",
+          "url": "http://localhost:3023/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.788Z"
+        },
+        {
+          "app": "ankr-bug-predictor",
+          "url": "http://localhost:3023/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 3,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.791Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-smart-docs",
+        "internalUrl": "http://localhost:3024",
+        "framework": "express",
+        "pm2Name": "ankr-smart-docs",
+        "pm2Status": "online",
+        "pm2Restarts": 1,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-smart-docs",
+        "healthEndpoint": "/health",
+        "port": 3024,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-smart-docs",
+          "url": "http://localhost:3024/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"283-v992wlm17mAfh5FS3Cb5QtEIJNk\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.793Z"
+        },
+        {
+          "app": "ankr-smart-docs",
+          "url": "http://localhost:3024/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 0,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"283-v992wlm17mAfh5FS3Cb5QtEIJNk\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.793Z"
+        },
+        {
+          "app": "ankr-smart-docs",
+          "url": "http://localhost:3024/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "etag": "W/\"283-v992wlm17mAfh5FS3Cb5QtEIJNk\"",
+            "keep-alive": "timeout=5",
+            "transfer-encoding": "chunked",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.794Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    },
+    {
+      "app": {
+        "name": "ankr-kb-multi-tenant",
+        "internalUrl": "http://localhost:3025",
+        "framework": "express",
+        "pm2Name": "ankr-kb-multi-tenant",
+        "pm2Status": "online",
+        "pm2Restarts": 2,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-kb-multi-tenant",
+        "healthEndpoint": "/health",
+        "port": 3025,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-kb-multi-tenant",
+          "url": "http://localhost:3025/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 6,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "61",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.800Z"
+        },
+        {
+          "app": "ankr-kb-multi-tenant",
+          "url": "http://localhost:3025/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.801Z"
+        },
+        {
+          "app": "ankr-kb-multi-tenant",
+          "url": "http://localhost:3025/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 3,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.804Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-plugins",
+        "internalUrl": "http://localhost:3026",
+        "framework": "express",
+        "pm2Name": "ankr-plugins",
+        "pm2Status": "online",
+        "pm2Restarts": 2,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-plugins",
+        "healthEndpoint": "/health",
+        "port": 3026,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-plugins",
+          "url": "http://localhost:3026/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "62",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.805Z"
+        },
+        {
+          "app": "ankr-plugins",
+          "url": "http://localhost:3026/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 2,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.807Z"
+        },
+        {
+          "app": "ankr-plugins",
+          "url": "http://localhost:3026/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.807Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-api-marketplace",
+        "internalUrl": "http://localhost:3027",
+        "framework": "express",
+        "pm2Name": "ankr-api-marketplace",
+        "pm2Status": "online",
+        "pm2Restarts": 2,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-api-marketplace",
+        "healthEndpoint": "/health",
+        "port": 3027,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-api-marketplace",
+          "url": "http://localhost:3027/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "62",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin",
+            "x-ratelimit-limit": "100",
+            "x-ratelimit-remaining": "97",
+            "x-ratelimit-reset": "16"
+          },
+          "timestamp": "2026-01-30T09:43:57.808Z"
+        },
+        {
+          "app": "ankr-api-marketplace",
+          "url": "http://localhost:3027/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.809Z"
+        },
+        {
+          "app": "ankr-api-marketplace",
+          "url": "http://localhost:3027/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.810Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-whitelabel",
+        "internalUrl": "http://localhost:3028",
+        "framework": "express",
+        "pm2Name": "ankr-whitelabel",
+        "pm2Status": "online",
+        "pm2Restarts": 2,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-whitelabel",
+        "healthEndpoint": "/health",
+        "port": 3028,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-whitelabel",
+          "url": "http://localhost:3028/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "62",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.811Z"
+        },
+        {
+          "app": "ankr-whitelabel",
+          "url": "http://localhost:3028/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.812Z"
+        },
+        {
+          "app": "ankr-whitelabel",
+          "url": "http://localhost:3028/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.813Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-code-poetry",
+        "internalUrl": "http://localhost:3029",
+        "framework": "express",
+        "pm2Name": "ankr-code-poetry",
+        "pm2Status": "online",
+        "pm2Restarts": 1324998,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-code-poetry",
+        "healthEndpoint": "/health",
+        "port": 3029,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-code-poetry",
+          "url": "http://localhost:3029/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "62",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.815Z"
+        },
+        {
+          "app": "ankr-code-poetry",
+          "url": "http://localhost:3029/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.816Z"
+        },
+        {
+          "app": "ankr-code-poetry",
+          "url": "http://localhost:3029/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.816Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-gamification",
+        "internalUrl": "http://localhost:3030",
+        "framework": "express",
+        "pm2Name": "ankr-gamification",
+        "pm2Status": "online",
+        "pm2Restarts": 610445,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-gamification",
+        "healthEndpoint": "/health",
+        "port": 3030,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-gamification",
+          "url": "http://localhost:3030/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "111",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.818Z"
+        },
+        {
+          "app": "ankr-gamification",
+          "url": "http://localhost:3030/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.818Z"
+        },
+        {
+          "app": "ankr-gamification",
+          "url": "http://localhost:3030/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.819Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-time-travel",
+        "internalUrl": "http://localhost:3031",
+        "framework": "express",
+        "pm2Name": "ankr-time-travel",
+        "pm2Status": "online",
+        "pm2Restarts": 1,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-time-travel",
+        "healthEndpoint": "/health",
+        "port": 3031,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-time-travel",
+          "url": "http://localhost:3031/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "62",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.820Z"
+        },
+        {
+          "app": "ankr-time-travel",
+          "url": "http://localhost:3031/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.821Z"
+        },
+        {
+          "app": "ankr-time-travel",
+          "url": "http://localhost:3031/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.821Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-pair-programming",
+        "internalUrl": "http://localhost:3032",
+        "framework": "express",
+        "pm2Name": "ankr-pair-programming",
+        "pm2Status": "online",
+        "pm2Restarts": 10386,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-pair-programming",
+        "healthEndpoint": "/health",
+        "port": 3032,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-pair-programming",
+          "url": "http://localhost:3032/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 3,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "67",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.824Z"
+        },
+        {
+          "app": "ankr-pair-programming",
+          "url": "http://localhost:3032/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.825Z"
+        },
+        {
+          "app": "ankr-pair-programming",
+          "url": "http://localhost:3032/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.825Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-commit-sentiment",
+        "internalUrl": "http://localhost:3033",
+        "framework": "express",
+        "pm2Name": "ankr-commit-sentiment",
+        "pm2Status": "online",
+        "pm2Restarts": 1,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-commit-sentiment",
+        "healthEndpoint": "/health",
+        "port": 3033,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-commit-sentiment",
+          "url": "http://localhost:3033/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 2,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "149",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.827Z"
+        },
+        {
+          "app": "ankr-commit-sentiment",
+          "url": "http://localhost:3033/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 3,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.830Z"
+        },
+        {
+          "app": "ankr-commit-sentiment",
+          "url": "http://localhost:3033/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.831Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-code-music",
+        "internalUrl": "http://localhost:3034",
+        "framework": "express",
+        "pm2Name": "ankr-code-music",
+        "pm2Status": "online",
+        "pm2Restarts": 614899,
+        "status": "online",
+        "path": "/root/ankr-labs-nx/apps/ankr-code-music",
+        "healthEndpoint": "/health",
+        "port": 3034,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-code-music",
+          "url": "http://localhost:3034/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "139",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.832Z"
+        },
+        {
+          "app": "ankr-code-music",
+          "url": "http://localhost:3034/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 1,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.833Z"
+        },
+        {
+          "app": "ankr-code-music",
+          "url": "http://localhost:3034/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 0,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "connection": "keep-alive",
+            "content-length": "102",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 09:43:57 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T09:43:57.833Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    },
+    {
+      "app": {
+        "name": "ankr-doctor",
+        "internalUrl": "http://localhost:3035",
+        "framework": "express",
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/apps/ankr-doctor",
+        "healthEndpoint": "/health",
+        "port": 3035,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-doctor",
+          "url": "http://localhost:3035/health",
+          "route": "/health",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 1,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:3035/health",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.834Z"
+        },
+        {
+          "app": "ankr-doctor",
+          "url": "http://localhost:3035/",
+          "route": "/",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 0,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:3035/",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.834Z"
+        },
+        {
+          "app": "ankr-doctor",
+          "url": "http://localhost:3035/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "fail",
+          "httpStatus": 0,
+          "loadTime": 0,
+          "jsErrors": [
+            "ERROR: fetch failed"
+          ],
+          "networkErrors": [
+            {
+              "url": "http://localhost:3035/graphql?query=%7B__typename%7D",
+              "method": "GET",
+              "status": 0,
+              "statusText": "CONNECTION_ERROR: fetch failed",
+              "type": "other"
+            }
+          ],
+          "blankPage": true,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {},
+          "timestamp": "2026-01-30T09:43:57.834Z"
+        }
+      ],
+      "diagnoses": [
+        {
+          "issue": "Service ankr-doctor is not responding",
+          "severity": "critical",
+          "category": "service_down",
+          "rootCause": "Service at http://localhost:3035/health returned no response. Process may have crashed.",
+          "autoFixable": true,
+          "fixStrategy": "ankr-ctl restart ankr-doctor",
+          "evidence": [
+            "HTTP 0",
+            "CONNECTION_ERROR: fetch failed"
+          ]
+        },
+        {
+          "issue": "ankr-doctor failing at /health",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 0 at http://localhost:3035/health. 1 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 0",
+            "ERROR: fetch failed",
+            "GET http://localhost:3035/health: CONNECTION_ERROR: fetch failed"
+          ]
+        },
+        {
+          "issue": "ankr-doctor failing at /graphql?query=%7B__typename%7D",
+          "severity": "medium",
+          "category": "unknown",
+          "rootCause": "HTTP 0 at http://localhost:3035/graphql?query=%7B__typename%7D. 1 JS errors.",
+          "autoFixable": false,
+          "evidence": [
+            "HTTP 0",
+            "ERROR: fetch failed",
+            "GET http://localhost:3035/graphql?query=%7B__typename%7D: CONNECTION_ERROR: fetch failed"
+          ]
+        }
+      ],
+      "fixes": [],
+      "overallStatus": "down"
+    }
+  ]
+}

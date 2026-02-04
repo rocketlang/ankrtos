@@ -1,0 +1,404 @@
+// AI-DRIVEN READINGS SYSTEM
+// Advanced AI-powered astrological interpretations
+
+// ==================== AI READING ENGINE ====================
+
+model AIReading {
+  id              String    @id @default(cuid())
+  userId          String
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Reading Type
+  type            AIReadingType
+  category        String?   // Love, Career, Finance, Health, General
+
+  // Input Context
+  inputData       Json      // Birth chart, question, situation
+  question        String?   @db.Text
+
+  // AI Model Configuration
+  model           String    @default("gpt-4")
+  temperature     Float     @default(0.7)
+  maxTokens       Int       @default(1000)
+
+  // Prompt Engineering
+  systemPrompt    String    @db.Text
+  userPrompt      String    @db.Text
+
+  // AI Response
+  rawResponse     String    @db.Text
+  structuredOutput Json     // Parsed and structured
+
+  // Reading Content
+  title           String
+  summary         String    @db.Text
+  detailedAnalysis String   @db.Text
+  predictions     Json      // [{ timeframe, prediction, confidence }]
+  advice          String[]
+  warnings        String[]
+  opportunities   String[]
+
+  // Confidence & Quality
+  confidence      Int       // 0-100
+  qualityScore    Int       // 0-100 (internal rating)
+  userRating      Int?      // 1-5 stars (user feedback)
+
+  // AI Reasoning
+  reasoning       String?   @db.Text  // Why AI reached this conclusion
+  sources         String[]  // Astrological principles used
+
+  // Personalization
+  personalityType String?   // Based on chart analysis
+  lifeStage       String?   // Youth, Midlife, Mature
+
+  // Metadata
+  tokensUsed      Int?
+  processingTime  Int?      // Milliseconds
+  cost            Float?    // In dollars
+
+  // Status
+  status          AIReadingStatus @default(PROCESSING)
+  errorMessage    String?
+
+  // Interactions
+  interactions    AIReadingInteraction[]
+  feedback        AIReadingFeedback[]
+
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@map("ai_readings")
+  @@index([userId, createdAt])
+}
+
+enum AIReadingType {
+  BIRTH_CHART_INTERPRETATION
+  DAILY_GUIDANCE
+  WEEKLY_FORECAST
+  MONTHLY_OUTLOOK
+  YEARLY_PREDICTION
+  TRANSIT_ANALYSIS
+  DASHA_INTERPRETATION
+  YOGA_ANALYSIS
+  COMPATIBILITY_READING
+  CAREER_GUIDANCE
+  RELATIONSHIP_ADVICE
+  HEALTH_FORECAST
+  FINANCIAL_PREDICTION
+  SPIRITUAL_GUIDANCE
+  QUESTION_ANSWER
+  DREAM_INTERPRETATION
+  PAST_LIFE_READING
+  KARMIC_ANALYSIS
+}
+
+enum AIReadingStatus {
+  QUEUED
+  PROCESSING
+  COMPLETED
+  FAILED
+  CANCELLED
+}
+
+// ==================== AI READING INTERACTIONS ====================
+
+model AIReadingInteraction {
+  id              String    @id @default(cuid())
+  readingId       String
+  reading         AIReading @relation(fields: [readingId], references: [id], onDelete: Cascade)
+
+  // User Follow-up
+  userMessage     String    @db.Text
+
+  // AI Response
+  aiResponse      String    @db.Text
+
+  // Context
+  model           String    @default("gpt-4")
+  tokensUsed      Int?
+
+  createdAt       DateTime  @default(now())
+
+  @@map("ai_reading_interactions")
+}
+
+// ==================== AI READING FEEDBACK ====================
+
+model AIReadingFeedback {
+  id              String    @id @default(cuid())
+  readingId       String
+  reading         AIReading @relation(fields: [readingId], references: [id], onDelete: Cascade)
+
+  // User Feedback
+  rating          Int       // 1-5 stars
+  accuracy        Int?      // 1-5 (how accurate was it?)
+  helpfulness     Int?      // 1-5
+  clarity         Int?      // 1-5
+
+  // Comments
+  comment         String?   @db.Text
+  wasAccurate     Boolean?
+  whatWorked      String?   @db.Text
+  whatDidntWork   String?   @db.Text
+
+  // Outcome Tracking
+  didPredictionComeTrue Boolean?
+  outcomeDate     DateTime?
+  outcomeNotes    String?   @db.Text
+
+  createdAt       DateTime  @default(now())
+
+  @@map("ai_reading_feedback")
+}
+
+// ==================== AI CHAT ASSISTANT ====================
+
+model AIChatSession {
+  id              String    @id @default(cuid())
+  userId          String
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Session Details
+  title           String    @default("New Conversation")
+
+  // Context
+  userBirthChart  Json?     // For personalized responses
+  conversationContext Json  // Maintains context across messages
+
+  // Status
+  isActive        Boolean   @default(true)
+
+  // Messages
+  messages        AIChatMessage[]
+
+  // Metadata
+  totalMessages   Int       @default(0)
+  totalTokens     Int       @default(0)
+
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  endedAt         DateTime?
+
+  @@map("ai_chat_sessions")
+  @@index([userId, createdAt])
+}
+
+model AIChatMessage {
+  id              String    @id @default(cuid())
+  sessionId       String
+  session         AIChatSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  // Message Details
+  role            MessageRole
+  content         String    @db.Text
+
+  // AI Specific
+  model           String?   @default("gpt-4")
+  tokensUsed      Int?
+  responseTime    Int?      // Milliseconds
+
+  // Attachments
+  attachments     Json?     // Birth chart, images, etc.
+
+  // Status
+  isEdited        Boolean   @default(false)
+  isDeleted       Boolean   @default(false)
+
+  createdAt       DateTime  @default(now())
+
+  @@map("ai_chat_messages")
+  @@index([sessionId, createdAt])
+}
+
+enum MessageRole {
+  USER
+  ASSISTANT
+  SYSTEM
+}
+
+// ==================== AI ASTROLOGY COACH ====================
+
+model AICoachProfile {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Personalization
+  interests       String[]  // Career, Love, Spirituality, etc.
+  goals           String[]  // What user wants to achieve
+  challenges      String[]  // Current challenges
+
+  // Learning Style
+  preferredTone   String    @default("friendly") // friendly, professional, spiritual
+  detailLevel     String    @default("moderate") // brief, moderate, detailed
+
+  // Interaction Preferences
+  notificationFrequency String @default("daily") // daily, weekly, as_needed
+  preferredTime   String?   // HH:mm for daily messages
+
+  // Progress Tracking
+  sessionsCount   Int       @default(0)
+  lastInteraction DateTime?
+  engagementScore Int       @default(0) // 0-100
+
+  // Recommendations Engine
+  recommendedTopics String[]
+  completedTopics String[]
+
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@map("ai_coach_profiles")
+}
+
+// ==================== AI PREDICTION TRACKING ====================
+
+model AIPrediction {
+  id              String    @id @default(cuid())
+  userId          String
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Prediction Details
+  prediction      String    @db.Text
+  category        String    // Career, Love, Finance, Health
+  timeframe       String    // "Next week", "By March 2026"
+
+  // Astrological Basis
+  basedOn         String[]  // Transit, Dasha, Yoga, etc.
+  planetaryFactors Json     // Planets involved
+
+  // Confidence
+  confidence      Int       // 0-100
+
+  // Tracking
+  status          PredictionStatus @default(PENDING)
+  outcome         String?   @db.Text
+  accuracy        Int?      // 0-100 (how accurate was it)
+
+  // Dates
+  predictedDate   DateTime
+  targetDate      DateTime
+  verifiedDate    DateTime?
+
+  // User Verification
+  userConfirmed   Boolean   @default(false)
+  userNotes       String?   @db.Text
+
+  // AI Learning
+  learningData    Json?     // Data for improving future predictions
+
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@map("ai_predictions")
+  @@index([userId, targetDate])
+}
+
+enum PredictionStatus {
+  PENDING         // Waiting for target date
+  CAME_TRUE       // Prediction was accurate
+  PARTIALLY_TRUE  // Somewhat accurate
+  DID_NOT_HAPPEN  // Prediction was wrong
+  TOO_EARLY       // Can't verify yet
+  UNCLEAR         // User unsure
+}
+
+// ==================== AI PROMPT LIBRARY ====================
+
+model AIPromptTemplate {
+  id              String    @id @default(cuid())
+
+  // Template Details
+  name            String
+  description     String    @db.Text
+  category        String
+
+  // Prompt Content
+  systemPrompt    String    @db.Text
+  userPromptTemplate String @db.Text  // With {{variables}}
+
+  // Configuration
+  variables       Json      // [{ name, description, required, default }]
+  model           String    @default("gpt-4")
+  temperature     Float     @default(0.7)
+  maxTokens       Int       @default(1000)
+
+  // Usage Statistics
+  usageCount      Int       @default(0)
+  successRate     Float?    // Based on user ratings
+  avgRating       Float?
+
+  // Versioning
+  version         String    @default("1.0")
+  isActive        Boolean   @default(true)
+
+  // Metadata
+  createdBy       String?
+  tags            String[]
+
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@map("ai_prompt_templates")
+  @@index([category, isActive])
+}
+
+// ==================== AI USAGE ANALYTICS ====================
+
+model AIUsageLog {
+  id              String    @id @default(cuid())
+  userId          String?
+
+  // Request Details
+  endpoint        String    // What feature used AI
+  model           String
+  tokensUsed      Int
+  cost            Float     // In dollars
+
+  // Response
+  responseTime    Int       // Milliseconds
+  success         Boolean
+  errorMessage    String?
+
+  // Context
+  readingType     String?
+  category        String?
+
+  timestamp       DateTime  @default(now())
+
+  @@map("ai_usage_logs")
+  @@index([userId, timestamp])
+  @@index([timestamp])
+}
+
+// ==================== AI FINE-TUNING DATA ====================
+
+model AITrainingData {
+  id              String    @id @default(cuid())
+
+  // Input
+  inputPrompt     String    @db.Text
+  inputContext    Json
+
+  // Expected Output
+  expectedOutput  String    @db.Text
+
+  // Actual AI Output (for comparison)
+  aiOutput        String?   @db.Text
+
+  // Evaluation
+  qualityScore    Int?      // 0-100
+  wasAccurate     Boolean?
+
+  // Source
+  sourceType      String    // manual, user_feedback, expert_review
+  sourceId        String?
+
+  // Training Use
+  usedInTraining  Boolean   @default(false)
+  trainingDate    DateTime?
+
+  createdAt       DateTime  @default(now())
+
+  @@map("ai_training_data")
+}

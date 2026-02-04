@@ -52,6 +52,17 @@ export function createLoaders(prisma: PrismaClient) {
       prisma.charter.findMany.bind(prisma.charter),
       'vesselId',
     ),
+    // Phase 33: Task #71 - Document DataLoaders
+    document: createBatchById(prisma.document.findMany.bind(prisma.document)),
+    documentsByFolder: createBatchByForeignKey(
+      prisma.document.findMany.bind(prisma.document),
+      'folderId',
+    ),
+    documentVersions: createBatchByForeignKey(
+      prisma.documentVersion.findMany.bind(prisma.documentVersion),
+      'documentId',
+    ),
+    documentFolder: createBatchById(prisma.documentFolder.findMany.bind(prisma.documentFolder)),
   };
 }
 

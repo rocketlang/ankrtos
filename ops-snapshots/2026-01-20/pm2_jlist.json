@@ -1,0 +1,1 @@
+Use ankr-ctl instead of pm2. Run: ankr-status jlist

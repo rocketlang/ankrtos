@@ -1,0 +1,135 @@
+{
+  "timestamp": "2026-01-30T17:08:37.105Z",
+  "duration": 219,
+  "totalApps": 1,
+  "scannedApps": 1,
+  "summary": {
+    "pass": 0,
+    "fail": 0,
+    "warn": 1,
+    "fixed": 0
+  },
+  "apps": [
+    {
+      "app": {
+        "name": "ankr-wms-backend",
+        "internalUrl": "http://localhost:4060",
+        "framework": "express",
+        "status": "stopped",
+        "path": "/root/ankr-labs-nx/apps/ankr-wms/backend",
+        "healthEndpoint": "/health",
+        "port": 4060,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-wms-backend",
+          "url": "http://localhost:4060/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 39,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "98",
+            "content-type": "application/json; charset=utf-8",
+            "cross-origin-opener-policy": "same-origin",
+            "cross-origin-resource-policy": "same-origin",
+            "date": "Fri, 30 Jan 2026 17:08:37 GMT",
+            "keep-alive": "timeout=72",
+            "origin-agent-cluster": "?1",
+            "referrer-policy": "no-referrer",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "vary": "Origin",
+            "x-content-type-options": "nosniff",
+            "x-dns-prefetch-control": "off",
+            "x-download-options": "noopen",
+            "x-frame-options": "SAMEORIGIN",
+            "x-permitted-cross-domain-policies": "none",
+            "x-xss-protection": "0"
+          },
+          "timestamp": "2026-01-30T17:08:37.096Z"
+        },
+        {
+          "app": "ankr-wms-backend",
+          "url": "http://localhost:4060/",
+          "route": "/",
+          "status": "warn",
+          "httpStatus": 404,
+          "loadTime": 3,
+          "jsErrors": [
+            "\"error\":\"Not Found\""
+          ],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "72",
+            "content-type": "application/json; charset=utf-8",
+            "cross-origin-opener-policy": "same-origin",
+            "cross-origin-resource-policy": "same-origin",
+            "date": "Fri, 30 Jan 2026 17:08:37 GMT",
+            "keep-alive": "timeout=72",
+            "origin-agent-cluster": "?1",
+            "referrer-policy": "no-referrer",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "vary": "Origin",
+            "x-content-type-options": "nosniff",
+            "x-dns-prefetch-control": "off",
+            "x-download-options": "noopen",
+            "x-frame-options": "SAMEORIGIN",
+            "x-permitted-cross-domain-policies": "none",
+            "x-xss-protection": "0"
+          },
+          "timestamp": "2026-01-30T17:08:37.099Z"
+        },
+        {
+          "app": "ankr-wms-backend",
+          "url": "http://localhost:4060/graphql?query=%7B__typename%7D",
+          "route": "/graphql?query=%7B__typename%7D",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 6,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "31",
+            "content-type": "application/json; charset=utf-8",
+            "cross-origin-opener-policy": "same-origin",
+            "cross-origin-resource-policy": "same-origin",
+            "date": "Fri, 30 Jan 2026 17:08:37 GMT",
+            "keep-alive": "timeout=72",
+            "origin-agent-cluster": "?1",
+            "referrer-policy": "no-referrer",
+            "strict-transport-security": "max-age=15552000; includeSubDomains",
+            "vary": "Origin",
+            "x-content-type-options": "nosniff",
+            "x-dns-prefetch-control": "off",
+            "x-download-options": "noopen",
+            "x-frame-options": "SAMEORIGIN",
+            "x-permitted-cross-domain-policies": "none",
+            "x-xss-protection": "0"
+          },
+          "timestamp": "2026-01-30T17:08:37.105Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "degraded"
+    }
+  ]
+}

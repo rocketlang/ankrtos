@@ -26,7 +26,7 @@ builder.queryField('charters', (t) =>
   t.prismaField({
     type: ['Charter'],
     resolve: (query, _root, _args, ctx) =>
-      ctx.prisma.charter.findMany({ ...query, orderBy: { createdAt: 'desc' } }),
+      ctx.prisma.charter.findMany({ ...query, where: ctx.orgFilter(), orderBy: { createdAt: 'desc' } }),
   }),
 );
 
@@ -76,3 +76,46 @@ builder.mutationField('createCharter', (t) =>
     },
   }),
 );
+
+// Charter status state machine
+const VALID_TRANSITIONS: Record<string, string[]> = {
+  draft: ['on_subs'],
+  on_subs: ['fixed', 'cancelled'],
+  fixed: ['executed', 'cancelled'],
+  executed: ['completed', 'cancelled'],
+  completed: [],
+  cancelled: [],
+};
+
+builder.mutationField('transitionCharterStatus', (t) =>
+  t.prismaField({
+    type: 'Charter',
+    args: {
+      id: t.arg.string({ required: true }),
+      status: t.arg.string({ required: true }),
+    },
+    resolve: async (query, _root, args, ctx) => {
+      const charter = await ctx.prisma.charter.findUnique({ where: { id: args.id } });
+      if (!charter) throw new Error('Charter not found');
+
+      const allowed = VALID_TRANSITIONS[charter.status] ?? [];
+      if (!allowed.includes(args.status)) {
+        throw new Error(
+          `Cannot transition from "${charter.status}" to "${args.status}". Allowed: ${allowed.join(', ') || 'none'}`,
+        );
+      }
+
+      const data: Record<string, unknown> = { status: args.status };
+      if (args.status === 'fixed') {
+        data.fixtureDate = new Date();
+      }
+
+      return ctx.prisma.charter.update({
+        ...query,
+        where: { id: args.id },
+        data,
+      });
+    },
+  }),
+);
+

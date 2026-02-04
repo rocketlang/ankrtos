@@ -1,0 +1,15 @@
+Mari8X Alert: {{ALERT_TYPE}}
+
+{{VESSEL_NAME}} → {{PORT_NAME}}
+ETA: {{ETA_SHORT}} ({{HOURS_TO_ETA}}h)
+
+{{ALERT_SUMMARY}}
+
+Reply:
+- READY (docs complete)
+- DELAY (ETA changed)
+- ? (questions)
+
+Details: {{DETAILS_URL}}
+
+Alert ID: {{ALERT_ID}}

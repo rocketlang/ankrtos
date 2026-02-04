@@ -1,0 +1,127 @@
+{
+  "timestamp": "2026-01-30T11:22:01.343Z",
+  "duration": 227,
+  "totalApps": 1,
+  "scannedApps": 1,
+  "summary": {
+    "pass": 1,
+    "fail": 0,
+    "warn": 0,
+    "fixed": 0
+  },
+  "apps": [
+    {
+      "app": {
+        "name": "ankr-maritime-frontend",
+        "internalUrl": "http://localhost:3008",
+        "backendUrl": "http://localhost:4051",
+        "framework": "vite",
+        "status": "stopped",
+        "path": "/root/apps/ankr-maritime/frontend",
+        "healthEndpoint": "/",
+        "port": 3008,
+        "enabled": true
+      },
+      "scanResults": [
+        {
+          "app": "ankr-maritime-frontend",
+          "url": "http://localhost:3008/",
+          "route": "/",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 42,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "831",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 11:22:01 GMT",
+            "etag": "W/\"33f-loiwpi+kWfD3MJDb9BkZIdqNO1A\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T11:22:01.326Z"
+        },
+        {
+          "app": "ankr-maritime-frontend",
+          "url": "http://localhost:3008/login",
+          "route": "/login",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 9,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "831",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 11:22:01 GMT",
+            "etag": "W/\"33f-loiwpi+kWfD3MJDb9BkZIdqNO1A\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T11:22:01.336Z"
+        },
+        {
+          "app": "ankr-maritime-frontend",
+          "url": "http://localhost:3008/dashboard",
+          "route": "/dashboard",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 5,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "cache-control": "no-cache",
+            "connection": "keep-alive",
+            "content-length": "831",
+            "content-type": "text/html",
+            "date": "Fri, 30 Jan 2026 11:22:01 GMT",
+            "etag": "W/\"33f-loiwpi+kWfD3MJDb9BkZIdqNO1A\"",
+            "keep-alive": "timeout=5",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T11:22:01.341Z"
+        },
+        {
+          "app": "ankr-maritime-frontend::backend",
+          "url": "http://localhost:4051/health",
+          "route": "/health",
+          "status": "pass",
+          "httpStatus": 200,
+          "loadTime": 1,
+          "jsErrors": [],
+          "networkErrors": [],
+          "blankPage": false,
+          "interactiveElements": 0,
+          "clickResults": [],
+          "headers": {
+            "access-control-allow-credentials": "true",
+            "connection": "keep-alive",
+            "content-length": "80",
+            "content-type": "application/json; charset=utf-8",
+            "date": "Fri, 30 Jan 2026 11:22:01 GMT",
+            "keep-alive": "timeout=72",
+            "vary": "Origin"
+          },
+          "timestamp": "2026-01-30T11:22:01.342Z"
+        }
+      ],
+      "diagnoses": [],
+      "fixes": [],
+      "overallStatus": "healthy"
+    }
+  ]
+}

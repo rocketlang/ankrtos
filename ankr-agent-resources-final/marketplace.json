@@ -1,0 +1,62 @@
+{
+  "name": "ankr-agent-resources",
+  "version": "1.0.0",
+  "description": "Claude Code skills, commands, and agents for ANKR Labs logistics platform",
+  "author": "ANKR Labs",
+  "license": "MIT",
+  "repository": "https://github.com/ankr-labs/agent-resources",
+  "plugins": [
+    {
+      "name": "ankr-skills",
+      "description": "All ANKR skills for TMS/WMS/OMS development",
+      "skills": [
+        "ankr-tms-dev",
+        "ankr-eon-memory", 
+        "ankr-voice-hindi",
+        "ankr-llmbox",
+        "ankr-logistics-rag"
+      ],
+      "commands": [
+        "ankr-deploy",
+        "ankr-generate"
+      ],
+      "agents": [
+        "ankr-tms-dispatcher",
+        "ankr-customer-care"
+      ]
+    },
+    {
+      "name": "ankr-dev",
+      "description": "Development skills only (TMS, LLMBox)",
+      "skills": [
+        "ankr-tms-dev",
+        "ankr-llmbox"
+      ],
+      "commands": [
+        "ankr-deploy",
+        "ankr-generate"
+      ]
+    },
+    {
+      "name": "ankr-ai",
+      "description": "AI/ML skills (Memory, RAG, Voice)",
+      "skills": [
+        "ankr-eon-memory",
+        "ankr-logistics-rag",
+        "ankr-voice-hindi"
+      ]
+    }
+  ],
+  "keywords": [
+    "logistics",
+    "tms",
+    "wms",
+    "nestjs",
+    "pgvector",
+    "rag",
+    "voice-ai",
+    "hindi",
+    "multilingual",
+    "llm-routing"
+  ]
+}

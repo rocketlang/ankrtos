@@ -1,0 +1,1631 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "multiSchema"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  schemas  = ["audit", "compliance", "marketplace"]
+}
+
+model Company {
+  id                   String                  @id @default(cuid())
+  legalName            String                  @db.VarChar(255)
+  tradeName            String?                 @db.VarChar(255)
+  entityType           EntityType
+  dateOfIncorporation  DateTime?
+  cin                  String?                 @unique @db.VarChar(21)
+  llpin                String?                 @unique @db.VarChar(8)
+  pan                  String                  @unique @db.VarChar(10)
+  tan                  String?                 @db.VarChar(10)
+  primaryNicCode       String?                 @db.VarChar(5)
+  secondaryNicCodes    String[]                @default([])
+  industrySector       String?                 @db.VarChar(100)
+  businessActivity     String?
+  authorizedCapital    Decimal?                @db.Decimal(18, 2)
+  paidUpCapital        Decimal?                @db.Decimal(18, 2)
+  financialYearEnd     String                  @default("03-31") @db.VarChar(5)
+  totalEmployees       Int                     @default(0)
+  permanentEmployees   Int                     @default(0)
+  contractEmployees    Int                     @default(0)
+  isMsme               Boolean                 @default(false)
+  msmeCategory         MsmeCategory?
+  udyamRegistration    String?                 @db.VarChar(25)
+  email                String?                 @db.VarChar(255)
+  phone                String?                 @db.VarChar(15)
+  website              String?                 @db.VarChar(255)
+  status               CompanyStatus           @default(ACTIVE)
+  onboardingCompleted  Boolean                 @default(false)
+  createdAt            DateTime                @default(now())
+  updatedAt            DateTime                @updatedAt
+  createdBy            String
+  addresses            CompanyAddress[]
+  personnel            CompanyPersonnel[]
+  stateEmployees       CompanyStateEmployees[]
+  turnovers            CompanyTurnover[]
+  calendarItems        ComplianceCalendar[]
+  EHSCompliance        EHSCompliance[]
+  EHSProfile           EHSProfile?
+  epfRegistrations     EpfRegistration[]
+  esiRegistrations     EsiRegistration[]
+  FEMAFiling           FEMAFiling[]
+  FEMAProfile          FEMAProfile?
+  FEMATransaction      FEMATransaction[]
+  Facility             Facility[]
+  factoryRegistrations FactoryRegistration[]
+  FilingRecord         FilingRecord[]
+  gstRegistrations     GstRegistration[]
+  lwfRegistrations     LwfRegistration[]
+  ptRegistrations      PtRegistration[]
+  shopEstRegistrations ShopEstRegistration[]
+  users                UserCompanyAccess[]
+
+  filingDrafts         FilingDraft[]
+
+  @@index([pan])
+  @@index([cin])
+  @@index([status])
+  @@index([entityType])
+  @@index([createdAt])
+  @@schema("compliance")
+}
+
+model CompanyAddress {
+  id            String      @id @default(cuid())
+  companyId     String
+  addressType   AddressType
+  addressLine1  String      @db.VarChar(255)
+  addressLine2  String?     @db.VarChar(255)
+  landmark      String?     @db.VarChar(100)
+  city          String      @db.VarChar(100)
+  district      String?     @db.VarChar(100)
+  stateCode     String      @db.VarChar(2)
+  pincode       String      @db.VarChar(6)
+  isPrimary     Boolean     @default(false)
+  contactPerson String?     @db.VarChar(100)
+  contactPhone  String?     @db.VarChar(15)
+  contactEmail  String?     @db.VarChar(255)
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  company       Company     @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+  @@index([stateCode])
+  @@schema("compliance")
+}
+
+model GstRegistration {
+  id                             String              @id @default(cuid())
+  companyId                      String
+  gstin                          String              @unique @db.VarChar(15)
+  stateCode                      String              @db.VarChar(2)
+  registrationType               GstRegistrationType
+  registrationDate               DateTime?
+  filingFrequency                GstFilingFrequency  @default(MONTHLY)
+  isEinvoiceApplicable           Boolean             @default(false)
+  einvoiceFromDate               DateTime?
+  isEwayBillApplicable           Boolean             @default(true)
+  isCompositionScheme            Boolean             @default(false)
+  compositionCategory            String?             @db.VarChar(50)
+  username                       String?             @db.VarChar(50)
+  isPrimary                      Boolean             @default(false)
+  status                         RegistrationStatus  @default(ACTIVE)
+  legalName                      String?             @db.VarChar(255)
+  tradeName                      String?             @db.VarChar(255)
+  authorizedSignatoryName        String?             @db.VarChar(100)
+  authorizedSignatoryDesignation String?             @db.VarChar(100)
+  createdAt                      DateTime            @default(now())
+  updatedAt                      DateTime            @updatedAt
+  company                        Company             @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+  @@index([stateCode])
+  @@index([status])
+  @@schema("compliance")
+}
+
+model EpfRegistration {
+  id                       String             @id @default(cuid())
+  companyId                String
+  establishmentCode        String             @unique @db.VarChar(25)
+  establishmentName        String?            @db.VarChar(255)
+  registrationDate         DateTime?
+  coveredEmployees         Int                @default(0)
+  isExempted               Boolean            @default(false)
+  exemptionCategory        String?            @db.VarChar(50)
+  exemptionDate            DateTime?
+  wageLimit                Decimal            @default(15000) @db.Decimal(10, 2)
+  employerContributionRate Decimal            @default(12) @db.Decimal(5, 2)
+  employeeContributionRate Decimal            @default(12) @db.Decimal(5, 2)
+  adminChargesRate         Decimal            @default(0.5) @db.Decimal(5, 2)
+  isEdliApplicable         Boolean            @default(true)
+  username                 String?            @db.VarChar(50)
+  status                   RegistrationStatus @default(ACTIVE)
+  dscHolderName            String?            @db.VarChar(100)
+  dscExpiryDate            DateTime?
+  createdAt                DateTime           @default(now())
+  updatedAt                DateTime           @updatedAt
+  company                  Company            @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+  @@schema("compliance")
+}
+
+model EsiRegistration {
+  id                       String             @id @default(cuid())
+  companyId                String
+  esiCode                  String             @unique @db.VarChar(17)
+  stateCode                String             @db.VarChar(2)
+  registrationDate         DateTime?
+  coveredEmployees         Int                @default(0)
+  wageLimit                Decimal            @default(21000) @db.Decimal(10, 2)
+  employerContributionRate Decimal            @default(3.25) @db.Decimal(5, 2)
+  employeeContributionRate Decimal            @default(0.75) @db.Decimal(5, 2)
+  dispensaryName           String?            @db.VarChar(255)
+  dispensaryAddress        String?
+  dispensaryCode           String?            @db.VarChar(20)
+  username                 String?            @db.VarChar(50)
+  status                   RegistrationStatus @default(ACTIVE)
+  createdAt                DateTime           @default(now())
+  updatedAt                DateTime           @updatedAt
+  company                  Company            @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+  @@index([stateCode])
+  @@schema("compliance")
+}
+
+model PtRegistration {
+  id                String             @id @default(cuid())
+  companyId         String
+  stateCode         String             @db.VarChar(2)
+  ptecNumber        String?            @db.VarChar(50)
+  ptrcNumber        String?            @db.VarChar(50)
+  registrationDate  DateTime?
+  filingFrequency   PtFilingFrequency  @default(MONTHLY)
+  taxSlabApplicable String?            @db.VarChar(50)
+  enrolledEmployees Int                @default(0)
+  username          String?            @db.VarChar(50)
+  status            RegistrationStatus @default(ACTIVE)
+  wardCircle        String?            @db.VarChar(50)
+  assessmentYear    String?            @db.VarChar(10)
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+  company           Company            @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@unique([companyId, stateCode])
+  @@index([companyId])
+  @@schema("compliance")
+}
+
+model LwfRegistration {
+  id                   String             @id @default(cuid())
+  companyId            String
+  stateCode            String             @db.VarChar(2)
+  registrationNumber   String?            @db.VarChar(50)
+  registrationDate     DateTime?
+  filingFrequency      LwfFilingFrequency @default(HALF_YEARLY)
+  employerContribution Decimal?           @db.Decimal(10, 2)
+  employeeContribution Decimal?           @db.Decimal(10, 2)
+  username             String?            @db.VarChar(50)
+  status               RegistrationStatus @default(ACTIVE)
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+  company              Company            @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@unique([companyId, stateCode])
+  @@index([companyId])
+  @@schema("compliance")
+}
+
+model ShopEstRegistration {
+  id                 String             @id @default(cuid())
+  companyId          String
+  stateCode          String             @db.VarChar(2)
+  registrationNumber String             @db.VarChar(50)
+  registrationDate   DateTime?
+  expiryDate         DateTime?
+  shopName           String?            @db.VarChar(255)
+  shopAddress        String?
+  natureOfBusiness   String?            @db.VarChar(255)
+  employeeCount      Int                @default(0)
+  maleEmployees      Int?
+  femaleEmployees    Int?
+  openingTime        String?            @db.VarChar(5)
+  closingTime        String?            @db.VarChar(5)
+  weeklyOff          String?            @db.VarChar(20)
+  status             RegistrationStatus @default(ACTIVE)
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  company            Company            @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@unique([companyId, stateCode, registrationNumber])
+  @@index([companyId])
+  @@schema("compliance")
+}
+
+model FactoryRegistration {
+  id                    String             @id @default(cuid())
+  companyId             String
+  stateCode             String             @db.VarChar(2)
+  registrationNumber    String             @db.VarChar(50)
+  licenseNumber         String?            @db.VarChar(50)
+  registrationDate      DateTime?
+  licenseExpiryDate     DateTime?
+  factoryName           String             @db.VarChar(255)
+  factoryAddress        String
+  natureOfManufacturing String?            @db.VarChar(255)
+  productsManufactured  String[]           @default([])
+  installedPowerHP      Decimal?           @db.Decimal(10, 2)
+  connectedLoadKW       Decimal?           @db.Decimal(10, 2)
+  employeeCount         Int                @default(0)
+  maleWorkers           Int?
+  femaleWorkers         Int?
+  contractWorkers       Int?
+  coveredAreaSqFt       Decimal?           @db.Decimal(12, 2)
+  openAreaSqFt          Decimal?           @db.Decimal(12, 2)
+  isHazardous           Boolean            @default(false)
+  hazardousProcesses    String[]           @default([])
+  status                RegistrationStatus @default(ACTIVE)
+  createdAt             DateTime           @default(now())
+  updatedAt             DateTime           @updatedAt
+  company               Company            @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@unique([companyId, stateCode, registrationNumber])
+  @@index([companyId])
+  @@schema("compliance")
+}
+
+model CompanyPersonnel {
+  id                    String            @id @default(cuid())
+  companyId             String
+  personType            PersonType
+  designation           String?           @db.VarChar(100)
+  din                   String?           @db.VarChar(8)
+  dpin                  String?           @db.VarChar(8)
+  pan                   String?           @db.VarChar(10)
+  salutation            String?           @db.VarChar(10)
+  firstName             String            @db.VarChar(100)
+  middleName            String?           @db.VarChar(100)
+  lastName              String?           @db.VarChar(100)
+  fatherName            String?           @db.VarChar(255)
+  dateOfBirth           DateTime?
+  gender                String?           @db.VarChar(10)
+  nationality           String            @default("Indian") @db.VarChar(50)
+  email                 String?           @db.VarChar(255)
+  mobile                String?           @db.VarChar(15)
+  residentialAddress    String?
+  city                  String?           @db.VarChar(100)
+  stateCode             String?           @db.VarChar(2)
+  pincode               String?           @db.VarChar(6)
+  dateOfAppointment     DateTime?
+  dateOfCessation       DateTime?
+  cessationReason       String?           @db.VarChar(255)
+  directorCategory      DirectorCategory?
+  isIndependentDirector Boolean?
+  kmpDesignation        KMPDesignation?
+  hasDsc                Boolean           @default(false)
+  dscClass              String?           @db.VarChar(10)
+  dscExpiryDate         DateTime?
+  dscProvider           String?           @db.VarChar(100)
+  isAuthorizedSignatory Boolean           @default(false)
+  authorizedFor         String[]          @default([])
+  shareholdingPercent   Decimal?          @db.Decimal(5, 2)
+  numberOfShares        BigInt?
+  status                PersonStatus      @default(ACTIVE)
+  createdAt             DateTime          @default(now())
+  updatedAt             DateTime          @updatedAt
+  company               Company           @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+  @@index([din])
+  @@index([status])
+  @@schema("compliance")
+}
+
+model CompanyTurnover {
+  id             String    @id @default(cuid())
+  companyId      String
+  financialYear  String    @db.VarChar(7)
+  turnoverAmount Decimal   @db.Decimal(18, 2)
+  isAudited      Boolean   @default(false)
+  isEstimated    Boolean   @default(false)
+  auditDate      DateTime?
+  remarks        String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  company        Company   @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@unique([companyId, financialYear])
+  @@schema("compliance")
+}
+
+model CompanyStateEmployees {
+  id             String   @id @default(cuid())
+  companyId      String
+  stateCode      String   @db.VarChar(2)
+  employeeCount  Int      @default(0)
+  permanentCount Int?
+  contractCount  Int?
+  asOfDate       DateTime
+  createdAt      DateTime @default(now())
+  company        Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@unique([companyId, stateCode, asOfDate])
+  @@index([companyId])
+  @@schema("compliance")
+}
+
+model UserCompanyAccess {
+  id        String      @id @default(cuid())
+  userId    String
+  companyId String
+  role      CompanyRole
+  grantedBy String
+  grantedAt DateTime    @default(now())
+  company   Company     @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  User      User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, companyId])
+  @@index([userId])
+  @@schema("compliance")
+}
+
+model ComplianceCalendar {
+  id                     String         @id @default(cuid())
+  companyId              String
+  ruleId                 String         @db.VarChar(50)
+  filingPeriod           String         @db.VarChar(20)
+  periodStartDate        DateTime
+  periodEndDate          DateTime
+  originalDueDate        DateTime
+  extendedDueDate        DateTime?
+  actualDueDate          DateTime
+  status                 CalendarStatus @default(PENDING)
+  completedAt            DateTime?
+  completedBy            String?
+  acknowledgementNumber  String?        @db.VarChar(100)
+  filingDate             DateTime?
+  remarks                String?
+  assignedTo             String?
+  assignedProfessionalId String?
+  createdAt              DateTime       @default(now())
+  updatedAt              DateTime       @updatedAt
+  acknowledgementDate    DateTime?
+  proofDocumentUrl       String?
+  lateFee                Decimal?       @db.Decimal(10, 2)
+  interestAmount         Decimal?       @db.Decimal(10, 2)
+  taxPaid                Decimal?       @db.Decimal(10, 2)
+  penaltyAmount          Decimal?       @db.Decimal(10, 2)
+  priority               String?        @default("NORMAL")
+  reminderSent           Boolean?       @default(false)
+  escalated              Boolean?       @default(false)
+  filingRecordId         String?
+  company                Company        @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  FilingRecord           FilingRecord[]
+
+  @@unique([companyId, ruleId, filingPeriod])
+  filingDrafts         FilingDraft[]
+
+  @@index([companyId])
+  @@index([actualDueDate])
+  @@index([status])
+  @@schema("compliance")
+}
+
+model Professional {
+  id                 String             @id @default(cuid())
+  userId             String?            @unique
+  name               String             @db.VarChar(255)
+  email              String             @unique @db.VarChar(255)
+  phone              String?            @db.VarChar(15)
+  photo              String?
+  type               ProfessionalType
+  registrationNumber String?            @db.VarChar(50)
+  specializations    String[]           @default([])
+  bio                String?
+  addressLine1       String?            @db.VarChar(255)
+  city               String?            @db.VarChar(100)
+  state              String?            @db.VarChar(100)
+  pincode            String?            @db.VarChar(6)
+  languages          String[]           @default(["English", "Hindi"])
+  experienceYears    Int                @default(0)
+  verified           Boolean            @default(false)
+  verificationStatus VerificationStatus @default(PENDING)
+  verifiedAt         DateTime?
+  verificationDocs   String[]           @default([])
+  rating             Decimal            @default(0) @db.Decimal(3, 2)
+  reviewCount        Int                @default(0)
+  completedJobs      Int                @default(0)
+  responseTimeHours  Int                @default(24)
+  availability       AvailabilityStatus @default(AVAILABLE)
+  bankAccountNumber  String?            @db.VarChar(20)
+  bankIfsc           String?            @db.VarChar(11)
+  bankAccountHolder  String?            @db.VarChar(100)
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  escrowsAsProvider  Escrow[]           @relation("ProfessionalEscrows")
+  gigs               Gig[]
+  jobsAsProvider     Job[]              @relation("ProfessionalJobs")
+  reviews            Review[]           @relation("ProfessionalReviews")
+
+  @@index([type])
+  @@index([city])
+  @@index([verified])
+  @@index([rating])
+  @@schema("marketplace")
+}
+
+model Gig {
+  id             String       @id @default(cuid())
+  professionalId String
+  title          String       @db.VarChar(255)
+  category       String       @db.VarChar(100)
+  description    String?
+  tags           String[]     @default([])
+  packages       Json         @default("[]")
+  isActive       Boolean      @default(true)
+  views          Int          @default(0)
+  orders         Int          @default(0)
+  rating         Decimal      @default(0) @db.Decimal(3, 2)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  professional   Professional @relation(fields: [professionalId], references: [id], onDelete: Cascade)
+  jobs           Job[]
+
+  @@index([professionalId])
+  @@index([category])
+  @@index([isActive])
+  @@schema("marketplace")
+}
+
+model Job {
+  id                 String       @id @default(cuid())
+  orderNumber        String       @unique @default(cuid())
+  gigId              String?
+  clientId           String
+  clientName         String       @db.VarChar(255)
+  clientCompany      String?      @db.VarChar(255)
+  clientEmail        String?      @db.VarChar(255)
+  clientPhone        String?      @db.VarChar(15)
+  professionalId     String
+  serviceType        String       @db.VarChar(100)
+  packageName        String?      @db.VarChar(50)
+  description        String?
+  requirements       String?
+  price              Int
+  platformFee        Int          @default(0)
+  netAmount          Int          @default(0)
+  deadline           DateTime
+  deliveredAt        DateTime?
+  completedAt        DateTime?
+  cancelledAt        DateTime?
+  status             JobStatus    @default(PENDING)
+  cancellationReason String?
+  deliverables       Json         @default("[]")
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
+  escrow             Escrow?
+  gig                Gig?         @relation(fields: [gigId], references: [id])
+  professional       Professional @relation("ProfessionalJobs", fields: [professionalId], references: [id])
+  messages           JobMessage[]
+  milestones         Milestone[]
+  reviews            Review[]
+
+  @@index([clientId])
+  @@index([professionalId])
+  @@index([status])
+  @@index([createdAt])
+  @@schema("marketplace")
+}
+
+model Escrow {
+  id                String       @id @default(cuid())
+  jobId             String       @unique
+  clientId          String
+  professionalId    String
+  amount            Int
+  platformFee       Int
+  netAmount         Int
+  status            EscrowStatus @default(PENDING_PAYMENT)
+  paymentMethod     String?      @db.VarChar(50)
+  razorpayOrderId   String?      @db.VarChar(100)
+  razorpayPaymentId String?      @db.VarChar(100)
+  razorpaySignature String?
+  fundedAt          DateTime?
+  releasedAt        DateTime?
+  refundedAt        DateTime?
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+  disputes          Dispute[]
+  job               Job          @relation(fields: [jobId], references: [id])
+  professional      Professional @relation("ProfessionalEscrows", fields: [professionalId], references: [id])
+  milestones        Milestone[]
+
+  @@index([clientId])
+  @@index([professionalId])
+  @@index([status])
+  @@schema("marketplace")
+}
+
+model Milestone {
+  id            String          @id @default(cuid())
+  escrowId      String
+  jobId         String
+  name          String          @db.VarChar(255)
+  description   String?
+  sequenceOrder Int             @default(1)
+  amount        Int
+  percentage    Decimal         @db.Decimal(5, 2)
+  status        MilestoneStatus @default(PENDING)
+  dueDate       DateTime?
+  completedAt   DateTime?
+  releasedAt    DateTime?
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  escrow        Escrow          @relation(fields: [escrowId], references: [id], onDelete: Cascade)
+  job           Job             @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  @@index([escrowId])
+  @@index([jobId])
+  @@schema("marketplace")
+}
+
+model Dispute {
+  id             String          @id @default(cuid())
+  escrowId       String
+  raisedBy       DisputeRaisedBy
+  raisedByUserId String
+  reason         String          @db.VarChar(255)
+  description    String
+  evidence       String[]        @default([])
+  status         DisputeStatus   @default(OPEN)
+  resolution     String?
+  resolvedBy     String?
+  resolvedAt     DateTime?
+  refundAmount   Int?
+  releaseAmount  Int?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  escrow         Escrow          @relation(fields: [escrowId], references: [id])
+
+  @@index([escrowId])
+  @@index([status])
+  @@schema("marketplace")
+}
+
+model Review {
+  id             String       @id @default(cuid())
+  jobId          String
+  professionalId String
+  reviewerId     String
+  reviewerName   String       @db.VarChar(255)
+  rating         Int
+  title          String?      @db.VarChar(255)
+  content        String?
+  response       String?
+  respondedAt    DateTime?
+  isPublic       Boolean      @default(true)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  job            Job          @relation(fields: [jobId], references: [id])
+  professional   Professional @relation("ProfessionalReviews", fields: [professionalId], references: [id])
+
+  @@unique([jobId, reviewerId])
+  @@index([professionalId])
+  @@index([rating])
+  @@schema("marketplace")
+}
+
+model JobMessage {
+  id          String            @id @default(cuid())
+  jobId       String
+  senderId    String
+  senderType  MessageSenderType
+  senderName  String            @db.VarChar(255)
+  message     String
+  attachments String[]          @default([])
+  isRead      Boolean           @default(false)
+  readAt      DateTime?
+  createdAt   DateTime          @default(now())
+  job         Job               @relation(fields: [jobId], references: [id], onDelete: Cascade)
+
+  @@index([jobId])
+  @@index([senderId])
+  @@schema("marketplace")
+}
+
+model RazorpayOrder {
+  id               String              @id @default(cuid())
+  razorpayOrderId  String              @unique @db.VarChar(100)
+  amount           Int
+  currency         String              @default("INR") @db.VarChar(3)
+  receipt          String              @db.VarChar(100)
+  jobId            String?
+  escrowId         String?
+  status           RazorpayOrderStatus @default(CREATED)
+  paymentId        String?             @db.VarChar(100)
+  signature        String?
+  paidAt           DateTime?
+  errorCode        String?             @db.VarChar(50)
+  errorDescription String?
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+
+  @@index([razorpayOrderId])
+  @@index([jobId])
+  @@schema("marketplace")
+}
+
+model ComplianceRule {
+  id               String             @id
+  name             String
+  category         String
+  subCategory      String?
+  jurisdiction     String             @default("CENTRAL")
+  stateCode        String?
+  description      String?
+  filingType       String
+  frequency        String
+  portal           String?
+  formNumber       String?
+  createdAt        DateTime?          @default(now()) @db.Timestamp(6)
+  updatedAt        DateTime?          @default(now()) @db.Timestamp(6)
+  notificationRef  String?
+  circularRef      String?
+  officialPdfUrl   String?
+  sourceUrl        String?
+  lastAmendedDate  DateTime?          @db.Date
+  verifiedByCount  Int?               @default(0)
+  lastVerifiedAt   DateTime?          @db.Timestamp(6)
+  lastVerifiedBy   String?
+  amendmentHistory Json?              @default("[]")
+  penaltyDetails   Json?
+  dueDay           Int?
+  dueDayType       String?            @default("DAY_OF_MONTH")
+  gracePeriodDays  Int?               @default(0)
+  RuleUpdateLog    RuleUpdateLog[]
+  RuleVerification RuleVerification[]
+
+  @@schema("compliance")
+}
+
+model EHSCompliance {
+  id                String              @id
+  companyId         String
+  facilityId        String?
+  complianceType    EHSComplianceType
+  category          EHSCategory
+  subCategory       String?             @db.VarChar(100)
+  issuingAuthority  String              @db.VarChar(255)
+  authorityState    String?             @db.VarChar(100)
+  authorityDistrict String?             @db.VarChar(100)
+  registrationNo    String?             @db.VarChar(100)
+  applicationNo     String?             @db.VarChar(100)
+  issueDate         DateTime?
+  validFrom         DateTime?
+  expiryDate        DateTime?
+  renewalDueDate    DateTime?
+  renewalStatus     RenewalStatus       @default(NOT_DUE)
+  lastRenewalDate   DateTime?
+  filingFrequency   EHSFilingFrequency?
+  nextFilingDue     DateTime?
+  lastFiledDate     DateTime?
+  conditions        String?
+  remarks           String?
+  status            EHSComplianceStatus @default(ACTIVE)
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  Company           Company             @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  Facility          Facility?           @relation(fields: [facilityId], references: [id])
+
+  @@index([companyId])
+  @@index([complianceType])
+  @@index([expiryDate])
+  @@index([facilityId])
+  @@schema("compliance")
+}
+
+model EHSProfile {
+  id                     String             @id
+  companyId              String             @unique
+  isManufacturing        Boolean            @default(false)
+  isFactory              Boolean            @default(false)
+  hasEnvironmentalImpact Boolean            @default(false)
+  requiresFireNOC        Boolean            @default(false)
+  factoryLicenseRequired Boolean            @default(false)
+  pcbConsentRequired     Boolean            @default(false)
+  handlesHazardous       Boolean            @default(false)
+  fireNOCRequired        Boolean            @default(false)
+  factoryLicenseState    String?            @db.VarChar(100)
+  pcbState               String?            @db.VarChar(100)
+  pollutionCategory      PollutionCategory?
+  totalFacilities        Int                @default(0)
+  manufacturingUnits     Int                @default(0)
+  warehouses             Int                @default(0)
+  offices                Int                @default(0)
+  createdAt              DateTime           @default(now())
+  updatedAt              DateTime
+  Company                Company            @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+  @@schema("compliance")
+}
+
+model EHSTestingRecord {
+  id                         String        @id
+  facilityId                 String
+  testType                   EHSTestType
+  testingAgency              String        @db.VarChar(255)
+  testingAgencyAccreditation String?       @db.VarChar(100)
+  scheduledDate              DateTime?
+  actualDate                 DateTime?
+  nextDueDate                DateTime?
+  reportNumber               String?       @db.VarChar(100)
+  reportDate                 DateTime?
+  overallResult              TestResult?
+  parameters                 Json?
+  status                     TestingStatus @default(SCHEDULED)
+  createdAt                  DateTime      @default(now())
+  updatedAt                  DateTime
+  Facility                   Facility      @relation(fields: [facilityId], references: [id], onDelete: Cascade)
+
+  @@index([facilityId])
+  @@index([scheduledDate])
+  @@index([testType])
+  @@schema("compliance")
+}
+
+model FEMAFiling {
+  id                String            @id
+  companyId         String
+  formType          FEMAFormType
+  filingPeriod      String            @db.VarChar(50)
+  dueDate           DateTime
+  filedDate         DateTime?
+  status            String            @default("PENDING") @db.VarChar(20)
+  acknowledgementNo String?           @db.VarChar(100)
+  rbiReferenceNo    String?           @db.VarChar(100)
+  adBankName        String?           @db.VarChar(200)
+  adBankCode        String?           @db.VarChar(20)
+  isLate            Boolean           @default(false)
+  daysLate          Int?
+  lateSubmissionFee Decimal?          @db.Decimal(12, 2)
+  notes             String?
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime
+  Company           Company           @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  FEMATransaction   FEMATransaction[]
+
+  @@index([companyId])
+  @@index([dueDate])
+  @@index([formType])
+  @@schema("compliance")
+}
+
+model FEMAProfile {
+  id                     String    @id
+  companyId              String    @unique
+  hasForeignShareholders Boolean   @default(false)
+  hasNRIShareholders     Boolean   @default(false)
+  hasOverseasSubsidiary  Boolean   @default(false)
+  hasJointVenture        Boolean   @default(false)
+  hasECB                 Boolean   @default(false)
+  hasESOPToNonResidents  Boolean   @default(false)
+  hasConvertibleNotes    Boolean   @default(false)
+  entityMasterCreated    Boolean   @default(false)
+  entityMasterDate       DateTime?
+  firmsUserId            String?   @db.VarChar(50)
+  sector                 String?   @db.VarChar(200)
+  nicCode                String?   @db.VarChar(10)
+  fdiRoute               FDIRoute?
+  sectoralFDICap         Decimal?  @db.Decimal(5, 2)
+  totalForeignEquity     Decimal?  @db.Decimal(18, 2)
+  foreignHoldingPercent  Decimal?  @db.Decimal(5, 2)
+  totalODI               Decimal?  @db.Decimal(18, 2)
+  primaryADBankName      String?   @db.VarChar(200)
+  primaryADBankIFSC      String?   @db.VarChar(11)
+  createdAt              DateTime  @default(now())
+  updatedAt              DateTime
+  Company                Company   @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+  @@schema("compliance")
+}
+
+model FEMATransaction {
+  id                  String              @id
+  companyId           String
+  transactionType     FEMATransactionType
+  transactionDate     DateTime
+  amount              Decimal             @db.Decimal(18, 2)
+  currency            String              @db.VarChar(3)
+  exchangeRate        Decimal             @db.Decimal(12, 6)
+  amountInINR         Decimal             @db.Decimal(18, 2)
+  foreignPartyName    String              @db.VarChar(255)
+  foreignPartyCountry String              @db.VarChar(100)
+  foreignPartyType    ForeignInvestorType
+  foreignPartyAddress String?
+  foreignPartyPAN     String?             @db.VarChar(10)
+  foreignPartyLEI     String?             @db.VarChar(20)
+  instrumentType      InstrumentType?
+  numberOfInstruments Int?
+  faceValue           Decimal?            @db.Decimal(10, 2)
+  issuePrice          Decimal?            @db.Decimal(10, 2)
+  premium             Decimal?            @db.Decimal(18, 2)
+  adBankName          String?             @db.VarChar(200)
+  adBankIFSC          String?             @db.VarChar(11)
+  fircNumber          String?             @db.VarChar(50)
+  fircDate            DateTime?
+  valuationDate       DateTime?
+  valuationMethod     ValuationMethod?
+  valuerName          String?             @db.VarChar(200)
+  fairMarketValue     Decimal?            @db.Decimal(18, 2)
+  filingId            String?
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime
+  Company             Company             @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  FEMAFiling          FEMAFiling?         @relation(fields: [filingId], references: [id])
+
+  @@index([companyId])
+  @@index([transactionDate])
+  @@index([transactionType])
+  @@schema("compliance")
+}
+
+model Facility {
+  id                   String             @id
+  companyId            String
+  name                 String             @db.VarChar(255)
+  type                 FacilityType
+  code                 String?            @db.VarChar(50)
+  addressLine1         String             @db.VarChar(255)
+  addressLine2         String?            @db.VarChar(255)
+  city                 String             @db.VarChar(100)
+  district             String             @db.VarChar(100)
+  state                String             @db.VarChar(100)
+  pincode              String             @db.VarChar(6)
+  latitude             Decimal?           @db.Decimal(10, 8)
+  longitude            Decimal?           @db.Decimal(11, 8)
+  builtUpArea          Decimal?           @db.Decimal(12, 2)
+  plotArea             Decimal?           @db.Decimal(12, 2)
+  numberOfFloors       Int?
+  isHighRise           Boolean            @default(false)
+  isManufacturing      Boolean            @default(false)
+  manufacturingProcess String?
+  productsManufactured String?
+  annualProduction     Decimal?           @db.Decimal(18, 2)
+  hasBoiler            Boolean            @default(false)
+  boilerCapacity       Decimal?           @db.Decimal(10, 2)
+  hasDGSet             Boolean            @default(false)
+  dgSetCapacity        Decimal?           @db.Decimal(10, 2)
+  hasETP               Boolean            @default(false)
+  etpCapacity          Decimal?           @db.Decimal(10, 2)
+  hasSTP               Boolean            @default(false)
+  stpCapacity          Decimal?           @db.Decimal(10, 2)
+  generatesHazWaste    Boolean            @default(false)
+  hazWasteCategories   String[]           @default([])
+  generatesEWaste      Boolean            @default(false)
+  generatesBioMedWaste Boolean            @default(false)
+  hasAirEmissions      Boolean            @default(false)
+  emissionSources      String[]           @default([])
+  hasEffluentDischarge Boolean            @default(false)
+  effluentQuantity     Decimal?           @db.Decimal(10, 2)
+  employeeCount        Int?
+  contractLabourCount  Int?
+  womenEmployees       Int?
+  operatingShifts      Int?
+  operatingDaysPerWeek Int?
+  isActive             Boolean            @default(true)
+  operationalSince     DateTime?
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime
+  EHSCompliance        EHSCompliance[]
+  EHSTestingRecord     EHSTestingRecord[]
+  Company              Company            @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+  @@index([state])
+  @@index([type])
+  @@schema("compliance")
+}
+
+model FilingRecord {
+  id                    String             @id @default(dbgenerated("('fil_'::text || substr(md5((random())::text), 1, 10))"))
+  calendarItemId        String
+  companyId             String
+  filingType            String
+  filingPeriod          String
+  status                String             @default("DATA_ENTRY")
+  jsonData              Json?
+  generatedFile         String?
+  generatedFilename     String?
+  validationResult      Json?
+  acknowledgementNumber String?
+  acknowledgementDate   DateTime?
+  filedAt               DateTime?
+  filedBy               String?
+  portalResponse        String?
+  createdAt             DateTime?          @default(now())
+  updatedAt             DateTime?          @default(now())
+  ComplianceCalendar    ComplianceCalendar @relation(fields: [calendarItemId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  Company               Company            @relation(fields: [companyId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([calendarItemId])
+  @@index([companyId])
+  @@index([status])
+  @@schema("compliance")
+}
+
+model RuleUpdateLog {
+  id             String         @id @default(dbgenerated("(gen_random_uuid())::text"))
+  ruleId         String
+  changedBy      String?
+  changeType     String
+  oldValue       Json?
+  newValue       Json?
+  source         String?
+  createdAt      DateTime?      @default(now()) @db.Timestamp(6)
+  ComplianceRule ComplianceRule @relation(fields: [ruleId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@schema("compliance")
+}
+
+model RuleVerification {
+  id              String         @id @default(dbgenerated("(gen_random_uuid())::text"))
+  ruleId          String
+  userId          String
+  isAccurate      Boolean
+  comments        String?
+  suggestedChange String?
+  sourceProvided  String?
+  verifiedAt      DateTime?      @default(now()) @db.Timestamp(6)
+  ComplianceRule  ComplianceRule @relation(fields: [ruleId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  User            User           @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@unique([ruleId, userId])
+  @@index([ruleId])
+  @@index([userId])
+  @@schema("compliance")
+}
+
+model Suggestion {
+  id               String            @id @default(dbgenerated("(gen_random_uuid())::text"))
+  type             SuggestionType
+  status           SuggestionStatus? @default(PENDING)
+  userId           String?
+  userName         String?
+  userEmail        String?
+  userPhone        String?
+  isProfessional   Boolean?          @default(false)
+  title            String
+  description      String?
+  category         String?
+  ruleId           String?
+  fieldToCorrect   String?
+  currentValue     String?
+  suggestedValue   String?
+  newRuleName      String?
+  newRuleCategory  String?
+  newRuleFrequency String?
+  newRuleSource    String?
+  sourceUrl        String?
+  sourceDocument   String?
+  upvotes          Int?              @default(0)
+  downvotes        Int?              @default(0)
+  reviewedBy       String?
+  reviewedAt       DateTime?         @db.Timestamp(6)
+  reviewNotes      String?
+  createdAt        DateTime?         @default(now()) @db.Timestamp(6)
+  updatedAt        DateTime?         @default(now()) @db.Timestamp(6)
+  User             User?             @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([category])
+  @@index([status])
+  @@index([type])
+  @@schema("compliance")
+}
+
+model User {
+  id                String              @id
+  phone             String              @unique @db.VarChar(15)
+  email             String?             @unique @db.VarChar(255)
+  name              String              @db.VarChar(100)
+  avatarUrl         String?             @db.VarChar(500)
+  isProfessional    Boolean             @default(false)
+  professionalType  String?             @db.VarChar(50)
+  professionalId    String?
+  isPhoneVerified   Boolean             @default(false)
+  isEmailVerified   Boolean             @default(false)
+  isKycVerified     Boolean             @default(false)
+  status            String              @default("ACTIVE") @db.VarChar(30)
+  lastLoginAt       DateTime?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime
+  googleId          String?
+  authProvider      String?             @default("EMAIL")
+  RuleVerification  RuleVerification[]
+  Suggestion        Suggestion[]
+  UserCompanyAccess UserCompanyAccess[]
+
+  @@index([email])
+  @@index([googleId])
+  @@index([phone])
+  @@schema("compliance")
+}
+
+enum EntityType {
+  PROPRIETORSHIP
+  PARTNERSHIP
+  LLP
+  PRIVATE_LIMITED
+  PUBLIC_LIMITED
+  OPC
+  SECTION_8
+  TRUST
+  SOCIETY
+  HUF
+  AOP
+  BOI
+  GOVERNMENT
+  LOCAL_AUTHORITY
+
+  @@schema("compliance")
+}
+
+enum CompanyStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+  PENDING_VERIFICATION
+  STRIKE_OFF
+  UNDER_LIQUIDATION
+  DORMANT
+
+  @@schema("compliance")
+}
+
+enum MsmeCategory {
+  MICRO
+  SMALL
+  MEDIUM
+
+  @@schema("compliance")
+}
+
+enum AddressType {
+  REGISTERED
+  CORPORATE
+  BRANCH
+  FACTORY
+  WAREHOUSE
+  GODOWN
+  PROJECT_SITE
+
+  @@schema("compliance")
+}
+
+enum GstRegistrationType {
+  REGULAR
+  COMPOSITION
+  CASUAL
+  SEZ
+  SEZ_DEVELOPER
+  ISD
+  TDS
+  TCS
+  OIDAR
+  NON_RESIDENT
+
+  @@schema("compliance")
+}
+
+enum GstFilingFrequency {
+  MONTHLY
+  QUARTERLY
+
+  @@schema("compliance")
+}
+
+enum RegistrationStatus {
+  ACTIVE
+  INACTIVE
+  CANCELLED
+  SUSPENDED
+
+  @@schema("compliance")
+}
+
+enum PtFilingFrequency {
+  MONTHLY
+  QUARTERLY
+  HALF_YEARLY
+  ANNUAL
+
+  @@schema("compliance")
+}
+
+enum LwfFilingFrequency {
+  MONTHLY
+  HALF_YEARLY
+  ANNUAL
+
+  @@schema("compliance")
+}
+
+enum PersonType {
+  DIRECTOR
+  DESIGNATED_PARTNER
+  PARTNER
+  PROPRIETOR
+  KMP
+  AUTHORIZED_SIGNATORY
+  SHAREHOLDER
+
+  @@schema("compliance")
+}
+
+enum PersonStatus {
+  ACTIVE
+  CEASED
+  DISQUALIFIED
+  RESIGNED
+
+  @@schema("compliance")
+}
+
+enum DirectorCategory {
+  EXECUTIVE
+  NON_EXECUTIVE
+  INDEPENDENT
+  NOMINEE
+  ALTERNATE
+  ADDITIONAL
+  MANAGING
+  WHOLE_TIME
+
+  @@schema("compliance")
+}
+
+enum KMPDesignation {
+  CEO
+  CFO
+  CS
+  MD
+  WTD
+  MANAGER
+
+  @@schema("compliance")
+}
+
+enum CompanyRole {
+  OWNER
+  ADMIN
+  MEMBER
+  VIEWER
+  DIRECTOR
+  CA
+  CS
+  LAWYER
+  AUDITOR
+  ACCOUNTANT
+
+  @@schema("compliance")
+}
+
+enum CalendarStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  OVERDUE
+  NOT_APPLICABLE
+  WAIVED
+
+  @@schema("compliance")
+}
+
+enum ProfessionalType {
+  CA
+  CS
+  LAWYER
+  TAX_CONSULTANT
+  AUDITOR
+  COST_ACCOUNTANT
+  COMPANY_SECRETARY
+
+  @@schema("marketplace")
+}
+
+enum VerificationStatus {
+  PENDING
+  UNDER_REVIEW
+  VERIFIED
+  REJECTED
+
+  @@schema("marketplace")
+}
+
+enum AvailabilityStatus {
+  AVAILABLE
+  BUSY
+  UNAVAILABLE
+
+  @@schema("marketplace")
+}
+
+enum JobStatus {
+  PENDING
+  ACCEPTED
+  IN_PROGRESS
+  DELIVERED
+  REVISION_REQUESTED
+  COMPLETED
+  CANCELLED
+  DISPUTED
+
+  @@schema("marketplace")
+}
+
+enum EscrowStatus {
+  PENDING_PAYMENT
+  FUNDED
+  IN_PROGRESS
+  DELIVERED
+  RELEASED
+  PARTIALLY_RELEASED
+  DISPUTED
+  REFUNDED
+  CANCELLED
+
+  @@schema("marketplace")
+}
+
+enum MilestoneStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  RELEASED
+  DISPUTED
+
+  @@schema("marketplace")
+}
+
+enum DisputeRaisedBy {
+  CLIENT
+  PROFESSIONAL
+
+  @@schema("marketplace")
+}
+
+enum DisputeStatus {
+  OPEN
+  UNDER_REVIEW
+  RESOLVED
+  ESCALATED
+  CLOSED
+
+  @@schema("marketplace")
+}
+
+enum MessageSenderType {
+  CLIENT
+  PROFESSIONAL
+  SYSTEM
+
+  @@schema("marketplace")
+}
+
+enum RazorpayOrderStatus {
+  CREATED
+  ATTEMPTED
+  PAID
+  FAILED
+  REFUNDED
+
+  @@schema("marketplace")
+}
+
+enum EHSCategory {
+  ENVIRONMENT
+  HEALTH_SAFETY
+  FIRE_SAFETY
+  FACTORY_COMPLIANCE
+  EQUIPMENT_SAFETY
+  ELECTRICAL_SAFETY
+
+  @@schema("compliance")
+}
+
+enum EHSComplianceStatus {
+  ACTIVE
+  EXPIRED
+  SUSPENDED
+  CANCELLED
+  UNDER_RENEWAL
+
+  @@schema("compliance")
+}
+
+enum EHSComplianceType {
+  PCB_CONSENT_ESTABLISH
+  PCB_CONSENT_OPERATE
+  PCB_CONSENT_RENEWAL
+  FORM_V_ENV_STATEMENT
+  HAZARDOUS_WASTE_AUTH
+  E_WASTE_AUTH
+  BIOMEDICAL_WASTE_AUTH
+  PLASTIC_WASTE_REG
+  BATTERY_WASTE_REG
+  STACK_EMISSION_TEST
+  AMBIENT_AIR_TEST
+  EFFLUENT_TEST
+  GROUNDWATER_TEST
+  NOISE_LEVEL_TEST
+  FACTORY_LICENSE
+  FACTORY_LICENSE_RENEWAL
+  FACTORY_PLAN_APPROVAL
+  SAFETY_COMMITTEE
+  MOCK_DRILL
+  ACCIDENT_REPORT
+  FIRE_NOC
+  FIRE_NOC_RENEWAL
+  FIRE_SAFETY_AUDIT
+  FIRE_EQUIPMENT_SERVICE
+  BOILER_REGISTRATION
+  BOILER_INSPECTION
+  PRESSURE_VESSEL_LICENSE
+  LIFT_LICENSE
+  LIFT_INSPECTION
+  DG_SET_APPROVAL
+  ELECTRICAL_INSTALLATION_APPROVAL
+  ELECTRICAL_SAFETY_AUDIT
+  ENVIRONMENT_CLEARANCE
+  CRZ_CLEARANCE
+  FOREST_CLEARANCE
+
+  @@schema("compliance")
+}
+
+enum EHSFilingFrequency {
+  MONTHLY
+  QUARTERLY
+  HALF_YEARLY
+  ANNUAL
+  BIENNIAL
+  ONE_TIME
+  ON_OCCURRENCE
+
+  @@schema("compliance")
+}
+
+enum EHSTestType {
+  STACK_EMISSION
+  AMBIENT_AIR_QUALITY
+  EFFLUENT_QUALITY
+  GROUNDWATER_QUALITY
+  NOISE_LEVEL
+  SOIL_QUALITY
+  DRINKING_WATER
+  DG_EMISSION
+  WORKPLACE_ENVIRONMENT
+
+  @@schema("compliance")
+}
+
+enum FDIRoute {
+  AUTOMATIC
+  GOVERNMENT
+
+  @@schema("compliance")
+}
+
+enum FEMAFormType {
+  ARF
+  FC_GPR
+  FC_TRS
+  FLA_RETURN
+  APR
+  FORM_ODI
+  ECB_2
+  FORM_ESOP
+  FORM_CN
+  LLP_I
+  LLP_II
+  FORM_DI
+
+  @@schema("compliance")
+}
+
+enum FEMATransactionType {
+  FDI_EQUITY
+  FDI_CCPS
+  FDI_CCD
+  SHARE_TRANSFER_R_TO_NR
+  SHARE_TRANSFER_NR_TO_R
+  SHARE_TRANSFER_NR_TO_NR
+  ODI_EQUITY
+  ODI_LOAN
+  ECB_DRAWDOWN
+  ECB_REPAYMENT
+  ESOP_TO_NR
+  CONVERTIBLE_NOTE
+  DIVIDEND_REPATRIATION
+
+  @@schema("compliance")
+}
+
+enum FacilityType {
+  FACTORY
+  WAREHOUSE
+  OFFICE
+  RETAIL
+  MIXED_USE
+  R_AND_D
+  DATA_CENTER
+  COLD_STORAGE
+
+  @@schema("compliance")
+}
+
+enum ForeignInvestorType {
+  NRI
+  OCI
+  FOREIGN_COMPANY
+  FOREIGN_INDIVIDUAL
+  FVCI
+  FII
+  FPI
+  PE_FUND
+  SOVEREIGN_WEALTH_FUND
+  FOREIGN_TRUST
+  FOREIGN_LLP
+
+  @@schema("compliance")
+}
+
+enum InstrumentType {
+  EQUITY_SHARES
+  CCPS
+  CCD
+  WARRANT
+  ESOP
+  SWEAT_EQUITY
+  CONVERTIBLE_NOTE
+
+  @@schema("compliance")
+}
+
+enum PollutionCategory {
+  RED
+  ORANGE
+  GREEN
+  WHITE
+
+  @@schema("compliance")
+}
+
+enum RenewalStatus {
+  NOT_DUE
+  DUE_SOON
+  DUE
+  OVERDUE
+  APPLIED
+  RENEWED
+
+  @@schema("compliance")
+}
+
+enum SuggestionStatus {
+  PENDING
+  UNDER_REVIEW
+  APPROVED
+  REJECTED
+  IMPLEMENTED
+
+  @@schema("compliance")
+}
+
+enum SuggestionType {
+  RULE_CORRECTION
+  NEW_RULE
+  FEATURE_REQUEST
+  BUG_REPORT
+  GENERAL_FEEDBACK
+
+  @@schema("compliance")
+}
+
+enum TestResult {
+  PASS
+  FAIL
+  PARTIAL
+  PENDING_REVIEW
+
+  @@schema("compliance")
+}
+
+enum TestingStatus {
+  SCHEDULED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  OVERDUE
+
+  @@schema("compliance")
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+  PENDING_VERIFICATION
+
+  @@schema("compliance")
+}
+
+enum ValuationMethod {
+  DCF
+  NAV
+  PE_MULTIPLE
+  MARKET_PRICE
+  BOOK_VALUE
+  COMPARABLE_TRANSACTION
+
+  @@schema("compliance")
+}
+
+// =============================================================================
+// FILING WORKFLOW TABLES (Sprint 15)
+// =============================================================================
+
+model FilingDraft {
+  id                 String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  companyId          String
+  calendarItemId     String?
+  ruleId             String    @db.VarChar(50)
+  filingPeriod       String    @db.VarChar(20)
+  status             String    @default("DRAFT") @db.VarChar(20)
+  data               Json      @default("{}")
+  validationErrors   Json?
+  validationWarnings Json?
+  preparedBy         String?
+  reviewedBy         String?
+  approvedBy         String?
+  approvedAt         DateTime? @db.Timestamp(6)
+  generatedDocuments Json?
+  createdAt          DateTime  @default(now()) @db.Timestamp(6)
+  updatedAt          DateTime  @default(now()) @db.Timestamp(6)
+
+  company      Company             @relation(fields: [companyId], references: [id])
+  calendarItem ComplianceCalendar? @relation(fields: [calendarItemId], references: [id])
+  auditLogs    FilingAuditLog[]
+
+  @@index([companyId])
+  @@index([ruleId])
+  @@index([status])
+  @@index([filingPeriod])
+  @@schema("compliance")
+}
+
+model FilingAuditLog {
+  id              String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  draftId         String   @db.Uuid
+  action          String   @db.VarChar(50)
+  fromStatus      String?  @db.VarChar(20)
+  toStatus        String?  @db.VarChar(20)
+  performedBy     String
+  performedByRole String?  @db.VarChar(50)
+  changes         Json?
+  reason          String?
+  ipAddress       String?  @db.VarChar(50)
+  userAgent       String?
+  createdAt       DateTime @default(now()) @db.Timestamp(6)
+
+  draft FilingDraft @relation(fields: [draftId], references: [id])
+
+  @@index([draftId])
+  @@index([action])
+  @@index([performedBy])
+  @@schema("compliance")
+}

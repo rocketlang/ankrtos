@@ -1,0 +1,158 @@
+{
+  "app": {
+    "name": "Mari8X",
+    "tagline": "Maritime Operations Platform",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "update": "Update",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import",
+    "download": "Download",
+    "upload": "Upload",
+    "refresh": "Refresh",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "vessels": "Vessels",
+    "ports": "Ports",
+    "chartering": "Chartering",
+    "voyages": "Voyages",
+    "laytime": "Laytime",
+    "claims": "Claims",
+    "compliance": "Compliance",
+    "analytics": "Analytics",
+    "reports": "Reports",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending",
+    "completed": "Completed",
+    "cancelled": "Cancelled",
+    "draft": "Draft",
+    "approved": "Approved",
+    "rejected": "Rejected"
+  },
+  "time": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "tomorrow": "Tomorrow",
+    "thisWeek": "This Week",
+    "lastWeek": "Last Week",
+    "thisMonth": "This Month",
+    "lastMonth": "Last Month",
+    "thisYear": "This Year",
+    "custom": "Custom Range"
+  },
+  "messages": {
+    "success": "Operation successful",
+    "error": "Operation failed",
+    "deleteConfirm": "Are you sure you want to delete this item?",
+    "unsavedChanges": "You have unsaved changes. Are you sure you want to leave?",
+    "noData": "No data available",
+    "loadingData": "Loading data...",
+    "savingChanges": "Saving changes...",
+    "processingRequest": "Processing your request..."
+  },
+  "rag": {
+    "search": {
+      "placeholder": "Search documents, clauses, ports...",
+      "noResults": "No results found",
+      "filters": "Filters",
+      "sortBy": "Sort by",
+      "relevance": "Relevance",
+      "date": "Date",
+      "title": "Title",
+      "docTypes": "Document Types",
+      "dateRange": "Date Range",
+      "importance": "Importance",
+      "results": "Results",
+      "viewDocument": "View Document",
+      "addToCollection": "Add to Collection",
+      "share": "Share"
+    },
+    "swayam": {
+      "open": "Open Swayam Assistant",
+      "placeholder": "Ask me anything...",
+      "sources": "Sources",
+      "confidence": "Confidence",
+      "followUp": "Suggested follow-ups",
+      "error": "Sorry, I'm having trouble connecting to the knowledge base. Please try again in a moment.",
+      "welcome": {
+        "default": "Hello! I'm Swayam, your maritime AI assistant powered by RAG. I can search through your documents to give you accurate answers. How can I help you today?",
+        "chartering": "Hello! I can help you with fixture negotiations, charter party clauses, and freight rates. What would you like to know?",
+        "voyage": "Hi! Ask me about voyage tracking, ETA calculations, or port operations.",
+        "da": "Welcome! I can assist with port costs, DA calculations, and vendor management.",
+        "laytime": "Hello! I specialize in laytime calculations, demurrage, and despatch. How can I help?",
+        "claims": "Hi! I can help with claims procedures, time bar deadlines, and evidence requirements.",
+        "compliance": "Welcome! Ask me about sanctions screening, KYC requirements, or regulatory compliance.",
+        "analytics": "Hello! I can help interpret your data, explain KPIs, and generate reports.",
+        "ffa": "Hi! I specialize in FFA positions, derivatives trading, and risk management."
+      }
+    },
+    "knowledgeBase": {
+      "title": "Knowledge Base",
+      "collections": "Collections",
+      "documents": "Documents",
+      "chunks": "Chunks",
+      "searches": "Searches",
+      "avgResponseTime": "Avg Response Time",
+      "reindexAll": "Re-index All Documents",
+      "reindexing": "Re-indexing...",
+      "testSearch": "Test Similarity Search",
+      "searchAnalytics": "Search Analytics",
+      "topQueries": "Top Queries"
+    },
+    "widgets": {
+      "cpClause": {
+        "title": "Charter Party Clauses",
+        "search": "Search for a clause",
+        "commonClauses": "Common Clauses",
+        "recommend": "Recommend",
+        "precedents": "Precedents",
+        "compare": "Compare",
+        "useClause": "Use This Clause"
+      },
+      "portIntel": {
+        "title": "Port Intelligence",
+        "selectPort": "Select Port",
+        "refresh": "Refresh",
+        "notices": "Notices",
+        "restrictions": "Restrictions",
+        "congestion": "Congestion",
+        "noInfo": "No recent information"
+      },
+      "compliance": {
+        "title": "Compliance Assistant",
+        "askQuestion": "Ask a compliance question",
+        "commonQuestions": "Common Questions"
+      },
+      "market": {
+        "title": "Market Intelligence",
+        "allCategories": "All",
+        "freightRates": "Freight Rates",
+        "tradeRoutes": "Trade Routes",
+        "marketOutlook": "Market Outlook",
+        "vesselMarket": "Vessel Market"
+      }
+    }
+  }
+}

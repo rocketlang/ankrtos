@@ -1,0 +1,322 @@
+{
+  "numStartups": 465,
+  "installMethod": "global",
+  "hasSeenTasksHint": true,
+  "customApiKeyResponses": {
+    "approved": [],
+    "rejected": [
+      "mypbByHqMwQ-_fHBlgAA"
+    ]
+  },
+  "tipsHistory": {
+    "new-user-warmup": 9,
+    "plan-mode-for-complex-tasks": 462,
+    "terminal-setup": 460,
+    "memory-command": 451,
+    "theme-command": 453,
+    "colorterm-truecolor": 459,
+    "status-line": 458,
+    "stickers-command": 209,
+    "prompt-queue": 12,
+    "enter-to-steer-in-relatime": 457,
+    "todo-list": 457,
+    "install-github-app": 461,
+    "install-slack-app": 461,
+    "drag-and-drop-images": 120,
+    "double-esc-code-restore": 461,
+    "continue": 461,
+    "shift-tab": 461,
+    "image-paste": 458,
+    "config-thinking-mode": 22,
+    "ultrathink-keyword": 120,
+    "btw-side-question": 17,
+    "web-app": 459,
+    "mobile-app": 459,
+    "guest-passes": 462,
+    "custom-agents": 453,
+    "permissions": 461,
+    "rename-conversation": 451,
+    "custom-commands": 453,
+    "frontend-design-plugin": 455,
+    "ide-upsell-external-terminal": 462,
+    "git-worktrees": 460,
+    "agent-flag": 450
+  },
+  "promptQueueUseCount": 2211,
+  "showExpandedTodos": true,
+  "cachedStatsigGates": {
+    "tengu_prompt_suggestion": true,
+    "tengu_year_end_2025_campaign_promo": false,
+    "tengu_streaming_tool_execution2": false,
+    "tengu_session_memory": false
+  },
+  "cachedDynamicConfigs": {
+    "tengu_1p_event_batch_config": {
+      "scheduledDelayMillis": 5000,
+      "maxExportBatchSize": 200,
+      "maxQueueSize": 8192
+    },
+    "tengu-top-of-feed-tip": {
+      "tip": "",
+      "color": ""
+    }
+  },
+  "cachedGrowthBookFeatures": {
+    "tengu_mcp_tool_search": true,
+    "tengu_disable_bypass_permissions_mode": false,
+    "strawberry_granite_flag": "N/A",
+    "persimmon_marble_flag": "N/A",
+    "tengu_tool_pear": false,
+    "tengu_thinkback": false,
+    "tengu_sumi": true,
+    "tengu_c4w_usage_limit_notifications_enabled": true,
+    "tengu_react_vulnerability_warning": false,
+    "tengu_ant_attribution_header_new": true,
+    "tengu_accept_with_feedback": true,
+    "tengu_tool_result_persistence": true,
+    "doorbell_bottle": "inherit",
+    "tengu_tool_search_unsupported_models": [
+      "haiku"
+    ],
+    "tengu_1p_event_batch_config": {
+      "scheduledDelayMillis": 5000,
+      "maxExportBatchSize": 200,
+      "maxQueueSize": 8192
+    },
+    "tengu_event_sampling_config": {},
+    "tengu_pid_based_version_locking": true,
+    "tengu-top-of-feed-tip": {
+      "tip": "",
+      "color": ""
+    },
+    "tengu_permission_explainer": true,
+    "tengu_scratch": true,
+    "tengu_log_segment_events": false,
+    "tengu_log_datadog_events": true,
+    "tengu_streaming_tool_execution2": true,
+    "tengu_post_compact_survey": false,
+    "tengu_opus_default_pro_plan": true,
+    "enhanced_telemetry_beta": false,
+    "tengu_code_diff_cli": true,
+    "tengu_compact_streaming_retry": false,
+    "tengu_session_memory": false,
+    "tengu_bash_haiku_prefetch": true,
+    "tengu_sm_compact": false,
+    "tengu_plan_mode_interview_phase": false,
+    "tengu_keybinding_customization": false,
+    "tengu_attribution_header": true,
+    "tengu_claudeai_mcp_connectors": false,
+    "tengu_plank_river_frost": "user_intent",
+    "tengu_brass_pebble": false,
+    "tengu_cache_plum_violet": true,
+    "tengu_file_write_optimization": false,
+    "tengu_scarf_coffee": false,
+    "tengu_keybinding_customization_release": true,
+    "tengu_marble_kite": false,
+    "tengu_kv7_prompt_sort": true,
+    "tengu_pr_status_cli": true,
+    "tengu_compact_cache_prefix": true,
+    "tengu_cork_m4q": true,
+    "tengu_marble_anvil": true,
+    "tengu_tst_kx7": false,
+    "tengu_coral_fern": false,
+    "tengu_plum_vx3": false,
+    "tengu_system_prompt_global_cache": false,
+    "tengu_workout": false,
+    "tengu_vinteuil_phrase": false,
+    "tengu_oboe": true,
+    "tengu_tst_names_in_messages": false
+  },
+  "userID": "6ef15b952ad9ee9727bca6541de89e665dd91ab47c182e47c602bce59776c8d5",
+  "firstStartTime": "2026-01-06T07:04:11.981Z",
+  "sonnet45MigrationComplete": true,
+  "opus45MigrationComplete": true,
+  "thinkingMigrationComplete": true,
+  "changelogLastFetched": 1770179320643,
+  "claudeCodeFirstTokenDate": "2026-01-06T07:06:23.517446Z",
+  "hasCompletedOnboarding": true,
+  "lastOnboardingVersion": "2.1.12",
+  "lastReleaseNotesSeen": "2.1.31",
+  "projects": {
+    "/root": {
+      "allowedTools": [],
+      "mcpContextUris": [],
+      "mcpServers": {
+        "ankr-mcp": {
+          "command": "node",
+          "args": [
+            "/root/ankr-labs-nx/packages/ankr-mcp/dist/cli.js"
+          ],
+          "env": {
+            "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_eon",
+            "LOGISTICS_RAG_URL": "http://localhost:4005"
+          },
+          "defer_loading": true
+        },
+        "ankr-slm-router": {
+          "command": "node",
+          "args": [
+            "/root/ankr-labs-nx/packages/ankr-slm-router/dist/mcp/server.js"
+          ],
+          "env": {
+            "OLLAMA_URL": "http://localhost:11434",
+            "OLLAMA_MODEL": "qwen2.5:1.5b",
+            "AI_PROXY_URL": "http://localhost:4444",
+            "CONFIDENCE_THRESHOLD": "0.7"
+          }
+        }
+      },
+      "enabledMcpjsonServers": [],
+      "disabledMcpjsonServers": [],
+      "hasTrustDialogAccepted": false,
+      "projectOnboardingSeenCount": 9,
+      "hasClaudeMdExternalIncludesApproved": false,
+      "hasClaudeMdExternalIncludesWarningShown": false,
+      "exampleFiles": [
+        "ankr-viewer-html.js",
+        "ankr-viewer-server.js",
+        "reporter.ts",
+        "orchestrator.ts",
+        "desktop-agent.ts"
+      ],
+      "reactVulnerabilityCache": {
+        "detected": false,
+        "package": null,
+        "packageName": null,
+        "version": null,
+        "packageManager": null
+      },
+      "hasCompletedProjectOnboarding": true,
+      "lastCost": 4.9704825,
+      "lastAPIDuration": 847164,
+      "lastAPIDurationWithoutRetries": 847132,
+      "lastToolDuration": 1447,
+      "lastDuration": 2775338,
+      "lastLinesAdded": 4385,
+      "lastLinesRemoved": 0,
+      "lastTotalInputTokens": 4172,
+      "lastTotalOutputTokens": 51975,
+      "lastTotalCacheCreationInputTokens": 313154,
+      "lastTotalCacheReadInputTokens": 3424982,
+      "lastTotalWebSearchRequests": 0,
+      "lastModelUsage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 3889,
+          "outputTokens": 195,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.004864
+        },
+        "claude-sonnet-4-5-20250929": {
+          "inputTokens": 283,
+          "outputTokens": 51780,
+          "cacheReadInputTokens": 3424982,
+          "cacheCreationInputTokens": 313154,
+          "webSearchRequests": 0,
+          "costUSD": 4.965618500000001
+        }
+      },
+      "lastSessionId": "d3ce781f-fd89-4e07-b6d7-80cdc29d81c7",
+      "exampleFilesGeneratedAt": 1769946777447,
+      "lastFpsAverage": 13.74,
+      "lastFpsLow1Pct": 65.37
+    }
+  },
+  "hasShownOpus45Notice": {
+    "d3c85e87-ef4d-4139-a7fa-c386e5a53734": true,
+    "ec85c17d-cc8d-4d16-ba97-9bb74f51556c": true
+  },
+  "s1mAccessCache": {
+    "d3c85e87-ef4d-4139-a7fa-c386e5a53734": {
+      "hasAccess": false,
+      "hasAccessNotAsDefault": true,
+      "timestamp": 1768892832593
+    },
+    "ec85c17d-cc8d-4d16-ba97-9bb74f51556c": {
+      "hasAccess": false,
+      "hasAccessNotAsDefault": false,
+      "timestamp": 1770231799056
+    }
+  },
+  "passesEligibilityCache": {
+    "d3c85e87-ef4d-4139-a7fa-c386e5a53734": {
+      "eligible": true,
+      "referral_code_details": {
+        "code": "Dmt7uXNdJA",
+        "campaign": "claude_code_guest_pass",
+        "referral_link": "https://claude.ai/referral/Dmt7uXNdJA"
+      },
+      "timestamp": 1768892830477
+    },
+    "ec85c17d-cc8d-4d16-ba97-9bb74f51556c": {
+      "eligible": true,
+      "referral_code_details": {
+        "code": "8W6lmbIQaA",
+        "campaign": "claude_code_guest_pass",
+        "referral_link": "https://claude.ai/referral/8W6lmbIQaA"
+      },
+      "referrer_reward": null,
+      "remaining_passes": 3,
+      "timestamp": 1770230594588
+    }
+  },
+  "officialMarketplaceAutoInstallAttempted": true,
+  "officialMarketplaceAutoInstalled": true,
+  "hasShownS1MWelcomeV2": {
+    "d3c85e87-ef4d-4139-a7fa-c386e5a53734": true
+  },
+  "groveConfigCache": {
+    "2c645579-2ea5-4458-93e8-3b1cc72eaaf7": {
+      "grove_enabled": true,
+      "timestamp": 1768892832236
+    },
+    "51e1f20c-8921-490d-8b8d-a21ba28e8189": {
+      "grove_enabled": true,
+      "timestamp": 1770223060154
+    }
+  },
+  "feedbackSurveyState": {
+    "lastShownTime": 1769867411889
+  },
+  "passesUpsellSeenCount": 3,
+  "anonymousId": "claudecode.v1.bf6d6ef3-b82a-4094-ad2b-1bc05e70e5d8",
+  "hasUsedBackslashReturn": true,
+  "opusProMigrationComplete": true,
+  "cachedChromeExtensionInstalled": false,
+  "skillUsage": {
+    "ankr-eon": {
+      "usageCount": 1,
+      "lastUsedAt": 1768633627680
+    },
+    "ankr-db": {
+      "usageCount": 1,
+      "lastUsedAt": 1768652599830
+    }
+  },
+  "subscriptionNoticeCount": 0,
+  "hasAvailableSubscription": false,
+  "oauthAccount": {
+    "accountUuid": "51e1f20c-8921-490d-8b8d-a21ba28e8189",
+    "emailAddress": "capt.anil.sharma@powerpbox.org",
+    "organizationUuid": "ec85c17d-cc8d-4d16-ba97-9bb74f51556c",
+    "hasExtraUsageEnabled": false,
+    "displayName": "Capt Kika",
+    "organizationRole": "admin",
+    "workspaceRole": null,
+    "organizationName": "capt.anil.sharma@powerpbox.org's Organization"
+  },
+  "githubRepoPaths": {
+    "rocketlang/dodd-icd": [
+      "/root"
+    ]
+  },
+  "hasVisitedPasses": false,
+  "passesLastSeenRemaining": 3,
+  "clientDataCache": {
+    "data": {
+      "system_prompt_variant": "tengu_vinteuil_phrase"
+    },
+    "timestamp": 1770231978091
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "appId": "in.ankr.viewer",
+  "appName": "ANKR Viewer",
+  "webDir": "dist",
+  "server": {
+    "url": "https://ankr.in/viewer/",
+    "cleartext": true
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}
