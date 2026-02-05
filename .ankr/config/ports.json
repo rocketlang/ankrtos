@@ -26,6 +26,7 @@
     "fr8x": 3006,
     "dodd": 3007,
     "ankrMaritime": 3008,
+    "coralAstrology": 3009,
     "ankrWms": 3060,
     "vyomo": 3010,
     "bfcWeb": 3020,
@@ -54,6 +55,7 @@
     "devbrain": 4030,
     "fr8x": 4050,
     "ankrMaritime": 4051,
+    "coralAstrology": 4052,
     "ankrWms": 4060
   },
   "admin": {

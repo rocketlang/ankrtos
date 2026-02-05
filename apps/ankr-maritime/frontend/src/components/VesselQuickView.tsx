@@ -1,272 +1,275 @@
 /**
  * Vessel Quick View Modal
- * QW3 Implementation - Feb 2, 2026
+ * Lightweight modal for viewing vessel details from any list/table
+ *
+ * @package @ankr/mari8x
+ * @version 1.0.0
  */
 
-import React from 'react';
 import { useQuery, gql } from '@apollo/client';
-import { Modal } from './Modal';
+import { X, Ship, Anchor, Calendar, Flag, Gauge, Package, MapPin, Activity } from 'lucide-react';
+import { ComponentErrorBoundary } from './ErrorBoundary';
 
-const GET_VESSEL_DETAILS = gql`
-  query GetVesselDetails($id: String!) {
+const VESSEL_QUICK_VIEW_QUERY = gql`
+  query VesselQuickView($id: ID!) {
     vessel(id: $id) {
       id
-      name
       imo
-      type
-      dwt
-      yearBuilt
-      flag
-      registeredOwner
-      callSign
-      length
-      beam
-      draft
-      grossTonnage
-      netTonnage
-      createdAt
-      updatedAt
-    }
-    vesselPositions(vesselId: $id, limit: 1) {
-      id
-      latitude
-      longitude
-      speed
-      course
-      timestamp
-    }
-    voyages(vesselId: $id, limit: 3) {
-      id
-      reference
-      status
-      departurePort
-      arrivalPort
-      eta
-      etd
-      createdAt
-    }
-    vesselCertificates(vesselId: $id) {
-      id
       name
-      type
-      issuedBy
-      issuedDate
-      expiryDate
+      flag
+      vesselType
+      dwt
+      builtYear
+      classification
       status
+      currentPosition {
+        latitude
+        longitude
+        speed
+        heading
+        destination
+        eta
+        lastUpdate
+      }
+      specifications {
+        loa
+        beam
+        draft
+        grainCapacity
+        teuCapacity
+      }
     }
   }
 `;
 
 interface VesselQuickViewProps {
-  vesselId: string | null;
+  vesselId: string;
+  isOpen: boolean;
   onClose: () => void;
 }
 
-export function VesselQuickView({ vesselId, onClose }: VesselQuickViewProps) {
-  const { data, loading, error } = useQuery(GET_VESSEL_DETAILS, {
+export function VesselQuickView({ vesselId, isOpen, onClose }: VesselQuickViewProps) {
+  const { data, loading, error } = useQuery(VESSEL_QUICK_VIEW_QUERY, {
     variables: { id: vesselId },
-    skip: !vesselId,
+    skip: !isOpen || !vesselId,
   });
+
+  if (!isOpen) return null;
 
   const vessel = data?.vessel;
-  const position = data?.vesselPositions?.[0];
-  const voyages = data?.voyages || [];
-  const certificates = data?.vesselCertificates || [];
-
-  // Calculate expiring certificates (within 30 days)
-  const expiringCertificates = certificates.filter((cert: any) => {
-    if (!cert.expiryDate) return false;
-    const daysUntilExpiry = Math.ceil(
-      (new Date(cert.expiryDate).getTime() - Date.now()) / (1000 * 60 * 60 * 24)
-    );
-    return daysUntilExpiry <= 30 && daysUntilExpiry > 0;
-  });
-
-  if (!vesselId) return null;
 
   return (
-    <Modal open={!!vesselId} onClose={onClose} title="Vessel Quick View">
-      {loading ? (
-        <div className="text-center py-8 text-maritime-400">
-          Loading vessel details...
-        </div>
-      ) : error ? (
-        <div className="text-center py-8 text-red-400">
-          Error loading vessel details
-        </div>
-      ) : !vessel ? (
-        <div className="text-center py-8 text-maritime-400">
-          Vessel not found
-        </div>
-      ) : (
-        <div className="space-y-6">
-          {/* Vessel Header */}
-          <div className="pb-4 border-b border-maritime-700">
-            <h3 className="text-2xl font-bold text-white mb-2">
-              {vessel.name}
-            </h3>
-            <div className="flex items-center gap-4 text-sm text-maritime-400">
-              <span>IMO: {vessel.imo}</span>
-              <span>•</span>
-              <span className="px-2 py-1 bg-maritime-700 rounded text-maritime-300">
-                {vessel.type}
-              </span>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      {/* Backdrop */}
+      <div 
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        onClick={onClose}
+      />
+
+      {/* Modal */}
+      <div className="relative bg-maritime-800 border border-maritime-700 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-hidden">
+        {/* Header */}
+        <div className="flex items-center justify-between p-6 border-b border-maritime-700">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+              <Ship className="w-5 h-5 text-blue-400" />
+            </div>
+            <div>
+              <h2 className="text-lg font-bold text-white">
+                {loading ? 'Loading...' : vessel?.name || 'Vessel Details'}
+              </h2>
+              {vessel && (
+                <p className="text-maritime-400 text-sm">
+                  IMO: {vessel.imo} • {vessel.vesselType}
+                </p>
+              )}
             </div>
           </div>
+          <button
+            onClick={onClose}
+            className="text-maritime-400 hover:text-white transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
 
-          {/* Vessel Details Grid */}
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <p className="text-xs text-maritime-500 uppercase mb-1">DWT</p>
-              <p className="text-white font-medium">
-                {vessel.dwt?.toLocaleString() || 'N/A'} MT
-              </p>
-            </div>
-            <div>
-              <p className="text-xs text-maritime-500 uppercase mb-1">Year Built</p>
-              <p className="text-white font-medium">{vessel.yearBuilt || 'N/A'}</p>
-            </div>
-            <div>
-              <p className="text-xs text-maritime-500 uppercase mb-1">Flag</p>
-              <p className="text-white font-medium">{vessel.flag || 'N/A'}</p>
-            </div>
-            <div>
-              <p className="text-xs text-maritime-500 uppercase mb-1">Call Sign</p>
-              <p className="text-white font-medium">{vessel.callSign || 'N/A'}</p>
-            </div>
-            <div>
-              <p className="text-xs text-maritime-500 uppercase mb-1">Length</p>
-              <p className="text-white font-medium">
-                {vessel.length ? `${vessel.length} m` : 'N/A'}
-              </p>
-            </div>
-            <div>
-              <p className="text-xs text-maritime-500 uppercase mb-1">Beam</p>
-              <p className="text-white font-medium">
-                {vessel.beam ? `${vessel.beam} m` : 'N/A'}
-              </p>
-            </div>
-            <div>
-              <p className="text-xs text-maritime-500 uppercase mb-1">Draft</p>
-              <p className="text-white font-medium">
-                {vessel.draft ? `${vessel.draft} m` : 'N/A'}
-              </p>
-            </div>
-            <div>
-              <p className="text-xs text-maritime-500 uppercase mb-1">GT</p>
-              <p className="text-white font-medium">
-                {vessel.grossTonnage?.toLocaleString() || 'N/A'}
-              </p>
-            </div>
-          </div>
-
-          {/* Owner */}
-          {vessel.registeredOwner && (
-            <div className="pt-4 border-t border-maritime-700">
-              <p className="text-xs text-maritime-500 uppercase mb-1">Registered Owner</p>
-              <p className="text-white font-medium">{vessel.registeredOwner}</p>
-            </div>
-          )}
-
-          {/* Current Position */}
-          {position && (
-            <div className="pt-4 border-t border-maritime-700">
-              <h4 className="text-sm font-semibold text-white mb-3 flex items-center">
-                <span className="mr-2">📍</span>
-                Current Position
-              </h4>
-              <div className="grid grid-cols-2 gap-3 text-sm">
-                <div>
-                  <p className="text-maritime-500">Latitude</p>
-                  <p className="text-white">{position.latitude?.toFixed(4) || 'N/A'}</p>
-                </div>
-                <div>
-                  <p className="text-maritime-500">Longitude</p>
-                  <p className="text-white">{position.longitude?.toFixed(4) || 'N/A'}</p>
-                </div>
-                <div>
-                  <p className="text-maritime-500">Speed</p>
-                  <p className="text-white">{position.speed ? `${position.speed} kts` : 'N/A'}</p>
-                </div>
-                <div>
-                  <p className="text-maritime-500">Course</p>
-                  <p className="text-white">{position.course ? `${position.course}°` : 'N/A'}</p>
-                </div>
+        {/* Content */}
+        <div className="p-6 overflow-y-auto max-h-[calc(90vh-160px)]">
+          <ComponentErrorBoundary>
+            {loading && (
+              <div className="text-center py-12">
+                <div className="inline-block w-8 h-8 border-4 border-maritime-600 border-t-blue-500 rounded-full animate-spin" />
+                <p className="text-maritime-400 mt-4">Loading vessel details...</p>
               </div>
-              <p className="text-xs text-maritime-500 mt-2">
-                Last updated: {position.timestamp ? new Date(position.timestamp).toLocaleString() : 'N/A'}
-              </p>
-            </div>
-          )}
+            )}
 
-          {/* Recent Voyages */}
-          {voyages.length > 0 && (
-            <div className="pt-4 border-t border-maritime-700">
-              <h4 className="text-sm font-semibold text-white mb-3 flex items-center">
-                <span className="mr-2">🚢</span>
-                Recent Voyages ({voyages.length})
-              </h4>
-              <div className="space-y-2">
-                {voyages.map((voyage: any) => (
-                  <div key={voyage.id} className="p-3 bg-maritime-900 rounded border border-maritime-700">
-                    <div className="flex items-start justify-between mb-1">
-                      <p className="text-sm font-medium text-white">{voyage.reference || 'N/A'}</p>
-                      <span className={`px-2 py-0.5 text-xs rounded
-                        ${voyage.status === 'completed' ? 'bg-green-900 text-green-300' :
-                          voyage.status === 'in_progress' ? 'bg-blue-900 text-blue-300' :
-                          'bg-gray-900 text-gray-300'}`}>
-                        {voyage.status}
-                      </span>
+            {error && (
+              <div className="text-center py-12">
+                <p className="text-red-400">Error loading vessel: {error.message}</p>
+              </div>
+            )}
+
+            {vessel && (
+              <div className="space-y-6">
+                {/* Basic Info */}
+                <div className="grid grid-cols-2 gap-4">
+                  <InfoCard
+                    icon={<Flag className="w-4 h-4" />}
+                    label="Flag"
+                    value={vessel.flag}
+                  />
+                  <InfoCard
+                    icon={<Calendar className="w-4 h-4" />}
+                    label="Built"
+                    value={vessel.builtYear?.toString() || '-'}
+                  />
+                  <InfoCard
+                    icon={<Gauge className="w-4 h-4" />}
+                    label="DWT"
+                    value={vessel.dwt ? `${vessel.dwt.toLocaleString()} MT` : '-'}
+                  />
+                  <InfoCard
+                    icon={<Anchor className="w-4 h-4" />}
+                    label="Status"
+                    value={vessel.status}
+                    statusColor={getStatusColor(vessel.status)}
+                  />
+                </div>
+
+                {/* Specifications */}
+                {vessel.specifications && (
+                  <div>
+                    <h3 className="text-sm font-semibold text-maritime-300 mb-3 flex items-center gap-2">
+                      <Package className="w-4 h-4" />
+                      Specifications
+                    </h3>
+                    <div className="grid grid-cols-3 gap-3">
+                      <SpecItem label="LOA" value={vessel.specifications.loa ? `${vessel.specifications.loa}m` : '-'} />
+                      <SpecItem label="Beam" value={vessel.specifications.beam ? `${vessel.specifications.beam}m` : '-'} />
+                      <SpecItem label="Draft" value={vessel.specifications.draft ? `${vessel.specifications.draft}m` : '-'} />
+                      {vessel.specifications.grainCapacity && (
+                        <SpecItem label="Grain" value={`${vessel.specifications.grainCapacity.toLocaleString()} cbm`} />
+                      )}
+                      {vessel.specifications.teuCapacity && (
+                        <SpecItem label="TEU" value={vessel.specifications.teuCapacity.toLocaleString()} />
+                      )}
                     </div>
-                    <p className="text-xs text-maritime-400">
-                      {voyage.departurePort || 'N/A'} → {voyage.arrivalPort || 'N/A'}
-                    </p>
-                    {voyage.eta && (
-                      <p className="text-xs text-maritime-500 mt-1">
-                        ETA: {new Date(voyage.eta).toLocaleDateString()}
-                      </p>
-                    )}
                   </div>
-                ))}
-              </div>
-            </div>
-          )}
+                )}
 
-          {/* Expiring Certificates Alert */}
-          {expiringCertificates.length > 0 && (
-            <div className="pt-4 border-t border-maritime-700">
-              <div className="p-4 bg-yellow-900/30 border border-yellow-700 rounded">
-                <h4 className="text-sm font-semibold text-yellow-400 mb-2 flex items-center">
-                  <span className="mr-2">⚠️</span>
-                  Expiring Certificates ({expiringCertificates.length})
-                </h4>
-                <div className="space-y-2">
-                  {expiringCertificates.map((cert: any) => {
-                    const daysLeft = Math.ceil(
-                      (new Date(cert.expiryDate).getTime() - Date.now()) / (1000 * 60 * 60 * 24)
-                    );
-                    return (
-                      <div key={cert.id} className="text-sm">
-                        <p className="text-yellow-300 font-medium">{cert.name}</p>
-                        <p className="text-yellow-500 text-xs">
-                          Expires in {daysLeft} day{daysLeft !== 1 ? 's' : ''} ({new Date(cert.expiryDate).toLocaleDateString()})
-                        </p>
+                {/* Current Position */}
+                {vessel.currentPosition && (
+                  <div>
+                    <h3 className="text-sm font-semibold text-maritime-300 mb-3 flex items-center gap-2">
+                      <MapPin className="w-4 h-4" />
+                      Current Position
+                    </h3>
+                    <div className="bg-maritime-900 border border-maritime-700 rounded-lg p-4 space-y-2">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-maritime-400">Coordinates:</span>
+                        <span className="text-white font-mono">
+                          {vessel.currentPosition.latitude.toFixed(4)}°, {vessel.currentPosition.longitude.toFixed(4)}°
+                        </span>
                       </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          )}
+                      <div className="flex justify-between text-sm">
+                        <span className="text-maritime-400">Speed:</span>
+                        <span className="text-white">{vessel.currentPosition.speed} kts</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-maritime-400">Heading:</span>
+                        <span className="text-white">{vessel.currentPosition.heading}°</span>
+                      </div>
+                      {vessel.currentPosition.destination && (
+                        <>
+                          <div className="flex justify-between text-sm">
+                            <span className="text-maritime-400">Destination:</span>
+                            <span className="text-white">{vessel.currentPosition.destination}</span>
+                          </div>
+                          {vessel.currentPosition.eta && (
+                            <div className="flex justify-between text-sm">
+                              <span className="text-maritime-400">ETA:</span>
+                              <span className="text-white">
+                                {new Date(vessel.currentPosition.eta).toLocaleString()}
+                              </span>
+                            </div>
+                          )}
+                        </>
+                      )}
+                      <div className="flex justify-between text-sm pt-2 border-t border-maritime-700">
+                        <span className="text-maritime-400">Last Update:</span>
+                        <span className="text-maritime-500 text-xs">
+                          {new Date(vessel.currentPosition.lastUpdate).toLocaleString()}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
-          {/* No recent activity message */}
-          {voyages.length === 0 && !position && (
-            <div className="pt-4 border-t border-maritime-700 text-center text-maritime-500 text-sm">
-              No recent activity or position data available
-            </div>
+                {/* Classification */}
+                {vessel.classification && (
+                  <div className="bg-maritime-900 border border-maritime-700 rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Activity className="w-4 h-4 text-maritime-400" />
+                      <span className="text-sm font-medium text-maritime-300">Classification</span>
+                    </div>
+                    <p className="text-white">{vessel.classification}</p>
+                  </div>
+                )}
+              </div>
+            )}
+          </ComponentErrorBoundary>
+        </div>
+
+        {/* Footer */}
+        <div className="flex items-center justify-end gap-3 p-6 border-t border-maritime-700">
+          <button
+            onClick={onClose}
+            className="px-4 py-2 bg-maritime-700 hover:bg-maritime-600 text-maritime-300 rounded-md text-sm font-medium transition-colors"
+          >
+            Close
+          </button>
+          {vessel && (
+            <button
+              onClick={() => window.location.href = `/vessels/${vessel.id}`}
+              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm font-medium transition-colors"
+            >
+              View Full Details
+            </button>
           )}
         </div>
-      )}
-    </Modal>
+      </div>
+    </div>
   );
+}
+
+function InfoCard({ icon, label, value, statusColor }: { icon: React.ReactNode; label: string; value: string; statusColor?: string }) {
+  return (
+    <div className="bg-maritime-900 border border-maritime-700 rounded-lg p-4">
+      <div className="flex items-center gap-2 mb-2 text-maritime-400">
+        {icon}
+        <span className="text-xs font-medium">{label}</span>
+      </div>
+      <p className={`text-white font-medium ${statusColor || ''}`}>{value}</p>
+    </div>
+  );
+}
+
+function SpecItem({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="bg-maritime-900 border border-maritime-700 rounded p-2">
+      <p className="text-maritime-400 text-xs mb-1">{label}</p>
+      <p className="text-white text-sm font-medium">{value}</p>
+    </div>
+  );
+}
+
+function getStatusColor(status: string): string {
+  const colors: Record<string, string> = {
+    ACTIVE: 'text-green-400',
+    'IN PORT': 'text-blue-400',
+    ANCHORED: 'text-yellow-400',
+    'AT SEA': 'text-cyan-400',
+    INACTIVE: 'text-maritime-500',
+  };
+  return colors[status?.toUpperCase()] || '';
 }

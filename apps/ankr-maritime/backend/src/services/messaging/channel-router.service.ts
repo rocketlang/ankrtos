@@ -12,6 +12,8 @@ import { responseDrafterService, ResponseStyle } from '../email-organizer/respon
 import { contextRetrievalService } from '../email-organizer/context-retrieval.service.js';
 import { emailSenderService } from '../email-organizer/email-sender.service.js';
 import { whatsappService } from './whatsapp.service.js';
+import { slackService } from './slack.service.js';
+import { teamsService } from './teams.service.js';
 
 const prisma = new PrismaClient();
 
@@ -372,13 +374,18 @@ export class ChannelRouterService {
           return whatsappResult.success;
 
         case 'slack':
-          // TODO: Implement Slack sending
-          console.warn('Slack sending not yet implemented');
-          return false;
+          // Slack sending
+          const slackResult = await slackService.sendTextMessage(
+            to, // Channel ID or user ID
+            body,
+            replyToMessageId
+          );
+          return slackResult.success;
 
         case 'teams':
-          // TODO: Implement Teams sending
-          console.warn('Teams sending not yet implemented');
+          // Teams sending (requires activity context - stored in metadata)
+          // Note: Teams requires the original activity to send replies
+          console.warn('Teams sending requires activity context - store in metadata');
           return false;
 
         case 'webchat':

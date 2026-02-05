@@ -6,6 +6,7 @@ import { Dashboard } from './pages/Dashboard';
 import { Login } from './pages/Login';
 import { Vessels } from './pages/Vessels';
 import { Ports } from './pages/Ports';
+import { WorldPortIndex } from './pages/WorldPortIndex';
 import { Companies } from './pages/Companies';
 import { Chartering } from './pages/Chartering';
 import CharteringDesk from './pages/CharteringDesk';
@@ -161,6 +162,7 @@ export default function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/vessels" element={<Vessels />} />
         <Route path="/ports" element={<Ports />} />
+        <Route path="/world-port-index" element={<WorldPortIndex />} />
         <Route path="/port-map" element={<PortMap />} />
         <Route path="/route-calculator" element={<RouteCalculator />} />
         <Route path="/companies" element={<Companies />} />

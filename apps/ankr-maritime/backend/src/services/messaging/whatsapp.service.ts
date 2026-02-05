@@ -8,6 +8,8 @@
 
 import { PrismaClient } from '@prisma/client';
 import { messageNormalizerService, NormalizedMessage } from './message-normalizer.service.js';
+import { voiceTranscriptionService } from '../ai/voice-transcription.service.js';
+import { photoClassificationService } from '../ai/photo-classification.service.js';
 
 const prisma = new PrismaClient();
 
@@ -273,6 +275,16 @@ export class WhatsAppService {
 
               normalizedMessages.push(normalized);
 
+              // Process voice messages with transcription
+              if (message.type === 'voice' || message.type === 'audio') {
+                await this.processVoiceMessage(message, normalized.id);
+              }
+
+              // Process images with classification
+              if (message.type === 'image') {
+                await this.processImageMessage(message, normalized.id);
+              }
+
               // Mark as read
               await this.markAsRead(message.id);
             }
@@ -450,6 +462,85 @@ export class WhatsAppService {
     } catch (error) {
       console.error('Failed to create WhatsApp template:', error);
       return null;
+    }
+  }
+
+  /**
+   * Process voice message with transcription
+   */
+  private async processVoiceMessage(message: any, normalizedMessageId: string): Promise<void> {
+    try {
+      const mediaId = message.voice?.id || message.audio?.id;
+
+      if (!mediaId) {
+        console.warn('Voice message has no media ID');
+        return;
+      }
+
+      console.log(`🎙️ Processing voice message: ${mediaId}`);
+
+      // Transcribe voice message
+      const transcription = await voiceTranscriptionService.transcribeWhatsAppVoice(
+        mediaId,
+        this.config.phoneNumberId,
+        this.config.accessToken
+      );
+
+      if (transcription.success && transcription.text) {
+        // Save transcription to database
+        await voiceTranscriptionService.saveTranscription(
+          normalizedMessageId,
+          transcription.text,
+          transcription.language || 'unknown',
+          transcription.duration
+        );
+
+        console.log(`✅ Voice transcribed: "${transcription.text.substring(0, 100)}..."`);
+      } else {
+        console.error(`❌ Voice transcription failed: ${transcription.error}`);
+      }
+    } catch (error) {
+      console.error('Failed to process voice message:', error);
+    }
+  }
+
+  /**
+   * Process image message with classification
+   */
+  private async processImageMessage(message: any, normalizedMessageId: string): Promise<void> {
+    try {
+      const mediaId = message.image?.id;
+
+      if (!mediaId) {
+        console.warn('Image message has no media ID');
+        return;
+      }
+
+      console.log(`📸 Processing image: ${mediaId}`);
+
+      // Classify image
+      const classification = await photoClassificationService.classifyWhatsAppImage(
+        mediaId,
+        this.config.accessToken,
+        {
+          detectText: true,
+          detectEntities: true,
+          detailedDescription: true,
+        }
+      );
+
+      if (classification.success) {
+        // Save classification to database
+        await photoClassificationService.saveClassification(normalizedMessageId, classification);
+
+        console.log(
+          `✅ Image classified: ${classification.category} (${Math.round((classification.confidence || 0) * 100)}%)`
+        );
+      } else {
+        console.error(`❌ Image classification failed: ${classification.error}`);
+      }
+    } catch (error) {
+      console.error('Failed to process image message:', error);
     }
   }
 
