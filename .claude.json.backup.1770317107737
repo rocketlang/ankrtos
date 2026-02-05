@@ -38,11 +38,11 @@
     "rename-conversation": 481,
     "custom-commands": 483,
     "frontend-design-plugin": 474,
-    "ide-upsell-external-terminal": 482,
+    "ide-upsell-external-terminal": 486,
     "git-worktrees": 480,
     "agent-flag": 480
   },
-  "promptQueueUseCount": 2266,
+  "promptQueueUseCount": 2267,
   "showExpandedTodos": true,
   "cachedStatsigGates": {
     "tengu_prompt_suggestion": true,

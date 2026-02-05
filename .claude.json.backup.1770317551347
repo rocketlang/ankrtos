@@ -1,5 +1,5 @@
 {
-  "numStartups": 485,
+  "numStartups": 486,
   "installMethod": "global",
   "hasSeenTasksHint": true,
   "customApiKeyResponses": {
@@ -32,17 +32,17 @@
     "btw-side-question": 17,
     "web-app": 474,
     "mobile-app": 474,
-    "guest-passes": 482,
+    "guest-passes": 486,
     "custom-agents": 483,
     "permissions": 481,
     "rename-conversation": 481,
     "custom-commands": 483,
     "frontend-design-plugin": 474,
-    "ide-upsell-external-terminal": 482,
+    "ide-upsell-external-terminal": 486,
     "git-worktrees": 480,
     "agent-flag": 480
   },
-  "promptQueueUseCount": 2266,
+  "promptQueueUseCount": 2268,
   "showExpandedTodos": true,
   "cachedStatsigGates": {
     "tengu_prompt_suggestion": true,
