@@ -3,6 +3,17 @@
  * Comprehensive Vedic astrology birth chart analysis with life predictions
  */
 
+import {
+  detectAllDoshas,
+  DoshaAnalysis,
+  analyzeCrossKundliCompatibility,
+  getAllMantras,
+  getPilgrimageGuides,
+  getBhriguSamhitaPrediction,
+  MantraDetails,
+  PilgrimageGuide
+} from './dosha-remedies-engine';
+
 export interface BirthDetails {
   name: string;
   dateOfBirth: Date;
@@ -26,10 +37,14 @@ export interface CompleteKundli {
   yogas: Yoga[];
   dashas: DashaSystem;
   lifePredictions: LifePredictions;
+  doshaAnalysis: DoshaAnalysis; // NEW: Comprehensive dosha detection
   remedies: Remedy[];
   luckyElements: LuckyElements;
   strengths: string[];
   challenges: string[];
+  bhriguSamhitaInsight: string; // NEW: Bhrigu Samhita predictions
+  allMantras: MantraDetails[]; // NEW: All mantras with details
+  pilgrimageGuides: PilgrimageGuide[]; // NEW: Temple pilgrimage information
 }
 
 interface PersonalInfo {
@@ -41,7 +56,7 @@ interface PersonalInfo {
   gender: 'male' | 'female';
 }
 
-interface BirthChart {
+export interface BirthChart {
   ascendant: string; // Rising sign
   moonSign: string;
   sunSign: string;
@@ -59,7 +74,7 @@ interface House {
   significance: string;
 }
 
-interface PlanetaryPosition {
+export interface PlanetaryPosition {
   planet: string;
   sign: string;
   house: number;
@@ -253,10 +268,21 @@ export function generateCompleteKundli(birthDetails: BirthDetails): CompleteKund
   const yogas = detectYogas(planetaryPositions, birthChart);
   const dashas = calculateDashaSystem(birthDetails, planetaryPositions);
   const lifePredictions = generateLifePredictions(birthChart, planetaryPositions, dashas);
+
+  // NEW: Comprehensive Dosha Analysis
+  const doshaAnalysis = detectAllDoshas(planetaryPositions, birthChart, birthDetails);
+
   const remedies = generateRemedies(planetaryPositions, yogas);
   const luckyElements = generateLuckyElements(birthChart);
   const strengths = identifyStrengths(planetaryPositions, yogas);
   const challenges = identifyChallenges(planetaryPositions, yogas);
+
+  // NEW: Bhrigu Samhita Predictions
+  const bhriguSamhitaInsight = getBhriguSamhitaPrediction(planetaryPositions, birthChart);
+
+  // NEW: All Mantras and Pilgrimage Guides
+  const allMantras = getAllMantras();
+  const pilgrimageGuides = getPilgrimageGuides();
 
   return {
     personalInfo: {
@@ -274,10 +300,14 @@ export function generateCompleteKundli(birthDetails: BirthDetails): CompleteKund
     yogas,
     dashas,
     lifePredictions,
+    doshaAnalysis,
     remedies,
     luckyElements,
     strengths,
     challenges,
+    bhriguSamhitaInsight,
+    allMantras,
+    pilgrimageGuides,
   };
 }
 
@@ -918,4 +948,36 @@ function calculateAge(birthDate: Date): number {
   }
 
   return age;
+}
+
+/**
+ * Compare two kundlis for compatibility (wrapper function)
+ */
+export function compareKundlis(
+  kundli1: CompleteKundli,
+  kundli2: CompleteKundli
+): {
+  compatibilityScore: number;
+  matchingGunas: number;
+  issues: string[];
+  recommendations: string[];
+} {
+  return analyzeCrossKundliCompatibility(kundli1, kundli2);
+}
+
+/**
+ * Get all available remedies from a kundli
+ */
+export function getAllRemediesFromKundli(kundli: CompleteKundli): {
+  doshaRemedies: any[];
+  planetaryRemedies: Remedy[];
+  mantras: MantraDetails[];
+  pilgrimages: PilgrimageGuide[];
+} {
+  return {
+    doshaRemedies: kundli.doshaAnalysis.doshas.flatMap(d => d.remedies),
+    planetaryRemedies: kundli.remedies,
+    mantras: kundli.allMantras,
+    pilgrimages: kundli.pilgrimageGuides,
+  };
 }

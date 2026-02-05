@@ -108,14 +108,15 @@ function CompleteKundliPage() {
                 <h3 className="text-xl font-bold mb-2">Premium Detailed Report</h3>
                 <ul className="text-sm text-gray-700 space-y-2">
                   <li>✓ Comprehensive Life Predictions</li>
-                  <li>✓ Career & Business Analysis</li>
-                  <li>✓ Marriage & Relationships</li>
-                  <li>✓ Health & Longevity</li>
-                  <li>✓ Wealth & Property</li>
-                  <li>✓ Yogas & Doshas</li>
-                  <li>✓ Dasha Timeline (120 years)</li>
+                  <li>✓ 6 Major Doshas (Kaal Sarp, Manglik+)</li>
+                  <li>✓ Scripture References & Lal Kitab</li>
+                  <li>✓ Detailed Mantras with Timing</li>
+                  <li>✓ Pilgrimage Guides</li>
+                  <li>✓ Bhrigu Samhita Insights</li>
+                  <li>✓ Career, Marriage, Health, Wealth</li>
+                  <li>✓ Yogas & Dasha Timeline (120 years)</li>
                   <li>✓ Personalized Remedies</li>
-                  <li>✓ 50+ Page PDF Report</li>
+                  <li>✓ 80+ Page PDF Report</li>
                 </ul>
                 <div className="mt-4 text-2xl font-bold text-orange-600">₹1,499</div>
               </div>
@@ -390,6 +391,111 @@ function CompleteKundliPage() {
                     Gemstones, mantras, poojas, charities, fasting days, yantras for strengthening weak planets...
                   </p>
                 </div>
+
+                {/* NEW: Comprehensive Dosha Analysis */}
+                <div className="bg-white rounded-xl p-6 blur-sm border-2 border-orange-300">
+                  <h4 className="text-xl font-bold mb-4">🐍 Complete Dosha Analysis</h4>
+                  <p className="text-gray-600 text-sm">
+                    <strong>All 6 Major Doshas:</strong><br/>
+                    • Kaal Sarp Dosha (12 types)<br/>
+                    • Manglik Dosha with severity<br/>
+                    • Pitra Dosha (Ancestral)<br/>
+                    • Shrapit Dosha (Saturn-Rahu)<br/>
+                    • Chandal Dosha (Jupiter-Rahu)<br/>
+                    • Grahan Dosha (Eclipse effects)
+                  </p>
+                </div>
+
+                {/* NEW: Scripture References */}
+                <div className="bg-white rounded-xl p-6 blur-sm border-2 border-orange-300">
+                  <h4 className="text-xl font-bold mb-4">📜 Scripture References</h4>
+                  <p className="text-gray-600 text-sm">
+                    <strong>Authentic Vedic Sources:</strong><br/>
+                    • Brihat Parashara Hora Shastra<br/>
+                    • Phaladeepika quotes<br/>
+                    • Garuda Purana verses<br/>
+                    • Sanskrit text with translation<br/>
+                    • Chapter and verse references
+                  </p>
+                </div>
+
+                {/* NEW: Lal Kitab Remedies */}
+                <div className="bg-white rounded-xl p-6 blur-sm border-2 border-orange-300">
+                  <h4 className="text-xl font-bold mb-4">📕 Lal Kitab Remedies</h4>
+                  <p className="text-gray-600 text-sm">
+                    <strong>Simple Practical Remedies:</strong><br/>
+                    • Coconut in flowing water<br/>
+                    • Feed birds & fish daily<br/>
+                    • Saturday iron remedies<br/>
+                    • Turmeric water rituals<br/>
+                    • Easy 43-day practices
+                  </p>
+                </div>
+
+                {/* NEW: Detailed Mantras */}
+                <div className="bg-white rounded-xl p-6 blur-sm border-2 border-orange-300">
+                  <h4 className="text-xl font-bold mb-4">🕉️ Mantra Section</h4>
+                  <p className="text-gray-600 text-sm">
+                    <strong>Complete Mantra Guide:</strong><br/>
+                    • Sanskrit text with pronunciation<br/>
+                    • Brahma Muhurat timing (4-6 AM)<br/>
+                    • 108/1008 repetition counts<br/>
+                    • Sitting direction & offerings<br/>
+                    • 40/90 day practice duration
+                  </p>
+                </div>
+
+                {/* NEW: Pilgrimage Guides */}
+                <div className="bg-white rounded-xl p-6 blur-sm border-2 border-orange-300">
+                  <h4 className="text-xl font-bold mb-4">🛕 Pilgrimage Guides</h4>
+                  <p className="text-gray-600 text-sm">
+                    <strong>Sacred Temple Information:</strong><br/>
+                    • Trimbakeshwar (Kaal Sarp)<br/>
+                    • Mangalnath Ujjain (Manglik)<br/>
+                    • Gaya (Pitra Dosha)<br/>
+                    • Complete puja costs & rituals<br/>
+                    • Best times & accommodation
+                  </p>
+                </div>
+
+                {/* NEW: Bhrigu Samhita */}
+                <div className="bg-white rounded-xl p-6 blur-sm border-2 border-orange-300">
+                  <h4 className="text-xl font-bold mb-4">🔮 Bhrigu Samhita Insights</h4>
+                  <p className="text-gray-600 text-sm">
+                    <strong>Ancient Palm Leaf Predictions:</strong><br/>
+                    • Past life karma analysis<br/>
+                    • Soul purpose revelation<br/>
+                    • Pre-written horoscope matches<br/>
+                    • Ancient sage wisdom<br/>
+                    • Karmic debt information
+                  </p>
+                </div>
+
+                {/* NEW: Cross-Kundli Analysis */}
+                <div className="bg-white rounded-xl p-6 blur-sm border-2 border-orange-300">
+                  <h4 className="text-xl font-bold mb-4">💑 Cross-Kundli Analysis</h4>
+                  <p className="text-gray-600 text-sm">
+                    <strong>Compatibility Comparison:</strong><br/>
+                    • Compare with partner's kundli<br/>
+                    • Double Manglik cancellation<br/>
+                    • Ashtakoot Guna Milan<br/>
+                    • Joint remedy suggestions<br/>
+                    • Marriage compatibility score
+                  </p>
+                </div>
+
+                {/* NEW: Enhancement Suggestions */}
+                <div className="bg-white rounded-xl p-6 blur-sm border-2 border-orange-300">
+                  <h4 className="text-xl font-bold mb-4">⬆️ Kundli Enhancement</h4>
+                  <p className="text-gray-600 text-sm">
+                    <strong>Improve Your Destiny:</strong><br/>
+                    • Daily spiritual practices<br/>
+                    • Surya Namaskar routine<br/>
+                    • Vedic lifestyle (Dinacharya)<br/>
+                    • Sattvic diet guidance<br/>
+                    • Meditation & pranayama
+                  </p>
+                </div>
               </div>
 
               <div className="text-center">
@@ -429,14 +535,21 @@ function CompleteKundliPage() {
                 <h4 className="text-xl font-bold mb-4">What You'll Get:</h4>
                 <ul className="space-y-2 text-sm">
                   <li>✓ Complete life predictions (Career, Marriage, Health, Wealth)</li>
-                  <li>✓ Yogas & Doshas analysis with remedies</li>
+                  <li>✓ <strong>6 Major Doshas</strong> - Kaal Sarp, Manglik, Pitra, Shrapit, Chandal, Grahan</li>
+                  <li>✓ <strong>Scripture References</strong> - Sanskrit verses with translations</li>
+                  <li>✓ <strong>Lal Kitab Remedies</strong> - Simple, practical daily remedies</li>
+                  <li>✓ <strong>Detailed Mantras</strong> - Pronunciation, timing, repetitions</li>
+                  <li>✓ <strong>Pilgrimage Guides</strong> - Trimbakeshwar, Ujjain, Gaya temples</li>
+                  <li>✓ <strong>Bhrigu Samhita</strong> - Ancient palm leaf predictions</li>
                   <li>✓ 120-year Dasha timeline with predictions</li>
-                  <li>✓ Personalized remedies (Gemstones, Mantras, Poojas)</li>
+                  <li>✓ Yogas analysis (Raja, Dhana, Gajakesari)</li>
+                  <li>✓ Personalized remedies (Gemstones, Poojas, Charities)</li>
                   <li>✓ Lucky elements (Numbers, Colors, Days, Directions)</li>
+                  <li>✓ Cross-Kundli compatibility analysis option</li>
+                  <li>✓ Enhancement suggestions for spiritual growth</li>
                   <li>✓ Strengths and challenges analysis</li>
                   <li>✓ Foreign travel and settlement prospects</li>
-                  <li>✓ Spiritual path guidance</li>
-                  <li>✓ 50+ page detailed PDF report</li>
+                  <li>✓ 80+ page detailed PDF report</li>
                   <li>✓ Lifetime access to your report</li>
                 </ul>
               </div>
