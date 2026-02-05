@@ -8,14 +8,14 @@ import { subscriptionService, PRICING_TIERS } from '../../services/subscription-
 import { FeatureGate } from '../../middleware/feature-gate.js';
 
 // ========================================
-// ENUMS
+// ENUMS (Exported for reuse in pricing.ts)
 // ========================================
 
-const SubscriptionTierEnum = builder.enumType('SubscriptionTier', {
+export const SubscriptionTierEnum = builder.enumType('SubscriptionTier', {
   values: ['FREE', 'PRO', 'AGENCY', 'ENTERPRISE'] as const,
 });
 
-const SubscriptionStatusEnum = builder.enumType('SubscriptionStatus', {
+export const SubscriptionStatusEnum = builder.enumType('SubscriptionStatus', {
   values: ['ACTIVE', 'PAST_DUE', 'CANCELED', 'TRIALING', 'INCOMPLETE'] as const,
 });
 
@@ -23,7 +23,8 @@ const SubscriptionStatusEnum = builder.enumType('SubscriptionStatus', {
 // OBJECT TYPES
 // ========================================
 
-const Subscription = builder.prismaObject('Subscription', {
+const UserSubscription = builder.prismaObject('Subscription', {
+  name: 'UserSubscription', // Rename GraphQL type to avoid conflict with root Subscription type
   fields: (t) => ({
     id: t.exposeID('id'),
     userId: t.exposeString('userId'),
@@ -40,13 +41,13 @@ const Subscription = builder.prismaObject('Subscription', {
   }),
 });
 
-const PricingTier = builder.objectRef<{
+const SubscriptionTierInfo = builder.objectRef<{
   tier: string;
   name: string;
   price: number;
   interval: string;
   features: any;
-}>('PricingTier').implement({
+}>('SubscriptionTierInfo').implement({
   fields: (t) => ({
     tier: t.exposeString('tier'),
     name: t.exposeString('name'),
@@ -56,14 +57,14 @@ const PricingTier = builder.objectRef<{
   }),
 });
 
-const UsageStats = builder.objectRef<{
+const SubscriptionUsageStats = builder.objectRef<{
   tier: string;
   vesselsTracked: number;
   vesselLimit: number;
   pdasGenerated: number;
   apiCalls: number;
   limitReached: boolean;
-}>('UsageStats').implement({
+}>('SubscriptionUsageStats').implement({
   fields: (t) => ({
     tier: t.exposeString('tier'),
     vesselsTracked: t.exposeInt('vesselsTracked'),
@@ -81,6 +82,7 @@ const UsageStats = builder.objectRef<{
 builder.queryFields((t) => ({
   mySubscription: t.prismaField({
     type: 'Subscription',
+    name: 'UserSubscription', // Use renamed GraphQL type
     nullable: true,
     resolve: async (query, root, args, ctx) => {
       if (!ctx.userId) throw new Error('Not authenticated');

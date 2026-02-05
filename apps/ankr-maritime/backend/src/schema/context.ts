@@ -21,6 +21,8 @@ export interface AuthUser {
 export interface GraphQLContext {
   prisma: PrismaClient;
   user: AuthUser | null;
+  userId?: string; // Shorthand for user?.id
+  organizationId?: string; // Shorthand for user?.organizationId
   loaders: DataLoaders;
   log: ReturnType<typeof createChildLogger>;
   signJwt: (payload: Record<string, unknown>) => string;
@@ -58,6 +60,8 @@ export async function buildContext(
   return {
     prisma,
     user,
+    userId: user?.id, // Add shorthand for convenience
+    organizationId: user?.organizationId, // Add shorthand for convenience
     loaders: createLoaders(prisma),
     log,
     signJwt: (payload) => request.server.jwt.sign(payload),

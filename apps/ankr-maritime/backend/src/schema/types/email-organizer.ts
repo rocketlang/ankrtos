@@ -374,7 +374,7 @@ builder.mutationField('moveEmailToFolder', (t) =>
   })
 );
 
-builder.mutationField('markThreadAsRead', (t) =>
+builder.mutationField('markEmailThreadAsRead', (t) =>
   t.field({
     type: 'Boolean',
     description: 'Mark thread as read/unread',
@@ -391,7 +391,7 @@ builder.mutationField('markThreadAsRead', (t) =>
   })
 );
 
-builder.mutationField('toggleThreadStar', (t) =>
+builder.mutationField('toggleEmailThreadStar', (t) =>
   t.field({
     type: EmailThreadType,
     description: 'Star/unstar a thread',
@@ -427,7 +427,7 @@ builder.mutationField('archiveThread', (t) =>
   })
 );
 
-builder.mutationField('addThreadLabels', (t) =>
+builder.mutationField('addEmailThreadLabels', (t) =>
   t.field({
     type: EmailThreadType,
     description: 'Add labels to a thread',

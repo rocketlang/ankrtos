@@ -34,12 +34,14 @@ const RECENT_POSITIONS_QUERY = gql(`
 export default function Mari8xLanding() {
   const [liveCount, setLiveCount] = useState(0);
 
-  const { data } = useQuery(AIS_DASHBOARD_QUERY, {
+  const { data, error: dashboardError } = useQuery(AIS_DASHBOARD_QUERY, {
     pollInterval: 5000, // Refresh every 5 seconds
+    errorPolicy: 'ignore', // Don't crash on error
   });
 
-  const { data: positionsData } = useQuery(RECENT_POSITIONS_QUERY, {
+  const { data: positionsData, error: positionsError } = useQuery(RECENT_POSITIONS_QUERY, {
     pollInterval: 3000, // Refresh every 3 seconds
+    errorPolicy: 'ignore', // Don't crash on error
   });
 
   // Animate the live count

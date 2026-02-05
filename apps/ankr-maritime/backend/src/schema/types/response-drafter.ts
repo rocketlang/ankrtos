@@ -107,7 +107,7 @@ const UpdateDraftInput = builder.inputType('UpdateDraftInput', {
 
 builder.queryField('responseDraft', (t) =>
   t.field({
-    type: ResponseDraftType,
+    type: 'ResponseDraft',
     nullable: true,
     description: 'Get a saved response draft',
     args: {
@@ -122,7 +122,7 @@ builder.queryField('responseDraft', (t) =>
 
 builder.queryField('responseDraftsForEmail', (t) =>
   t.field({
-    type: [ResponseDraftType],
+    type: ['ResponseDraft'],
     description: 'Get all drafts for an email',
     args: {
       emailId: t.arg.string({ required: true }),
@@ -140,7 +140,7 @@ builder.queryField('responseDraftsForEmail', (t) =>
 
 builder.mutationField('generateEmailResponse', (t) =>
   t.field({
-    type: ResponseDraftType,
+    type: 'ResponseDraft',
     description: 'Generate AI-powered email response',
     args: {
       context: t.arg({ type: ResponseContextInput, required: true }),

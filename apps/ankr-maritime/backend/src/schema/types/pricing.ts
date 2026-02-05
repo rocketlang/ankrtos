@@ -7,16 +7,9 @@
 
 import { builder } from '../builder.js';
 import { prisma } from '../../lib/prisma.js';
+import { SubscriptionTierEnum, SubscriptionStatusEnum } from './subscription.js';
 
-// === Enums ===
-
-const SubscriptionTierEnum = builder.enumType('SubscriptionTier', {
-  values: ['free', 'agent', 'operator', 'enterprise'] as const,
-});
-
-const SubscriptionStatusEnum = builder.enumType('SubscriptionStatus', {
-  values: ['active', 'past_due', 'cancelled', 'suspended', 'trialing'] as const,
-});
+// === Additional Enums ===
 
 const BillingCycleEnum = builder.enumType('BillingCycle', {
   values: ['monthly', 'annual'] as const,

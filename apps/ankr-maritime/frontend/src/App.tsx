@@ -146,8 +146,9 @@ export default function App() {
         </div>
       }>
         <Routes>
-      <Route path="/" element={<Mari8xLanding />} />
+      <Route path="/" element={<Login />} />
       <Route path="/home" element={<Mari8xLanding />} />
+      <Route path="/mari8x" element={<Mari8xLanding />} />
       <Route path="/login" element={<Login />} />
       <Route path="/beta/signup" element={<BetaAgentSignup />} />
       <Route

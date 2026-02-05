@@ -117,7 +117,7 @@ builder.queryField('universalThreads', (t) =>
     type: [UniversalThreadType],
     description: 'Get threads from all channels',
     args: {
-      filters: t.arg({ type: ThreadFilterInput }),
+      filters: t.arg({ type: 'ThreadFilterInput', required: false }), // Use string reference to shared input type
       limit: t.arg.int({ defaultValue: 50 }),
       offset: t.arg.int({ defaultValue: 0 }),
     },

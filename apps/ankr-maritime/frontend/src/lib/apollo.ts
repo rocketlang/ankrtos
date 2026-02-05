@@ -3,6 +3,7 @@ import {
   InMemoryCache,
   HttpLink,
   from,
+  ApolloLink,
 } from '@apollo/client';
 import { onError } from '@apollo/client/link/error';
 import { useAuthStore } from './stores/auth';
@@ -28,19 +29,18 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
   }
 });
 
-const authLink = {
-  request: (operation: { setContext: (ctx: Record<string, unknown>) => void }) => {
-    const token = useAuthStore.getState().token;
-    operation.setContext({
-      headers: {
-        authorization: token ? `Bearer ${token}` : '',
-      },
-    });
-  },
-};
+const authLink = new ApolloLink((operation, forward) => {
+  const token = useAuthStore.getState().token;
+  operation.setContext({
+    headers: {
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  });
+  return forward(operation);
+});
 
 export const client = new ApolloClient({
-  link: from([errorLink, httpLink]),
+  link: from([errorLink, authLink, httpLink]),
   cache: new InMemoryCache(),
   defaultOptions: {
     watchQuery: { fetchPolicy: 'cache-and-network' },

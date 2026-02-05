@@ -28,8 +28,9 @@ import { smsReplyWebhook } from './routes/webhooks/sms-reply.js';
 import { whatsappReplyWebhook } from './routes/webhooks/whatsapp-reply.js';
 import { emailReplyWebhook } from './routes/webhooks/email-reply.js';
 import { whatsappBusinessWebhook } from './routes/webhooks/whatsapp-business-webhook.js';
-import { maritimeRouter } from './services/rag/pageindex-router.js';
-import { testConnections } from './services/rag/connections.js';
+// Temporarily disabled until PageIndex packages are published with dist
+// import { maritimeRouter } from './services/rag/pageindex-router.js';
+// import { testConnections } from './services/rag/connections.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -371,8 +372,8 @@ async function main() {
   const shutdown = async () => {
     logger.info('Shutting down...');
     await prisma.$disconnect();
-    const { closeConnections } = await import('./services/rag/connections.js');
-    await closeConnections();
+    // const { closeConnections } = await import('./services/rag/connections.js');
+    // await closeConnections();
     await app.close();
     process.exit(0);
   };
@@ -429,28 +430,17 @@ async function main() {
   await initializeAlertSystem();
   logger.info('Master alert system initialized (multi-channel alerts + two-way communication)');
 
-  // Initialize PageIndex Hybrid RAG System (98.7% accuracy)
-  if (process.env.ENABLE_PAGEINDEX_ROUTER === 'true') {
-    logger.info('Initializing PageIndex Hybrid RAG System...');
-
-    // Test database and Redis connections first
-    const connectionStatus = await testConnections();
-
-    if (connectionStatus.pg) {
-      await maritimeRouter.initialize();
-      logger.info('✅ PageIndex Hybrid RAG System initialized successfully');
-      logger.info('→ Tier 1: Cache (0 LLM calls, ~50ms)');
-      logger.info('→ Tier 2: Embeddings (0-1 LLM calls, ~500ms)');
-      logger.info('→ Tier 3: Full PageIndex (2 LLM calls, ~5s) - ENABLED');
-      logger.info(`→ AI Routing: ANKR AI Proxy (${process.env.AI_PROXY_URL || 'http://localhost:4444'})`);
-      logger.info('→ 17 providers with auto-failover + free-tier priority');
-    } else {
-      logger.error('❌ PostgreSQL connection failed - PageIndex router disabled');
-      logger.error('→ Check DATABASE_URL configuration');
-    }
-  } else {
-    logger.info('PageIndex router disabled (set ENABLE_PAGEINDEX_ROUTER=true to enable)');
-  }
+  // PageIndex Hybrid RAG System temporarily disabled
+  // TODO: Publish @ankr/pageindex and @ankr/rag-router packages with built dist folders
+  // if (process.env.ENABLE_PAGEINDEX_ROUTER === 'true') {
+  //   logger.info('Initializing PageIndex Hybrid RAG System...');
+  //   const connectionStatus = await testConnections();
+  //   if (connectionStatus.pg) {
+  //     await maritimeRouter.initialize();
+  //     logger.info('✅ PageIndex Hybrid RAG System initialized');
+  //   }
+  // }
+  logger.info('PageIndex router: pending package publish (infrastructure ready ✅)');
 }
 
 main().catch((err) => {

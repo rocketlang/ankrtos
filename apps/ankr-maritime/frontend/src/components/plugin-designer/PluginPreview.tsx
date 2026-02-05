@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-<parameter name="Download, Share2, Save, CheckCircle, Copy } from 'lucide-react';
+import { Download, Share2, Save, CheckCircle, Copy } from 'lucide-react';
 
 interface PluginPreviewProps {
   plugin: any;

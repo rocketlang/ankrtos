@@ -61,8 +61,9 @@ const FLEET_PORTAL_QUERY = gql`
 `;
 
 // Custom ship icons by status
+// Use URL encoding instead of btoa to avoid Latin1 encoding issues
 const createShipIcon = (color: string) => new L.Icon({
-  iconUrl: `data:image/svg+xml;base64,${btoa(`<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="${color}"/><text x="12" y="18" text-anchor="middle" font-size="16">⚓</text></svg>`)}`,
+  iconUrl: `data:image/svg+xml;charset=utf-8,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="${color}"/><text x="12" y="18" text-anchor="middle" font-size="16">⚓</text></svg>`)}`,
   iconSize: [32, 32],
   iconAnchor: [16, 32],
   popupAnchor: [0, -32],
@@ -109,25 +110,25 @@ export default function FleetPortal() {
   // Calculate fleet statistics
   const fleetStats: FleetStats = {
     totalVessels: vessels.length,
-    operating: vessels.filter(v => v.positions?.length > 0 && v.positions[0].speed > 0).length,
-    inPort: vessels.filter(v => v.positions?.length > 0 && v.positions[0].speed === 0).length,
-    offline: vessels.filter(v => v.positions?.length === 0).length,
-    totalDWT: vessels.reduce((sum, v) => sum + (v.dwt || 0), 0),
+    operating: vessels.filter((v: any) => v.positions?.length > 0 && v.positions[0].speed > 0).length,
+    inPort: vessels.filter((v: any) => v.positions?.length > 0 && v.positions[0].speed === 0).length,
+    offline: vessels.filter((v: any) => v.positions?.length === 0).length,
+    totalDWT: vessels.reduce((sum: number, v: any) => sum + (v.dwt || 0), 0),
     activeVoyages: voyages.length,
   };
 
   // Calculate financial statistics
   const financialStats: FinancialStats = {
-    totalDAAmount: disbursementAccounts.reduce((sum, da) => sum + da.totalAmount, 0),
-    pendingApprovals: disbursementAccounts.filter(da => da.status === 'submitted').length,
+    totalDAAmount: disbursementAccounts.reduce((sum: number, da: any) => sum + da.totalAmount, 0),
+    pendingApprovals: disbursementAccounts.filter((da: any) => da.status === 'submitted').length,
     totalCTMRequests: cashToMasterList.length,
-    pendingCTM: cashToMasterList.filter(ctm => ctm.status === 'requested').length,
+    pendingCTM: cashToMasterList.filter((ctm: any) => ctm.status === 'requested').length,
   };
 
   // Calculate map center (average of all vessel positions)
   const validPositions = vessels
-    .filter(v => v.positions?.length > 0)
-    .map(v => v.positions[0]);
+    .filter((v: any) => v.positions?.length > 0)
+    .map((v: any) => v.positions[0]);
 
   const mapCenter: [number, number] = validPositions.length > 0
     ? [
