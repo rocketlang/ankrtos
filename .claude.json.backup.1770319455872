@@ -1,5 +1,5 @@
 {
-  "numStartups": 486,
+  "numStartups": 488,
   "installMethod": "global",
   "hasSeenTasksHint": true,
   "customApiKeyResponses": {
@@ -42,7 +42,7 @@
     "git-worktrees": 480,
     "agent-flag": 480
   },
-  "promptQueueUseCount": 2269,
+  "promptQueueUseCount": 2270,
   "showExpandedTodos": true,
   "cachedStatsigGates": {
     "tengu_prompt_suggestion": true,
@@ -191,40 +191,40 @@
         "packageManager": null
       },
       "hasCompletedProjectOnboarding": true,
-      "lastCost": 11.085859500000003,
-      "lastAPIDuration": 1769267,
-      "lastAPIDurationWithoutRetries": 1769161,
-      "lastToolDuration": 69583,
-      "lastDuration": 11239933,
-      "lastLinesAdded": 2827,
-      "lastLinesRemoved": 279,
-      "lastTotalInputTokens": 43783,
-      "lastTotalOutputTokens": 91558,
-      "lastTotalCacheCreationInputTokens": 641524,
-      "lastTotalCacheReadInputTokens": 9568363,
+      "lastCost": 14.801047749999993,
+      "lastAPIDuration": 2879988,
+      "lastAPIDurationWithoutRetries": 2879871,
+      "lastToolDuration": 75177,
+      "lastDuration": 12642773,
+      "lastLinesAdded": 6792,
+      "lastLinesRemoved": 133,
+      "lastTotalInputTokens": 62152,
+      "lastTotalOutputTokens": 163848,
+      "lastTotalCacheCreationInputTokens": 572511,
+      "lastTotalCacheReadInputTokens": 14326986,
       "lastTotalWebSearchRequests": 0,
       "lastModelUsage": {
         "claude-haiku-4-5-20251001": {
-          "inputTokens": 42963,
-          "outputTokens": 2193,
+          "inputTokens": 61126,
+          "outputTokens": 2349,
           "cacheReadInputTokens": 0,
-          "cacheCreationInputTokens": 0,
+          "cacheCreationInputTokens": 11223,
           "webSearchRequests": 0,
-          "costUSD": 0.05392800000000001
+          "costUSD": 0.08689975
         },
         "claude-sonnet-4-5-20250929": {
-          "inputTokens": 820,
-          "outputTokens": 89365,
-          "cacheReadInputTokens": 9568363,
-          "cacheCreationInputTokens": 641524,
+          "inputTokens": 1026,
+          "outputTokens": 161499,
+          "cacheReadInputTokens": 14326986,
+          "cacheCreationInputTokens": 561288,
           "webSearchRequests": 0,
-          "costUSD": 11.031931499999999
+          "costUSD": 14.714147999999991
         }
       },
       "lastSessionId": "880bfaff-7d02-493b-86b4-9b4c8fdbe20b",
       "exampleFilesGeneratedAt": 1769946777447,
-      "lastFpsAverage": 9.2,
-      "lastFpsLow1Pct": 166.97
+      "lastFpsAverage": 10.66,
+      "lastFpsLow1Pct": 178.08
     }
   },
   "hasShownOpus45Notice": {
