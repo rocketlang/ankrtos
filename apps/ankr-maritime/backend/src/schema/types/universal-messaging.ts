@@ -98,14 +98,15 @@ const SendWhatsAppMessageInput = builder.inputType('SendWhatsAppMessageInput', {
   }),
 });
 
-const ThreadFilterInput = builder.inputType('ThreadFilterInput', {
-  fields: (t) => ({
-    channel: t.field({ type: ChannelEnum }),
-    isRead: t.boolean(),
-    isStarred: t.boolean(),
-    labels: t.stringList(),
-  }),
-});
+// COMMENTED OUT: Duplicate of ThreadFilterInput in email-organizer.ts
+// const ThreadFilterInput = builder.inputType('ThreadFilterInput', {
+//   fields: (t) => ({
+//     channel: t.field({ type: ChannelEnum }),
+//     isRead: t.boolean(),
+//     isStarred: t.boolean(),
+//     labels: t.stringList(),
+//   }),
+// });
 
 // ============================================================================
 // Queries

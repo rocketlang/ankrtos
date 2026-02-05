@@ -842,7 +842,10 @@ model ActivityLog {
   details    String? // JSON string with change details
   createdAt  DateTime @default(now())
 
+  user       User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+
   @@index([entityType, entityId])
+  @@index([userId])
   @@index([createdAt])
   @@map("activity_logs")
 }
@@ -6359,50 +6362,6 @@ model LearningPath {
   @@index([category])
   @@index([published])
   @@map("learning_paths")
-}
-
-model FeatureAccessLog {
-  id          String   @id @default(cuid())
-  userId      String
-  featureName String
-  createdAt   DateTime @default(now())
-
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([userId])
-  @@index([featureName])
-  @@index([createdAt])
-  @@map("feature_access_logs")
-}
-
-model ApiUsage {
-  id          String   @id @default(cuid())
-  userId      String
-  endpoint    String
-  method      String   // GET, POST, PUT, DELETE
-  statusCode  Int
-  responseTime Int     // milliseconds
-  createdAt   DateTime @default(now())
-
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([userId])
-  @@index([createdAt])
-  @@map("api_usage")
-}
-
-model ActivityLog {
-  id          String   @id @default(cuid())
-  userId      String
-  action      String   // login, feature_access, api_call, document_upload, etc.
-  metadata    Json?
-  createdAt   DateTime @default(now())
-
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([userId])
-  @@index([createdAt])
-  @@map("activity_logs")
 }
 
 // ============================================================================

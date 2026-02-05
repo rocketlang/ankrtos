@@ -32,24 +32,25 @@ const ResponseStyleEnum = builder.enumType('ResponseStyle', {
 // Object Types
 // ============================================================================
 
-const ResponseDraftType = builder.objectRef<any>('ResponseDraft').implement({
-  fields: (t) => ({
-    id: t.exposeString('id'),
-    subject: t.exposeString('subject'),
-    body: t.exposeString('body'),
-    style: t.field({ type: ResponseStyleEnum, resolve: (parent) => parent.style }),
-    confidence: t.exposeFloat('confidence'),
-    contextUsed: t.field({
-      type: 'JSON',
-      resolve: (parent) => parent.contextUsed,
-    }),
-    suggestedEdits: t.stringList({
-      nullable: true,
-      resolve: (parent) => parent.suggestedEdits || null,
-    }),
-    generatedAt: t.expose('generatedAt', { type: 'DateTime' }),
-  }),
-});
+// COMMENTED OUT: Duplicate of ResponseDraft in email-organizer.ts (uses prismaObject)
+// const ResponseDraftType = builder.objectRef<any>('ResponseDraft').implement({
+//   fields: (t) => ({
+//     id: t.exposeString('id'),
+//     subject: t.exposeString('subject'),
+//     body: t.exposeString('body'),
+//     style: t.field({ type: ResponseStyleEnum, resolve: (parent) => parent.style }),
+//     confidence: t.exposeFloat('confidence'),
+//     contextUsed: t.field({
+//       type: 'JSON',
+//       resolve: (parent) => parent.contextUsed,
+//     }),
+//     suggestedEdits: t.stringList({
+//       nullable: true,
+//       resolve: (parent) => parent.suggestedEdits || null,
+//     }),
+//     generatedAt: t.expose('generatedAt', { type: 'DateTime' }),
+//   }),
+// });
 
 // ============================================================================
 // Input Types

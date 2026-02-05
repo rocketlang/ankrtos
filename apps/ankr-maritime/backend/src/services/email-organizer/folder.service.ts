@@ -111,7 +111,7 @@ export class EmailFolderService {
         throw new Error('Parent folder not found');
       }
       if (parent.userId !== input.userId) {
-        throw new Error('Cannot create folder under another user's folder');
+        throw new Error("Cannot create folder under another user's folder");
       }
     }
 
@@ -157,7 +157,7 @@ export class EmailFolderService {
         throw new Error('Parent folder not found');
       }
       if (parent.userId !== userId) {
-        throw new Error('Cannot move folder under another user's folder');
+        throw new Error("Cannot move folder under another user's folder");
       }
 
       // Prevent circular references

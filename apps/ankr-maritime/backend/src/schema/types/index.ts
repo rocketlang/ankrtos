@@ -31,6 +31,7 @@ import './alert.js';
 import './compliance.js';
 import './ebl.js';
 import './subscription.js';
+import './pricing.js'; // ✅ Re-enabled (renamed Subscription to PricingSubscription)
 import './contact.js';
 import './cargo-enquiry.js';
 import './invoice.js';
@@ -45,7 +46,7 @@ import './vessel-position.js';
 import './port-congestion.js';
 import './port-intelligence.js';
 import './cargo-quantity-log.js';
-import './arrival-intelligence-api.js';
+import './arrival-intelligence-api.js'; // ✅ Re-enabled with subscriptionType
 import './arrival-timeline.js'; // ✅ Phase 4: Event-driven timeline system
 import './coa.js';
 import './plugin-designer.js'; // ✅ Phase 2: Visual email intelligence plugin designer
@@ -129,7 +130,7 @@ import './employee.js';
 import './attendance-leave.js';
 import './payslip.js';
 import './training-record.js';
-import './email-message.js';
+import './email-message.js'; // ✅ Re-enabled (renamed emailThread to emailThreadMessages)
 import './notification-digest.js';
 import './customs-declaration.js';
 import './hs-code.js';

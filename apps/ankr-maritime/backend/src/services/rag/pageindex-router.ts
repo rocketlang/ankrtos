@@ -11,6 +11,7 @@
 import { QueryClassifier, RAGRouter, RouterCache } from '@ankr/rag-router';
 import { HybridSearchService, PageIndexSearchService } from '@ankr/pageindex';
 import type { RAGAnswer, SourceDocument, SearchOptions } from './maritime-rag.js';
+import { getPgPool, getRedisClient } from './connections.js';
 
 export interface RouterOptions {
   enableRouter: boolean;
@@ -80,15 +81,68 @@ export class MaritimePageIndexRouter {
    * Initialize search services
    */
   async initialize() {
-    // TODO: Initialize HybridSearchService
-    // this.hybridSearch = new HybridSearchService(...);
-    // this.router.setHybridSearch(this.hybridSearch);
+    console.log('[MaritimeRouter] Initializing PageIndex hybrid services...');
 
-    // TODO: Initialize PageIndexSearchService
-    // this.pageIndexSearch = new PageIndexSearchService(...);
-    // this.router.setPageIndexSearch(this.pageIndexSearch);
+    try {
+      // Get database and cache connections
+      const pool = getPgPool();
+      const redis = getRedisClient();
 
-    console.log('Maritime PageIndex Router initialized');
+      // Initialize HybridSearchService (Tier 1-2: Cache + Embeddings)
+      this.hybridSearch = new HybridSearchService(pool, redis || undefined, {
+        aiProxyUrl: process.env.AI_PROXY_URL || 'http://localhost:4444',
+        cacheEnabled: this.config.enableCache,
+        cacheTTL: 86400, // 24 hours
+        embeddingModel: 'nomic-embed-text', // Via Ollama
+        chatModel: 'claude-sonnet-4-20250514',
+        maxDepth: 10,
+        maxNodes: 20,
+      });
+
+      console.log('[MaritimeRouter] ✅ HybridSearchService initialized');
+
+      // Initialize PageIndexSearchService (Tier 3: Full tree navigation)
+      // Note: Uses AI Proxy for LLM calls if ANTHROPIC_API_KEY not available
+      const anthropicKey = process.env.ANTHROPIC_API_KEY || '';
+
+      if (anthropicKey) {
+        this.pageIndexSearch = new PageIndexSearchService(pool, anthropicKey, {
+          maxDepth: 10,
+          maxNodes: 20,
+          temperature: 0,
+          model: 'claude-sonnet-4-20250514',
+        });
+
+        console.log('[MaritimeRouter] ✅ PageIndexSearchService initialized with Anthropic API');
+      } else {
+        console.warn(
+          '[MaritimeRouter] ⚠️  ANTHROPIC_API_KEY not set - PageIndex Tier 3 will be disabled'
+        );
+        console.warn(
+          '[MaritimeRouter] → Set ANTHROPIC_API_KEY in .env to enable full PageIndex capabilities'
+        );
+      }
+
+      // Register services with router
+      if (this.router.setHybridSearch) {
+        this.router.setHybridSearch(this.hybridSearch);
+      }
+
+      if (this.pageIndexSearch && this.router.setPageIndexSearch) {
+        this.router.setPageIndexSearch(this.pageIndexSearch);
+      }
+
+      console.log('[MaritimeRouter] ✅ Maritime PageIndex Router fully initialized');
+      console.log('[MaritimeRouter] → Cache:', this.config.enableCache ? 'enabled' : 'disabled');
+      console.log('[MaritimeRouter] → Router:', this.config.enableRouter ? 'enabled' : 'disabled');
+      console.log(
+        '[MaritimeRouter] → Tiers: Tier 1 (Cache) + Tier 2 (Embeddings)' +
+          (this.pageIndexSearch ? ' + Tier 3 (PageIndex)' : '')
+      );
+    } catch (error) {
+      console.error('[MaritimeRouter] ❌ Failed to initialize:', error);
+      throw error;
+    }
   }
 
   /**

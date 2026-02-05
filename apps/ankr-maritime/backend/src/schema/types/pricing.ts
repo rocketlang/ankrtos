@@ -131,7 +131,7 @@ const SubscriptionType = builder.objectRef<{
   razorpaySubscriptionId: string | null;
   createdAt: Date;
   updatedAt: Date;
-}>('Subscription');
+}>('PricingSubscription');
 
 SubscriptionType.implement({
   fields: (t) => ({

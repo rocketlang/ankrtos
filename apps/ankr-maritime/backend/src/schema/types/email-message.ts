@@ -83,9 +83,10 @@ builder.queryField('emailMessages', (t) =>
   }),
 );
 
-builder.queryField('emailThread', (t) =>
+builder.queryField('emailThreadMessages', (t) =>
   t.prismaField({
     type: ['EmailMessage'],
+    description: 'Get all messages in a thread (Prisma direct query)',
     args: {
       threadId: t.arg.string({ required: true }),
     },

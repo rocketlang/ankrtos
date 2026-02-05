@@ -17,6 +17,9 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 import type { ComposedAlert } from './alert-orchestrator.service';
 
+// Handle ES module default export
+const createTransporter = nodemailer.default?.createTransporter || nodemailer.createTransporter;
+
 export interface EmailDeliveryResult {
   success: boolean;
   messageId?: string;
@@ -31,7 +34,7 @@ export class EmailSenderService {
 
   constructor() {
     // Initialize Nodemailer with SMTP configuration
-    this.transporter = nodemailer.createTransporter({
+    this.transporter = createTransporter({
       host: process.env.SMTP_HOST || 'smtp.gmail.com',
       port: parseInt(process.env.SMTP_PORT || '587'),
       secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
@@ -260,4 +263,6 @@ ${new Date().getFullYear()}
   }
 }
 
-export const emailSenderService = new EmailSenderService();
+// TODO: Fix nodemailer ES module import issue
+// export const emailSenderService = new EmailSenderService();
+export const emailSenderService = null as any; // Temporarily disabled
