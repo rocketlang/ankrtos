@@ -350,17 +350,58 @@ const DashboardPage: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Daily Horoscope */}
-                <div className="bg-gradient-to-br from-purple-50 to-orange-50 rounded-xl shadow-md p-6">
-                  <h2 className="text-xl font-bold mb-3">Today's Horoscope ⭐</h2>
-                  <p className="text-gray-700 mb-4">
-                    A favorable day for new beginnings. Your ruling planet is in a strong position,
-                    bringing opportunities in career and relationships. Wear your gemstone for
-                    enhanced positive energy.
-                  </p>
-                  <Link to="/daily-horoscope" className="text-orange-600 hover:text-orange-700 font-semibold">
-                    Read Full Horoscope →
-                  </Link>
+                {/* Daily Horoscope Widget - Enhanced */}
+                <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white rounded-xl shadow-2xl p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <h2 className="text-2xl font-bold flex items-center gap-2">
+                      ⭐ Today's Horoscope
+                    </h2>
+                    <span className="text-4xl">♈</span>
+                  </div>
+
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <div>
+                        <p className="text-sm text-white/80">Your Sign</p>
+                        <p className="text-xl font-bold">Aries</p>
+                      </div>
+                      <div className="flex gap-1">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                          <span key={star} className="text-yellow-300 text-xl">★</span>
+                        ))}
+                      </div>
+                    </div>
+                    <p className="text-white/90 text-sm leading-relaxed mb-3">
+                      Dynamic energy flows through you today. Mars blesses you with courage and initiative.
+                      Perfect day for taking bold steps in your career and expressing yourself in relationships.
+                    </p>
+                    <div className="grid grid-cols-3 gap-3 text-center text-sm">
+                      <div className="bg-white/10 rounded-lg p-2">
+                        <p className="text-white/70 text-xs mb-1">Lucky Number</p>
+                        <p className="font-bold text-lg">7</p>
+                      </div>
+                      <div className="bg-white/10 rounded-lg p-2">
+                        <p className="text-white/70 text-xs mb-1">Lucky Color</p>
+                        <p className="font-bold text-sm">Red</p>
+                      </div>
+                      <div className="bg-white/10 rounded-lg p-2">
+                        <p className="text-white/70 text-xs mb-1">Lucky Time</p>
+                        <p className="font-bold text-xs">10-12 PM</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-3">
+                    <Link
+                      to="/daily-horoscope"
+                      className="flex-1 bg-white text-purple-600 text-center py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                    >
+                      Read Full Horoscope →
+                    </Link>
+                    <button className="px-4 py-3 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-colors">
+                      📤
+                    </button>
+                  </div>
                 </div>
               </div>
             )}

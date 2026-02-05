@@ -16,6 +16,7 @@ import SanskritiPage from './pages/SanskritiPage';
 import ScriptureReaderPage from './pages/ScriptureReaderPage';
 import MythologyPage from './pages/MythologyPage';
 import StoryReaderPage from './pages/StoryReaderPage';
+import DailyHoroscopePage from './pages/DailyHoroscopePage';
 
 // Legacy Pages (keeping for backward compatibility)
 import HomePage from './pages/HomePage';
@@ -38,6 +39,7 @@ function App() {
         <Route path="/dashboard" element={<DashboardPage />} />
 
         {/* Service Pages */}
+        <Route path="/daily-horoscope" element={<DailyHoroscopePage />} />
         <Route path="/book-pandit" element={<BookPanditPage />} />
         <Route path="/store" element={<TempleStorePage />} />
         <Route path="/ask-acharya" element={<AskAcharyaPage />} />
