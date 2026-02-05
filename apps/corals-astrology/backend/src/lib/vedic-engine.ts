@@ -119,13 +119,13 @@ export function getDegreeInSign(longitude: number): number {
 export function getNakshatra(longitude: number) {
   const nakshatraIndex = Math.floor(longitude / (360 / 27));
   const nakshatraName = NAKSHATRAS[nakshatraIndex];
-  const nakshatra Lord = NAKSHATRA_LORDS[nakshatraIndex];
+  const nakshatraLord = NAKSHATRA_LORDS[nakshatraIndex];
   const degreeInNakshatra = longitude % (360 / 27);
   const pada = Math.floor(degreeInNakshatra / ((360 / 27) / 4)) + 1;
 
   return {
     name: nakshatraName,
-    lord: nakshatra Lord,
+    lord: nakshatraLord,
     pada: pada,
     index: nakshatraIndex
   };

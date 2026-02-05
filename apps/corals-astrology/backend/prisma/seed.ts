@@ -108,31 +108,31 @@ async function main() {
 
   console.log('✅ Seeded sample horoscope');
 
-  // Seed sample astrologer
-  const astrologerPassword = await bcrypt.hash('astrologer123', 10);
+  // Seed main astrologer - Jyotish Acharya Rakesh Sharma (Founder & Chief Astrologer)
+  const astrologerPassword = await bcrypt.hash('rakesh@2026', 10);
   const astrologer = await prisma.astrologer.upsert({
-    where: { email: 'swami@coralsastrology.com' },
+    where: { email: 'acharya.rakesh@coralsastrology.com' },
     update: {},
     create: {
-      email: 'swami@coralsastrology.com',
+      email: 'acharya.rakesh@coralsastrology.com',
       password: astrologerPassword,
-      firstName: 'Swami',
-      lastName: 'Ramananda',
-      displayName: 'Swami Ramananda',
-      bio: '20+ years of experience in Vedic astrology and spiritual guidance.',
-      specializations: ['Vedic Astrology', 'KP System', 'Prashna'],
-      languages: ['English', 'Hindi', 'Sanskrit'],
-      experience: 20,
-      rating: 4.8,
-      reviewCount: 250,
+      firstName: 'Rakesh',
+      lastName: 'Sharma',
+      displayName: 'Jyotish Acharya Rakesh Sharma',
+      bio: 'Founder & Chief Astrologer of CoralsAstrology. Renowned Vedic astrologer with 25+ years of experience in Jyotish Shastra, Lal Kitab, and Prashna Kundali. Expert in combining traditional Vedic wisdom with modern AI-powered insights for accurate predictions and remedies. Guided thousands of clients worldwide on life, career, relationships, and spiritual growth.',
+      specializations: ['Vedic Astrology', 'Lal Kitab', 'KP System', 'Prashna Kundali', 'Numerology', 'Vastu Shastra', 'Gemstone Consultation'],
+      languages: ['Hindi', 'English', 'Sanskrit'],
+      experience: 25,
+      rating: 4.9,
+      reviewCount: 1500,
       isAvailable: true,
-      hourlyRate: 999,
+      hourlyRate: 2499,
       isVerified: true,
       verifiedAt: new Date(),
     },
   });
 
-  console.log('✅ Seeded sample astrologer:', astrologer.email);
+  console.log('✅ Seeded Jyotish Acharya Rakesh Sharma (Founder):', astrologer.email);
 
   console.log('🎉 Seeding completed successfully!');
 }

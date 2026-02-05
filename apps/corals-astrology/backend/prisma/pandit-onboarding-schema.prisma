@@ -1,0 +1,398 @@
+// =====================================================
+// PANDIT ONBOARDING & BOOKING SYSTEM
+// For Spiritual Services & Special Poojas
+// =====================================================
+
+enum PanditStatus {
+  PENDING
+  UNDER_REVIEW
+  APPROVED
+  REJECTED
+  SUSPENDED
+  INACTIVE
+}
+
+enum PoojaType {
+  GRIHA_PRAVESH
+  SATYANARAYAN
+  GANESH
+  LAKSHMI
+  NAVAGRAHA
+  MARRIAGE_CEREMONY
+  ENGAGEMENT
+  BABY_NAMING
+  THREAD_CEREMONY
+  SHRADH
+  TARPAN
+  FUNERAL_RITES
+  BIRTHDAY
+  BUSINESS_MUHURAT
+  VEHICLE_POOJA
+  DURGA_POOJA
+  SARASWATI_POOJA
+  HANUMAN_POOJA
+  RUDRABHISHEK
+  KAAL_SARP_DOSH
+  MANGAL_DOSH
+  VASTU_SHANTI
+  HOUSEWARMING
+  OTHER
+}
+
+enum BookingStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+model Pandit {
+  id              String         @id @default(cuid())
+  userId          String         @unique
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Basic Information
+  fullName        String
+  displayName     String         // Public display name
+  photo           String?        // Profile photo URL
+  bio             String         @db.Text
+  experience      Int            // Years of experience
+
+  // Contact
+  phone           String
+  email           String
+  whatsapp        String?
+  address         String?        @db.Text
+
+  // Specialization
+  specializations PoojaType[]
+  languages       String[]       // "Hindi", "Sanskrit", "Tamil", etc.
+  serviceAreas    String[]       // Cities/regions served
+
+  // Verification (KYC)
+  status          PanditStatus   @default(PENDING)
+  kycDocuments    Json?          // Aadhaar, certificates, etc.
+  videoSample     String?        // URL to sample pooja video
+  templeReference String?        // Temple/organization reference
+  verifiedAt      DateTime?
+  verifiedBy      String?        // Admin ID
+  rejectionReason String?        @db.Text
+
+  // Credentials
+  education       String[]       // Qualifications
+  certifications  String[]       // Certificates
+  affiliations    String?        // Temple/organization affiliations
+
+  // Expertise Details
+  expertiseDescription String?   @db.Text
+  ritualExpertise String[]       // Specific rituals mastered
+  scripturalKnowledge String[]   // Vedas, Puranas, etc.
+
+  // Pricing
+  basePrice       Float          // Starting price
+  priceRange      String         // "₹2,000 - ₹10,000"
+  pricingTier     String         @default("standard") // "budget", "standard", "premium"
+
+  // Availability
+  availableDays   String[]       // ["Monday", "Tuesday", etc.]
+  availableSlots  Json           // {morning: true, afternoon: false, evening: true}
+  blockedDates    DateTime[]     // Dates when unavailable
+
+  // Rating & Reviews
+  rating          Float          @default(0)
+  reviewCount     Int            @default(0)
+  completedBookings Int          @default(0)
+
+  // Platform Stats
+  totalEarnings   Float          @default(0)
+  platformCommission Float       @default(15) // Percentage
+
+  // Settings
+  autoAcceptBookings Boolean     @default(false)
+  notificationPreferences Json   // Email, SMS, WhatsApp
+  bankDetails     Json?          // For payouts
+
+  // Metadata
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  lastActiveAt    DateTime?
+
+  // Relations
+  bookings        PanditBooking[]
+  reviews         PanditReview[]
+  availability    PanditAvailability[]
+
+  @@index([status])
+  @@index([rating])
+  @@map("pandits")
+}
+
+model PanditBooking {
+  id              String         @id @default(cuid())
+
+  // User (Customer)
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Pandit
+  panditId        String
+  pandit          Pandit         @relation(fields: [panditId], references: [id], onDelete: Cascade)
+
+  // Booking Details
+  poojaType       PoojaType
+  poojaName       String         // Actual name of the pooja
+  customRequest   String?        @db.Text
+
+  // Timing
+  preferredDate   DateTime
+  preferredTime   String         // "Morning", "Afternoon", "Evening"
+  duration        Int            // Expected duration in hours
+  scheduledDate   DateTime?      // Confirmed date
+  scheduledTime   String?        // Confirmed time
+
+  // Location
+  locationType    String         // "home", "temple", "other"
+  address         String         @db.Text
+  landmark        String?
+  city            String
+  state           String
+  pincode         String
+  locationNotes   String?        @db.Text
+
+  // Participants
+  numberOfPeople  Int?
+  familyMembers   Json?          // Names & gotras if needed
+
+  // Requirements
+  materials       Json?          // List of materials needed
+  providedByPandit Boolean       @default(false)
+  specialRequests String?        @db.Text
+
+  // Pricing
+  quotedPrice     Float?         // Pandit's quote
+  finalPrice      Float?         // Negotiated price
+  advancePayment  Float?         // Advance paid
+  platformFee     Float?         // Platform commission
+  totalAmount     Float?
+
+  // Status
+  status          BookingStatus  @default(PENDING)
+  acceptedAt      DateTime?
+  rejectedAt      DateTime?
+  completedAt     DateTime?
+  cancelledAt     DateTime?
+  cancellationReason String?     @db.Text
+
+  // Payment
+  paymentId       String?
+  payment         Payment?       @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+  paymentStatus   String?        // "pending", "partial", "completed"
+
+  // Communication
+  panditNotes     String?        @db.Text
+  userNotes       String?        @db.Text
+  instructions    String?        @db.Text
+
+  // Metadata
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  // Relations
+  review          PanditReview?
+
+  @@index([userId])
+  @@index([panditId])
+  @@index([status])
+  @@index([preferredDate])
+  @@map("pandit_bookings")
+}
+
+model PanditReview {
+  id              String         @id @default(cuid())
+
+  // Booking
+  bookingId       String         @unique
+  booking         PanditBooking  @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+
+  // User
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Pandit
+  panditId        String
+  pandit          Pandit         @relation(fields: [panditId], references: [id], onDelete: Cascade)
+
+  // Rating (1-5 stars)
+  overallRating   Int
+  punctualityRating Int?
+  knowledgeRating Int?
+  conductRating   Int?
+  valueRating     Int?
+
+  // Review
+  title           String?
+  review          String         @db.Text
+  photos          String[]       // Review photos
+
+  // Response
+  panditResponse  String?        @db.Text
+  respondedAt     DateTime?
+
+  // Helpful votes
+  helpfulCount    Int            @default(0)
+  notHelpfulCount Int            @default(0)
+
+  // Verification
+  isVerified      Boolean        @default(false) // Verified booking
+  isPublic        Boolean        @default(true)
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([panditId])
+  @@index([userId])
+  @@index([overallRating])
+  @@map("pandit_reviews")
+}
+
+model PanditAvailability {
+  id              String         @id @default(cuid())
+
+  panditId        String
+  pandit          Pandit         @relation(fields: [panditId], references: [id], onDelete: Cascade)
+
+  // Date & Time
+  date            DateTime
+  dayOfWeek       String         // "Monday", etc.
+  timeSlot        String         // "morning", "afternoon", "evening"
+
+  // Status
+  isAvailable     Boolean        @default(true)
+  isBooked        Boolean        @default(false)
+  bookingId       String?        // If booked
+
+  // Notes
+  notes           String?
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@unique([panditId, date, timeSlot])
+  @@index([panditId])
+  @@index([date])
+  @@map("pandit_availability")
+}
+
+// =====================================================
+// PUJA MATERIALS & SERVICES
+// =====================================================
+
+model PujaMaterial {
+  id              String         @id @default(cuid())
+
+  // Material Details
+  name            String
+  category        String         // "essential", "optional", "luxury"
+  description     String?        @db.Text
+
+  // Pricing
+  price           Float
+  unit            String         // "piece", "kg", "packet", etc.
+
+  // Availability
+  inStock         Boolean        @default(true)
+  vendorId        String?        // If sold by vendor
+
+  // Associations
+  poojaTypes      PoojaType[]    // Which poojas need this
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([category])
+  @@map("puja_materials")
+}
+
+model PoojaPackage {
+  id              String         @id @default(cuid())
+
+  // Package Details
+  name            String
+  poojaType       PoojaType
+  description     String         @db.Text
+
+  // Inclusions
+  duration        Int            // Hours
+  materials       Json           // List of materials included
+  services        String[]       // What's included
+
+  // Pricing
+  price           Float
+  discountedPrice Float?
+
+  // Features
+  features        String[]
+  benefits        String[]
+
+  // Popularity
+  isPopular       Boolean        @default(false)
+  bookingCount    Int            @default(0)
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([poojaType])
+  @@map("pooja_packages")
+}
+
+// =====================================================
+// SPIRITUAL CONSULTATION (Chat/Video with Pandits)
+// =====================================================
+
+model SpiritualConsultation {
+  id              String         @id @default(cuid())
+
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  panditId        String
+  pandit          Pandit         @relation(fields: [panditId], references: [id], onDelete: Cascade)
+
+  // Consultation Details
+  consultationType String        // "chat", "video", "phone"
+  topic           String         // "general", "specific_problem", "ritual_guidance"
+  question        String         @db.Text
+
+  // Timing
+  scheduledAt     DateTime
+  duration        Int            // Minutes
+  startedAt       DateTime?
+  endedAt         DateTime?
+
+  // Status
+  status          String         @default("scheduled") // "scheduled", "ongoing", "completed", "cancelled"
+
+  // Payment
+  amount          Float
+  paymentId       String?
+  payment         Payment?       @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+
+  // Meeting (for video calls)
+  meetingLink     String?
+  meetingId       String?
+
+  // Notes
+  panditNotes     String?        @db.Text
+  followUpAdvice  String?        @db.Text
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([userId])
+  @@index([panditId])
+  @@index([scheduledAt])
+  @@map("spiritual_consultations")
+}

@@ -1,0 +1,274 @@
+// Chinese BaZi (Four Pillars of Destiny) Schema
+
+model BaZiChart {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Birth Details
+  birthDate DateTime
+  birthTime String
+  birthPlace String
+  birthLat  Float
+  birthLng  Float
+  timezone  String
+  gender    String // Male/Female affects luck pillars
+
+  // Solar Calendar (used for calculation)
+  solarYear  Int
+  solarMonth Int
+  solarDay   Int
+  solarHour  Int
+
+  // Four Pillars (Year, Month, Day, Hour)
+  yearStem   String // 天干 Heavenly Stem
+  yearBranch String // 地支 Earthly Branch
+  monthStem  String
+  monthBranch String
+  dayStem    String // Day Master - most important
+  dayBranch  String
+  hourStem   String
+  hourBranch String
+
+  // Elements in each pillar
+  yearElement   String // Wood, Fire, Earth, Metal, Water
+  monthElement  String
+  dayElement    String // Core element
+  hourElement   String
+
+  // Hidden Stems (藏干) in each Branch
+  yearHiddenStems  String[] // JSON array
+  monthHiddenStems String[]
+  dayHiddenStems   String[]
+  hourHiddenStems  String[]
+
+  // Element Balance
+  woodStrength   Int // 0-100
+  fireStrength   Int
+  earthStrength  Int
+  metalStrength  Int
+  waterStrength  Int
+
+  // Dominant element
+  strongestElement String
+  weakestElement   String
+
+  // Day Master Analysis
+  dayMaster         String // The Day Stem
+  dayMasterElement  String
+  dayMasterStrength String // Strong/Weak/Balanced
+
+  // Useful God (用神) and Harmful God (忌神)
+  usefulGod   String // Beneficial element
+  harmfulGod  String // Harmful element
+  joyfulGod   String // Supporting element
+  fearfulGod  String // Weakening element
+
+  // Ten Gods (十神) for each pillar
+  yearTenGod  String
+  monthTenGod String
+  dayTenGod   String
+  hourTenGod  String
+
+  // Special Stars and Indicators
+  nobbleStars      String[] // 天乙贵人
+  peachBlossom     Boolean  // 桃花 Romance/attraction
+  travelHorse      Boolean  // 驿马 Travel/movement
+  academicStar     Boolean  // 文昌 Education/intelligence
+  loneStar         Boolean  // 孤辰寡宿 Loneliness
+  emptyBranch      String[] // 空亡 Void branches
+
+  // Clashes and Combinations
+  branchClashes      String[] // 相冲
+  branchCombinations String[] // 六合、三合
+  stemClashes        String[] // 天干相冲
+  stemCombinations   String[] // 天干相合
+
+  // Luck Pillars (大运 - 10 year periods)
+  luckPillars Json // Array of 8-10 luck pillars
+
+  // Life Palace (命宫)
+  lifePalaceStem   String
+  lifePalaceBranch String
+
+  // Conception Palace (胎元)
+  conceptionStem   String
+  conceptionBranch String
+
+  // Chart Structure Analysis
+  chartStructure String // Follow, Strong, Weak, Special
+  chartPattern   String // Formation type
+
+  // Predictions by Life Aspect
+  careerPrediction      String @db.Text
+  wealthPrediction      String @db.Text
+  relationshipPrediction String @db.Text
+  healthPrediction      String @db.Text
+  educationPrediction   String @db.Text
+
+  // Overall Analysis
+  overallAnalysis String @db.Text
+  strengths       String @db.Text
+  weaknesses      String @db.Text
+  recommendations String @db.Text
+
+  // Remedies
+  luckyColors     String[]
+  luckyNumbers    Int[]
+  luckyDirections String[]
+  favorableElements String[]
+  careerSuggestions String[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, birthDate])
+  @@index([userId])
+  @@index([dayMasterElement])
+}
+
+// Annual BaZi (流年 - Yearly Predictions)
+model BaZiAnnualReading {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  baziChartId String?
+  baziChart   BaZiChart? @relation(fields: [baziChartId], references: [id], onDelete: Cascade)
+
+  year        Int
+  yearStem    String
+  yearBranch  String
+  yearElement String
+
+  // Interaction with natal chart
+  clashesWithNatal       String[]
+  combinesWithNatal      String[]
+  harmfulInteractions    String[]
+  beneficialInteractions String[]
+
+  // Year Analysis
+  overallLuck        Int // 1-100
+  careerLuck         Int
+  wealthLuck         Int
+  relationshipLuck   Int
+  healthLuck         Int
+
+  // Monthly predictions
+  monthlyForecasts Json // 12 months breakdown
+
+  // Key events to watch
+  importantMonths String[]
+  warningMonths   String[]
+
+  predictions     String @db.Text
+  opportunities   String @db.Text
+  challenges      String @db.Text
+  advice          String @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, year])
+  @@index([userId])
+  @@index([year])
+}
+
+// BaZi Compatibility (Marriage/Partnership Analysis)
+model BaZiCompatibility {
+  id String @id @default(cuid())
+
+  // Person 1
+  user1Id      String
+  user1        User      @relation("BaZiUser1", fields: [user1Id], references: [id], onDelete: Cascade)
+  chart1Id     String
+  chart1       BaZiChart @relation("BaZiChart1", fields: [chart1Id], references: [id], onDelete: Cascade)
+
+  // Person 2
+  user2Id      String?
+  user2        User?     @relation("BaZiUser2", fields: [user2Id], references: [id], onDelete: Cascade)
+  chart2Id     String
+  chart2       BaZiChart @relation("BaZiChart2", fields: [chart2Id], references: [id], onDelete: Cascade)
+
+  // Element Compatibility
+  elementHarmony      Int // 0-100
+  elementBalance      String // Complementary/Supportive/Neutral/Conflicting
+  dayMasterCompatibility Int // How well day masters interact
+
+  // Ten Gods Relationship
+  relationshipType String // Resource, Companion, Output, Wealth, Authority
+  powerDynamics    String // Equal/Dominant/Submissive
+
+  // Special Combinations/Clashes
+  beneficialCombos  String[]
+  harmfulClashes    String[]
+
+  // Compatibility Scores
+  overallScore      Int // 0-100
+  emotionalScore    Int
+  intellectualScore Int
+  physicalScore     Int
+  financialScore    Int
+  longtermScore     Int
+
+  // Analysis
+  strengths      String @db.Text
+  challenges     String @db.Text
+  advice         String @db.Text
+  recommendations String @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([chart1Id, chart2Id])
+  @@index([user1Id])
+}
+
+// Element Therapy Recommendations
+model BaZiElementTherapy {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  baziChartId String
+  baziChart   BaZiChart @relation(fields: [baziChartId], references: [id], onDelete: Cascade)
+
+  // Element to enhance
+  targetElement String
+  reason        String @db.Text
+
+  // Lifestyle Recommendations
+  colors        String[] // Colors to wear
+  materials     String[] // Materials to use (wood, metal, etc)
+  directions    String[] // Favorable directions
+  locations     String[] // Favorable locations (near water, mountains, etc)
+
+  // Career Guidance
+  favorableIndustries String[]
+  unfavorableIndustries String[]
+
+  // Diet Recommendations
+  foodsToEat    String[]
+  foodsToAvoid  String[]
+
+  // Home/Office Feng Shui
+  roomPlacement   String
+  deskDirection   String
+  decorSuggestions String[]
+
+  // Activities
+  hobbies         String[]
+  exercises       String[]
+
+  // Timing
+  favorableMonths Int[] // 1-12
+  favorableHours  String[] // 子时, 丑时, etc
+
+  // Crystals/Stones (element-based)
+  recommendedStones String[]
+
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId])
+  @@index([baziChartId])
+}

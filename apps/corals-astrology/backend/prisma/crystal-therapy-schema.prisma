@@ -1,0 +1,342 @@
+// =====================================================
+// CRYSTAL & GEMSTONE THERAPY SYSTEM (RATNA CHIKITSA)
+// Traditional Vedic Gemology + Modern Crystal Healing
+// =====================================================
+
+model GemstoneRecommendation {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Chart Analysis
+  chartType       String   // "natal", "transit", "dasha"
+  analysisDate    DateTime @default(now())
+
+  // Primary Gemstone (Navaratna)
+  primaryGem      String   // Ruby, Pearl, Red Coral, etc.
+  primaryPlanet   String   // Sun, Moon, Mars, etc.
+  primaryPurpose  String   // "Strengthen career", "Health", etc.
+
+  // Wearing Instructions
+  fingerToWear    String   // Ring, Middle, Index, Little
+  handToWear      String   // Right, Left
+  metalToUse      String   // Gold, Silver, Copper, etc.
+  dayToWear       String   // Sunday, Monday, etc.
+  timeToWear      String   // "Sunrise", "2 hours after sunrise"
+  nakshatra       String?  // Auspicious nakshatra for wearing
+
+  // Gemstone Details
+  minimumCarats   Float    // Minimum weight
+  recommendedCarats Float  // Recommended weight
+  qualityGrade    String   // Premium, Standard, Budget
+  estimatedCost   Float    // In INR
+
+  // Purification (Shuddhi)
+  purificationMethod String[] // ["Gangajal", "Raw milk", "Honey"]
+  purificationMantra String
+  purificationDuration Int   // Minutes
+
+  // Energization (Prana Pratishtha)
+  energizationMantra String
+  energizationCount   Int    // How many times to chant
+  energizationDeity   String
+
+  // Substitute Gems (for expensive stones)
+  substituteGems  String[] // Affordable alternatives
+
+  // Contraindications
+  avoidIf         String[] // Conditions when NOT to wear
+  sideEffects     String[] // Possible negative effects
+  trialPeriod     Int      // Days to test before permanent use
+
+  // Additional Recommendations
+  secondaryGem    String?
+  secondaryPlanet String?
+
+  // Chakra & Color Therapy
+  chakraAssociation String // Root, Sacral, Solar Plexus, etc.
+  colorTherapy      String
+
+  // Results
+  expectedBenefits String[]
+  timeToShowResults Int    // Days
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model CrystalHealingSession {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Session Details
+  sessionDate     DateTime
+  sessionType     String   // "chakra_balancing", "aura_cleansing", "manifestation"
+  duration        Int      // Minutes
+
+  // Crystals Used
+  crystalsUsed    Json     // [{name: "Rose Quartz", purpose: "Heart healing"}]
+
+  // Chakra Assessment
+  rootChakra      String   // "balanced", "blocked", "overactive"
+  sacralChakra    String
+  solarPlexus     String
+  heartChakra     String
+  throatChakra    String
+  thirdEye        String
+  crownChakra     String
+
+  // Intention & Results
+  intention       String
+  experiencedBenefits String[]
+  nextSessionDate DateTime?
+
+  // Practitioner
+  practitioner    String?  // If guided session
+  location        String   // "In-person", "Remote", "Self-practice"
+
+  notes           String?
+  createdAt       DateTime @default(now())
+}
+
+model UpayaRemedyPlan {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Problem Analysis
+  issue           String   // "Career obstacles", "Health problems", etc.
+  affectedPlanet  String   // Weak or malefic planet
+  affectedHouse   Int      // House number
+  severity        String   // "mild", "moderate", "severe"
+
+  // Gemstone Remedy
+  gemstoneRemedy  Json?    // Full gemstone recommendation
+
+  // Mantra Therapy
+  mantraToChant   String
+  mantraCount     Int      // Daily repetitions
+  mantraDuration  Int      // Days to continue
+  mantraTime      String   // "Morning", "Evening", etc.
+  mantraBenefits  String[]
+
+  // Yantra Recommendation
+  yantraType      String?  // "Sri Yantra", "Navgraha Yantra", etc.
+  yantraPlacement String?  // Where to keep
+  yantraActivation String? // How to energize
+
+  // Charity/Daan
+  charityItem     String[] // ["Black sesame", "Iron", "Blue cloth"]
+  charityDay      String   // Day of week
+  charityBeneficiary String // "Poor people", "Temple", etc.
+
+  // Fasting Protocol
+  fastingDay      String?  // "Saturday", "Tuesday"
+  fastingType     String?  // "Complete", "Partial", "Specific foods"
+  fastingDuration Int?     // Weeks
+
+  // Deity Worship
+  deityToWorship  String   // "Lord Shani", "Hanuman", etc.
+  worshipDay      String
+  worshipOffering String[] // Flowers, fruits, etc.
+
+  // Color Therapy
+  favorableColors String[]
+  avoidColors     String[]
+
+  // Metal Therapy
+  metalToWear     String?  // "Iron ring", "Copper bracelet"
+  metalPlacement  String?
+
+  // Lifestyle Changes
+  lifestyleChanges String[]
+
+  // Tracking
+  startDate       DateTime
+  endDate         DateTime?
+  progress        String   @default("active") // active, completed, discontinued
+  effectiveness   Int?     // 1-10 rating
+  userFeedback    String?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model GemstoneCollection {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Gemstone Details
+  gemName         String   // "Ruby", "Emerald", "Rose Quartz"
+  gemType         String   // "Navaratna", "Modern Crystal", "Semi-precious"
+  planet          String?  // Associated planet (for Vedic gems)
+
+  // Physical Properties
+  caratWeight     Float
+  color           String
+  clarity         String   // "Eye clean", "Minor inclusions"
+  cut             String   // "Oval", "Round", "Cushion"
+  origin          String   // "Burma", "Sri Lanka", "Brazil"
+
+  // Acquisition
+  purchaseDate    DateTime
+  purchaseCost    Float
+  vendor          String?
+  certificate     String?  // Certificate number
+
+  // Setting
+  setIn           String?  // "Gold ring", "Silver pendant"
+  jewelry         String?  // Description
+
+  // Energization Status
+  purified        Boolean  @default(false)
+  purificationDate DateTime?
+  energized       Boolean  @default(false)
+  energizationDate DateTime?
+
+  // Usage
+  currentlyWearing Boolean @default(false)
+  wearingSince    DateTime?
+  wearingPurpose  String?
+
+  // Maintenance
+  lastCleaned     DateTime?
+  cleaningMethod  String?  // "Moonlight", "Salt water", "Sage smoke"
+
+  // Effects & Tracking
+  observedBenefits String[]
+  sideEffects     String[]
+  effectiveness   Int?     // 1-10 rating
+
+  notes           String?
+  photos          String[] // URLs to photos
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model ChakraAssessment {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  assessmentDate  DateTime @default(now())
+  assessmentType  String   // "self", "professional", "astrological"
+
+  // Individual Chakra Status
+  chakras         Json     // Detailed assessment of all 7 chakras
+
+  // Root Chakra (Muladhara)
+  rootStatus      String   // "balanced", "blocked", "overactive"
+  rootPercentage  Int      // 0-100
+  rootIssues      String[]
+  rootCrystals    String[] // ["Red Jasper", "Black Tourmaline"]
+  rootMantras     String[] // ["LAM"]
+
+  // Sacral Chakra (Svadhisthana)
+  sacralStatus    String
+  sacralPercentage Int
+  sacralIssues    String[]
+  sacralCrystals  String[] // ["Carnelian", "Orange Calcite"]
+  sacralMantras   String[] // ["VAM"]
+
+  // Solar Plexus (Manipura)
+  solarStatus     String
+  solarPercentage Int
+  solarIssues     String[]
+  solarCrystals   String[] // ["Citrine", "Yellow Topaz"]
+  solarMantras    String[] // ["RAM"]
+
+  // Heart Chakra (Anahata)
+  heartStatus     String
+  heartPercentage Int
+  heartIssues     String[]
+  heartCrystals   String[] // ["Rose Quartz", "Green Aventurine"]
+  heartMantras    String[] // ["YAM"]
+
+  // Throat Chakra (Vishuddha)
+  throatStatus    String
+  throatPercentage Int
+  throatIssues    String[]
+  throatCrystals  String[] // ["Blue Lace Agate", "Aquamarine"]
+  throatMantras   String[] // ["HAM"]
+
+  // Third Eye (Ajna)
+  thirdEyeStatus  String
+  thirdEyePercentage Int
+  thirdEyeIssues  String[]
+  thirdEyeCrystals String[] // ["Amethyst", "Lapis Lazuli"]
+  thirdEyeMantras String[] // ["OM"]
+
+  // Crown Chakra (Sahasrara)
+  crownStatus     String
+  crownPercentage Int
+  crownIssues     String[]
+  crownCrystals   String[] // ["Clear Quartz", "Selenite"]
+  crownMantras    String[] // ["AUM"]
+
+  // Overall Assessment
+  overallBalance  Int      // 0-100
+  primaryBlockage String?  // Which chakra needs most attention
+  recommendations String[]
+
+  // Follow-up
+  nextAssessment  DateTime?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model YantraRecommendation {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Yantra Details
+  yantraName      String   // "Sri Yantra", "Navgraha Yantra", etc.
+  yantraType      String   // "Prosperity", "Protection", "Health"
+  purpose         String
+  associatedPlanet String? // For planetary yantras
+  associatedDeity String
+
+  // Material & Construction
+  material        String   // "Copper", "Silver", "Bhojpatra", "Crystal"
+  size            String   // Dimensions
+  mantraEngraved  String?  // Mantra on yantra
+
+  // Placement
+  direction       String   // "East", "North", "Northeast"
+  location        String   // "Puja room", "Office desk", "Bedroom"
+  height          String   // Placement height
+
+  // Energization
+  energizationDate DateTime?
+  energizationRitual String
+  energizationMantra String
+  dailyWorship    Boolean  @default(false)
+  worshipTime     String?  // "Morning", "Evening"
+  offerings       String[] // ["Flowers", "Incense", "Light"]
+
+  // Timing
+  installedOn     DateTime?
+  bestInstallDate DateTime? // Auspicious date
+
+  // Benefits
+  expectedBenefits String[]
+  manifestationTime Int?   // Days/months
+
+  // Maintenance
+  cleaningFrequency String // "Daily", "Weekly", "Monthly"
+  cleaningMethod   String
+  reEnergization   String // How often to re-energize
+
+  // User Experience
+  experiencedBenefits String[]
+  effectiveness   Int?     // 1-10
+
+  notes           String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}

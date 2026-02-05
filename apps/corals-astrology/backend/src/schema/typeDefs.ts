@@ -31,7 +31,6 @@ export const typeDefs = `#graphql
     premiumUntil: DateTime
 
     # Relations
-    birthChart: BirthChart
     kundli: Kundli
 
     createdAt: DateTime!
@@ -388,6 +387,356 @@ export const typeDefs = `#graphql
     fileUrl: String
   }
 
+  # ==================== PALMISTRY (CHIROMANCY) ====================
+
+  type HandShape {
+    type: String!
+    element: String!
+    characteristics: [String!]!
+    personality: String!
+    career: [String!]!
+    relationships: String!
+  }
+
+  type MajorLine {
+    name: String!
+    location: String!
+    quality: String!
+    length: String!
+    meaning: String!
+    positive: [String!]!
+    negative: [String!]!
+    remedies: [String!]!
+  }
+
+  type Mount {
+    name: String!
+    planet: String!
+    location: String!
+    development: String!
+    meaning: String!
+    characteristics: [String!]!
+    career: [String!]!
+    weaknesses: [String!]
+  }
+
+  type FingerAnalysisType {
+    finger: String!
+    planet: String!
+    length: String!
+    flexibility: String!
+    phalanges: JSON!
+    meaning: String!
+    traits: [String!]!
+  }
+
+  type MinorLine {
+    name: String!
+    presence: Boolean!
+    quality: String
+    meaning: String!
+    significance: String!
+  }
+
+  type PlanetaryInfluence {
+    planet: String!
+    strength: Int!
+    impact: String!
+  }
+
+  type PalmReading {
+    id: ID!
+    userId: String!
+    dominantHand: String!
+    handShape: String!
+    handElement: String!
+    handCharacteristics: [String!]!
+    handPersonality: String!
+    handCareerSuggestions: [String!]!
+    handRelationships: String!
+
+    # Major Lines
+    heartLine: JSON!
+    headLine: JSON!
+    lifeLine: JSON!
+    fateLine: JSON
+
+    # Mounts
+    mountOfJupiter: JSON!
+    mountOfSaturn: JSON!
+    mountOfApollo: JSON!
+    mountOfMercury: JSON!
+    mountOfMars: JSON!
+    mountOfVenus: JSON!
+    mountOfMoon: JSON!
+
+    # Fingers
+    thumbAnalysis: JSON!
+    jupiterFinger: JSON!
+    saturnFinger: JSON!
+    apolloFinger: JSON!
+    mercuryFinger: JSON!
+
+    # Minor Lines
+    hasSunLine: Boolean!
+    sunLineQuality: String
+    hasMercuryLine: Boolean!
+    mercuryLineQuality: String
+    hasIntuitionLine: Boolean!
+    marriageLineCount: Int!
+    travelLineCount: Int!
+    childrenLineCount: Int
+
+    # Overall Analysis
+    overallPersonality: String!
+    strengths: [String!]!
+    weaknesses: [String!]!
+    careerSuggestions: [String!]!
+    healthIndications: [String!]!
+    relationshipAnalysis: String!
+    wealthPotential: String!
+    lifeExpectancy: String!
+
+    # Planetary
+    planetaryInfluences: JSON!
+    dominantPlanet: String!
+    weakestPlanet: String
+    overallBalance: Int!
+
+    # Remedies
+    remedies: JSON!
+
+    # Image
+    palmImageUrl: String
+    palmImageAnalyzed: Boolean!
+
+    # Relations
+    lineAnalyses: [HandLineAnalysis!]
+    mountAnalyses: [MountAnalysis!]
+    fingerAnalyses: [FingerAnalysis!]
+    markings: [PalmMarking!]
+    imageUpload: PalmImageUpload
+
+    createdAt: DateTime!
+    updatedAt: DateTime!
+  }
+
+  type HandLineAnalysis {
+    id: ID!
+    userId: String!
+    palmReadingId: String
+    lineName: String!
+    lineType: String!
+    quality: String!
+    length: String!
+    depth: String
+    direction: String
+    startPoint: String
+    endPoint: String
+    breaks: Int!
+    branches: Int!
+    islands: Int!
+    chains: Boolean!
+    meaning: String!
+    positiveTraits: [String!]!
+    negativeTraits: [String!]!
+    lifeAreas: [String!]!
+    timingMarks: JSON
+    criticalPeriods: [String!]!
+    opportunities: [String!]!
+    challenges: [String!]!
+    remedies: [String!]!
+    gemstones: [String!]!
+    mantras: [String!]!
+    createdAt: DateTime!
+  }
+
+  type MountAnalysis {
+    id: ID!
+    userId: String!
+    palmReadingId: String
+    mountName: String!
+    planet: String!
+    location: String!
+    development: String!
+    size: Int!
+    firmness: String!
+    hasStarMark: Boolean!
+    hasCrossMark: Boolean!
+    hasTriangleMark: Boolean!
+    hasSquareMark: Boolean!
+    hasGridMark: Boolean!
+    meaning: String!
+    characteristics: [String!]!
+    career: [String!]!
+    weaknesses: [String!]!
+    planetaryStrength: Int!
+    planetaryImpact: String!
+    remedies: [String!]!
+    gemstone: String!
+    mantra: String!
+    color: String!
+    favorableDay: String!
+    createdAt: DateTime!
+  }
+
+  type FingerAnalysis {
+    id: ID!
+    userId: String!
+    palmReadingId: String
+    fingerName: String!
+    planet: String!
+    length: String!
+    relativeLength: String!
+    flexibility: String!
+    shape: String
+    tipShape: String
+    tipMeaning: String
+    topPhalange: String!
+    topLength: String!
+    middlePhalange: String!
+    middleLength: String!
+    bottomPhalange: String!
+    bottomLength: String!
+    hasKnots: Boolean!
+    knotsType: String
+    nailShape: String
+    nailCondition: String
+    meaning: String!
+    traits: [String!]!
+    strengths: [String!]!
+    weaknesses: [String!]!
+    careerIndications: [String!]!
+    personalityImpact: String!
+    createdAt: DateTime!
+  }
+
+  type PalmMarking {
+    id: ID!
+    userId: String!
+    palmReadingId: String
+    markingType: String!
+    location: String!
+    onLine: String
+    onMount: String
+    meaning: String!
+    isPositive: Boolean!
+    significance: String!
+    approximateAge: Int
+    lifeEvent: String
+    createdAt: DateTime!
+  }
+
+  type PalmCompatibility {
+    id: ID!
+    userId: String!
+    partnerUserId: String
+    partnerHandShape: String!
+    partnerDominantPlanet: String!
+    userHandShape: String!
+    userDominantPlanet: String!
+    overallScore: Int!
+    elementCompatibility: String!
+    planetaryHarmony: Int!
+    emotionalCompatibility: Int!
+    mentalCompatibility: Int!
+    physicalCompatibility: Int!
+    spiritualCompatibility: Int!
+    relationshipStrengths: [String!]!
+    relationshipChallenges: [String!]!
+    compatibilityAnalysis: String!
+    recommendations: [String!]!
+    areasToWorkOn: [String!]!
+    createdAt: DateTime!
+  }
+
+  type PalmRemedy {
+    id: ID!
+    userId: String!
+    palmReadingId: String
+    issue: String!
+    area: String!
+    severity: String!
+    remedyType: String!
+    gemstone: String
+    carats: Float
+    finger: String
+    metal: String
+    dayToWear: String
+    mantra: String
+    repetitions: Int
+    duration: String
+    lifestyleChanges: [String!]!
+    charity: String
+    fasting: String
+    colors: [String!]!
+    directions: [String!]!
+    started: DateTime
+    completed: Boolean!
+    progress: Int!
+    notes: String
+    createdAt: DateTime!
+    updatedAt: DateTime!
+  }
+
+  type PalmImageUpload {
+    id: ID!
+    userId: String!
+    palmReadingId: String
+    palmReading: PalmReading
+    imageUrl: String!
+    hand: String!
+    imageFormat: String!
+    fileSize: Int!
+    analyzed: Boolean!
+    analyzedAt: DateTime
+    aiModel: String
+    detectedLines: JSON
+    detectedMounts: JSON
+    detectedMarkings: JSON
+    imageQuality: String
+    handVisible: Boolean!
+    linesVisible: Boolean!
+    createdAt: DateTime!
+  }
+
+  input LineDataInput {
+    quality: String!
+    length: String!
+    direction: String
+  }
+
+  input MountDataInput {
+    jupiter: String!
+    saturn: String!
+    apollo: String!
+    mercury: String!
+    mars: String!
+    venus: String!
+    moon: String!
+  }
+
+  input FingerDataInput {
+    thumb: FingerInput!
+    jupiter: FingerInput!
+    saturn: FingerInput!
+    apollo: FingerInput!
+    mercury: FingerInput!
+  }
+
+  input FingerInput {
+    length: String!
+    flexibility: String
+  }
+
+  input MinorLinesInput {
+    sunLine: Boolean
+    mercuryLine: Boolean
+    intuitionLine: Boolean
+    marriageLineCount: Int
+    travelLineCount: Int
+  }
+
   # ==================== QUERIES ====================
 
   type Query {
@@ -421,6 +770,59 @@ export const typeDefs = `#graphql
     # Chat
     chatRoom(consultationId: String!): ChatRoom
     chatMessages(roomId: String!, limit: Int, offset: Int): [ChatMessage!]!
+
+    # Crystal Therapy & Gemstones
+    navratnaGemInfo(gemName: String!): JSON
+    allNavratnaGems: [JSON!]!
+    healingCrystalInfo(crystalName: String!): JSON
+    allHealingCrystals: [JSON!]!
+    chakraInfo(chakraName: String!): JSON
+    allChakras: [JSON!]!
+    planetaryUpaya(planet: String!): JSON
+    allPlanetaryUpayas: [JSON!]!
+    gemstoneRecommendations(situation: String!): [JSON!]!
+    myGemstoneRecommendations: [JSON!]!
+    myCrystalSessions: [JSON!]!
+    myUpayaPlans: [JSON!]!
+    myGemstoneCollection: [JSON!]!
+    myChakraAssessments: [JSON!]!
+    myYantraRecommendations: [JSON!]!
+    checkGemstoneCompatibility(gem1: String!, gem2: String!): JSON
+
+    # Dasha Systems
+    myVimshottariDasha: JSON
+    myCurrentDashas: JSON
+    myMahaDashas: [JSON!]!
+    myAntarDashas(mahaDashaId: ID!): [JSON!]!
+    myYoginiDashas: [JSON!]!
+    myJaiminiCharaDashas: [JSON!]!
+    myAshtottariDashas: [JSON!]!
+
+    # Numerology
+    myNumerologyChart: JSON
+    myPersonalYearForecast: JSON
+    numerologyCompatibility(partnerId: ID!): JSON
+    myNameChangeAnalyses: [JSON!]!
+
+    # Palmistry
+    handShapeInfo(shapeType: String!): HandShape
+    allHandShapes: [HandShape!]!
+    mountInfo(mountName: String!): JSON
+    allMounts: [JSON!]!
+    fingerInfo(fingerName: String!): JSON
+    allFingers: [JSON!]!
+    minorLineInfo(lineName: String!): MinorLine
+    allMinorLines: [MinorLine!]!
+    myPalmReadings: [PalmReading!]!
+    palmReading(id: ID!): PalmReading
+    myHandLineAnalyses(lineName: String): [HandLineAnalysis!]!
+    myMountAnalyses(mountName: String): [MountAnalysis!]!
+    myFingerAnalyses(fingerName: String): [FingerAnalysis!]!
+    myPalmMarkings(markingType: String): [PalmMarking!]!
+    myPalmCompatibility: [PalmCompatibility!]!
+    myPalmRemedies(area: String): [PalmRemedy!]!
+    activePalmRemedies: [PalmRemedy!]!
+    myPalmImages: [PalmImageUpload!]!
   }
 
   # ==================== MUTATIONS ====================
@@ -461,6 +863,127 @@ export const typeDefs = `#graphql
     # Chat
     sendMessage(input: SendMessageInput!): ChatMessage!
     markMessageAsRead(messageId: String!): ChatMessage!
+
+    # Crystal Therapy & Gemstones
+    createGemstoneRecommendation(
+      gemName: String!
+      planet: String!
+      situation: String!
+      minimumCarats: Float
+      recommendedCarats: Float
+    ): JSON!
+    recordCrystalSession(
+      crystalName: String!
+      purpose: String!
+      duration: Int!
+      experience: String
+    ): JSON!
+    createUpayaPlan(
+      issue: String!
+      affectedPlanet: String!
+      severity: String!
+    ): JSON!
+    addGemstoneToCollection(
+      gemName: String!
+      carats: Float!
+      purchaseDate: DateTime!
+    ): JSON!
+    assessChakras(
+      chakraBalances: JSON!
+    ): JSON!
+    updateUpayaProgress(
+      id: ID!
+      progress: String!
+      notes: String
+    ): JSON!
+
+    # Dasha Systems
+    calculateVimshottariDasha(
+      birthDate: DateTime!
+      moonLongitude: Float!
+    ): JSON!
+    analyzeEventTiming(
+      eventDate: DateTime!
+      eventType: String!
+    ): JSON!
+    startDashaRemedy(
+      dashaId: ID!
+      remedy: String!
+    ): JSON!
+
+    # Numerology
+    calculateNumerologyChart(
+      fullName: String!
+      birthDate: DateTime!
+    ): JSON!
+    calculatePersonalYear(
+      birthDate: DateTime!
+      year: Int!
+    ): JSON!
+    analyzeNameChange(
+      currentName: String!
+      proposedName: String!
+    ): JSON!
+
+    # Palmistry
+    generatePalmReading(
+      handShapeType: String!
+      dominantHand: String!
+      lineData: JSON!
+      mountData: JSON!
+      fingerData: JSON!
+      minorLines: MinorLinesInput
+    ): PalmReading!
+    createHandLineAnalysis(
+      palmReadingId: ID
+      lineName: String!
+      quality: String!
+      length: String!
+      direction: String
+    ): HandLineAnalysis!
+    createMountAnalysis(
+      palmReadingId: ID
+      mountName: String!
+      development: String!
+      size: Int!
+    ): MountAnalysis!
+    createFingerAnalysis(
+      palmReadingId: ID
+      fingerName: String!
+      length: String!
+      flexibility: String
+    ): FingerAnalysis!
+    createPalmMarking(
+      palmReadingId: ID
+      markingType: String!
+      location: String!
+      onLine: String
+      onMount: String
+      isPositive: Boolean!
+    ): PalmMarking!
+    calculatePalmCompatibility(
+      partnerHandShape: String!
+      partnerDominantPlanet: String!
+    ): PalmCompatibility!
+    startPalmRemedy(
+      palmReadingId: ID
+      issue: String!
+      area: String!
+      remedyType: String!
+      gemstone: String
+      mantra: String
+      lifestyleChanges: [String!]
+    ): PalmRemedy!
+    updatePalmRemedyProgress(
+      id: ID!
+      progress: Int!
+      notes: String
+    ): PalmRemedy!
+    uploadPalmImage(
+      imageUrl: String!
+      hand: String!
+      imageFormat: String!
+    ): PalmImageUpload!
   }
 
   # ==================== SUBSCRIPTIONS ====================

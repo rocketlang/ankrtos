@@ -1,0 +1,381 @@
+// =====================================================
+// PALMISTRY (CHIROMANCY) SYSTEM
+// Complete Palm Reading Database Schema
+// =====================================================
+
+model PalmReading {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Hand Information
+  dominantHand    String   // "left" or "right"
+  handShape       String   // "earth", "air", "water", "fire"
+  handElement     String   // "Earth", "Air", "Water", "Fire"
+
+  // Hand Shape Analysis
+  handCharacteristics String[]
+  handPersonality     String   @db.Text
+  handCareerSuggestions String[]
+  handRelationships   String   @db.Text
+
+  // Major Lines (stored as JSON for detailed data)
+  heartLine       Json     // {quality, length, meaning, positive[], negative[], remedies[]}
+  headLine        Json     // {quality, length, direction, meaning, positive[], negative[], remedies[]}
+  lifeLine        Json     // {quality, length, meaning, positive[], negative[], remedies[]}
+  fateLine        Json?    // Optional - {quality, presence, meaning, positive[], negative[], remedies[]}
+
+  // Mounts (7 planetary mounts)
+  mountOfJupiter  Json     // {development, meaning, characteristics[], career[], weaknesses[]}
+  mountOfSaturn   Json
+  mountOfApollo   Json
+  mountOfMercury  Json
+  mountOfMars     Json
+  mountOfVenus    Json
+  mountOfMoon     Json
+
+  // Fingers (5 fingers)
+  thumbAnalysis   Json     // {length, flexibility, meaning, traits[], phalanges}
+  jupiterFinger   Json     // Index finger
+  saturnFinger    Json     // Middle finger
+  apolloFinger    Json     // Ring finger
+  mercuryFinger   Json     // Little finger
+
+  // Minor Lines
+  hasSunLine      Boolean  @default(false)
+  sunLineQuality  String?
+  hasMercuryLine  Boolean  @default(false)
+  mercuryLineQuality String?
+  hasIntuitionLine Boolean @default(false)
+  marriageLineCount Int    @default(0)
+  travelLineCount   Int    @default(0)
+  childrenLineCount Int?
+
+  // Overall Analysis
+  overallPersonality    String   @db.Text
+  strengths             String[]
+  weaknesses            String[]
+  careerSuggestions     String[]
+  healthIndications     String[]
+  relationshipAnalysis  String   @db.Text
+  wealthPotential       String   @db.Text
+  lifeExpectancy        String   @db.Text
+
+  // Planetary Influences
+  planetaryInfluences   Json     // [{planet, strength, impact}]
+  dominantPlanet        String
+  weakestPlanet         String?
+  overallBalance        Int      // 0-100 score
+
+  // Remedies
+  remedies              Json     // [{area, suggestions[]}]
+
+  // Image (optional - for palm photo)
+  palmImageUrl          String?
+  palmImageAnalyzed     Boolean  @default(false)
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+  @@index([handShape])
+  @@index([dominantPlanet])
+}
+
+model HandLineAnalysis {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  palmReadingId   String?  // Link to main reading
+  palmReading     PalmReading? @relation(fields: [palmReadingId], references: [id], onDelete: SetNull)
+
+  // Specific line being analyzed
+  lineName        String   // "heart", "head", "life", "fate"
+  lineType        String   // "major" or "minor"
+
+  // Line Characteristics
+  quality         String   // "deep", "light", "broken", "chained", "forked", "absent"
+  length          String   // "long", "medium", "short"
+  depth           String?  // "very deep", "moderate", "faint"
+  direction       String?  // For head line: "straight", "sloping"
+
+  // Position Details
+  startPoint      String?
+  endPoint        String?
+  breaks          Int      @default(0)
+  branches        Int      @default(0)
+  islands         Int      @default(0) // Island formations
+  chains          Boolean  @default(false)
+
+  // Interpretation
+  meaning         String   @db.Text
+  positiveTraits  String[]
+  negativeTraits  String[]
+  lifeAreas       String[] // Areas of life affected
+
+  // Predictions
+  timingMarks     Json?    // [{age, event, significance}]
+  criticalPeriods String[]
+  opportunities   String[]
+  challenges      String[]
+
+  // Remedies
+  remedies        String[]
+  gemstones       String[]
+  mantras         String[]
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([lineName])
+}
+
+model MountAnalysis {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  palmReadingId   String?
+  palmReading     PalmReading? @relation(fields: [palmReadingId], references: [id], onDelete: SetNull)
+
+  // Mount Information
+  mountName       String   // "jupiter", "saturn", "apollo", "mercury", "mars", "venus", "moon"
+  planet          String   // Associated planet
+  location        String
+
+  // Development Level
+  development     String   // "well-developed", "normal", "flat", "over-developed"
+  size            Int      // 1-10 scale
+  firmness        String   // "firm", "soft", "hard"
+
+  // Markings on Mount
+  hasStarMark     Boolean  @default(false)
+  hasCrossMark    Boolean  @default(false)
+  hasTriangleMark Boolean  @default(false)
+  hasSquareMark   Boolean  @default(false) // Protective
+  hasGridMark     Boolean  @default(false)
+
+  // Interpretation
+  meaning         String   @db.Text
+  characteristics String[]
+  career          String[]
+  weaknesses      String[]
+
+  // Planetary Analysis
+  planetaryStrength Int    // 0-100
+  planetaryImpact   String @db.Text
+
+  // Remedies
+  remedies        String[]
+  gemstone        String
+  mantra          String
+  color           String
+  favorableDay    String
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([mountName])
+  @@index([planet])
+}
+
+model FingerAnalysis {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  palmReadingId   String?
+  palmReading     PalmReading? @relation(fields: [palmReadingId], references: [id], onDelete: SetNull)
+
+  // Finger Information
+  fingerName      String   // "thumb", "jupiter", "saturn", "apollo", "mercury"
+  planet          String   // Associated planet
+
+  // Physical Characteristics
+  length          String   // "long", "medium", "short"
+  relativeLength  String   // Compared to other fingers
+  flexibility     String   // "flexible", "stiff", "normal"
+  shape           String?  // "pointed", "square", "spatulate", "conical"
+
+  // Finger Tip
+  tipShape        String?  // "pointed", "square", "spatulate", "round"
+  tipMeaning      String?
+
+  // Phalanges (3 sections)
+  topPhalange     String   // Mental/spiritual realm
+  topLength       String   // "long", "medium", "short"
+  middlePhalange  String   // Practical realm
+  middleLength    String
+  bottomPhalange  String   // Material realm
+  bottomLength    String
+
+  // Knots (joints)
+  hasKnots        Boolean  @default(false)
+  knotsType       String?  // "philosophical", "material", "both"
+
+  // Nails
+  nailShape       String?  // "long", "short", "square", "fan-shaped"
+  nailCondition   String?
+
+  // Interpretation
+  meaning         String   @db.Text
+  traits          String[]
+  strengths       String[]
+  weaknesses      String[]
+
+  // Career & Life
+  careerIndications String[]
+  personalityImpact String   @db.Text
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([fingerName])
+}
+
+model PalmMarking {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  palmReadingId   String?
+  palmReading     PalmReading? @relation(fields: [palmReadingId], references: [id], onDelete: SetNull)
+
+  // Marking Type
+  markingType     String   // "star", "cross", "triangle", "square", "grid", "island", "circle", "trident"
+  location        String   // Where on palm
+  onLine          String?  // If on a line
+  onMount         String?  // If on a mount
+
+  // Interpretation
+  meaning         String   @db.Text
+  isPositive      Boolean
+  significance    String   // "high", "medium", "low"
+
+  // Timing
+  approximateAge  Int?     // If marking indicates timing
+  lifeEvent       String?
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([markingType])
+}
+
+model PalmCompatibility {
+  id              String   @id @default(cuid())
+  userId          String   // First person
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  partnerUserId   String?  // Second person (if registered)
+  partnerHandShape String  // Their hand shape
+  partnerDominantPlanet String
+
+  // User's data
+  userHandShape   String
+  userDominantPlanet String
+
+  // Compatibility Analysis
+  overallScore    Int      // 0-100
+  elementCompatibility String // How elements match
+  planetaryHarmony Int     // 0-100
+
+  // Detailed Compatibility
+  emotionalCompatibility Int  // 0-100
+  mentalCompatibility    Int  // 0-100
+  physicalCompatibility  Int  // 0-100
+  spiritualCompatibility Int  // 0-100
+
+  // Strengths & Challenges
+  relationshipStrengths String[]
+  relationshipChallenges String[]
+
+  // Advice
+  compatibility Analysis String   @db.Text
+  recommendations String[]
+  areasToWorkOn   String[]
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+}
+
+model PalmRemedy {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  palmReadingId   String?
+  palmReading     PalmReading? @relation(fields: [palmReadingId], references: [id], onDelete: SetNull)
+
+  // Issue Being Addressed
+  issue           String   // "weak venus", "broken heart line", etc.
+  area            String   // "love", "career", "health", "wealth"
+  severity        String   // "minor", "moderate", "major"
+
+  // Remedy Type
+  remedyType      String   // "gemstone", "mantra", "yantra", "ritual", "lifestyle"
+
+  // Gemstone Remedy
+  gemstone        String?
+  carats          Float?
+  finger          String?
+  metal           String?
+  dayToWear       String?
+
+  // Mantra Remedy
+  mantra          String?
+  repetitions     Int?
+  duration        String?  // "108 times daily for 40 days"
+
+  // Lifestyle Changes
+  lifestyleChanges String[]
+
+  // Other Remedies
+  charity         String?
+  fasting         String?
+  colors          String[]
+  directions      String[] // Favorable directions
+
+  // Tracking
+  started         DateTime?
+  completed       Boolean  @default(false)
+  progress        Int      @default(0) // 0-100
+  notes           String?  @db.Text
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+  @@index([area])
+}
+
+model PalmImageUpload {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  palmReadingId   String?  @unique
+  palmReading     PalmReading? @relation(fields: [palmReadingId], references: [id], onDelete: SetNull)
+
+  // Image Data
+  imageUrl        String
+  hand            String   // "left" or "right"
+  imageFormat     String   // "jpg", "png"
+  fileSize        Int      // bytes
+
+  // AI Analysis Status
+  analyzed        Boolean  @default(false)
+  analyzedAt      DateTime?
+  aiModel         String?  // Which AI model analyzed it
+
+  // Detected Features
+  detectedLines   Json?    // AI-detected lines
+  detectedMounts  Json?    // AI-detected mounts
+  detectedMarkings Json?   // AI-detected markings
+
+  // Quality Check
+  imageQuality    String?  // "excellent", "good", "poor"
+  handVisible     Boolean  @default(false)
+  linesVisible    Boolean  @default(false)
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([analyzed])
+}

@@ -1,0 +1,582 @@
+// =====================================================
+// SUBSCRIPTION & MONETIZATION SYSTEM
+// Free, Freemium, Pro, Enterprise Tiers
+// =====================================================
+
+enum SubscriptionTier {
+  FREE
+  FREEMIUM
+  PRO
+  ENTERPRISE
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  EXPIRED
+  CANCELLED
+  TRIAL
+  PENDING
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+model Subscription {
+  id              String             @id @default(cuid())
+  userId          String
+  user            User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Subscription Details
+  tier            SubscriptionTier   @default(FREE)
+  status          SubscriptionStatus @default(ACTIVE)
+
+  // Billing
+  amount          Float              @default(0)
+  currency        String             @default("INR")
+  billingCycle    String             // "monthly", "yearly"
+
+  // Dates
+  startDate       DateTime           @default(now())
+  endDate         DateTime?
+  trialEndsAt     DateTime?
+  cancelledAt     DateTime?
+
+  // Features
+  features        Json               // Enabled features for this tier
+  usageLimits     Json               // Usage limits (reports/month, etc.)
+
+  // Auto-renewal
+  autoRenew       Boolean            @default(true)
+  paymentMethodId String?
+
+  // Metadata
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+
+  // Relations
+  payments        Payment[]
+  usageTracking   UsageTracking[]
+
+  @@index([userId])
+  @@index([tier])
+  @@index([status])
+}
+
+model Payment {
+  id              String         @id @default(cuid())
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  subscriptionId  String?
+  subscription    Subscription?  @relation(fields: [subscriptionId], references: [id], onDelete: SetNull)
+
+  // Payment Details
+  amount          Float
+  currency        String         @default("INR")
+  status          PaymentStatus  @default(PENDING)
+
+  // Payment Gateway
+  gateway         String         // "razorpay", "stripe", "paypal"
+  gatewayOrderId  String?        // External order ID
+  gatewayPaymentId String?       // External payment ID
+  gatewaySignature String?       // For verification
+
+  // What was purchased
+  itemType        String         // "subscription", "report", "consultation"
+  itemId          String?        // ID of the purchased item
+  itemDescription String?
+
+  // Timestamps
+  paidAt          DateTime?
+  refundedAt      DateTime?
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([userId])
+  @@index([status])
+  @@index([gateway])
+}
+
+model UsageTracking {
+  id              String       @id @default(cuid())
+  userId          String
+  user            User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  subscriptionId  String
+  subscription    Subscription @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+
+  // Usage Metrics
+  month           String       // "2024-01" format
+  reportsGenerated Int         @default(0)
+  pdfDownloads    Int          @default(0)
+  questionsAsked  Int          @default(0)
+  consultations   Int          @default(0)
+  apiCalls        Int          @default(0)
+
+  // Limits
+  reportLimit     Int?
+  pdfLimit        Int?
+  questionLimit   Int?
+  consultationLimit Int?
+
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  @@unique([userId, month])
+  @@index([userId])
+  @@index([subscriptionId])
+}
+
+// =====================================================
+// TIER FEATURES CONFIGURATION
+// =====================================================
+
+model TierFeature {
+  id              String           @id @default(cuid())
+  tier            SubscriptionTier
+  featureName     String
+  enabled         Boolean          @default(true)
+  limit           Int?             // null = unlimited
+  description     String?
+
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  @@unique([tier, featureName])
+  @@index([tier])
+}
+
+// =====================================================
+// Q&A WITH JYOTISH ACHARYA RAKESH JI
+// =====================================================
+
+enum QuestionStatus {
+  PENDING
+  ANSWERED
+  REJECTED
+  PRIVATE
+}
+
+enum QuestionCategory {
+  CAREER
+  RELATIONSHIP
+  HEALTH
+  FINANCE
+  SPIRITUALITY
+  EDUCATION
+  FAMILY
+  GENERAL
+}
+
+model AskTheAcharya {
+  id              String           @id @default(cuid())
+  userId          String
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Question Details
+  category        QuestionCategory
+  question        String           @db.Text
+  additionalInfo  String?          @db.Text // Birth details, context
+  status          QuestionStatus   @default(PENDING)
+
+  // Answer
+  answer          String?          @db.Text
+  answeredBy      String?          // Admin/Astrologer ID
+  answeredAt      DateTime?
+
+  // Privacy
+  isPublic        Boolean          @default(false) // Show in public FAQ
+  isAnonymous     Boolean          @default(false) // Hide name if public
+
+  // Payment (Premium Feature)
+  isPaid          Boolean          @default(false)
+  paymentId       String?
+  payment         Payment?         @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+
+  // Priority
+  isPriority      Boolean          @default(false) // Enterprise tier gets priority
+  urgency         String?          // "low", "medium", "high"
+
+  // Engagement
+  likes           Int              @default(0)
+  views           Int              @default(0)
+  helpful         Int              @default(0) // How many found it helpful
+
+  // Metadata
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  // Relations
+  followUps       QuestionFollowUp[]
+
+  @@index([userId])
+  @@index([status])
+  @@index([category])
+  @@index([isPublic])
+}
+
+model QuestionFollowUp {
+  id              String         @id @default(cuid())
+  questionId      String
+  question        AskTheAcharya  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  message         String         @db.Text
+  isFromUser      Boolean        @default(true) // false if from Acharya
+
+  createdAt       DateTime       @default(now())
+
+  @@index([questionId])
+  @@index([userId])
+}
+
+// =====================================================
+// MARKETPLACE (JEWELERS & ASTROLOGERS)
+// =====================================================
+
+enum VendorType {
+  JEWELER
+  ASTROLOGER
+  HEALER
+  EDUCATOR
+}
+
+enum VendorStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  SUSPENDED
+}
+
+model Vendor {
+  id              String         @id @default(cuid())
+  userId          String         @unique
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Vendor Details
+  vendorType      VendorType
+  businessName    String
+  description     String         @db.Text
+  status          VendorStatus   @default(PENDING)
+
+  // Contact
+  phone           String
+  email           String
+  website         String?
+  address         String?        @db.Text
+
+  // KYC (Know Your Customer)
+  kycStatus       String         @default("pending") // "pending", "verified", "rejected"
+  kycDocuments    Json?          // Document URLs and details
+  verifiedAt      DateTime?
+
+  // Business Details
+  gstNumber       String?
+  panNumber       String?
+  businessLicense String?
+
+  // Rating
+  rating          Float          @default(0)
+  reviewCount     Int            @default(0)
+
+  // Commission
+  commissionRate  Float          @default(10) // Percentage
+
+  // Metadata
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  // Relations
+  products        Product[]
+  services        Service[]
+  reviews         VendorReview[]
+  orders          Order[]
+
+  @@index([vendorType])
+  @@index([status])
+  @@index([kycStatus])
+}
+
+model Product {
+  id              String         @id @default(cuid())
+  vendorId        String
+  vendor          Vendor         @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+
+  // Product Details
+  name            String
+  description     String         @db.Text
+  category        String         // "gemstone", "jewelry", "yantra", "crystal"
+
+  // For Gemstones
+  gemType         String?        // "Ruby", "Pearl", etc.
+  carats          Float?
+  quality         String?        // "AAA", "AA", "A"
+  certification   String?        // Certificate number
+
+  // Pricing
+  price           Float
+  currency        String         @default("INR")
+  discount        Float?         @default(0)
+  finalPrice      Float
+
+  // Inventory
+  stock           Int            @default(0)
+  isAvailable     Boolean        @default(true)
+
+  // Media
+  images          String[]       // Image URLs
+  videos          String[]       // Video URLs
+
+  // SEO
+  tags            String[]
+  slug            String         @unique
+
+  // Metadata
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  // Relations
+  orderItems      OrderItem[]
+
+  @@index([vendorId])
+  @@index([category])
+  @@index([gemType])
+}
+
+model Service {
+  id              String         @id @default(cuid())
+  vendorId        String
+  vendor          Vendor         @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+
+  // Service Details
+  name            String
+  description     String         @db.Text
+  category        String         // "consultation", "pooja", "healing", "course"
+
+  // Duration
+  duration        Int?           // minutes
+
+  // Pricing
+  price           Float
+  currency        String         @default("INR")
+
+  // Availability
+  isAvailable     Boolean        @default(true)
+
+  // Media
+  images          String[]
+
+  // Metadata
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  // Relations
+  bookings        ServiceBooking[]
+
+  @@index([vendorId])
+  @@index([category])
+}
+
+model Order {
+  id              String         @id @default(cuid())
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  vendorId        String
+  vendor          Vendor         @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+
+  // Order Details
+  orderNumber     String         @unique
+  status          String         @default("pending") // pending, confirmed, shipped, delivered, cancelled
+
+  // Pricing
+  subtotal        Float
+  commission      Float          // Platform commission
+  shipping        Float?         @default(0)
+  tax             Float?         @default(0)
+  total           Float
+
+  // Payment
+  paymentId       String?
+  payment         Payment?       @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+
+  // Shipping
+  shippingAddress String?        @db.Text
+  trackingNumber  String?
+
+  // Timestamps
+  confirmedAt     DateTime?
+  shippedAt       DateTime?
+  deliveredAt     DateTime?
+  cancelledAt     DateTime?
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  // Relations
+  items           OrderItem[]
+
+  @@index([userId])
+  @@index([vendorId])
+  @@index([status])
+}
+
+model OrderItem {
+  id              String         @id @default(cuid())
+  orderId         String
+  order           Order          @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  productId       String
+  product         Product        @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  quantity        Int
+  price           Float
+  total           Float
+
+  createdAt       DateTime       @default(now())
+
+  @@index([orderId])
+  @@index([productId])
+}
+
+model ServiceBooking {
+  id              String         @id @default(cuid())
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  serviceId       String
+  service         Service        @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  // Booking Details
+  scheduledAt     DateTime
+  duration        Int            // minutes
+  status          String         @default("pending") // pending, confirmed, completed, cancelled
+
+  // Payment
+  paymentId       String?
+  payment         Payment?       @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+
+  // Meeting Link (for online consultations)
+  meetingLink     String?
+  meetingId       String?
+
+  // Notes
+  userNotes       String?        @db.Text
+  vendorNotes     String?        @db.Text
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([userId])
+  @@index([serviceId])
+  @@index([scheduledAt])
+}
+
+model VendorReview {
+  id              String         @id @default(cuid())
+  vendorId        String
+  vendor          Vendor         @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  rating          Int            // 1-5
+  review          String?        @db.Text
+
+  // Order reference
+  orderId         String?
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([vendorId])
+  @@index([userId])
+}
+
+// =====================================================
+// KYC (KNOW YOUR CUSTOMER) SYSTEM
+// =====================================================
+
+enum KycDocumentType {
+  AADHAAR
+  PAN
+  PASSPORT
+  DRIVING_LICENSE
+  VOTER_ID
+  GST_CERTIFICATE
+  BUSINESS_LICENSE
+}
+
+enum KycStatus {
+  PENDING
+  UNDER_REVIEW
+  VERIFIED
+  REJECTED
+}
+
+model KycDocument {
+  id              String           @id @default(cuid())
+  userId          String
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Document Details
+  documentType    KycDocumentType
+  documentNumber  String
+  documentName    String?
+
+  // Files
+  frontImage      String           // URL to front image
+  backImage       String?          // URL to back image (if applicable)
+  additionalDocs  String[]         // Additional documents
+
+  // Verification
+  status          KycStatus        @default(PENDING)
+  verifiedBy      String?          // Admin ID who verified
+  verifiedAt      DateTime?
+  rejectionReason String?          @db.Text
+
+  // Metadata
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  @@index([userId])
+  @@index([status])
+  @@index([documentType])
+}
+
+model KycVerification {
+  id              String           @id @default(cuid())
+  userId          String           @unique
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Overall KYC Status
+  overallStatus   KycStatus        @default(PENDING)
+
+  // Required Documents Status
+  identityProof   Boolean          @default(false)
+  addressProof    Boolean          @default(false)
+  businessProof   Boolean?         // For vendors only
+
+  // Personal Details Verification
+  phoneVerified   Boolean          @default(false)
+  emailVerified   Boolean          @default(false)
+
+  // Verification Dates
+  completedAt     DateTime?
+  expiresAt       DateTime?        // KYC validity period
+
+  // Notes
+  verificationNotes String?        @db.Text
+
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  @@index([overallStatus])
+}

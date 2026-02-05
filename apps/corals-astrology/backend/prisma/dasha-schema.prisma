@@ -1,0 +1,371 @@
+// =====================================================
+// DASHA (PLANETARY PERIODS) SYSTEM
+// Vimshottari, Yogini, Jaimini Chara, Ashtottari
+// =====================================================
+
+model VimshottariDasha {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate  DateTime
+  moonLongitude Float  // Moon's position at birth
+
+  // Birth Nakshatra
+  birthNakshatra     Int     // 1-27
+  birthNakshatraName String  // "Ashwini", "Bharani", etc.
+  birthPada          Int     // 1-4
+  birthDashaLord     String  // Starting planet
+  completedPortion   Float   // 0-1 (portion of nakshatra completed)
+
+  // Balance of Birth Dasha
+  balanceDashaYears  Float
+  balanceDashaDays   Int
+
+  // Full Mahadasha Sequence (JSON)
+  mahaDashas Json    // Array of all 9 mahadashas with dates
+
+  // Current Running Periods (updated regularly)
+  currentMahaDasha      String?
+  currentMahaDashaStart DateTime?
+  currentMahaDashaEnd   DateTime?
+
+  currentAntarDasha      String?
+  currentAntarDashaStart DateTime?
+  currentAntarDashaEnd   DateTime?
+
+  currentPratyantarDasha      String?
+  currentPratyantarDashaStart DateTime?
+  currentPratyantarDashaEnd   DateTime?
+
+  // Metadata
+  calculatedAt DateTime @default(now())
+  lastUpdated  DateTime @updatedAt
+
+  // Relations
+  mahaDashaPredictions  MahaDashaPrediction[]
+  antarDashaPredictions AntarDashaPrediction[]
+
+  @@index([userId])
+  @@index([currentMahaDasha])
+}
+
+model MahaDashaPrediction {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  vimshottariId   String
+  vimshottari     VimshottariDasha @relation(fields: [vimshottariId], references: [id], onDelete: Cascade)
+
+  // Dasha Details
+  planet          String   // Sun, Moon, Mars, etc.
+  startDate       DateTime
+  endDate         DateTime
+  durationYears   Float
+  durationDays    Int
+
+  // Planet Strength in Chart
+  planetStrength  Int      // 0-100 scale
+  planetHouse     Int      // House position (1-12)
+  planetSign      String   // Zodiac sign
+  planetDignity   String   // "Exalted", "Own Sign", "Debilitated", etc.
+
+  // Predictions
+  isFavorable     Boolean
+  overallRating   Int      // 1-10 scale
+
+  positiveEffects String[] // Life improvements
+  negativeEffects String[] // Challenges
+  lifeAreas       String[] // Areas of focus
+
+  // Timing
+  peakPeriodStart DateTime? // Best 2-3 months
+  peakPeriodEnd   DateTime?
+
+  difficultPeriodStart DateTime? // Challenging months
+  difficultPeriodEnd   DateTime?
+
+  // Remedies
+  gemstone        String
+  mantra          String
+  mantraCount     Int
+  deity           String
+  fastingDay      String
+  charityItems    String[]
+  otherRemedies   String[]
+
+  // AI-Generated Detailed Prediction
+  detailedPrediction String @db.Text
+  keyEvents          String[] // Expected major events
+
+  // User Experience
+  userNotes       String?  @db.Text
+  actualEvents    String[] // What actually happened
+  accuracy        Int?     // User-rated accuracy 1-10
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+  @@index([planet])
+  @@index([startDate, endDate])
+}
+
+model AntarDashaPrediction {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  vimshottariId   String
+  vimshottari     VimshottariDasha @relation(fields: [vimshottariId], references: [id], onDelete: Cascade)
+
+  // Dasha Details
+  mahaDashaPlanet String   // Parent Mahadasha
+  antarDashaPlanet String  // This Antardasha
+  startDate       DateTime
+  endDate         DateTime
+  durationYears   Float
+  durationDays    Int
+
+  // Combined Analysis
+  planetCombination String // "Sun-Moon", "Mars-Jupiter", etc.
+  combinationEffect String // "Beneficial", "Neutral", "Challenging"
+
+  // Predictions (more specific than Mahadasha)
+  monthByMonthEvents Json  // Detailed monthly predictions
+
+  specificEvents     String[] // "Job change", "Marriage", etc.
+  suggestedActions   String[] // What to do during this period
+
+  // Remedies (specific to this sub-period)
+  specificRemedies   String[]
+
+  // Tracking
+  userFeedback       String?  @db.Text
+  actualOutcome      String?  @db.Text
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+  @@index([mahaDashaPlanet, antarDashaPlanet])
+  @@index([startDate, endDate])
+}
+
+model YoginiDasha {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate  DateTime
+  moonLongitude Float
+
+  // Yogini Sequence (8 yoginis, 36-year cycle)
+  birthYogini        String  // "Mangala", "Pingala", etc.
+  yoginiDashas       Json    // All 8 yogini periods
+
+  currentYogini      String?
+  currentYoginiStart DateTime?
+  currentYoginiEnd   DateTime?
+
+  // Predictions
+  predictions        Json    // Yogini-specific predictions
+
+  calculatedAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+model JaiminiCharaDasha {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate       DateTime
+  ascendantSign   String   // Lagna sign
+
+  // Chara Dasha Details
+  isReverseCycle  Boolean  // Even signs run reverse
+  charaDashas     Json     // All 12 sign periods (120 years)
+
+  currentSign      String?
+  currentSignStart DateTime?
+  currentSignEnd   DateTime?
+
+  // Sign-based Predictions
+  signPredictions  Json
+
+  calculatedAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+model AshtottariDasha {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate  DateTime
+  moonLongitude Float
+
+  // Applicable only when Rahu NOT in 1st, 7th, or 9th
+  isApplicable       Boolean
+  rahuHouse          Int     // Rahu's house position
+
+  // Ashtottari Sequence (8 planets, 108 years)
+  birthPlanet        String
+  ashtottariDashas   Json
+
+  currentPlanet      String?
+  currentPlanetStart DateTime?
+  currentPlanetEnd   DateTime?
+
+  calculatedAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+model DashaTransit {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // When a major dasha or antardasha changes
+  transitionDate DateTime
+  transitionType String   // "Mahadasha", "Antardasha", "Pratyantardasha"
+
+  outgoingPlanet String   // Exiting planet/sign
+  incomingPlanet String   // New planet/sign
+
+  // Transition Effects
+  transitionPeriod    Int    // Days before/after for adjustment
+  transitionChallenges String[]
+  preparationActions   String[]
+  rituals              String[] // Specific rituals for transition
+
+  // Remedies for smooth transition
+  transitionRemedies   String[]
+
+  // Notification
+  notifyUser      Boolean  @default(true)
+  notificationSent Boolean @default(false)
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([transitionDate])
+}
+
+model DashaCompatibility {
+  id         String   @id @default(cuid())
+
+  user1Id    String
+  user1      User     @relation("DashaUser1", fields: [user1Id], references: [id], onDelete: Cascade)
+
+  user2Id    String
+  user2      User     @relation("DashaUser2", fields: [user2Id], references: [id], onDelete: Cascade)
+
+  // Current Dasha Analysis
+  user1CurrentMaha    String
+  user1CurrentAntar   String
+  user2CurrentMaha    String
+  user2CurrentAntar   String
+
+  // Compatibility Score
+  compatibilityScore  Int      // 0-100
+  compatibilityLevel  String   // "Excellent", "Good", "Moderate", "Challenging"
+
+  // Analysis
+  harmonizedAreas     String[] // Where dashas align well
+  conflictAreas       String[] // Where dashas conflict
+  recommendations     String[] // How to handle differences
+
+  // Future Outlook
+  upcomingHarmony     DateTime? // When dashas will be very compatible
+  upcomingChallenges  DateTime? // When to be cautious
+
+  calculatedAt DateTime @default(now())
+
+  @@index([user1Id])
+  @@index([user2Id])
+}
+
+model DashaTiming {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Event Timing Using Dasha
+  eventType       String   // "Marriage", "Job Change", "House Purchase", etc.
+  questionDate    DateTime
+
+  // Analysis
+  currentDashaSupport Boolean  // Does current dasha support this event?
+  favorableRating     Int      // 1-10
+
+  // Best Timing
+  bestPeriodStart  DateTime?
+  bestPeriodEnd    DateTime?
+  bestDashaCombination String? // "Jupiter-Venus" etc.
+
+  // Warning Periods
+  avoidPeriodStart DateTime?
+  avoidPeriodEnd   DateTime?
+  avoidReason      String?
+
+  // Recommendation
+  recommendation   String   @db.Text
+  astrologerNotes  String?  @db.Text
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([eventType])
+}
+
+model DashaRemedyTracking {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Which Dasha Period
+  dashaPlanet     String
+  dashaStartDate  DateTime
+  dashaEndDate    DateTime
+
+  // Recommended Remedies
+  gemstone        String
+  mantra          String
+  mantraCount     Int      // Daily/total target
+  deity           String
+  fastingDay      String
+  charityItems    String[]
+  specificActions String[]
+
+  // Tracking
+  startedRemedies    Boolean  @default(false)
+  remedyStartDate    DateTime?
+
+  completedMantras   Int      @default(0)
+  completedFasts     Int      @default(0)
+  completedCharities Int      @default(0)
+  wearingGemstone    Boolean  @default(false)
+
+  // Progress
+  weeklyProgress     Json?    // Weekly check-ins
+  observedBenefits   String[]
+  challenges         String[]
+
+  // Results
+  effectivenessRating Int?    // 1-10 after completion
+  wouldRecommend      Boolean?
+
+  notes              String?  @db.Text
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+  @@index([dashaPlanet])
+}

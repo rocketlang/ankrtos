@@ -1,0 +1,272 @@
+// Medical Astrology & Ayurvedic Jyotish Schema
+// Links planetary positions with health, doshas, and disease prediction
+
+model MedicalAstroChart {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Birth details (from natal chart)
+  birthDate DateTime
+  kundliId  String?  // Link to Vedic Kundli if exists
+
+  // Ayurvedic Constitution (Prakriti - प्रकृति)
+  dominantDosha    String // Vata, Pitta, Kapha
+  secondaryDosha   String?
+  doshaPercentages Json   // { vata: 40, pitta: 35, kapha: 25 }
+  constitutionType String // Single, Dual, or Tridoshic
+
+  // Planetary Health Indicators
+  sunHealth      Json // { strength: 0-100, body_parts: [], issues: [], remedies: [] }
+  moonHealth     Json
+  marsHealth     Json
+  mercuryHealth  Json
+  jupiterHealth  Json
+  venusHealth    Json
+  saturnHealth   Json
+  rahuHealth     Json
+  ketuHealth     Json
+
+  // Critical Houses for Health
+  firstHouseHealth  Json // Physical body, vitality
+  sixthHouseHealth  Json // Disease, enemies, obstacles
+  eighthHouseHealth Json // Chronic illness, longevity
+  twelfthHouseHealth Json // Hospitalization, losses
+
+  // Body Systems Analysis
+  cardiovascularSystem  Json // Heart, blood circulation
+  respiratorySystem     Json // Lungs, breathing
+  digestiveSystem       Json // Stomach, intestines, liver
+  nervousSystem         Json // Brain, nerves
+  muscularSystem        Json // Muscles, strength
+  skeletalSystem        Json // Bones, joints
+  endocrineSystem       Json // Hormones, glands
+  reproductiveSystem    Json // Fertility, sexual health
+  immuneSystem          Json // Immunity, resistance
+  urinarySystem         Json // Kidneys, bladder
+
+  // Disease Susceptibility
+  primaryVulnerabilities String[] // Top health concerns
+  chronicConditions      String[] // Long-term issues
+  acuteRisks            String[] // Sudden health problems
+  mentalHealth          Json     // Anxiety, depression, stress
+  lifeForceStrength     Int      // 0-100 overall vitality
+
+  // Timing of Health Events
+  criticalPeriods Json // Dashas/transits indicating health crisis
+  recoveryPeriods Json // Favorable times for healing
+  surgeryTiming   Json // Best/worst times for surgery
+
+  // Preventive Measures
+  dietRecommendations     String[] @db.Text
+  lifestyleGuidance       String[] @db.Text
+  exerciseRecommendations String[] @db.Text
+  yogaAsanas             String[] // Specific poses
+  pranayama              String[] // Breathing exercises
+  meditation             String[] // Mental health practices
+
+  // Ayurvedic Remedies
+  herbsAndSupplements String[]
+  pachakarmaRecommended Boolean
+  rasayanaTherapy       String[] // Rejuvenation
+  shodhanaTherapy       String[] // Detoxification
+
+  // Astrological Remedies
+  gemstones        String[]
+  mantras          String[]
+  yantras          String[]
+  charitableDonations String[]
+  fastingDays      String[] // Specific days to fast
+  deityWorship     String[] // Gods/goddesses for health
+
+  // Overall Health Analysis
+  overallHealthScore Int    @db.SmallInt // 0-100
+  longevityIndicator String // Excellent, Good, Average, Poor
+  vitalityLevel      String // High, Medium, Low
+  healthReport       String @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  healthPredictions HealthPrediction[]
+  remedyTracking    RemedyTracking[]
+
+  @@unique([userId, birthDate])
+  @@index([userId])
+  @@index([dominantDosha])
+}
+
+// Specific Health Predictions with Timing
+model HealthPrediction {
+  id                String   @id @default(cuid())
+  userId            String
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  medicalChartId    String
+  medicalChart      MedicalAstroChart @relation(fields: [medicalChartId], references: [id], onDelete: Cascade)
+
+  // Prediction Details
+  healthIssue       String   // Name of condition
+  affectedBodyParts String[] // Heart, liver, etc.
+  severity          String   // Mild, Moderate, Severe
+  likelihood        Int      // 0-100 probability
+
+  // Timing
+  predictedStartDate DateTime?
+  predictedEndDate   DateTime?
+  dashaAtTime       String   // Which planetary period
+  transitAtTime     String   // Which transits trigger it
+
+  // Planetary Causes
+  afflictingPlanets String[] // Planets causing issue
+  afflictedHouses   Int[]    // Houses involved
+  negativeAspects   String[] // Harmful aspects
+
+  // Symptoms
+  symptoms          String[] @db.Text
+  earlyWarnings     String[] @db.Text
+
+  // Prevention & Treatment
+  preventiveMeasures String @db.Text
+  treatmentAdvice    String @db.Text
+  urgencyLevel       String // Emergency, Urgent, Monitor, Routine
+
+  // Ayurvedic Analysis
+  doshaImbalance    String   // Which dosha is disturbed
+  elementalCause    String   // Excess/deficiency of element
+
+  status            String   @default("predicted") // predicted, manifested, avoided, recovered
+  userNotes         String?  @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([medicalChartId])
+  @@index([predictedStartDate])
+  @@index([status])
+}
+
+// Track Remedy Effectiveness
+model RemedyTracking {
+  id             String   @id @default(cuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  medicalChartId String
+  medicalChart   MedicalAstroChart @relation(fields: [medicalChartId], references: [id], onDelete: Cascade)
+
+  // Remedy Details
+  remedyType     String   // Gemstone, Mantra, Herb, Lifestyle, Diet, etc.
+  remedyName     String
+  targetIssue    String   // What health problem it addresses
+  planet         String?  // Associated planet
+  dosha          String?  // Associated dosha
+
+  // Instructions
+  dosage         String?  // For herbs/supplements
+  frequency      String   // Daily, weekly, etc.
+  duration       String   // How long to continue
+  instructions   String   @db.Text
+  precautions    String?  @db.Text
+
+  // Timing
+  startDate      DateTime
+  endDate        DateTime?
+  bestTime       String?  // Time of day to take/do
+
+  // Tracking
+  isActive       Boolean  @default(true)
+  adherenceScore Int?     // 0-100 how well user follows
+  effectiveness  Int?     // 0-100 how well it works
+  userFeedback   String?  @db.Text
+  sideEffects    String?  @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([medicalChartId])
+  @@index([isActive])
+}
+
+// Dosha Test Results (for users without exact birth time)
+model DoshaAssessment {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Assessment Type
+  assessmentType String // Prakriti (constitution) or Vikriti (current imbalance)
+
+  // Physical Characteristics
+  bodyFrame      String // Thin/Medium/Large
+  weight         String // Light/Medium/Heavy
+  skin           String // Dry/Warm/Oily
+  hair           String // Dry/Fine/Thick
+  eyes           String // Small/Medium/Large
+  appetite       String // Variable/Strong/Steady
+  digestion      String // Irregular/Quick/Slow
+  sleepPattern   String // Light/Moderate/Heavy
+
+  // Mental Characteristics
+  mentalActivity String // Quick/Sharp/Calm
+  memory         String // Short-term/Sharp/Long-term
+  emotionalTendency String // Anxious/Irritable/Calm
+  stressResponse String // Worry/Anger/Withdraw
+
+  // Calculated Results
+  vataScore      Int // 0-100
+  pittaScore     Int
+  kaphaScore     Int
+  dominantDosha  String
+  secondaryDosha String?
+  imbalanceSeverity String? // For Vikriti assessment
+
+  // Recommendations
+  balancingFoods     String[]
+  avoidFoods         String[]
+  lifestyleAdvice    String @db.Text
+  seasonalGuidance   String @db.Text
+
+  assessmentDate DateTime @default(now())
+
+  @@index([userId])
+  @@index([dominantDosha])
+}
+
+// Planetary Transit Health Alerts
+model HealthTransitAlert {
+  id       String   @id @default(cuid())
+  userId   String
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Transit Details
+  planet         String   // Which planet
+  transitType    String   // Through house, aspecting planet, etc.
+  affectedHouse  Int      // Which house
+  affectedPlanet String?  // If aspecting natal planet
+
+  // Health Impact
+  healthImpact   String   // Positive, Negative, Neutral
+  affectedAreas  String[] // Body parts/systems
+  riskLevel      String   // Low, Medium, High
+
+  // Timing
+  startDate      DateTime
+  endDate        DateTime
+  peakDate       DateTime? // Most intense period
+
+  // Advice
+  precautions    String   @db.Text
+  remedies       String[] @db.Text
+  opportunities  String?  @db.Text // For positive transits
+
+  isActive       Boolean  @default(true)
+  userNotified   Boolean  @default(false)
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([startDate])
+  @@index([isActive])
+}

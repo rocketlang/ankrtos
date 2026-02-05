@@ -1,0 +1,280 @@
+// Numerology Schema
+// Pythagorean and Chaldean systems
+
+model NumerologyChart {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Input Data
+  fullName      String
+  birthDate     DateTime
+  preferredName String? // Nickname or name used daily
+
+  // Core Numbers (Pythagorean System)
+  lifePathNumber      Int    // Most important - life purpose
+  destinyNumber       Int    // Expression Number - talents and abilities
+  soulUrgeNumber      Int    // Heart's Desire - inner motivations
+  personalityNumber   Int    // How others see you
+  birthdayNumber      Int    // Special talents from birth day
+  maturityNumber      Int    // Goals for later life
+
+  // Name Numbers
+  fullNameValue       Int
+  firstNameValue      Int
+  middleNameValue     Int?
+  lastNameValue       Int
+
+  // Master Numbers (11, 22, 33)
+  hasMasterNumber     Boolean  @default(false)
+  masterNumbers       Int[]    // Which master numbers appear
+
+  // Karmic Debt Numbers (13, 14, 16, 19)
+  hasKarmicDebt       Boolean  @default(false)
+  karmicDebtNumbers   Int[]
+
+  // Personal Year/Month/Day
+  currentPersonalYear Int
+  currentPersonalMonth Int
+  currentPersonalDay   Int
+
+  // Pinnacle Cycles (4 major life periods)
+  firstPinnacle       Json     // { number, startAge, endAge, meaning }
+  secondPinnacle      Json
+  thirdPinnacle       Json
+  fourthPinnacle      Json
+
+  // Challenge Numbers (4 challenges)
+  firstChallenge      Json
+  secondChallenge     Json
+  thirdChallenge      Json
+  fourthChallenge     Json
+
+  // Lucky Numbers
+  luckyNumbers        Int[]
+  luckyDays           String[]
+  luckyColors         String[]
+  luckyGemstones      String[]
+
+  // Compatibility
+  compatibleNumbers   Int[]
+  conflictingNumbers  Int[]
+
+  // Interpretations
+  lifePathMeaning     String   @db.Text
+  destinyMeaning      String   @db.Text
+  soulUrgeMeaning     String   @db.Text
+  personalityMeaning  String   @db.Text
+  overallAnalysis     String   @db.Text
+
+  // Predictions
+  strengths           String[] @db.Text
+  weaknesses          String[] @db.Text
+  opportunities       String[] @db.Text
+  challenges          String[] @db.Text
+
+  // Career & Money
+  careerPaths         String[]
+  businessLuck        String   @db.Text
+  financialForecast   String   @db.Text
+
+  // Relationships
+  loveCompatibility   String   @db.Text
+  friendshipStyle     String   @db.Text
+  familyDynamics      String   @db.Text
+
+  // Health (number-based tendencies)
+  healthTendencies    String[] @db.Text
+  wellnessAdvice      String   @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, fullName, birthDate])
+  @@index([userId])
+  @@index([lifePathNumber])
+}
+
+// Personal Year Forecast
+model PersonalYearForecast {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  year           Int
+  personalYear   Int    // 1-9, 11, 22, 33
+  universalYear  Int    // Current year reduced
+
+  // Monthly Breakdown
+  monthlyForecasts Json  // Array of 12 months
+
+  // Theme of the Year
+  yearTheme      String
+  keyFocus       String   @db.Text
+  opportunities  String[] @db.Text
+  challenges     String[] @db.Text
+  advice         String   @db.Text
+
+  // Best Months
+  bestMonths     Int[]    // Month numbers
+  challengingMonths Int[]
+
+  // Timing for Major Events
+  goodForLove        Boolean
+  goodForCareer      Boolean
+  goodForFinance     Boolean
+  goodForHealth      Boolean
+  goodForTravel      Boolean
+  goodForEducation   Boolean
+  goodForBusiness    Boolean
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, year])
+  @@index([userId])
+  @@index([year])
+}
+
+// Numerology Compatibility
+model NumerologyCompatibility {
+  id String @id @default(cuid())
+
+  // Person 1
+  user1Id      String
+  user1        User             @relation("NumUser1", fields: [user1Id], references: [id], onDelete: Cascade)
+  chart1Id     String
+  chart1       NumerologyChart  @relation("NumChart1", fields: [chart1Id], references: [id], onDelete: Cascade)
+
+  // Person 2
+  user2Id      String?
+  user2        User?            @relation("NumUser2", fields: [user2Id], references: [id], onDelete: Cascade)
+  chart2Id     String
+  chart2       NumerologyChart  @relation("NumChart2", fields: [chart2Id], references: [id], onDelete: Cascade)
+
+  // Compatibility Scores (0-100)
+  overallScore       Int
+  lifePathMatch      Int
+  destinyMatch       Int
+  soulUrgeMatch      Int
+  personalityMatch   Int
+
+  // Relationship Type
+  relationshipType   String // Romantic, Business, Friendship, Family
+  harmonyLevel       String // Excellent, Good, Moderate, Challenging
+
+  // Analysis
+  strengths          String[] @db.Text
+  challenges         String[] @db.Text
+  advice             String   @db.Text
+  longTermProspects  String   @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([chart1Id, chart2Id])
+  @@index([user1Id])
+}
+
+// Name Change Analysis
+model NameChangeAnalysis {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  currentName    String
+  proposedName   String
+  reason         String   // Marriage, Career, Personal preference
+
+  // Current vs New Numbers
+  currentDestiny      Int
+  newDestiny          Int
+  currentSoulUrge     Int
+  newSoulUrge         Int
+  currentPersonality  Int
+  newPersonality      Int
+
+  // Impact Analysis
+  positiveImpacts    String[] @db.Text
+  negativeImpacts    String[] @db.Text
+  neutralChanges     String[] @db.Text
+
+  // Recommendation
+  recommended        Boolean
+  recommendationText String   @db.Text
+  alternativeNames   String[] // If not recommended
+
+  // Best Timing
+  bestDateToChange   DateTime?
+  personalYearForChange Int?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+}
+
+// Business Name Numerology
+model BusinessNameNumerology {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  businessName     String
+  businessType     String  // Retail, Service, Tech, etc.
+  foundingDate     DateTime?
+
+  // Name Value
+  nameNumber       Int
+  destinyNumber    Int     // Combined with founding date
+
+  // Business Success Indicators
+  financialLuck    Int     // 0-100
+  growthPotential  Int
+  stabilityScore   Int
+  innovationScore  Int
+
+  // Analysis
+  strengths        String[] @db.Text
+  weaknesses       String[] @db.Text
+  suitableFor      String[] // Industries/business types
+  recommendations  String   @db.Text
+
+  // Lucky Elements
+  luckyColors      String[]
+  luckyNumbers     Int[]
+  luckyDays        String[]
+
+  // Name Alternatives
+  alternativeNames Json     // If current name is not optimal
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([nameNumber])
+}
+
+// Phone Number Numerology
+model PhoneNumberNumerology {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  phoneNumber      String
+  numberValue      Int     // Sum of all digits
+  reducedNumber    Int     // Single digit or master
+
+  // Analysis
+  energyType       String  // Active, Passive, Balanced
+  suitability      String  @db.Text
+  luckyForUser     Boolean
+  recommendation   String  @db.Text
+
+  // Suggested Alternatives
+  betterNumbers    String[] // If current is not lucky
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}

@@ -1,6 +1,8 @@
 # CoralsAstrology 🔮✨
 
-A modern, AI-powered astrology platform providing personalized horoscopes, birth chart analysis, and astrology consultations.
+**Founded by Jyotish Acharya Rakesh Sharma**
+
+A modern, AI-powered astrology platform providing personalized horoscopes, birth chart analysis, and astrology consultations. Combining 25+ years of traditional Vedic wisdom with cutting-edge AI technology.
 
 ## 🌟 Features
 
@@ -140,6 +142,22 @@ Analyzes synastry between two birth charts to determine relationship compatibili
 
 ### 5. Consultation Booking
 Real-time availability calendar for booking sessions with professional astrologers.
+
+## 👨‍🏫 About the Founder
+
+**Jyotish Acharya Rakesh Sharma** is the visionary founder and chief astrologer of CoralsAstrology. With over 25 years of deep expertise in:
+
+- 📿 **Vedic Astrology (Jyotish Shastra)** - Traditional birth chart analysis and predictions
+- 📕 **Lal Kitab** - Unique remedial astrology system with practical solutions
+- 🔢 **KP System** - Krishnamurti Paddhati for precise predictions
+- ❓ **Prashna Kundali** - Horary astrology for answering specific questions
+- 🔮 **Numerology** - Life path and destiny number analysis
+- 🏠 **Vastu Shastra** - Architectural harmony and energy flow
+- 💎 **Gemstone Consultation** - Personalized gemstone recommendations
+
+Jyotish Acharya Rakesh Sharma has guided over 1,500 clients worldwide, helping them navigate life's challenges through the ancient wisdom of Vedic astrology combined with modern AI technology. His mission is to make authentic astrological guidance accessible to everyone through CoralsAstrology.
+
+**Contact:** acharya.rakesh@coralsastrology.com
 
 ## 🗺️ Roadmap
 

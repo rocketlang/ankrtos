@@ -1,0 +1,245 @@
+// =====================================================
+// LO SHU GRID (VEDIC NUMEROLOGY) SYSTEM
+// 3x3 Magic Square Analysis
+// =====================================================
+
+model LoShuChart {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate       DateTime
+  dateString      String   // "15-08-1990"
+
+  // Grid Data
+  gridData        Json     // 3x3 array [[0,2,1],[0,1,0],[1,1,0]]
+  allNumbers      Int[]    // All digits from birth date
+  presentNumbers  Int[]    // Unique numbers (1-9) present
+  missingNumbers  Int[]    // Numbers (1-9) missing
+
+  // Repeated Numbers
+  repeatedNumbers Json     // [{number: 1, count: 2}]
+
+  // Core Numbers
+  mulank          Int      // Root number (day reduced)
+  bhagyank        Int      // Destiny number (full date)
+  naamank         Int?     // Name number (optional)
+
+  // Planetary Analysis (9 planets)
+  planetaryRulers Json     // [{number, planet, strength, count}]
+
+  // Arrows (8 positive + 8 negative)
+  arrowsPresent   Json     // [{name, type, numbers, meaning, impact}]
+  arrowsMissing   Json     // Missing arrows indicate weaknesses
+
+  // Planes Analysis
+  mentalPlaneCount    Int  // Count of numbers 1,2,3
+  mentalPlaneStrength String // strong/moderate/weak
+  emotionalPlaneCount Int  // Count of 4,5,6
+  emotionalPlaneStrength String
+  physicalPlaneCount  Int  // Count of 7,8,9
+  physicalPlaneStrength String
+
+  // Analysis Results
+  strengths       String[]
+  weaknesses      String[]
+  personalityAnalysis String @db.Text
+  careerSuggestions String[]
+  relationshipAnalysis String @db.Text
+  healthIndications String[]
+
+  // Remedies for Missing Numbers
+  remedies        Json     // [{missingNumber, planet, gemstone, mantra, color, day}]
+
+  // Additional Insights
+  luckyNumbers    Int[]
+  luckyColors     String[]
+  luckyDays       String[]
+  luckyGems       String[]
+
+  // Overall Balance
+  overallBalance  Int      // 0-100 score
+  dominantPlanet  String   // Most strong planet
+  weakestPlanet   String?  // Most absent planet
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+  @@index([birthDate])
+}
+
+model VedicNumerologyReading {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Includes Lo Shu + additional Vedic methods
+  loShuGridId     String?  // Link to Lo Shu chart if calculated
+
+  birthDate       DateTime
+  fullName        String
+
+  // Vedic Specific Numbers
+  mulank          Int      // Driver number
+  bhagyank        Int      // Conductor number
+  naamank         Int      // Name number
+
+  // Advanced Vedic Analysis
+  personalYear    Int      // Current year number
+  personalMonth   Int      // Current month number
+  personalDay     Int      // Current day number
+
+  // Compatibility Numbers
+  friendlyNumbers Int[]
+  enemyNumbers    Int[]
+  neutralNumbers  Int[]
+
+  // Life Cycles (Vedic Pinnacles)
+  firstCycle      Json     // Age 0-27
+  secondCycle     Json     // Age 28-54
+  thirdCycle      Json     // Age 55+
+
+  // Predictions
+  currentPhase    String   @db.Text
+  opportunities   String[]
+  challenges      String[]
+  recommendations String[]
+
+  // Remedies
+  mantras         String[]
+  gemstones       String[]
+  charityActions  String[]
+  fastingDays     String[]
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+}
+
+model TamilNumerologyChart {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate       DateTime
+  fullName        String
+
+  // Tamil uses compound numbers (10-78)
+  primaryNumber   Int      // Main compound number
+  secondaryNumber Int?     // Secondary influence
+
+  // Detailed Interpretation
+  numberMeaning   String   @db.Text
+  characteristics String[]
+  lucky Features  String[]
+  challenges      String[]
+
+  // Tamil Specific
+  starConsonant   String   // Based on birth star
+  planetaryLord   String   // Ruling planet
+  yogaType        String   // Yoga category
+
+  // Life Areas
+  career          String   @db.Text
+  marriage        String   @db.Text
+  health          String   @db.Text
+  wealth          String   @db.Text
+
+  // Remedies
+  recommendedGems String[]
+  mantras         String[]
+  deities         String[]
+  colors          String[]
+
+  // Compatibility
+  compatibleNumbers Int[]
+  avoidNumbers      Int[]
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+}
+
+model ChineseNumerologyAnalysis {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Based on pronunciation and symbolism
+  phoneNumber     String?
+  houseNumber     String?
+  businessName    String?
+  vehicleNumber   String?
+
+  // Analysis
+  luckyRating     Int      // 1-10
+  unluckyNumbers  Int[]    // Numbers to avoid (especially 4)
+  luckyNumbers    Int[]    // Especially 6, 8, 9
+
+  // Number Combinations
+  numberCombination String
+  pronunciation     String
+  symbolism         String
+  fengShuiImpact    String   @db.Text
+
+  // Recommendations
+  betterAlternatives String[]
+  enhancementTips    String[]
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+}
+
+model KabbalahNumerologyChart {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  fullName        String
+  hebrewName      String?
+
+  // Tree of Life (10 Sephiroth)
+  sephirothPath   Json     // Connection to 10 spheres
+
+  // Core Number (1-9)
+  soulNumber      Int
+  personalityNumber Int
+  destinyNumber   Int
+
+  // Kabbalah Specific
+  treePosition    String   // Position on Tree of Life
+  spiritualPath   String   @db.Text
+  lifeLesson      String   @db.Text
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+}
+
+model YantraNumerologyChart {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate       DateTime
+
+  // 9x9 Yantra Grid
+  yantraGrid      Json     // 9x9 sacred geometry pattern
+  coreNumber      Int      // 1-9
+
+  // Yantra Design
+  yantraPattern   String   // Description of pattern
+  meditationYantra String  // Which yantra to meditate on
+  manifestationNumber Int  // For manifestation
+
+  // Spiritual Practice
+  mantra          String
+  meditationTime  String
+  yantraPlacement String
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+}

@@ -57,6 +57,93 @@ model User {
   savedHoroscopes SavedHoroscope[]
   compatibilityChecks CompatibilityCheck[]
 
+  // BaZi (Chinese Astrology) Relations
+  baziCharts BaZiChart[]
+  baziAnnualReadings BaZiAnnualReading[]
+  baziCompatibility1 BaZiCompatibility[] @relation("BaZiUser1")
+  baziCompatibility2 BaZiCompatibility[] @relation("BaZiUser2")
+  baziElementTherapy BaZiElementTherapy[]
+
+  // Medical Astrology & Ayurveda Relations
+  medicalCharts MedicalAstroChart[]
+  healthPredictions HealthPrediction[]
+  remedyTracking RemedyTracking[]
+  doshaAssessments DoshaAssessment[]
+  healthTransitAlerts HealthTransitAlert[]
+
+  // Numerology Relations
+  numerologyCharts NumerologyChart[]
+  personalYearForecasts PersonalYearForecast[]
+  numerologyCompatibility1 NumerologyCompatibility[] @relation("NumUser1")
+  numerologyCompatibility2 NumerologyCompatibility[] @relation("NumUser2")
+  nameChangeAnalyses NameChangeAnalysis[]
+  businessNames BusinessNameNumerology[]
+  phoneNumbers PhoneNumberNumerology[]
+
+  // Crystal & Gemstone Therapy Relations
+  gemstoneRecommendations GemstoneRecommendation[]
+  crystalHealingSessions CrystalHealingSession[]
+  upayaRemedyPlans UpayaRemedyPlan[]
+  gemstoneCollection GemstoneCollection[]
+  chakraAssessments ChakraAssessment[]
+  yantraRecommendations YantraRecommendation[]
+
+  // Dasha (Planetary Periods) Relations
+  vimshottariDashas VimshottariDasha[]
+  mahaDashaPredictions MahaDashaPrediction[]
+  antarDashaPredictions AntarDashaPrediction[]
+  yoginiDashas YoginiDasha[]
+  jaiminiCharaDashas JaiminiCharaDasha[]
+  ashtottariDashas AshtottariDasha[]
+  dashaTransits DashaTransit[]
+  dashaCompatibility1 DashaCompatibility[] @relation("DashaUser1")
+  dashaCompatibility2 DashaCompatibility[] @relation("DashaUser2")
+  dashaTimings DashaTiming[]
+  dashaRemedyTracking DashaRemedyTracking[]
+
+  // Advanced Numerology Relations
+  loShuCharts LoShuChart[]
+  vedicNumerologyReadings VedicNumerologyReading[]
+  tamilNumerologyCharts TamilNumerologyChart[]
+  chineseNumerologyAnalyses ChineseNumerologyAnalysis[]
+  kabbalahNumerologyCharts KabbalahNumerologyChart[]
+  yantraNumerologyCharts YantraNumerologyChart[]
+
+  // Palmistry (Chiromancy) Relations
+  palmReadings PalmReading[]
+  handLineAnalyses HandLineAnalysis[]
+  mountAnalyses MountAnalysis[]
+  fingerAnalyses FingerAnalysis[]
+  palmMarkings PalmMarking[]
+  palmCompatibility1 PalmCompatibility[] @relation("PalmUser1")
+  palmRemedies PalmRemedy[]
+  palmImageUploads PalmImageUpload[]
+
+  // Subscription & Monetization Relations
+  subscriptions Subscription[]
+  payments Payment[]
+  usageTracking UsageTracking[]
+
+  // Q&A with Acharya Relations
+  questions AskTheAcharya[]
+  questionFollowUps QuestionFollowUp[]
+
+  // Marketplace Relations
+  vendor Vendor?
+  orders Order[]
+  serviceBookings ServiceBooking[]
+  vendorReviews VendorReview[]
+
+  // KYC Relations
+  kycDocuments KycDocument[]
+  kycVerification KycVerification?
+
+  // Pandit System Relations
+  pandit Pandit?
+  panditBookings PanditBooking[]
+  panditReviews PanditReview[]
+  spiritualConsultations SpiritualConsultation[]
+
   @@map("users")
 }
 
@@ -478,4 +565,3167 @@ model SystemConfig {
   updatedAt DateTime @updatedAt
 
   @@map("system_config")
+}
+// Chinese BaZi (Four Pillars of Destiny) Schema
+
+model BaZiChart {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Birth Details
+  birthDate DateTime
+  birthTime String
+  birthPlace String
+  birthLat  Float
+  birthLng  Float
+  timezone  String
+  gender    String // Male/Female affects luck pillars
+
+  // Solar Calendar (used for calculation)
+  solarYear  Int
+  solarMonth Int
+  solarDay   Int
+  solarHour  Int
+
+  // Four Pillars (Year, Month, Day, Hour)
+  yearStem   String // 天干 Heavenly Stem
+  yearBranch String // 地支 Earthly Branch
+  monthStem  String
+  monthBranch String
+  dayStem    String // Day Master - most important
+  dayBranch  String
+  hourStem   String
+  hourBranch String
+
+  // Elements in each pillar
+  yearElement   String // Wood, Fire, Earth, Metal, Water
+  monthElement  String
+  dayElement    String // Core element
+  hourElement   String
+
+  // Hidden Stems (藏干) in each Branch
+  yearHiddenStems  String[] // JSON array
+  monthHiddenStems String[]
+  dayHiddenStems   String[]
+  hourHiddenStems  String[]
+
+  // Element Balance
+  woodStrength   Int // 0-100
+  fireStrength   Int
+  earthStrength  Int
+  metalStrength  Int
+  waterStrength  Int
+
+  // Dominant element
+  strongestElement String
+  weakestElement   String
+
+  // Day Master Analysis
+  dayMaster         String // The Day Stem
+  dayMasterElement  String
+  dayMasterStrength String // Strong/Weak/Balanced
+
+  // Useful God (用神) and Harmful God (忌神)
+  usefulGod   String // Beneficial element
+  harmfulGod  String // Harmful element
+  joyfulGod   String // Supporting element
+  fearfulGod  String // Weakening element
+
+  // Ten Gods (十神) for each pillar
+  yearTenGod  String
+  monthTenGod String
+  dayTenGod   String
+  hourTenGod  String
+
+  // Special Stars and Indicators
+  nobbleStars      String[] // 天乙贵人
+  peachBlossom     Boolean  // 桃花 Romance/attraction
+  travelHorse      Boolean  // 驿马 Travel/movement
+  academicStar     Boolean  // 文昌 Education/intelligence
+  loneStar         Boolean  // 孤辰寡宿 Loneliness
+  emptyBranch      String[] // 空亡 Void branches
+
+  // Clashes and Combinations
+  branchClashes      String[] // 相冲
+  branchCombinations String[] // 六合、三合
+  stemClashes        String[] // 天干相冲
+  stemCombinations   String[] // 天干相合
+
+  // Luck Pillars (大运 - 10 year periods)
+  luckPillars Json // Array of 8-10 luck pillars
+
+  // Life Palace (命宫)
+  lifePalaceStem   String
+  lifePalaceBranch String
+
+  // Conception Palace (胎元)
+  conceptionStem   String
+  conceptionBranch String
+
+  // Chart Structure Analysis
+  chartStructure String // Follow, Strong, Weak, Special
+  chartPattern   String // Formation type
+
+  // Predictions by Life Aspect
+  careerPrediction      String @db.Text
+  wealthPrediction      String @db.Text
+  relationshipPrediction String @db.Text
+  healthPrediction      String @db.Text
+  educationPrediction   String @db.Text
+
+  // Overall Analysis
+  overallAnalysis String @db.Text
+  strengths       String @db.Text
+  weaknesses      String @db.Text
+  recommendations String @db.Text
+
+  // Remedies
+  luckyColors     String[]
+  luckyNumbers    Int[]
+  luckyDirections String[]
+  favorableElements String[]
+  careerSuggestions String[]
+
+  // Relations
+  annualReadings BaZiAnnualReading[]
+  compatibility1 BaZiCompatibility[] @relation("BaZiChart1")
+  compatibility2 BaZiCompatibility[] @relation("BaZiChart2")
+  elementTherapy BaZiElementTherapy[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, birthDate])
+  @@index([userId])
+  @@index([dayMasterElement])
+}
+
+// Annual BaZi (流年 - Yearly Predictions)
+model BaZiAnnualReading {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  baziChartId String?
+  baziChart   BaZiChart? @relation(fields: [baziChartId], references: [id], onDelete: Cascade)
+
+  year        Int
+  yearStem    String
+  yearBranch  String
+  yearElement String
+
+  // Interaction with natal chart
+  clashesWithNatal       String[]
+  combinesWithNatal      String[]
+  harmfulInteractions    String[]
+  beneficialInteractions String[]
+
+  // Year Analysis
+  overallLuck        Int // 1-100
+  careerLuck         Int
+  wealthLuck         Int
+  relationshipLuck   Int
+  healthLuck         Int
+
+  // Monthly predictions
+  monthlyForecasts Json // 12 months breakdown
+
+  // Key events to watch
+  importantMonths String[]
+  warningMonths   String[]
+
+  predictions     String @db.Text
+  opportunities   String @db.Text
+  challenges      String @db.Text
+  advice          String @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, year])
+  @@index([userId])
+  @@index([year])
+}
+
+// BaZi Compatibility (Marriage/Partnership Analysis)
+model BaZiCompatibility {
+  id String @id @default(cuid())
+
+  // Person 1
+  user1Id      String
+  user1        User      @relation("BaZiUser1", fields: [user1Id], references: [id], onDelete: Cascade)
+  chart1Id     String
+  chart1       BaZiChart @relation("BaZiChart1", fields: [chart1Id], references: [id], onDelete: Cascade)
+
+  // Person 2
+  user2Id      String?
+  user2        User?     @relation("BaZiUser2", fields: [user2Id], references: [id], onDelete: Cascade)
+  chart2Id     String
+  chart2       BaZiChart @relation("BaZiChart2", fields: [chart2Id], references: [id], onDelete: Cascade)
+
+  // Element Compatibility
+  elementHarmony      Int // 0-100
+  elementBalance      String // Complementary/Supportive/Neutral/Conflicting
+  dayMasterCompatibility Int // How well day masters interact
+
+  // Ten Gods Relationship
+  relationshipType String // Resource, Companion, Output, Wealth, Authority
+  powerDynamics    String // Equal/Dominant/Submissive
+
+  // Special Combinations/Clashes
+  beneficialCombos  String[]
+  harmfulClashes    String[]
+
+  // Compatibility Scores
+  overallScore      Int // 0-100
+  emotionalScore    Int
+  intellectualScore Int
+  physicalScore     Int
+  financialScore    Int
+  longtermScore     Int
+
+  // Analysis
+  strengths      String @db.Text
+  challenges     String @db.Text
+  advice         String @db.Text
+  recommendations String @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([chart1Id, chart2Id])
+  @@index([user1Id])
+}
+
+// Element Therapy Recommendations
+model BaZiElementTherapy {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  baziChartId String
+  baziChart   BaZiChart @relation(fields: [baziChartId], references: [id], onDelete: Cascade)
+
+  // Element to enhance
+  targetElement String
+  reason        String @db.Text
+
+  // Lifestyle Recommendations
+  colors        String[] // Colors to wear
+  materials     String[] // Materials to use (wood, metal, etc)
+  directions    String[] // Favorable directions
+  locations     String[] // Favorable locations (near water, mountains, etc)
+
+  // Career Guidance
+  favorableIndustries String[]
+  unfavorableIndustries String[]
+
+  // Diet Recommendations
+  foodsToEat    String[]
+  foodsToAvoid  String[]
+
+  // Home/Office Feng Shui
+  roomPlacement   String
+  deskDirection   String
+  decorSuggestions String[]
+
+  // Activities
+  hobbies         String[]
+  exercises       String[]
+
+  // Timing
+  favorableMonths Int[] // 1-12
+  favorableHours  String[] // 子时, 丑时, etc
+
+  // Crystals/Stones (element-based)
+  recommendedStones String[]
+
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId])
+  @@index([baziChartId])
+}
+// Medical Astrology & Ayurvedic Jyotish Schema
+// Links planetary positions with health, doshas, and disease prediction
+
+model MedicalAstroChart {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Birth details (from natal chart)
+  birthDate DateTime
+  kundliId  String?  // Link to Vedic Kundli if exists
+
+  // Ayurvedic Constitution (Prakriti - प्रकृति)
+  dominantDosha    String // Vata, Pitta, Kapha
+  secondaryDosha   String?
+  doshaPercentages Json   // { vata: 40, pitta: 35, kapha: 25 }
+  constitutionType String // Single, Dual, or Tridoshic
+
+  // Planetary Health Indicators
+  sunHealth      Json // { strength: 0-100, body_parts: [], issues: [], remedies: [] }
+  moonHealth     Json
+  marsHealth     Json
+  mercuryHealth  Json
+  jupiterHealth  Json
+  venusHealth    Json
+  saturnHealth   Json
+  rahuHealth     Json
+  ketuHealth     Json
+
+  // Critical Houses for Health
+  firstHouseHealth  Json // Physical body, vitality
+  sixthHouseHealth  Json // Disease, enemies, obstacles
+  eighthHouseHealth Json // Chronic illness, longevity
+  twelfthHouseHealth Json // Hospitalization, losses
+
+  // Body Systems Analysis
+  cardiovascularSystem  Json // Heart, blood circulation
+  respiratorySystem     Json // Lungs, breathing
+  digestiveSystem       Json // Stomach, intestines, liver
+  nervousSystem         Json // Brain, nerves
+  muscularSystem        Json // Muscles, strength
+  skeletalSystem        Json // Bones, joints
+  endocrineSystem       Json // Hormones, glands
+  reproductiveSystem    Json // Fertility, sexual health
+  immuneSystem          Json // Immunity, resistance
+  urinarySystem         Json // Kidneys, bladder
+
+  // Disease Susceptibility
+  primaryVulnerabilities String[] // Top health concerns
+  chronicConditions      String[] // Long-term issues
+  acuteRisks            String[] // Sudden health problems
+  mentalHealth          Json     // Anxiety, depression, stress
+  lifeForceStrength     Int      // 0-100 overall vitality
+
+  // Timing of Health Events
+  criticalPeriods Json // Dashas/transits indicating health crisis
+  recoveryPeriods Json // Favorable times for healing
+  surgeryTiming   Json // Best/worst times for surgery
+
+  // Preventive Measures
+  dietRecommendations     String[] @db.Text
+  lifestyleGuidance       String[] @db.Text
+  exerciseRecommendations String[] @db.Text
+  yogaAsanas             String[] // Specific poses
+  pranayama              String[] // Breathing exercises
+  meditation             String[] // Mental health practices
+
+  // Ayurvedic Remedies
+  herbsAndSupplements String[]
+  pachakarmaRecommended Boolean
+  rasayanaTherapy       String[] // Rejuvenation
+  shodhanaTherapy       String[] // Detoxification
+
+  // Astrological Remedies
+  gemstones        String[]
+  mantras          String[]
+  yantras          String[]
+  charitableDonations String[]
+  fastingDays      String[] // Specific days to fast
+  deityWorship     String[] // Gods/goddesses for health
+
+  // Overall Health Analysis
+  overallHealthScore Int    @db.SmallInt // 0-100
+  longevityIndicator String // Excellent, Good, Average, Poor
+  vitalityLevel      String // High, Medium, Low
+  healthReport       String @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  healthPredictions HealthPrediction[]
+  remedyTracking    RemedyTracking[]
+
+  @@unique([userId, birthDate])
+  @@index([userId])
+  @@index([dominantDosha])
+}
+
+// Specific Health Predictions with Timing
+model HealthPrediction {
+  id                String   @id @default(cuid())
+  userId            String
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  medicalChartId    String
+  medicalChart      MedicalAstroChart @relation(fields: [medicalChartId], references: [id], onDelete: Cascade)
+
+  // Prediction Details
+  healthIssue       String   // Name of condition
+  affectedBodyParts String[] // Heart, liver, etc.
+  severity          String   // Mild, Moderate, Severe
+  likelihood        Int      // 0-100 probability
+
+  // Timing
+  predictedStartDate DateTime?
+  predictedEndDate   DateTime?
+  dashaAtTime       String   // Which planetary period
+  transitAtTime     String   // Which transits trigger it
+
+  // Planetary Causes
+  afflictingPlanets String[] // Planets causing issue
+  afflictedHouses   Int[]    // Houses involved
+  negativeAspects   String[] // Harmful aspects
+
+  // Symptoms
+  symptoms          String[] @db.Text
+  earlyWarnings     String[] @db.Text
+
+  // Prevention & Treatment
+  preventiveMeasures String @db.Text
+  treatmentAdvice    String @db.Text
+  urgencyLevel       String // Emergency, Urgent, Monitor, Routine
+
+  // Ayurvedic Analysis
+  doshaImbalance    String   // Which dosha is disturbed
+  elementalCause    String   // Excess/deficiency of element
+
+  status            String   @default("predicted") // predicted, manifested, avoided, recovered
+  userNotes         String?  @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([medicalChartId])
+  @@index([predictedStartDate])
+  @@index([status])
+}
+
+// Track Remedy Effectiveness
+model RemedyTracking {
+  id             String   @id @default(cuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  medicalChartId String
+  medicalChart   MedicalAstroChart @relation(fields: [medicalChartId], references: [id], onDelete: Cascade)
+
+  // Remedy Details
+  remedyType     String   // Gemstone, Mantra, Herb, Lifestyle, Diet, etc.
+  remedyName     String
+  targetIssue    String   // What health problem it addresses
+  planet         String?  // Associated planet
+  dosha          String?  // Associated dosha
+
+  // Instructions
+  dosage         String?  // For herbs/supplements
+  frequency      String   // Daily, weekly, etc.
+  duration       String   // How long to continue
+  instructions   String   @db.Text
+  precautions    String?  @db.Text
+
+  // Timing
+  startDate      DateTime
+  endDate        DateTime?
+  bestTime       String?  // Time of day to take/do
+
+  // Tracking
+  isActive       Boolean  @default(true)
+  adherenceScore Int?     // 0-100 how well user follows
+  effectiveness  Int?     // 0-100 how well it works
+  userFeedback   String?  @db.Text
+  sideEffects    String?  @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([medicalChartId])
+  @@index([isActive])
+}
+
+// Dosha Test Results (for users without exact birth time)
+model DoshaAssessment {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Assessment Type
+  assessmentType String // Prakriti (constitution) or Vikriti (current imbalance)
+
+  // Physical Characteristics
+  bodyFrame      String // Thin/Medium/Large
+  weight         String // Light/Medium/Heavy
+  skin           String // Dry/Warm/Oily
+  hair           String // Dry/Fine/Thick
+  eyes           String // Small/Medium/Large
+  appetite       String // Variable/Strong/Steady
+  digestion      String // Irregular/Quick/Slow
+  sleepPattern   String // Light/Moderate/Heavy
+
+  // Mental Characteristics
+  mentalActivity String // Quick/Sharp/Calm
+  memory         String // Short-term/Sharp/Long-term
+  emotionalTendency String // Anxious/Irritable/Calm
+  stressResponse String // Worry/Anger/Withdraw
+
+  // Calculated Results
+  vataScore      Int // 0-100
+  pittaScore     Int
+  kaphaScore     Int
+  dominantDosha  String
+  secondaryDosha String?
+  imbalanceSeverity String? // For Vikriti assessment
+
+  // Recommendations
+  balancingFoods     String[]
+  avoidFoods         String[]
+  lifestyleAdvice    String @db.Text
+  seasonalGuidance   String @db.Text
+
+  assessmentDate DateTime @default(now())
+
+  @@index([userId])
+  @@index([dominantDosha])
+}
+
+// Planetary Transit Health Alerts
+model HealthTransitAlert {
+  id       String   @id @default(cuid())
+  userId   String
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Transit Details
+  planet         String   // Which planet
+  transitType    String   // Through house, aspecting planet, etc.
+  affectedHouse  Int      // Which house
+  affectedPlanet String?  // If aspecting natal planet
+
+  // Health Impact
+  healthImpact   String   // Positive, Negative, Neutral
+  affectedAreas  String[] // Body parts/systems
+  riskLevel      String   // Low, Medium, High
+
+  // Timing
+  startDate      DateTime
+  endDate        DateTime
+  peakDate       DateTime? // Most intense period
+
+  // Advice
+  precautions    String   @db.Text
+  remedies       String[] @db.Text
+  opportunities  String?  @db.Text // For positive transits
+
+  isActive       Boolean  @default(true)
+  userNotified   Boolean  @default(false)
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([startDate])
+  @@index([isActive])
+}
+// Numerology Schema
+// Pythagorean and Chaldean systems
+
+model NumerologyChart {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Input Data
+  fullName      String
+  birthDate     DateTime
+  preferredName String? // Nickname or name used daily
+
+  // Core Numbers (Pythagorean System)
+  lifePathNumber      Int    // Most important - life purpose
+  destinyNumber       Int    // Expression Number - talents and abilities
+  soulUrgeNumber      Int    // Heart's Desire - inner motivations
+  personalityNumber   Int    // How others see you
+  birthdayNumber      Int    // Special talents from birth day
+  maturityNumber      Int    // Goals for later life
+
+  // Name Numbers
+  fullNameValue       Int
+  firstNameValue      Int
+  middleNameValue     Int?
+  lastNameValue       Int
+
+  // Master Numbers (11, 22, 33)
+  hasMasterNumber     Boolean  @default(false)
+  masterNumbers       Int[]    // Which master numbers appear
+
+  // Karmic Debt Numbers (13, 14, 16, 19)
+  hasKarmicDebt       Boolean  @default(false)
+  karmicDebtNumbers   Int[]
+
+  // Personal Year/Month/Day
+  currentPersonalYear Int
+  currentPersonalMonth Int
+  currentPersonalDay   Int
+
+  // Pinnacle Cycles (4 major life periods)
+  firstPinnacle       Json     // { number, startAge, endAge, meaning }
+  secondPinnacle      Json
+  thirdPinnacle       Json
+  fourthPinnacle      Json
+
+  // Challenge Numbers (4 challenges)
+  firstChallenge      Json
+  secondChallenge     Json
+  thirdChallenge      Json
+  fourthChallenge     Json
+
+  // Lucky Numbers
+  luckyNumbers        Int[]
+  luckyDays           String[]
+  luckyColors         String[]
+  luckyGemstones      String[]
+
+  // Compatibility
+  compatibleNumbers   Int[]
+  conflictingNumbers  Int[]
+
+  // Interpretations
+  lifePathMeaning     String   @db.Text
+  destinyMeaning      String   @db.Text
+  soulUrgeMeaning     String   @db.Text
+  personalityMeaning  String   @db.Text
+  overallAnalysis     String   @db.Text
+
+  // Predictions
+  strengths           String[] @db.Text
+  weaknesses          String[] @db.Text
+  opportunities       String[] @db.Text
+  challenges          String[] @db.Text
+
+  // Career & Money
+  careerPaths         String[]
+  businessLuck        String   @db.Text
+  financialForecast   String   @db.Text
+
+  // Relationships
+  loveCompatibility   String   @db.Text
+  friendshipStyle     String   @db.Text
+  familyDynamics      String   @db.Text
+
+  // Health (number-based tendencies)
+  healthTendencies    String[] @db.Text
+  wellnessAdvice      String   @db.Text
+
+  // Relations
+  compatibility1 NumerologyCompatibility[] @relation("NumChart1")
+  compatibility2 NumerologyCompatibility[] @relation("NumChart2")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, fullName, birthDate])
+  @@index([userId])
+  @@index([lifePathNumber])
+}
+
+// Personal Year Forecast
+model PersonalYearForecast {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  year           Int
+  personalYear   Int    // 1-9, 11, 22, 33
+  universalYear  Int    // Current year reduced
+
+  // Monthly Breakdown
+  monthlyForecasts Json  // Array of 12 months
+
+  // Theme of the Year
+  yearTheme      String
+  keyFocus       String   @db.Text
+  opportunities  String[] @db.Text
+  challenges     String[] @db.Text
+  advice         String   @db.Text
+
+  // Best Months
+  bestMonths     Int[]    // Month numbers
+  challengingMonths Int[]
+
+  // Timing for Major Events
+  goodForLove        Boolean
+  goodForCareer      Boolean
+  goodForFinance     Boolean
+  goodForHealth      Boolean
+  goodForTravel      Boolean
+  goodForEducation   Boolean
+  goodForBusiness    Boolean
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, year])
+  @@index([userId])
+  @@index([year])
+}
+
+// Numerology Compatibility
+model NumerologyCompatibility {
+  id String @id @default(cuid())
+
+  // Person 1
+  user1Id      String
+  user1        User             @relation("NumUser1", fields: [user1Id], references: [id], onDelete: Cascade)
+  chart1Id     String
+  chart1       NumerologyChart  @relation("NumChart1", fields: [chart1Id], references: [id], onDelete: Cascade)
+
+  // Person 2
+  user2Id      String?
+  user2        User?            @relation("NumUser2", fields: [user2Id], references: [id], onDelete: Cascade)
+  chart2Id     String
+  chart2       NumerologyChart  @relation("NumChart2", fields: [chart2Id], references: [id], onDelete: Cascade)
+
+  // Compatibility Scores (0-100)
+  overallScore       Int
+  lifePathMatch      Int
+  destinyMatch       Int
+  soulUrgeMatch      Int
+  personalityMatch   Int
+
+  // Relationship Type
+  relationshipType   String // Romantic, Business, Friendship, Family
+  harmonyLevel       String // Excellent, Good, Moderate, Challenging
+
+  // Analysis
+  strengths          String[] @db.Text
+  challenges         String[] @db.Text
+  advice             String   @db.Text
+  longTermProspects  String   @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([chart1Id, chart2Id])
+  @@index([user1Id])
+}
+
+// Name Change Analysis
+model NameChangeAnalysis {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  currentName    String
+  proposedName   String
+  reason         String   // Marriage, Career, Personal preference
+
+  // Current vs New Numbers
+  currentDestiny      Int
+  newDestiny          Int
+  currentSoulUrge     Int
+  newSoulUrge         Int
+  currentPersonality  Int
+  newPersonality      Int
+
+  // Impact Analysis
+  positiveImpacts    String[] @db.Text
+  negativeImpacts    String[] @db.Text
+  neutralChanges     String[] @db.Text
+
+  // Recommendation
+  recommended        Boolean
+  recommendationText String   @db.Text
+  alternativeNames   String[] // If not recommended
+
+  // Best Timing
+  bestDateToChange   DateTime?
+  personalYearForChange Int?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+}
+
+// Business Name Numerology
+model BusinessNameNumerology {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  businessName     String
+  businessType     String  // Retail, Service, Tech, etc.
+  foundingDate     DateTime?
+
+  // Name Value
+  nameNumber       Int
+  destinyNumber    Int     // Combined with founding date
+
+  // Business Success Indicators
+  financialLuck    Int     // 0-100
+  growthPotential  Int
+  stabilityScore   Int
+  innovationScore  Int
+
+  // Analysis
+  strengths        String[] @db.Text
+  weaknesses       String[] @db.Text
+  suitableFor      String[] // Industries/business types
+  recommendations  String   @db.Text
+
+  // Lucky Elements
+  luckyColors      String[]
+  luckyNumbers     Int[]
+  luckyDays        String[]
+
+  // Name Alternatives
+  alternativeNames Json     // If current name is not optimal
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([nameNumber])
+}
+
+// Phone Number Numerology
+model PhoneNumberNumerology {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  phoneNumber      String
+  numberValue      Int     // Sum of all digits
+  reducedNumber    Int     // Single digit or master
+
+  // Analysis
+  energyType       String  // Active, Passive, Balanced
+  suitability      String  @db.Text
+  luckyForUser     Boolean
+  recommendation   String  @db.Text
+
+  // Suggested Alternatives
+  betterNumbers    String[] // If current is not lucky
+
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
+// =====================================================
+// CRYSTAL & GEMSTONE THERAPY SYSTEM (RATNA CHIKITSA)
+// Traditional Vedic Gemology + Modern Crystal Healing
+// =====================================================
+
+model GemstoneRecommendation {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Chart Analysis
+  chartType       String   // "natal", "transit", "dasha"
+  analysisDate    DateTime @default(now())
+
+  // Primary Gemstone (Navaratna)
+  primaryGem      String   // Ruby, Pearl, Red Coral, etc.
+  primaryPlanet   String   // Sun, Moon, Mars, etc.
+  primaryPurpose  String   // "Strengthen career", "Health", etc.
+
+  // Wearing Instructions
+  fingerToWear    String   // Ring, Middle, Index, Little
+  handToWear      String   // Right, Left
+  metalToUse      String   // Gold, Silver, Copper, etc.
+  dayToWear       String   // Sunday, Monday, etc.
+  timeToWear      String   // "Sunrise", "2 hours after sunrise"
+  nakshatra       String?  // Auspicious nakshatra for wearing
+
+  // Gemstone Details
+  minimumCarats   Float    // Minimum weight
+  recommendedCarats Float  // Recommended weight
+  qualityGrade    String   // Premium, Standard, Budget
+  estimatedCost   Float    // In INR
+
+  // Purification (Shuddhi)
+  purificationMethod String[] // ["Gangajal", "Raw milk", "Honey"]
+  purificationMantra String
+  purificationDuration Int   // Minutes
+
+  // Energization (Prana Pratishtha)
+  energizationMantra String
+  energizationCount   Int    // How many times to chant
+  energizationDeity   String
+
+  // Substitute Gems (for expensive stones)
+  substituteGems  String[] // Affordable alternatives
+
+  // Contraindications
+  avoidIf         String[] // Conditions when NOT to wear
+  sideEffects     String[] // Possible negative effects
+  trialPeriod     Int      // Days to test before permanent use
+
+  // Additional Recommendations
+  secondaryGem    String?
+  secondaryPlanet String?
+
+  // Chakra & Color Therapy
+  chakraAssociation String // Root, Sacral, Solar Plexus, etc.
+  colorTherapy      String
+
+  // Results
+  expectedBenefits String[]
+  timeToShowResults Int    // Days
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model CrystalHealingSession {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Session Details
+  sessionDate     DateTime
+  sessionType     String   // "chakra_balancing", "aura_cleansing", "manifestation"
+  duration        Int      // Minutes
+
+  // Crystals Used
+  crystalsUsed    Json     // [{name: "Rose Quartz", purpose: "Heart healing"}]
+
+  // Chakra Assessment
+  rootChakra      String   // "balanced", "blocked", "overactive"
+  sacralChakra    String
+  solarPlexus     String
+  heartChakra     String
+  throatChakra    String
+  thirdEye        String
+  crownChakra     String
+
+  // Intention & Results
+  intention       String
+  experiencedBenefits String[]
+  nextSessionDate DateTime?
+
+  // Practitioner
+  practitioner    String?  // If guided session
+  location        String   // "In-person", "Remote", "Self-practice"
+
+  notes           String?
+  createdAt       DateTime @default(now())
+}
+
+model UpayaRemedyPlan {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Problem Analysis
+  issue           String   // "Career obstacles", "Health problems", etc.
+  affectedPlanet  String   // Weak or malefic planet
+  affectedHouse   Int      // House number
+  severity        String   // "mild", "moderate", "severe"
+
+  // Gemstone Remedy
+  gemstoneRemedy  Json?    // Full gemstone recommendation
+
+  // Mantra Therapy
+  mantraToChant   String
+  mantraCount     Int      // Daily repetitions
+  mantraDuration  Int      // Days to continue
+  mantraTime      String   // "Morning", "Evening", etc.
+  mantraBenefits  String[]
+
+  // Yantra Recommendation
+  yantraType      String?  // "Sri Yantra", "Navgraha Yantra", etc.
+  yantraPlacement String?  // Where to keep
+  yantraActivation String? // How to energize
+
+  // Charity/Daan
+  charityItem     String[] // ["Black sesame", "Iron", "Blue cloth"]
+  charityDay      String   // Day of week
+  charityBeneficiary String // "Poor people", "Temple", etc.
+
+  // Fasting Protocol
+  fastingDay      String?  // "Saturday", "Tuesday"
+  fastingType     String?  // "Complete", "Partial", "Specific foods"
+  fastingDuration Int?     // Weeks
+
+  // Deity Worship
+  deityToWorship  String   // "Lord Shani", "Hanuman", etc.
+  worshipDay      String
+  worshipOffering String[] // Flowers, fruits, etc.
+
+  // Color Therapy
+  favorableColors String[]
+  avoidColors     String[]
+
+  // Metal Therapy
+  metalToWear     String?  // "Iron ring", "Copper bracelet"
+  metalPlacement  String?
+
+  // Lifestyle Changes
+  lifestyleChanges String[]
+
+  // Tracking
+  startDate       DateTime
+  endDate         DateTime?
+  progress        String   @default("active") // active, completed, discontinued
+  effectiveness   Int?     // 1-10 rating
+  userFeedback    String?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model GemstoneCollection {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Gemstone Details
+  gemName         String   // "Ruby", "Emerald", "Rose Quartz"
+  gemType         String   // "Navaratna", "Modern Crystal", "Semi-precious"
+  planet          String?  // Associated planet (for Vedic gems)
+
+  // Physical Properties
+  caratWeight     Float
+  color           String
+  clarity         String   // "Eye clean", "Minor inclusions"
+  cut             String   // "Oval", "Round", "Cushion"
+  origin          String   // "Burma", "Sri Lanka", "Brazil"
+
+  // Acquisition
+  purchaseDate    DateTime
+  purchaseCost    Float
+  vendor          String?
+  certificate     String?  // Certificate number
+
+  // Setting
+  setIn           String?  // "Gold ring", "Silver pendant"
+  jewelry         String?  // Description
+
+  // Energization Status
+  purified        Boolean  @default(false)
+  purificationDate DateTime?
+  energized       Boolean  @default(false)
+  energizationDate DateTime?
+
+  // Usage
+  currentlyWearing Boolean @default(false)
+  wearingSince    DateTime?
+  wearingPurpose  String?
+
+  // Maintenance
+  lastCleaned     DateTime?
+  cleaningMethod  String?  // "Moonlight", "Salt water", "Sage smoke"
+
+  // Effects & Tracking
+  observedBenefits String[]
+  sideEffects     String[]
+  effectiveness   Int?     // 1-10 rating
+
+  notes           String?
+  photos          String[] // URLs to photos
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model ChakraAssessment {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  assessmentDate  DateTime @default(now())
+  assessmentType  String   // "self", "professional", "astrological"
+
+  // Individual Chakra Status
+  chakras         Json     // Detailed assessment of all 7 chakras
+
+  // Root Chakra (Muladhara)
+  rootStatus      String   // "balanced", "blocked", "overactive"
+  rootPercentage  Int      // 0-100
+  rootIssues      String[]
+  rootCrystals    String[] // ["Red Jasper", "Black Tourmaline"]
+  rootMantras     String[] // ["LAM"]
+
+  // Sacral Chakra (Svadhisthana)
+  sacralStatus    String
+  sacralPercentage Int
+  sacralIssues    String[]
+  sacralCrystals  String[] // ["Carnelian", "Orange Calcite"]
+  sacralMantras   String[] // ["VAM"]
+
+  // Solar Plexus (Manipura)
+  solarStatus     String
+  solarPercentage Int
+  solarIssues     String[]
+  solarCrystals   String[] // ["Citrine", "Yellow Topaz"]
+  solarMantras    String[] // ["RAM"]
+
+  // Heart Chakra (Anahata)
+  heartStatus     String
+  heartPercentage Int
+  heartIssues     String[]
+  heartCrystals   String[] // ["Rose Quartz", "Green Aventurine"]
+  heartMantras    String[] // ["YAM"]
+
+  // Throat Chakra (Vishuddha)
+  throatStatus    String
+  throatPercentage Int
+  throatIssues    String[]
+  throatCrystals  String[] // ["Blue Lace Agate", "Aquamarine"]
+  throatMantras   String[] // ["HAM"]
+
+  // Third Eye (Ajna)
+  thirdEyeStatus  String
+  thirdEyePercentage Int
+  thirdEyeIssues  String[]
+  thirdEyeCrystals String[] // ["Amethyst", "Lapis Lazuli"]
+  thirdEyeMantras String[] // ["OM"]
+
+  // Crown Chakra (Sahasrara)
+  crownStatus     String
+  crownPercentage Int
+  crownIssues     String[]
+  crownCrystals   String[] // ["Clear Quartz", "Selenite"]
+  crownMantras    String[] // ["AUM"]
+
+  // Overall Assessment
+  overallBalance  Int      // 0-100
+  primaryBlockage String?  // Which chakra needs most attention
+  recommendations String[]
+
+  // Follow-up
+  nextAssessment  DateTime?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model YantraRecommendation {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Yantra Details
+  yantraName      String   // "Sri Yantra", "Navgraha Yantra", etc.
+  yantraType      String   // "Prosperity", "Protection", "Health"
+  purpose         String
+  associatedPlanet String? // For planetary yantras
+  associatedDeity String
+
+  // Material & Construction
+  material        String   // "Copper", "Silver", "Bhojpatra", "Crystal"
+  size            String   // Dimensions
+  mantraEngraved  String?  // Mantra on yantra
+
+  // Placement
+  direction       String   // "East", "North", "Northeast"
+  location        String   // "Puja room", "Office desk", "Bedroom"
+  height          String   // Placement height
+
+  // Energization
+  energizationDate DateTime?
+  energizationRitual String
+  energizationMantra String
+  dailyWorship    Boolean  @default(false)
+  worshipTime     String?  // "Morning", "Evening"
+  offerings       String[] // ["Flowers", "Incense", "Light"]
+
+  // Timing
+  installedOn     DateTime?
+  bestInstallDate DateTime? // Auspicious date
+
+  // Benefits
+  expectedBenefits String[]
+  manifestationTime Int?   // Days/months
+
+  // Maintenance
+  cleaningFrequency String // "Daily", "Weekly", "Monthly"
+  cleaningMethod   String
+  reEnergization   String // How often to re-energize
+
+  // User Experience
+  experiencedBenefits String[]
+  effectiveness   Int?     // 1-10
+
+  notes           String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+// =====================================================
+// DASHA (PLANETARY PERIODS) SYSTEM
+// Vimshottari, Yogini, Jaimini Chara, Ashtottari
+// =====================================================
+
+model VimshottariDasha {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate  DateTime
+  moonLongitude Float  // Moon's position at birth
+
+  // Birth Nakshatra
+  birthNakshatra     Int     // 1-27
+  birthNakshatraName String  // "Ashwini", "Bharani", etc.
+  birthPada          Int     // 1-4
+  birthDashaLord     String  // Starting planet
+  completedPortion   Float   // 0-1 (portion of nakshatra completed)
+
+  // Balance of Birth Dasha
+  balanceDashaYears  Float
+  balanceDashaDays   Int
+
+  // Full Mahadasha Sequence (JSON)
+  mahaDashas Json    // Array of all 9 mahadashas with dates
+
+  // Current Running Periods (updated regularly)
+  currentMahaDasha      String?
+  currentMahaDashaStart DateTime?
+  currentMahaDashaEnd   DateTime?
+
+  currentAntarDasha      String?
+  currentAntarDashaStart DateTime?
+  currentAntarDashaEnd   DateTime?
+
+  currentPratyantarDasha      String?
+  currentPratyantarDashaStart DateTime?
+  currentPratyantarDashaEnd   DateTime?
+
+  // Metadata
+  calculatedAt DateTime @default(now())
+  lastUpdated  DateTime @updatedAt
+
+  // Relations
+  mahaDashaPredictions  MahaDashaPrediction[]
+  antarDashaPredictions AntarDashaPrediction[]
+
+  @@index([userId])
+  @@index([currentMahaDasha])
+}
+
+model MahaDashaPrediction {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  vimshottariId   String
+  vimshottari     VimshottariDasha @relation(fields: [vimshottariId], references: [id], onDelete: Cascade)
+
+  // Dasha Details
+  planet          String   // Sun, Moon, Mars, etc.
+  startDate       DateTime
+  endDate         DateTime
+  durationYears   Float
+  durationDays    Int
+
+  // Planet Strength in Chart
+  planetStrength  Int      // 0-100 scale
+  planetHouse     Int      // House position (1-12)
+  planetSign      String   // Zodiac sign
+  planetDignity   String   // "Exalted", "Own Sign", "Debilitated", etc.
+
+  // Predictions
+  isFavorable     Boolean
+  overallRating   Int      // 1-10 scale
+
+  positiveEffects String[] // Life improvements
+  negativeEffects String[] // Challenges
+  lifeAreas       String[] // Areas of focus
+
+  // Timing
+  peakPeriodStart DateTime? // Best 2-3 months
+  peakPeriodEnd   DateTime?
+
+  difficultPeriodStart DateTime? // Challenging months
+  difficultPeriodEnd   DateTime?
+
+  // Remedies
+  gemstone        String
+  mantra          String
+  mantraCount     Int
+  deity           String
+  fastingDay      String
+  charityItems    String[]
+  otherRemedies   String[]
+
+  // AI-Generated Detailed Prediction
+  detailedPrediction String @db.Text
+  keyEvents          String[] // Expected major events
+
+  // User Experience
+  userNotes       String?  @db.Text
+  actualEvents    String[] // What actually happened
+  accuracy        Int?     // User-rated accuracy 1-10
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+  @@index([planet])
+  @@index([startDate, endDate])
+}
+
+model AntarDashaPrediction {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  vimshottariId   String
+  vimshottari     VimshottariDasha @relation(fields: [vimshottariId], references: [id], onDelete: Cascade)
+
+  // Dasha Details
+  mahaDashaPlanet String   // Parent Mahadasha
+  antarDashaPlanet String  // This Antardasha
+  startDate       DateTime
+  endDate         DateTime
+  durationYears   Float
+  durationDays    Int
+
+  // Combined Analysis
+  planetCombination String // "Sun-Moon", "Mars-Jupiter", etc.
+  combinationEffect String // "Beneficial", "Neutral", "Challenging"
+
+  // Predictions (more specific than Mahadasha)
+  monthByMonthEvents Json  // Detailed monthly predictions
+
+  specificEvents     String[] // "Job change", "Marriage", etc.
+  suggestedActions   String[] // What to do during this period
+
+  // Remedies (specific to this sub-period)
+  specificRemedies   String[]
+
+  // Tracking
+  userFeedback       String?  @db.Text
+  actualOutcome      String?  @db.Text
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+  @@index([mahaDashaPlanet, antarDashaPlanet])
+  @@index([startDate, endDate])
+}
+
+model YoginiDasha {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate  DateTime
+  moonLongitude Float
+
+  // Yogini Sequence (8 yoginis, 36-year cycle)
+  birthYogini        String  // "Mangala", "Pingala", etc.
+  yoginiDashas       Json    // All 8 yogini periods
+
+  currentYogini      String?
+  currentYoginiStart DateTime?
+  currentYoginiEnd   DateTime?
+
+  // Predictions
+  predictions        Json    // Yogini-specific predictions
+
+  calculatedAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+model JaiminiCharaDasha {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate       DateTime
+  ascendantSign   String   // Lagna sign
+
+  // Chara Dasha Details
+  isReverseCycle  Boolean  // Even signs run reverse
+  charaDashas     Json     // All 12 sign periods (120 years)
+
+  currentSign      String?
+  currentSignStart DateTime?
+  currentSignEnd   DateTime?
+
+  // Sign-based Predictions
+  signPredictions  Json
+
+  calculatedAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+model AshtottariDasha {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate  DateTime
+  moonLongitude Float
+
+  // Applicable only when Rahu NOT in 1st, 7th, or 9th
+  isApplicable       Boolean
+  rahuHouse          Int     // Rahu's house position
+
+  // Ashtottari Sequence (8 planets, 108 years)
+  birthPlanet        String
+  ashtottariDashas   Json
+
+  currentPlanet      String?
+  currentPlanetStart DateTime?
+  currentPlanetEnd   DateTime?
+
+  calculatedAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+model DashaTransit {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // When a major dasha or antardasha changes
+  transitionDate DateTime
+  transitionType String   // "Mahadasha", "Antardasha", "Pratyantardasha"
+
+  outgoingPlanet String   // Exiting planet/sign
+  incomingPlanet String   // New planet/sign
+
+  // Transition Effects
+  transitionPeriod    Int    // Days before/after for adjustment
+  transitionChallenges String[]
+  preparationActions   String[]
+  rituals              String[] // Specific rituals for transition
+
+  // Remedies for smooth transition
+  transitionRemedies   String[]
+
+  // Notification
+  notifyUser      Boolean  @default(true)
+  notificationSent Boolean @default(false)
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([transitionDate])
+}
+
+model DashaCompatibility {
+  id         String   @id @default(cuid())
+
+  user1Id    String
+  user1      User     @relation("DashaUser1", fields: [user1Id], references: [id], onDelete: Cascade)
+
+  user2Id    String
+  user2      User     @relation("DashaUser2", fields: [user2Id], references: [id], onDelete: Cascade)
+
+  // Current Dasha Analysis
+  user1CurrentMaha    String
+  user1CurrentAntar   String
+  user2CurrentMaha    String
+  user2CurrentAntar   String
+
+  // Compatibility Score
+  compatibilityScore  Int      // 0-100
+  compatibilityLevel  String   // "Excellent", "Good", "Moderate", "Challenging"
+
+  // Analysis
+  harmonizedAreas     String[] // Where dashas align well
+  conflictAreas       String[] // Where dashas conflict
+  recommendations     String[] // How to handle differences
+
+  // Future Outlook
+  upcomingHarmony     DateTime? // When dashas will be very compatible
+  upcomingChallenges  DateTime? // When to be cautious
+
+  calculatedAt DateTime @default(now())
+
+  @@index([user1Id])
+  @@index([user2Id])
+}
+
+model DashaTiming {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Event Timing Using Dasha
+  eventType       String   // "Marriage", "Job Change", "House Purchase", etc.
+  questionDate    DateTime
+
+  // Analysis
+  currentDashaSupport Boolean  // Does current dasha support this event?
+  favorableRating     Int      // 1-10
+
+  // Best Timing
+  bestPeriodStart  DateTime?
+  bestPeriodEnd    DateTime?
+  bestDashaCombination String? // "Jupiter-Venus" etc.
+
+  // Warning Periods
+  avoidPeriodStart DateTime?
+  avoidPeriodEnd   DateTime?
+  avoidReason      String?
+
+  // Recommendation
+  recommendation   String   @db.Text
+  astrologerNotes  String?  @db.Text
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([eventType])
+}
+
+model DashaRemedyTracking {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Which Dasha Period
+  dashaPlanet     String
+  dashaStartDate  DateTime
+  dashaEndDate    DateTime
+
+  // Recommended Remedies
+  gemstone        String
+  mantra          String
+  mantraCount     Int      // Daily/total target
+  deity           String
+  fastingDay      String
+  charityItems    String[]
+  specificActions String[]
+
+  // Tracking
+  startedRemedies    Boolean  @default(false)
+  remedyStartDate    DateTime?
+
+  completedMantras   Int      @default(0)
+  completedFasts     Int      @default(0)
+  completedCharities Int      @default(0)
+  wearingGemstone    Boolean  @default(false)
+
+  // Progress
+  weeklyProgress     Json?    // Weekly check-ins
+  observedBenefits   String[]
+  challenges         String[]
+
+  // Results
+  effectivenessRating Int?    // 1-10 after completion
+  wouldRecommend      Boolean?
+
+  notes              String?  @db.Text
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+  @@index([dashaPlanet])
+}
+// =====================================================
+// LO SHU GRID (VEDIC NUMEROLOGY) SYSTEM
+// 3x3 Magic Square Analysis
+// =====================================================
+
+model LoShuChart {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate       DateTime
+  dateString      String   // "15-08-1990"
+
+  // Grid Data
+  gridData        Json     // 3x3 array [[0,2,1],[0,1,0],[1,1,0]]
+  allNumbers      Int[]    // All digits from birth date
+  presentNumbers  Int[]    // Unique numbers (1-9) present
+  missingNumbers  Int[]    // Numbers (1-9) missing
+
+  // Repeated Numbers
+  repeatedNumbers Json     // [{number: 1, count: 2}]
+
+  // Core Numbers
+  mulank          Int      // Root number (day reduced)
+  bhagyank        Int      // Destiny number (full date)
+  naamank         Int?     // Name number (optional)
+
+  // Planetary Analysis (9 planets)
+  planetaryRulers Json     // [{number, planet, strength, count}]
+
+  // Arrows (8 positive + 8 negative)
+  arrowsPresent   Json     // [{name, type, numbers, meaning, impact}]
+  arrowsMissing   Json     // Missing arrows indicate weaknesses
+
+  // Planes Analysis
+  mentalPlaneCount    Int  // Count of numbers 1,2,3
+  mentalPlaneStrength String // strong/moderate/weak
+  emotionalPlaneCount Int  // Count of 4,5,6
+  emotionalPlaneStrength String
+  physicalPlaneCount  Int  // Count of 7,8,9
+  physicalPlaneStrength String
+
+  // Analysis Results
+  strengths       String[]
+  weaknesses      String[]
+  personalityAnalysis String @db.Text
+  careerSuggestions String[]
+  relationshipAnalysis String @db.Text
+  healthIndications String[]
+
+  // Remedies for Missing Numbers
+  remedies        Json     // [{missingNumber, planet, gemstone, mantra, color, day}]
+
+  // Additional Insights
+  luckyNumbers    Int[]
+  luckyColors     String[]
+  luckyDays       String[]
+  luckyGems       String[]
+
+  // Overall Balance
+  overallBalance  Int      // 0-100 score
+  dominantPlanet  String   // Most strong planet
+  weakestPlanet   String?  // Most absent planet
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+  @@index([birthDate])
+}
+
+model VedicNumerologyReading {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Includes Lo Shu + additional Vedic methods
+  loShuGridId     String?  // Link to Lo Shu chart if calculated
+
+  birthDate       DateTime
+  fullName        String
+
+  // Vedic Specific Numbers
+  mulank          Int      // Driver number
+  bhagyank        Int      // Conductor number
+  naamank         Int      // Name number
+
+  // Advanced Vedic Analysis
+  personalYear    Int      // Current year number
+  personalMonth   Int      // Current month number
+  personalDay     Int      // Current day number
+
+  // Compatibility Numbers
+  friendlyNumbers Int[]
+  enemyNumbers    Int[]
+  neutralNumbers  Int[]
+
+  // Life Cycles (Vedic Pinnacles)
+  firstCycle      Json     // Age 0-27
+  secondCycle     Json     // Age 28-54
+  thirdCycle      Json     // Age 55+
+
+  // Predictions
+  currentPhase    String   @db.Text
+  opportunities   String[]
+  challenges      String[]
+  recommendations String[]
+
+  // Remedies
+  mantras         String[]
+  gemstones       String[]
+  charityActions  String[]
+  fastingDays     String[]
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+}
+
+model TamilNumerologyChart {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate       DateTime
+  fullName        String
+
+  // Tamil uses compound numbers (10-78)
+  primaryNumber   Int      // Main compound number
+  secondaryNumber Int?     // Secondary influence
+
+  // Detailed Interpretation
+  numberMeaning   String   @db.Text
+  characteristics String[]
+  luckyFeatures   String[]
+  challenges      String[]
+
+  // Tamil Specific
+  starConsonant   String   // Based on birth star
+  planetaryLord   String   // Ruling planet
+  yogaType        String   // Yoga category
+
+  // Life Areas
+  career          String   @db.Text
+  marriage        String   @db.Text
+  health          String   @db.Text
+  wealth          String   @db.Text
+
+  // Remedies
+  recommendedGems String[]
+  mantras         String[]
+  deities         String[]
+  colors          String[]
+
+  // Compatibility
+  compatibleNumbers Int[]
+  avoidNumbers      Int[]
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+}
+
+model ChineseNumerologyAnalysis {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Based on pronunciation and symbolism
+  phoneNumber     String?
+  houseNumber     String?
+  businessName    String?
+  vehicleNumber   String?
+
+  // Analysis
+  luckyRating     Int      // 1-10
+  unluckyNumbers  Int[]    // Numbers to avoid (especially 4)
+  luckyNumbers    Int[]    // Especially 6, 8, 9
+
+  // Number Combinations
+  numberCombination String
+  pronunciation     String
+  symbolism         String
+  fengShuiImpact    String   @db.Text
+
+  // Recommendations
+  betterAlternatives String[]
+  enhancementTips    String[]
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+}
+
+model KabbalahNumerologyChart {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  fullName        String
+  hebrewName      String?
+
+  // Tree of Life (10 Sephiroth)
+  sephirothPath   Json     // Connection to 10 spheres
+
+  // Core Number (1-9)
+  soulNumber      Int
+  personalityNumber Int
+  destinyNumber   Int
+
+  // Kabbalah Specific
+  treePosition    String   // Position on Tree of Life
+  spiritualPath   String   @db.Text
+  lifeLesson      String   @db.Text
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+}
+
+model YantraNumerologyChart {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  birthDate       DateTime
+
+  // 9x9 Yantra Grid
+  yantraGrid      Json     // 9x9 sacred geometry pattern
+  coreNumber      Int      // 1-9
+
+  // Yantra Design
+  yantraPattern   String   // Description of pattern
+  meditationYantra String  // Which yantra to meditate on
+  manifestationNumber Int  // For manifestation
+
+  // Spiritual Practice
+  mantra          String
+  meditationTime  String
+  yantraPlacement String
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+}
+// =====================================================
+// PALMISTRY (CHIROMANCY) SYSTEM
+// Complete Palm Reading Database Schema
+// =====================================================
+
+model PalmReading {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Hand Information
+  dominantHand    String   // "left" or "right"
+  handShape       String   // "earth", "air", "water", "fire"
+  handElement     String   // "Earth", "Air", "Water", "Fire"
+
+  // Hand Shape Analysis
+  handCharacteristics String[]
+  handPersonality     String   @db.Text
+  handCareerSuggestions String[]
+  handRelationships   String   @db.Text
+
+  // Major Lines (stored as JSON for detailed data)
+  heartLine       Json     // {quality, length, meaning, positive[], negative[], remedies[]}
+  headLine        Json     // {quality, length, direction, meaning, positive[], negative[], remedies[]}
+  lifeLine        Json     // {quality, length, meaning, positive[], negative[], remedies[]}
+  fateLine        Json?    // Optional - {quality, presence, meaning, positive[], negative[], remedies[]}
+
+  // Mounts (7 planetary mounts)
+  mountOfJupiter  Json     // {development, meaning, characteristics[], career[], weaknesses[]}
+  mountOfSaturn   Json
+  mountOfApollo   Json
+  mountOfMercury  Json
+  mountOfMars     Json
+  mountOfVenus    Json
+  mountOfMoon     Json
+
+  // Fingers (5 fingers)
+  thumbAnalysis   Json     // {length, flexibility, meaning, traits[], phalanges}
+  jupiterFinger   Json     // Index finger
+  saturnFinger    Json     // Middle finger
+  apolloFinger    Json     // Ring finger
+  mercuryFinger   Json     // Little finger
+
+  // Minor Lines
+  hasSunLine      Boolean  @default(false)
+  sunLineQuality  String?
+  hasMercuryLine  Boolean  @default(false)
+  mercuryLineQuality String?
+  hasIntuitionLine Boolean @default(false)
+  marriageLineCount Int    @default(0)
+  travelLineCount   Int    @default(0)
+  childrenLineCount Int?
+
+  // Overall Analysis
+  overallPersonality    String   @db.Text
+  strengths             String[]
+  weaknesses            String[]
+  careerSuggestions     String[]
+  healthIndications     String[]
+  relationshipAnalysis  String   @db.Text
+  wealthPotential       String   @db.Text
+  lifeExpectancy        String   @db.Text
+
+  // Planetary Influences
+  planetaryInfluences   Json     // [{planet, strength, impact}]
+  dominantPlanet        String
+  weakestPlanet         String?
+  overallBalance        Int      // 0-100 score
+
+  // Remedies
+  remedies              Json     // [{area, suggestions[]}]
+
+  // Image (optional - for palm photo)
+  palmImageUrl          String?
+  palmImageAnalyzed     Boolean  @default(false)
+
+  // Relations
+  lineAnalyses    HandLineAnalysis[]
+  mountAnalyses   MountAnalysis[]
+  fingerAnalyses  FingerAnalysis[]
+  markings        PalmMarking[]
+  remedyPlans     PalmRemedy[]
+  imageUpload     PalmImageUpload?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+  @@index([handShape])
+  @@index([dominantPlanet])
+}
+
+model HandLineAnalysis {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  palmReadingId   String?  // Link to main reading
+  palmReading     PalmReading? @relation(fields: [palmReadingId], references: [id], onDelete: SetNull)
+
+  // Specific line being analyzed
+  lineName        String   // "heart", "head", "life", "fate"
+  lineType        String   // "major" or "minor"
+
+  // Line Characteristics
+  quality         String   // "deep", "light", "broken", "chained", "forked", "absent"
+  length          String   // "long", "medium", "short"
+  depth           String?  // "very deep", "moderate", "faint"
+  direction       String?  // For head line: "straight", "sloping"
+
+  // Position Details
+  startPoint      String?
+  endPoint        String?
+  breaks          Int      @default(0)
+  branches        Int      @default(0)
+  islands         Int      @default(0) // Island formations
+  chains          Boolean  @default(false)
+
+  // Interpretation
+  meaning         String   @db.Text
+  positiveTraits  String[]
+  negativeTraits  String[]
+  lifeAreas       String[] // Areas of life affected
+
+  // Predictions
+  timingMarks     Json?    // [{age, event, significance}]
+  criticalPeriods String[]
+  opportunities   String[]
+  challenges      String[]
+
+  // Remedies
+  remedies        String[]
+  gemstones       String[]
+  mantras         String[]
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([lineName])
+}
+
+model MountAnalysis {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  palmReadingId   String?
+  palmReading     PalmReading? @relation(fields: [palmReadingId], references: [id], onDelete: SetNull)
+
+  // Mount Information
+  mountName       String   // "jupiter", "saturn", "apollo", "mercury", "mars", "venus", "moon"
+  planet          String   // Associated planet
+  location        String
+
+  // Development Level
+  development     String   // "well-developed", "normal", "flat", "over-developed"
+  size            Int      // 1-10 scale
+  firmness        String   // "firm", "soft", "hard"
+
+  // Markings on Mount
+  hasStarMark     Boolean  @default(false)
+  hasCrossMark    Boolean  @default(false)
+  hasTriangleMark Boolean  @default(false)
+  hasSquareMark   Boolean  @default(false) // Protective
+  hasGridMark     Boolean  @default(false)
+
+  // Interpretation
+  meaning         String   @db.Text
+  characteristics String[]
+  career          String[]
+  weaknesses      String[]
+
+  // Planetary Analysis
+  planetaryStrength Int    // 0-100
+  planetaryImpact   String @db.Text
+
+  // Remedies
+  remedies        String[]
+  gemstone        String
+  mantra          String
+  color           String
+  favorableDay    String
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([mountName])
+  @@index([planet])
+}
+
+model FingerAnalysis {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  palmReadingId   String?
+  palmReading     PalmReading? @relation(fields: [palmReadingId], references: [id], onDelete: SetNull)
+
+  // Finger Information
+  fingerName      String   // "thumb", "jupiter", "saturn", "apollo", "mercury"
+  planet          String   // Associated planet
+
+  // Physical Characteristics
+  length          String   // "long", "medium", "short"
+  relativeLength  String   // Compared to other fingers
+  flexibility     String   // "flexible", "stiff", "normal"
+  shape           String?  // "pointed", "square", "spatulate", "conical"
+
+  // Finger Tip
+  tipShape        String?  // "pointed", "square", "spatulate", "round"
+  tipMeaning      String?
+
+  // Phalanges (3 sections)
+  topPhalange     String   // Mental/spiritual realm
+  topLength       String   // "long", "medium", "short"
+  middlePhalange  String   // Practical realm
+  middleLength    String
+  bottomPhalange  String   // Material realm
+  bottomLength    String
+
+  // Knots (joints)
+  hasKnots        Boolean  @default(false)
+  knotsType       String?  // "philosophical", "material", "both"
+
+  // Nails
+  nailShape       String?  // "long", "short", "square", "fan-shaped"
+  nailCondition   String?
+
+  // Interpretation
+  meaning         String   @db.Text
+  traits          String[]
+  strengths       String[]
+  weaknesses      String[]
+
+  // Career & Life
+  careerIndications String[]
+  personalityImpact String   @db.Text
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([fingerName])
+}
+
+model PalmMarking {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  palmReadingId   String?
+  palmReading     PalmReading? @relation(fields: [palmReadingId], references: [id], onDelete: SetNull)
+
+  // Marking Type
+  markingType     String   // "star", "cross", "triangle", "square", "grid", "island", "circle", "trident"
+  location        String   // Where on palm
+  onLine          String?  // If on a line
+  onMount         String?  // If on a mount
+
+  // Interpretation
+  meaning         String   @db.Text
+  isPositive      Boolean
+  significance    String   // "high", "medium", "low"
+
+  // Timing
+  approximateAge  Int?     // If marking indicates timing
+  lifeEvent       String?
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([markingType])
+}
+
+model PalmCompatibility {
+  id              String   @id @default(cuid())
+  userId          String   // First person
+  user            User     @relation("PalmUser1", fields: [userId], references: [id], onDelete: Cascade)
+
+  partnerUserId   String?  // Second person (if registered)
+  partnerHandShape String  // Their hand shape
+  partnerDominantPlanet String
+
+  // User's data
+  userHandShape   String
+  userDominantPlanet String
+
+  // Compatibility Analysis
+  overallScore    Int      // 0-100
+  elementCompatibility String // How elements match
+  planetaryHarmony Int     // 0-100
+
+  // Detailed Compatibility
+  emotionalCompatibility Int  // 0-100
+  mentalCompatibility    Int  // 0-100
+  physicalCompatibility  Int  // 0-100
+  spiritualCompatibility Int  // 0-100
+
+  // Strengths & Challenges
+  relationshipStrengths String[]
+  relationshipChallenges String[]
+
+  // Advice
+  compatibilityAnalysis String   @db.Text
+  recommendations String[]
+  areasToWorkOn   String[]
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+}
+
+model PalmRemedy {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  palmReadingId   String?
+  palmReading     PalmReading? @relation(fields: [palmReadingId], references: [id], onDelete: SetNull)
+
+  // Issue Being Addressed
+  issue           String   // "weak venus", "broken heart line", etc.
+  area            String   // "love", "career", "health", "wealth"
+  severity        String   // "minor", "moderate", "major"
+
+  // Remedy Type
+  remedyType      String   // "gemstone", "mantra", "yantra", "ritual", "lifestyle"
+
+  // Gemstone Remedy
+  gemstone        String?
+  carats          Float?
+  finger          String?
+  metal           String?
+  dayToWear       String?
+
+  // Mantra Remedy
+  mantra          String?
+  repetitions     Int?
+  duration        String?  // "108 times daily for 40 days"
+
+  // Lifestyle Changes
+  lifestyleChanges String[]
+
+  // Other Remedies
+  charity         String?
+  fasting         String?
+  colors          String[]
+  directions      String[] // Favorable directions
+
+  // Tracking
+  started         DateTime?
+  completed       Boolean  @default(false)
+  progress        Int      @default(0) // 0-100
+  notes           String?  @db.Text
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([userId])
+  @@index([area])
+}
+
+model PalmImageUpload {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  palmReadingId   String?  @unique
+  palmReading     PalmReading? @relation(fields: [palmReadingId], references: [id], onDelete: SetNull)
+
+  // Image Data
+  imageUrl        String
+  hand            String   // "left" or "right"
+  imageFormat     String   // "jpg", "png"
+  fileSize        Int      // bytes
+
+  // AI Analysis Status
+  analyzed        Boolean  @default(false)
+  analyzedAt      DateTime?
+  aiModel         String?  // Which AI model analyzed it
+
+  // Detected Features
+  detectedLines   Json?    // AI-detected lines
+  detectedMounts  Json?    // AI-detected mounts
+  detectedMarkings Json?   // AI-detected markings
+
+  // Quality Check
+  imageQuality    String?  // "excellent", "good", "poor"
+  handVisible     Boolean  @default(false)
+  linesVisible    Boolean  @default(false)
+
+  createdAt       DateTime @default(now())
+
+  @@index([userId])
+  @@index([analyzed])
+}
+// =====================================================
+// SUBSCRIPTION & MONETIZATION SYSTEM
+// Free, Freemium, Pro, Enterprise Tiers
+// =====================================================
+
+enum SubscriptionTier {
+  FREE
+  FREEMIUM
+  PRO
+  ENTERPRISE
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  EXPIRED
+  CANCELLED
+  TRIAL
+  PENDING
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+model Subscription {
+  id              String             @id @default(cuid())
+  userId          String
+  user            User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Subscription Details
+  tier            SubscriptionTier   @default(FREE)
+  status          SubscriptionStatus @default(ACTIVE)
+
+  // Billing
+  amount          Float              @default(0)
+  currency        String             @default("INR")
+  billingCycle    String             // "monthly", "yearly"
+
+  // Dates
+  startDate       DateTime           @default(now())
+  endDate         DateTime?
+  trialEndsAt     DateTime?
+  cancelledAt     DateTime?
+
+  // Features
+  features        Json               // Enabled features for this tier
+  usageLimits     Json               // Usage limits (reports/month, etc.)
+
+  // Auto-renewal
+  autoRenew       Boolean            @default(true)
+  paymentMethodId String?
+
+  // Metadata
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+
+  // Relations
+  payments        Payment[]
+  usageTracking   UsageTracking[]
+
+  @@index([userId])
+  @@index([tier])
+  @@index([status])
+}
+
+model Payment {
+  id              String         @id @default(cuid())
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  subscriptionId  String?
+  subscription    Subscription?  @relation(fields: [subscriptionId], references: [id], onDelete: SetNull)
+
+  // Payment Details
+  amount          Float
+  currency        String         @default("INR")
+  status          PaymentStatus  @default(PENDING)
+
+  // Payment Gateway
+  gateway         String         // "razorpay", "stripe", "paypal"
+  gatewayOrderId  String?        // External order ID
+  gatewayPaymentId String?       // External payment ID
+  gatewaySignature String?       // For verification
+
+  // What was purchased
+  itemType        String         // "subscription", "report", "consultation"
+  itemId          String?        // ID of the purchased item
+  itemDescription String?
+
+  // Timestamps
+  paidAt          DateTime?
+  refundedAt      DateTime?
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([userId])
+  @@index([status])
+  @@index([gateway])
+}
+
+model UsageTracking {
+  id              String       @id @default(cuid())
+  userId          String
+  user            User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  subscriptionId  String
+  subscription    Subscription @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+
+  // Usage Metrics
+  month           String       // "2024-01" format
+  reportsGenerated Int         @default(0)
+  pdfDownloads    Int          @default(0)
+  questionsAsked  Int          @default(0)
+  consultations   Int          @default(0)
+  apiCalls        Int          @default(0)
+
+  // Limits
+  reportLimit     Int?
+  pdfLimit        Int?
+  questionLimit   Int?
+  consultationLimit Int?
+
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  @@unique([userId, month])
+  @@index([userId])
+  @@index([subscriptionId])
+}
+
+// =====================================================
+// TIER FEATURES CONFIGURATION
+// =====================================================
+
+model TierFeature {
+  id              String           @id @default(cuid())
+  tier            SubscriptionTier
+  featureName     String
+  enabled         Boolean          @default(true)
+  limit           Int?             // null = unlimited
+  description     String?
+
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  @@unique([tier, featureName])
+  @@index([tier])
+}
+
+// =====================================================
+// Q&A WITH JYOTISH ACHARYA RAKESH JI
+// =====================================================
+
+enum QuestionStatus {
+  PENDING
+  ANSWERED
+  REJECTED
+  PRIVATE
+}
+
+enum QuestionCategory {
+  CAREER
+  RELATIONSHIP
+  HEALTH
+  FINANCE
+  SPIRITUALITY
+  EDUCATION
+  FAMILY
+  GENERAL
+}
+
+model AskTheAcharya {
+  id              String           @id @default(cuid())
+  userId          String
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Question Details
+  category        QuestionCategory
+  question        String           @db.Text
+  additionalInfo  String?          @db.Text // Birth details, context
+  status          QuestionStatus   @default(PENDING)
+
+  // Answer
+  answer          String?          @db.Text
+  answeredBy      String?          // Admin/Astrologer ID
+  answeredAt      DateTime?
+
+  // Privacy
+  isPublic        Boolean          @default(false) // Show in public FAQ
+  isAnonymous     Boolean          @default(false) // Hide name if public
+
+  // Payment (Premium Feature)
+  isPaid          Boolean          @default(false)
+  paymentId       String?
+  payment         Payment?         @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+
+  // Priority
+  isPriority      Boolean          @default(false) // Enterprise tier gets priority
+  urgency         String?          // "low", "medium", "high"
+
+  // Engagement
+  likes           Int              @default(0)
+  views           Int              @default(0)
+  helpful         Int              @default(0) // How many found it helpful
+
+  // Metadata
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  // Relations
+  followUps       QuestionFollowUp[]
+
+  @@index([userId])
+  @@index([status])
+  @@index([category])
+  @@index([isPublic])
+}
+
+model QuestionFollowUp {
+  id              String         @id @default(cuid())
+  questionId      String
+  question        AskTheAcharya  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  message         String         @db.Text
+  isFromUser      Boolean        @default(true) // false if from Acharya
+
+  createdAt       DateTime       @default(now())
+
+  @@index([questionId])
+  @@index([userId])
+}
+
+// =====================================================
+// MARKETPLACE (JEWELERS & ASTROLOGERS)
+// =====================================================
+
+enum VendorType {
+  JEWELER
+  ASTROLOGER
+  HEALER
+  EDUCATOR
+}
+
+enum VendorStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  SUSPENDED
+}
+
+model Vendor {
+  id              String         @id @default(cuid())
+  userId          String         @unique
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Vendor Details
+  vendorType      VendorType
+  businessName    String
+  description     String         @db.Text
+  status          VendorStatus   @default(PENDING)
+
+  // Contact
+  phone           String
+  email           String
+  website         String?
+  address         String?        @db.Text
+
+  // KYC (Know Your Customer)
+  kycStatus       String         @default("pending") // "pending", "verified", "rejected"
+  kycDocuments    Json?          // Document URLs and details
+  verifiedAt      DateTime?
+
+  // Business Details
+  gstNumber       String?
+  panNumber       String?
+  businessLicense String?
+
+  // Rating
+  rating          Float          @default(0)
+  reviewCount     Int            @default(0)
+
+  // Commission
+  commissionRate  Float          @default(10) // Percentage
+
+  // Metadata
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  // Relations
+  products        Product[]
+  services        Service[]
+  reviews         VendorReview[]
+  orders          Order[]
+
+  @@index([vendorType])
+  @@index([status])
+  @@index([kycStatus])
+}
+
+model Product {
+  id              String         @id @default(cuid())
+  vendorId        String
+  vendor          Vendor         @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+
+  // Product Details
+  name            String
+  description     String         @db.Text
+  category        String         // "gemstone", "jewelry", "yantra", "crystal"
+
+  // For Gemstones
+  gemType         String?        // "Ruby", "Pearl", etc.
+  carats          Float?
+  quality         String?        // "AAA", "AA", "A"
+  certification   String?        // Certificate number
+
+  // Pricing
+  price           Float
+  currency        String         @default("INR")
+  discount        Float?         @default(0)
+  finalPrice      Float
+
+  // Inventory
+  stock           Int            @default(0)
+  isAvailable     Boolean        @default(true)
+
+  // Media
+  images          String[]       // Image URLs
+  videos          String[]       // Video URLs
+
+  // SEO
+  tags            String[]
+  slug            String         @unique
+
+  // Metadata
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  // Relations
+  orderItems      OrderItem[]
+
+  @@index([vendorId])
+  @@index([category])
+  @@index([gemType])
+}
+
+model Service {
+  id              String         @id @default(cuid())
+  vendorId        String
+  vendor          Vendor         @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+
+  // Service Details
+  name            String
+  description     String         @db.Text
+  category        String         // "consultation", "pooja", "healing", "course"
+
+  // Duration
+  duration        Int?           // minutes
+
+  // Pricing
+  price           Float
+  currency        String         @default("INR")
+
+  // Availability
+  isAvailable     Boolean        @default(true)
+
+  // Media
+  images          String[]
+
+  // Metadata
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  // Relations
+  bookings        ServiceBooking[]
+
+  @@index([vendorId])
+  @@index([category])
+}
+
+model Order {
+  id              String         @id @default(cuid())
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  vendorId        String
+  vendor          Vendor         @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+
+  // Order Details
+  orderNumber     String         @unique
+  status          String         @default("pending") // pending, confirmed, shipped, delivered, cancelled
+
+  // Pricing
+  subtotal        Float
+  commission      Float          // Platform commission
+  shipping        Float?         @default(0)
+  tax             Float?         @default(0)
+  total           Float
+
+  // Payment
+  paymentId       String?
+  payment         Payment?       @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+
+  // Shipping
+  shippingAddress String?        @db.Text
+  trackingNumber  String?
+
+  // Timestamps
+  confirmedAt     DateTime?
+  shippedAt       DateTime?
+  deliveredAt     DateTime?
+  cancelledAt     DateTime?
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  // Relations
+  items           OrderItem[]
+
+  @@index([userId])
+  @@index([vendorId])
+  @@index([status])
+}
+
+model OrderItem {
+  id              String         @id @default(cuid())
+  orderId         String
+  order           Order          @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  productId       String
+  product         Product        @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  quantity        Int
+  price           Float
+  total           Float
+
+  createdAt       DateTime       @default(now())
+
+  @@index([orderId])
+  @@index([productId])
+}
+
+model ServiceBooking {
+  id              String         @id @default(cuid())
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  serviceId       String
+  service         Service        @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  // Booking Details
+  scheduledAt     DateTime
+  duration        Int            // minutes
+  status          String         @default("pending") // pending, confirmed, completed, cancelled
+
+  // Payment
+  paymentId       String?
+  payment         Payment?       @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+
+  // Meeting Link (for online consultations)
+  meetingLink     String?
+  meetingId       String?
+
+  // Notes
+  userNotes       String?        @db.Text
+  vendorNotes     String?        @db.Text
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([userId])
+  @@index([serviceId])
+  @@index([scheduledAt])
+}
+
+model VendorReview {
+  id              String         @id @default(cuid())
+  vendorId        String
+  vendor          Vendor         @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  rating          Int            // 1-5
+  review          String?        @db.Text
+
+  // Order reference
+  orderId         String?
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([vendorId])
+  @@index([userId])
+}
+
+// =====================================================
+// KYC (KNOW YOUR CUSTOMER) SYSTEM
+// =====================================================
+
+enum KycDocumentType {
+  AADHAAR
+  PAN
+  PASSPORT
+  DRIVING_LICENSE
+  VOTER_ID
+  GST_CERTIFICATE
+  BUSINESS_LICENSE
+}
+
+enum KycStatus {
+  PENDING
+  UNDER_REVIEW
+  VERIFIED
+  REJECTED
+}
+
+model KycDocument {
+  id              String           @id @default(cuid())
+  userId          String
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Document Details
+  documentType    KycDocumentType
+  documentNumber  String
+  documentName    String?
+
+  // Files
+  frontImage      String           // URL to front image
+  backImage       String?          // URL to back image (if applicable)
+  additionalDocs  String[]         // Additional documents
+
+  // Verification
+  status          KycStatus        @default(PENDING)
+  verifiedBy      String?          // Admin ID who verified
+  verifiedAt      DateTime?
+  rejectionReason String?          @db.Text
+
+  // Metadata
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  @@index([userId])
+  @@index([status])
+  @@index([documentType])
+}
+
+model KycVerification {
+  id              String           @id @default(cuid())
+  userId          String           @unique
+  user            User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Overall KYC Status
+  overallStatus   KycStatus        @default(PENDING)
+
+  // Required Documents Status
+  identityProof   Boolean          @default(false)
+  addressProof    Boolean          @default(false)
+  businessProof   Boolean?         // For vendors only
+
+  // Personal Details Verification
+  phoneVerified   Boolean          @default(false)
+  emailVerified   Boolean          @default(false)
+
+  // Verification Dates
+  completedAt     DateTime?
+  expiresAt       DateTime?        // KYC validity period
+
+  // Notes
+  verificationNotes String?        @db.Text
+
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  @@index([overallStatus])
+}
+// =====================================================
+// PANDIT ONBOARDING & BOOKING SYSTEM
+// For Spiritual Services & Special Poojas
+// =====================================================
+
+enum PanditStatus {
+  PENDING
+  UNDER_REVIEW
+  APPROVED
+  REJECTED
+  SUSPENDED
+  INACTIVE
+}
+
+enum PoojaType {
+  GRIHA_PRAVESH
+  SATYANARAYAN
+  GANESH
+  LAKSHMI
+  NAVAGRAHA
+  MARRIAGE_CEREMONY
+  ENGAGEMENT
+  BABY_NAMING
+  THREAD_CEREMONY
+  SHRADH
+  TARPAN
+  FUNERAL_RITES
+  BIRTHDAY
+  BUSINESS_MUHURAT
+  VEHICLE_POOJA
+  DURGA_POOJA
+  SARASWATI_POOJA
+  HANUMAN_POOJA
+  RUDRABHISHEK
+  KAAL_SARP_DOSH
+  MANGAL_DOSH
+  VASTU_SHANTI
+  HOUSEWARMING
+  OTHER
+}
+
+enum BookingStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  CONFIRMED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+model Pandit {
+  id              String         @id @default(cuid())
+  userId          String         @unique
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Basic Information
+  fullName        String
+  displayName     String         // Public display name
+  photo           String?        // Profile photo URL
+  bio             String         @db.Text
+  experience      Int            // Years of experience
+
+  // Contact
+  phone           String
+  email           String
+  whatsapp        String?
+  address         String?        @db.Text
+
+  // Specialization
+  specializations PoojaType[]
+  languages       String[]       // "Hindi", "Sanskrit", "Tamil", etc.
+  serviceAreas    String[]       // Cities/regions served
+
+  // Verification (KYC)
+  status          PanditStatus   @default(PENDING)
+  kycDocuments    Json?          // Aadhaar, certificates, etc.
+  videoSample     String?        // URL to sample pooja video
+  templeReference String?        // Temple/organization reference
+  verifiedAt      DateTime?
+  verifiedBy      String?        // Admin ID
+  rejectionReason String?        @db.Text
+
+  // Credentials
+  education       String[]       // Qualifications
+  certifications  String[]       // Certificates
+  affiliations    String?        // Temple/organization affiliations
+
+  // Expertise Details
+  expertiseDescription String?   @db.Text
+  ritualExpertise String[]       // Specific rituals mastered
+  scripturalKnowledge String[]   // Vedas, Puranas, etc.
+
+  // Pricing
+  basePrice       Float          // Starting price
+  priceRange      String         // "₹2,000 - ₹10,000"
+  pricingTier     String         @default("standard") // "budget", "standard", "premium"
+
+  // Availability
+  availableDays   String[]       // ["Monday", "Tuesday", etc.]
+  availableSlots  Json           // {morning: true, afternoon: false, evening: true}
+  blockedDates    DateTime[]     // Dates when unavailable
+
+  // Rating & Reviews
+  rating          Float          @default(0)
+  reviewCount     Int            @default(0)
+  completedBookings Int          @default(0)
+
+  // Platform Stats
+  totalEarnings   Float          @default(0)
+  platformCommission Float       @default(15) // Percentage
+
+  // Settings
+  autoAcceptBookings Boolean     @default(false)
+  notificationPreferences Json   // Email, SMS, WhatsApp
+  bankDetails     Json?          // For payouts
+
+  // Metadata
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  lastActiveAt    DateTime?
+
+  // Relations
+  bookings        PanditBooking[]
+  reviews         PanditReview[]
+  availability    PanditAvailability[]
+
+  @@index([status])
+  @@index([rating])
+  @@map("pandits")
+}
+
+model PanditBooking {
+  id              String         @id @default(cuid())
+
+  // User (Customer)
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Pandit
+  panditId        String
+  pandit          Pandit         @relation(fields: [panditId], references: [id], onDelete: Cascade)
+
+  // Booking Details
+  poojaType       PoojaType
+  poojaName       String         // Actual name of the pooja
+  customRequest   String?        @db.Text
+
+  // Timing
+  preferredDate   DateTime
+  preferredTime   String         // "Morning", "Afternoon", "Evening"
+  duration        Int            // Expected duration in hours
+  scheduledDate   DateTime?      // Confirmed date
+  scheduledTime   String?        // Confirmed time
+
+  // Location
+  locationType    String         // "home", "temple", "other"
+  address         String         @db.Text
+  landmark        String?
+  city            String
+  state           String
+  pincode         String
+  locationNotes   String?        @db.Text
+
+  // Participants
+  numberOfPeople  Int?
+  familyMembers   Json?          // Names & gotras if needed
+
+  // Requirements
+  materials       Json?          // List of materials needed
+  providedByPandit Boolean       @default(false)
+  specialRequests String?        @db.Text
+
+  // Pricing
+  quotedPrice     Float?         // Pandit's quote
+  finalPrice      Float?         // Negotiated price
+  advancePayment  Float?         // Advance paid
+  platformFee     Float?         // Platform commission
+  totalAmount     Float?
+
+  // Status
+  status          BookingStatus  @default(PENDING)
+  acceptedAt      DateTime?
+  rejectedAt      DateTime?
+  completedAt     DateTime?
+  cancelledAt     DateTime?
+  cancellationReason String?     @db.Text
+
+  // Payment
+  paymentId       String?
+  payment         Payment?       @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+  paymentStatus   String?        // "pending", "partial", "completed"
+
+  // Communication
+  panditNotes     String?        @db.Text
+  userNotes       String?        @db.Text
+  instructions    String?        @db.Text
+
+  // Metadata
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  // Relations
+  review          PanditReview?
+
+  @@index([userId])
+  @@index([panditId])
+  @@index([status])
+  @@index([preferredDate])
+  @@map("pandit_bookings")
+}
+
+model PanditReview {
+  id              String         @id @default(cuid())
+
+  // Booking
+  bookingId       String         @unique
+  booking         PanditBooking  @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+
+  // User
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Pandit
+  panditId        String
+  pandit          Pandit         @relation(fields: [panditId], references: [id], onDelete: Cascade)
+
+  // Rating (1-5 stars)
+  overallRating   Int
+  punctualityRating Int?
+  knowledgeRating Int?
+  conductRating   Int?
+  valueRating     Int?
+
+  // Review
+  title           String?
+  review          String         @db.Text
+  photos          String[]       // Review photos
+
+  // Response
+  panditResponse  String?        @db.Text
+  respondedAt     DateTime?
+
+  // Helpful votes
+  helpfulCount    Int            @default(0)
+  notHelpfulCount Int            @default(0)
+
+  // Verification
+  isVerified      Boolean        @default(false) // Verified booking
+  isPublic        Boolean        @default(true)
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([panditId])
+  @@index([userId])
+  @@index([overallRating])
+  @@map("pandit_reviews")
+}
+
+model PanditAvailability {
+  id              String         @id @default(cuid())
+
+  panditId        String
+  pandit          Pandit         @relation(fields: [panditId], references: [id], onDelete: Cascade)
+
+  // Date & Time
+  date            DateTime
+  dayOfWeek       String         // "Monday", etc.
+  timeSlot        String         // "morning", "afternoon", "evening"
+
+  // Status
+  isAvailable     Boolean        @default(true)
+  isBooked        Boolean        @default(false)
+  bookingId       String?        // If booked
+
+  // Notes
+  notes           String?
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@unique([panditId, date, timeSlot])
+  @@index([panditId])
+  @@index([date])
+  @@map("pandit_availability")
+}
+
+// =====================================================
+// PUJA MATERIALS & SERVICES
+// =====================================================
+
+model PujaMaterial {
+  id              String         @id @default(cuid())
+
+  // Material Details
+  name            String
+  category        String         // "essential", "optional", "luxury"
+  description     String?        @db.Text
+
+  // Pricing
+  price           Float
+  unit            String         // "piece", "kg", "packet", etc.
+
+  // Availability
+  inStock         Boolean        @default(true)
+  vendorId        String?        // If sold by vendor
+
+  // Associations
+  poojaTypes      PoojaType[]    // Which poojas need this
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([category])
+  @@map("puja_materials")
+}
+
+model PoojaPackage {
+  id              String         @id @default(cuid())
+
+  // Package Details
+  name            String
+  poojaType       PoojaType
+  description     String         @db.Text
+
+  // Inclusions
+  duration        Int            // Hours
+  materials       Json           // List of materials included
+  services        String[]       // What's included
+
+  // Pricing
+  price           Float
+  discountedPrice Float?
+
+  // Features
+  features        String[]
+  benefits        String[]
+
+  // Popularity
+  isPopular       Boolean        @default(false)
+  bookingCount    Int            @default(0)
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([poojaType])
+  @@map("pooja_packages")
+}
+
+// =====================================================
+// SPIRITUAL CONSULTATION (Chat/Video with Pandits)
+// =====================================================
+
+model SpiritualConsultation {
+  id              String         @id @default(cuid())
+
+  userId          String
+  user            User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  panditId        String
+  pandit          Pandit         @relation(fields: [panditId], references: [id], onDelete: Cascade)
+
+  // Consultation Details
+  consultationType String        // "chat", "video", "phone"
+  topic           String         // "general", "specific_problem", "ritual_guidance"
+  question        String         @db.Text
+
+  // Timing
+  scheduledAt     DateTime
+  duration        Int            // Minutes
+  startedAt       DateTime?
+  endedAt         DateTime?
+
+  // Status
+  status          String         @default("scheduled") // "scheduled", "ongoing", "completed", "cancelled"
+
+  // Payment
+  amount          Float
+  paymentId       String?
+  payment         Payment?       @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+
+  // Meeting (for video calls)
+  meetingLink     String?
+  meetingId       String?
+
+  // Notes
+  panditNotes     String?        @db.Text
+  followUpAdvice  String?        @db.Text
+
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  @@index([userId])
+  @@index([panditId])
+  @@index([scheduledAt])
+  @@map("spiritual_consultations")
 }
