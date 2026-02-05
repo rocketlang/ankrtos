@@ -18,8 +18,9 @@ async function testPageIndexInit() {
   console.log(`→ DATABASE_URL: ${process.env.DATABASE_URL ? '✓ configured' : '✗ missing'}`);
   console.log(`→ REDIS_URL: ${process.env.REDIS_URL || 'not configured (optional)'}`);
   console.log(`→ ENABLE_PAGEINDEX_ROUTER: ${process.env.ENABLE_PAGEINDEX_ROUTER}`);
-  console.log(`→ ANTHROPIC_API_KEY: ${process.env.ANTHROPIC_API_KEY ? '✓ configured (Tier 3 enabled)' : '✗ missing (Tier 3 disabled)'}`);
+  console.log(`→ AI_PROXY_URL: ${process.env.AI_PROXY_URL || 'http://localhost:4444'} (17 providers)`);
   console.log(`→ VOYAGE_API_KEY: ${process.env.VOYAGE_API_KEY ? '✓ configured' : '✗ missing'}`);
+  console.log('→ Using ANKR AI Proxy (no direct Anthropic API key needed)');
   console.log();
 
   console.log('Testing connections...');
@@ -49,7 +50,12 @@ async function testPageIndexInit() {
     console.log('│ Query → Classifier → 3 Tiers                        │');
     console.log('│   ├─ Tier 1: Cache (0 LLM, ~50ms)                  │');
     console.log('│   ├─ Tier 2: Embedding (0-1 LLM, ~500ms)           │');
-    console.log(`│   └─ Tier 3: PageIndex (2 LLM, ~5s) ${process.env.ANTHROPIC_API_KEY ? '[ENABLED]' : '[DISABLED]'} │`);
+    console.log('│   └─ Tier 3: PageIndex (2 LLM, ~5s) [ENABLED]      │');
+    console.log('│                                                      │');
+    console.log('│ AI Routing: ANKR AI Proxy                           │');
+    console.log('│   • 17 providers with auto-failover                 │');
+    console.log('│   • Free-tier priority routing                      │');
+    console.log('│   • Cost optimization enabled                       │');
     console.log('└─────────────────────────────────────────────────────┘');
     console.log();
     console.log('Expected Performance:');

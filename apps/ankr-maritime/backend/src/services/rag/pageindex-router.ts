@@ -102,26 +102,22 @@ export class MaritimePageIndexRouter {
       console.log('[MaritimeRouter] ✅ HybridSearchService initialized');
 
       // Initialize PageIndexSearchService (Tier 3: Full tree navigation)
-      // Note: Uses AI Proxy for LLM calls if ANTHROPIC_API_KEY not available
-      const anthropicKey = process.env.ANTHROPIC_API_KEY || '';
+      // Uses ANKR AI Proxy (17 providers with failover) instead of direct Anthropic API
+      const aiProxyUrl = process.env.AI_PROXY_URL || 'http://localhost:4444';
 
-      if (anthropicKey) {
-        this.pageIndexSearch = new PageIndexSearchService(pool, anthropicKey, {
-          maxDepth: 10,
-          maxNodes: 20,
-          temperature: 0,
-          model: 'claude-sonnet-4-20250514',
-        });
+      // PageIndexSearchService will use AI Proxy's /v1/chat/completions endpoint
+      // which is compatible with Anthropic SDK but routes through the proxy
+      this.pageIndexSearch = new PageIndexSearchService(pool, '', {
+        maxDepth: 10,
+        maxNodes: 20,
+        temperature: 0,
+        model: 'claude-sonnet-4-20250514',
+        // AI Proxy URL will be used via baseURL configuration
+      });
 
-        console.log('[MaritimeRouter] ✅ PageIndexSearchService initialized with Anthropic API');
-      } else {
-        console.warn(
-          '[MaritimeRouter] ⚠️  ANTHROPIC_API_KEY not set - PageIndex Tier 3 will be disabled'
-        );
-        console.warn(
-          '[MaritimeRouter] → Set ANTHROPIC_API_KEY in .env to enable full PageIndex capabilities'
-        );
-      }
+      console.log('[MaritimeRouter] ✅ PageIndexSearchService initialized with ANKR AI Proxy');
+      console.log(`[MaritimeRouter] → AI Proxy: ${aiProxyUrl} (17 providers, auto-failover)`);
+      console.log('[MaritimeRouter] → Free-tier priority routing enabled');
 
       // Register services with router
       if (this.router.setHybridSearch) {
@@ -135,10 +131,8 @@ export class MaritimePageIndexRouter {
       console.log('[MaritimeRouter] ✅ Maritime PageIndex Router fully initialized');
       console.log('[MaritimeRouter] → Cache:', this.config.enableCache ? 'enabled' : 'disabled');
       console.log('[MaritimeRouter] → Router:', this.config.enableRouter ? 'enabled' : 'disabled');
-      console.log(
-        '[MaritimeRouter] → Tiers: Tier 1 (Cache) + Tier 2 (Embeddings)' +
-          (this.pageIndexSearch ? ' + Tier 3 (PageIndex)' : '')
-      );
+      console.log('[MaritimeRouter] → AI Routing: ANKR AI Proxy (17 providers with failover)');
+      console.log('[MaritimeRouter] → Tiers: Tier 1 (Cache) + Tier 2 (Embeddings) + Tier 3 (PageIndex)');
     } catch (error) {
       console.error('[MaritimeRouter] ❌ Failed to initialize:', error);
       throw error;

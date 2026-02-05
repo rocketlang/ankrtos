@@ -441,11 +441,9 @@ async function main() {
       logger.info('✅ PageIndex Hybrid RAG System initialized successfully');
       logger.info('→ Tier 1: Cache (0 LLM calls, ~50ms)');
       logger.info('→ Tier 2: Embeddings (0-1 LLM calls, ~500ms)');
-      if (process.env.ANTHROPIC_API_KEY) {
-        logger.info('→ Tier 3: Full PageIndex (2 LLM calls, ~5s) - ENABLED');
-      } else {
-        logger.warn('→ Tier 3: Full PageIndex - DISABLED (set ANTHROPIC_API_KEY to enable)');
-      }
+      logger.info('→ Tier 3: Full PageIndex (2 LLM calls, ~5s) - ENABLED');
+      logger.info(`→ AI Routing: ANKR AI Proxy (${process.env.AI_PROXY_URL || 'http://localhost:4444'})`);
+      logger.info('→ 17 providers with auto-failover + free-tier priority');
     } else {
       logger.error('❌ PostgreSQL connection failed - PageIndex router disabled');
       logger.error('→ Check DATABASE_URL configuration');

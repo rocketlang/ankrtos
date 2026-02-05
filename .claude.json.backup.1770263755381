@@ -1,5 +1,5 @@
 {
-  "numStartups": 467,
+  "numStartups": 468,
   "installMethod": "global",
   "hasSeenTasksHint": true,
   "customApiKeyResponses": {
@@ -33,16 +33,16 @@
     "web-app": 459,
     "mobile-app": 459,
     "guest-passes": 465,
-    "custom-agents": 453,
+    "custom-agents": 468,
     "permissions": 461,
     "rename-conversation": 466,
-    "custom-commands": 453,
+    "custom-commands": 468,
     "frontend-design-plugin": 455,
     "ide-upsell-external-terminal": 466,
     "git-worktrees": 460,
     "agent-flag": 465
   },
-  "promptQueueUseCount": 2214,
+  "promptQueueUseCount": 2215,
   "showExpandedTodos": true,
   "cachedStatsigGates": {
     "tengu_prompt_suggestion": true,
@@ -317,6 +317,6 @@
     "data": {
       "system_prompt_variant": "tengu_vinteuil_phrase"
     },
-    "timestamp": 1770262108737
+    "timestamp": 1770263462979
   }
 }

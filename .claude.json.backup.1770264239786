@@ -32,11 +32,11 @@
     "btw-side-question": 17,
     "web-app": 459,
     "mobile-app": 459,
-    "guest-passes": 465,
-    "custom-agents": 453,
+    "guest-passes": 468,
+    "custom-agents": 468,
     "permissions": 461,
     "rename-conversation": 466,
-    "custom-commands": 453,
+    "custom-commands": 468,
     "frontend-design-plugin": 455,
     "ide-upsell-external-terminal": 466,
     "git-worktrees": 460,
@@ -317,6 +317,6 @@
     "data": {
       "system_prompt_variant": "tengu_vinteuil_phrase"
     },
-    "timestamp": 1770262943712
+    "timestamp": 1770264239243
   }
 }
