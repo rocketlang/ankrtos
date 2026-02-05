@@ -389,17 +389,25 @@ async function main() {
   if (process.env.ENABLE_AIS === 'true') {
     const aisService = new AISStreamService();
 
-    // Get configured trade areas from script
+    // Get configured high-priority trade areas
     const { MAJOR_TRADE_AREAS } = await import('../scripts/configure-ais-trade-areas.js');
-    const boundingBoxes = MAJOR_TRADE_AREAS
-      .filter(area => area.priority === 1) // Only high-priority areas
+    const priorityAreaBoxes = MAJOR_TRADE_AREAS
+      .filter(area => area.priority === 1) // High-priority detailed tracking
       .map(area => area.boundingBox);
 
+    // ADD global bounding box to also track rest of world
+    const globalBox = [[-90, -180], [90, 180]]; // Entire world
+    const allBoundingBoxes = [...priorityAreaBoxes, globalBox];
+
+    console.log(`🌍 AIS Coverage: ${priorityAreaBoxes.length} priority areas + GLOBAL coverage`);
+    console.log('   - Detailed: Major trade routes (Priority 1)');
+    console.log('   - Global: Rest of world for situational awareness');
+
     await aisService.connect({
-      boundingBoxes,
+      boundingBoxes: allBoundingBoxes,
       messageTypes: ['PositionReport', 'ShipStaticData']
     });
-    logger.info(`AIS tracking started (${boundingBoxes.length} trade areas)`);
+    logger.info(`AIS tracking: ${priorityAreaBoxes.length} priority areas + global coverage`);
   } else {
     logger.info('AIS tracking disabled (set ENABLE_AIS=true to enable)');
   }
