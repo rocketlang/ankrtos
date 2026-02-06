@@ -175,3 +175,4 @@ import './beta-analytics.js'; // ✅ Phase 5.4: Usage analytics & engagement tra
 import './knowledge-base.js'; // ✅ Phase 5.5: Training materials & knowledge base
 import './beta-success-metrics.js'; // ✅ Phase 5.6: Beta success metrics dashboard
 import './ais-live-dashboard.js'; // ✅ AIS Live Dashboard: Real-time vessel tracking single source of truth
+import './maritime-stats.js'; // ✅ Maritime Statistics: Efficient stats for landing page counters

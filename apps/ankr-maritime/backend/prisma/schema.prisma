@@ -385,6 +385,12 @@ model Port {
   timezone  String? // IANA timezone
   type      String  @default("seaport") // seaport, river_port, dry_port, anchorage
 
+  // OpenSeaMap coverage tracking
+  hasOpenSeaMap          Boolean   @default(false) // Quick flag for ANY OpenSeaMap data
+  openSeaMapFeatureCount Int       @default(0) // Total count of seamark features
+  openSeaMapCoverage     Json? // Detailed coverage: {hasBerths, hasAnchorages, hasHarbor, hasTerminals, hasNavAids}
+  openSeaMapCheckedAt    DateTime? // Last time coverage was checked
+
   voyageDepartures     Voyage[]                  @relation("DeparturePort")
   voyageArrivals       Voyage[]                  @relation("ArrivalPort")
   milestones           VoyageMilestone[]
@@ -422,6 +428,8 @@ model Port {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  @@index([hasOpenSeaMap])
+  @@index([openSeaMapFeatureCount])
   @@map("ports")
 }
 
