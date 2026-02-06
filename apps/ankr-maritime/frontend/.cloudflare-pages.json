@@ -1,0 +1,18 @@
+{
+  "projectName": "mari8x",
+  "production": {
+    "branch": "master",
+    "buildCommand": "cd apps/ankr-maritime/frontend && npm install && npx vite build",
+    "buildOutputDirectory": "apps/ankr-maritime/frontend/dist",
+    "rootDirectory": "/",
+    "environmentVariables": {
+      "NODE_VERSION": "20",
+      "NPM_FLAGS": "--legacy-peer-deps"
+    }
+  },
+  "preview": {
+    "branch": "*",
+    "buildCommand": "cd apps/ankr-maritime/frontend && npm install && npx vite build",
+    "buildOutputDirectory": "apps/ankr-maritime/frontend/dist"
+  }
+}
