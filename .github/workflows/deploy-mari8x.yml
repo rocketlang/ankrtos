@@ -1,0 +1,42 @@
+name: Deploy Mari8X to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'apps/ankr-maritime/frontend/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'apps/ankr-maritime/frontend/package-lock.json'
+
+      - name: Install dependencies
+        working-directory: apps/ankr-maritime/frontend
+        run: npm install
+
+      - name: Build
+        working-directory: apps/ankr-maritime/frontend
+        run: npx vite build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 1c452912df3eea9e8f1a2a973ff337f5
+          projectName: mari8x
+          directory: apps/ankr-maritime/frontend/dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
