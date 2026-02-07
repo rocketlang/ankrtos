@@ -164,6 +164,11 @@ AISLiveDashboardType.implement({
 
 // === Helper Functions ===
 
+// In-memory cache for expensive AIS dashboard queries
+let cachedDashboardData: Awaited<ReturnType<typeof getAISLiveDashboardData>> | null = null;
+let cacheTimestamp: number = 0;
+const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
+
 const NAVIGATION_STATUS_LABELS: Record<number, string> = {
   0: 'Under way using engine',
   1: 'At anchor',
@@ -292,9 +297,27 @@ async function getAISLiveDashboardData() {
 builder.queryFields((t) => ({
   aisLiveDashboard: t.field({
     type: AISLiveDashboardType,
-    description: 'Real-time AIS data statistics and coverage',
+    description: 'Real-time AIS data statistics and coverage (cached for 5 min)',
     resolve: async () => {
-      return await getAISLiveDashboardData();
+      const now = Date.now();
+
+      // Return cached data if still valid
+      if (cachedDashboardData && (now - cacheTimestamp) < CACHE_TTL_MS) {
+        // Update lastUpdated timestamp to show cache age
+        return {
+          ...cachedDashboardData,
+          lastUpdated: new Date(cacheTimestamp),
+        };
+      }
+
+      // Fetch fresh data and cache it
+      console.log('[AIS Dashboard] Cache miss - fetching fresh data...');
+      const freshData = await getAISLiveDashboardData();
+      cachedDashboardData = freshData;
+      cacheTimestamp = now;
+      console.log('[AIS Dashboard] Data cached successfully');
+
+      return freshData;
     },
   }),
 
