@@ -35,11 +35,13 @@ async function getMaritimeStats() {
     total_ports: bigint;
     total_countries: bigint;
     ports_with_osm: bigint;
+    ports_checked: bigint;
   }>>`
     SELECT
       COUNT(*) as total_ports,
       COUNT(DISTINCT country) as total_countries,
-      COUNT(CASE WHEN "hasOpenSeaMap" = true THEN 1 END) as ports_with_osm
+      COUNT(CASE WHEN "hasOpenSeaMap" = true THEN 1 END) as ports_with_osm,
+      COUNT(CASE WHEN "openSeaMapCheckedAt" IS NOT NULL THEN 1 END) as ports_checked
     FROM ports
   `;
 
@@ -56,7 +58,11 @@ async function getMaritimeStats() {
 
   const totalPorts = Number(portStats.total_ports);
   const portsWithOSM = Number(portStats.ports_with_osm);
-  const coveragePercent = totalPorts > 0 ? (portsWithOSM / totalPorts) * 100 : 0;
+  const portsChecked = Number(portStats.ports_checked);
+
+  // Calculate coverage as percentage of CHECKED ports, not all ports
+  // This gives a more accurate representation of OpenSeaMap data availability
+  const coveragePercent = portsChecked > 0 ? (portsWithOSM / portsChecked) * 100 : 0;
 
   return {
     totalPorts,
