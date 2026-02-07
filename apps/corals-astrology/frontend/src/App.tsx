@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Main Pages
-import LandingPage from './pages/LandingPage';
+import LandingPage from './pages/LandingPageEnhanced';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import ChoosePlanPage from './pages/ChoosePlanPage';
@@ -24,10 +24,6 @@ import CompleteKundliPage from './pages/CompleteKundliPage';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import SystemsPage from './pages/SystemsPage';
-import KundliPage from './pages/KundliPage';
-import HoroscopePage from './pages/HoroscopePage';
-import TarotPage from './pages/TarotPage';
-import ConsultationPage from './pages/ConsultationPage';
 
 function App() {
   return (
@@ -57,10 +53,8 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/systems" element={<SystemsPage />} />
-        <Route path="/kundli" element={<KundliPage />} />
-        <Route path="/horoscope" element={<HoroscopePage />} />
-        <Route path="/tarot" element={<TarotPage />} />
-        <Route path="/consultation" element={<ConsultationPage />} />
+        <Route path="/kundli" element={<CompleteKundliPage />} />
+        <Route path="/horoscope" element={<DailyHoroscopePage />} />
       </Routes>
     </Router>
   );

@@ -12,5 +12,11 @@ export default defineConfig({
   server: {
     port: 3009,
     host: true,
+    allowedHosts: [
+      'localhost',
+      '127.0.0.1',
+      'corals-astrology.ankr.digital',
+      '216.48.185.29'
+    ],
   },
 });

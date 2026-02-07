@@ -739,6 +739,55 @@
         "JSON reports + Telegram alerts",
         "Watch mode with configurable interval"
       ]
+    },
+    "corals-astrology-backend": {
+      "portPath": "backend.coralAstrology",
+      "path": "/root/apps/corals-astrology/backend",
+      "command": "npx tsx watch src/main.ts",
+      "description": "CORALS Astrology API - Comprehensive Vedic Astrology Platform (GraphQL)",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "pm2Name": "corals-backend",
+      "domain": "corals-astrology.ankr.digital",
+      "env": {
+        "NODE_ENV": "production",
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/corals_astrology?schema=public",
+        "PORT": "4052",
+        "JWT_SECRET": "corals-astrology-super-secret-jwt-key-change-in-production-2026",
+        "CORS_ORIGIN": "http://localhost:3009,http://localhost:3010,https://corals-astrology.ankr.digital"
+      },
+      "_features": [
+        "Complete Kundli/Birth Chart with D1-D60 divisional charts",
+        "6 major Dosha detection (Kaal Sarp, Manglik, Pitra, Shrapit, Chandal, Grahan)",
+        "Lal Kitab remedies with scripture references",
+        "Dasha system (Vimshottari, Yogini, Ashtottari)",
+        "Advanced numerology (Pythagorean, Chaldean, Kabbalah)",
+        "Medical astrology & Crystal therapy",
+        "Chinese BaZi (Four Pillars)",
+        "Palmistry system",
+        "AI-powered personalized readings",
+        "Freemium model with Razorpay integration"
+      ]
+    },
+    "corals-astrology-frontend": {
+      "portPath": "frontend.coralAstrology",
+      "path": "/root/apps/corals-astrology/frontend",
+      "command": "npx vite --host 0.0.0.0 --port ${PORT}",
+      "description": "CORALS Astrology Dashboard (React + Vite + Apollo Client)",
+      "healthEndpoint": "/",
+      "enabled": true,
+      "pm2Name": "corals-frontend",
+      "_features": [
+        "Landing page with spiritual solace branding",
+        "Complete Kundli viewer with all divisional charts",
+        "Dosha detection & remedy viewer",
+        "Daily/Weekly/Monthly horoscopes",
+        "Muhurat finder for auspicious timings",
+        "Numerology calculator",
+        "Scripture reader with search",
+        "WhatsApp bot integration",
+        "Push notification support"
+      ]
     }
   }
 }
