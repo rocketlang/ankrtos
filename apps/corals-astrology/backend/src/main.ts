@@ -2,10 +2,12 @@ import express from 'express';
 import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import { PrismaClient } from '@prisma/client';
 import { schema } from './schema';
 import { createContext } from './schema/context';
+import { createAuthRoutes } from './routes/auth.routes';
 
 dotenv.config();
 
@@ -26,6 +28,7 @@ async function startServer() {
 
   // Middleware
   app.use(cors({ origin: CORS_ORIGIN, credentials: true }));
+  app.use(cookieParser());
   app.use(express.json({ limit: '10mb' }));
   app.use(express.urlencoded({ extended: true }));
 
@@ -38,6 +41,9 @@ async function startServer() {
       timestamp: new Date().toISOString()
     });
   });
+
+  // Auth routes (REST)
+  app.use('/api/auth', createAuthRoutes(prisma));
 
   // GraphQL endpoint
   app.use(

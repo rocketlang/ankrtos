@@ -28,8 +28,11 @@
   "dependencies": {
     "@apollo/server": "^4.10.0",
     "@prisma/client": "^5.9.1",
+    "@types/cookie-parser": "^1.4.10",
+    "arctic": "^1.9.2",
     "astronomy-engine": "^2.1.19",
     "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.0",
@@ -40,6 +43,7 @@
     "jsonwebtoken": "^9.0.2",
     "openai": "^4.28.0",
     "swisseph": "^0.5.17",
+    "twilio": "^5.12.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {

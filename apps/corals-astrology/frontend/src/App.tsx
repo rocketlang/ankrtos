@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Main Pages
 import LandingPage from './pages/LandingPageEnhanced';
-import LoginPage from './pages/LoginPage';
+import LoginPage from './pages/LoginPageNew';
 import SignupPage from './pages/SignupPage';
 import ChoosePlanPage from './pages/ChoosePlanPage';
 import DashboardPage from './pages/DashboardPage';
@@ -32,6 +32,7 @@ function App() {
         {/* New Main Pages */}
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/auth/callback" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/choose-plan" element={<ChoosePlanPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
