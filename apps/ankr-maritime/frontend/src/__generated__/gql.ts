@@ -1,7 +1,6 @@
 /* eslint-disable */
-import * as types from './graphql';
+import { gql as apolloGql } from '@apollo/client';
 
-export function gql(source: string): unknown;
-export function gql(source: string) {
-  return source;
+export function gql(source: string): any {
+  return apolloGql(source);
 }
