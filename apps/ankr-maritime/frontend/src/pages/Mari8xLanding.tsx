@@ -1,6 +1,7 @@
 import { useQuery, gql } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import AISFunFacts from '../components/AISFunFacts';
 
 // Split queries for better error handling
 const AIS_DASHBOARD_QUERY = gql(`
@@ -271,6 +272,9 @@ export default function Mari8xLanding() {
               </table>
             </div>
           </div>
+
+          {/* AIS Fun Facts Showcase */}
+          <AISFunFacts />
         </div>
       </div>
 

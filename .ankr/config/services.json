@@ -642,14 +642,17 @@
       "portPath": "backend.ankrMaritime",
       "path": "/root/apps/ankr-maritime/backend",
       "command": "npx tsx src/main.ts",
-      "description": "Mrk8X Maritime Operations API (Fastify + Mercurius GraphQL + Pothos + Prisma)",
+      "description": "Mari8X Maritime Operations API (Fastify + Mercurius GraphQL + Pothos + Prisma)",
       "healthEndpoint": "/health",
       "enabled": true,
-      "pm2Name": "ankr-maritime-backend",
+      "pm2Name": "mari8x-backend",
+      "domain": "mari8x.com",
       "env": {
+        "NODE_ENV": "production",
         "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_maritime",
         "JWT_SECRET": "mrk8x-jwt-secret-2026",
-        "FRONTEND_URL": "http://localhost:3008"
+        "FRONTEND_URL": "https://mari8x.com",
+        "ENABLE_AIS": "true"
       },
       "_features": [
         "18 Prisma models (Vessel, Port, Charter, Voyage, DA, Laytime, etc.)",
