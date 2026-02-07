@@ -39,7 +39,7 @@ const sectionColors: Record<string, { text: string; bg: string; activeBg: string
 };
 
 export function Layout() {
-  const { sidebarOpen, toggleSidebar } = useUIStore();
+  const { sidebarOpen, toggleSidebar, theme, toggleTheme } = useUIStore();
   const { user, logout } = useAuthStore();
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -245,6 +245,17 @@ export function Layout() {
                 </div>
               )}
             </div>
+
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="text-maritime-400 hover:text-white transition-colors"
+              title={`Theme: ${theme} (click to cycle)`}
+            >
+              <span className="text-lg">
+                {theme === 'dark' ? '🌙' : theme === 'light' ? '☀️' : '🌗'}
+              </span>
+            </button>
 
             {/* Language Switcher */}
             <LanguageSwitcher />

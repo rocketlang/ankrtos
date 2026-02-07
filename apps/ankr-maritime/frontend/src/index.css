@@ -2,6 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light theme overrides */
+.light {
+  color-scheme: light;
+}
+
+.light .bg-maritime-900 {
+  @apply bg-gray-50 !important;
+}
+
+.light .bg-maritime-800 {
+  @apply bg-white border-gray-200 !important;
+}
+
+.light .text-white {
+  @apply text-gray-900 !important;
+}
+
+.light .text-maritime-400 {
+  @apply text-gray-600 !important;
+}
+
+.light .text-maritime-500 {
+  @apply text-gray-500 !important;
+}
+
+.light .text-maritime-300 {
+  @apply text-gray-700 !important;
+}
+
+.light .border-maritime-700 {
+  @apply border-gray-200 !important;
+}
+
+.light .border-maritime-600 {
+  @apply border-gray-300 !important;
+}
+
+.light .hover\:bg-maritime-700\/30:hover {
+  @apply hover:bg-gray-100 !important;
+}
+
+.light .hover\:bg-maritime-700\/50:hover {
+  @apply hover:bg-gray-100 !important;
+}
+
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
