@@ -3,8 +3,9 @@ import { gql } from '../__generated__/gql';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
+// Split queries for better error handling
 const AIS_DASHBOARD_QUERY = gql(`
-  query Mari8xLandingAIS {
+  query Mari8xLandingAISDashboard {
     aisLiveDashboard {
       totalPositions
       uniqueVessels
@@ -14,6 +15,11 @@ const AIS_DASHBOARD_QUERY = gql(`
       }
       lastUpdated
     }
+  }
+`);
+
+const MARITIME_STATS_QUERY = gql(`
+  query Mari8xLandingMaritimeStats {
     maritimeStats {
       totalPorts
       totalCountries
@@ -43,9 +49,14 @@ const RECENT_POSITIONS_QUERY = gql(`
 export default function Mari8xLanding() {
   const [liveCount, setLiveCount] = useState(0);
 
-  const { data, error: dashboardError } = useQuery(AIS_DASHBOARD_QUERY, {
+  // Separate queries - if one fails, others still work
+  const { data: aisData, error: aisError } = useQuery(AIS_DASHBOARD_QUERY, {
     pollInterval: 5000, // Refresh every 5 seconds
-    errorPolicy: 'ignore', // Don't crash on error
+    errorPolicy: 'all', // Return partial data on error
+  });
+
+  const { data: statsData } = useQuery(MARITIME_STATS_QUERY, {
+    errorPolicy: 'all',
   });
 
   const { data: positionsData, error: positionsError } = useQuery(RECENT_POSITIONS_QUERY, {
@@ -55,8 +66,8 @@ export default function Mari8xLanding() {
 
   // Animate the live count
   useEffect(() => {
-    if (data?.aisLiveDashboard.totalPositions) {
-      const target = data.aisLiveDashboard.totalPositions;
+    if (aisData?.aisLiveDashboard.totalPositions) {
+      const target = aisData.aisLiveDashboard.totalPositions;
       const current = liveCount;
       const diff = target - current;
       const steps = 50;
@@ -74,9 +85,9 @@ export default function Mari8xLanding() {
 
       return () => clearInterval(timer);
     }
-  }, [data?.aisLiveDashboard.totalPositions]);
+  }, [aisData?.aisLiveDashboard.totalPositions]);
 
-  const dashboard = data?.aisLiveDashboard;
+  const dashboard = aisData?.aisLiveDashboard;
   const recentPositions = positionsData?.aisRecentPositions || [];
 
   return (
@@ -169,17 +180,17 @@ export default function Mari8xLanding() {
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
               <div className="text-blue-300 text-sm font-medium mb-2">Global Ports</div>
               <div className="text-4xl font-bold text-white mb-2">
-                {data?.maritimeStats?.totalPorts.toLocaleString() || '0'}
+                {statsData?.maritimeStats?.totalPorts.toLocaleString() || '0'}
               </div>
-              <div className="text-sm text-purple-400">{data?.maritimeStats?.totalCountries || 0} countries</div>
+              <div className="text-sm text-purple-400">{statsData?.maritimeStats?.totalCountries || 0} countries</div>
             </div>
 
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
               <div className="text-blue-300 text-sm font-medium mb-2">Port Tariffs</div>
               <div className="text-4xl font-bold text-white mb-2">
-                {data?.maritimeStats?.totalTariffs.toLocaleString() || '0'}
+                {statsData?.maritimeStats?.totalTariffs.toLocaleString() || '0'}
               </div>
-              <div className="text-sm text-orange-400">{data?.maritimeStats?.portsCovered || 0} ports covered</div>
+              <div className="text-sm text-orange-400">{statsData?.maritimeStats?.portsCovered || 0} ports covered</div>
             </div>
 
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
@@ -193,9 +204,9 @@ export default function Mari8xLanding() {
             <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
               <div className="text-blue-300 text-sm font-medium mb-2">OpenSeaMap</div>
               <div className="text-4xl font-bold text-white mb-2">
-                {data?.maritimeStats?.openSeaMapCoverage.toFixed(1) || '0.0'}%
+                {statsData?.maritimeStats?.openSeaMapCoverage.toFixed(1) || '0.0'}%
               </div>
-              <div className="text-sm text-teal-400">{data?.maritimeStats?.portsWithOpenSeaMap || 0} ports mapped</div>
+              <div className="text-sm text-teal-400">{statsData?.maritimeStats?.portsWithOpenSeaMap || 0} ports mapped</div>
             </div>
           </div>
 
