@@ -27,14 +27,20 @@ export function Login() {
 
   const [loginMutation, { loading, error }] = useMutation(LOGIN_MUTATION, {
     onCompleted: (data) => {
+      console.log('Login successful:', data);
       login(data.login.user, data.login.token);
       navigate('/');
+    },
+    onError: (error) => {
+      console.error('Login error:', error);
     },
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    loginMutation({ variables: { email, password } });
+    console.log('Login attempt:', { email, password: '***' });
+    loginMutation({ variables: { email, password } })
+      .catch(err => console.error('Login mutation error:', err));
   };
 
   return (

@@ -124,6 +124,7 @@ import BetaSuccessDashboard from './pages/admin/BetaSuccessDashboard';
 import BetaKnowledgeBase from './pages/BetaKnowledgeBase';
 import AISLiveDashboard from './pages/AISLiveDashboard';
 import Mari8xLanding from './pages/Mari8xLanding';
+import FlowCanvasPage from './pages/FlowCanvas/FlowCanvasPage';
 import { FDADisputeResolution } from './pages/FDADisputeResolution';
 import { CostOptimization } from './pages/CostOptimization';
 import { BankReconciliation } from './pages/BankReconciliation';
@@ -147,7 +148,6 @@ export default function App() {
         </div>
       }>
         <Routes>
-      <Route path="/" element={<Login />} />
       <Route path="/home" element={<Mari8xLanding />} />
       <Route path="/mari8x" element={<Mari8xLanding />} />
       <Route path="/login" element={<Login />} />
@@ -283,6 +283,7 @@ export default function App() {
         <Route path="/training/article/:slug" element={<ArticleViewer />} />
         <Route path="/beta/knowledge-base" element={<BetaKnowledgeBase />} />
         <Route path="/ais/live" element={<AISLiveDashboard />} />
+        <Route path="/flow-canvas" element={<FlowCanvasPage />} />
       </Route>
     </Routes>
       </Suspense>
