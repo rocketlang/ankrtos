@@ -1,0 +1,18 @@
+{
+  "name": "ncert-content-scripts",
+  "version": "1.0.0",
+  "description": "NCERT Content Pipeline Scripts",
+  "type": "module",
+  "scripts": {
+    "pipeline": "tsx content-pipeline.ts",
+    "pipeline:class10": "tsx content-pipeline.ts 10",
+    "ingest": "tsx manual-ingest.ts",
+    "test-questions": "tsx test-question-generation.ts"
+  },
+  "dependencies": {
+    "tsx": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0"
+  }
+}
