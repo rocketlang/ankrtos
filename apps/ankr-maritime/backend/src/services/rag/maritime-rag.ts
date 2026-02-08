@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { maritimeRouter } from './pageindex-router.js'; // Temporarily disabled for testing
+// import { maritimeRouter } from './pageindex-router.js'; // Temporarily disabled for testing
 
 const prisma = new PrismaClient();
 

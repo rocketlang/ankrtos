@@ -175,4 +175,16 @@ import './beta-analytics.js'; // ✅ Phase 5.4: Usage analytics & engagement tra
 import './knowledge-base.js'; // ✅ Phase 5.5: Training materials & knowledge base
 import './beta-success-metrics.js'; // ✅ Phase 5.6: Beta success metrics dashboard
 import './ais-live-dashboard.js'; // ✅ AIS Live Dashboard: Real-time vessel tracking single source of truth
+import './ais-heatmap.js'; // ✅ AIS Global Heatmap: Aggregated position data for visualization
 import './maritime-stats.js'; // ✅ Maritime Statistics: Efficient stats for landing page counters
+import './ais-fun-facts-cached.js'; // ✅ AIS Fun Facts: Cached version for landing page performance
+import './ais-stats-daily.js'; // ⚡ Daily AIS Stats: Pre-computed stats for instant access
+import './ais-live-stats.js'; // ⚡ Live AIS Stats: Real-time count including today's new data
+import './live-vessels.js'; // Live vessel positions for map
+import './hybrid-ais-coverage.js'; // 🛰️ Hybrid AIS: Terrestrial + Satellite (GFW) coverage
+import './gfw-events.js'; // 🎣 GFW Events: Fishing, Port Visits, Loitering with positions
+import './vessel-journey.js'; // 🚢 Vessel Journey: Intelligent hybrid tracking with gap filling
+import './fleet-dashboard.js'; // 📊 Fleet Dashboard: Overview of all vessels with tracking status
+import './vessel-alerts.js'; // ⚠️ Vessel Alerts: Automated notifications for status changes
+import './vessel-eta.js'; // 🎯 Vessel ETA: Arrival time predictions
+import './voyage-cost-estimate.js'; // 💰 Voyage Cost Estimator: Calculate voyage costs from journey data

@@ -123,7 +123,14 @@ import ArticleViewer from './pages/ArticleViewer';
 import BetaSuccessDashboard from './pages/admin/BetaSuccessDashboard';
 import BetaKnowledgeBase from './pages/BetaKnowledgeBase';
 import AISLiveDashboard from './pages/AISLiveDashboard';
+import HybridAISMap from './pages/HybridAISMap';
+import GFWEventsMap from './pages/GFWEventsMap';
+import VesselJourneyTracker from './pages/VesselJourneyTracker';
+import FleetDashboard from './pages/FleetDashboard';
+import VesselAlertsPage from './pages/VesselAlertsPage';
+import GeofencingPage from './pages/GeofencingPage';
 import Mari8xLanding from './pages/Mari8xLanding';
+import Mari8xTechnical from './pages/Mari8xTechnical';
 import FlowCanvasPage from './pages/FlowCanvas/FlowCanvasPage';
 import { FDADisputeResolution } from './pages/FDADisputeResolution';
 import { CostOptimization } from './pages/CostOptimization';
@@ -148,8 +155,12 @@ export default function App() {
         </div>
       }>
         <Routes>
+      <Route path="/" element={<Mari8xLanding />} />
+      {/* Public Routes - No Authentication Required */}
       <Route path="/home" element={<Mari8xLanding />} />
       <Route path="/mari8x" element={<Mari8xLanding />} />
+      <Route path="/mari8x-technical" element={<Mari8xTechnical />} />
+      <Route path="/technical" element={<Mari8xTechnical />} />
       <Route path="/login" element={<Login />} />
       <Route path="/beta/signup" element={<BetaAgentSignup />} />
       <Route
@@ -159,7 +170,7 @@ export default function App() {
           </ProtectedRoute>
         }
       >
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/vessels" element={<Vessels />} />
         <Route path="/ports" element={<Ports />} />
         <Route path="/world-port-index" element={<WorldPortIndex />} />
@@ -283,6 +294,12 @@ export default function App() {
         <Route path="/training/article/:slug" element={<ArticleViewer />} />
         <Route path="/beta/knowledge-base" element={<BetaKnowledgeBase />} />
         <Route path="/ais/live" element={<AISLiveDashboard />} />
+        <Route path="/ais/hybrid-map" element={<HybridAISMap />} />
+        <Route path="/ais/gfw-events" element={<GFWEventsMap />} />
+        <Route path="/ais/vessel-journey" element={<VesselJourneyTracker />} />
+        <Route path="/ais/fleet-dashboard" element={<FleetDashboard />} />
+        <Route path="/ais/alerts" element={<VesselAlertsPage />} />
+        <Route path="/ais/geofencing" element={<GeofencingPage />} />
         <Route path="/flow-canvas" element={<FlowCanvasPage />} />
       </Route>
     </Routes>

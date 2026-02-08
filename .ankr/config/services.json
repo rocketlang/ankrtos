@@ -667,7 +667,7 @@
     "ankr-maritime-frontend": {
       "portPath": "frontend.ankrMaritime",
       "path": "/root/apps/ankr-maritime/frontend",
-      "command": "npx vite --host 0.0.0.0 --port ${PORT}",
+      "command": "npx vite --host --port ${PORT}",
       "description": "Mrk8X Maritime Operations Dashboard (React 19 + Vite + Apollo + TailwindCSS)",
       "healthEndpoint": "/",
       "enabled": true,
@@ -788,6 +788,30 @@
         "WhatsApp bot integration",
         "Push notification support"
       ]
+    },
+    "curriculum-admin": {
+      "portPath": "frontend.curriculum",
+      "path": "/root/ankr-labs-nx/apps/ankr-curriculum-admin",
+      "command": "npm run dev",
+      "description": "ANKR Curriculum Admin Panel (seekho.ankrlabs.org)",
+      "healthEndpoint": "/",
+      "enabled": true,
+      "type": "frontend"
+    },
+    "curriculum-backend": {
+      "portPath": "backend.curriculum",
+      "path": "/root/ankr-labs-nx/apps/ankr-curriculum-backend",
+      "command": "npm run dev",
+      "description": "ANKR Curriculum GraphQL Backend",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "type": "backend",
+      "env": {
+        "NODE_ENV": "development",
+        "AI_PROXY_URL": "http://localhost:4444",
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_eon",
+        "CORS_ORIGIN": "http://localhost:3009,https://seekho.ankrlabs.org"
+      }
     }
   }
 }

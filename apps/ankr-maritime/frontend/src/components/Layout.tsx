@@ -1,9 +1,10 @@
 import { Outlet, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useQuery, useMutation, gql } from '@apollo/client';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useUIStore } from '../lib/stores/ui';
 import { useAuthStore } from '../lib/stores/auth';
 import { navSections, findSectionForPath, loadSidebarState, saveSidebarState } from '../lib/sidebar-nav';
+import { workflowStages, filterNavForUser, findStageForPath, loadSidebarState as loadRbacState, saveSidebarState as saveRbacState } from '../lib/sidebar-nav-rbac';
 import { WorkflowBreadcrumb } from './WorkflowBreadcrumb';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { SwayamBot } from './SwayamBot';
@@ -45,33 +46,43 @@ export function Layout() {
   const { pathname } = useLocation();
   const [showNotifs, setShowNotifs] = useState(false);
 
+  // Filter navigation based on user roles (RBAC/ABAC)
+  const userNav = useMemo(() => filterNavForUser(user), [user]);
+
+  // Debug sidebar toggle and user roles
+  useEffect(() => {
+    console.log('🔧 Sidebar state:', sidebarOpen ? 'OPEN' : 'CLOSED');
+    console.log('👤 User roles:', user?.roles || ['none']);
+    console.log('📋 Visible stages:', userNav.length);
+  }, [sidebarOpen, user, userNav]);
+
   // Sidebar section open/closed state
   const [openSections, setOpenSections] = useState<Record<string, boolean>>(() => {
-    const stored = loadSidebarState();
-    // Auto-open the section containing the current path
-    const activeSection = findSectionForPath(pathname);
-    if (activeSection && !stored[activeSection]) {
-      stored[activeSection] = true;
+    const stored = loadRbacState();
+    // Auto-open the stage containing the current path
+    const activeStage = findStageForPath(userNav, pathname);
+    if (activeStage && !stored[activeStage]) {
+      stored[activeStage] = true;
     }
     return stored;
   });
 
-  // Auto-open active section when navigating
+  // Auto-open active stage when navigating
   useEffect(() => {
-    const activeSection = findSectionForPath(pathname);
-    if (activeSection && !openSections[activeSection]) {
+    const activeStage = findStageForPath(userNav, pathname);
+    if (activeStage && !openSections[activeStage]) {
       setOpenSections((prev) => {
-        const next = { ...prev, [activeSection]: true };
-        saveSidebarState(next);
+        const next = { ...prev, [activeStage]: true };
+        saveRbacState(next);
         return next;
       });
     }
-  }, [pathname]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [pathname, userNav]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const toggleSection = useCallback((sectionId: string) => {
     setOpenSections((prev) => {
       const next = { ...prev, [sectionId]: !prev[sectionId] };
-      saveSidebarState(next);
+      saveRbacState(next);
       return next;
     });
   }, []);
@@ -117,32 +128,32 @@ export function Layout() {
           )}
         </div>
 
-        {/* Navigation — Collapsible Sections */}
+        {/* Navigation — Workflow Stages (RBAC filtered) */}
         <nav className="flex-1 py-1 overflow-y-auto">
-          {navSections.map((section) => {
-            const isOpen = openSections[section.id] ?? false;
-            const colors = sectionColors[section.color] ?? sectionColors.blue;
-            const sectionHasActive = section.items.some(
+          {userNav.map((stage) => {
+            const isOpen = openSections[stage.id] ?? false;
+            const colors = sectionColors[stage.color] ?? sectionColors.blue;
+            const stageHasActive = stage.items.some(
               (item) => item.href === pathname || (item.href !== '/' && pathname.startsWith(item.href))
             );
 
             return (
-              <div key={section.id}>
-                {/* Section header */}
+              <div key={stage.id}>
+                {/* Stage header */}
                 <button
-                  onClick={() => sidebarOpen ? toggleSection(section.id) : undefined}
+                  onClick={() => sidebarOpen ? toggleSection(stage.id) : undefined}
                   className={`w-full flex items-center gap-2 px-3 py-2 text-xs transition-colors ${
-                    sectionHasActive
+                    stageHasActive
                       ? `${colors.activeBg} ${colors.text}`
                       : 'text-maritime-500 hover:text-maritime-300 hover:bg-maritime-700/30'
                   }`}
-                  title={!sidebarOpen ? section.label : undefined}
+                  title={!sidebarOpen ? stage.description : undefined}
                 >
-                  <span className="text-sm flex-shrink-0 w-5 text-center">{section.icon}</span>
+                  <span className="text-sm flex-shrink-0 w-5 text-center">{stage.icon}</span>
                   {sidebarOpen && (
                     <>
-                      <span className="flex-1 text-left font-medium truncate">{section.label}</span>
-                      <span className="text-maritime-600 text-[10px] mr-1">{section.items.length}</span>
+                      <span className="flex-1 text-left font-medium truncate">{stage.label}</span>
+                      <span className="text-maritime-600 text-[10px] mr-1">{stage.items.length}</span>
                       <span className={`text-[10px] transition-transform ${isOpen ? 'rotate-90' : ''}`}>
                         {'\u25B6'}
                       </span>
@@ -150,10 +161,10 @@ export function Layout() {
                   )}
                 </button>
 
-                {/* Section items — collapsed/expanded */}
+                {/* Stage items — collapsed/expanded */}
                 {sidebarOpen && isOpen && (
                   <div className="pb-1">
-                    {section.items.map((item) => (
+                    {stage.items.map((item) => (
                       <NavLink
                         key={item.href}
                         to={item.href}
@@ -172,7 +183,7 @@ export function Layout() {
                   </div>
                 )}
 
-                {/* Collapsed sidebar: show icon only, click navigates to first item */}
+                {/* Collapsed sidebar: show icon only with tooltip */}
                 {!sidebarOpen && (
                   <div className="hidden" />
                 )}

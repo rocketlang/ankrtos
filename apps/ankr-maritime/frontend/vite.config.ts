@@ -11,7 +11,11 @@ export default defineConfig({
   },
   server: {
     port: 3008,
-    host: '0.0.0.0',
+    host: true,
+    strictPort: false,
+    hmr: {
+      clientPort: 443,
+    },
     proxy: {
       '/graphql': {
         target: 'http://localhost:4051',
@@ -22,5 +26,12 @@ export default defineConfig({
         changeOrigin: true,
       },
     },
+    // Custom middleware to disable host checking
+    middlewareMode: false,
+  },
+  preview: {
+    host: true,
+    port: 3008,
+    strictPort: false,
   },
 });

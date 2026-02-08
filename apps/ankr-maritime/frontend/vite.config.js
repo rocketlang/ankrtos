@@ -13,11 +13,11 @@ export default defineConfig({
         host: '0.0.0.0',
         proxy: {
             '/graphql': {
-                target: 'http://localhost:4051',
+                target: 'http://localhost:4053',
                 changeOrigin: true,
             },
             '/api': {
-                target: 'http://localhost:4051',
+                target: 'http://localhost:4053',
                 changeOrigin: true,
             },
         },

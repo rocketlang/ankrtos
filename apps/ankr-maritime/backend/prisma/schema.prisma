@@ -6537,3 +6537,52 @@ model EmailFolderRule {
   @@index([userId])
   @@map("email_folder_rules")
 }
+
+
+// Mari8XOSRM - Extracted AIS Routes (for route learning)
+model ExtractedAISRoute {
+  id String @id @default(cuid())
+
+  // Vessel information
+  vesselId   String
+  vesselType String
+
+  // Port pair
+  originPortId String
+  destPortId   String
+
+  // Voyage timing
+  departureTime DateTime
+  arrivalTime   DateTime
+
+  // Distance metrics
+  greatCircleNm  Float
+  actualSailedNm Float
+  distanceFactor Float
+  durationHours  Float
+  avgSpeedKnots  Float
+
+  // Quality metrics
+  qualityScore    Float
+  coveragePercent Float
+  totalPositions  Int
+
+  // Route classification
+  routeType String
+  viaPoints String[]
+
+  // Simplified position data
+  positionsData Json?
+
+  // Metadata
+  extractedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([vesselId])
+  @@index([originPortId, destPortId])
+  @@index([vesselType])
+  @@index([qualityScore])
+  @@index([routeType])
+  @@map("extracted_ais_routes")
+}

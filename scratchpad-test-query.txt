@@ -1,0 +1,5 @@
+{
+  aisFunFacts {
+    lastUpdated
+  }
+}

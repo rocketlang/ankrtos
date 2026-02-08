@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mari8X OSRM Ferry Routes - Live Demo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: #0a0e27;
+      color: white;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .info-panel {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.9);
+      border: 2px solid #00d4ff;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 350px;
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+      z-index: 1000;
+    }
+
+    .info-panel h2 {
+      margin: 0 0 15px 0;
+      color: #00d4ff;
+      font-size: 20px;
+    }
+
+    .info-panel .stat {
+      margin: 10px 0;
+      padding: 10px;
+      background: rgba(0, 212, 255, 0.1);
+      border-radius: 6px;
+      border-left: 3px solid #00d4ff;
+    }
+
+    .info-panel .stat strong {
+      color: #00d4ff;
+    }
+
+    .controls {
+      margin-top: 15px;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .route-info {
+      margin-top: 15px;
+      padding: 15px;
+      background: rgba(102, 126, 234, 0.2);
+      border-radius: 8px;
+      display: none;
+    }
+
+    .route-info.active {
+      display: block;
+    }
+
+    .loading {
+      text-align: center;
+      color: #00d4ff;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <div class="info-panel">
+    <h2>🚢 Mari8X OSRM Demo</h2>
+
+    <div class="stat">
+      <strong>Server:</strong> localhost:5000
+    </div>
+
+    <div class="stat">
+      <strong>Routes:</strong> 15 ferry routes
+    </div>
+
+    <div class="stat">
+      <strong>Coverage:</strong> North Sea
+    </div>
+
+    <div class="controls">
+      <button class="btn" onclick="showRoute1()">📍 Route 1: Lillesand → Aalbæk</button>
+      <button class="btn" onclick="showRoute2()">📍 Route 2: Ryggstranden → Kristiansand</button>
+      <button class="btn" onclick="showRoute3()">📍 Multi-Stop (5 waypoints)</button>
+      <button class="btn" onclick="clearRoutes()">🗑️ Clear</button>
+    </div>
+
+    <div id="route-info" class="route-info">
+      <div id="route-details"></div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script>
+    // Initialize map centered on North Sea
+    const map = L.map('map').setView([58.5, 8.5], 6);
+
+    // Add CartoDB Voyager tiles (clean maritime look)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      attribution: '© OpenStreetMap © CARTO',
+      maxZoom: 20
+    }).addTo(map);
+
+    // Store active route layer
+    let activeRoute = null;
+    let activeMarkers = [];
+
+    // Fetch and display route from OSRM
+    async function fetchAndDisplayRoute(coords, label) {
+      const routeInfo = document.getElementById('route-info');
+      const routeDetails = document.getElementById('route-details');
+
+      routeInfo.classList.add('active');
+      routeDetails.innerHTML = '<p class="loading">⏳ Calculating route...</p>';
+
+      try {
+        // Build OSRM URL
+        const coordString = coords.map(c => `${c[1]},${c[0]}`).join(';');
+        const url = `http://localhost:5000/route/v1/driving/${coordString}?overview=full&geometries=geojson`;
+
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (data.code !== 'Ok') {
+          routeDetails.innerHTML = `<p style="color: #ff6b6b;">❌ No route found</p>`;
+          return;
+        }
+
+        const route = data.routes[0];
+
+        // Clear previous route
+        clearRoutes();
+
+        // Draw route polyline
+        const geometry = route.geometry.coordinates.map(c => [c[1], c[0]]);
+        activeRoute = L.polyline(geometry, {
+          color: '#00d4ff',
+          weight: 4,
+          opacity: 0.8,
+          smoothFactor: 1
+        }).addTo(map);
+
+        // Add start/end markers
+        const startIcon = L.divIcon({
+          className: 'custom-marker',
+          html: '<div style="background: #4ade80; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>',
+          iconSize: [24, 24],
+          iconAnchor: [12, 12]
+        });
+
+        const endIcon = L.divIcon({
+          className: 'custom-marker',
+          html: '<div style="background: #f43f5e; width: 24px; height: 24px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>',
+          iconSize: [24, 24],
+          iconAnchor: [12, 12]
+        });
+
+        const startMarker = L.marker(coords[0], { icon: startIcon }).addTo(map);
+        const endMarker = L.marker(coords[coords.length - 1], { icon: endIcon }).addTo(map);
+
+        activeMarkers.push(startMarker, endMarker);
+
+        // Add waypoint markers if multi-stop
+        if (coords.length > 2) {
+          const waypointIcon = L.divIcon({
+            className: 'custom-marker',
+            html: '<div style="background: #fbbf24; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>',
+            iconSize: [20, 20],
+            iconAnchor: [10, 10]
+          });
+
+          for (let i = 1; i < coords.length - 1; i++) {
+            const marker = L.marker(coords[i], { icon: waypointIcon }).addTo(map);
+            activeMarkers.push(marker);
+          }
+        }
+
+        // Fit map to route
+        map.fitBounds(activeRoute.getBounds(), { padding: [50, 50] });
+
+        // Display route info
+        const distanceNm = (route.distance / 1852).toFixed(1);
+        const durationHrs = (route.duration / 3600).toFixed(1);
+        const speedKts = (distanceNm / durationHrs).toFixed(1);
+        const waypointCount = geometry.length;
+
+        routeDetails.innerHTML = `
+          <h3 style="color: #00d4ff; margin: 0 0 10px 0;">${label}</h3>
+          <p><strong>Distance:</strong> ${distanceNm} nautical miles</p>
+          <p><strong>Duration:</strong> ${durationHrs} hours</p>
+          <p><strong>Avg Speed:</strong> ${speedKts} knots</p>
+          <p><strong>Waypoints:</strong> ${waypointCount} coordinates</p>
+          <p><strong>Segments:</strong> ${route.legs.length}</p>
+        `;
+      } catch (error) {
+        console.error('Route error:', error);
+        routeDetails.innerHTML = `<p style="color: #ff6b6b;">❌ Error: ${error.message}</p>`;
+      }
+    }
+
+    // Clear all routes and markers
+    function clearRoutes() {
+      if (activeRoute) {
+        map.removeLayer(activeRoute);
+        activeRoute = null;
+      }
+
+      activeMarkers.forEach(marker => map.removeLayer(marker));
+      activeMarkers = [];
+
+      document.getElementById('route-info').classList.remove('active');
+    }
+
+    // Demo routes
+    function showRoute1() {
+      // Lillesand → Aalbæk (Norway → Denmark)
+      fetchAndDisplayRoute([
+        [58.2476, 8.3795],
+        [57.5922, 10.4279]
+      ], 'Lillesand → Aalbæk');
+    }
+
+    function showRoute2() {
+      // Ryggstranden → Kristiansand
+      fetchAndDisplayRoute([
+        [59.0019, 5.6597],
+        [58.1215, 8.0628]
+      ], 'Ryggstranden → Kristiansand');
+    }
+
+    function showRoute3() {
+      // Multi-stop journey (5 waypoints)
+      fetchAndDisplayRoute([
+        [58.25, 8.38],
+        [58.30, 8.50],
+        [58.00, 9.00],
+        [57.80, 9.50],
+        [57.59, 10.43]
+      ], 'Multi-Stop Journey (5 waypoints)');
+    }
+
+    // Load default route on startup
+    setTimeout(() => showRoute1(), 1000);
+  </script>
+</body>
+</html>

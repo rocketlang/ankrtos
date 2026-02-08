@@ -9,7 +9,7 @@ import { onError } from '@apollo/client/link/error';
 import { useAuthStore } from './stores/auth';
 
 const httpLink = new HttpLink({
-  uri: '/graphql',
+  uri: import.meta.env.VITE_API_URL || 'http://localhost:4051/graphql',
   credentials: 'include',
 });
 

@@ -1,4 +1,5 @@
-import { builder } from '../builder.js'
+import { builder } from '../builder.js';
+import { GeofenceMonitorService } from '../../services/geofence-monitor.service.js';
 
 // ── Prisma Objects ───────────────────────────────────────────
 
@@ -221,4 +222,16 @@ builder.mutationField('acknowledgeGeofenceAlert', (t) =>
       })
     },
   }),
+)
+
+builder.mutationField('checkGeofenceViolations', (t) =>
+  t.prismaField({
+    type: ['GeofenceAlert'],
+    description: 'Check all active geofences and generate alerts for violations',
+    resolve: async (query, _root, _args, _ctx) => {
+      const monitorService = new GeofenceMonitorService();
+      const alerts = await monitorService.checkAllGeofences();
+      return alerts;
+    },
+  })
 )

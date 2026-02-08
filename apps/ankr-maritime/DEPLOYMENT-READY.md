@@ -22,10 +22,10 @@
 
 ### Features Included
 1. ✅ AI-Powered Search (Cmd+K)
-2. ✅ Live Stats Dashboard (47M positions)
+2. ✅ Live Stats Dashboard (49.6M positions) 🔥
 3. ✅ AIS Fun Facts Showcase
 4. ✅ Port Congestion Monitor
-5. ✅ Real-time vessel tracking
+5. ✅ Real-time vessel tracking (41,858 vessels)
 6. ✅ 137 pages (full platform)
 
 ---
@@ -117,9 +117,10 @@ After deployment:
 ### Features Working
 - ✅ AI Search (Cmd+K) - instant navigation
 - ✅ Live Stats - auto-refresh every 30s
-- ✅ AIS Tracking - 47M positions displayed
+- ✅ AIS Tracking - 49.6M positions displayed 🚀
 - ✅ GraphQL API - connects to backend
 - ✅ All 137 pages - fully functional
+- ✅ Real-time updates - 16.9M peak collection/day
 
 ### Auto-Deploy
 - ✅ Push to `main` → Auto-deploy in 2-3 min

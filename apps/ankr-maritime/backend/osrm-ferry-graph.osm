@@ -1,0 +1,3680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Mari8XOSRM">
+  <node id="1" lat="58.8725573" lon="5.7412214">
+    <tag k="name" v="Trones" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM55982" />
+  </node>
+  <node id="2" lat="58.2475902" lon="8.3795497">
+    <tag k="name" v="Lillesand gjestehavn" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM12462" />
+  </node>
+  <node id="3" lat="57.1252672" lon="8.5931276">
+    <tag k="name" v="Hanstholm Havn" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM22448" />
+  </node>
+  <node id="4" lat="59.0018978" lon="5.6597064">
+    <tag k="name" v="Ryggstranden båtforening" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM27956" />
+  </node>
+  <node id="5" lat="57.5922496" lon="10.4279397">
+    <tag k="name" v="Aalbæk Havn" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM41121" />
+  </node>
+  <node id="6" lat="58.0877837" lon="6.7996268">
+    <tag k="name" v="Lauervik småbåthavn" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM41258" />
+  </node>
+  <node id="7" lat="58.1207246" lon="7.0472985">
+    <tag k="name" v="Agnefest" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM41259" />
+  </node>
+  <node id="8" lat="58.3410571" lon="8.5961044">
+    <tag k="name" v="Grimstad gjestehavn" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM49912" />
+  </node>
+  <node id="9" lat="60.0412318" lon="5.0875411">
+    <tag k="name" v="Lille Kalsøy" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM53597" />
+  </node>
+  <node id="10" lat="58.121481" lon="8.0627632">
+    <tag k="name" v="Kristiansand feriesenter gjestehavn" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM66979" />
+  </node>
+  <node id="11" lat="59.1480996" lon="5.256046">
+    <tag k="name" v="Skudeneshavn gjestehavn" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM68151" />
+  </node>
+  <node id="12" lat="59.5876567" lon="5.1415">
+    <tag k="name" v="Espevær småbåthavn/gjestehavn" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM77013" />
+  </node>
+  <node id="13" lat="58.3390634" lon="6.2610057">
+    <tag k="name" v="Rekefjord Gjestehavn - Malmkaien" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM12127" />
+  </node>
+  <node id="14" lat="58.0571013" lon="7.7091992">
+    <tag k="name" v="Trysnes Marina" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM32874" />
+  </node>
+  <node id="15" lat="60.2563362" lon="5.2385683">
+    <tag k="name" v="Hjellestad Marina" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM53302" />
+  </node>
+  <node id="16" lat="60.1748174" lon="5.3772207">
+    <tag k="name" v="Askvik Marina" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM84248" />
+  </node>
+  <node id="17" lat="58.9169339" lon="5.7359227">
+    <tag k="name" v="Jåttåvågen småbåthavn" />
+    <tag k="seamark:type" v="harbour" />
+    <tag k="unlocode" v="OSM98314" />
+  </node>
+  <node id="18" lat="57.83851666666667" lon="9.53685">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="19" lat="57.8792" lon="9.435866666666668">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="20" lat="57.91676666666667" lon="9.345816666666668">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="21" lat="57.95496666666666" lon="9.2541">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="22" lat="57.99339999999999" lon="9.161616666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="23" lat="58.03115" lon="9.070933333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="24" lat="58.06898333333334" lon="8.979483333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="25" lat="58.08348333333333" lon="8.925333333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="26" lat="58.08681666666666" lon="8.863233333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="27" lat="58.08836666666667" lon="8.833583333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="28" lat="58.08968333333333" lon="8.785133333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="29" lat="58.09045" lon="8.738466666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="30" lat="58.09148333333334" lon="8.683016666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="31" lat="58.09196666666666" lon="8.639666666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="32" lat="58.09066666666667" lon="8.597133333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="33" lat="58.0893" lon="8.554450000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="34" lat="58.08831666666666" lon="8.51135">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="35" lat="58.08595" lon="8.466766666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="36" lat="58.0836" lon="8.432316666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="37" lat="58.07996666666666" lon="8.385833333333332">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="38" lat="58.07621666666667" lon="8.337366666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="39" lat="58.07133333333334" lon="8.273249999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="40" lat="58.0667" lon="8.208933333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="41" lat="58.06268333333333" lon="8.1443">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="42" lat="58.07356666666667" lon="8.0887">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="43" lat="58.09211666666667" lon="8.05845">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="44" lat="58.11471666666667" lon="8.028833333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="45" lat="58.13195" lon="7.996383333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="46" lat="58.13866666666667" lon="7.9865">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="47" lat="58.142" lon="7.98795">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="48" lat="58.13431666666667" lon="7.98935">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="49" lat="58.12686666666666" lon="8.006183333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="50" lat="58.11165" lon="8.027099999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="51" lat="58.08566666666666" lon="8.059266666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="52" lat="58.06465" lon="8.101833333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="53" lat="58.06431666666666" lon="8.156">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="54" lat="58.07238333333333" lon="8.19385">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="55" lat="58.07966666666667" lon="8.234583333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="56" lat="58.08535" lon="8.275133333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="57" lat="58.08943333333333" lon="8.311566666666668">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="58" lat="58.09368333333334" lon="8.34855">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="59" lat="58.09893333333333" lon="8.393766666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="60" lat="58.10408333333333" lon="8.442816666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="61" lat="58.10813333333333" lon="8.482216666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="62" lat="58.11295" lon="8.514466666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="63" lat="58.11776666666666" lon="8.5431">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="64" lat="58.12248333333334" lon="8.582699999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="65" lat="58.12628333333334" lon="8.619516666666668">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="66" lat="58.12871666666667" lon="8.657733333333335">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="67" lat="58.12991666666667" lon="8.678266666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="68" lat="58.13038333333333" lon="8.7124">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="69" lat="58.13006666666667" lon="8.75145">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="70" lat="58.12928333333333" lon="8.783283333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="71" lat="58.12893333333333" lon="8.8195">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="72" lat="58.12671666666667" lon="8.868683333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="73" lat="58.10616666666667" lon="8.95995">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="74" lat="58.07306666666667" lon="9.026083333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="75" lat="58.02673333333333" lon="9.120083333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="76" lat="57.9818" lon="9.19515">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="77" lat="57.84853166666667" lon="8.985975">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="78" lat="57.862575" lon="8.927851666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="79" lat="57.87273833333334" lon="8.886171666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="80" lat="57.88154666666667" lon="8.850515">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="81" lat="57.89117" lon="8.811113333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="82" lat="57.902485" lon="8.764556666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="83" lat="57.91277333333333" lon="8.7219">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="84" lat="57.92275666666667" lon="8.681213333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="85" lat="57.930205" lon="8.650676666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="86" lat="57.93983666666666" lon="8.611388333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="87" lat="57.94686166666667" lon="8.582488333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="88" lat="57.95620166666667" lon="8.543701666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="89" lat="57.96527666666667" lon="8.506408333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="90" lat="57.97692166666666" lon="8.458686666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="91" lat="57.98565666666666" lon="8.422531666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="92" lat="57.99511666666667" lon="8.384148333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="93" lat="58.00341" lon="8.349765">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="94" lat="58.00992666666667" lon="8.322418333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="95" lat="58.01928333333333" lon="8.284408333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="96" lat="58.03033833333333" lon="8.236131666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="97" lat="58.04051333333334" lon="8.19598">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="98" lat="58.04929" lon="8.159266666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="99" lat="58.05634666666666" lon="8.131113333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="100" lat="58.06777833333333" lon="8.093921666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="101" lat="58.083755" lon="8.069645">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="102" lat="58.096505" lon="8.05288">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="103" lat="58.11442333333333" lon="8.029555">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="104" lat="58.12894166666667" lon="8.002475">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="105" lat="58.13618666666667" lon="7.986525">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="106" lat="58.14237166666667" lon="7.987876666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="107" lat="58.13795833333334" lon="7.986783333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="108" lat="58.12913833333334" lon="8.000721666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="109" lat="58.12286833333334" lon="8.013048333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="110" lat="58.10976333333333" lon="8.029383333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="111" lat="58.08987833333333" lon="8.054285">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="112" lat="58.070045" lon="8.080313333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="113" lat="58.054905" lon="8.114388333333332">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="114" lat="58.04096333333334" lon="8.148748333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="115" lat="58.02616333333334" lon="8.181231666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="116" lat="58.01282" lon="8.215081666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="117" lat="58.00449666666667" lon="8.254056666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="118" lat="57.99747833333333" lon="8.283348333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="119" lat="57.98458333333333" lon="8.308978333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="120" lat="57.96759" lon="8.33959">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="121" lat="57.95538333333333" lon="8.361875">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="122" lat="57.93550666666667" lon="8.398019999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="123" lat="57.92153166666667" lon="8.423396666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="124" lat="57.90379166666666" lon="8.455763333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="125" lat="57.88695333333333" lon="8.486511666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="126" lat="57.87366333333333" lon="8.510408333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="127" lat="57.84929833333333" lon="8.554711666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="128" lat="57.82863" lon="8.592535">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="129" lat="57.80389" lon="8.660868333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="130" lat="57.775645" lon="8.747263333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="131" lat="57.74889333333333" lon="8.820713333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="132" lat="57.72124166666666" lon="8.900506666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="133" lat="59.06133333333333" lon="5.536916666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="134" lat="58.99798333333333" lon="5.548">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="135" lat="58.94165" lon="5.551633333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="136" lat="58.92515" lon="5.580616666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="137" lat="58.9297" lon="5.571883333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="138" lat="58.92821666666667" lon="5.5448">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="139" lat="58.91423333333333" lon="5.536216666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="140" lat="58.88548333333333" lon="5.520616666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="141" lat="58.85403333333333" lon="5.498266666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="142" lat="58.81801666666667" lon="5.461783333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="143" lat="58.78286666666667" lon="5.4359">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="144" lat="58.7504" lon="5.4345">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="145" lat="58.71696666666666" lon="5.4632">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="146" lat="58.68995" lon="5.481833333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="147" lat="58.65903333333333" lon="5.507733333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="148" lat="58.6227" lon="5.539533333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="149" lat="58.58853333333333" lon="5.57025">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="150" lat="58.56371666666666" lon="5.592216666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="151" lat="58.53396666666666" lon="5.618583333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="152" lat="58.49266666666666" lon="5.668716666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="153" lat="58.43616666666667" lon="5.780383333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="154" lat="58.38223333333334" lon="5.894816666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="155" lat="58.32176666666667" lon="5.9969">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="156" lat="58.26251666666667" lon="6.095333333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="157" lat="58.21478333333334" lon="6.206983333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="158" lat="58.16788333333333" lon="6.32485">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="159" lat="58.11725" lon="6.4461">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="160" lat="58.05843333333333" lon="6.582766666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="161" lat="58.01543333333333" lon="6.684066666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="162" lat="57.98186666666666" lon="6.815083333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="163" lat="57.93951666666667" lon="7.01885">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="164" lat="57.91525" lon="7.154833333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="165" lat="57.89891666666666" lon="7.303366666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="166" lat="57.88466666666667" lon="7.434983333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="167" lat="57.87635" lon="7.511566666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="168" lat="57.86833333333333" lon="7.58495">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="169" lat="57.86058333333334" lon="7.65565">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="170" lat="57.85068333333334" lon="7.747833333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="171" lat="57.84405" lon="7.808116666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="172" lat="57.83813333333333" lon="7.863316666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="173" lat="57.83091666666667" lon="7.92875">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="174" lat="57.82403333333333" lon="7.992066666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="175" lat="57.81721666666667" lon="8.054483333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="176" lat="57.8122" lon="8.1001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="177" lat="57.80506666666667" lon="8.166500000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="178" lat="57.7978" lon="8.231916666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="179" lat="57.78988333333334" lon="8.303783333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="180" lat="57.78223333333334" lon="8.374283333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="181" lat="57.77478333333333" lon="8.44335">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="182" lat="57.7679" lon="8.506383333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="183" lat="57.7603" lon="8.576466666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="184" lat="57.75109999999999" lon="8.660816666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="185" lat="57.73328333333333" lon="8.822433333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="186" lat="57.84738333333333" lon="8.990416666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="187" lat="57.89156666666667" lon="8.808966666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="188" lat="57.91651666666667" lon="8.706916666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="189" lat="57.94581666666667" lon="8.586333333333332">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="190" lat="57.97981666666667" lon="8.446566666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="191" lat="58.00408333333333" lon="8.3461">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="192" lat="58.03416666666667" lon="8.236183333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="193" lat="58.0648" lon="8.111016666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="194" lat="58.11788333333333" lon="8.024783333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="195" lat="58.1426" lon="7.987966666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="196" lat="58.1255" lon="8.009133333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="197" lat="58.07938333333333" lon="8.065983333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="198" lat="58.02635" lon="8.06185">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="199" lat="57.99968333333334" lon="7.975983333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="200" lat="57.96631666666666" lon="7.870533333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="201" lat="57.9542" lon="7.77435">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="202" lat="57.94463333333333" lon="7.673283333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="203" lat="57.93433333333333" lon="7.525666666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="204" lat="57.94043333333333" lon="7.394283333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="205" lat="57.93288333333333" lon="7.164416666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="206" lat="57.96066666666666" lon="6.951366666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="207" lat="58.01725" lon="6.71065">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="208" lat="58.07851666666667" lon="6.522266666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="209" lat="58.1672" lon="6.34065">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="210" lat="58.24958333333333" lon="6.1803">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="211" lat="58.34036666666667" lon="5.986333333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="212" lat="58.42100000000001" lon="5.81855">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="213" lat="58.50721666666666" lon="5.643233333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="214" lat="58.56478333333334" lon="5.5826">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="215" lat="58.61893333333333" lon="5.526216666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="216" lat="58.67165" lon="5.481483333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="217" lat="58.71915" lon="5.448066666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="218" lat="58.77036666666667" lon="5.428066666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="219" lat="58.81833333333334" lon="5.4712">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="220" lat="58.86023333333333" lon="5.518866666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="221" lat="58.91643333333333" lon="5.540883333333332">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="222" lat="58.93035" lon="5.570966666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="223" lat="58.93113333333334" lon="5.570133333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="224" lat="58.9718" lon="5.549883333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="225" lat="59.04121666666666" lon="5.549833333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="226" lat="59.10088333333333" lon="5.522583333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="227" lat="59.12858333333334" lon="5.419300000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="228" lat="59.18036666666667" lon="5.354066666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="229" lat="59.2617" lon="5.34025">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="230" lat="59.32738333333334" lon="5.323583333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="231" lat="59.37181666666667" lon="5.2972">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="232" lat="59.40578333333334" lon="5.257099999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="233" lat="59.45498333333333" lon="5.221866666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="234" lat="59.51358333333334" lon="5.2099">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="235" lat="59.58875" lon="5.255433333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="236" lat="59.69903333333333" lon="5.426833333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="237" lat="59.7617" lon="5.548683333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="238" lat="59.82378333333334" lon="5.557716666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="239" lat="59.94795" lon="5.443849999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="240" lat="59.99943333333333" lon="5.335783333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="241" lat="59.94196666666667" lon="5.454966666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="242" lat="59.87496666666667" lon="5.537366666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="243" lat="59.8297" lon="5.5487">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="244" lat="59.78498333333334" lon="5.5581">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="245" lat="59.74353333333333" lon="5.502750000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="246" lat="59.7104" lon="5.43605">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="247" lat="59.67288333333333" lon="5.361133333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="248" lat="59.6084" lon="5.270166666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="249" lat="59.53965" lon="5.2004">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="250" lat="59.4964" lon="5.205866666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="251" lat="59.45978333333333" lon="5.217183333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="252" lat="59.43096666666667" lon="5.228366666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="253" lat="59.40706666666667" lon="5.257499999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="254" lat="59.38695" lon="5.286566666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="255" lat="59.36846666666667" lon="5.29775">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="256" lat="59.332" lon="5.321">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="257" lat="59.2729" lon="5.337549999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="258" lat="59.21575" lon="5.336133333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="259" lat="59.17423333333333" lon="5.336283333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="260" lat="59.13088333333334" lon="5.394333333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="261" lat="59.11708333333333" lon="5.45165">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="262" lat="59.09933333333333" lon="5.510000000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="263" lat="59.0682" lon="5.53165">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="264" lat="59.0004" lon="5.543066666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="265" lat="58.9432" lon="5.550283333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="266" lat="58.92436666666666" lon="5.581966666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="267" lat="58.92438333333334" lon="5.582016666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="268" lat="58.93165" lon="5.5579">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="269" lat="58.9142" lon="5.532616666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="270" lat="58.88416666666667" lon="5.5142">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="271" lat="58.85335" lon="5.492850000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="272" lat="58.82465" lon="5.4666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="273" lat="58.79468333333333" lon="5.4447">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="274" lat="58.76576666666666" lon="5.426366666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="275" lat="58.7378" lon="5.44205">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="276" lat="58.70645" lon="5.4682">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="277" lat="58.68111666666667" lon="5.489316666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="278" lat="58.65496666666666" lon="5.51125">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="279" lat="58.62431666666667" lon="5.5382">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="280" lat="58.59721666666667" lon="5.562383333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="281" lat="58.56925" lon="5.587233333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="282" lat="58.53588333333333" lon="5.617083333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="283" lat="58.50866666666666" lon="5.657516666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="284" lat="58.4353" lon="5.7881">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="285" lat="58.38901666666666" lon="5.884200000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="286" lat="58.34173333333333" lon="5.98105">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="287" lat="58.29315" lon="6.081116666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="288" lat="58.2416" lon="6.199433333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="289" lat="58.1965" lon="6.29385">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="290" lat="58.15225" lon="6.3837">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="291" lat="58.10825" lon="6.471500000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="292" lat="58.0567" lon="6.56805">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="293" lat="58.01468333333333" lon="6.658616666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="294" lat="57.99021666666667" lon="6.77495">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="295" lat="57.9633" lon="6.893516666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="296" lat="58.33166666666667" lon="6.005083333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="297" lat="58.37753333333333" lon="5.914933333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="298" lat="58.41868333333333" lon="5.815316666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="299" lat="58.46005" lon="5.71415">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="300" lat="58.51816666666667" lon="5.630983333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="301" lat="58.54826666666667" lon="5.599983333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="302" lat="58.57365" lon="5.573433333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="303" lat="58.60058333333333" lon="5.545483333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="304" lat="58.62568333333333" lon="5.5193">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="305" lat="58.6517" lon="5.495583333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="306" lat="58.68308333333334" lon="5.473416666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="307" lat="58.70971666666667" lon="5.454716666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="308" lat="58.73658333333334" lon="5.435666666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="309" lat="58.76388333333333" lon="5.426150000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="310" lat="58.7946" lon="5.448466666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="311" lat="58.82006666666667" lon="5.473">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="312" lat="58.84726666666666" lon="5.508183333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="313" lat="58.87833333333333" lon="5.528233333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="314" lat="58.90626666666667" lon="5.539266666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="315" lat="58.92755" lon="5.548416666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="316" lat="58.93035" lon="5.5714">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="317" lat="58.92228333333333" lon="5.583333333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="318" lat="58.9333" lon="5.564633333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="319" lat="58.95518333333334" lon="5.5569">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="320" lat="58.98976666666667" lon="5.551299999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="321" lat="59.0303" lon="5.549816666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="322" lat="59.06505" lon="5.54985">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="323" lat="59.09751666666667" lon="5.528483333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="324" lat="59.11635" lon="5.47095">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="325" lat="59.1319" lon="5.406466666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="326" lat="59.15911666666667" lon="5.363166666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="327" lat="59.19346666666667" lon="5.354583333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="328" lat="59.22836666666667" lon="5.348133333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="329" lat="59.27093333333333" lon="5.3386">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="330" lat="59.3052" lon="5.33035">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="331" lat="59.33595" lon="5.31945">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="332" lat="59.36726666666667" lon="5.29845">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="333" lat="59.39335000000001" lon="5.280983333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="334" lat="59.41123333333334" lon="5.2449">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="335" lat="59.44073333333333" lon="5.225899999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="336" lat="59.47588333333333" lon="5.214166666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="337" lat="59.51111666666667" lon="5.206916666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="338" lat="59.5547" lon="5.216366666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="339" lat="59.62971666666667" lon="5.307883333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="340" lat="59.6671" lon="5.3665">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="341" lat="59.69453333333333" lon="5.4208">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="342" lat="59.7221" lon="5.476366666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="343" lat="59.75013333333333" lon="5.528316666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="344" lat="59.79143333333333" lon="5.563866666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="345" lat="59.83695" lon="5.551783333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="346" lat="59.91308333333333" lon="5.508383333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="347" lat="59.96873333333333" lon="5.3968">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="348" lat="59.0473" lon="5.462599999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="349" lat="59.05508333333333" lon="5.422166666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="350" lat="59.05141666666667" lon="5.4329">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="351" lat="59.04758333333334" lon="5.448849999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="352" lat="59.04695" lon="5.466483333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="353" lat="59.0467" lon="5.480866666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="354" lat="59.04593333333333" lon="5.5235">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="355" lat="59.0454" lon="5.552583333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="356" lat="59.03818333333334" lon="5.594399999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="357" lat="59.02678333333333" lon="5.61655">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="358" lat="59.0254" lon="5.615483333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="359" lat="59.02871666666667" lon="5.61345">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="360" lat="59.03463333333333" lon="5.604">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="361" lat="59.0429" lon="5.577716666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="362" lat="59.04581666666666" lon="5.5641">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="363" lat="59.04648333333333" lon="5.5332">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="364" lat="59.04685" lon="5.5107">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="365" lat="59.04695" lon="5.495616666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="366" lat="59.04693333333333" lon="5.464783333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="367" lat="59.04701666666666" lon="5.454766666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="368" lat="59.05073333333333" lon="5.4363">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="369" lat="59.05708333333334" lon="5.419">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="370" lat="59.05108333333333" lon="5.43415">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="371" lat="59.04716666666666" lon="5.454133333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="372" lat="59.04745" lon="5.471016666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="373" lat="59.04688333333333" lon="5.50225">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="374" lat="59.04645" lon="5.523483333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="375" lat="59.04566666666666" lon="5.552033333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="376" lat="59.04493333333333" lon="5.570633333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="377" lat="59.0423" lon="5.579116666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="378" lat="59.0339" lon="5.60635">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="379" lat="59.02793333333333" lon="5.615966666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="380" lat="59.02421666666667" lon="5.6144">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="381" lat="59.02713333333334" lon="5.614983333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="382" lat="59.03768333333333" lon="5.595233333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="383" lat="59.04351666666666" lon="5.575633333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="384" lat="59.04635" lon="5.562116666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="385" lat="59.047" lon="5.5373">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="386" lat="59.0471" lon="5.5236">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="387" lat="59.0472" lon="5.508666666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="388" lat="59.04735" lon="5.482183333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="389" lat="59.04735" lon="5.4702">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="390" lat="59.04705" lon="5.454400000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="391" lat="59.04963333333333" lon="5.440650000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="392" lat="59.05666666666666" lon="5.419916666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="393" lat="59.05478333333333" lon="5.422933333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="394" lat="59.04819999999999" lon="5.447466666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="395" lat="59.04663333333333" lon="5.475283333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="396" lat="59.04623333333333" lon="5.496866666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="397" lat="59.04596666666666" lon="5.511216666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="398" lat="59.04531666666666" lon="5.546933333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="399" lat="59.04503333333334" lon="5.56125">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="400" lat="59.0399" lon="5.587216666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="401" lat="59.03605" lon="5.600233333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="402" lat="59.03101666666667" lon="5.61015">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="403" lat="59.02883333333333" lon="5.612466666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="404" lat="59.0327" lon="5.606533333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="405" lat="59.0384" lon="5.597049999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="406" lat="59.04273333333333" lon="5.58265">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="407" lat="59.04641666666667" lon="5.553866666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="408" lat="59.04696666666667" lon="5.523066666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="409" lat="59.0472" lon="5.493083333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="410" lat="59.04716666666666" lon="5.463933333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="411" lat="59.04953333333334" lon="5.4409">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="412" lat="59.05223333333333" lon="5.430266666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="413" lat="59.05551666666667" lon="5.421683333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="414" lat="57.846775" lon="8.993336666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="415" lat="57.85993333333333" lon="8.938790000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="416" lat="57.87332166666667" lon="8.884323333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="417" lat="57.88914666666667" lon="8.819295">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="418" lat="57.90180333333333" lon="8.767675">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="419" lat="57.91436166666666" lon="8.71569">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="420" lat="57.92707833333333" lon="8.663748333333332">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="421" lat="57.93809833333333" lon="8.618106666666668">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="422" lat="57.948035" lon="8.577393333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="423" lat="57.96016166666666" lon="8.527236666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="424" lat="57.97131333333333" lon="8.481773333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="425" lat="57.98173666666666" lon="8.438555000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="426" lat="57.98929166666667" lon="8.397583333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="427" lat="57.99609833333333" lon="8.34568">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="428" lat="58.00436166666667" lon="8.293053333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="429" lat="58.01584" lon="8.255096666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="430" lat="58.02942333333333" lon="8.21059">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="431" lat="58.04030666666667" lon="8.17374">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="432" lat="58.05229833333333" lon="8.1354">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="433" lat="58.06831666666667" lon="8.09041">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="434" lat="58.09121833333334" lon="8.059933333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="435" lat="58.11489333333333" lon="8.028976666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="436" lat="58.13012333333334" lon="7.998271666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="437" lat="58.139185" lon="7.985493333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="438" lat="58.14202833333333" lon="7.987936666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="439" lat="58.13715166666667" lon="7.986633333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="440" lat="58.12874" lon="8.001708333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="441" lat="58.110215" lon="8.031033333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="442" lat="58.09396833333334" lon="8.04931">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="443" lat="58.07780833333334" lon="8.068666666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="444" lat="58.05543166666666" lon="8.083621666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="445" lat="58.03414166666666" lon="8.068521666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="446" lat="58.01994666666667" lon="8.028381666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="447" lat="58.007175" lon="7.986511666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="448" lat="57.99778" lon="7.951625000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="449" lat="57.99023" lon="7.904183333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="450" lat="57.97852333333334" lon="7.833686666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="451" lat="57.97114" lon="7.79002">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="452" lat="57.96379833333334" lon="7.746271666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="453" lat="57.95681" lon="7.703855">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="454" lat="57.949475" lon="7.660596666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="455" lat="57.940895" lon="7.609151666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="456" lat="57.93389666666667" lon="7.565948333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="457" lat="57.932735" lon="7.519933333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="458" lat="57.93258333333333" lon="7.472925">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="459" lat="57.93261166666667" lon="7.419426666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="460" lat="57.93252500000001" lon="7.344896666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="461" lat="57.932455" lon="7.25245">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="462" lat="57.93225833333334" lon="7.160828333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="463" lat="57.944985" lon="7.059439999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="464" lat="57.96299333333333" lon="6.973998333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="465" lat="57.98106833333333" lon="6.888256666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="466" lat="59.99852666666666" lon="5.33617">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="467" lat="59.91741166666667" lon="5.500888333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="468" lat="59.831465" lon="5.548275">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="469" lat="59.78081" lon="5.559791666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="470" lat="59.732715" lon="5.482921666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="471" lat="59.699745" lon="5.41487">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="472" lat="59.63775666666667" lon="5.303786666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="473" lat="59.531025" lon="5.199593333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="474" lat="59.461485" lon="5.214160000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="475" lat="59.41374333333333" lon="5.240346666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="476" lat="59.35104666666667" lon="5.312945">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="477" lat="59.18096333333334" lon="5.344175000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="478" lat="59.11355" lon="5.466728333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="479" lat="59.0797" lon="5.529101666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="480" lat="59.00516333333334" lon="5.545506666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="481" lat="58.96334" lon="5.548113333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="482" lat="58.923645" lon="5.582305000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="483" lat="58.93102666666667" lon="5.554238333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="484" lat="58.90030333333333" lon="5.528526666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="485" lat="58.85940833333333" lon="5.502925">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="486" lat="58.82338166666667" lon="5.465673333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="487" lat="58.78209333333334" lon="5.435351666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="488" lat="58.74191333333333" lon="5.438756666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="489" lat="58.703585" lon="5.470618333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="490" lat="58.66740333333333" lon="5.500828333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="491" lat="58.63161833333334" lon="5.531685">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="492" lat="58.59997666666666" lon="5.559898333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="493" lat="58.56006333333333" lon="5.595271666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="494" lat="58.52795333333334" lon="5.624066666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="495" lat="58.47296833333333" lon="5.710486666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="496" lat="58.41490666666667" lon="5.830276666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="497" lat="58.33965666666666" lon="5.985293333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="498" lat="58.27659000000001" lon="6.115068333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="499" lat="58.21676666666666" lon="6.238073333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="500" lat="58.14825166666667" lon="6.378063333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="501" lat="58.090185" lon="6.496866666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="502" lat="58.016805" lon="6.65036">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="503" lat="57.977015" lon="6.822686666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="504" lat="57.94052833333333" lon="7.000483333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="505" lat="57.90827" lon="7.217703333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="506" lat="57.88822500000001" lon="7.402851666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="507" lat="57.876255" lon="7.513445">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="508" lat="57.86495" lon="7.616803333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="509" lat="57.85059666666667" lon="7.748670000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="510" lat="57.84061" lon="7.84181">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="511" lat="57.829575" lon="7.941453333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="512" lat="57.819515" lon="8.033303333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="513" lat="57.80951" lon="8.125670000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="514" lat="57.80017166666666" lon="8.211575">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="515" lat="57.78861" lon="8.317739999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="516" lat="57.77911166666667" lon="8.404233333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="517" lat="57.76721" lon="8.513725">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="518" lat="57.75643666666667" lon="8.611623333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="519" lat="57.74071166666667" lon="8.726766666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="520" lat="57.75858666666667" lon="9.341953333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="521" lat="57.78425833333333" lon="9.242768333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="522" lat="57.80857833333334" lon="9.149166666666668">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="523" lat="57.83188833333334" lon="9.053978333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="524" lat="57.85175333333333" lon="8.972563333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="525" lat="57.86432666666666" lon="8.920806666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="526" lat="57.87417833333333" lon="8.880733333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="527" lat="57.88669833333334" lon="8.829443333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="528" lat="57.89947333333334" lon="8.77717">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="529" lat="57.910725" lon="8.730786666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="530" lat="57.91959666666666" lon="8.69384">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="531" lat="57.93109333333334" lon="8.647143333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="532" lat="57.94077" lon="8.607288333333335">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="533" lat="57.95261833333333" lon="8.558618333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="534" lat="57.96207666666667" lon="8.519365">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="535" lat="57.97633166666667" lon="8.46143">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="536" lat="57.98078666666667" lon="8.442476666666668">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="537" lat="57.98766" lon="8.414545">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="538" lat="57.99275833333333" lon="8.393941666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="539" lat="57.99724333333334" lon="8.375316666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="540" lat="58.00164833333334" lon="8.356983333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="541" lat="58.00616666666667" lon="8.338746666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="542" lat="58.01292333333333" lon="8.310088333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="543" lat="58.01757" lon="8.291221666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="544" lat="58.02455833333333" lon="8.262538333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="545" lat="58.02856166666666" lon="8.243186666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="546" lat="58.036705" lon="8.212036666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="547" lat="58.04382833333333" lon="8.181885">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="548" lat="58.05589833333333" lon="8.13484">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="549" lat="58.07378833333333" lon="8.082586666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="550" lat="58.09119833333333" lon="8.059911666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="551" lat="58.11475833333333" lon="8.029116666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="552" lat="58.13026166666667" lon="7.99805">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="553" lat="58.13715666666667" lon="7.98761">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="554" lat="58.14180666666667" lon="7.987785000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="555" lat="58.13662666666666" lon="7.988171666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="556" lat="58.12765166666667" lon="8.003916666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="557" lat="58.10265166666667" lon="8.03848">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="558" lat="58.06887333333334" lon="8.10328">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="559" lat="58.060655" lon="8.151956666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="560" lat="58.05355666666667" lon="8.193733333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="561" lat="58.04719833333333" lon="8.230788333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="562" lat="58.03821666666667" lon="8.28111">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="563" lat="58.02380833333333" lon="8.353418333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="564" lat="58.009195" lon="8.404846666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="565" lat="57.99521666666667" lon="8.454073333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="566" lat="57.98350000000001" lon="8.495653333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="567" lat="57.96925333333333" lon="8.546396666666668">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="568" lat="57.95439833333333" lon="8.599356666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="569" lat="57.938045" lon="8.657895">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="570" lat="57.926935" lon="8.697371666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="571" lat="57.915955" lon="8.736291666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="572" lat="57.89939666666667" lon="8.794353333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="573" lat="57.883135" lon="8.851436666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="574" lat="57.86686333333333" lon="8.908925">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="575" lat="57.85592" lon="8.947306666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="576" lat="57.839035" lon="9.006273333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="577" lat="57.827425" lon="9.046431666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="578" lat="57.81010166666667" lon="9.102288333333332">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="579" lat="57.79820166666666" lon="9.140641666666665">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="580" lat="59.54848666666667" lon="5.209756666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="581" lat="59.55928333333333" lon="5.220301666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="582" lat="59.57325333333333" lon="5.236781666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="583" lat="59.59436833333334" lon="5.261946666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="584" lat="59.60974" lon="5.280263333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="585" lat="59.63982666666666" lon="5.315985">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="586" lat="59.662135" lon="5.354766666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="587" lat="59.67180833333334" lon="5.373811666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="588" lat="59.68561833333333" lon="5.400788333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="589" lat="59.69914166666667" lon="5.42728">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="590" lat="59.71341666666667" lon="5.450215">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="591" lat="59.72304666666666" lon="5.469539999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="592" lat="59.73607166666667" lon="5.496256666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="593" lat="59.74405666666667" lon="5.512603333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="594" lat="59.758105" lon="5.541296666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="595" lat="59.77396" lon="5.56245">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="596" lat="59.79437333333333" lon="5.568966666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="597" lat="59.81763333333333" lon="5.560903333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="598" lat="59.84206833333334" lon="5.551535">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="599" lat="59.872115" lon="5.541041666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="600" lat="59.90519166666666" lon="5.519485">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="601" lat="59.94075166666666" lon="5.461645">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="602" lat="60.00537666666666" lon="5.333806666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="603" lat="60.08886166666667" lon="5.312521666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="604" lat="60.10183333333334" lon="5.304281666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="605" lat="60.12988833333333" lon="5.28621">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="606" lat="60.15515833333333" lon="5.266911666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="607" lat="60.175825" lon="5.237134999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="608" lat="60.18693166666667" lon="5.220733333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="609" lat="60.208305" lon="5.189516666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="610" lat="60.22849833333333" lon="5.166111666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="611" lat="60.25137166666666" lon="5.156323333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="612" lat="60.26802833333333" lon="5.16421">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="613" lat="60.31529666666667" lon="5.198525">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="614" lat="60.34366166666667" lon="5.172828333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="615" lat="60.3712" lon="5.166878333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="616" lat="60.38284333333333" lon="5.18258">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="617" lat="60.39746666666667" lon="5.222328333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="618" lat="60.40231333333334" lon="5.242338333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="619" lat="60.39955" lon="5.278208333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="620" lat="60.394665" lon="5.305316666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="621" lat="60.3975" lon="5.297568333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="622" lat="60.40111333333333" lon="5.276708333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="623" lat="60.40308833333334" lon="5.25867">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="624" lat="60.401265" lon="5.232716666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="625" lat="60.39512666666667" lon="5.210816666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="626" lat="60.38884833333334" lon="5.190166666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="627" lat="60.38193666666667" lon="5.172008333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="628" lat="60.37430333333334" lon="5.16637">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="629" lat="60.35708833333333" lon="5.168603333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="630" lat="60.34478666666666" lon="5.170965">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="631" lat="60.33429833333333" lon="5.190498333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="632" lat="60.31345833333333" lon="5.19587">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="633" lat="60.29013333333333" lon="5.189850000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="634" lat="60.27454666666667" lon="5.171421666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="635" lat="60.25721333333333" lon="5.153561666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="636" lat="60.23736" lon="5.158303333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="637" lat="60.22394166666666" lon="5.170818333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="638" lat="60.20907166666667" lon="5.189436666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="639" lat="60.19908333333333" lon="5.201843333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="640" lat="60.17956333333333" lon="5.227311666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="641" lat="60.16964166666666" lon="5.241866666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="642" lat="60.15014166666666" lon="5.267156666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="643" lat="60.12752833333333" lon="5.283726666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="644" lat="59.057" lon="5.418816666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="645" lat="59.04655" lon="5.497683333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="646" lat="59.03896666666667" lon="5.588566666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="647" lat="59.02756666666667" lon="5.616">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="648" lat="59.04686666666667" lon="5.571066666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="649" lat="59.04686666666667" lon="5.478766666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="650" lat="59.05645000000001" lon="5.420249999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="651" lat="59.04686666666667" lon="5.468166666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="652" lat="59.04606666666667" lon="5.543633333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="653" lat="59.04736666666667" lon="5.463133333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="654" lat="59.0519" lon="5.430916666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="655" lat="59.0461" lon="5.539933333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="656" lat="59.0308" lon="5.611316666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="657" lat="59.04190000000001" lon="5.598766666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="658" lat="59.04685" lon="5.520316666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="659" lat="59.04801666666666" lon="5.447316666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="660" lat="59.04988333333333" lon="5.4389">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="661" lat="59.04563333333333" lon="5.517466666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="662" lat="59.04043333333333" lon="5.585416666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="663" lat="59.03071666666666" lon="5.611949999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="664" lat="59.04505" lon="5.543450000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="665" lat="59.0471" lon="5.46365">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="666" lat="59.05426666666666" lon="5.42415">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="667" lat="59.0476" lon="5.45015">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="668" lat="59.04666666666667" lon="5.486549999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="669" lat="59.04593333333333" lon="5.538816666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="670" lat="59.04018333333333" lon="5.587433333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="671" lat="59.02555" lon="5.616766666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="672" lat="59.03741666666667" lon="5.595966666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="673" lat="59.04491666666667" lon="5.517683333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="674" lat="59.05131666666667" lon="5.4331">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="675" lat="59.0471" lon="5.453933333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="676" lat="59.04506666666667" lon="5.553483333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="677" lat="59.03161666666666" lon="5.60975">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="678" lat="59.03395" lon="5.605">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="679" lat="59.04428333333333" lon="5.580866666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="680" lat="59.04726666666667" lon="5.552683333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="681" lat="59.04783333333333" lon="5.506749999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="682" lat="59.04788333333333" lon="5.469633333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="683" lat="59.04983333333333" lon="5.437250000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="684" lat="59.05705" lon="5.418683333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="685" lat="59.0476" lon="5.450266666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="686" lat="59.04628333333334" lon="5.480916666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="687" lat="59.04565" lon="5.52335">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="688" lat="59.04435" lon="5.571583333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="689" lat="59.03628333333334" lon="5.599516666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="690" lat="59.04693333333333" lon="5.4589">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="691" lat="59.05446666666667" lon="5.423666666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="692" lat="59.04606666666667" lon="5.487566666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="693" lat="59.04393333333334" lon="5.573233333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="694" lat="59.02520000000001" lon="5.615133333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="695" lat="59.05645000000001" lon="5.419866666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="696" lat="59.04668333333333" lon="5.470716666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="697" lat="59.04616666666666" lon="5.524100000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="698" lat="57.836045" lon="7.882940000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="699" lat="57.83492" lon="7.893211666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="700" lat="57.83381666666666" lon="7.902466666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="701" lat="57.83279" lon="7.911766666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="702" lat="57.83175833333333" lon="7.92109">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="703" lat="57.83080500000001" lon="7.930386666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="704" lat="57.82975166666667" lon="7.939845">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="705" lat="57.82866166666667" lon="7.949128333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="706" lat="57.828575" lon="7.95008">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="707" lat="57.827705" lon="7.958611666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="708" lat="57.82663166666667" lon="7.967963333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="709" lat="57.82561333333333" lon="7.97725">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="710" lat="57.82460666666667" lon="7.98671">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="711" lat="57.822515" lon="8.006006666666668">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="712" lat="57.82206166666666" lon="8.00987">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="713" lat="57.821475" lon="8.01577">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="714" lat="57.82047" lon="8.025466666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="715" lat="57.81943833333333" lon="8.035158333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="716" lat="57.81827" lon="8.04477">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="717" lat="57.81722166666667" lon="8.054481666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="718" lat="57.81616666666666" lon="8.064185">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="719" lat="57.81507666666666" lon="8.073726666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="720" lat="57.81401666666667" lon="8.083221666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="721" lat="57.81307333333334" lon="8.092811666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="722" lat="57.81204" lon="8.102533333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="723" lat="57.81102" lon="8.112341666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="724" lat="57.810125" lon="8.12199">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="725" lat="57.80991666666667" lon="8.123913333333332">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="726" lat="57.80900999999999" lon="8.131515">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="727" lat="57.80781" lon="8.141053333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="728" lat="57.80674166666667" lon="8.150626666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="729" lat="57.805645" lon="8.161308333333332">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="730" lat="57.80435166666667" lon="8.170896666666668">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="731" lat="57.80325166666667" lon="8.181376666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="732" lat="57.80235333333334" lon="8.191115">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="733" lat="57.80020333333334" lon="8.210488333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="734" lat="57.79916166666667" lon="8.220178333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="735" lat="57.79799166666667" lon="8.230895">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="736" lat="57.79695833333334" lon="8.239633333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="737" lat="57.795655" lon="8.251251666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="738" lat="57.79449" lon="8.263101666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="739" lat="57.79338" lon="8.27384">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="740" lat="57.79223" lon="8.28467">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="741" lat="57.79087666666667" lon="8.29657">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="742" lat="57.78966333333334" lon="8.306298333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="743" lat="57.78856333333333" lon="8.317138333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="744" lat="57.78732166666667" lon="8.32897">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="745" lat="57.78623166666667" lon="8.339843333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="746" lat="57.78510333333334" lon="8.349748333333332">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="747" lat="57.78411000000001" lon="8.35769">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="748" lat="57.78388166666667" lon="8.359466666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="749" lat="57.78295166666667" lon="8.369251666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="750" lat="57.78190666666667" lon="8.379133333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="751" lat="57.78078666666667" lon="8.389014999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="752" lat="57.77967166666667" lon="8.398868333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="753" lat="57.77864333333333" lon="8.408841666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="754" lat="57.77748" lon="8.418643333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="755" lat="57.77538666666667" lon="8.438143333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="756" lat="57.77433166666666" lon="8.447835">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="757" lat="57.77333333333333" lon="8.457498333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="758" lat="57.77227166666667" lon="8.467139999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="759" lat="57.77122499999999" lon="8.476815">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="760" lat="57.77014166666667" lon="8.486641666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="761" lat="57.76906833333333" lon="8.496375">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="762" lat="57.76797999999999" lon="8.506073333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="763" lat="57.76693833333333" lon="8.515765">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="764" lat="57.76579" lon="8.525496666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="765" lat="57.764845" lon="8.53431">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="766" lat="57.76461833333334" lon="8.536255">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="767" lat="57.76356333333333" lon="8.545966666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="768" lat="57.76253333333333" lon="8.555751666666668">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="769" lat="57.76145333333333" lon="8.565506666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="770" lat="57.76042166666667" lon="8.575293333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="771" lat="57.75928666666667" lon="8.584976666666668">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="772" lat="57.757945" lon="8.597421666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="773" lat="57.75695833333334" lon="8.607125">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="774" lat="57.75591166666666" lon="8.616781666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="775" lat="57.75479" lon="8.626534999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="776" lat="57.75382166666667" lon="8.636093333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="777" lat="57.75276666666667" lon="8.645755000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="778" lat="57.75168333333333" lon="8.655493333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="779" lat="57.750595" lon="8.665311666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="780" lat="57.74905833333333" lon="8.67901">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="781" lat="57.74788166666666" lon="8.68974">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="782" lat="57.74668833333333" lon="8.70139">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="783" lat="57.745345" lon="8.713683333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="784" lat="57.74362666666666" lon="8.72879">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="785" lat="57.74161666666667" lon="8.7477">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="786" lat="57.739385" lon="8.767701666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="787" lat="57.73790333333333" lon="8.781776666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="788" lat="57.73513833333333" lon="8.807388333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="789" lat="57.73288333333333" lon="8.827263333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="790" lat="57.73082333333333" lon="8.845831666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="791" lat="57.728765" lon="8.865084999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="792" lat="57.724315" lon="8.90526">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="793" lat="57.72177833333333" lon="8.928811666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="794" lat="57.75315333333333" lon="9.365433333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="795" lat="57.84117666666667" lon="9.015798333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="796" lat="57.88427833333333" lon="8.839971666666665">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="797" lat="57.91689" lon="8.704771666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="798" lat="57.952815" lon="8.558046666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="799" lat="57.99036666666667" lon="8.403628333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="800" lat="58.02650333333334" lon="8.253195">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="801" lat="58.05881833333333" lon="8.121646666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="802" lat="58.11090333333333" lon="8.034178333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="803" lat="58.14235" lon="7.98778">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="804" lat="58.11232333333333" lon="8.025933333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="805" lat="58.05355" lon="8.087025">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="806" lat="58.00805166666667" lon="8.000271666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="807" lat="57.98491" lon="7.871916666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="808" lat="57.964685" lon="7.751141666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="809" lat="57.945925" lon="7.639261666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="810" lat="57.93862" lon="7.49579">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="811" lat="57.93765833333334" lon="7.310126666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="812" lat="57.95085166666667" lon="7.037898333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="813" lat="58.00499333333333" lon="6.75979">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="814" lat="58.06684666666667" lon="6.531176666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="815" lat="58.19034333333333" lon="6.286343333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="816" lat="58.28335666666667" lon="6.091158333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="817" lat="58.38367666666667" lon="5.858235">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="818" lat="58.490505" lon="5.671463333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="819" lat="58.55857833333334" lon="5.588570000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="820" lat="58.61856833333333" lon="5.526131666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="821" lat="58.92492" lon="5.582705000000001">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="822" lat="58.95905" lon="5.549946666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="823" lat="59.03252166666667" lon="5.549771666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="824" lat="59.10862833333333" lon="5.502221666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="825" lat="59.14488666666667" lon="5.366205">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="826" lat="59.22009" lon="5.34899">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="827" lat="59.32043166666666" lon="5.327406666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="828" lat="59.38489333333334" lon="5.288986666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="829" lat="59.418445" lon="5.234201666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="830" lat="59.49848333333333" lon="5.210446666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="831" lat="59.58417" lon="5.249846666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="832" lat="59.66856666666667" lon="5.367435">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="833" lat="59.72962" lon="5.477998333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="834" lat="59.805275" lon="5.562086666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="835" lat="59.95181333333333" lon="5.434106666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="836" lat="60.082915" lon="5.322078333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="837" lat="60.17669666666666" lon="5.231816666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="838" lat="60.24121166666666" lon="5.158441666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="839" lat="60.32370833333334" lon="5.198171666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="840" lat="60.37838166666667" lon="5.17119">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="841" lat="60.39517" lon="5.285005">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="842" lat="60.403295" lon="5.279768333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="843" lat="60.38440166666667" lon="5.177106666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="844" lat="60.33178166666666" lon="5.193295">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="845" lat="60.25615333333334" lon="5.153256666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="846" lat="58.8627" lon="5.522049999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="847" lat="58.87805" lon="5.528083333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="848" lat="58.878465" lon="5.528231666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="849" lat="58.88286666666667" lon="5.529966666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="850" lat="58.88766666666667" lon="5.531916666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="851" lat="58.891" lon="5.53325">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="852" lat="58.8929" lon="5.53405">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="853" lat="58.89806666666667" lon="5.536116666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="854" lat="58.90293333333333" lon="5.537999999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="855" lat="58.9077" lon="5.539733333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="856" lat="58.90818333333333" lon="5.539916666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="857" lat="58.91228333333333" lon="5.541416666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="858" lat="58.91616666666666" lon="5.5431">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="859" lat="58.92278333333334" lon="5.545833333333333">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="860" lat="58.92528333333333" lon="5.54685">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="861" lat="58.92598333333333" lon="5.547216666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="862" lat="58.92853333333333" lon="5.54925">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="863" lat="58.93006666666667" lon="5.5515">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="864" lat="58.9308" lon="5.553166666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="865" lat="58.93165" lon="5.556366666666666">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="866" lat="58.93178333333334" lon="5.564383333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="867" lat="58.93125" lon="5.567416666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="868" lat="58.92723333333333" lon="5.576449999999999">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="869" lat="58.92615" lon="5.578466666666667">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <node id="870" lat="58.92571666666667" lon="5.579283333333334">
+    <tag k="seamark:type" v="waypoint" />
+  </node>
+  <way id="1">
+    <nd ref="5" />
+    <nd ref="18" />
+    <nd ref="19" />
+    <nd ref="20" />
+    <nd ref="21" />
+    <nd ref="22" />
+    <nd ref="23" />
+    <nd ref="24" />
+    <nd ref="25" />
+    <nd ref="26" />
+    <nd ref="27" />
+    <nd ref="28" />
+    <nd ref="29" />
+    <nd ref="30" />
+    <nd ref="31" />
+    <nd ref="32" />
+    <nd ref="33" />
+    <nd ref="34" />
+    <nd ref="35" />
+    <nd ref="36" />
+    <nd ref="37" />
+    <nd ref="38" />
+    <nd ref="39" />
+    <nd ref="40" />
+    <nd ref="41" />
+    <nd ref="42" />
+    <nd ref="43" />
+    <nd ref="44" />
+    <nd ref="45" />
+    <nd ref="46" />
+    <nd ref="47" />
+    <nd ref="48" />
+    <nd ref="49" />
+    <nd ref="50" />
+    <nd ref="51" />
+    <nd ref="52" />
+    <nd ref="53" />
+    <nd ref="54" />
+    <nd ref="55" />
+    <nd ref="56" />
+    <nd ref="57" />
+    <nd ref="58" />
+    <nd ref="59" />
+    <nd ref="60" />
+    <nd ref="61" />
+    <nd ref="62" />
+    <nd ref="63" />
+    <nd ref="64" />
+    <nd ref="65" />
+    <nd ref="66" />
+    <nd ref="67" />
+    <nd ref="68" />
+    <nd ref="69" />
+    <nd ref="70" />
+    <nd ref="71" />
+    <nd ref="72" />
+    <nd ref="73" />
+    <nd ref="74" />
+    <nd ref="75" />
+    <nd ref="76" />
+    <nd ref="8" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="23274" />
+    <tag k="distance" v="193333" />
+    <tag k="maxspeed" v="30" />
+    <tag k="confidence" v="0.18" />
+    <tag k="observations" v="1" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="2">
+    <nd ref="2" />
+    <nd ref="77" />
+    <nd ref="78" />
+    <nd ref="79" />
+    <nd ref="80" />
+    <nd ref="81" />
+    <nd ref="82" />
+    <nd ref="83" />
+    <nd ref="84" />
+    <nd ref="85" />
+    <nd ref="86" />
+    <nd ref="87" />
+    <nd ref="88" />
+    <nd ref="89" />
+    <nd ref="90" />
+    <nd ref="91" />
+    <nd ref="92" />
+    <nd ref="93" />
+    <nd ref="94" />
+    <nd ref="95" />
+    <nd ref="96" />
+    <nd ref="97" />
+    <nd ref="98" />
+    <nd ref="99" />
+    <nd ref="100" />
+    <nd ref="101" />
+    <nd ref="102" />
+    <nd ref="103" />
+    <nd ref="104" />
+    <nd ref="105" />
+    <nd ref="106" />
+    <nd ref="107" />
+    <nd ref="108" />
+    <nd ref="109" />
+    <nd ref="110" />
+    <nd ref="111" />
+    <nd ref="112" />
+    <nd ref="113" />
+    <nd ref="114" />
+    <nd ref="115" />
+    <nd ref="116" />
+    <nd ref="117" />
+    <nd ref="118" />
+    <nd ref="119" />
+    <nd ref="120" />
+    <nd ref="121" />
+    <nd ref="122" />
+    <nd ref="123" />
+    <nd ref="124" />
+    <nd ref="125" />
+    <nd ref="126" />
+    <nd ref="127" />
+    <nd ref="128" />
+    <nd ref="129" />
+    <nd ref="130" />
+    <nd ref="131" />
+    <nd ref="132" />
+    <nd ref="3" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="19513" />
+    <tag k="distance" v="152093" />
+    <tag k="maxspeed" v="28" />
+    <tag k="confidence" v="0.33" />
+    <tag k="observations" v="2" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="3">
+    <nd ref="4" />
+    <nd ref="133" />
+    <nd ref="134" />
+    <nd ref="135" />
+    <nd ref="136" />
+    <nd ref="137" />
+    <nd ref="138" />
+    <nd ref="139" />
+    <nd ref="140" />
+    <nd ref="141" />
+    <nd ref="142" />
+    <nd ref="143" />
+    <nd ref="144" />
+    <nd ref="145" />
+    <nd ref="146" />
+    <nd ref="147" />
+    <nd ref="148" />
+    <nd ref="149" />
+    <nd ref="150" />
+    <nd ref="151" />
+    <nd ref="152" />
+    <nd ref="153" />
+    <nd ref="154" />
+    <nd ref="155" />
+    <nd ref="156" />
+    <nd ref="157" />
+    <nd ref="158" />
+    <nd ref="159" />
+    <nd ref="160" />
+    <nd ref="161" />
+    <nd ref="162" />
+    <nd ref="163" />
+    <nd ref="164" />
+    <nd ref="165" />
+    <nd ref="166" />
+    <nd ref="167" />
+    <nd ref="168" />
+    <nd ref="169" />
+    <nd ref="170" />
+    <nd ref="171" />
+    <nd ref="172" />
+    <nd ref="173" />
+    <nd ref="174" />
+    <nd ref="175" />
+    <nd ref="176" />
+    <nd ref="177" />
+    <nd ref="178" />
+    <nd ref="179" />
+    <nd ref="180" />
+    <nd ref="181" />
+    <nd ref="182" />
+    <nd ref="183" />
+    <nd ref="184" />
+    <nd ref="185" />
+    <nd ref="10" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="38256" />
+    <tag k="distance" v="284284" />
+    <tag k="maxspeed" v="27" />
+    <tag k="confidence" v="0.33" />
+    <tag k="observations" v="2" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="4">
+    <nd ref="2" />
+    <nd ref="186" />
+    <nd ref="187" />
+    <nd ref="188" />
+    <nd ref="189" />
+    <nd ref="190" />
+    <nd ref="191" />
+    <nd ref="192" />
+    <nd ref="193" />
+    <nd ref="194" />
+    <nd ref="195" />
+    <nd ref="196" />
+    <nd ref="197" />
+    <nd ref="198" />
+    <nd ref="199" />
+    <nd ref="200" />
+    <nd ref="201" />
+    <nd ref="202" />
+    <nd ref="203" />
+    <nd ref="204" />
+    <nd ref="205" />
+    <nd ref="206" />
+    <nd ref="207" />
+    <nd ref="208" />
+    <nd ref="209" />
+    <nd ref="210" />
+    <nd ref="211" />
+    <nd ref="212" />
+    <nd ref="213" />
+    <nd ref="214" />
+    <nd ref="215" />
+    <nd ref="216" />
+    <nd ref="217" />
+    <nd ref="218" />
+    <nd ref="219" />
+    <nd ref="220" />
+    <nd ref="221" />
+    <nd ref="222" />
+    <nd ref="223" />
+    <nd ref="224" />
+    <nd ref="225" />
+    <nd ref="226" />
+    <nd ref="227" />
+    <nd ref="228" />
+    <nd ref="229" />
+    <nd ref="230" />
+    <nd ref="231" />
+    <nd ref="232" />
+    <nd ref="233" />
+    <nd ref="234" />
+    <nd ref="235" />
+    <nd ref="236" />
+    <nd ref="237" />
+    <nd ref="238" />
+    <nd ref="239" />
+    <nd ref="9" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="51223" />
+    <tag k="distance" v="443870" />
+    <tag k="maxspeed" v="31" />
+    <tag k="confidence" v="0.55" />
+    <tag k="observations" v="4" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="5">
+    <nd ref="9" />
+    <nd ref="240" />
+    <nd ref="241" />
+    <nd ref="242" />
+    <nd ref="243" />
+    <nd ref="244" />
+    <nd ref="245" />
+    <nd ref="246" />
+    <nd ref="247" />
+    <nd ref="248" />
+    <nd ref="249" />
+    <nd ref="250" />
+    <nd ref="251" />
+    <nd ref="252" />
+    <nd ref="253" />
+    <nd ref="254" />
+    <nd ref="255" />
+    <nd ref="256" />
+    <nd ref="257" />
+    <nd ref="258" />
+    <nd ref="259" />
+    <nd ref="260" />
+    <nd ref="261" />
+    <nd ref="262" />
+    <nd ref="263" />
+    <nd ref="264" />
+    <nd ref="265" />
+    <nd ref="266" />
+    <nd ref="267" />
+    <nd ref="268" />
+    <nd ref="269" />
+    <nd ref="270" />
+    <nd ref="271" />
+    <nd ref="272" />
+    <nd ref="273" />
+    <nd ref="274" />
+    <nd ref="275" />
+    <nd ref="276" />
+    <nd ref="277" />
+    <nd ref="278" />
+    <nd ref="279" />
+    <nd ref="280" />
+    <nd ref="281" />
+    <nd ref="282" />
+    <nd ref="283" />
+    <nd ref="284" />
+    <nd ref="285" />
+    <nd ref="286" />
+    <nd ref="287" />
+    <nd ref="288" />
+    <nd ref="289" />
+    <nd ref="290" />
+    <nd ref="291" />
+    <nd ref="292" />
+    <nd ref="293" />
+    <nd ref="294" />
+    <nd ref="295" />
+    <nd ref="7" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="37899" />
+    <tag k="distance" v="296316" />
+    <tag k="maxspeed" v="28" />
+    <tag k="confidence" v="0.33" />
+    <tag k="observations" v="2" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="6">
+    <nd ref="13" />
+    <nd ref="296" />
+    <nd ref="297" />
+    <nd ref="298" />
+    <nd ref="299" />
+    <nd ref="300" />
+    <nd ref="301" />
+    <nd ref="302" />
+    <nd ref="303" />
+    <nd ref="304" />
+    <nd ref="305" />
+    <nd ref="306" />
+    <nd ref="307" />
+    <nd ref="308" />
+    <nd ref="309" />
+    <nd ref="310" />
+    <nd ref="311" />
+    <nd ref="312" />
+    <nd ref="313" />
+    <nd ref="314" />
+    <nd ref="315" />
+    <nd ref="316" />
+    <nd ref="317" />
+    <nd ref="318" />
+    <nd ref="319" />
+    <nd ref="320" />
+    <nd ref="321" />
+    <nd ref="322" />
+    <nd ref="323" />
+    <nd ref="324" />
+    <nd ref="325" />
+    <nd ref="326" />
+    <nd ref="327" />
+    <nd ref="328" />
+    <nd ref="329" />
+    <nd ref="330" />
+    <nd ref="331" />
+    <nd ref="332" />
+    <nd ref="333" />
+    <nd ref="334" />
+    <nd ref="335" />
+    <nd ref="336" />
+    <nd ref="337" />
+    <nd ref="338" />
+    <nd ref="339" />
+    <nd ref="340" />
+    <nd ref="341" />
+    <nd ref="342" />
+    <nd ref="343" />
+    <nd ref="344" />
+    <nd ref="345" />
+    <nd ref="346" />
+    <nd ref="347" />
+    <nd ref="9" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="26105" />
+    <tag k="distance" v="221216" />
+    <tag k="maxspeed" v="31" />
+    <tag k="confidence" v="0.33" />
+    <tag k="observations" v="2" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="7">
+    <nd ref="4" />
+    <nd ref="348" />
+    <nd ref="349" />
+    <nd ref="350" />
+    <nd ref="351" />
+    <nd ref="352" />
+    <nd ref="353" />
+    <nd ref="354" />
+    <nd ref="355" />
+    <nd ref="356" />
+    <nd ref="357" />
+    <nd ref="358" />
+    <nd ref="359" />
+    <nd ref="360" />
+    <nd ref="361" />
+    <nd ref="362" />
+    <nd ref="363" />
+    <nd ref="364" />
+    <nd ref="365" />
+    <nd ref="366" />
+    <nd ref="367" />
+    <nd ref="368" />
+    <nd ref="369" />
+    <nd ref="370" />
+    <nd ref="371" />
+    <nd ref="372" />
+    <nd ref="373" />
+    <nd ref="374" />
+    <nd ref="375" />
+    <nd ref="376" />
+    <nd ref="377" />
+    <nd ref="378" />
+    <nd ref="379" />
+    <nd ref="380" />
+    <nd ref="381" />
+    <nd ref="382" />
+    <nd ref="383" />
+    <nd ref="384" />
+    <nd ref="385" />
+    <nd ref="386" />
+    <nd ref="387" />
+    <nd ref="388" />
+    <nd ref="389" />
+    <nd ref="390" />
+    <nd ref="391" />
+    <nd ref="392" />
+    <nd ref="393" />
+    <nd ref="394" />
+    <nd ref="395" />
+    <nd ref="396" />
+    <nd ref="397" />
+    <nd ref="398" />
+    <nd ref="399" />
+    <nd ref="400" />
+    <nd ref="401" />
+    <nd ref="402" />
+    <nd ref="403" />
+    <nd ref="404" />
+    <nd ref="405" />
+    <nd ref="406" />
+    <nd ref="407" />
+    <nd ref="408" />
+    <nd ref="409" />
+    <nd ref="410" />
+    <nd ref="411" />
+    <nd ref="412" />
+    <nd ref="413" />
+    <nd ref="11" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="15650" />
+    <tag k="distance" v="77387" />
+    <tag k="maxspeed" v="18" />
+    <tag k="confidence" v="0.33" />
+    <tag k="observations" v="2" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="8">
+    <nd ref="2" />
+    <nd ref="414" />
+    <nd ref="415" />
+    <nd ref="416" />
+    <nd ref="417" />
+    <nd ref="418" />
+    <nd ref="419" />
+    <nd ref="420" />
+    <nd ref="421" />
+    <nd ref="422" />
+    <nd ref="423" />
+    <nd ref="424" />
+    <nd ref="425" />
+    <nd ref="426" />
+    <nd ref="427" />
+    <nd ref="428" />
+    <nd ref="429" />
+    <nd ref="430" />
+    <nd ref="431" />
+    <nd ref="432" />
+    <nd ref="433" />
+    <nd ref="434" />
+    <nd ref="435" />
+    <nd ref="436" />
+    <nd ref="437" />
+    <nd ref="438" />
+    <nd ref="439" />
+    <nd ref="440" />
+    <nd ref="441" />
+    <nd ref="442" />
+    <nd ref="443" />
+    <nd ref="444" />
+    <nd ref="445" />
+    <nd ref="446" />
+    <nd ref="447" />
+    <nd ref="448" />
+    <nd ref="449" />
+    <nd ref="450" />
+    <nd ref="451" />
+    <nd ref="452" />
+    <nd ref="453" />
+    <nd ref="454" />
+    <nd ref="455" />
+    <nd ref="456" />
+    <nd ref="457" />
+    <nd ref="458" />
+    <nd ref="459" />
+    <nd ref="460" />
+    <nd ref="461" />
+    <nd ref="462" />
+    <nd ref="463" />
+    <nd ref="464" />
+    <nd ref="465" />
+    <nd ref="6" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="18258" />
+    <tag k="distance" v="156562" />
+    <tag k="maxspeed" v="31" />
+    <tag k="confidence" v="0.33" />
+    <tag k="observations" v="2" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="9">
+    <nd ref="9" />
+    <nd ref="466" />
+    <nd ref="467" />
+    <nd ref="468" />
+    <nd ref="469" />
+    <nd ref="470" />
+    <nd ref="471" />
+    <nd ref="472" />
+    <nd ref="473" />
+    <nd ref="474" />
+    <nd ref="475" />
+    <nd ref="476" />
+    <nd ref="477" />
+    <nd ref="478" />
+    <nd ref="479" />
+    <nd ref="480" />
+    <nd ref="481" />
+    <nd ref="482" />
+    <nd ref="483" />
+    <nd ref="484" />
+    <nd ref="485" />
+    <nd ref="486" />
+    <nd ref="487" />
+    <nd ref="488" />
+    <nd ref="489" />
+    <nd ref="490" />
+    <nd ref="491" />
+    <nd ref="492" />
+    <nd ref="493" />
+    <nd ref="494" />
+    <nd ref="495" />
+    <nd ref="496" />
+    <nd ref="497" />
+    <nd ref="498" />
+    <nd ref="499" />
+    <nd ref="500" />
+    <nd ref="501" />
+    <nd ref="502" />
+    <nd ref="503" />
+    <nd ref="504" />
+    <nd ref="505" />
+    <nd ref="506" />
+    <nd ref="507" />
+    <nd ref="508" />
+    <nd ref="509" />
+    <nd ref="510" />
+    <nd ref="511" />
+    <nd ref="512" />
+    <nd ref="513" />
+    <nd ref="514" />
+    <nd ref="515" />
+    <nd ref="516" />
+    <nd ref="517" />
+    <nd ref="518" />
+    <nd ref="519" />
+    <nd ref="2" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="51518" />
+    <tag k="distance" v="409903" />
+    <tag k="maxspeed" v="29" />
+    <tag k="confidence" v="0.33" />
+    <tag k="observations" v="2" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="10">
+    <nd ref="5" />
+    <nd ref="520" />
+    <nd ref="521" />
+    <nd ref="522" />
+    <nd ref="523" />
+    <nd ref="524" />
+    <nd ref="525" />
+    <nd ref="526" />
+    <nd ref="527" />
+    <nd ref="528" />
+    <nd ref="529" />
+    <nd ref="530" />
+    <nd ref="531" />
+    <nd ref="532" />
+    <nd ref="533" />
+    <nd ref="534" />
+    <nd ref="535" />
+    <nd ref="536" />
+    <nd ref="537" />
+    <nd ref="538" />
+    <nd ref="539" />
+    <nd ref="540" />
+    <nd ref="541" />
+    <nd ref="542" />
+    <nd ref="543" />
+    <nd ref="544" />
+    <nd ref="545" />
+    <nd ref="546" />
+    <nd ref="547" />
+    <nd ref="548" />
+    <nd ref="549" />
+    <nd ref="550" />
+    <nd ref="551" />
+    <nd ref="552" />
+    <nd ref="553" />
+    <nd ref="554" />
+    <nd ref="555" />
+    <nd ref="556" />
+    <nd ref="557" />
+    <nd ref="558" />
+    <nd ref="559" />
+    <nd ref="560" />
+    <nd ref="561" />
+    <nd ref="562" />
+    <nd ref="563" />
+    <nd ref="564" />
+    <nd ref="565" />
+    <nd ref="566" />
+    <nd ref="567" />
+    <nd ref="568" />
+    <nd ref="569" />
+    <nd ref="570" />
+    <nd ref="571" />
+    <nd ref="572" />
+    <nd ref="573" />
+    <nd ref="574" />
+    <nd ref="575" />
+    <nd ref="576" />
+    <nd ref="577" />
+    <nd ref="578" />
+    <nd ref="579" />
+    <nd ref="2" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="21301" />
+    <tag k="distance" v="172723" />
+    <tag k="maxspeed" v="29" />
+    <tag k="confidence" v="0.18" />
+    <tag k="observations" v="1" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="11">
+    <nd ref="12" />
+    <nd ref="580" />
+    <nd ref="581" />
+    <nd ref="582" />
+    <nd ref="583" />
+    <nd ref="584" />
+    <nd ref="585" />
+    <nd ref="586" />
+    <nd ref="587" />
+    <nd ref="588" />
+    <nd ref="589" />
+    <nd ref="590" />
+    <nd ref="591" />
+    <nd ref="592" />
+    <nd ref="593" />
+    <nd ref="594" />
+    <nd ref="595" />
+    <nd ref="596" />
+    <nd ref="597" />
+    <nd ref="598" />
+    <nd ref="599" />
+    <nd ref="600" />
+    <nd ref="601" />
+    <nd ref="602" />
+    <nd ref="603" />
+    <nd ref="604" />
+    <nd ref="605" />
+    <nd ref="606" />
+    <nd ref="607" />
+    <nd ref="608" />
+    <nd ref="609" />
+    <nd ref="610" />
+    <nd ref="611" />
+    <nd ref="612" />
+    <nd ref="613" />
+    <nd ref="614" />
+    <nd ref="615" />
+    <nd ref="616" />
+    <nd ref="617" />
+    <nd ref="618" />
+    <nd ref="619" />
+    <nd ref="620" />
+    <nd ref="621" />
+    <nd ref="622" />
+    <nd ref="623" />
+    <nd ref="624" />
+    <nd ref="625" />
+    <nd ref="626" />
+    <nd ref="627" />
+    <nd ref="628" />
+    <nd ref="629" />
+    <nd ref="630" />
+    <nd ref="631" />
+    <nd ref="632" />
+    <nd ref="633" />
+    <nd ref="634" />
+    <nd ref="635" />
+    <nd ref="636" />
+    <nd ref="637" />
+    <nd ref="638" />
+    <nd ref="639" />
+    <nd ref="640" />
+    <nd ref="641" />
+    <nd ref="642" />
+    <nd ref="643" />
+    <nd ref="16" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="19851" />
+    <tag k="distance" v="156252" />
+    <tag k="maxspeed" v="28" />
+    <tag k="confidence" v="0.18" />
+    <tag k="observations" v="1" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="12">
+    <nd ref="11" />
+    <nd ref="644" />
+    <nd ref="645" />
+    <nd ref="646" />
+    <nd ref="647" />
+    <nd ref="648" />
+    <nd ref="649" />
+    <nd ref="650" />
+    <nd ref="651" />
+    <nd ref="652" />
+    <nd ref="653" />
+    <nd ref="654" />
+    <nd ref="655" />
+    <nd ref="656" />
+    <nd ref="657" />
+    <nd ref="658" />
+    <nd ref="659" />
+    <nd ref="660" />
+    <nd ref="661" />
+    <nd ref="662" />
+    <nd ref="663" />
+    <nd ref="664" />
+    <nd ref="665" />
+    <nd ref="666" />
+    <nd ref="667" />
+    <nd ref="668" />
+    <nd ref="669" />
+    <nd ref="670" />
+    <nd ref="671" />
+    <nd ref="672" />
+    <nd ref="673" />
+    <nd ref="674" />
+    <nd ref="675" />
+    <nd ref="676" />
+    <nd ref="677" />
+    <nd ref="678" />
+    <nd ref="679" />
+    <nd ref="680" />
+    <nd ref="681" />
+    <nd ref="682" />
+    <nd ref="683" />
+    <nd ref="684" />
+    <nd ref="685" />
+    <nd ref="686" />
+    <nd ref="687" />
+    <nd ref="688" />
+    <nd ref="689" />
+    <nd ref="690" />
+    <nd ref="691" />
+    <nd ref="692" />
+    <nd ref="693" />
+    <nd ref="694" />
+    <nd ref="695" />
+    <nd ref="696" />
+    <nd ref="697" />
+    <nd ref="4" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="45869" />
+    <tag k="distance" v="198068" />
+    <tag k="maxspeed" v="16" />
+    <tag k="confidence" v="0.18" />
+    <tag k="observations" v="1" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="13">
+    <nd ref="14" />
+    <nd ref="698" />
+    <nd ref="699" />
+    <nd ref="700" />
+    <nd ref="701" />
+    <nd ref="702" />
+    <nd ref="703" />
+    <nd ref="704" />
+    <nd ref="705" />
+    <nd ref="706" />
+    <nd ref="707" />
+    <nd ref="708" />
+    <nd ref="709" />
+    <nd ref="710" />
+    <nd ref="711" />
+    <nd ref="712" />
+    <nd ref="713" />
+    <nd ref="714" />
+    <nd ref="715" />
+    <nd ref="716" />
+    <nd ref="717" />
+    <nd ref="718" />
+    <nd ref="719" />
+    <nd ref="720" />
+    <nd ref="721" />
+    <nd ref="722" />
+    <nd ref="723" />
+    <nd ref="724" />
+    <nd ref="725" />
+    <nd ref="726" />
+    <nd ref="727" />
+    <nd ref="728" />
+    <nd ref="729" />
+    <nd ref="730" />
+    <nd ref="731" />
+    <nd ref="732" />
+    <nd ref="733" />
+    <nd ref="734" />
+    <nd ref="735" />
+    <nd ref="736" />
+    <nd ref="737" />
+    <nd ref="738" />
+    <nd ref="739" />
+    <nd ref="740" />
+    <nd ref="741" />
+    <nd ref="742" />
+    <nd ref="743" />
+    <nd ref="744" />
+    <nd ref="745" />
+    <nd ref="746" />
+    <nd ref="747" />
+    <nd ref="748" />
+    <nd ref="749" />
+    <nd ref="750" />
+    <nd ref="751" />
+    <nd ref="752" />
+    <nd ref="753" />
+    <nd ref="754" />
+    <nd ref="755" />
+    <nd ref="756" />
+    <nd ref="757" />
+    <nd ref="758" />
+    <nd ref="759" />
+    <nd ref="760" />
+    <nd ref="761" />
+    <nd ref="762" />
+    <nd ref="763" />
+    <nd ref="764" />
+    <nd ref="765" />
+    <nd ref="766" />
+    <nd ref="767" />
+    <nd ref="768" />
+    <nd ref="769" />
+    <nd ref="770" />
+    <nd ref="771" />
+    <nd ref="772" />
+    <nd ref="773" />
+    <nd ref="774" />
+    <nd ref="775" />
+    <nd ref="776" />
+    <nd ref="777" />
+    <nd ref="778" />
+    <nd ref="779" />
+    <nd ref="780" />
+    <nd ref="781" />
+    <nd ref="782" />
+    <nd ref="783" />
+    <nd ref="784" />
+    <nd ref="785" />
+    <nd ref="786" />
+    <nd ref="787" />
+    <nd ref="788" />
+    <nd ref="789" />
+    <nd ref="790" />
+    <nd ref="791" />
+    <nd ref="792" />
+    <nd ref="793" />
+    <nd ref="2" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="6542" />
+    <tag k="distance" v="63300" />
+    <tag k="maxspeed" v="35" />
+    <tag k="confidence" v="0.33" />
+    <tag k="observations" v="2" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="14">
+    <nd ref="5" />
+    <nd ref="794" />
+    <nd ref="795" />
+    <nd ref="796" />
+    <nd ref="797" />
+    <nd ref="798" />
+    <nd ref="799" />
+    <nd ref="800" />
+    <nd ref="801" />
+    <nd ref="802" />
+    <nd ref="803" />
+    <nd ref="804" />
+    <nd ref="805" />
+    <nd ref="806" />
+    <nd ref="807" />
+    <nd ref="808" />
+    <nd ref="809" />
+    <nd ref="810" />
+    <nd ref="811" />
+    <nd ref="812" />
+    <nd ref="813" />
+    <nd ref="814" />
+    <nd ref="815" />
+    <nd ref="816" />
+    <nd ref="817" />
+    <nd ref="818" />
+    <nd ref="819" />
+    <nd ref="820" />
+    <nd ref="821" />
+    <nd ref="822" />
+    <nd ref="823" />
+    <nd ref="824" />
+    <nd ref="825" />
+    <nd ref="826" />
+    <nd ref="827" />
+    <nd ref="828" />
+    <nd ref="829" />
+    <nd ref="830" />
+    <nd ref="831" />
+    <nd ref="832" />
+    <nd ref="833" />
+    <nd ref="834" />
+    <nd ref="835" />
+    <nd ref="836" />
+    <nd ref="837" />
+    <nd ref="838" />
+    <nd ref="839" />
+    <nd ref="840" />
+    <nd ref="841" />
+    <nd ref="842" />
+    <nd ref="843" />
+    <nd ref="844" />
+    <nd ref="845" />
+    <nd ref="15" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="66119" />
+    <tag k="distance" v="865661" />
+    <tag k="maxspeed" v="47" />
+    <tag k="confidence" v="0.18" />
+    <tag k="observations" v="1" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+  <way id="15">
+    <nd ref="1" />
+    <nd ref="846" />
+    <nd ref="847" />
+    <nd ref="848" />
+    <nd ref="849" />
+    <nd ref="850" />
+    <nd ref="851" />
+    <nd ref="852" />
+    <nd ref="853" />
+    <nd ref="854" />
+    <nd ref="855" />
+    <nd ref="856" />
+    <nd ref="857" />
+    <nd ref="858" />
+    <nd ref="859" />
+    <nd ref="860" />
+    <nd ref="861" />
+    <nd ref="862" />
+    <nd ref="863" />
+    <nd ref="864" />
+    <nd ref="865" />
+    <nd ref="866" />
+    <nd ref="867" />
+    <nd ref="868" />
+    <nd ref="869" />
+    <nd ref="870" />
+    <nd ref="17" />
+    <tag k="route" v="ferry" />
+    <tag k="highway" v="service" />
+    <tag k="duration" v="1321" />
+    <tag k="distance" v="9600" />
+    <tag k="maxspeed" v="26" />
+    <tag k="confidence" v="0.33" />
+    <tag k="observations" v="2" />
+    <tag k="vessel_type" v="general_cargo" />
+  </way>
+</osm>

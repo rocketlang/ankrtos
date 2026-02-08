@@ -204,6 +204,33 @@ export const navSections: NavSection[] = [
     ],
   },
   {
+    id: 'ais-data',
+    label: 'AIS & Tracking',
+    icon: '\u{1F4E1}',  // satellite antenna
+    color: 'cyan',
+    items: [
+      { label: 'Fleet Dashboard', href: '/ais/fleet-dashboard' },
+      { label: 'Vessel Alerts', href: '/ais/alerts' },
+      { label: 'Geofencing', href: '/ais/geofencing' },
+      { label: 'AIS Live', href: '/ais/live' },
+      { label: 'Hybrid Map', href: '/ais/hybrid-map' },
+      { label: 'GFW Events', href: '/ais/gfw-events' },
+      { label: 'Vessel Journey', href: '/ais/vessel-journey' },
+      { label: 'Positions', href: '/vessel-positions' },
+      { label: 'Vsl History', href: '/vessel-history' },
+    ],
+  },
+  {
+    id: 'ux-dev',
+    label: 'UX & Workflows',
+    icon: '\u{1F3A8}',  // artist palette
+    color: 'violet',
+    items: [
+      { label: 'Flow Canvas', href: '/flow-canvas' },
+      { label: 'Features', href: '/features' },
+    ],
+  },
+  {
     id: 'notifications',
     label: 'Notifications',
     icon: '\u{1F514}',  // bell
