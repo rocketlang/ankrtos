@@ -11,8 +11,11 @@ import type { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
 import { replyParserService } from '../../services/alerts/reply-parser.service';
 import { replyHandlerService } from '../../services/alerts/reply-handler.service';
 import { PrismaClient } from '@prisma/client';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 interface WhatsAppWebhook {
   From: string; // WhatsApp number (whatsapp:+1234567890)

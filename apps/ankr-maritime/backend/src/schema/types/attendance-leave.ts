@@ -73,25 +73,43 @@ builder.queryField('attendanceLogs', (t) =>
       status: t.arg.string(),
       dateFrom: t.arg({ type: 'DateTime' }),
       dateTo: t.arg({ type: 'DateTime' }),
+      month: t.arg.int({ required: false }), // Optional month filter (1-12)
+      year: t.arg.int({ required: false }), // Optional year filter
     },
-    resolve: (query, _root, args, ctx) =>
-      ctx.prisma.attendanceLog.findMany({
+    resolve: (query, _root, args, ctx) => {
+      let dateFrom = args.dateFrom;
+      let dateTo = args.dateTo;
+
+      // If month/year provided, compute date range
+      if (args.month !== undefined && args.month !== null) {
+        const year = args.year ?? new Date().getFullYear();
+        const month = args.month;
+        dateFrom = new Date(year, month - 1, 1); // First day of month
+        dateTo = new Date(year, month, 0, 23, 59, 59); // Last day of month
+      } else if (args.year !== undefined && args.year !== null) {
+        // Year only - full year range
+        dateFrom = new Date(args.year, 0, 1);
+        dateTo = new Date(args.year, 11, 31, 23, 59, 59);
+      }
+
+      return ctx.prisma.attendanceLog.findMany({
         ...query,
         where: {
           ...ctx.orgFilter(),
           ...(args.employeeId ? { employeeId: args.employeeId } : {}),
           ...(args.status ? { status: args.status } : {}),
-          ...(args.dateFrom || args.dateTo
+          ...(dateFrom || dateTo
             ? {
                 date: {
-                  ...(args.dateFrom ? { gte: args.dateFrom } : {}),
-                  ...(args.dateTo ? { lte: args.dateTo } : {}),
+                  ...(dateFrom ? { gte: dateFrom } : {}),
+                  ...(dateTo ? { lte: dateTo } : {}),
                 },
               }
             : {}),
         },
         orderBy: { date: 'desc' },
-      }),
+      });
+    },
   }),
 );
 

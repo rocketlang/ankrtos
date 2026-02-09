@@ -1,8 +1,11 @@
 // email-classifier.ts — AI-Powered Email Classification for Maritime Operations
 
 import { PrismaClient } from '@prisma/client';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 // Email categories for maritime operations
 export enum EmailCategory {

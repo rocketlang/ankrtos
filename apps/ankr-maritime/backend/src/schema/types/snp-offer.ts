@@ -32,14 +32,20 @@ builder.queryField('snpOffers', (t) =>
   t.prismaField({
     type: ['SNPOffer'],
     args: {
-      saleListingId: t.arg.string({ required: true }),
+      saleListingId: t.arg.string({ required: false }), // Made optional - returns all if not provided
+      status: t.arg.string({ required: false }),
     },
-    resolve: (query, _root, args, ctx) =>
-      ctx.prisma.sNPOffer.findMany({
+    resolve: (query, _root, args, ctx) => {
+      const where: any = {};
+      if (args.saleListingId) where.saleListingId = args.saleListingId;
+      if (args.status) where.status = args.status;
+
+      return ctx.prisma.sNPOffer.findMany({
         ...query,
-        where: { saleListingId: args.saleListingId },
+        where,
         orderBy: { createdAt: 'desc' },
-      }),
+      });
+    },
   }),
 );
 

@@ -13,22 +13,30 @@ export default defineConfig({
   reporter: 'html',
 
   use: {
-    baseURL: 'http://localhost:3009',
+    baseURL: 'https://mari8x.com',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },
 
   projects: [
+    // Setup project for authentication
+    {
+      name: 'setup',
+      testMatch: /.*\.setup\.ts/,
+    },
+    // Main test project
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      dependencies: ['setup'],
     },
   ],
 
-  webServer: {
-    command: 'echo "Frontend already running on port 3009"',
-    url: 'http://localhost:3009',
-    reuseExistingServer: true,
-    timeout: 5000,
-  },
+  // webServer disabled - testing against production mari8x.com
+  // webServer: {
+  //   command: 'echo "Frontend already running on port 3009"',
+  //   url: 'http://localhost:3009',
+  //   reuseExistingServer: true,
+  //   timeout: 5000,
+  // },
 });

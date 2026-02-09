@@ -1,0 +1,100 @@
+{
+  "primary_sources": {
+    "Cambridge_International": {
+      "url": "https://www.cambridgeinternational.org",
+      "content": [
+        "Official syllabi",
+        "Specimen papers",
+        "Examiner reports"
+      ],
+      "free": true,
+      "registration": false
+    },
+    "Physics_and_Maths_Tutor": {
+      "url": "https://www.physicsandmathstutor.com",
+      "content": [
+        "Past papers",
+        "Mark schemes",
+        "Revision notes",
+        "Topic questions"
+      ],
+      "subjects": [
+        "Maths",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Economics"
+      ],
+      "levels": [
+        "IGCSE",
+        "A-Level"
+      ],
+      "free": true,
+      "quality": "Excellent - highly organized"
+    },
+    "GCE_Guide": {
+      "url": "https://papers.gceguide.com",
+      "content": [
+        "Past papers 1990s-2020s",
+        "Mark schemes",
+        "Examiner reports"
+      ],
+      "all_subjects": true,
+      "free": true,
+      "quality": "Comprehensive archive"
+    },
+    "Save_My_Exams": {
+      "url": "https://www.savemyexams.com",
+      "content": [
+        "Topic questions",
+        "Model answers",
+        "Revision notes",
+        "Past papers"
+      ],
+      "free": "Partial - requires free account",
+      "quality": "Excellent for topic practice"
+    }
+  },
+  "textbooks_and_guides": {
+    "ZNotes": {
+      "url": "https://znotes.org",
+      "content": [
+        "Revision notes",
+        "Summaries",
+        "Flashcards",
+        "Key concepts"
+      ],
+      "free": true,
+      "quality": "Concise and well-organized"
+    },
+    "Cambridge_Press": {
+      "note": "Official textbooks - check library or purchase",
+      "url": "https://www.cambridge.org/education"
+    }
+  },
+  "past_papers_archives": {
+    "Dynamic_Papers": {
+      "url": "https://dynamicpapers.com",
+      "content": [
+        "Past papers",
+        "Mark schemes",
+        "Examiner reports"
+      ],
+      "years": "2000-2024",
+      "free": true
+    },
+    "PapaCambridge": {
+      "url": "https://pastpapers.papacambridge.com",
+      "content": [
+        "Past papers",
+        "Mark schemes"
+      ],
+      "free": true
+    }
+  },
+  "video_tutorials": {
+    "Cognito": "https://cognitoedu.org (free IGCSE videos)",
+    "Science_Shorts": "https://www.youtube.com/c/ScienceShorts",
+    "TLMaths": "https://www.youtube.com/c/TLMaths (A-Level Maths)"
+  }
+}

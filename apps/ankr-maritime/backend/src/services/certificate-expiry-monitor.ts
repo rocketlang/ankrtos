@@ -12,8 +12,11 @@
 
 import { PrismaClient } from '@prisma/client';
 import { differenceInDays, addDays, startOfDay } from 'date-fns';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 interface ExpiryAlert {
   certificateId: string;

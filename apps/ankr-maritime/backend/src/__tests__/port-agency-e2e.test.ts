@@ -22,8 +22,11 @@ import { getPDAGenerationService } from '../services/pda-generation.service.js';
 import { getFDAVarianceService } from '../services/fda-variance.service.js';
 import { getCurrencyService } from '../services/currency.service.js';
 import { getEmailNotificationService } from '../services/email-notification.service.js';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 const pdaService = getPDAGenerationService();
 const fdaService = getFDAVarianceService();
 const currencyService = getCurrencyService();

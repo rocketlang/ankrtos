@@ -7,8 +7,11 @@
 import { PrismaClient } from '@prisma/client';
 import { MaritimeGraph } from '../services/routing/maritime-graph';
 import * as fs from 'fs';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 async function main() {
   console.log('🎨 Mari8XOSRM - Maritime Graph Visualization\n');

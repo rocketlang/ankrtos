@@ -1,411 +1,354 @@
 /**
- * Port Congestion Monitoring Dashboard
- * Real-time congestion status, vessel tracking, and alerts
+ * PORT CONGESTION DASHBOARD
+ * Live real-time port congestion monitoring using AIS data
  */
 
-import React, { useState } from 'react'
-import { useQuery, gql, useMutation } from '@apollo/client'
-import { MapContainer, TileLayer, Circle, Popup } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css'
+import { useState } from 'react';
+import { useQuery, gql } from '@apollo/client';
+import { MapContainer, TileLayer, Circle, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 
-const GET_CONGESTION_STATUS = gql`
-  query GetCongestionStatus($portId: String!) {
-    portCongestionStatus(portId: $portId) {
-      id
-      timestamp
-      vesselCount
-      anchoredCount
-      mooredCount
-      avgWaitTimeHours
-      maxWaitTimeHours
-      congestionLevel
-      capacityPercent
-      trend
-      zone {
-        zoneName
-        zoneType
+const LIVE_PORT_CONGESTION_QUERY = gql`
+  query LivePortCongestionDashboard {
+    livePortCongestionDashboard {
+      overview {
+        totalPorts
+        portsMonitored
+        totalVesselsInPorts
+        criticalCongestion
+        highCongestion
+        averageWaitTime
+      }
+      topCongested {
+        portId
+        portName
+        unlocode
+        country
+        latitude
+        longitude
+        vesselsInArea
+        vesselsAnchored
+        vesselsMoving
+        congestionLevel
+        congestionScore
+        averageSpeed
+        recentArrivals24h
+        recentDepartures24h
+        estimatedWaitTime
+        trend
+        lastUpdated
+      }
+      allPorts {
+        portId
+        portName
+        unlocode
+        country
+        latitude
+        longitude
+        vesselsInArea
+        vesselsAnchored
+        congestionLevel
+        congestionScore
+        estimatedWaitTime
+        trend
       }
     }
   }
-`
-
-const GET_ACTIVE_DETECTIONS = gql`
-  query GetActiveDetections($portId: String!) {
-    activeCongestionDetections(portId: $portId) {
-      id
-      vessel {
-        name
-        imo
-        type
-      }
-      latitude
-      longitude
-      arrivalTime
-      navigationStatus
-      congestionLevel
-      waitTimeHours
-      zone {
-        zoneName
-      }
-    }
-  }
-`
-
-const GET_ALERTS = gql`
-  query GetAlerts($portId: String) {
-    portCongestionAlerts(portId: $portId, status: "ACTIVE") {
-      id
-      alertType
-      severity
-      title
-      message
-      triggeredAt
-      port {
-        name
-      }
-      zone {
-        zoneName
-      }
-    }
-  }
-`
-
-const ACKNOWLEDGE_ALERT = gql`
-  mutation AcknowledgeAlert($alertId: String!, $userId: String!) {
-    acknowledgePortCongestionAlert(alertId: $alertId, userId: $userId) {
-      id
-      status
-    }
-  }
-`
-
-// Major ports for dropdown
-const MAJOR_PORTS = [
-  { id: 'port-sgsin', name: 'Singapore', unlocode: 'SGSIN', center: [1.2897, 103.8501] },
-  { id: 'port-inmun', name: 'Mumbai', unlocode: 'INMUN', center: [18.9220, 72.8347] },
-  { id: 'port-innsa', name: 'Nhava Sheva (JNPT)', unlocode: 'INNSA', center: [18.9480, 72.9508] },
-  { id: 'port-cnsha', name: 'Shanghai', unlocode: 'CNSHA', center: [31.2304, 121.4737] },
-  { id: 'port-nlrtm', name: 'Rotterdam', unlocode: 'NLRTM', center: [51.9244, 4.4777] },
-  { id: 'port-aejea', name: 'Jebel Ali (Dubai)', unlocode: 'AEJEA', center: [25.0118, 55.1136] },
-]
+`;
 
 export default function PortCongestionDashboard() {
-  const [selectedPortId, setSelectedPortId] = useState(MAJOR_PORTS[0].id)
+  const [selectedCongestionLevel, setSelectedCongestionLevel] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const selectedPort = MAJOR_PORTS.find((p) => p.id === selectedPortId)!
-
-  const { data: statusData, loading: statusLoading } = useQuery(GET_CONGESTION_STATUS, {
-    variables: { portId: selectedPortId },
+  const { data, loading, error } = useQuery(LIVE_PORT_CONGESTION_QUERY, {
     pollInterval: 60000, // Refresh every minute
-  })
+  });
 
-  const { data: detectionsData } = useQuery(GET_ACTIVE_DETECTIONS, {
-    variables: { portId: selectedPortId },
-    pollInterval: 30000,
-  })
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 p-8">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">⚓ Live Port Congestion</h1>
+          <div className="text-center py-12 text-gray-600">Loading congestion data...</div>
+        </div>
+      </div>
+    );
+  }
 
-  const { data: alertsData } = useQuery(GET_ALERTS, {
-    variables: { portId: selectedPortId },
-    pollInterval: 30000,
-  })
+  if (error || !data?.livePortCongestionDashboard) {
+    return (
+      <div className="min-h-screen bg-gray-50 p-8">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">⚓ Live Port Congestion</h1>
+          <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+            <p className="text-red-800">Error loading congestion data: {error?.message || 'Unknown error'}</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
-  const [acknowledgeAlert] = useMutation(ACKNOWLEDGE_ALERT)
+  const { overview, topCongested, allPorts } = data.livePortCongestionDashboard;
 
+  // Filter ports
+  const filteredPorts = allPorts.filter((port: any) => {
+    const matchesSearch = port.portName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         port.unlocode.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         port.country.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesLevel = selectedCongestionLevel === 'all' || port.congestionLevel === selectedCongestionLevel;
+    return matchesSearch && matchesLevel;
+  });
+
+  // Congestion level colors
   const getCongestionColor = (level: string) => {
     switch (level) {
-      case 'CRITICAL':
-        return '#EF4444' // red-500
-      case 'HIGH':
-        return '#F59E0B' // amber-500
-      case 'MODERATE':
-        return '#FCD34D' // amber-300
-      default:
-        return '#10B981' // green-500
+      case 'critical': return '#ef4444'; // red
+      case 'high': return '#f97316'; // orange
+      case 'medium': return '#eab308'; // yellow
+      case 'low': return '#22c55e'; // green
+      default: return '#6b7280'; // gray
     }
-  }
+  };
 
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'CRITICAL':
-        return 'bg-red-100 border-red-500 text-red-900'
-      case 'WARNING':
-        return 'bg-amber-100 border-amber-500 text-amber-900'
-      default:
-        return 'bg-blue-100 border-blue-500 text-blue-900'
+  // Trend indicator
+  const getTrendIcon = (trend: string) => {
+    switch (trend) {
+      case 'increasing': return '↑';
+      case 'decreasing': return '↓';
+      case 'stable': return '→';
+      default: return '';
     }
-  }
-
-  const status = statusData?.portCongestionStatus || []
-  const detections = detectionsData?.activeCongestionDetections || []
-  const alerts = alertsData?.portCongestionAlerts || []
-
-  if (statusLoading) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <div className="text-xl">Loading congestion data...</div>
-      </div>
-    )
-  }
+  };
 
   return (
-    <div className="p-6 space-y-6 bg-gray-50 min-h-screen">
-      {/* Header */}
-      <div className="flex items-center justify-between bg-white p-4 rounded-lg shadow">
-        <div>
-          <h1 className="text-3xl font-bold text-gray-900">Port Congestion Monitor</h1>
-          <p className="text-gray-600 mt-1">Real-time vessel tracking and congestion analysis</p>
+    <div className="min-h-screen bg-gray-50 p-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">⚓ Live Port Congestion</h1>
+          <p className="text-gray-600">Real-time port congestion monitoring from AIS data</p>
         </div>
-        <select
-          value={selectedPortId}
-          onChange={(e) => setSelectedPortId(e.target.value)}
-          className="px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        >
-          {MAJOR_PORTS.map((port) => (
-            <option key={port.id} value={port.id}>
-              {port.name} ({port.unlocode})
-            </option>
-          ))}
-        </select>
-      </div>
 
-      {/* Alerts Banner */}
-      {alerts.length > 0 && (
-        <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-lg shadow">
-          <div className="flex items-center">
-            <svg className="h-6 w-6 text-red-400" fill="currentColor" viewBox="0 0 20 20">
-              <path
-                fillRule="evenodd"
-                d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
-                clipRule="evenodd"
+        {/* Overview Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+          <div className="bg-white rounded-lg shadow p-4">
+            <div className="text-sm text-gray-600 mb-1">Total Ports</div>
+            <div className="text-3xl font-bold text-gray-900">{overview.totalPorts}</div>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <div className="text-sm text-gray-600 mb-1">Monitored</div>
+            <div className="text-3xl font-bold text-blue-600">{overview.portsMonitored}</div>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <div className="text-sm text-gray-600 mb-1">Total Vessels</div>
+            <div className="text-3xl font-bold text-gray-900">{overview.totalVesselsInPorts}</div>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <div className="text-sm text-gray-600 mb-1">Critical</div>
+            <div className="text-3xl font-bold text-red-600">{overview.criticalCongestion}</div>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <div className="text-sm text-gray-600 mb-1">High</div>
+            <div className="text-3xl font-bold text-orange-600">{overview.highCongestion}</div>
+          </div>
+          <div className="bg-white rounded-lg shadow p-4">
+            <div className="text-sm text-gray-600 mb-1">Avg Wait</div>
+            <div className="text-3xl font-bold text-gray-900">{overview.averageWaitTime}</div>
+            <div className="text-xs text-gray-500">minutes</div>
+          </div>
+        </div>
+
+        {/* Filters and Search */}
+        <div className="bg-white rounded-lg shadow p-4 mb-6">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex-1">
+              <input
+                type="text"
+                placeholder="Search by port name, UNLOCODE, or country..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
               />
-            </svg>
-            <div className="ml-3">
-              <p className="text-sm font-medium text-red-800">
-                {alerts.length} active congestion alert{alerts.length !== 1 ? 's' : ''}
-              </p>
+            </div>
+            <div className="flex gap-2">
+              {['all', 'critical', 'high', 'medium', 'low'].map((level) => (
+                <button
+                  key={level}
+                  onClick={() => setSelectedCongestionLevel(level)}
+                  className={`px-4 py-2 rounded-lg font-medium transition ${
+                    selectedCongestionLevel === level
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  {level.charAt(0).toUpperCase() + level.slice(1)}
+                </button>
+              ))}
             </div>
           </div>
         </div>
-      )}
 
-      {/* KPI Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        {status.map((zone: any) => (
-          <div key={zone.id} className="bg-white rounded-lg shadow p-6 hover:shadow-lg transition-shadow">
-            <div className="text-sm font-medium text-gray-600">{zone.zone?.zoneName}</div>
-            <div className="mt-3 flex items-baseline">
-              <div className="text-4xl font-bold text-gray-900">{zone.vesselCount}</div>
-              <div className="ml-2 text-sm text-gray-500">vessels</div>
-            </div>
-            <div className="mt-3">
-              <span
-                className="inline-block px-3 py-1 text-xs font-semibold rounded-full"
-                style={{
-                  backgroundColor: getCongestionColor(zone.congestionLevel) + '20',
-                  color: getCongestionColor(zone.congestionLevel),
-                }}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Port Congestion Map */}
+          <div className="bg-white rounded-lg shadow p-6">
+            <h2 className="text-2xl font-bold mb-4">Congestion Map</h2>
+            <div style={{ height: '600px' }}>
+              <MapContainer
+                center={[20, 0]}
+                zoom={2}
+                style={{ height: '100%', width: '100%', borderRadius: '8px' }}
               >
-                {zone.congestionLevel}
-              </span>
-            </div>
-            <div className="mt-4 space-y-1 text-sm text-gray-600">
-              <div className="flex justify-between">
-                <span>Avg wait:</span>
-                <span className="font-medium">{zone.avgWaitTimeHours?.toFixed(1) || '0'} hrs</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Capacity:</span>
-                <span className="font-medium">{zone.capacityPercent?.toFixed(0) || '0'}%</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Trend:</span>
-                <span className="font-medium capitalize">{zone.trend?.toLowerCase()}</span>
-              </div>
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+
+                {/* Port markers with congestion circles */}
+                {filteredPorts.map((port: any) => (
+                  <Circle
+                    key={port.portId}
+                    center={[port.latitude, port.longitude]}
+                    radius={port.congestionScore * 500} // Scale based on congestion score
+                    pathOptions={{
+                      color: getCongestionColor(port.congestionLevel),
+                      fillColor: getCongestionColor(port.congestionLevel),
+                      fillOpacity: 0.4,
+                      weight: 2,
+                    }}
+                  >
+                    <Popup>
+                      <div className="p-2">
+                        <div className="font-bold text-lg">{port.portName}</div>
+                        <div className="text-sm text-gray-600 mb-2">
+                          {port.unlocode} • {port.country}
+                        </div>
+                        <div className="space-y-1 text-sm">
+                          <div>Vessels in Area: <strong>{port.vesselsInArea}</strong></div>
+                          <div>Anchored: <strong>{port.vesselsAnchored}</strong></div>
+                          <div>
+                            Congestion:{' '}
+                            <span
+                              className="font-bold"
+                              style={{ color: getCongestionColor(port.congestionLevel) }}
+                            >
+                              {port.congestionLevel.toUpperCase()} ({port.congestionScore})
+                            </span>
+                          </div>
+                          {port.estimatedWaitTime && (
+                            <div>Wait Time: <strong>{port.estimatedWaitTime} min</strong></div>
+                          )}
+                          <div>Trend: <strong>{getTrendIcon(port.trend)} {port.trend}</strong></div>
+                        </div>
+                      </div>
+                    </Popup>
+                  </Circle>
+                ))}
+              </MapContainer>
             </div>
           </div>
-        ))}
 
-        {status.length === 0 && (
-          <div className="col-span-4 bg-white rounded-lg shadow p-8 text-center text-gray-500">
-            No congestion data available for this port yet.
+          {/* Port Congestion Table */}
+          <div className="bg-white rounded-lg shadow p-6">
+            <h2 className="text-2xl font-bold mb-4">Port Details</h2>
+            <div className="overflow-y-auto" style={{ maxHeight: '600px' }}>
+              {filteredPorts.length === 0 ? (
+                <div className="text-center py-8 text-gray-600">No ports found matching your filters</div>
+              ) : (
+                <div className="space-y-3">
+                  {filteredPorts.map((port: any) => (
+                    <div
+                      key={port.portId}
+                      className="border rounded-lg p-4 hover:shadow-md transition"
+                      style={{ borderLeftWidth: '4px', borderLeftColor: getCongestionColor(port.congestionLevel) }}
+                    >
+                      <div className="flex justify-between items-start mb-2">
+                        <div>
+                          <div className="font-bold text-lg">{port.portName}</div>
+                          <div className="text-sm text-gray-600">
+                            {port.unlocode} • {port.country}
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <div
+                            className="inline-block px-3 py-1 rounded-full text-sm font-medium"
+                            style={{
+                              backgroundColor: getCongestionColor(port.congestionLevel) + '20',
+                              color: getCongestionColor(port.congestionLevel),
+                            }}
+                          >
+                            {port.congestionLevel.toUpperCase()}
+                          </div>
+                          <div className="text-sm text-gray-500 mt-1">
+                            Score: {port.congestionScore}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-3 gap-3 text-sm">
+                        <div>
+                          <div className="text-gray-600">Vessels</div>
+                          <div className="font-semibold">{port.vesselsInArea}</div>
+                        </div>
+                        <div>
+                          <div className="text-gray-600">Anchored</div>
+                          <div className="font-semibold">{port.vesselsAnchored}</div>
+                        </div>
+                        <div>
+                          <div className="text-gray-600">Wait Time</div>
+                          <div className="font-semibold">
+                            {port.estimatedWaitTime ? `${port.estimatedWaitTime}m` : 'N/A'}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="mt-2 flex items-center justify-between text-sm">
+                        <div className="text-gray-600">
+                          Trend: <span className="font-medium">{getTrendIcon(port.trend)} {port.trend}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Top Congested Ports Section */}
+        {topCongested && topCongested.length > 0 && (
+          <div className="mt-6 bg-white rounded-lg shadow p-6">
+            <h2 className="text-2xl font-bold mb-4">🔥 Top Congested Ports</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {topCongested.slice(0, 6).map((port: any) => (
+                <div
+                  key={port.portId}
+                  className="border-2 rounded-lg p-4"
+                  style={{ borderColor: getCongestionColor(port.congestionLevel) }}
+                >
+                  <div className="font-bold text-lg mb-2">{port.portName}</div>
+                  <div className="text-sm text-gray-600 mb-3">{port.unlocode}</div>
+                  <div className="grid grid-cols-2 gap-2 text-sm">
+                    <div>Vessels: <strong>{port.vesselsInArea}</strong></div>
+                    <div>Anchored: <strong>{port.vesselsAnchored}</strong></div>
+                    <div>Moving: <strong>{port.vesselsMoving}</strong></div>
+                    <div>Avg Speed: <strong>{port.averageSpeed.toFixed(1)} kn</strong></div>
+                    <div>Arrivals 24h: <strong>{port.recentArrivals24h}</strong></div>
+                    <div>Departures 24h: <strong>{port.recentDepartures24h}</strong></div>
+                  </div>
+                  {port.estimatedWaitTime && (
+                    <div className="mt-3 pt-3 border-t border-gray-200 text-center">
+                      <div className="text-sm text-gray-600">Estimated Wait Time</div>
+                      <div className="text-2xl font-bold text-orange-600">{port.estimatedWaitTime}</div>
+                      <div className="text-xs text-gray-500">minutes</div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>
-
-      {/* Live Map */}
-      <div className="bg-white rounded-lg shadow p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Live Vessel Positions</h2>
-        <div style={{ height: '500px' }} className="rounded-lg overflow-hidden">
-          <MapContainer
-            center={selectedPort.center as [number, number]}
-            zoom={11}
-            style={{ height: '100%', width: '100%' }}
-          >
-            {/* Base map layer */}
-            <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            />
-
-            {/* OpenSeaMap nautical overlay - anchorages, navigation marks, depth contours */}
-            <TileLayer
-              url="https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="http://www.openseamap.org">OpenSeaMap</a>'
-            />
-
-            {/* Plot active detections */}
-            {detections.map((detection: any) => (
-              <Circle
-                key={detection.id}
-                center={[detection.latitude, detection.longitude]}
-                radius={500}
-                pathOptions={{
-                  color: getCongestionColor(detection.congestionLevel),
-                  fillColor: getCongestionColor(detection.congestionLevel),
-                  fillOpacity: 0.5,
-                }}
-              >
-                <Popup>
-                  <div className="p-2">
-                    <strong className="text-lg">{detection.vessel.name}</strong>
-                    <br />
-                    <span className="text-gray-600">IMO: {detection.vessel.imo}</span>
-                    <br />
-                    <span className="text-gray-600">Type: {detection.vessel.type}</span>
-                    <br />
-                    <span className="text-gray-600">Zone: {detection.zone?.zoneName}</span>
-                    <br />
-                    <span className="text-gray-600">Status: {detection.navigationStatus}</span>
-                    <br />
-                    <span className="text-gray-600">
-                      Arrived: {new Date(detection.arrivalTime).toLocaleString()}
-                    </span>
-                  </div>
-                </Popup>
-              </Circle>
-            ))}
-          </MapContainer>
-        </div>
-      </div>
-
-      {/* Waiting Vessels Table */}
-      <div className="bg-white rounded-lg shadow overflow-hidden">
-        <div className="px-6 py-4 border-b border-gray-200">
-          <h2 className="text-xl font-bold text-gray-900">Vessels Currently Waiting</h2>
-        </div>
-        <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Vessel Name
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  IMO
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Type
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Zone
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Arrival
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Wait Time
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Status
-                </th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {detections.map((detection: any) => {
-                const waitHours =
-                  (Date.now() - new Date(detection.arrivalTime).getTime()) / (1000 * 60 * 60)
-                return (
-                  <tr key={detection.id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      {detection.vessel.name}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {detection.vessel.imo}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {detection.vessel.type}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {detection.zone?.zoneName || 'N/A'}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {new Date(detection.arrivalTime).toLocaleString()}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {waitHours.toFixed(1)} hrs
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span
-                        className="px-2 py-1 text-xs font-semibold rounded-full"
-                        style={{
-                          backgroundColor: getCongestionColor(detection.congestionLevel) + '20',
-                          color: getCongestionColor(detection.congestionLevel),
-                        }}
-                      >
-                        {detection.navigationStatus}
-                      </span>
-                    </td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
-
-          {detections.length === 0 && (
-            <div className="text-center py-12 text-gray-500">
-              No vessels currently waiting at this port.
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Active Alerts */}
-      {alerts.length > 0 && (
-        <div className="bg-white rounded-lg shadow overflow-hidden">
-          <div className="px-6 py-4 border-b border-gray-200">
-            <h2 className="text-xl font-bold text-gray-900">Active Alerts</h2>
-          </div>
-          <div className="p-6 space-y-4">
-            {alerts.map((alert: any) => (
-              <div
-                key={alert.id}
-                className={`border-l-4 p-4 rounded ${getSeverityColor(alert.severity)}`}
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex-1">
-                    <div className="font-bold text-lg">{alert.title}</div>
-                    <div className="text-sm mt-1">{alert.message}</div>
-                    <div className="text-xs mt-2 opacity-75">
-                      {new Date(alert.triggeredAt).toLocaleString()}
-                    </div>
-                  </div>
-                  <button
-                    onClick={() =>
-                      acknowledgeAlert({
-                        variables: { alertId: alert.id, userId: 'current-user' },
-                        refetchQueries: ['GetAlerts'],
-                      })
-                    }
-                    className="ml-4 px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 shadow-sm"
-                  >
-                    Acknowledge
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
-  )
+  );
 }

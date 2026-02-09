@@ -8,8 +8,11 @@
 
 import { PrismaClient } from '@prisma/client';
 import { messageNormalizerService, NormalizedMessage } from './message-normalizer.service.js';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 export interface TeamsConfig {
   appId: string; // Microsoft App ID

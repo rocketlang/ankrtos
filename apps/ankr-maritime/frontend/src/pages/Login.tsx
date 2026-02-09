@@ -29,7 +29,7 @@ export function Login() {
     onCompleted: (data) => {
       console.log('Login successful:', data);
       login(data.login.user, data.login.token);
-      navigate('/');
+      navigate('/dashboard');
     },
     onError: (error) => {
       console.error('Login error:', error);
@@ -87,9 +87,35 @@ export function Login() {
           </button>
         </form>
 
-        <p className="text-maritime-500 text-xs text-center mt-6">
-          Default: admin@ankr.in / admin123
-        </p>
+        <div className="mt-6 space-y-2">
+          <div className="text-xs text-center text-maritime-400">
+            <p className="font-semibold mb-2">Quick Login:</p>
+            <div className="space-y-1">
+              <button
+                type="button"
+                onClick={() => {
+                  setEmail('admin@ankr.in');
+                  setPassword('admin123');
+                }}
+                className="block w-full text-left px-3 py-1.5 bg-maritime-800/50 hover:bg-maritime-700/50 rounded border border-maritime-600 transition-colors"
+              >
+                <span className="text-blue-400">👑 Admin</span>
+                <span className="text-maritime-500 ml-2">- Full Access</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setEmail('demo@mari8x.com');
+                  setPassword('demo123');
+                }}
+                className="block w-full text-left px-3 py-1.5 bg-maritime-800/50 hover:bg-maritime-700/50 rounded border border-maritime-600 transition-colors"
+              >
+                <span className="text-green-400">👁️ Demo</span>
+                <span className="text-maritime-500 ml-2">- Limited Access</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

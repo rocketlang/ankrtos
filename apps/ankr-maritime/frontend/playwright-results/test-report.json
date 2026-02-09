@@ -1,0 +1,452 @@
+[
+  {
+    "path": "/",
+    "name": "Landing Page",
+    "status": "WARN",
+    "loadTime": 7713,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 4,
+    "error": "GraphQL errors in console"
+  },
+  {
+    "path": "/login",
+    "name": "Login",
+    "status": "PASS",
+    "loadTime": 4922,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/home",
+    "name": "Home/Landing",
+    "status": "WARN",
+    "loadTime": 7230,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 7,
+    "error": "GraphQL errors in console"
+  },
+  {
+    "path": "/mari8x",
+    "name": "Mari8x Landing",
+    "status": "PASS",
+    "loadTime": 7165,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 8,
+    "error": null
+  },
+  {
+    "path": "/mari8x-technical",
+    "name": "Technical Docs",
+    "status": "PASS",
+    "loadTime": 6245,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 2,
+    "error": null
+  },
+  {
+    "path": "/technical",
+    "name": "Technical (alias)",
+    "status": "PASS",
+    "loadTime": 6264,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 2,
+    "error": null
+  },
+  {
+    "path": "/dashboard",
+    "name": "Dashboard",
+    "status": "PASS",
+    "loadTime": 5123,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/vessels",
+    "name": "Vessels",
+    "status": "PASS",
+    "loadTime": 5087,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/vessel-positions",
+    "name": "Vessel Positions",
+    "status": "PASS",
+    "loadTime": 4983,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/vessel-history",
+    "name": "Vessel History",
+    "status": "PASS",
+    "loadTime": 5097,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/vessel-certificates",
+    "name": "Vessel Certificates",
+    "status": "PASS",
+    "loadTime": 5159,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/vessel-inspections",
+    "name": "Vessel Inspections",
+    "status": "PASS",
+    "loadTime": 5000,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/ports",
+    "name": "Ports",
+    "status": "PASS",
+    "loadTime": 5140,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/port-map",
+    "name": "Port Map",
+    "status": "PASS",
+    "loadTime": 5061,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/route-calculator",
+    "name": "Route Calculator",
+    "status": "PASS",
+    "loadTime": 5119,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/fleet-routes",
+    "name": "Fleet Routes",
+    "status": "PASS",
+    "loadTime": 4984,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/port-intelligence",
+    "name": "Port Intelligence",
+    "status": "PASS",
+    "loadTime": 5024,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/port-congestion",
+    "name": "Port Congestion",
+    "status": "PASS",
+    "loadTime": 5031,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/port-restrictions",
+    "name": "Port Restrictions",
+    "status": "PASS",
+    "loadTime": 5089,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/port-tariffs",
+    "name": "Port Tariffs",
+    "status": "PASS",
+    "loadTime": 5059,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/eca-zones",
+    "name": "ECA Zones",
+    "status": "PASS",
+    "loadTime": 5099,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/high-risk-areas",
+    "name": "High Risk Areas",
+    "status": "PASS",
+    "loadTime": 5019,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/geofencing",
+    "name": "Geofencing",
+    "status": "PASS",
+    "loadTime": 4932,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/world-port-index",
+    "name": "World Port Index",
+    "status": "PASS",
+    "loadTime": 5353,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/chartering",
+    "name": "Chartering",
+    "status": "PASS",
+    "loadTime": 5007,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/chartering-desk",
+    "name": "Chartering Desk",
+    "status": "PASS",
+    "loadTime": 5170,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/time-charters",
+    "name": "Time Charters",
+    "status": "PASS",
+    "loadTime": 4985,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/coa",
+    "name": "COA Management",
+    "status": "PASS",
+    "loadTime": 5030,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/cargo-enquiries",
+    "name": "Cargo Enquiries",
+    "status": "PASS",
+    "loadTime": 5006,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/cargo-compatibility",
+    "name": "Cargo Compatibility",
+    "status": "PASS",
+    "loadTime": 4930,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/open-tonnage",
+    "name": "Open Tonnage",
+    "status": "PASS",
+    "loadTime": 5135,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/voyage-estimate",
+    "name": "Voyage Estimate",
+    "status": "PASS",
+    "loadTime": 5058,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/ve-history",
+    "name": "VE History",
+    "status": "PASS",
+    "loadTime": 5219,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/voyages",
+    "name": "Voyages",
+    "status": "PASS",
+    "loadTime": 5221,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/da-desk",
+    "name": "DA Desk",
+    "status": "PASS",
+    "loadTime": 5279,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/port-documents",
+    "name": "Port Documents",
+    "status": "PASS",
+    "loadTime": 4968,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/laytime",
+    "name": "Laytime",
+    "status": "PASS",
+    "loadTime": 4961,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/noon-reports",
+    "name": "Noon Reports",
+    "status": "PASS",
+    "loadTime": 5118,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/noon-reports-enhanced",
+    "name": "Noon Reports Enhanced",
+    "status": "PASS",
+    "loadTime": 5264,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/critical-path",
+    "name": "Critical Path",
+    "status": "PASS",
+    "loadTime": 5079,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/weather-warranty",
+    "name": "Weather Warranty",
+    "status": "PASS",
+    "loadTime": 5059,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/sof-manager",
+    "name": "SOF Manager",
+    "status": "PASS",
+    "loadTime": 4966,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/delay-alerts",
+    "name": "Delay Alerts",
+    "status": "PASS",
+    "loadTime": 5099,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/bills-of-lading",
+    "name": "Bills of Lading",
+    "status": "PASS",
+    "loadTime": 4873,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  },
+  {
+    "path": "/ebl-chain",
+    "name": "eBL Chain",
+    "status": "PASS",
+    "loadTime": 5056,
+    "httpStatus": 200,
+    "hasContent": true,
+    "consoleErrors": 0,
+    "error": null
+  }
+]

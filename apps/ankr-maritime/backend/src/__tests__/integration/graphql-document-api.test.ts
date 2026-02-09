@@ -19,8 +19,11 @@ import { PrismaClient } from '@prisma/client';
 import { buildSchema } from '../../schema';
 import { createContext } from '../../schema/context';
 import { GraphQLSchema, graphql } from 'graphql';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 let schema: GraphQLSchema;
 let testOrgId: string;
 let testUserId: string;

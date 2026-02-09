@@ -12,8 +12,11 @@ import type { FastifyInstance } from 'fastify';
 import { Queue } from 'bullmq';
 import { PrismaClient } from '@prisma/client';
 import { getQueueStats } from '../../jobs/alert-monitoring.cron';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 const redisConnection = {
   host: process.env.REDIS_HOST || 'localhost',

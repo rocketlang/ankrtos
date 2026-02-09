@@ -24,7 +24,9 @@
     "scrape:priority": "tsx scripts/bulk-scrape-ports.ts priority",
     "scrape:dry-run": "tsx scripts/bulk-scrape-ports.ts dry-run",
     "enrich:gisis": "tsx scripts/bulk-enrich-gisis.ts",
-    "enrich:gisis:100": "tsx scripts/bulk-enrich-gisis.ts 100"
+    "enrich:gisis:100": "tsx scripts/bulk-enrich-gisis.ts 100",
+    "db:migrate-connections": "tsx scripts/migrate-to-db-manager.ts",
+    "db:monitor": "tsx scripts/db-monitor.ts"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

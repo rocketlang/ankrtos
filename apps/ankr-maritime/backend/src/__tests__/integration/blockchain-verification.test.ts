@@ -13,8 +13,11 @@
 import { test, expect, describe, beforeAll, afterAll, beforeEach } from 'vitest';
 import { PrismaClient } from '@prisma/client';
 import crypto from 'crypto';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 let testOrgId: string;
 let testUserId: string;
 let testDocumentId: string;

@@ -15,8 +15,11 @@
 import { PrismaClient } from '@prisma/client';
 import type { VesselArrival, Vessel, Port, CrewMember } from '@prisma/client';
 import { AlertType, AlertPriority, type TriggerCondition } from './alert-trigger.service';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 export enum AlertChannel {
   EMAIL = 'email',

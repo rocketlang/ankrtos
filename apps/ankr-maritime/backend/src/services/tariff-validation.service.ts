@@ -11,6 +11,8 @@
 
 import { PrismaClient } from '@prisma/client';
 import crypto from 'crypto';
+import { getPrisma } from '../lib/db.js';
+
 
 export interface ValidationResult {
   isValid: boolean;

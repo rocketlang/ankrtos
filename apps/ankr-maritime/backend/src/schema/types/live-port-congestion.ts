@@ -1,5 +1,6 @@
 import { builder } from '../builder.js';
 import { prisma } from '../context.js';
+import { portCongestionService } from '../../services/port-congestion-timescale.service.js';
 
 // Live congestion metrics calculated from AIS data
 const LivePortCongestionMetricsRef = builder.objectRef<{
@@ -123,132 +124,18 @@ function estimateWaitTime(vesselsAnchored: number, portThroughput: number = 10):
   return Math.round(vesselsAnchored * hoursPerVessel * 60);
 }
 
-// Live congestion dashboard query (calculates from AIS data in real-time)
+// Live congestion dashboard query (TimescaleDB optimized)
 builder.queryField('livePortCongestionDashboard', (t) =>
   t.field({
     type: LiveCongestionDashboardRef,
     resolve: async () => {
       try {
-        // Get major ports with recent AIS activity
-        const majorPorts = await prisma.$queryRaw<Array<{
-          id: string;
-          name: string;
-          unlocode: string;
-          country: string;
-          latitude: number;
-          longitude: number;
-          position_count: bigint;
-        }>>`
-          SELECT
-            p.id,
-            p.name,
-            p.unlocode,
-            p.country,
-            p.latitude,
-            p.longitude,
-            COUNT(vp.id) as position_count
-          FROM ports p
-          LEFT JOIN vessel_positions vp ON (
-            ST_DWithin(
-              ST_MakePoint(p.longitude, p.latitude)::geography,
-              ST_MakePoint(vp.longitude, vp.latitude)::geography,
-              20000
-            )
-            AND vp.timestamp > NOW() - INTERVAL '24 hours'
-          )
-          WHERE p.latitude IS NOT NULL
-            AND p.longitude IS NOT NULL
-          GROUP BY p.id, p.name, p.unlocode, p.country, p.latitude, p.longitude
-          HAVING COUNT(vp.id) > 0
-          ORDER BY position_count DESC
-          LIMIT 100
-        `;
+        // Use TimescaleDB-optimized service
+        const portMetrics = await portCongestionService.getPortCongestionMetrics(100);
+        const overview = await portCongestionService.getDashboardOverview(portMetrics);
 
-        const portMetrics: Array<any> = [];
-
-        // Calculate congestion for each port
-        for (const port of majorPorts) {
-          const vesselStats = await prisma.$queryRaw<Array<{
-            total_vessels: bigint;
-            anchored: bigint;
-            moving: bigint;
-            avg_speed: number;
-          }>>`
-            WITH latest_positions AS (
-              SELECT DISTINCT ON ("vesselId")
-                "vesselId",
-                latitude,
-                longitude,
-                speed,
-                "navigationStatus",
-                timestamp
-              FROM vessel_positions
-              WHERE ST_DWithin(
-                ST_MakePoint(${port.longitude}, ${port.latitude})::geography,
-                ST_MakePoint(longitude, latitude)::geography,
-                20000
-              )
-              AND timestamp > NOW() - INTERVAL '2 hours'
-              ORDER BY "vesselId", timestamp DESC
-            )
-            SELECT
-              COUNT(*)::bigint as total_vessels,
-              COUNT(*) FILTER (WHERE speed < 0.5)::bigint as anchored,
-              COUNT(*) FILTER (WHERE speed >= 0.5)::bigint as moving,
-              AVG(speed) as avg_speed
-            FROM latest_positions
-          `;
-
-          const stats = vesselStats[0];
-          const vesselsInArea = Number(stats?.total_vessels || 0);
-          const vesselsAnchored = Number(stats?.anchored || 0);
-          const vesselsMoving = Number(stats?.moving || 0);
-
-          const congestionScore = calculateCongestionScore(vesselsInArea, vesselsAnchored);
-          const congestionLevel = getCongestionLevel(congestionScore);
-          const estimatedWait = estimateWaitTime(vesselsAnchored);
-
-          const trend = 'stable'; // Simplified for now
-
-          portMetrics.push({
-            portId: port.id,
-            portName: port.name,
-            unlocode: port.unlocode,
-            country: port.country,
-            latitude: port.latitude,
-            longitude: port.longitude,
-            vesselsInArea,
-            vesselsAnchored,
-            vesselsMoving,
-            congestionLevel,
-            congestionScore,
-            averageSpeed: Number(stats?.avg_speed || 0),
-            recentArrivals24h: 0,
-            recentDepartures24h: 0,
-            estimatedWaitTime: estimatedWait,
-            trend,
-            lastUpdated: new Date().toISOString(),
-          });
-        }
-
-        // Sort by congestion score
-        portMetrics.sort((a, b) => b.congestionScore - a.congestionScore);
-
-        // Build dashboard
         return {
-          overview: {
-            totalPorts: majorPorts.length,
-            portsMonitored: portMetrics.length,
-            totalVesselsInPorts: portMetrics.reduce((sum, p) => sum + p.vesselsInArea, 0),
-            criticalCongestion: portMetrics.filter(p => p.congestionLevel === 'critical').length,
-            highCongestion: portMetrics.filter(p => p.congestionLevel === 'high').length,
-            averageWaitTime: Math.round(
-              portMetrics
-                .filter(p => p.estimatedWaitTime !== null)
-                .reduce((sum, p) => sum + (p.estimatedWaitTime || 0), 0) /
-              (portMetrics.filter(p => p.estimatedWaitTime !== null).length || 1)
-            ),
-          },
+          overview,
           topCongested: portMetrics.slice(0, 10),
           recentlyCleared: portMetrics
             .filter(p => p.trend === 'decreasing' && p.congestionScore < 40)
@@ -273,6 +160,45 @@ builder.queryField('livePortCongestionDashboard', (t) =>
           lastUpdated: new Date().toISOString(),
         };
       }
+    },
+  }),
+);
+
+// Query for port congestion historical trend
+builder.queryField('portCongestionHistory', (t) =>
+  t.field({
+    type: [builder.objectRef<{
+      hour: Date;
+      vesselCount: number;
+      anchoredCount: number;
+    }>('PortCongestionHistoryPoint').implement({
+      fields: (t) => ({
+        hour: t.expose('hour', { type: 'DateTime' }),
+        vesselCount: t.exposeInt('vesselCount'),
+        anchoredCount: t.exposeInt('anchoredCount'),
+      }),
+    })],
+    args: {
+      latitude: t.arg.float({ required: true }),
+      longitude: t.arg.float({ required: true }),
+      hours: t.arg.int({ defaultValue: 168 }), // 7 days default
+    },
+    resolve: async (_root, args) => {
+      return portCongestionService.getPortCongestionHistory(
+        args.latitude,
+        args.longitude,
+        args.hours
+      );
+    },
+  }),
+);
+
+// Query for TimescaleDB performance stats
+builder.queryField('timescaleDBStats', (t) =>
+  t.field({
+    type: 'JSON',
+    resolve: async () => {
+      return portCongestionService.getTimescaleDBStats();
     },
   }),
 );

@@ -1,9 +1,12 @@
 // cii-alert-service.ts — CII Rating Downgrade Alert System
 
 import { PrismaClient } from '@prisma/client';
+import { getPrisma } from '../lib/db.js';
+
 // import { sendEmail } from '@ankr/wire'; // TODO: Fix package import
 
-const prisma = new PrismaClient();
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 interface CIIRatingChange {
   vesselId: string;

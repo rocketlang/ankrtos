@@ -7,8 +7,11 @@
 
 import { PrismaClient } from '@prisma/client';
 import { AISRouteExtractor } from '../services/routing/ais-route-extractor';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 // Ferries with good data (from previous analysis)
 const GOOD_VESSELS = [

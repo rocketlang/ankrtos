@@ -42,8 +42,11 @@ function migrateUserRoles(user: AuthUser): AuthUser {
       technical: 'technical',
       finance: 'finance',
       compliance: 'compliance',
+      viewer: 'viewer', // Demo/limited access user
+      operator: 'operations', // Legacy operator role
+      manager: 'commercial', // Legacy manager role
     };
-    user.roles = [roleMap[user.role] || 'operations'];
+    user.roles = [roleMap[user.role] || 'viewer'];
   }
   return user;
 }

@@ -12,8 +12,11 @@
  */
 
 import { PrismaClient } from '@prisma/client';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 async function main() {
   console.log('🚧 AIS Build Mode Retention - Safe Implementation');

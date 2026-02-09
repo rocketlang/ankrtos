@@ -14,8 +14,11 @@ import { emailSenderService } from '../email-organizer/email-sender.service.js';
 import { whatsappService } from './whatsapp.service.js';
 import { slackService } from './slack.service.js';
 import { teamsService } from './teams.service.js';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 export interface ChannelRouterConfig {
   autoRespond: boolean; // Auto-respond to messages

@@ -1,0 +1,27 @@
+{
+  "cookies": [
+    {
+      "name": "cf_clearance",
+      "value": "87EQxGsAqZEM2ZTIzAGc5MV.9Tgck9Ocax7CZ3SLKlM-1770628460-1.2.1.1-VkOIfjoyjt9H.WWjEIJcqa1AU8ds5CxEApDY_SjWfIgRUBWZkUoLZS3b5__ZOufMd4m94xhi0ETP4BvSraaWoeVWtF2cmeDGegRh3s9htm6ANVN2XUJoq1GVBoMJvNsPTcU7OVGo8jtrD4E_80aTusMB_Ezm3Z9mGOqK_x5vauYejhTwtq0btsando470QoVHkb2yIzwAn5BHx5a5gJWgRgODZrMC.EJz6m6DpFAwpg",
+      "domain": ".mari8x.com",
+      "path": "/",
+      "expires": 1802164460.578371,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None",
+      "partitionKey": "https://mari8x.com",
+      "_crHasCrossSiteAncestor": false
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://mari8x.com",
+      "localStorage": [
+        {
+          "name": "mari8x-language",
+          "value": "en"
+        }
+      ]
+    }
+  ]
+}

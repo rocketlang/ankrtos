@@ -17,8 +17,11 @@
 
 import { PrismaClient } from '@prisma/client';
 import crypto from 'crypto';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 // DCSA eBL 3.0 Types
 interface DCSAeBL {

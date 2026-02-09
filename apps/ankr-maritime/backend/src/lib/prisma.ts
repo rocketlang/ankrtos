@@ -1,24 +1,16 @@
 /**
- * Prisma Client Instance
- * Singleton pattern for database connection
+ * Prisma Client Singleton
+ *
+ * DEPRECATED: This file is kept for backward compatibility.
+ * New code should use getPrisma() from './db.js'
+ *
+ * Migration in progress to production-grade connection manager.
  */
 
-import { PrismaClient } from '@prisma/client';
+import { getPrisma } from './db.js';
 
-// Singleton instance
-let prisma: PrismaClient;
+// Export as promise to maintain compatibility
+export const prisma = await getPrisma();
 
-if (process.env.NODE_ENV === 'production') {
-  prisma = new PrismaClient();
-} else {
-  // In development, use a global variable to prevent multiple instances
-  // during hot-reloading
-  if (!(global as any).prisma) {
-    (global as any).prisma = new PrismaClient({
-      log: ['error', 'warn'],
-    });
-  }
-  prisma = (global as any).prisma;
-}
-
-export { prisma };
+// Re-export getPrisma for new code
+export { getPrisma };

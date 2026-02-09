@@ -194,6 +194,18 @@ builder.queryField('emailFolderTree', (t) =>
   })
 );
 
+// Alias for backward compatibility with frontend
+builder.queryField('getFolderTree', (t) =>
+  t.field({
+    type: [EmailFolderType],
+    description: 'Alias for emailFolderTree - Get folder tree (hierarchical structure)',
+    resolve: async (_root, _args, ctx: Context) => {
+      if (!ctx.userId) throw new Error('Not authenticated');
+      return await emailFolderService.getFolderTree(ctx.userId);
+    },
+  })
+);
+
 builder.queryField('emailFolder', (t) =>
   t.prismaField({
     type: 'EmailFolder',

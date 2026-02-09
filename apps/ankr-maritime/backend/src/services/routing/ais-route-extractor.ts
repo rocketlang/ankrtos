@@ -14,8 +14,11 @@
 
 import { PrismaClient } from '@prisma/client';
 import { logger } from '../../utils/logger.js';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 export interface RouteExtractionOptions {
   minPositions: number;        // Minimum positions for valid route (e.g., 50)

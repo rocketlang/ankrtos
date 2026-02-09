@@ -10,10 +10,12 @@
  * - Trend analysis vs previous snapshot
  */
 
-import { PrismaClient } from '@prisma/client'
-import { alertEngine } from '../services/port-congestion-alert-engine.js'
+import { getPrisma } from '../lib/db.js';
+import { PrismaClient } from '@prisma/client';
+import { alertEngine } from '../services/port-congestion-alert-engine.js';
 
-const prisma = new PrismaClient()
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 export class PortCongestionSnapshotGenerator {
   async generateSnapshots(): Promise<void> {

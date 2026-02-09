@@ -11,6 +11,8 @@
  */
 
 import { PrismaClient } from '@prisma/client';
+import { getPrisma } from '../lib/db.js';
+
 
 export interface VarianceAnalysis {
   category: string;

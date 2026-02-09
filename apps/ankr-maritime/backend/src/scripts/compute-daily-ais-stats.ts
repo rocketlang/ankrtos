@@ -9,89 +9,97 @@
 import { PrismaClient } from '@prisma/client';
 import { writeFileSync } from 'fs';
 import { join } from 'path';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Create Prisma client with connection pooling limits
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 async function computeDailyStats() {
   console.log('🔄 Computing daily AIS stats...');
   const startTime = Date.now();
 
   try {
-    // 1. Approximate total positions (instant)
-    const [totalPositionsQuery, totalVesselsQuery] = await Promise.all([
-      prisma.$queryRaw<Array<{ count: bigint }>>`
-        SELECT reltuples::bigint as count
-        FROM pg_class
-        WHERE relname = 'vessel_positions'
-      `,
-      prisma.$queryRaw<Array<{ count: number }>>`
-        SELECT COUNT(*)::int as count
-        FROM vessels
-      `,
-    ]);
-
+    // 1. Approximate total positions (use actual count for last 90 days)
+    console.log('  📊 Step 1/5: Counting positions...');
+    const totalPositionsQuery = await prisma.$queryRaw<Array<{ count: bigint }>>`
+      SELECT COUNT(*)::bigint as count
+      FROM vessel_positions
+      WHERE timestamp >= NOW() - INTERVAL '90 days'
+    `;
     const totalPositions = Number(totalPositionsQuery[0]?.count || 0);
-    const uniqueVessels = totalVesselsQuery[0]?.count || 0;
+    console.log(`     ✓ Found ${totalPositions.toLocaleString()} positions (last 90 days)`);
 
-    // 2. Time coverage
+    console.log('  📊 Step 2/5: Counting vessels...');
+    const totalVesselsQuery = await prisma.$queryRaw<Array<{ count: number }>>`
+      SELECT COUNT(*)::int as count
+      FROM vessels
+    `;
+    const uniqueVessels = totalVesselsQuery[0]?.count || 0;
+    console.log(`     ✓ Found ${uniqueVessels.toLocaleString()} vessels`);
+
+    // 2. Time coverage (optimized with index)
+    console.log('  📊 Step 3/5: Analyzing time range...');
     const dateRange = await prisma.$queryRaw<Array<{ earliest: Date; latest: Date }>>`
       SELECT
-        (SELECT timestamp FROM vessel_positions ORDER BY timestamp ASC LIMIT 1) as earliest,
-        (SELECT timestamp FROM vessel_positions ORDER BY timestamp DESC LIMIT 1) as latest
+        MIN(timestamp) as earliest,
+        MAX(timestamp) as latest
+      FROM vessel_positions
+      WHERE timestamp >= NOW() - INTERVAL '90 days'
     `;
 
     const earliest = dateRange[0]?.earliest || new Date();
     const latest = dateRange[0]?.latest || new Date();
     const durationMs = new Date(latest).getTime() - new Date(earliest).getTime();
     const durationDays = Math.floor(durationMs / (1000 * 60 * 60 * 24));
+    console.log(`     ✓ Data spans ${durationDays} days`);
 
-    // 3. Current stats from last 24 hours
-    const [shipsMoving, shipsOnEquator, shipsAtSuez] = await Promise.all([
-      prisma.$queryRaw<Array<{ count: number }>>`
-        SELECT COUNT(DISTINCT "vesselId")::int as count
-        FROM (
-          SELECT DISTINCT ON ("vesselId") "vesselId", speed
-          FROM vessel_positions
-          WHERE speed IS NOT NULL AND timestamp >= NOW() - INTERVAL '1 day'
-          ORDER BY "vesselId", timestamp DESC
-        ) latest
-        WHERE speed > 0.5
-      `,
-      prisma.$queryRaw<Array<{ count: number }>>`
-        SELECT COUNT(DISTINCT "vesselId")::int as count
-        FROM (
-          SELECT DISTINCT ON ("vesselId") "vesselId", latitude
-          FROM vessel_positions
-          WHERE timestamp >= NOW() - INTERVAL '1 day'
-          ORDER BY "vesselId", timestamp DESC
-        ) latest
-        WHERE latitude BETWEEN -0.033 AND 0.033
-      `,
-      prisma.$queryRaw<Array<{ count: number }>>`
-        SELECT COUNT(DISTINCT "vesselId")::int as count
-        FROM (
-          SELECT DISTINCT ON ("vesselId") "vesselId", latitude, longitude
-          FROM vessel_positions
-          WHERE timestamp >= NOW() - INTERVAL '1 day'
-          ORDER BY "vesselId", timestamp DESC
-        ) latest
-        WHERE latitude BETWEEN 29.8 AND 31.2 AND longitude BETWEEN 32.0 AND 32.6
-      `,
-    ]);
+    // 3. Current stats from last 24 hours (optimized with materialized subquery)
+    console.log('  📊 Step 4/5: Computing current vessel stats...');
+    // Use a single query with CTE for better performance
+    const currentStats = await prisma.$queryRaw<Array<{
+      ships_moving: number;
+      ships_on_equator: number;
+      ships_at_suez: number;
+    }>>`
+      WITH latest_positions AS (
+        SELECT DISTINCT ON ("vesselId")
+          "vesselId",
+          speed,
+          latitude,
+          longitude
+        FROM vessel_positions
+        WHERE timestamp >= NOW() - INTERVAL '1 day'
+        ORDER BY "vesselId", timestamp DESC
+      )
+      SELECT
+        COUNT(*) FILTER (WHERE speed > 0.5)::int as ships_moving,
+        COUNT(*) FILTER (WHERE latitude BETWEEN -0.033 AND 0.033)::int as ships_on_equator,
+        COUNT(*) FILTER (WHERE latitude BETWEEN 29.8 AND 31.2 AND longitude BETWEEN 32.0 AND 32.6)::int as ships_at_suez
+      FROM latest_positions
+    `;
 
-    // 4. Last 7 days trend
+    const shipsMoving = [{ count: currentStats[0]?.ships_moving || 0 }];
+    const shipsOnEquator = [{ count: currentStats[0]?.ships_on_equator || 0 }];
+    const shipsAtSuez = [{ count: currentStats[0]?.ships_at_suez || 0 }];
+    console.log(`     ✓ Moving: ${shipsMoving[0].count}, Equator: ${shipsOnEquator[0].count}, Suez: ${shipsAtSuez[0].count}`);
+
+    // 4. Last 7 days trend (optimized with date bucketing)
+    console.log('  📊 Step 5/5: Computing trends and coverage...');
     const last7Days = await prisma.$queryRaw<Array<{ date: string; count: number }>>`
       SELECT
         DATE(timestamp)::text as date,
         COUNT(*)::int as count
       FROM vessel_positions
       WHERE timestamp >= NOW() - INTERVAL '7 days'
+        AND timestamp < NOW()
       GROUP BY DATE(timestamp)
       ORDER BY date ASC
       LIMIT 7
     `;
 
-    // 5. Geographic coverage (last 7 days)
+    // 5. Geographic coverage (last 7 days) - sample for performance
     const geoCoverage = await prisma.$queryRaw<Array<{
       minLat: number;
       maxLat: number;
@@ -105,6 +113,7 @@ async function computeDailyStats() {
         MAX(longitude)::float as "maxLon"
       FROM vessel_positions
       WHERE timestamp >= NOW() - INTERVAL '7 days'
+        AND timestamp < NOW()
     `;
 
     const geo = geoCoverage[0];
@@ -145,16 +154,25 @@ async function computeDailyStats() {
     console.error('❌ Failed to compute daily stats:', error);
     throw error;
   } finally {
-    await prisma.$disconnect();
+    // Ensure clean disconnect
+    try {
+      await prisma.$disconnect();
+      console.log('🔌 Database connection closed');
+    } catch (disconnectError) {
+      console.error('⚠️  Error disconnecting:', disconnectError);
+    }
   }
 }
 
 // Run if executed directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   computeDailyStats()
-    .then(() => process.exit(0))
+    .then(() => {
+      console.log('✅ Script completed successfully');
+      process.exit(0);
+    })
     .catch((error) => {
-      console.error(error);
+      console.error('❌ Script failed:', error);
       process.exit(1);
     });
 }

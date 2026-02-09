@@ -10,10 +10,12 @@
  * - Marks departures
  */
 
-import { PrismaClient } from '@prisma/client'
-import { isPointInPolygon, haversineDistanceNm } from './geofence-engine.js'
+import { getPrisma } from '../lib/db.js';
+import { PrismaClient } from '@prisma/client';
+import { isPointInPolygon, haversineDistanceNm } from './geofence-engine.js';
 
-const prisma = new PrismaClient()
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 interface VesselPosition {
   lat: number

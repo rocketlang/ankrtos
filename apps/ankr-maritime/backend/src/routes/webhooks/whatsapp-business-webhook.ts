@@ -11,8 +11,11 @@ import { whatsappService } from '../../services/messaging/whatsapp.service.js';
 import { channelRouterService } from '../../services/messaging/channel-router.service.js';
 import { messageNormalizerService } from '../../services/messaging/message-normalizer.service.js';
 import { PrismaClient } from '@prisma/client';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 // Environment configuration
 const WEBHOOK_VERIFY_TOKEN = process.env.WHATSAPP_WEBHOOK_VERIFY_TOKEN || 'mari8x_verify_2026';

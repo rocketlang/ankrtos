@@ -14,6 +14,8 @@
 
 import { PrismaClient } from '@prisma/client';
 import { getCurrencyService } from './currency.service.js';
+import { getPrisma } from '../lib/db.js';
+
 
 export interface PDALineItemInput {
   category: string;

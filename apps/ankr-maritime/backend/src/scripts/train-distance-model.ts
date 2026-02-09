@@ -7,8 +7,11 @@
 
 import { PrismaClient } from '@prisma/client';
 import { DistanceTrainer } from '../services/routing/distance-trainer';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 async function main() {
   console.log('🎓 Mari8XOSRM - Distance Model Training\n');

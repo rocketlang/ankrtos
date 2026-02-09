@@ -25,6 +25,8 @@ import fs from 'fs';
 import { getPDFExtractionService, PDFExtractionResult } from './pdf-extraction.service.js';
 import { getTariffExtractionPatterns, ExtractedTariff } from './tariff-extraction-patterns.js';
 import { getTariffValidationService, ValidationResult, TariffInput } from './tariff-validation.service.js';
+import { getPrisma } from '../lib/db.js';
+
 
 export interface IngestionResult {
   success: boolean;

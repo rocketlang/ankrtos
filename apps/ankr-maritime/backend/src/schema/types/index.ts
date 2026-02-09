@@ -181,6 +181,7 @@ import './ais-fun-facts-cached.js'; // ✅ AIS Fun Facts: Cached version for lan
 import './ais-stats-daily.js'; // ⚡ Daily AIS Stats: Pre-computed stats for instant access
 import './ais-live-stats.js'; // ⚡ Live AIS Stats: Real-time count including today's new data
 import './live-vessels.js'; // Live vessel positions for map
+import './live-port-congestion.js'; // ⚡ Live Port Congestion: Real-time AIS-derived metrics
 import './hybrid-ais-coverage.js'; // 🛰️ Hybrid AIS: Terrestrial + Satellite (GFW) coverage
 import './gfw-events.js'; // 🎣 GFW Events: Fishing, Port Visits, Loitering with positions
 import './vessel-journey.js'; // 🚢 Vessel Journey: Intelligent hybrid tracking with gap filling
@@ -188,3 +189,4 @@ import './fleet-dashboard.js'; // 📊 Fleet Dashboard: Overview of all vessels 
 import './vessel-alerts.js'; // ⚠️ Vessel Alerts: Automated notifications for status changes
 import './vessel-eta.js'; // 🎯 Vessel ETA: Arrival time predictions
 import './voyage-cost-estimate.js'; // 💰 Voyage Cost Estimator: Calculate voyage costs from journey data
+import './fleet-performance-analytics.js'; // 📊 Fleet Performance Analytics: Comprehensive fleet metrics and benchmarking

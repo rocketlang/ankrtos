@@ -3,8 +3,11 @@
 import { PrismaClient } from '@prisma/client';
 import { tenantManager } from './tenant-manager.js';
 import { passwordPolicy } from './password-policy.js';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 interface OnboardingStep {
   id: string;

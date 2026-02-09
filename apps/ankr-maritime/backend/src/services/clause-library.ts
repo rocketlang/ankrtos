@@ -1,8 +1,11 @@
 // clause-library.ts — Charter Party Clause Library with Search
 
 import { PrismaClient } from '@prisma/client';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 interface Clause {
   id: string;

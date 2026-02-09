@@ -10,8 +10,11 @@ import { PrismaClient } from '@prisma/client';
 import { messageNormalizerService, NormalizedMessage } from './message-normalizer.service.js';
 import { voiceTranscriptionService } from '../ai/voice-transcription.service.js';
 import { photoClassificationService } from '../ai/photo-classification.service.js';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 export interface WhatsAppConfig {
   phoneNumberId: string; // WhatsApp Business Phone Number ID

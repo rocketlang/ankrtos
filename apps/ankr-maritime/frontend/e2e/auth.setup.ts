@@ -18,9 +18,9 @@ setup('authenticate', async ({ page }) => {
     const loginButton = page.locator('button[type="submit"], button:has-text("Login"), button:has-text("Sign in")');
 
     if (await emailInput.count() > 0) {
-      // Fill login form
-      await emailInput.fill('admin@example.com');
-      await passwordInput.fill('password123');
+      // Fill login form with correct mari8x.com credentials
+      await emailInput.fill('admin@ankr.in');
+      await passwordInput.fill('admin123');
       await loginButton.click();
 
       // Wait for navigation

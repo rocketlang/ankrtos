@@ -12,6 +12,8 @@
 
 import nodemailer from 'nodemailer';
 import { PrismaClient } from '@prisma/client';
+import { getPrisma } from '../lib/db.js';
+
 
 export interface EmailOptions {
   to: string | string[];

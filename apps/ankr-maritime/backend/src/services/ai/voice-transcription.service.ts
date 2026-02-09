@@ -9,8 +9,11 @@
 import fetch from 'node-fetch';
 import FormData from 'form-data';
 import { PrismaClient } from '@prisma/client';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 export interface TranscriptionResult {
   success: boolean;

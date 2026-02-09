@@ -10,8 +10,11 @@ import { alertTriggerService } from '../services/alerts/alert-trigger.service';
 import { alertOrchestratorService } from '../services/alerts/alert-orchestrator.service';
 import { notificationDispatcherService } from '../services/alerts/notification-dispatcher.service';
 import { PrismaClient } from '@prisma/client';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 const redisConnection = {
   host: process.env.REDIS_HOST || 'localhost',

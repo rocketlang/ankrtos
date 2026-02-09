@@ -13,8 +13,11 @@ import { threadingService } from '../services/email-organizer/threading.service'
 import { emailSummaryService } from '../services/email-organizer/summary.service';
 import { responseDrafterService } from '../services/email-organizer/response-drafter.service';
 import { contextRetrievalService } from '../services/email-organizer/context-retrieval.service';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 // Test data
 const TEST_USER_ID = 'test-user-123';

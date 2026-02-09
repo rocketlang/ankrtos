@@ -48,6 +48,20 @@ async function main() {
   });
   console.log(`  Operator user: ${operator.email}`);
 
+  // === Demo User (Limited Access) ===
+  const demo = await prisma.user.upsert({
+    where: { email: 'demo@mari8x.com' },
+    update: {},
+    create: {
+      email: 'demo@mari8x.com',
+      name: 'Demo User',
+      passwordHash: await bcrypt.hash('demo123', 10),
+      role: 'viewer', // Limited role
+      organizationId: org.id,
+    },
+  });
+  console.log(`  Demo user: ${demo.email}`);
+
   // === Ports (50 major world ports) ===
   const ports = [
     { unlocode: 'SGSIN', name: 'Singapore', country: 'SG', latitude: 1.2644, longitude: 103.8200, timezone: 'Asia/Singapore', type: 'seaport' },

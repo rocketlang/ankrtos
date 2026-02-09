@@ -1,8 +1,11 @@
 // document-parser.ts — AI-Powered Document Parsing for Maritime Documents
 
 import { PrismaClient } from '@prisma/client';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 export enum DocumentType {
   CHARTER_PARTY = 'charter_party',

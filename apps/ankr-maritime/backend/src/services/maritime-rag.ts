@@ -1,8 +1,11 @@
 import { PrismaClient } from '@prisma/client';
 import { LogisticsRAG, HybridSearch, RAGRetriever } from '@ankr/eon';
 import { getProcessor } from './document-processors/index.js';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 export interface SearchOptions {
   limit?: number;

@@ -4,9 +4,12 @@ import * as otplib from 'otplib';
 const { authenticator } = otplib;
 import QRCode from 'qrcode';
 import { PrismaClient } from '@prisma/client';
+import { getPrisma } from '../lib/db.js';
+
 // import { sendSMS } from '@ankr/wire'; // Temporarily disabled for testing
 
-const prisma = new PrismaClient();
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 interface MFASetupResult {
   secret: string;

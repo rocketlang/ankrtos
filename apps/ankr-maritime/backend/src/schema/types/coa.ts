@@ -9,9 +9,33 @@ builder.prismaObject('ContractOfAffreightment', {
     cargoType: t.exposeString('cargoType'),
     totalQuantity: t.exposeFloat('totalQuantity'),
     tolerance: t.exposeFloat('tolerance'),
+    tolerancePercent: t.float({
+      // Alias for tolerance - frontend compatibility
+      resolve: (parent) => parent.tolerance,
+    }),
     nominatedQty: t.exposeFloat('nominatedQty'),
+    nominatedQuantity: t.float({
+      // Alias for nominatedQty - frontend compatibility
+      resolve: (parent) => parent.nominatedQty,
+    }),
     shippedQty: t.exposeFloat('shippedQty'),
+    shippedQuantity: t.float({
+      // Alias for shippedQty - frontend compatibility
+      resolve: (parent) => parent.shippedQty,
+    }),
     shipmentCount: t.exposeInt('shipmentCount'),
+    completedShipments: t.int({
+      // Computed field - count of completed nominations
+      resolve: async (parent, _args, ctx) => {
+        const count = await ctx.prisma.cOANomination.count({
+          where: {
+            coaId: parent.id,
+            status: 'completed',
+          },
+        });
+        return count;
+      },
+    }),
     maxShipments: t.exposeInt('maxShipments', { nullable: true }),
     loadPortRange: t.exposeString('loadPortRange', { nullable: true }),
     dischargePortRange: t.exposeString('dischargePortRange', { nullable: true }),

@@ -1,0 +1,46 @@
+[
+  {
+    "platform": "Tiwari Academy",
+    "url": "https://www.tiwariacademy.com/icse-books/",
+    "classes": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "free": true
+  },
+  {
+    "platform": "Vedantu",
+    "url": "https://www.vedantu.com/selina-solutions",
+    "classes": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "free": true
+  },
+  {
+    "platform": "TopperLearning",
+    "url": "https://www.topperlearning.com/icse-textbook-solutions",
+    "classes": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "free": true
+  },
+  {
+    "platform": "Meritnation",
+    "url": "https://www.meritnation.com/icse",
+    "classes": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "free": true
+  }
+]

@@ -6,8 +6,11 @@
 
 import { PrismaClient } from '@prisma/client';
 import axios from 'axios';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 const OVERPASS_API = 'https://overpass-api.de/api/interpreter';
 

@@ -102,7 +102,7 @@ export const navSections: NavSection[] = [
     items: [
       { label: 'B/L', href: '/bills-of-lading' },
       { label: 'eBL', href: '/ebl-chain' },
-      { label: 'Docs', href: '/documents' },
+      { label: 'DMS', href: '/documents' }, // Document Management System
       { label: 'Templates', href: '/document-templates' },
       { label: 'Doc Links', href: '/document-links' },
     ],
@@ -210,8 +210,10 @@ export const navSections: NavSection[] = [
     color: 'cyan',
     items: [
       { label: 'Fleet Dashboard', href: '/ais/fleet-dashboard' },
+      { label: 'Fleet Performance', href: '/fleet/performance' },
       { label: 'Vessel Alerts', href: '/ais/alerts' },
       { label: 'Geofencing', href: '/ais/geofencing' },
+      { label: 'Weather Routing', href: '/weather-routing' },
       { label: 'AIS Live', href: '/ais/live' },
       { label: 'Hybrid Map', href: '/ais/hybrid-map' },
       { label: 'GFW Events', href: '/ais/gfw-events' },

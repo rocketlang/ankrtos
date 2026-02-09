@@ -140,14 +140,23 @@ builder.queryField('payrollSummary', (t) =>
   t.field({
     type: [PayrollSummary],
     args: {
-      year: t.arg.int({ required: true }),
+      year: t.arg.int({ required: false }), // Made optional - defaults to current year
+      month: t.arg.int({ required: false }), // Optional month filter
     },
     resolve: async (_root, args, ctx) => {
+      const currentYear = new Date().getFullYear();
+      const year = args.year ?? currentYear;
+
+      const where: any = {
+        ...ctx.orgFilter(),
+        year,
+      };
+      if (args.month !== undefined && args.month !== null) {
+        where.month = args.month;
+      }
+
       const payslips = await ctx.prisma.payslip.findMany({
-        where: {
-          ...ctx.orgFilter(),
-          year: args.year,
-        },
+        where,
         select: {
           month: true,
           year: true,

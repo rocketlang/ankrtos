@@ -16,8 +16,11 @@ import { Queue, Worker, Job } from 'bullmq';
 import { emailSenderService } from './email-sender.service';
 import { smsSenderService } from './sms-sender.service';
 import type { ComposedAlert, AlertChannel } from './alert-orchestrator.service';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 export interface DispatchJob {
   alertId: string;

@@ -1,0 +1,37 @@
+{
+  "phase_1_critical": {
+    "priority": "HIGH",
+    "items": [
+      "IGCSE Mathematics (0580) - Past papers 2020-2024",
+      "IGCSE Physics (0625) - Past papers 2020-2024",
+      "IGCSE Chemistry (0620) - Past papers 2020-2024",
+      "IGCSE Biology (0610) - Past papers 2020-2024",
+      "All mark schemes for above"
+    ],
+    "estimated_size": "~2-3 GB",
+    "source": "GCE Guide or Physics & Maths Tutor"
+  },
+  "phase_2_important": {
+    "priority": "MEDIUM",
+    "items": [
+      "IGCSE Computer Science (0478)",
+      "IGCSE Economics (0455)",
+      "IGCSE Business Studies (0450)",
+      "A-Level Maths (9709)",
+      "A-Level Physics (9702)",
+      "A-Level Chemistry (9701)"
+    ],
+    "estimated_size": "~3-4 GB",
+    "source": "Multiple sources"
+  },
+  "phase_3_supplementary": {
+    "priority": "LOW",
+    "items": [
+      "Examiner reports",
+      "Revision notes (ZNotes)",
+      "Topic questions",
+      "Video lecture links"
+    ],
+    "estimated_size": "~1-2 GB"
+  }
+}

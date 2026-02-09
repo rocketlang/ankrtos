@@ -1,0 +1,9 @@
+==========================================
+CAPTAIN-LLM TEST SUITE
+==========================================
+
+🧪 TEST 1: ANKR Fastify Pattern Recognition
+📋 Test: Fastify + GraphQL (ANKR Pattern)
+🤖 Model: captain-llm-v2
+❓ Prompt: Create a Fastify endpoint for shipment tracking with GraphQL
+

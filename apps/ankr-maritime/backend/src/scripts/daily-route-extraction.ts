@@ -9,8 +9,11 @@
 import { PrismaClient } from '@prisma/client';
 import { IncrementalLearner } from '../services/routing/incremental-learner';
 import { createChildLogger } from '../utils/logger';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 const logger = createChildLogger({ module: 'daily-extraction' });
 
 // Good vessels to monitor (expand this list as we find more)

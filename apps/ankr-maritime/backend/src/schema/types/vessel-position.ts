@@ -23,13 +23,17 @@ builder.queryField('vesselPositions', (t) =>
   t.prismaField({
     type: ['VesselPosition'],
     args: {
-      vesselId: t.arg.string({ required: true }),
+      vesselId: t.arg.string({ required: false }), // Made optional - returns all if not provided
       limit: t.arg.int({ required: false }),
     },
-    resolve: (query, _root, args) =>
+    resolve: (query, _root, args, ctx) =>
       prisma.vesselPosition.findMany({
         ...query,
-        where: { vesselId: args.vesselId },
+        where: args.vesselId
+          ? { vesselId: args.vesselId }
+          : ctx.user?.organizationId
+          ? { vessel: { organizationId: ctx.user.organizationId } }
+          : {}, // Return all if no vesselId, filtered by org if available
         orderBy: { timestamp: 'desc' },
         take: args.limit ?? 100,
       }),

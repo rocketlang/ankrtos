@@ -28,6 +28,7 @@ import { smsReplyWebhook } from './routes/webhooks/sms-reply.js';
 import { whatsappReplyWebhook } from './routes/webhooks/whatsapp-reply.js';
 import { emailReplyWebhook } from './routes/webhooks/email-reply.js';
 import { whatsappBusinessWebhook } from './routes/webhooks/whatsapp-business-webhook.js';
+import antiScrapingPlugin from './plugins/anti-scraping.js';
 // Temporarily disabled until PageIndex packages are published with dist
 // import { maritimeRouter } from './services/rag/pageindex-router.js';
 // import { testConnections } from './services/rag/connections.js';
@@ -42,7 +43,14 @@ async function main() {
 
   // CORS
   await app.register(cors, {
-    origin: [FRONTEND_URL, 'http://localhost:3008'],
+    origin: [
+      FRONTEND_URL,
+      'http://localhost:3008',
+      'https://mari8x.com',
+      'http://mari8x.com',
+      'https://www.mari8x.com',
+      'http://www.mari8x.com',
+    ],
     credentials: true,
   });
 
@@ -61,6 +69,9 @@ async function main() {
       files: 1, // Max 1 file per upload
     },
   });
+
+  // Anti-scraping protection (rate limiting, bot detection, security headers)
+  await app.register(antiScrapingPlugin);
 
   // Document Upload Routes
   await app.register(documentUploadRoutes);

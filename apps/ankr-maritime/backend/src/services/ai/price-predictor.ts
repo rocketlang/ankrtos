@@ -1,8 +1,11 @@
 // price-predictor.ts — AI-Powered Freight Rate Price Prediction
 
 import { PrismaClient } from '@prisma/client';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 interface PredictionInput {
   route?: string;

@@ -141,6 +141,16 @@ const PROCESSING_JOB_STATUS = gql`
   }
 `;
 
+const INGEST_DOCUMENT = gql`
+  mutation IngestDocument($documentId: ID!) {
+    ingestDocument(documentId: $documentId) {
+      jobId
+      status
+      message
+    }
+  }
+`;
+
 export default function KnowledgeBase() {
   const [activeTab, setActiveTab] = useState<'search' | 'ask' | 'analytics'>('search');
   const [query, setQuery] = useState('');

@@ -4,7 +4,10 @@
  */
 
 import { PrismaClient } from '@prisma/client';
-const prisma = new PrismaClient();
+import { getPrisma } from '../../lib/db.js';
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 export interface NauticalFeature {
   type: 'LIGHT' | 'BUOY' | 'WRECK';

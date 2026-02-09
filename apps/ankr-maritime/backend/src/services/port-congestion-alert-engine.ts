@@ -7,9 +7,11 @@
  * - Worsening trends
  */
 
-import { PrismaClient } from '@prisma/client'
+import { getPrisma } from '../lib/db.js';
+import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient()
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 export class PortCongestionAlertEngine {
   /**

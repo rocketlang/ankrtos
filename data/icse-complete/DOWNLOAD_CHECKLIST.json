@@ -1,0 +1,266 @@
+[
+  {
+    "class": 9,
+    "board": "ICSE",
+    "subject": "Mathematics",
+    "items_needed": [
+      "Selina Mathematics Class 9 Solutions",
+      "ICSE Mathematics Sample Papers 2026",
+      "Mathematics Syllabus 2026",
+      "Mathematics Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 9,
+    "board": "ICSE",
+    "subject": "Physics",
+    "items_needed": [
+      "Selina Physics Class 9 Solutions",
+      "ICSE Physics Sample Papers 2026",
+      "Physics Syllabus 2026",
+      "Physics Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 9,
+    "board": "ICSE",
+    "subject": "Chemistry",
+    "items_needed": [
+      "Selina Chemistry Class 9 Solutions",
+      "ICSE Chemistry Sample Papers 2026",
+      "Chemistry Syllabus 2026",
+      "Chemistry Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 9,
+    "board": "ICSE",
+    "subject": "Biology",
+    "items_needed": [
+      "Selina Biology Class 9 Solutions",
+      "ICSE Biology Sample Papers 2026",
+      "Biology Syllabus 2026",
+      "Biology Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 9,
+    "board": "ICSE",
+    "subject": "Geography",
+    "items_needed": [
+      "Selina Geography Class 9 Solutions",
+      "ICSE Geography Sample Papers 2026",
+      "Geography Syllabus 2026",
+      "Geography Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 9,
+    "board": "ICSE",
+    "subject": "History",
+    "items_needed": [
+      "Selina History Class 9 Solutions",
+      "ICSE History Sample Papers 2026",
+      "History Syllabus 2026",
+      "History Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 10,
+    "board": "ICSE",
+    "subject": "Mathematics",
+    "items_needed": [
+      "Selina Mathematics Class 10 Solutions",
+      "ICSE Mathematics Sample Papers 2026",
+      "Mathematics Syllabus 2026",
+      "Mathematics Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 10,
+    "board": "ICSE",
+    "subject": "Physics",
+    "items_needed": [
+      "Selina Physics Class 10 Solutions",
+      "ICSE Physics Sample Papers 2026",
+      "Physics Syllabus 2026",
+      "Physics Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 10,
+    "board": "ICSE",
+    "subject": "Chemistry",
+    "items_needed": [
+      "Selina Chemistry Class 10 Solutions",
+      "ICSE Chemistry Sample Papers 2026",
+      "Chemistry Syllabus 2026",
+      "Chemistry Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 10,
+    "board": "ICSE",
+    "subject": "Biology",
+    "items_needed": [
+      "Selina Biology Class 10 Solutions",
+      "ICSE Biology Sample Papers 2026",
+      "Biology Syllabus 2026",
+      "Biology Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 10,
+    "board": "ICSE",
+    "subject": "Geography",
+    "items_needed": [
+      "Selina Geography Class 10 Solutions",
+      "ICSE Geography Sample Papers 2026",
+      "Geography Syllabus 2026",
+      "Geography Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 10,
+    "board": "ICSE",
+    "subject": "History",
+    "items_needed": [
+      "Selina History Class 10 Solutions",
+      "ICSE History Sample Papers 2026",
+      "History Syllabus 2026",
+      "History Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 11,
+    "board": "ISC",
+    "subject": "Mathematics",
+    "items_needed": [
+      "Selina Mathematics Class 11 Solutions",
+      "ISC Mathematics Sample Papers 2026",
+      "Mathematics Syllabus 2026",
+      "Mathematics Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 11,
+    "board": "ISC",
+    "subject": "Physics",
+    "items_needed": [
+      "Selina Physics Class 11 Solutions",
+      "ISC Physics Sample Papers 2026",
+      "Physics Syllabus 2026",
+      "Physics Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 11,
+    "board": "ISC",
+    "subject": "Chemistry",
+    "items_needed": [
+      "Selina Chemistry Class 11 Solutions",
+      "ISC Chemistry Sample Papers 2026",
+      "Chemistry Syllabus 2026",
+      "Chemistry Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 11,
+    "board": "ISC",
+    "subject": "Biology",
+    "items_needed": [
+      "Selina Biology Class 11 Solutions",
+      "ISC Biology Sample Papers 2026",
+      "Biology Syllabus 2026",
+      "Biology Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 11,
+    "board": "ISC",
+    "subject": "Computer Science",
+    "items_needed": [
+      "Selina Computer Science Class 11 Solutions",
+      "ISC Computer Science Sample Papers 2026",
+      "Computer Science Syllabus 2026",
+      "Computer Science Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 11,
+    "board": "ISC",
+    "subject": "Economics",
+    "items_needed": [
+      "Selina Economics Class 11 Solutions",
+      "ISC Economics Sample Papers 2026",
+      "Economics Syllabus 2026",
+      "Economics Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 12,
+    "board": "ISC",
+    "subject": "Mathematics",
+    "items_needed": [
+      "Selina Mathematics Class 12 Solutions",
+      "ISC Mathematics Sample Papers 2026",
+      "Mathematics Syllabus 2026",
+      "Mathematics Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 12,
+    "board": "ISC",
+    "subject": "Physics",
+    "items_needed": [
+      "Selina Physics Class 12 Solutions",
+      "ISC Physics Sample Papers 2026",
+      "Physics Syllabus 2026",
+      "Physics Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 12,
+    "board": "ISC",
+    "subject": "Chemistry",
+    "items_needed": [
+      "Selina Chemistry Class 12 Solutions",
+      "ISC Chemistry Sample Papers 2026",
+      "Chemistry Syllabus 2026",
+      "Chemistry Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 12,
+    "board": "ISC",
+    "subject": "Biology",
+    "items_needed": [
+      "Selina Biology Class 12 Solutions",
+      "ISC Biology Sample Papers 2026",
+      "Biology Syllabus 2026",
+      "Biology Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 12,
+    "board": "ISC",
+    "subject": "Computer Science",
+    "items_needed": [
+      "Selina Computer Science Class 12 Solutions",
+      "ISC Computer Science Sample Papers 2026",
+      "Computer Science Syllabus 2026",
+      "Computer Science Previous Year Papers (last 3 years)"
+    ]
+  },
+  {
+    "class": 12,
+    "board": "ISC",
+    "subject": "Economics",
+    "items_needed": [
+      "Selina Economics Class 12 Solutions",
+      "ISC Economics Sample Papers 2026",
+      "Economics Syllabus 2026",
+      "Economics Previous Year Papers (last 3 years)"
+    ]
+  }
+]

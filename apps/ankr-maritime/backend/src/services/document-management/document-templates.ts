@@ -13,8 +13,11 @@
 
 import { PrismaClient } from '@prisma/client';
 import { GraphQLError } from 'graphql';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 // ============================================================================
 // Types and Enums

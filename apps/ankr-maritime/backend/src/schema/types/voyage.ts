@@ -4,12 +4,30 @@ builder.prismaObject('Voyage', {
   fields: (t) => ({
     id: t.exposeID('id'),
     voyageNumber: t.exposeString('voyageNumber'),
+    reference: t.string({
+      // Alias for voyageNumber - convenience field for frontend compatibility
+      resolve: (parent) => parent.voyageNumber,
+    }),
     vesselId: t.exposeString('vesselId'),
     charterId: t.exposeString('charterId', { nullable: true }),
     cargoId: t.exposeString('cargoId', { nullable: true }),
     departurePortId: t.exposeString('departurePortId', { nullable: true }),
     arrivalPortId: t.exposeString('arrivalPortId', { nullable: true }),
     status: t.exposeString('status'),
+    revenue: t.float({
+      nullable: true,
+      // Calculated from charter freight rate if available
+      resolve: async (parent, _args, ctx) => {
+        if (!parent.charterId) return null;
+        const charter = await ctx.prisma.charter.findUnique({
+          where: { id: parent.charterId },
+          select: { freightRate: true, quantity: true },
+        });
+        if (!charter?.freightRate) return null;
+        // Simple revenue calculation: freight rate * quantity
+        return charter.freightRate * (charter.quantity || 1);
+      },
+    }),
     etd: t.expose('etd', { type: 'DateTime', nullable: true }),
     eta: t.expose('eta', { type: 'DateTime', nullable: true }),
     atd: t.expose('atd', { type: 'DateTime', nullable: true }),
@@ -25,11 +43,21 @@ builder.prismaObject('Voyage', {
 builder.queryField('voyages', (t) =>
   t.prismaField({
     type: ['Voyage'],
-    resolve: (query, _root, _args, ctx) => {
+    args: {
+      status: t.arg.string({ required: false }), // Optional status filter
+      vesselId: t.arg.string({ required: false }), // Optional vessel filter
+    },
+    resolve: (query, _root, args, ctx) => {
       const orgId = ctx.user?.organizationId;
+      const where: any = orgId ? { vessel: { organizationId: orgId } } : {};
+
+      // Apply optional filters
+      if (args.status) where.status = args.status;
+      if (args.vesselId) where.vesselId = args.vesselId;
+
       return ctx.prisma.voyage.findMany({
         ...query,
-        where: orgId ? { vessel: { organizationId: orgId } } : {},
+        where,
         orderBy: { createdAt: 'desc' },
       });
     },

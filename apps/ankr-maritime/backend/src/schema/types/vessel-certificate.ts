@@ -7,6 +7,16 @@ builder.prismaObject('VesselCertificate', {
   fields: (t) => ({
     id: t.exposeID('id'),
     vesselId: t.exposeString('vesselId'),
+    name: t.string({
+      // Alias for vessel name - convenience field
+      resolve: async (parent) => {
+        const vessel = await prisma.vessel.findUnique({
+          where: { id: parent.vesselId },
+          select: { name: true },
+        });
+        return vessel?.name || '';
+      },
+    }),
     certificateType: t.exposeString('certificateType'),
     certificateNumber: t.exposeString('certificateNumber', { nullable: true }),
     issuedBy: t.exposeString('issuedBy', { nullable: true }),
@@ -29,11 +39,17 @@ builder.queryField('vesselCertificates', (t) =>
   t.prismaField({
     type: ['VesselCertificate'],
     args: {
-      vesselId: t.arg.string({ required: true }),
+      vesselId: t.arg.string({ required: false }), // Made optional for dashboard
       certificateType: t.arg.string(),
     },
-    resolve: (query, _root, args) => {
-      const where: Record<string, unknown> = { vesselId: args.vesselId }
+    resolve: (query, _root, args, ctx) => {
+      const where: Record<string, unknown> = {}
+      if (args.vesselId) {
+        where.vesselId = args.vesselId
+      } else if (ctx.user?.organizationId) {
+        // If no vesselId, filter by organization
+        where.vessel = { organizationId: ctx.user.organizationId }
+      }
       if (args.certificateType) where.certificateType = args.certificateType
       return prisma.vesselCertificate.findMany({
         ...query,

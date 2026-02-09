@@ -129,6 +129,8 @@ import VesselJourneyTracker from './pages/VesselJourneyTracker';
 import FleetDashboard from './pages/FleetDashboard';
 import VesselAlertsPage from './pages/VesselAlertsPage';
 import GeofencingPage from './pages/GeofencingPage';
+import FleetPerformanceDashboard from './pages/FleetPerformanceDashboard';
+import WeatherRoutingPage from './pages/WeatherRoutingPage';
 import Mari8xLanding from './pages/Mari8xLanding';
 import Mari8xTechnical from './pages/Mari8xTechnical';
 import FlowCanvasPage from './pages/FlowCanvas/FlowCanvasPage';
@@ -137,6 +139,26 @@ import { CostOptimization } from './pages/CostOptimization';
 import { BankReconciliation } from './pages/BankReconciliation';
 import { ProtectingAgentManagement } from './pages/ProtectingAgentManagement';
 import { TariffManagement } from './pages/TariffManagement';
+import DemoShowcaseLanding from './pages/DemoShowcase/DemoShowcaseLanding';
+import VoyageEstimationShowcase from './pages/DemoShowcase/VoyageEstimationShowcase';
+import FleetDashboardShowcase from './pages/DemoShowcase/FleetDashboardShowcase';
+import Mari8xLlmShowcase from './pages/DemoShowcase/Mari8xLlmShowcase';
+import KnowledgeBaseShowcase from './pages/DemoShowcase/KnowledgeBaseShowcase';
+import OperationsCenterShowcase from './pages/DemoShowcase/OperationsCenterShowcase';
+import LaytimeCalculatorShowcase from './pages/DemoShowcase/LaytimeCalculatorShowcase';
+import MarketIntelligenceShowcase from './pages/DemoShowcase/MarketIntelligenceShowcase';
+import CharteringWorkflowShowcase from './pages/DemoShowcase/CharteringWorkflowShowcase';
+import RouteOptimizationShowcase from './pages/DemoShowcase/RouteOptimizationShowcase';
+import PortIntelligenceShowcase from './pages/DemoShowcase/PortIntelligenceShowcase';
+import PortOperationsShowcase from './pages/DemoShowcase/PortOperationsShowcase';
+import PerformanceMonitoringShowcase from './pages/DemoShowcase/PerformanceMonitoringShowcase';
+import DocumentChainShowcase from './pages/DemoShowcase/DocumentChainShowcase';
+import ClaimsSettlementShowcase from './pages/DemoShowcase/ClaimsSettlementShowcase';
+import VesselOverviewShowcase from './pages/DemoShowcase/VesselOverviewShowcase';
+import FinancialDashboardShowcase from './pages/DemoShowcase/FinancialDashboardShowcase';
+import ContractManagementShowcase from './pages/DemoShowcase/ContractManagementShowcase';
+import ComplianceHubShowcase from './pages/DemoShowcase/ComplianceHubShowcase';
+import TechnicalOperationsShowcase from './pages/DemoShowcase/TechnicalOperationsShowcase';
 import { useAuthStore } from './lib/stores/auth';
 import { ToastProvider } from './components/Toast';
 
@@ -163,6 +185,29 @@ export default function App() {
       <Route path="/technical" element={<Mari8xTechnical />} />
       <Route path="/login" element={<Login />} />
       <Route path="/beta/signup" element={<BetaAgentSignup />} />
+
+      {/* Demo Showcase Routes - Public/Semi-Public */}
+      <Route path="/demo-showcase" element={<DemoShowcaseLanding />} />
+      <Route path="/demo-showcase/voyage-estimation" element={<VoyageEstimationShowcase />} />
+      <Route path="/demo-showcase/fleet-dashboard" element={<FleetDashboardShowcase />} />
+      <Route path="/demo-showcase/operations-center" element={<OperationsCenterShowcase />} />
+      <Route path="/demo-showcase/laytime-calculator" element={<LaytimeCalculatorShowcase />} />
+      <Route path="/demo-showcase/mari8x-llm" element={<Mari8xLlmShowcase />} />
+      <Route path="/demo-showcase/knowledge-base" element={<KnowledgeBaseShowcase />} />
+      <Route path="/demo-showcase/market-intelligence" element={<MarketIntelligenceShowcase />} />
+      <Route path="/demo-showcase/chartering-workflow" element={<CharteringWorkflowShowcase />} />
+      <Route path="/demo-showcase/route-optimization" element={<RouteOptimizationShowcase />} />
+      <Route path="/demo-showcase/port-intelligence" element={<PortIntelligenceShowcase />} />
+      <Route path="/demo-showcase/port-operations" element={<PortOperationsShowcase />} />
+      <Route path="/demo-showcase/performance-monitoring" element={<PerformanceMonitoringShowcase />} />
+      <Route path="/demo-showcase/document-chain" element={<DocumentChainShowcase />} />
+      <Route path="/demo-showcase/claims-settlement" element={<ClaimsSettlementShowcase />} />
+      <Route path="/demo-showcase/vessel-overview" element={<VesselOverviewShowcase />} />
+      <Route path="/demo-showcase/financial-dashboard" element={<FinancialDashboardShowcase />} />
+      <Route path="/demo-showcase/contract-management" element={<ContractManagementShowcase />} />
+      <Route path="/demo-showcase/compliance-hub" element={<ComplianceHubShowcase />} />
+      <Route path="/demo-showcase/technical-operations" element={<TechnicalOperationsShowcase />} />
+
       <Route
         element={
           <ProtectedRoute>
@@ -300,6 +345,8 @@ export default function App() {
         <Route path="/ais/fleet-dashboard" element={<FleetDashboard />} />
         <Route path="/ais/alerts" element={<VesselAlertsPage />} />
         <Route path="/ais/geofencing" element={<GeofencingPage />} />
+        <Route path="/fleet/performance" element={<FleetPerformanceDashboard />} />
+        <Route path="/weather-routing" element={<WeatherRoutingPage />} />
         <Route path="/flow-canvas" element={<FlowCanvasPage />} />
       </Route>
     </Routes>

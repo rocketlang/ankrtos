@@ -11,8 +11,11 @@
  */
 
 import { PrismaClient, ArrivalEventType, EventActor, EventImpact } from '@prisma/client';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 interface PublishEventParams {
   arrivalId: string;

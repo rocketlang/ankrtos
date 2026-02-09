@@ -9,8 +9,11 @@ import { PrismaClient } from '@prisma/client';
 import { MaritimeGraph } from '../../services/routing/maritime-graph';
 import { RoutePlanner } from '../../services/routing/route-planner';
 import { IncrementalLearner } from '../../services/routing/incremental-learner';
+import { getPrisma } from '../../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 
 // Singleton instances for performance
 let graphInstance: MaritimeGraph | null = null;

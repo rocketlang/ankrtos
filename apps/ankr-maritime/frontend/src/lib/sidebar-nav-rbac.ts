@@ -12,7 +12,8 @@ export type UserRole =
   | 'finance'
   | 'compliance'
   | 'master'
-  | 'crew';
+  | 'crew'
+  | 'viewer'; // Demo/limited access role
 
 export interface NavItem {
   label: string;
@@ -36,13 +37,42 @@ export interface NavStage {
  */
 export const workflowStages: NavStage[] = [
   {
+    id: 'demo-showcase',
+    label: '🎯 Demo Showcase',
+    icon: '🎯',
+    color: 'violet',
+    description: 'Interactive demonstrations of Mari8x platform',
+    items: [
+      { label: 'Showcase Home', href: '/demo-showcase', roles: ['viewer', 'admin'] },
+      { label: 'Voyage Estimation', href: '/demo-showcase/voyage-estimation', roles: ['viewer', 'admin'] },
+      { label: 'Fleet Dashboard', href: '/demo-showcase/fleet-dashboard', roles: ['viewer', 'admin'] },
+      { label: 'Operations Center', href: '/demo-showcase/operations-center', roles: ['viewer', 'admin'] },
+      { label: 'Laytime Calculator', href: '/demo-showcase/laytime-calculator', roles: ['viewer', 'admin'] },
+      { label: 'Mari8x AI (Vision)', href: '/demo-showcase/mari8x-llm', roles: ['viewer', 'admin'] },
+      { label: 'Knowledge Base', href: '/demo-showcase/knowledge-base', roles: ['viewer', 'admin'] },
+      { label: 'Market Intelligence', href: '/demo-showcase/market-intelligence', roles: ['viewer', 'admin'] },
+      { label: 'Chartering Workflow', href: '/demo-showcase/chartering-workflow', roles: ['viewer', 'admin'] },
+      { label: 'Route Optimization', href: '/demo-showcase/route-optimization', roles: ['viewer', 'admin'] },
+      { label: 'Port Intelligence', href: '/demo-showcase/port-intelligence', roles: ['viewer', 'admin'] },
+      { label: 'Port Operations', href: '/demo-showcase/port-operations', roles: ['viewer', 'admin'] },
+      { label: 'Performance Monitoring', href: '/demo-showcase/performance-monitoring', roles: ['viewer', 'admin'] },
+      { label: 'Document Chain', href: '/demo-showcase/document-chain', roles: ['viewer', 'admin'] },
+      { label: 'Claims Settlement', href: '/demo-showcase/claims-settlement', roles: ['viewer', 'admin'] },
+      { label: 'Vessel Overview', href: '/demo-showcase/vessel-overview', roles: ['viewer', 'admin'] },
+      { label: 'Financial Dashboard', href: '/demo-showcase/financial-dashboard', roles: ['viewer', 'admin'] },
+      { label: 'Contract Management', href: '/demo-showcase/contract-management', roles: ['viewer', 'admin'] },
+      { label: 'Compliance Hub', href: '/demo-showcase/compliance-hub', roles: ['viewer', 'admin'] },
+      { label: 'Technical Operations', href: '/demo-showcase/technical-operations', roles: ['viewer', 'admin'] },
+    ],
+  },
+  {
     id: 'pre-fixture',
     label: 'Pre-Fixture',
     icon: '🔍',
     color: 'blue',
     description: 'Finding cargo and negotiating fixtures',
     items: [
-      { label: 'Market Overview', href: '/market-overview', roles: ['broker', 'commercial', 'charterer', 'admin'] },
+      { label: 'Market Overview', href: '/market-overview', roles: ['broker', 'commercial', 'charterer', 'viewer', 'admin'] },
       { label: 'Chartering', href: '/chartering', roles: ['broker', 'commercial', 'charterer', 'admin'] },
       { label: 'Cargo Enquiries', href: '/cargo-enquiries', roles: ['broker', 'commercial', 'charterer', 'admin'] },
       { label: 'Open Tonnage', href: '/open-tonnage', roles: ['broker', 'commercial', 'admin'] },
@@ -65,7 +95,7 @@ export const workflowStages: NavStage[] = [
       { label: 'Weather', href: '/weather-warranty', roles: ['operations', 'technical', 'admin'] },
       { label: 'Cargo Compat', href: '/cargo-compatibility', roles: ['operations', 'technical', 'admin'] },
       { label: 'Agent Dir', href: '/agent-directory', roles: ['operations', 'commercial', 'admin'] },
-      { label: 'Port Map', href: '/port-map', roles: ['operations', 'commercial', 'agent', 'admin'] },
+      { label: 'Port Map', href: '/port-map', roles: ['operations', 'commercial', 'agent', 'viewer', 'admin'] },
     ],
   },
   {
@@ -75,7 +105,7 @@ export const workflowStages: NavStage[] = [
     color: 'green',
     description: 'Voyage in progress - real-time operations',
     items: [
-      { label: 'Dashboard', href: '/', roles: 'all' },
+      { label: 'Dashboard', href: '/', roles: 'all' }, // Available to all including demo/viewer
       { label: 'AIS Live', href: '/ais/live', roles: ['operations', 'commercial', 'fleet-owner', 'admin'] },
       { label: 'DA Desk', href: '/da-desk', roles: ['operations', 'agent', 'admin'] },
       { label: 'Port Docs', href: '/port-documents', roles: ['operations', 'agent', 'admin'] },
@@ -111,10 +141,10 @@ export const workflowStages: NavStage[] = [
     color: 'purple',
     description: 'Vessel and crew management',
     items: [
-      { label: 'Vessels', href: '/vessels', roles: ['fleet-owner', 'technical', 'operations', 'admin'] },
+      { label: 'Vessels', href: '/vessels', roles: ['fleet-owner', 'technical', 'operations', 'viewer', 'admin'] },
       { label: 'Vsl Portal', href: '/vessel-portal', roles: ['fleet-owner', 'technical', 'admin'] },
       { label: 'Fleet Portal', href: '/fleet-portal', roles: ['fleet-owner', 'technical', 'admin'] },
-      { label: 'Positions', href: '/vessel-positions', roles: ['fleet-owner', 'operations', 'commercial', 'admin'] },
+      { label: 'Positions', href: '/vessel-positions', roles: ['fleet-owner', 'operations', 'commercial', 'viewer', 'admin'] },
       { label: 'Vsl History', href: '/vessel-history', roles: ['fleet-owner', 'technical', 'admin'] },
       { label: 'Certificates', href: '/vessel-certificates', roles: ['fleet-owner', 'technical', 'compliance', 'admin'] },
       { label: 'Inspections', href: '/vessel-inspections', roles: ['fleet-owner', 'technical', 'compliance', 'admin'] },
@@ -149,7 +179,7 @@ export const workflowStages: NavStage[] = [
     color: 'emerald',
     description: 'Port information and route planning',
     items: [
-      { label: 'Ports', href: '/ports', roles: ['operations', 'commercial', 'agent', 'admin'] },
+      { label: 'Ports', href: '/ports', roles: ['operations', 'commercial', 'agent', 'viewer', 'admin'] },
       { label: 'Fleet Routes', href: '/fleet-routes', roles: ['operations', 'commercial', 'technical', 'admin'] },
       { label: 'Congestion', href: '/port-congestion', roles: ['operations', 'commercial', 'admin'] },
       { label: 'Restrictions', href: '/port-restrictions', roles: ['operations', 'commercial', 'admin'] },
@@ -194,7 +224,7 @@ export const workflowStages: NavStage[] = [
     color: 'indigo',
     description: 'Document management',
     items: [
-      { label: 'Docs', href: '/documents', roles: 'all' },
+      { label: 'Docs', href: '/documents', roles: 'all' }, // Available to demo users (DMS)
       { label: 'Templates', href: '/document-templates', roles: ['operations', 'commercial', 'admin'] },
       { label: 'Doc Links', href: '/document-links', roles: ['operations', 'commercial', 'admin'] },
     ],
@@ -220,12 +250,12 @@ export const workflowStages: NavStage[] = [
     color: 'violet',
     description: 'Analytics, reporting, and AI tools',
     items: [
-      { label: 'Analytics', href: '/analytics', roles: 'all' },
-      { label: 'Reports', href: '/reports', roles: 'all' },
+      { label: 'Analytics', href: '/analytics', roles: 'all' }, // Available to demo users
+      { label: 'Reports', href: '/reports', roles: 'all' }, // Available to demo users
       { label: 'Ops KPI', href: '/operations-kpi', roles: ['operations', 'commercial', 'admin'] },
       { label: 'Mari8xLLM', href: '/mari8x-llm', roles: 'all' },
       { label: 'AI Engine', href: '/ai-engine', roles: ['operations', 'commercial', 'admin'] },
-      { label: 'Knowledge', href: '/knowledge-base', roles: 'all' },
+      { label: 'Knowledge', href: '/knowledge-base', roles: 'all' }, // Available to demo users
       { label: 'Search', href: '/advanced-search', roles: 'all' },
       { label: 'Flow Canvas', href: '/flow-canvas', roles: ['admin', 'operations'] },
       { label: 'Features', href: '/features', roles: 'all' },

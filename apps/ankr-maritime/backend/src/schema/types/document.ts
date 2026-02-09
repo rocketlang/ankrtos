@@ -9,6 +9,20 @@ builder.prismaObject('Document', {
     fileName: t.exposeString('fileName'),
     fileSize: t.exposeInt('fileSize'),
     mimeType: t.exposeString('mimeType'),
+    folderId: t.string({
+      nullable: true,
+      // Folder ID for document organization (maps to category or custom folder)
+      resolve: (parent) => parent.category || null,
+    }),
+    fileHash: t.string({
+      nullable: true,
+      // SHA256 hash for duplicate detection - computed if needed
+      resolve: (parent) => {
+        // Return a simple hash based on filename + fileSize as placeholder
+        // In production, this should be actual file content hash
+        return `${parent.fileName}_${parent.fileSize}`;
+      },
+    }),
     entityType: t.exposeString('entityType', { nullable: true }),
     entityId: t.exposeString('entityId', { nullable: true }),
     voyageId: t.exposeString('voyageId', { nullable: true }),
@@ -28,18 +42,22 @@ builder.queryField('documents', (t) =>
     type: ['Document'],
     args: {
       category: t.arg.string(),
+      folderId: t.arg.string(), // Alias for category filter
       entityType: t.arg.string(),
       entityId: t.arg.string(),
       search: t.arg.string(),
     },
     resolve: (query, _root, args, ctx) => {
       const orgId = ctx.user?.organizationId;
+      // folderId maps to category for now
+      const categoryFilter = args.folderId || args.category;
+
       return ctx.prisma.document.findMany({
         ...query,
         where: {
           ...(orgId ? { organizationId: orgId } : {}),
           status: 'active',
-          ...(args.category ? { category: args.category } : {}),
+          ...(categoryFilter ? { category: categoryFilter } : {}),
           ...(args.entityType ? { entityType: args.entityType } : {}),
           ...(args.entityId ? { entityId: args.entityId } : {}),
           ...(args.search ? { OR: [

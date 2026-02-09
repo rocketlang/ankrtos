@@ -122,11 +122,12 @@ builder.queryField('cashFlowSummary', (t) =>
   t.field({
     type: CashFlowSummary,
     args: {
-      year: t.arg.int({ required: true }),
+      year: t.arg.int({ required: false }), // Made optional - defaults to current year
     },
     resolve: async (_root, args, ctx) => {
-      const startDate = new Date(args.year, 0, 1);
-      const endDate = new Date(args.year + 1, 0, 1);
+      const year = args.year ?? new Date().getFullYear();
+      const startDate = new Date(year, 0, 1);
+      const endDate = new Date(year + 1, 0, 1);
 
       const entries = await ctx.prisma.cashFlowEntry.findMany({
         where: {

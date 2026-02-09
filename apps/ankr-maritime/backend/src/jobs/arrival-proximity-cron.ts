@@ -13,8 +13,11 @@
 import { PrismaClient } from '@prisma/client';
 import { ProximityDetectorService } from '../services/arrival-intelligence/proximity-detector.service';
 import { ArrivalIntelligenceService } from '../services/arrival-intelligence/arrival-intelligence.service';
+import { getPrisma } from '../lib/db.js';
 
-const prisma = new PrismaClient();
+
+// Migrated to shared DB manager - use getPrisma()
+const prisma = await getPrisma();
 const proximityDetector = new ProximityDetectorService(prisma);
 const intelligenceService = new ArrivalIntelligenceService(prisma);
 

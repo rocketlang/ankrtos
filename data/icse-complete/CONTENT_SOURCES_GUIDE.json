@@ -1,0 +1,79 @@
+{
+  "official_sources": {
+    "CISCE": {
+      "url": "https://cisce.org",
+      "content": [
+        "Syllabi",
+        "Regulations",
+        "Specimen Papers",
+        "FAQs"
+      ],
+      "free": true,
+      "registration_required": false
+    }
+  },
+  "textbook_solutions": {
+    "Tiwari_Academy": {
+      "url": "https://www.tiwariacademy.com/icse-books/",
+      "subjects": [
+        "All ICSE subjects"
+      ],
+      "classes": [
+        9,
+        10
+      ],
+      "format": [
+        "PDF",
+        "Online"
+      ],
+      "free": true
+    },
+    "Vedantu": {
+      "url": "https://www.vedantu.com/selina-solutions",
+      "publisher": "Selina",
+      "subjects": [
+        "Mathematics",
+        "Physics",
+        "Chemistry",
+        "Biology"
+      ],
+      "classes": [
+        9,
+        10
+      ],
+      "free": true,
+      "login_required": false
+    },
+    "Learn_CBSE": {
+      "url": "https://www.learncbse.in/icse/",
+      "content": [
+        "Solutions",
+        "Notes",
+        "Sample Papers"
+      ],
+      "free": true
+    }
+  },
+  "sample_papers": {
+    "Entrancei": {
+      "url": "https://entrancei.com/icse-sample-papers",
+      "years": "Multiple years",
+      "subjects": "All major subjects",
+      "free": true
+    },
+    "BYJU_S": {
+      "url": "https://byjus.com/icse/",
+      "content": [
+        "Sample Papers",
+        "Previous Years",
+        "Solutions"
+      ],
+      "free": "Partial (some require login)"
+    }
+  },
+  "video_lectures": {
+    "Khan_Academy": "Math and Science",
+    "BYJU_S": "All subjects (subscription)",
+    "Vedantu": "Free YouTube lectures"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "classes": {
+    "9": {
+      "board": "ICSE",
+      "subjects": [
+        "English Language",
+        "English Literature",
+        "Hindi",
+        "Mathematics",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "History & Civics",
+        "Geography",
+        "Economics",
+        "Commercial Studies",
+        "Computer Applications",
+        "Physical Education"
+      ]
+    },
+    "10": {
+      "board": "ICSE",
+      "subjects": "Same as Class 9",
+      "note": "Board examination year"
+    },
+    "11": {
+      "board": "ISC",
+      "streams": {
+        "Science": [
+          "Physics",
+          "Chemistry",
+          "Biology/Computer Science",
+          "Mathematics",
+          "English"
+        ],
+        "Commerce": [
+          "Accounts",
+          "Commerce",
+          "Economics",
+          "Mathematics/Computer Science",
+          "English"
+        ],
+        "Humanities": [
+          "History",
+          "Political Science",
+          "Sociology",
+          "Psychology",
+          "English"
+        ]
+      }
+    },
+    "12": {
+      "board": "ISC",
+      "note": "Board examination year - same subjects as Class 11"
+    }
+  },
+  "content_types": [
+    "Textbooks (Publisher: Selina, Concise, Frank, etc.)",
+    "Sample Papers (CISCE official)",
+    "Specimen Papers (Previous years)",
+    "Syllabi (Subject-wise)",
+    "Question Banks",
+    "Study Notes",
+    "Video Lectures (third-party)",
+    "Interactive Content"
+  ],
+  "recommended_publishers": {
+    "Mathematics": [
+      "Selina",
+      "ML Aggarwal",
+      "RS Aggarwal"
+    ],
+    "Science": [
+      "Selina",
+      "Concise"
+    ],
+    "English": [
+      "Treasure Trove"
+    ],
+    "History/Civics": [
+      "Frank"
+    ],
+    "Geography": [
+      "Frank",
+      "Veena Bhargava"
+    ]
+  }
+}

@@ -2016,6 +2016,14 @@ model VesselPosition {
   dimensionToPort     Int?     // Distance from AIS unit to port side in meters
   dimensionToStarboard Int?    // Distance from AIS unit to starboard in meters
 
+  // GFW (Global Fishing Watch) enrichment fields
+  gfw_event_id        String?  // GFW event ID for tracking origin
+  gfw_event_type      String?  // Type: port_visit, fishing, encounter, loitering
+  port_id             String?  // Port ID for port visit events
+  confidence_score    Float?   @default(1.0) // Data quality score (0-1)
+  is_interpolated     Boolean? @default(false) // True if position is estimated/interpolated
+  zone_type           String?  // For geofencing: EEZ, territorial, port, etc.
+
   vessel Vessel @relation(fields: [vesselId], references: [id])
 
   @@index([vesselId])
@@ -2023,6 +2031,9 @@ model VesselPosition {
   @@index([vesselId, timestamp])
   @@index([navigationStatus]) // For fleet status queries
   @@index([draught]) // For port compatibility queries
+  @@index([gfw_event_id]) // For GFW event lookup
+  @@index([gfw_event_type]) // For GFW event filtering
+  @@index([port_id]) // For port visit queries
   @@map("vessel_positions")
 }
 

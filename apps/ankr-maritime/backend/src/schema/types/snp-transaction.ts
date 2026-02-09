@@ -25,6 +25,21 @@ builder.prismaObject('SNPTransaction', {
     createdAt: t.expose('createdAt', { type: 'DateTime' }),
     updatedAt: t.expose('updatedAt', { type: 'DateTime' }),
     saleListing: t.relation('saleListing'),
+    vessel: t.field({
+      // Convenience field - exposes vessel from saleListing
+      type: 'Vessel',
+      nullable: true,
+      resolve: async (parent, _args, ctx) => {
+        const listing = await ctx.prisma.saleListing.findUnique({
+          where: { id: parent.saleListingId },
+          select: { vesselId: true },
+        });
+        if (!listing?.vesselId) return null;
+        return ctx.prisma.vessel.findUnique({
+          where: { id: listing.vesselId },
+        });
+      },
+    }),
     buyerOrg: t.relation('buyerOrg'),
     sellerOrg: t.relation('sellerOrg'),
     commissions: t.relation('commissions'),
