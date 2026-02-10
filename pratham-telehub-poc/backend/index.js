@@ -9,14 +9,16 @@ import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import { getPlivoService } from './services/PlivoService.js';
+import { getMSG91Service } from './services/MSG91Service.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 dotenv.config();
 
-// Initialize Plivo service
+// Initialize services
 const plivoService = getPlivoService();
+const msg91Service = getMSG91Service();
 
 const fastify = Fastify({
   logger: true
@@ -419,6 +421,124 @@ fastify.post('/api/plivo/recording', async (request, reply) => {
   broadcastUpdate('recording_available', { CallUUID, RecordingURL });
 
   return { status: 'ok' };
+});
+
+// ============================================
+// MSG91 SERVICES (SMS, WhatsApp, OBD)
+// ============================================
+
+// Send SMS to lead
+fastify.post('/api/msg91/sms', async (request, reply) => {
+  const { to, message, lead_id } = request.body;
+
+  try {
+    const result = await msg91Service.sendSMS(to, message);
+
+    // Log SMS in database
+    await pool.query(
+      'INSERT INTO communications (lead_id, type, provider, message, status, external_id) VALUES ($1, $2, $3, $4, $5, $6)',
+      [lead_id, 'sms', 'msg91', message, 'sent', result.message_id]
+    );
+
+    return result;
+  } catch (error) {
+    reply.code(500);
+    return { error: error.message };
+  }
+});
+
+// Send WhatsApp message to lead
+fastify.post('/api/msg91/whatsapp', async (request, reply) => {
+  const { to, templateName, components, lead_id } = request.body;
+
+  try {
+    const result = await msg91Service.sendWhatsApp(to, null, {
+      templateName,
+      components
+    });
+
+    // Log WhatsApp message
+    await pool.query(
+      'INSERT INTO communications (lead_id, type, provider, message, status, external_id) VALUES ($1, $2, $3, $4, $5, $6)',
+      [lead_id, 'whatsapp', 'msg91', templateName, 'sent', result.message_id]
+    ).catch(() => {}); // Ignore if table doesn't exist
+
+    return result;
+  } catch (error) {
+    reply.code(500);
+    return { error: error.message };
+  }
+});
+
+// Make OBD call (automated message)
+fastify.post('/api/msg91/obd', async (request, reply) => {
+  const { to, audioUrl, lead_id } = request.body;
+
+  try {
+    const result = await msg91Service.makeOBDCall(to, audioUrl);
+    return result;
+  } catch (error) {
+    reply.code(500);
+    return { error: error.message };
+  }
+});
+
+// Click-to-Call (alternative to Plivo)
+fastify.post('/api/msg91/click-to-call', async (request, reply) => {
+  const { from, to, lead_id, telecaller_id } = request.body;
+
+  try {
+    const result = await msg91Service.makeClickToCall(from, to);
+
+    // Create call record
+    await pool.query(
+      `INSERT INTO calls (lead_id, telecaller_id, provider, status, msg91_call_id)
+       VALUES ($1, $2, 'msg91', 'initiated', $3)`,
+      [lead_id, telecaller_id, result.call_id]
+    ).catch(() => {}); // Ignore if table doesn't exist
+
+    return result;
+  } catch (error) {
+    reply.code(500);
+    return { error: error.message };
+  }
+});
+
+// Send bulk SMS campaign
+fastify.post('/api/msg91/campaign/sms', async (request, reply) => {
+  const { recipients, message, campaign_name } = request.body;
+
+  try {
+    const result = await msg91Service.sendBulkSMS(recipients, message);
+    return result;
+  } catch (error) {
+    reply.code(500);
+    return { error: error.message };
+  }
+});
+
+// Send bulk OBD campaign
+fastify.post('/api/msg91/campaign/obd', async (request, reply) => {
+  const { recipients, audioUrl, campaign_name } = request.body;
+
+  try {
+    const result = await msg91Service.sendBulkOBD(recipients, audioUrl);
+    return result;
+  } catch (error) {
+    reply.code(500);
+    return { error: error.message };
+  }
+});
+
+// Get MSG91 balance
+fastify.get('/api/msg91/balance', async (request, reply) => {
+  try {
+    const balance = await msg91Service.getBalance();
+    return balance;
+  } catch (error) {
+    reply.code(500);
+    return { error: error.message };
+  }
 });
 
 // Get AI suggestions for a call (simulated)

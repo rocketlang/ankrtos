@@ -11,8 +11,10 @@
   "dependencies": {
     "@fastify/cors": "^8.5.0",
     "@fastify/websocket": "^8.3.1",
+    "axios": "^1.13.5",
     "dotenv": "^16.4.1",
     "fastify": "^4.26.0",
+    "msg91": "^2.2.8",
     "pg": "^8.11.3",
     "plivo": "^4.75.6"
   }
