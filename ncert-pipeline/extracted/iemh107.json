@@ -1,0 +1,267 @@
+{
+  "filename": "iemh107.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "Two figures are congruent, if they are of the same s",
+      "content": "1. Two figures are congruent, if they are of the same shape and of the same size.\n",
+      "wordCount": 17,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 2,
+      "title": "Two circles of the same radii are congruent.",
+      "content": "2. Two circles of the same radii are congruent.\n",
+      "wordCount": 9,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 3,
+      "title": "Two squares of the same sides are congruent.",
+      "content": "3. Two squares of the same sides are congruent.\n",
+      "wordCount": 9,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 4,
+      "title": "If two triangles ABC and PQR are congruent under the",
+      "content": "4. If two triangles ABC and PQR are congruent under the correspondence A ↔ P,\nB ↔ Q and C ↔ R, then symbolically , it is expressed as ∆ ABC ≅ ∆ PQR.\n",
+      "wordCount": 34,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 5,
+      "title": "If two sides and the included angle of one triangle",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 6,
+      "title": ", you have also studied some properties",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 7,
+      "title": "TRIANGLES",
+      "content": "CHAPTER 7\nTRIANGLES\n7.1 Introduction\nYou have studied about triangles and their various properties in your earlier classes.\nYou know that a closed figure formed by three intersecting lines is called a triangle.\n(‘Tri’ means ‘three’). A triangle has three sides, three angles and three vertices. For\nexample, in triangle ABC, denoted as ∆ ABC (see Fig. 7.1); AB, BC, CA  are the three\nsides, ∠ A, ∠ B, ∠ C are the three angles and A, B, C are three vertices.\nIn Chapter 6, you have also studied some properties\nof triangles. In this chapter , you will study in details\nabout the congruence of triangles, rules of congruence,\nsome more properties of triangles and inequalities in\na triangle. You have already verified most of these\nproperties in earlier classes. We will now prove some\nof them.\n7.2 Congruence of Triangles\nYou must have observed that two copies of your photographs of the same size are\nidentical. Similarly , two bangles of the same size, two ATM cards issued by the same\nbank are identical. You may recall that on placing a one rupee coin on another minted\nin the same year , they cover each other completely .\nDo you remember what such figures are called? Indeed they are called  congruent\nfigures (‘congruent’ means equal in all respects or figures whose shapes and sizes\nare both the same).\nNow , draw two circles of the same radius and place one on the other . What do\nyou observe? They cover each other completely and we call them as congruent circles.Fig. 7.1\nReprint 2025-26\n\n84 MATHEMA TICS\nRepeat this activity by placing one\nsquare on the other with sides of the same\nmeasure (see Fig. 7.2) or by placing two\nequilateral triangles of equal sides on each\nother . You will observe that the squares are\ncongruent to each other and so are the\nequilateral triangles.\nYou may wonder why we are studying congruence. You all must have seen the ice\ntray in your refrigerator . Observe that the moulds for making ice are all congruent.\nThe cast used for moulding in the tray also has congruent depressions (may be all are\nrectangular or all circular or all triangular). So, whenever identical objects have to be\nproduced, the concept of congruence is used in making the cast.\nSometimes, you may find it difficult to replace the refill in your pen by a new one\nand this is so when the new refill is not of the same size as the one you want to\nremove. Obviously , if the two refills are identical or congruent, the new refill fits.\nSo, you can find numerous examples where congruence of objects is applied in\ndaily life situations.\nCan you think of some more examples of congruent figures?\nNow , which of the following figures are not congruent to the square in\nFig 7.3 (i) :\nFig. 7.3\nThe large squares in Fig. 7.3 (ii) and (iii) are obviously not congruent to the one in\nFig 7.3 (i), but the square in Fig 7.3 (iv) is congruent to the one given in Fig 7.3 (i).\nLet us now discuss the congruence of two triangles.\nYou already know that two triangles are congruent if the sides and angles of one\ntriangle are equal to the corresponding sides and angles of the other triangle.Fig. 7.2\nReprint 2025-26\n\nTRIANGLES 85\nNow , which of the triangles given below are congruent to triangle ABC in\nFig. 7.4 (i)?\nFig. 7.4\nCut out each of these triangles from Fig. 7.4 (ii) to (v) and turn them around and\ntry to cover ∆ ABC. Observe that triangles in Fig. 7.4 (ii), (iii) and (iv) are congruent\nto ∆ ABC while ∆ TSU of Fig 7.4 (v) is not congruent to ∆ ABC.\nIf ∆ PQR is congruent to ∆ ABC, we write ∆ PQR ≅ ∆ ABC.\nNotice that when ∆ PQR ≅ ∆ ABC, then sides of ∆ PQR fall on corresponding\nequal sides of ∆ ABC and so is the case for the angles.\nThat is, PQ covers AB, QR covers BC and RP  covers CA; ∠ P  covers ∠ A,\n∠ Q covers ∠ B and ∠ R covers ∠ C. Also, there is a one-one correspondence\nbetween the vertices. That is, P  corresponds to A, Q to B, R to C and so on which is\nwritten as\nP ↔\n A, Q ↔ B,R ↔ C\nNote that under this correspondence, ∆ PQR ≅ ∆ ABC; but it will not be correct to\nwrite ∆QRP  ≅ ∆ ABC.\nSimilarly , for Fig. 7.4 (iii),\nReprint 2025-26\n\n86 MATHEMA TICS\nFD ↔ AB, DE ↔ BC and EF ↔ CA\nand F ↔ A, D ↔ Band E ↔ C\nSo, ∆ FDE ≅ ∆ ABC but writing ∆ DEF ≅ ∆ ABC is not correct.\nGive the correspondence between the triangle in Fig. 7.4 (iv) and ∆ ABC.\nSo, it is necessary to write the correspondence of vertices correctly for writing of\ncongruence of triangles in symbolic form.\nNote that in congruent triangles  corresponding parts are equal and we write\nin short ‘CPCT’  for corresponding par ts of congr uent triangles .\n7.3 Criteria for  Congruence of Triangles\nIn earlier classes, you have learnt four criteria for congruence of triangles. Let us\nrecall them.\nDraw two triangles with one side 3 cm. Are these triangles congruent? Observe\nthat they are not congruent (see Fig. 7.5).\nFig. 7.5\nNow , draw two triangles with one side 4 cm and one angle 50° (see Fig. 7.6). Are\nthey congruent?\nFig. 7.6\nReprint 2025-26\n\nTRIANGLES 87\nSee that these two triangles are not congruent.\nRepeat this activity with some more pairs of triangles.\nSo, equality of one pair of sides or one pair of sides and one pair of angles is not\nsufficient to give us congruent triangles.\nWhat would happen if the other pair of arms (sides) of the equal angles are also\nequal?\nIn Fig 7.7, BC = QR, ∠ B = ∠ Q and also, AB = PQ. Now , what can you say\nabout congruence of ∆ABC and ∆PQR?\nRecall from your earlier classes that, in this case, the two triangles are congruent.\nVerify this for ∆ ABC and ∆ PQR in Fig. 7.7.\nRepeat this activity with other pairs of triangles. Do you observe that the equality\nof two sides and the included angle is enough for the congruence of triangles? Yes, it\nis enough.\nFig. 7.7\nThis is the first criterion for congruence of triangles.\nAxiom 7.1  (SAS congruence rule) :  Two triangles ar e congr uent if two sides\nand the included angle of one triangle ar e equal to the two sides and the included\nangle of the other triangle.\nThis result cannot be proved with the help of previously known results and so it is\naccepted true as an axiom (see Appendix 1).\nLet us now take some examples.\nExample 1 :  In Fig. 7.8, OA = OB and OD = OC. Show that\n(i) ∆ AOD ≅ ∆ BOC and (ii) AD || BC.\nSolution :  (i) You may observe that in ∆ AOD and ∆ BOC,\nOA = OB(Given)\nOD = OC\nFig. 7.8\n\n\nReprint 2025-26\n\n88 MATHEMA TICS\nAlso, since ∠ AOD and ∠ BOC form a pair of vertically opposite angles, we have\n∠ AOD = ∠ BOC.\nSo, ∆ AOD ≅∆ BOC (by the SAS congruence rule)\n(ii)In congruent triangles AOD and BOC, the other corresponding parts are also\nequal.\nSo, ∠ OAD = ∠ OBC and these form a pair of alternate angles for line segments\nAD and BC.\nTherefore, AD || BC.\nExample 2 :  AB is a line segment and line l is its perpendicular bisector . If a point P\nlies on l, show that P  is equidistant from A and B.\nSolution :  Line l ⊥ AB and passes through C which\nis the mid-point of AB (see Fig. 7.9). You have to\nshow that P A = PB. Consider ∆ PCA  and ∆ PCB.\nWe have AC = BC (C is the mid-point of AB)\n∠ PCA = ∠ PCB = 90°  (Given)\nPC = PC  (Common)\nSo, ∆ PCA ≅ ∆ PCB (SAS rule)\nand so, P A = PB, as they are corresponding sides of\ncongruent triangles.\nNow , let us construct two triangles, whose sides are 4 cm and 5 cm and one of the\nangles is 50° and this angle is not included in between the equal sides (see Fig. 7.10).\nAre the two triangles congruent?\nFig. 7.10Fig. 7.9\nReprint 2025-26\n\nTRIANGLES 89\nNotice that the two triangles are not congruent.\nRepeat this activity with more pairs of triangles. You will observe that for triangles\nto be congruent, it is very important that the equal angles are included between the\npairs of equal sides.\nSo, SAS congr uence r ule holds but not ASS or SSA  rule.\nNext, try to construct the two triangles in which two angles are 60° and 45° and\nthe side included between these angles is 4 cm (see Fig. 7.1 1).\nFig. 7.1 1\nCut out these triangles and place one triangle on the other . What do you observe?\nSee that one triangle covers the other completely; that is, the two triangles are congruent.\nRepeat this activity with more pairs of triangles. You will observe that equality of two\nangles and the included side is sufficient for congruence of triangles.\nThis result is the Angle-Side-Angle criterion for congruence and is written as\nASA  criterion. You have verified this criterion in earlier classes, but let us state and\nprove this result.\nSince this result can be proved, it is called a theorem and to prove it, we use the\nSAS axiom for congruence.\nTheor em 7.1   (ASA  congruence rule) :  Two triangles ar e congr uent if two angles\nand the included side of one triangle ar e equal to two angles and the included\nside of other triangle .\nProof :  We are given two triangles ABC and DEF in which:\n∠ B = ∠ E, ∠ C = ∠ F\nand BC = EF\nWe need to prove that ∆ ABC ≅∆ DEF\nFor proving the congruence of the two triangles see that three cases arise.\nReprint 2025-26\n\n90 MATHEMA TICS\nCase (i) : Let AB = DE (see Fig. 7.12).\nNow what do you observe? You may observe that\nAB = DE (Assumed)\n∠ B = ∠ E (Given)\nBC = EF (Given)\nSo, ∆ ABC ≅∆ DEF (By SAS rule)\nFig. 7.12\nCase (ii) :  Let if possible AB > DE. So, we can take a point P on AB such that\nPB = DE. Now consider ∆ PBC and ∆ DEF (see Fig. 7.13).\nFig. 7.13\nObserve that in ∆ PBC and ∆ DEF,\nPB = DE (By construction)\n∠ B =∠ E (Given)\nBC = EF (Given)\nSo, we can conclude that:\n∆ PBC ≅ ∆ DEF, by the SAS axiom for congruence.\nReprint 2025-26\n\nTRIANGLES 91\nSince the triangles are congruent, their corresponding parts will be equal.\nSo, ∠ PCB = ∠ DFE\nBut, we are given that\n∠ ACB = ∠ DFE\nSo, ∠ ACB = ∠ PCB\nIs this possible?\nThis is possible only if P  coincides with A.\nor, BA = ED\nSo, ∆ ABC ≅∆ DEF (by SAS axiom)\nCase (iii) :  If AB < DE, we can choose a point M on DE such that ME = AB and\nrepeating the ar guments as given in Case (ii),  we can conclude that AB = DE and so,\n∆ ABC ≅ ∆ DEF.\nSuppose, now in two triangles two pairs of angles and one pair of corresponding\nsides are equal but the side is not included between the corresponding equal pairs of\nangles. Are the triangles still congruent? You will observe that they are congruent.\nCan you reason out why?\nYou know that the sum of the three angles of a triangle is 180°. So if two pairs of\nangles are equal, the third pair is also equal (180° – sum of equal angles).\nSo, two triangles ar e congr uent if any two pairs of angles and one pair of\ncorresponding sides ar e equal . We may call it as the AAS Congruence Rule .\nNow let us perform the following activity :\nDraw triangles with angles 40°, 50° and 90°. How many such triangles can you\ndraw?\nIn fact, you can draw as many triangles as you want with different lengths of\nsides (see Fig. 7.14).\nFig. 7.14\nReprint 2025-26\n\n92 MATHEMA TICS\nObserve that the triangles may or may not be congruent to each other .\nSo, equality of three angles is not sufficient for congruence of triangles. Therefore,\nfor congruence of triangles out of three equal parts, one has to be a side.\nLet us now take some more examples.\nExample 3 :  Line-segment AB is parallel to another line-segment CD. O is the\nmid-point of AD (see Fig. 7.15). Show that (i) ∆AOB ≅ ∆DOC (ii) O is also the\nmid-point of BC.\nSolution :  (i) Consider ∆ AOB and ∆ DOC.\n∠ ABO = ∠ DCO\n(Alternate angles as AB || CD\n     and BC is the transversal)\n∠ AOB = ∠ DOC\n(Vertically opposite angles)\nOA = OD (Given)\nTherefore, ∆AOB ≅∆DOC (AAS rule)\n(ii) OB = OC (CPCT)\nSo, O is the mid-point of BC.\nEXERCISE 7.1\n1.In quadrilateral ACBD,\nAC = AD and AB bisects ∠A\n(see Fig. 7.16). Show that ∆ ABC ≅ ∆ ABD.\nWhat can you say about BC and BD?Fig. 7.15\nFig. 7.16\nReprint 2025-26\n\nTRIANGLES 93\n2.ABCD is a quadrilateral in which AD = BC and\n∠ DAB = ∠ CBA (see Fig. 7.17). Prove that\n(i)∆ ABD ≅ ∆ BAC\n(ii)BD = AC\n(iii)∠ ABD = ∠ BAC.\n3.AD and BC are equal perpendiculars to a line\nsegment AB (see Fig. 7.18). Show that CD bisects\nAB.\n4.l and m are two parallel lines intersected by\nanother pair of parallel lines p and q\n(see Fig. 7.19). Show that ∆ ABC ≅ ∆ CDA.\n5.Line l is the bisector of an angle ∠ A and B is any\npoint on l. BP and BQ are perpendiculars from B\nto the arms of ∠ A (see Fig. 7.20) . Show that:\n(i)∆ APB ≅ ∆ AQB\n(ii)BP = BQ or B is equidistant from the arms\nof  ∠ A.Fig. 7.17\nFig. 7.18\nFig. 7.19\nFig. 7.20\nReprint 2025-26\n\n94 MATHEMA TICS\n6.In Fig. 7.21, AC = AE, AB = AD and\n∠ BAD = ∠ EAC. Show that BC = DE.\n7.AB is a line segment and P is its mid-point. D and\nE are points on the same side of AB such that\n∠ BAD = ∠ ABE and ∠ EPA = ∠ DPB\n(see Fig. 7.22). Show that\n(i)∆ DAP ≅ ∆ EBP\n(ii)AD = BE\n8.In right triangle ABC, right angled at C, M is\nthe mid-point of hypotenuse AB. C is joined\nto M and produced to a point D such that\nDM = CM. Point D is joined to point B\n(see Fig. 7.23). Show that:\n(i)∆ AMC ≅ ∆ BMD\n(ii)∠ DBC is a right angle.\n(iii)∆ DBC ≅ ∆ ACB\n(iv)CM = 1\n2 AB\n7.4 Some Pr oper ties of a Triangle\nIn the above section you have studied two criteria for congruence of triangles. Let us\nnow apply these results to study some properties related to a triangle whose two sides\nare equal.Fig. 7.22\nFig. 7.23Fig. 7.21\nReprint 2025-26\n\nTRIANGLES 95\nPerform the activity given below:\nConstruct a triangle in which two sides are\nequal, say each equal to 3.5 cm and the third side\nequal to 5 cm (see Fig. 7.24). You have done such\nconstructions in earlier classes.\nDo you remember what is such a triangle\ncalled?\nA triangle in which two sides are equal is called\nan isosceles triangle . So, ∆ ABC of Fig. 7.24 is\nan isosceles triangle with AB = AC.\nNow , measure ∠ B and ∠ C. What do you observe?\nRepeat this activity with other isosceles triangles with different sides.\nYou may observe that in each such triangle, the angles opposite to the equal sides\nare equal.\nThis is a very important result and is indeed true for any isosceles triangle. It can\nbe proved as shown below .\nTheor em 7.2 :  Angles opposite to equal sides of an isosceles triangle ar e equal.\nThis result can be proved in many ways. One of\nthe proofs is given here.\nProof :  We are given an isosceles triangle ABC\nin which AB = AC. We need to prove that\n∠ B = ∠ C.\nLet us draw the bisector of ∠ A and let D be\nthe point of intersection of this bisector of\n∠ A and BC (see Fig. 7.25).\nIn ∆ BAD and ∆ CAD,\nAB = AC (Given)\n∠ BAD = ∠ CAD (By construction)\nAD = AD (Common)\nSo, ∆ BAD ≅∆ CAD (By SAS rule)\nSo, ∠ ABD = ∠ ACD, since they are corresponding angles of congruent triangles.\nSo, ∠ B =∠ CFig. 7.24\nFig. 7.25\nReprint 2025-26\n\n96 MATHEMA TICS\nIs the converse also true? That is:\nIf two angles of any triangle are equal, can we conclude that the sides opposite to\nthem are also equal?\nPerform the following activity .\nConstruct a triangle ABC with BC of any length and ∠ B = ∠ C = 50°. Draw the\nbisector of ∠ A and let it intersect BC at D (see Fig. 7.26).\nCut out the triangle from the sheet of paper and fold it along AD so that vertex C\nfalls on vertex B.\nWhat can you say about sides AC and AB?\nObserve that AC covers AB completely\nSo, AC = AB\nRepeat this activity with some more triangles.\nEach time you will observe that the sides opposite\nto equal angles are equal. So we have the\nfollowing:\nTheor em 7.3 : The sides opposite to equal angles of a triangle ar e equal .\nThis is the converse of Theorem 7.2.\nYou can prove this theorem by ASA  congruence rule.\nLet us take some examples to apply these results.\nExample 4 :  In ∆ ABC, the bisector AD of ∠ A is perpendicular to side BC\n(see Fig. 7.27). Show that AB = AC and ∆ ABC is isosceles.\nSolution :  In ∆ABD and ∆ACD,\n∠ BAD = ∠ CAD (Given)\nAD = AD (Common)\n∠ ADB = ∠ ADC = 90° (Given)\nSo, ∆ ABD ≅∆ ACD (ASA rule)\nSo, AB = AC (CPCT)\nor,∆ ABC is an isosceles triangle.Fig. 7.26\nFig. 7.27\nReprint 2025-26\n\nTRIANGLES 97\nExample 5 :  E and F are respectively the mid-points\nof equal sides AB and AC of ∆ ABC (see Fig. 7.28).\nShow that BF = CE.\nSolution :  In ∆ ABF and ∆ ACE,\nAB = AC (Given)\n∠ A =∠ A (Common)\nAF = AE (Halves of equal sides)\nSo, ∆ ABF ≅∆ ACE (SAS rule)\nTherefore, BF = CE (CPCT)\nExample 6 :  In an isosceles triangle ABC with AB = AC, D and E are points on BC\nsuch that BE = CD (see Fig. 7.29). Show that AD = AE.\nSolution :  In ∆ ABD and ∆ ACE,\nAB = AC (Given) (1)\n∠ B = ∠ C\n(Angles opposite to equal sides)   (2)\nAlso, BE = CD\nSo, BE – DE = CD – DE\nThat is, BD = CE (3)\nSo, ∆ ABD ≅∆ ACE\n(Using (1), (2), (3) and SAS rule).\nThis gives AD = AE (CPCT)\nEXERCISE 7.2\n1.In an isosceles triangle ABC, with AB = AC, the bisectors of ∠ B and ∠ C intersect\neach other at O. Join A to O. Show that :\n(i)OB =  OC (ii)AO bisects ∠ A\n2.In ∆ ABC, AD is the perpendicular bisector of BC\n(see Fig. 7.30). Show that ∆ ABC is an isosceles\ntriangle in which AB = AC.Fig. 7.28\nFig. 7.29\nFig. 7.30\nReprint 2025-26\n\n98 MATHEMA TICS\n3.ABC is an isosceles triangle in which altitudes\nBE and CF are drawn to equal sides AC and AB\nrespectively (see Fig. 7.31). Show that these\naltitudes are equal.\n4.ABC is a triangle in which altitudes BE and CF to\nsides AC and AB are equal (see Fig. 7.32). Show\nthat\n(i)∆ ABE ≅ ∆ ACF\n(ii)AB = AC, i.e., ABC is an isosceles triangle.\n5.ABC and DBC are two isosceles triangles on the\nsame base BC (see Fig. 7.33). Show that\n∠ ABD = ∠ ACD.\n6.∆ABC is an isosceles triangle in which AB = AC.\nSide BA  is produced to D such that AD = AB\n(see Fig. 7.34). Show that ∠ BCD is a right angle.\n7.ABC is a right angled triangle in which ∠ A = 90°\nand AB = AC. Find ∠ B and ∠ C.\n8.Show that the angles of an equilateral triangle\nare 60° each.Fig. 7.32\nFig. 7.33\nFig. 7.34Fig. 7.31\nReprint 2025-26\n\nTRIANGLES 99\n7.5 Some Mor e Criteria for  Congruence of Triangles\nYou have seen earlier in this chapter that equality of three angles of one triangle to\nthree angles of the other is not suf ficient for the congruence of the two triangles. You\nmay wonder whether equality of three sides of one triangle to three sides of another\ntriangle is enough for congruence of the two triangles. You have already verified in\nearlier classes that this is indeed true.\nTo be sure, construct two triangles with sides 4 cm, 3.5 cm and 4.5 cm\n(see Fig. 7.35). Cut them out and place them on each other . What do you observe?\nThey cover each other completely , if the equal sides are placed on each other . So, the\ntriangles are congruent.\nFig. 7.35\nRepeat this activity with some more triangles. We arrive at another rule for\ncongruence.\nTheor em 7.4  (SSS congruence rule) :  If thr ee sides of one triangle ar e equal to\nthe thr ee sides of another triangle, then the two triangles ar e congr uent.\nThis theorem can be proved using a suitable construction.\nYou have already seen that in the SAS congruence rule, the pair of equal angles\nhas to be the included angle between the pairs of corresponding pair of equal sides and\nif this is not so, the two triangles may not  be congruent.\nPerform this activity:\nConstruct two right angled triangles with hypotenuse equal to 5 cm and one side\nequal to 4 cm each (see Fig. 7.36).\nReprint 2025-26\n\n100 MATHEMA TICS\nFig. 7.36\nCut them out and place one triangle over the other with equal side placed on each\nother . Turn the  triangles, if necessary . What do you observe?\nThe two triangles cover each other completely and so they are congruent. Repeat\nthis activity with other pairs of right triangles. What do you observe?\nYou will find that two right triangles are congruent if one pair of sides and the\nhypotenuse are equal. You have verified this in earlier classes.\nNote that, the right angle is not the included angle in this case.\nSo, you arrive at the following congruence rule:\nTheorem 7.5  (RHS congruence rule) :  If in two right triangles the hypotenuse\nand one side of one triangle ar e equal to the hypotenuse and one side of the\nother triangle, then the two triangles ar e congr uent.\nNote that RHS stands for Right angle - Hypotenuse - Side.\nLet us now take some examples.\nExample 7 :  AB is a line-segment. P  and Q are\npoints on opposite sides of AB such that each of them\nis equidistant from the points A and B (see Fig. 7.37).\nShow that the line PQ is the perpendicular bisector\nof AB.\nSolution :  You are given that P A = PB and\nQA = QB and you are to show that PQ ⊥ AB and\nPQ bisects AB. Let PQ intersect AB at C.\nCan you think of two congruent triangles in this figure?\nLet us take ∆ PAQ and ∆ PBQ.\nIn these triangles,Fig. 7.37\nReprint 2025-26\n\nTRIANGLES 101\nAP = BP  (Given)\nAQ = BQ  (Given)\nPQ = PQ  (Common)\nSo, ∆ PAQ ≅∆ PBQ (SSS rule)\nTherefore, ∠ APQ = ∠ BPQ (CPCT).\nNow let us consider ∆PAC and ∆PBC.\nYou have : AP = BP (Given)\n∠ APC = ∠ BPC (∠ APQ = ∠ BPQ proved above)\nPC = PC (Common)\nSo, ∆ PAC ≅∆ PBC (SAS rule)\nTherefore, AC = BC (CPCT) (1)\nand ∠ ACP = ∠ BCP (CPCT)\nAlso, ∠ ACP + ∠ BCP = 180° (Linear pair)\nSo, 2∠ ACP  = 180°\nor, ∠ ACP  = 90° (2)\nFrom (1) and (2), you can easily conclude that PQ is the perpendicular bisector of AB.\n[Note that, without showing the congruence of ∆PAQ and ∆PBQ, you cannot show\nthat ∆PAC ≅ ∆PBC even though AP = BP (Given)\nPC = PC  (Common)\nand ∠ PAC = ∠ PBC (Angles opposite to equal sides in\n∆APB)\nIt is because these results give us SSA rule which is not always valid or true for\ncongruence of triangles. Also the angle is not included between the equal pairs of\nsides.]\nLet us take some more examples.\nExample 8 :  P is a point equidistant from two lines l and m intersecting at point A\n(see Fig. 7.38). Show that the line AP bisects the angle between them.\nSolution :  You are given that lines l and m intersect  each other at A. Let PB ⊥ \nl,\nPC ⊥ m. It is given that PB = PC.\nYou are to show that ∠ PAB = ∠ PAC.\nReprint 2025-26\n\n102 MATHEMA TICS\nLet us consider ∆ PAB and ∆ PAC. In these two\ntriangles,\nPB = PC (Given)\n∠ PBA = ∠ PCA = 90° (Given)\nPA =P\nA (Common)\nSo, ∆ PAB ≅∆ PAC (RHS rule)\nSo, ∠ PAB = ∠ PAC (CPCT)\nNote that this result is the converse of the result proved in Q.5 of Exercise 7.1.\nEXERCISE 7.3\n1.∆ ABC and ∆ DBC are two isosceles triangles on\nthe same base BC and vertices A and D are on the\nsame side of BC (see Fig. 7.39). If AD is extended\nto intersect BC at P , show that\n(i)∆ ABD ≅ ∆ ACD\n(ii)∆ ABP  ≅ ∆ ACP\n(iii)AP bisects ∠ A as well as ∠ D.\n(iv)AP is the perpendicular bisector of BC.\n2.AD is an altitude of an isosceles triangle ABC in which AB = AC. Show that\n(i)AD bisects BC (ii)AD bisects ∠ A.\n3.Two sides AB and BC and median AM\nof one triangle ABC are respectively\nequal to sides PQ and QR and median\nPN of ∆ PQR (see Fig. 7.40). Show that:\n(i)∆ ABM ≅ ∆ PQN\n(ii)∆ ABC ≅ ∆ PQR\n4.BE and CF are two equal altitudes of a triangle ABC. Using RHS congruence\nrule, prove that the triangle ABC is isosceles.\n5.ABC is an isosceles triangle with AB = AC. Draw AP ⊥ BC to show that\n∠ B = ∠ C.Fig. 7.38\nFig. 7.39\nFig. 7.40\nReprint 2025-26\n\nTRIANGLES 103\n7.6 Summary\nIn this chapter , you have studied the following points :\n1. Two figures are congruent, if they are of the same shape and of the same size.\n2. Two circles of the same radii are congruent.\n3. Two squares of the same sides are congruent.\n4. If two triangles ABC and PQR are congruent under the correspondence A ↔ P,\nB ↔ Q and C ↔ R, then symbolically , it is expressed as ∆ ABC ≅ ∆ PQR.\n5. If two sides and the included angle of one triangle are equal to two sides and the included\nangle of the other triangle, then the two triangles are congruent (SAS Congruence Rule).\n6. If two angles and the included side of one triangle are equal to two angles and the\nincluded side of the other triangle, then the two triangles are congruent (ASA Congruence\nRule).\n7. If two angles and one side of one triangle are equal to two angles and the corresponding\nside of the other triangle, then the two triangles are congruent (AAS Congruence Rule).\n",
+      "wordCount": 4741,
+      "examples": [
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 1,
+          "title": ":  In Fig. 7.8, OA = OB and OD = OC. Show that",
+          "question": "Example 1 :  In Fig. 7.8, OA = OB and OD = OC. Show that\n(i) ∆ AOD ≅ ∆ BOC and (ii) AD || BC.\nSolution :  (i) You may observe that in ∆ AOD and ∆ BOC,\nOA = OB(Given)\nOD = OC\nFig. 7.8\n\n\nReprint 2025-26\n\n88 MATHEMA TICS\nAlso, since ∠ AOD and ∠ BOC form a pair of vertically opposite angles, we have\n∠ AOD = ∠ BOC.\nSo, ∆ AOD ≅∆ BOC (by the SAS congruence rule)\n(ii)In congruent triangles AOD and BOC, the other corresponding parts are also\nequal.\nSo, ∠ OAD = ∠ OBC and these form a pair of alternate",
+          "solution": ":  (i) You may observe that in ∆ AOD and ∆ BOC,\nOA = OB(Given)\nOD = OC\nFig. 7.8\n\n\nReprint 2025-26\n\n88 MATHEMA TICS\nAlso, since ∠ AOD and ∠ BOC form a pair of vertically opposite angles, we have\n∠ AOD = ∠ BOC.\nSo, ∆ AOD ≅∆ BOC (by the SAS congruence rule)\n(ii)In congruent triangles AOD and BOC, the other corresponding parts are also\nequal.\nSo, ∠ OAD = ∠ OBC and these form a pair of alternate angles for line segments\nAD and BC.\nTherefore, AD || BC."
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 2,
+          "title": ":  AB is a line segment and line l is its perpendicular bisector . If a point P",
+          "question": "Example 2 :  AB is a line segment and line l is its perpendicular bisector . If a point P\nlies on l, show that P  is equidistant from A and B.\nSolution :  Line l ⊥ AB and passes through C which\nis the mid-point of AB (see Fig. 7.9). You have to\nshow that P A = PB. Consider ∆ PCA  and ∆ PCB.\nWe have AC = BC (C is the mid-point of AB)\n∠ PCA = ∠ PCB = 90°  (Given)\nPC = PC  (Common)\nSo, ∆ PCA ≅ ∆ PCB (SAS rule)\nand so, P A = PB, as they are corresponding sides of\ncongruent triangles.\nNow , let us co",
+          "solution": ""
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 3,
+          "title": ":  Line-segment AB is parallel to another line-segment CD. O is the",
+          "question": "Example 3 :  Line-segment AB is parallel to another line-segment CD. O is the\nmid-point of AD (see Fig. 7.15). Show that (i) ∆AOB ≅ ∆DOC (ii) O is also the\nmid-point of BC.\nSolution :  (i) Consider ∆ AOB and ∆ DOC.\n∠ ABO = ∠ DCO\n(Alternate angles as AB || CD\n     and BC is the transversal)\n∠ AOB = ∠ DOC\n(Vertically opposite angles)\nOA = OD (Given)\nTherefore, ∆AOB ≅∆DOC (AAS rule)\n(ii) OB = OC (CPCT)\nSo, O is the mid-point of BC.\nEXERCISE 7.1\n1.In quadrilateral ACBD,\nAC = AD and AB bisects ∠A\n(se",
+          "solution": ":  (i) Consider ∆ AOB and ∆ DOC.\n∠ ABO = ∠ DCO\n(Alternate angles as AB || CD\n     and BC is the transversal)\n∠ AOB = ∠ DOC\n(Vertically opposite angles)\nOA = OD (Given)\nTherefore, ∆AOB ≅∆DOC (AAS rule)\n(ii) OB = OC (CPCT)\nSo, O is the mid-point of BC."
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 4,
+          "title": ":  In ∆ ABC, the bisector AD of ∠ A is perpendicular to side BC",
+          "question": "Example 4 :  In ∆ ABC, the bisector AD of ∠ A is perpendicular to side BC\n(see Fig. 7.27). Show that AB = AC and ∆ ABC is isosceles.\nSolution :  In ∆ABD and ∆ACD,\n∠ BAD = ∠ CAD (Given)\nAD = AD (Common)\n∠ ADB = ∠ ADC = 90° (Given)\nSo, ∆ ABD ≅∆ ACD (ASA rule)\nSo, AB = AC (CPCT)\nor,∆ ABC is an isosceles triangle.Fig. 7.26\nFig. 7.27\nReprint 2025-26\n\nTRIANGLES 97\nExample 5 :  E and F are respectively the mid-points\nof equal sides AB and AC of ∆ ABC (see Fig. 7.28).\nShow that BF = CE.\nSolution :  In ∆",
+          "solution": ":  In ∆ABD and ∆ACD,\n∠ BAD = ∠ CAD (Given)\nAD = AD (Common)\n∠ ADB = ∠ ADC = 90° (Given)\nSo, ∆ ABD ≅∆ ACD (ASA rule)\nSo, AB = AC (CPCT)\nor,∆ ABC is an isosceles triangle.Fig. 7.26\nFig. 7.27\nReprint 2025-26\n\nTRIANGLES 97"
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 5,
+          "title": ":  E and F are respectively the mid-points",
+          "question": "Example 5 :  E and F are respectively the mid-points\nof equal sides AB and AC of ∆ ABC (see Fig. 7.28).\nShow that BF = CE.\nSolution :  In ∆ ABF and ∆ ACE,\nAB = AC (Given)\n∠ A =∠ A (Common)\nAF = AE (Halves of equal sides)\nSo, ∆ ABF ≅∆ ACE (SAS rule)\nTherefore, BF = CE (CPCT)\nExample 6 :  In an isosceles triangle ABC with AB = AC, D and E are points on BC\nsuch that BE = CD (see Fig. 7.29). Show that AD = AE.\nSolution :  In ∆ ABD and ∆ ACE,\nAB = AC (Given) (1)\n∠ B = ∠ C\n(Angles opposite to equal si",
+          "solution": ":  In ∆ ABF and ∆ ACE,\nAB = AC (Given)\n∠ A =∠ A (Common)\nAF = AE (Halves of equal sides)\nSo, ∆ ABF ≅∆ ACE (SAS rule)\nTherefore, BF = CE (CPCT)"
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 6,
+          "title": ":  In an isosceles triangle ABC with AB = AC, D and E are points on BC",
+          "question": "Example 6 :  In an isosceles triangle ABC with AB = AC, D and E are points on BC\nsuch that BE = CD (see Fig. 7.29). Show that AD = AE.\nSolution :  In ∆ ABD and ∆ ACE,\nAB = AC (Given) (1)\n∠ B = ∠ C\n(Angles opposite to equal sides)   (2)\nAlso, BE = CD\nSo, BE – DE = CD – DE\nThat is, BD = CE (3)\nSo, ∆ ABD ≅∆ ACE\n(Using (1), (2), (3) and SAS rule).\nThis gives AD = AE (CPCT)\nEXERCISE 7.2\n1.In an isosceles triangle ABC, with AB = AC, the bisectors of ∠ B and ∠ C intersect\neach other at O. Join A to O.",
+          "solution": ":  In ∆ ABD and ∆ ACE,\nAB = AC (Given) (1)\n∠ B = ∠ C\n(Angles opposite to equal sides)   (2)\nAlso, BE = CD\nSo, BE – DE = CD – DE\nThat is, BD = CE (3)\nSo, ∆ ABD ≅∆ ACE\n(Using (1), (2), (3) and SAS rule).\nThis gives AD = AE (CPCT)"
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 7,
+          "title": ":  AB is a line-segment. P  and Q are",
+          "question": "Example 7 :  AB is a line-segment. P  and Q are\npoints on opposite sides of AB such that each of them\nis equidistant from the points A and B (see Fig. 7.37).\nShow that the line PQ is the perpendicular bisector\nof AB.\nSolution :  You are given that P A = PB and\nQA = QB and you are to show that PQ ⊥ AB and\nPQ bisects AB. Let PQ intersect AB at C.\nCan you think of two congruent triangles in this figure?\nLet us take ∆ PAQ and ∆ PBQ.\nIn these triangles,Fig. 7.37\nReprint 2025-26\n\nTRIANGLES 101\nAP = BP",
+          "solution": ""
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 8,
+          "title": ":  P is a point equidistant from two lines l and m intersecting at point A",
+          "question": "Example 8 :  P is a point equidistant from two lines l and m intersecting at point A\n(see Fig. 7.38). Show that the line AP bisects the angle between them.\nSolution :  You are given that lines l and m intersect  each other at A. Let PB ⊥ \nl,\nPC ⊥ m. It is given that PB = PC.\nYou are to show that ∠ PAB = ∠ PAC.\nReprint 2025-26\n\n102 MATHEMA TICS\nLet us consider ∆ PAB and ∆ PAC. In these two\ntriangles,\nPB = PC (Given)\n∠ PBA = ∠ PCA = 90° (Given)\nPA =P\nA (Common)\nSo, ∆ PAB ≅∆ PAC (RHS rule)\nSo, ∠ PA",
+          "solution": ":  You are given that lines l and m intersect  each other at A. Let PB ⊥ \nl,\nPC ⊥ m. It is given that PB = PC.\nYou are to show that ∠ PAB = ∠ PAC.\nReprint 2025-26\n\n102 MATHEMA TICS\nLet us consider ∆ PAB and ∆ PAC. In these two\ntriangles,\nPB = PC (Given)\n∠ PBA = ∠ PCA = 90° (Given)\nPA =P\nA (Common)\nSo, ∆ PAB ≅∆ PAC (RHS rule)\nSo, ∠ PAB = ∠ PAC (CPCT)\nNote that this result is the converse of the result proved in Q.5 of"
+        }
+      ],
+      "exercises": [
+        {
+          "chapterNumber": 7,
+          "exerciseNumber": "7.1",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "Two figures are congruent, if they are of the same shape and of the same size."
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "Two circles of the same radii are congruent."
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "Two squares of the same sides are congruent."
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "If two triangles ABC and PQR are congruent under the correspondence A ↔ P,\nB ↔ Q and C ↔ R, then symbolically , it is expressed as ∆ ABC ≅ ∆ PQR."
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "If two sides and the included angle of one triangle are equal to two sides and the included\nangle of the other triangle, then the two triangles are congruent (SAS Congruence Rule)."
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "If two angles and the included side of one triangle are equal to two angles and the\nincluded side of the other triangle, then the two triangles are congruent (ASA Congruence\nRule)."
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "If two angles and one side of one triangle are equal to two angles and the corresponding\nside of the other triangle, then the two triangles are congruent (AAS Congruence Rule)."
+            }
+          ]
+        },
+        {
+          "chapterNumber": 7,
+          "exerciseNumber": "7.3",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "Two figures are congruent, if they are of the same shape and of the same size."
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "Two circles of the same radii are congruent."
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "Two squares of the same sides are congruent."
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "If two triangles ABC and PQR are congruent under the correspondence A ↔ P,\nB ↔ Q and C ↔ R, then symbolically , it is expressed as ∆ ABC ≅ ∆ PQR."
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "If two sides and the included angle of one triangle are equal to two sides and the included\nangle of the other triangle, then the two triangles are congruent (SAS Congruence Rule)."
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "If two angles and the included side of one triangle are equal to two angles and the\nincluded side of the other triangle, then the two triangles are congruent (ASA Congruence\nRule)."
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "If two angles and one side of one triangle are equal to two angles and the corresponding\nside of the other triangle, then the two triangles are congruent (AAS Congruence Rule)."
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 8,
+        "exercisesCount": 14
+      }
+    },
+    {
+      "chapterNumber": 8,
+      "title": "Angles opposite to equal sides of a triangle are equ",
+      "content": "8. Angles opposite to equal sides of a triangle are equal.\n",
+      "wordCount": 11,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 9,
+      "title": "Sides opposite to equal angles of a triangle are equ",
+      "content": "9. Sides opposite to equal angles of a triangle are equal.\n",
+      "wordCount": 11,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 10,
+      "title": "Each angle of an equilateral triangle is of 60°.",
+      "content": "10. Each angle of an equilateral triangle is of 60°.\n11.If three sides of one triangle are equal to three sides of the other triangle, then the two\ntriangles are congruent (SSS Congruence Rule).\n",
+      "wordCount": 34,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "If in two right triangles, hypotenuse and one side o",
+      "content": "12. If in two right triangles, hypotenuse and one side of a triangle are equal to the hypotenuse\nand one side of other triangle, then the two triangles are congruent (RHS Congruence\nRule).\nReprint 2025-26\n\n",
+      "wordCount": 35,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 21,
+    "totalWords": 4901
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "filename": "hemh103.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 9,
+      "title": "In the above figure both RISK and CLUE are parallelo",
+      "content": "9.\nIn the above figure both RISK and CLUE are parallelograms. Find the value of x.(i) (ii)\nReprint 2024-25\n\n32  MATHEMA TICS\nDO THIS10. Explain how this figure is a trapezium. Which of its two sides are parallel? (Fig 3.26)\n11.Find m∠C in Fig 3.27 if AB DC/parallelto .\n",
+      "wordCount": 49,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "Find the measure of ∠P and ∠S if SP RQ/parallelto  i",
+      "content": "12. Find the measure of ∠P and ∠S if SP RQ/parallelto  in Fig 3.28.\n(If you find m∠R, is there more than one method to find m∠P?)\n3.4  Some Special Parallelograms\n3.4.1  Rhombus\nWe obtain a Rhombus (which, you will see, is a parallelogram) as a special case of kite\n(which is not a a parallelogram).\n    Recall the paper -cut kite you made earlier .\nKite-cut Rhombus-cut\nWhen you cut along ABC and opened up, you got a kite. Here lengths AB and\nBC were dif ferent. If you draw AB = BC, then the kite you obtain is called a rhombus .Fig 3.27\nFig 3.28Fig 3.26\nNote that the sides of rhombus are all of same length;\nthis is not the case with the kite.\nA rhombus is a quadrilateral with sides of equal length.\nSince the opposite sides of a rhombus have the same\nlength, it is also a parallelogram. So, a rhombus has all\nthe pr operties of a parallelogram and also that of a\nkite. Try to list them out. You can then verify your list\nwith the check list summarised in the book elsewhere.\nKiteRhombus\nReprint 2024-25\n\nUNDERSTANDING  QUADRILATERALS   33\nDO THISThe most useful property of a rhombus is that of its diagonals.\nProper ty: The diagonals of a r hombus ar e perpendicular bisectors of one another .\nTake a copy of rhombus. By paper -folding verify if the point of intersection is the\nmid-point of each diagonal. You may also check if they intersect at right angles, using\nthe corner of a set-square.\nHere is an outline justifying this property using logical steps.\nABCD is a rhombus (Fig 3.29). Therefore it is a parallelogram too.\nSince diagonals bisect each other ,      OA  = OC  and  OB = OD.\nWe have to show that m∠AOD = m∠COD = 90°\nIt can be seen that by SSS congruency criterion\n∆ AOD ≅ ∆ COD\nTherefore, m ∠AOD = m ∠COD\nSince ∠\nAOD and ∠COD are a linear pair ,\nm ∠AOD = m ∠COD = 90°\nExample 7:\nRICE is a rhombus (Fig 3.30). Find x, y, z. Justify your findings.\nSolution:\nx =OE y =OR z =side of the rhombus\n=OI  (diagonals bisect) =OC (diagonals bisect) =13 (all sides are equal )\n= 5 = 12\n3.4.2  A rectangle\nA rectangle is a parallelogram with equal angles (Fig 3.31).\nWhat is the full meaning of this definition? Discuss with your friends.\nIf the rectangle is to be equiangular , what could be\nthe measure of each angle?\nLet the measure of each angle be x°.\nThen 4x° =360° (Why)?\nTherefore, x° =90°\nThus each angle of a rectangle is a right angle.\nSo, a rectangle is a parallelogram in which every angle is a right angle.\nBeing a parallelogram, the rectangle has opposite sides of equal length and its diagonals\nbisect each other .Fig 3.29\nSince AO =CO (Why?)\nAD = CD (Why?)\nOD = OD\nFig 3.30\nFig 3.31\nReprint 2024-25\n\n34  MATHEMA TICS\nIn a parallelogram, the diagonals can be of different lengths. (Check this); but surprisingly\nthe rectangle (being a special case) has diagonals of equal length.\nProper ty: The diagonals of a r ectangle ar e of equal length.\nThis is easy to justify . If ABCD is a rectangle (Fig 3.38),  then looking at triangles\nABC and ABD separately [(Fig 3.33) and (Fig 3.34) respectively], we have\n∆ ABC ≅∆ ABD\nThis is because AB = AB (Common)\nBC = AD (Why?)\nm ∠A =m ∠B = 90° (Why?)\nThe congruency follows by SAS criterion.\nThus AC = BD\nand in a r ectangle the diagonals, besides being equal in length bisect each other  (Why?)\nExample 8: RENT is a rectangle (Fig 3.35). Its diagonals meet at O. Find x, if\nOR = 2 x + 4 and OT = 3x  + 1.\nSolution:  OT is half of the diagonal TE,\nOR is half of the diagonal RN.\nDiagonals are equal here. (Why?)\nSo, their halves are also equal.\nTherefore 3x + 1 = 2x + 4\nor x =3\n3.4.3  A square\nA square is a rectangle with equal sides.\nThis means a square has all the\nproperties of a rectangle with an additional\nrequirement that all the sides have equal\nlength.\nThe square, like the rectangle, has\ndiagonals of equal length.\nIn a rectangle, there is no requirement\nfor the diagonals to be perpendicular to\none another , (Check this).Fig 3.34 Fig 3.33 Fig 3.32\nFig 3.35\nBELT is a square, BE = EL  = LT = TB\n∠B, ∠E, ∠L, ∠T are right angles.\nBL = ET and BL ET⊥ .\n OB = OL  and OE = OT .\nReprint 2024-25\n\nUNDERSTANDING  QUADRILATERALS   35\nDO THISIn a square the diagonals.\n(i)bisect one another (square being a parallelogram)\n(ii)are of equal length (square being a rectangle) and\n(iii) are perpendicular to one another .\nHence, we get the following property .\nProper ty: The diagonals of a squar e are perpendicular bisectors of each other .\nTake a square sheet, say PQRS (Fig 3.37).\nFold along both the diagonals. Are their mid-points the same?\nCheck if the angle at O is 90° by using a set-square.\nThis verifies the property stated above.\nWe can justify this also by ar guing logically:\nABCD is a square whose diagonals meet at O (Fig 3.37).\nOA = OC   (Since the square is a parallelogram)\nBy SSS congruency condition, we now see that\n∆ AOD ≅ ∆ COD    (How?)\nTherefore, m∠AOD = m∠COD\nThese angles being a linear pair , each is right angle.\nEXERCISE 3.4\n1.State whether True or False.\n(a)All rectangles are squares (e)All kites are rhombuses.\n(b) All rhombuses are parallelograms (f)All rhombuses are kites.\n(c)All squares are rhombuses and also rectangles (g)All parallelograms are trapeziums.\n(d) All squares are not parallelograms. (h)All squares are trapeziums.\n2.Identify all the quadrilaterals that have.\n(a)four sides of equal length (b) four right angles\n3.Explain how a square is.\n(i)a quadrilateral (ii)a parallelogram (iii) a rhombus (iv) a rectangle\n4.Name the quadrilaterals whose diagonals.\n(i)bisect each other (ii)are perpendicular bisectors of each other (iii) are equal\n5.Explain why a rectangle is a convex quadrilateral.\n6.ABC is a right-angled triangle and O is the mid point of the side\nopposite to the right angle. Explain why O is equidistant from A,\nB and C. (The dotted lines are drawn additionally to help you).Fig 3.36\nFig 3.37\nReprint 2024-25\n\n36  MATHEMA TICS\nTHINK, DISCUSS AND WRITE\nParallelogram:\nA quadrilateral\nwith each pair of\nopposite sides\nparallel.\nRhombus:\nA parallelogram with sides\nof equal length.\nRectangle:\nA parallelogram\nwith a right angle.\nSquar e: A rectangle\nwith sides of equal\nlength.\nKite:  A quadrilateral\nwith exactly two pairs\nof equal consecutive\nsides\n1.A mason has made a concrete slab. He needs it to be rectangular . In what\ndifferent ways can he make sure that it is rectangular?\n2.A square was defined as a rectangle with all sides equal. Can we define it as\nrhombus with equal angles? Explore this idea.\n3.Can a trapezium have all angles equal? Can it have all sides equal? Explain.\nQuadrilateral Properties\n(1) Opposite sides are equal.\n(2) Opposite angles are equal.\n(3) Diagonals bisect one another .\n(1) All the properties of a parallelogram.\n(2) Diagonals are perpendicular to each other .\n(1) All the properties of a parallelogram.\n(2) Each of the angles is a right angle.\n(3) Diagonals are equal.\nAll the properties of a parallelogram,\nrhombus and a rectangle.\n(1) The diagonals are perpendicular\nto one another\n(2) One of the diagonals bisects the other .\n(3) In the figure m∠B = m∠D but\nm∠A ≠ m∠C.WHAT HAVE WE DISCUSSED?\nReprint 2024-25\n\n",
+      "wordCount": 1288,
+      "examples": [
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 7,
+          "title": "RICE is a rhombus (Fig 3.30). Find x, y, z. Justify your findings.",
+          "question": "Example 7:\nRICE is a rhombus (Fig 3.30). Find x, y, z. Justify your findings.\nSolution:\nx =OE y =OR z =side of the rhombus\n=OI  (diagonals bisect) =OC (diagonals bisect) =13 (all sides are equal )\n= 5 = 12\n3.4.2  A rectangle\nA rectangle is a parallelogram with equal angles (Fig 3.31).\nWhat is the full meaning of this definition? Discuss with your friends.\nIf the rectangle is to be equiangular , what could be\nthe measure of each angle?\nLet the measure of each angle be x°.\nThen 4x° =360° (Why)?\nTh",
+          "solution": ""
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 8,
+          "title": "RENT is a rectangle (Fig 3.35). Its diagonals meet at O. Find x, if",
+          "question": "Example 8: RENT is a rectangle (Fig 3.35). Its diagonals meet at O. Find x, if\nOR = 2 x + 4 and OT = 3x  + 1.\nSolution:  OT is half of the diagonal TE,\nOR is half of the diagonal RN.\nDiagonals are equal here. (Why?)\nSo, their halves are also equal.\nTherefore 3x + 1 = 2x + 4\nor x =3\n3.4.3  A square\nA square is a rectangle with equal sides.\nThis means a square has all the\nproperties of a rectangle with an additional\nrequirement that all the sides have equal\nlength.\nThe square, like the rectangle,",
+          "solution": ""
+        }
+      ],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 2,
+        "exercisesCount": 0
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 16,
+    "totalWords": 1337
+  }
+}

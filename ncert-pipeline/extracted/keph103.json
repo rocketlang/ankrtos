@@ -1,0 +1,165 @@
+{
+  "filename": "keph103.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "Scalar quantities are quantities with magnitudes onl",
+      "content": "1. Scalar quantities are quantities with magnitudes only.  Examples are distance, speed,\nmass and  temperature.\n",
+      "wordCount": 15,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 2,
+      "title": "Vector quantities are quantities with magnitude and",
+      "content": "2. Vector quantities are quantities with magnitude and dir ection both.  Examples ar e\ndisplacement, velocity and  acceleration. They obey special rules of vector algebra.\n3. A vector A multiplied by a r eal number λ  is also a vector , whose magnitude is λ times\nthe magnitude of the vector A and whose direction is the same or opposite depending\nupon whether λ is positive or negative.\n",
+      "wordCount": 68,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 4,
+      "title": "Two vectors A and B may be added graphically using h",
+      "content": "4. Two vectors A and B may be added graphically using head-to-tail method or parallelogram\nmethod .\n",
+      "wordCount": 17,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 5,
+      "title": "Vector addition is commutative :",
+      "content": "5. Vector addition is commutative :\nA + B = B + A\nIt also obeys the associative law :\n(A + B) + C = A + (B + C)\n6. A null or zero vector is a vector with zero magnitude.  Since the magnitude is zero, we\ndon’t have to specify its direction.  It has the properties :\nA + 0 = A\n     λ0 = 0\n   0 A = 0\n7. The subtraction of vector B from A is defined as the sum of A and –B :\nA – B = A+ (–B)\n8. A vector A can be resolved into component along two given vectors a and b lying in the\nsame plane :\nA = λ a + µ b\nwhere λ and µ  are real numbers.\n9. A unit vector associated with a vector A has magnitude 1 and is along the vector A:\nˆnA\nA=\nThe unit vectors  ɵɵɵi, j, k  are vectors of unit magnitude and point in the direction of\nthe x-, y-, and z-axes, respectively in a right-handed coordinate system.\n10. A vector A can be expressed as\nA i + j=A Ax yɵɵ\nwhere Ax, Ay are its components along x-, and y -axes.  If vector A makes an angle θ\nwith the x-axis, then Ax = A cos θ, Ay=A sin θ and  2 2,  tan = .y\nx y\nxA\nA A AAθ = = +A\n11. Vectors can be conveniently added using analytical method .  If sum of two vectors A\nand B, that lie in x-y plane, is R, then :\nR i j= +R Rx yɵɵ, where,  Rx = Ax + Bx, and     Ry = Ay + By\n12. The position vector of an object in x-y plane is given by r = i j x yɵɵ+  and the\ndisplacement from position r to position r’ is given by\n∆r = r′− r\n=′− + ′− ( ) ( ) x x y yɵɵi j\n=  ∆ + ∆x y ɵɵi j\n13. If an object undergoes a displacement ∆r in time ∆t, its average velocity  is given by\nv = ∆\n∆r\nt. The velocity of an object at time t is the limiting value of the average velocity\nas ∆t tends to zero :\nReprint 2025-26\n\nPHYSICS 44\nv = ∆∆\n∆=\nt→0r r\nt td\nd.  It can be written in unit vector notation as :\nv i j k= + +v v vx y zɵɵɵ  where  tzv  tyvtxvz y xdd= ,dd=  ,dd=\nWhen position of an object is plotted on a coordinate system, v  is  always tangent to\nthe curve representing the path of the object.\n14. If the velocity of an object changes from v to v′in time ∆t, then its average acceleration\nis given by:  av v' v\n=−\n=\n∆∆\n∆ t t\nThe acceleration a at any time t is the limiting value of  a as  ∆t 0 :\nav v\n=\n→=\n∆∆\n∆ t t t0d\nd\nIn component form, we have : a i j k= + +a a ax y zɵɵɵ\nwhere,  adv\ndt, adv\ndt, adv\ndtxx\nyy\nzz= = =\n15. If an object is moving in a plane with constant acceleration  2 2=x y a a a= +a   and\nits position vector at time t = 0 is ro, then at any other time  t, it will be at a point given\nby:\n21\n2t t = + +o or r v a\nand its velocity is given by :\nv = vo + a t\nwhere vo is the velocity at time t = 0\nIn component form :\n2 1\n2o ox x x x v t a t= + +\n21\n2o oy y y y v t a t= + +\nv v a tx ox x= +\nv v a ty oy y= +\nMotion in a plane can be treated as superposition of two separate simultaneous one-\ndimensional motions along two perpendicular directions\n16. An object that is in flight after being projected is called a projectile .  If an object is\nprojected with initial velocity vo making an angle θo with x-axis and if we assume its\ninitial position to coincide with the origin of the coordinate system, then the position\nand velocity of the projectile at time t are given by :\nx = (vo cos θo) t\n                  y = (vo sin θo) t − (1/2) g t2\nvx = vox = vo cos θo\nvy = vo sin θo − g t\n       The path of a projectile is parabolic and is given by :\n( )\n( )2\n0 2tan\ncoso ogxy x –\n2 vθ\nθ=\n       The maximum height that a projectile attains is :lim\nlim\nReprint 2025-26\n\nMOTION IN A PLANE 45\nhv\n2gmo o=( ) sin2q\nThe time taken to reach this height is :\ngvto o\nmθsin  =\nThe horizontal distance travelled by a projectile from its initial position to the position\nit passes y = 0 during its fall is called the range , R of the projectile.  It is :\n2\nsin2o\novRgθ =\n17. When an object follows a circular path at constant speed, the motion of the object is\ncalled uniform circular motion . The magnitude of its acceleration is   ac = v2 /R. The\ndirection of ac is always towards the centre of the circle.\nThe angular speed ω, is the rate of change of angular distance. It is related to velocity\nv by   v = ωR.  The acceleration is ac = ω2R.\nIf T is the time period of revolution of the object in circular motion and ν is its\nfrequency, we have ω= 2π ν, v = 2πνR,  ac = 4π2ν2R\nReprint 2025-26\n\nPHYSICS 46\nPOINTS TO PONDER\n1.The path length traversed by an object between two points is, in general, not the same as\nthe magnitude of displacement. The displacement depends only on the end points; the\npath length (as the name implies) depends on the actual path. The two quantities are\nequal only if the object does not change its direction during the course of motion. In all\nother cases, the path length is greater than the magnitude of displacement.\n2.In view of point 1 above, the average speed of an object is greater than or equal to the\nmagnitude of the average velocity over a given time interval. The two are equal only if the\npath length is equal to the magnitude of displacement.\n3.The vector equations (3.33a) and (3.34a) do not involve any choice of axes. Of course,\nyou can always resolve them along any two independent axes.\n4. The kinematic equations for uniform acceleration do not apply to the case of uniform\ncircular motion since in this case the magnitude of acceleration is constant but its\ndirection is changing.\n5. An object subjected to two velocities v1 and v2 has a resultant velocity v = v1 + v2. Take\ncare to distinguish it from velocity of object 1 relative to velocity of object 2 : v12= v1 − v2.\nHere v1 and v2 are velocities with reference to some common reference frame.\n",
+      "wordCount": 1198,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 6,
+      "title": "The resultant acceleration of an object in circular",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 7,
+      "title": "The subtraction of vector B from A is defined as the",
+      "content": "7. The subtraction of vector B from A is defined as the sum of A and –B :\nA – B = A+ (–B)\n8. A vector A can be resolved into component along two given vectors a and b lying in the\nsame plane :\nA = λ a + µ b\nwhere λ and µ  are real numbers.\n9. A unit vector associated with a vector A has magnitude 1 and is along the vector A:\nˆnA\nA=\nThe unit vectors  ɵɵɵi, j, k  are vectors of unit magnitude and point in the direction of\nthe x-, y-, and z-axes, respectively in a right-handed coordinate system.\n10. A vector A can be expressed as\nA i + j=A Ax yɵɵ\nwhere Ax, Ay are its components along x-, and y -axes.  If vector A makes an angle θ\nwith the x-axis, then Ax = A cos θ, Ay=A sin θ and  2 2,  tan = .y\nx y\nxA\nA A AAθ = = +A\n",
+      "wordCount": 167,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 11,
+      "title": "Vectors can be conveniently added using analytical m",
+      "content": "11. Vectors can be conveniently added using analytical method .  If sum of two vectors A\nand B, that lie in x-y plane, is R, then :\nR i j= +R Rx yɵɵ, where,  Rx = Ax + Bx, and     Ry = Ay + By\n",
+      "wordCount": 45,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "The position vector of an object in x-y plane is giv",
+      "content": "12. The position vector of an object in x-y plane is given by r = i j x yɵɵ+  and the\ndisplacement from position r to position r’ is given by\n∆r = r′− r\n=′− + ′− ( ) ( ) x x y yɵɵi j\n=  ∆ + ∆x y ɵɵi j\n",
+      "wordCount": 54,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 13,
+      "title": "If an object undergoes a displacement ∆r in time ∆t,",
+      "content": "13. If an object undergoes a displacement ∆r in time ∆t, its average velocity  is given by\nv = ∆\n∆r\nt. The velocity of an object at time t is the limiting value of the average velocity\nas ∆t tends to zero :\nReprint 2025-26\n\nPHYSICS 44\nv = ∆∆\n∆=\nt→0r r\nt td\nd.  It can be written in unit vector notation as :\nv i j k= + +v v vx y zɵɵɵ  where  tzv  tyvtxvz y xdd= ,dd=  ,dd=\nWhen position of an object is plotted on a coordinate system, v  is  always tangent to\nthe curve representing the path of the object.\n",
+      "wordCount": 108,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 14,
+      "title": "If the velocity of an object changes from v to v′in",
+      "content": "14. If the velocity of an object changes from v to v′in time ∆t, then its average acceleration\nis given by:  av v' v\n=−\n=\n∆∆\n∆ t t\nThe acceleration a at any time t is the limiting value of  a as  ∆t 0 :\nav v\n=\n→=\n∆∆\n∆ t t t0d\nd\nIn component form, we have : a i j k= + +a a ax y zɵɵɵ\nwhere,  adv\ndt, adv\ndt, adv\ndtxx\nyy\nzz= = =\n",
+      "wordCount": 84,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 15,
+      "title": "If an object is moving in a plane with constant acce",
+      "content": "15. If an object is moving in a plane with constant acceleration  2 2=x y a a a= +a   and\nits position vector at time t = 0 is ro, then at any other time  t, it will be at a point given\nby:\n21\n2t t = + +o or r v a\nand its velocity is given by :\nv = vo + a t\nwhere vo is the velocity at time t = 0\nIn component form :\n2 1\n2o ox x x x v t a t= + +\n21\n2o oy y y y v t a t= + +\nv v a tx ox x= +\nv v a ty oy y= +\nMotion in a plane can be treated as superposition of two separate simultaneous one-\ndimensional motions along two perpendicular directions\n",
+      "wordCount": 140,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 16,
+      "title": "An object that is in flight after being projected is",
+      "content": "16. An object that is in flight after being projected is called a projectile .  If an object is\nprojected with initial velocity vo making an angle θo with x-axis and if we assume its\ninitial position to coincide with the origin of the coordinate system, then the position\nand velocity of the projectile at time t are given by :\nx = (vo cos θo) t\n                  y = (vo sin θo) t − (1/2) g t2\nvx = vox = vo cos θo\nvy = vo sin θo − g t\n       The path of a projectile is parabolic and is given by :\n( )\n( )2\n0 2tan\ncoso ogxy x –\n2 vθ\nθ=\n       The maximum height that a projectile attains is :lim\nlim\nReprint 2025-26\n\nMOTION IN A PLANE 45\nhv\n2gmo o=( ) sin2q\nThe time taken to reach this height is :\ngvto o\nmθsin  =\nThe horizontal distance travelled by a projectile from its initial position to the position\nit passes y = 0 during its fall is called the range , R of the projectile.  It is :\n2\nsin2o\novRgθ =\n",
+      "wordCount": 190,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 17,
+      "title": "When an object follows a circular path at constant s",
+      "content": "17. When an object follows a circular path at constant speed, the motion of the object is\ncalled uniform circular motion . The magnitude of its acceleration is   ac = v2 /R. The\ndirection of ac is always towards the centre of the circle.\nThe angular speed ω, is the rate of change of angular distance. It is related to velocity\nv by   v = ωR.  The acceleration is ac = ω2R.\nIf T is the time period of revolution of the object in circular motion and ν is its\nfrequency, we have ω= 2π ν, v = 2πνR,  ac = 4π2ν2R\nReprint 2025-26\n\nPHYSICS 46\nPOINTS TO PONDER\n1.The path length traversed by an object between two points is, in general, not the same as\nthe magnitude of displacement. The displacement depends only on the end points; the\npath length (as the name implies) depends on the actual path. The two quantities are\nequal only if the object does not change its direction during the course of motion. In all\nother cases, the path length is greater than the magnitude of displacement.\n2.In view of point 1 above, the average speed of an object is greater than or equal to the\nmagnitude of the average velocity over a given time interval. The two are equal only if the\npath length is equal to the magnitude of displacement.\n3.The vector equations (3.33a) and (3.34a) do not involve any choice of axes. Of course,\nyou can always resolve them along any two independent axes.\n4. The kinematic equations for uniform acceleration do not apply to the case of uniform\ncircular motion since in this case the magnitude of acceleration is constant but its\ndirection is changing.\n5. An object subjected to two velocities v1 and v2 has a resultant velocity v = v1 + v2. Take\ncare to distinguish it from velocity of object 1 relative to velocity of object 2 : v12= v1 − v2.\nHere v1 and v2 are velocities with reference to some common reference frame.\n6. The resultant acceleration of an object in circular motion is towards the centre only if\nthe speed is constant.\n7. The shape of the trajectory of the motion of an object is not determined by the acceleration\nalone but also depends on the initial conditions of motion ( initial position and initial\nvelocity). For example, the trajectory of an object moving under the same acceleration\ndue to gravity can be a straight line or a parabola depending on the initial conditions.\nEXERCISES\n3.1 State, for each of the following physical quantities, if it is a scalar or a vector :\nvolume, mass, speed, acceleration, density, number of moles, velocity, angular\nfrequency, displacement, angular velocity.\n3.2 Pick out the two scalar quantities in the following list :\nforce, angular momentum, work, current, linear momentum, electric field, average\nvelocity, magnetic moment, relative velocity.\n3.3 Pick out the only vector quantity in the following list :\nTemperatur e, pressur e, impulse, time, power , total path length, ener gy, gravitational\npotential, coefficient of friction, charge.\n3.4 State with reasons, whether the following algebraic operations with scalar and vector\nphysical quantities are meaningful :\n(a) adding any two scalars, (b) adding a scalar to a vector of the same dimensions ,\n(c) multiplying any vector by any scalar , (d) multiplying any two scalars, (e) adding any\ntwo vectors, (f) adding a component of a vector to the same vector .\n3.5 Read each statement below carefully and state with  reasons, if it is true or false :\n(a) The magnitude of a vector is always a scalar , (b) each component of a vector is\nalways a scalar , (c) the total path length is always equal to the magnitude of the\ndisplacement vector of a particle. (d) the average speed of a particle (defined as total\npath length divided by the time taken to cover the path) is either greater or equal to\nthe magnitude of average velocity of the particle over the same interval of time, (e)\nThree vectors not lying in a plane can never add up to give a null vector .\n3.6 Establish the following vector inequalities geometrically or otherwise :\n(a) |a+b| <  |a| + |b|\n(b) |a+b| >  ||a| − −−−−|b||\nReprint 2025-26\n\nMOTION IN A PLANE 47\n(c) |a− −− −−b| <  |a| + |b|\n(d) |a− −− −−b| >   ||a| − −− −− |b||\nWhen does the equality sign above apply?\n3.7 Given a + b + c + d = 0, which of the following\nstatements are correct :\n(a)a, b, c, and d must each be a null vector ,\n(b)The magnitude of ( a+c) equals the magnitude of\n(b+d),\n(c)The magnitude of a can never be greater than the\nsum of the magnitudes of b, c, and d,\n(d)b + c must lie in the plane of a and d if a and d are\nnot collinear , and in the line of a and d,  if they ar e\ncollinear ?\n3.8 Three girls skating on a circular ice ground of radius\n200 m start from a point P on the edge of the ground\nand reach a point Q diametrically opposite to P following\ndifferent paths as shown in Fig. 3.19. What is the\nmagnitude of the displacement vector for each ? For\nwhich girl is this equal to the actual length of\npath skat e ?\n3.9 A cyclist starts from the centre O of a circular park of radius 1 km, reaches the edge P\nof the park, then cycles along the circumference, and returns to the centre along QO\nas shown in Fig. 3.20.  If the round trip takes 10 min, what is the (a) net displacement,\n(b) average velocity, and (c) average speed of the cyclist ?\nFig. 3.20\n3.10 On an open ground, a motorist follows a track that turns to his left by an angle of  600\nafter every 500 m. Starting from a given turn, specify the displacement of the motorist\nat the third, sixth and eighth turn. Compare the magnitude of the displacement with\nthe total path length covered by the motorist in each case.\n3.11 A passenger arriving in a new town wishes to go from the station to a hotel located\n10 km away on a straight road from the station.  A dishonest cabman takes him along\na circuitous path 23 km long and reaches the hotel in 28 min. What is (a) the average\nspeed of the taxi, (b) the magnitude of average velocity ?  Are the two equal ?\n3.12 The ceiling of a long hall is 25 m high.  What is the maximum horizontal distance that\na ball thrown with a speed  of 40 m s-1 can go without hitting the ceiling of the hall ?\n3.13 A cricketer can throw a ball to a maximum horizontal distance of 100 m.  How much\nhigh above the ground can the cricketer throw the same ball ?Q\nFig. 3.19\nReprint 2025-26\n\nPHYSICS 48\n3.14 A stone tied to the end of a string 80 cm long is whirled in a horizontal circle with a\nconstant speed.  If the stone makes 14 revolutions in 25 s, what is the magnitude and\ndirection of acceleration of the stone ?\n3.15 An  aircraft executes  a  horizontal  loop of  radius 1.00 km  with a steady speed of 900\nkm/h. Compare its centripetal acceleration with the acceleration due to gravity.\n3.16 Read each statement below carefully and state, with reasons, if it is true or false :\n(a)The net acceleration of a particle in circular motion is always  along the radius of\nthe circle towards the centre\n(b)The velocity vector of a particle at a point is always  along the tangent to the path\nof the particle at that point\n(c)The acceleration vector of a particle in uniform circular motion averaged over one\n      cycle is a null vector\n3.17 The position of a particle is given by\n2 ˆ ˆ ˆ3.0 2.0 4.0 mt t= − +r i j k \nwhere t is in seconds and the coefficients  have the proper units for r to be in  metres.\n(a) Find the v and a of the particle? (b) What is the magnitude and direction of\n  velocity of the particle at t = 2.0 s ?\n3.18 A particle starts from the origin at t = 0 s with a velocity of 10.0  jɵ m/s and moves in\nthe x-y plane with  a constant acceleration of ( ) 8.0 2.0ɵɵi j+  m s-2. (a) At what time is\nthe x- coordinate of the particle 16 m?  What is the y-coordinate of the particle at\nthat time? (b) What is the speed of the particle at the time ?\n3.19ɵi  and ɵj are unit vectors along x- and y- axis respectively. What is the magnitude\nand direction of the vectors  ɵɵi j+, and ɵɵi j− ?  What are the components of a vector\nA= 2 ɵɵi j+3 along the dir ections of  ɵɵi j+ and ɵɵi j−? [You may use graphical method]\n3.20 For any arbitrary motion in space, which of the following relations are true :\n(a) vaverage = (1/2) ( v (t1) + v (t2))\n(b) v average = [r(t2) - r(t1) ] /(t2 – t1)\n(c) v (t) = v (0) + a t\n(d) r (t) = r (0) + v (0) t + (1/2) \na t2\n(e) a average =[ v (t2) - v (t1 )] /( t2 – t1)\n(The ‘average’ stands for average of the quantity over the time interval t1 to t2)\n3.21 Read each statement below carefully and state, with reasons and examples, if it is\ntrue or false :\nA scalar quantity is one that\n(a) is conserved in a process\n(b) can never take negative values\n(c) must be dimensionless\n(d) does not vary from one point to another in space\n(e) has the same value for observers with different orientations of axes.\n3.22 An aircraft is flying at a height of 3400 m above the ground. If the angle subtended at\na ground observation point by the aircraft positions 10.0 s a part is 30°, wat is the\nspeed of the aircraft ?\nReprint 2025-26\n\n",
+      "wordCount": 1711,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 22,
+    "totalWords": 3797
+  }
+}

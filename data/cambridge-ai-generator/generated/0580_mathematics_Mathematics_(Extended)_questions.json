@@ -1,0 +1,1222 @@
+{
+  "subject": "Mathematics (Extended)",
+  "code": "0580_mathematics",
+  "level": "IGCSE",
+  "total_questions": 29,
+  "questions": [
+    {
+      "question": "A recipe for 4 people uses 300 g of flour and 120 g of sugar.\n(a) Write the ratio flour : sugar in its simplest form.\n(b) How much flour is needed for 10 people?",
+      "marks": 4,
+      "question_type": "short_answer",
+      "difficulty": "easy",
+      "topic": "Number",
+      "subtopic": "Ratio, proportion, rate",
+      "answer": "(a) 5 : 2\n(b) 750 g",
+      "mark_scheme": [
+        {
+          "point": "Correctly simplifies 300 : 120 to any equivalent ratio",
+          "marks": 1
+        },
+        {
+          "point": "States simplest form 5 : 2 (or 2.5 : 1)",
+          "marks": 1
+        },
+        {
+          "point": "Uses proportion to find flour for 10 people: 300 \u00f7 4 \u00d7 10",
+          "marks": 1
+        },
+        {
+          "point": "Correct answer 750 g (with units)",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Not simplifying ratio fully (e.g., 30 : 12)",
+        "Forgetting to divide by 4 first before multiplying by 10",
+        "Omitting units in final answer"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "1"
+    },
+    {
+      "question": "A recipe for 4 people uses 300 g of flour and 180 ml of milk.\n(a) Write the ratio flour : milk in its simplest form.\n(b) A larger recipe uses 750 g of flour. How much milk, in ml, is needed for this larger recipe?\n(c) The milk is sold in 1-litre cartons. How many complete recipes (for 4 people) can be made with one carton of milk?",
+      "marks": 8,
+      "question_type": "structured",
+      "difficulty": "easy",
+      "topic": "Number",
+      "subtopic": "Ratio, proportion, rate",
+      "answer": "(a) 300 : 180 = 5 : 3\n(b) Scale factor = 750 \u00f7 300 = 2.5\nMilk needed = 180 \u00d7 2.5 = 450 ml\n(c) 1 litre = 1000 ml\nRecipes possible = 1000 \u00f7 180 = 5.55...\nComplete recipes = 5",
+      "mark_scheme": [
+        {
+          "point": "Simplify 300:180 correctly to 5:3 (or equivalent)",
+          "marks": 2
+        },
+        {
+          "point": "Find scale factor 750 \u00f7 300 = 2.5",
+          "marks": 1
+        },
+        {
+          "point": "Multiply 180 by scale factor to get 450 ml",
+          "marks": 1
+        },
+        {
+          "point": "Convert 1 litre to 1000 ml",
+          "marks": 1
+        },
+        {
+          "point": "Divide 1000 by 180 to get 5.55...",
+          "marks": 1
+        },
+        {
+          "point": "State 5 complete recipes (must be integer)",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Not simplifying ratio fully (e.g., 30:18)",
+        "Forgetting to convert litres to ml in part (c)",
+        "Rounding 5.55... up to 6 instead of down to 5"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "1"
+    },
+    {
+      "question": "A recipe for 8 people requires 600 g of flour and 360 ml of milk.\n(a) Write the ratio flour : milk in its simplest form.\n(b) A chef wants to make the recipe for 12 people. Calculate the amount of flour needed.\n(c) The chef has 1.2 litres of milk. Is this enough to make the recipe for 20 people? Show your working.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Number",
+      "subtopic": "Ratio, proportion, rate",
+      "answer": "(a) 600 : 360 = 5 : 3\n(b) Flour for 12 people = (600 \u00f7 8) \u00d7 12 = 75 \u00d7 12 = 900 g\n(c) Milk for 20 people = (360 \u00f7 8) \u00d7 20 = 45 \u00d7 20 = 900 ml = 0.9 litres. 1.2 litres > 0.9 litres, so yes, it is enough.",
+      "mark_scheme": [
+        {
+          "point": "Correctly simplifies 600:360 to 5:3 (any equivalent correct ratio before simplification earns partial credit)",
+          "marks": 1
+        },
+        {
+          "point": "Finds flour per person: 600 \u00f7 8 = 75 g",
+          "marks": 1
+        },
+        {
+          "point": "Correctly calculates flour for 12 people: 75 \u00d7 12 = 900 g",
+          "marks": 1
+        },
+        {
+          "point": "Finds milk per person: 360 \u00f7 8 = 45 ml",
+          "marks": 1
+        },
+        {
+          "point": "Correctly calculates milk for 20 people: 45 \u00d7 20 = 900 ml or 0.9 litres",
+          "marks": 1
+        },
+        {
+          "point": "Compares 1.2 litres with required milk and gives correct conclusion with reason",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Not simplifying the ratio fully (e.g., leaving as 60:36)",
+        "Using inverse proportion incorrectly when scaling",
+        "Forgetting to convert ml to litres or vice versa when comparing amounts"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "1"
+    },
+    {
+      "question": "A rectangular garden has length 12.8 m and width 8.4 m.\n(a) Calculate the area of the garden. Give your answer in square metres.\n(b) Write your answer from part (a) in the form a \u00d7 10^k where 1 \u2264 a < 10 and k is an integer.\n(c) A gardener uses fertiliser at a rate of 50 g per square metre. Estimate the total mass of fertiliser needed for the garden. Give your answer in kilograms.",
+      "marks": 8,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Number",
+      "subtopic": "Indices and standard form, Estimation and approximation, Ratio, proportion, rate",
+      "answer": "(a) Area = length \u00d7 width = 12.8 \u00d7 8.4 = 107.52 m\u00b2\n(b) 107.52 = 1.0752 \u00d7 10\u00b2\n(c) Mass per m\u00b2 = 50 g = 0.05 kg\nEstimated area \u2248 13 \u00d7 8 = 104 m\u00b2\nEstimated mass = 104 \u00d7 0.05 = 5.2 kg",
+      "mark_scheme": [
+        {
+          "point": "Correct multiplication: 12.8 \u00d7 8.4 = 107.52",
+          "marks": 2
+        },
+        {
+          "point": "Correct units (m\u00b2) for part (a)",
+          "marks": 1
+        },
+        {
+          "point": "Correct conversion to standard form: 1.0752 \u00d7 10\u00b2",
+          "marks": 2
+        },
+        {
+          "point": "Correct rate conversion: 50 g = 0.05 kg",
+          "marks": 1
+        },
+        {
+          "point": "Reasonable estimation of area (e.g., 13 \u00d7 8 = 104) and correct multiplication with rate",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Forgetting to include units in part (a)",
+        "Incorrect placement of decimal point in standard form",
+        "Not converting grams to kilograms before estimation"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "1"
+    },
+    {
+      "question": "A company's profit increased by 15% in Year 1, then decreased by 8% in Year 2. The final profit after Year 2 was $1,242,000.\n\n(a) Calculate the company's profit at the start of Year 1.\n(b) Express the overall percentage change in profit over the two years as a percentage to one decimal place.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Number",
+      "subtopic": "Percentages, reverse percentages, and compound change",
+      "answer": "(a) Let starting profit = P\nAfter Year 1: P \u00d7 1.15\nAfter Year 2: P \u00d7 1.15 \u00d7 0.92 = 1,242,000\nP = 1,242,000 \u00f7 (1.15 \u00d7 0.92)\nP = 1,242,000 \u00f7 1.058\nP = $1,173,913.04\n\n(b) Overall multiplier = 1.15 \u00d7 0.92 = 1.058\nPercentage change = (1.058 - 1) \u00d7 100 = 5.8% increase",
+      "mark_scheme": [
+        {
+          "point": "Sets up correct equation: P \u00d7 1.15 \u00d7 0.92 = 1,242,000",
+          "marks": 2
+        },
+        {
+          "point": "Correct calculation of P = 1,242,000 \u00f7 1.058",
+          "marks": 2
+        },
+        {
+          "point": "Calculates overall multiplier (1.058) and converts to percentage (5.8%)",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO3",
+      "common_errors": [
+        "Adding/subtracting percentages (15% - 8% = 7%)",
+        "Forgetting to reverse the percentage calculation",
+        "Rounding intermediate values causing final inaccuracy"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "1"
+    },
+    {
+      "question": "A company produces two types of electrical components, Type A and Type B.\n\n(a) The ratio of production cost of Type A to Type B is 5 : 3. The selling price of Type A is 20% more than its production cost, and the selling price of Type B is 25% more than its production cost. If the total selling price of one unit of each type is $162, find the production cost of Type A.\n\n(b) The company estimates that 3.75 \u00d7 10\u2074 units of Type A and 2.8 \u00d7 10\u2074 units of Type B are sold annually. Calculate the total annual revenue from both types, giving your answer in standard form.\n\n(c) Due to inflation, production costs increase by 8% the following year. The company decides to keep the same selling prices. Calculate the percentage decrease in profit per unit of Type A compared to the original profit.",
+      "marks": 10,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Number",
+      "subtopic": "Ratio, proportion, percentages, standard form",
+      "answer": "(a) Let production cost of Type A = 5x, Type B = 3x.\nSelling price of A = 1.2 \u00d7 5x = 6x\nSelling price of B = 1.25 \u00d7 3x = 3.75x\nTotal selling price = 6x + 3.75x = 9.75x = 162\nx = 162 \u00f7 9.75 = 16.615... \u2248 16.6154\nProduction cost of A = 5 \u00d7 16.6154 = $83.08 (to 2 d.p.)\n\n(b) Revenue from A = 83.08 \u00d7 37500 = 3,115,500\nRevenue from B = (3 \u00d7 16.6154) \u00d7 1.25 \u00d7 28000 = (49.8462) \u00d7 28000 = 1,395,693.6\nTotal revenue = 3,115,500 + 1,395,693.6 = 4,511,193.6\nIn standard form: 4.5111936 \u00d7 10\u2076 \u2248 4.51 \u00d7 10\u2076 (3 s.f.)\n\n(c) Original profit per unit of A = 6x \u2212 5x = x = 16.6154\nNew production cost of A = 83.08 \u00d7 1.08 = 89.7264\nNew profit = 99.696 \u2212 89.7264 = 9.9696 (selling price remains 6x = 99.696)\nDecrease in profit = 16.6154 \u2212 9.9696 = 6.6458\nPercentage decrease = (6.6458 \u00f7 16.6154) \u00d7 100% \u2248 40.0% (1 d.p.)",
+      "mark_scheme": [
+        {
+          "point": "Sets up correct ratio expressions for costs and selling prices",
+          "marks": 1
+        },
+        {
+          "point": "Forms correct equation 9.75x = 162 and solves for x",
+          "marks": 1
+        },
+        {
+          "point": "Correctly finds production cost of Type A as $83.08",
+          "marks": 1
+        },
+        {
+          "point": "Correctly calculates revenue from Type A (3,115,500)",
+          "marks": 1
+        },
+        {
+          "point": "Correctly calculates revenue from Type B (1,395,693.6)",
+          "marks": 1
+        },
+        {
+          "point": "Adds revenues and presents in standard form correctly (4.51 \u00d7 10\u2076)",
+          "marks": 1
+        },
+        {
+          "point": "Calculates original profit per unit of A correctly (16.6154)",
+          "marks": 1
+        },
+        {
+          "point": "Calculates new production cost after 8% increase (89.7264)",
+          "marks": 1
+        },
+        {
+          "point": "Finds new profit (9.9696) and decrease amount (6.6458)",
+          "marks": 1
+        },
+        {
+          "point": "Calculates percentage decrease correctly (40.0%)",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2/AO3",
+      "common_errors": [
+        "Incorrect ratio setup (e.g., using selling price ratio instead of cost)",
+        "Misinterpreting percentage increase (adding instead of multiplying by 1.08)",
+        "Forgetting to convert final revenue to standard form",
+        "Using rounded values too early causing cumulative errors",
+        "Confusing profit percentage decrease with cost percentage increase"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "1"
+    },
+    {
+      "question": "Factorise completely: 6x\u00b2 - 24",
+      "marks": 2,
+      "question_type": "short_answer",
+      "difficulty": "easy",
+      "topic": "Algebra and Graphs",
+      "subtopic": "Algebraic expressions and manipulation",
+      "answer": "6(x - 2)(x + 2)",
+      "mark_scheme": [
+        {
+          "point": "Correctly factor out common factor of 6: 6(x\u00b2 - 4)",
+          "marks": 1
+        },
+        {
+          "point": "Correctly factor difference of squares: 6(x - 2)(x + 2)",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO1",
+      "common_errors": [
+        "Only factorising to 6(x\u00b2 - 4) without completing the factorisation",
+        "Incorrect sign handling in difference of squares"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "2"
+    },
+    {
+      "question": "A function is defined as f(x) = 3x - 5.\n(a) Find f(4).\n(b) Solve f(x) = 7.\n(c) Find the value of x for which f(x) = 2x + 1.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "easy",
+      "topic": "Algebra and Graphs",
+      "subtopic": "Functions and graphs",
+      "answer": "(a) f(4) = 3(4) - 5 = 12 - 5 = 7\n(b) 3x - 5 = 7 \u2192 3x = 12 \u2192 x = 4\n(c) 3x - 5 = 2x + 1 \u2192 3x - 2x = 1 + 5 \u2192 x = 6",
+      "mark_scheme": [
+        {
+          "point": "Correct substitution into f(4) and simplification",
+          "marks": 2
+        },
+        {
+          "point": "Setting up equation 3x - 5 = 7 and solving correctly",
+          "marks": 2
+        },
+        {
+          "point": "Setting up equation 3x - 5 = 2x + 1 and solving correctly",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Forgetting to subtract 5 after multiplication in part (a)",
+        "Making sign errors when rearranging equations in parts (b) and (c)"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "2"
+    },
+    {
+      "question": "The function f is defined as f(x) = 2x\u00b2 - 8x + 5.\n(a) Express f(x) in the form a(x - h)\u00b2 + k.\n(b) Write down the coordinates of the vertex of the graph of y = f(x).\n(c) State the equation of the axis of symmetry of the graph.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Algebra and Graphs",
+      "subtopic": "Quadratic expressions and equations, Functions and graphs",
+      "answer": "(a) f(x) = 2(x - 2)\u00b2 - 3\n(b) Vertex: (2, -3)\n(c) Axis of symmetry: x = 2",
+      "mark_scheme": [
+        {
+          "point": "Correctly completes the square: 2(x\u00b2 - 4x) + 5 = 2[(x - 2)\u00b2 - 4] + 5",
+          "marks": 2
+        },
+        {
+          "point": "Simplifies to correct form: 2(x - 2)\u00b2 - 8 + 5 = 2(x - 2)\u00b2 - 3",
+          "marks": 2
+        },
+        {
+          "point": "Identifies vertex (2, -3) and axis of symmetry x = 2 from completed square form",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Forgets to factor 2 from first two terms before completing square",
+        "Makes sign error when writing vertex coordinates from (x - h)\u00b2 form",
+        "Confuses axis of symmetry with y-coordinate of vertex"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "2"
+    },
+    {
+      "question": "The function f is defined as f(x) = 2x\u00b2 - 8x + 5 for all real x.\n(a) Express f(x) in the form a(x - h)\u00b2 + k, where a, h, and k are constants.\n(b) Write down the coordinates of the vertex of the graph of y = f(x).\n(c) Find the range of f(x).",
+      "marks": 8,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Algebra and Graphs",
+      "subtopic": "Quadratic expressions and equations, Functions and graphs",
+      "answer": "(a) f(x) = 2(x - 2)\u00b2 - 3\n(b) Vertex = (2, -3)\n(c) Range: f(x) \u2265 -3",
+      "mark_scheme": [
+        {
+          "point": "Correctly completes the square: 2(x\u00b2 - 4x) + 5",
+          "marks": 1
+        },
+        {
+          "point": "Correctly forms 2[(x - 2)\u00b2 - 4] + 5",
+          "marks": 1
+        },
+        {
+          "point": "Simplifies to 2(x - 2)\u00b2 - 8 + 5",
+          "marks": 1
+        },
+        {
+          "point": "Final answer: 2(x - 2)\u00b2 - 3",
+          "marks": 1
+        },
+        {
+          "point": "Identifies vertex coordinates from completed square form",
+          "marks": 2
+        },
+        {
+          "point": "Recognizes parabola opens upward (a > 0)",
+          "marks": 1
+        },
+        {
+          "point": "States correct range using vertex y-coordinate",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Forgets to factor coefficient of x\u00b2 when completing square",
+        "Confuses vertex coordinates (h, k) with (-h, k)",
+        "States range as y \u2264 -3 instead of y \u2265 -3 due to incorrect parabola direction"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "2"
+    },
+    {
+      "question": "The function f is defined as f(x) = 2x\u00b2 - 8x + 5 for all real x.\n(a) Express f(x) in the form a(x - h)\u00b2 + k.\n(b) Hence, write down the coordinates of the vertex of the graph y = f(x).\n(c) Determine the range of f(x).",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Algebra and Graphs",
+      "subtopic": "Quadratic expressions and equations, Functions and graphs",
+      "answer": "(a) f(x) = 2(x - 2)\u00b2 - 3\n(b) Vertex: (2, -3)\n(c) Range: f(x) \u2265 -3",
+      "mark_scheme": [
+        {
+          "point": "Correctly completes the square: f(x) = 2(x\u00b2 - 4x) + 5 = 2[(x - 2)\u00b2 - 4] + 5 = 2(x - 2)\u00b2 - 3",
+          "marks": 2
+        },
+        {
+          "point": "Identifies vertex coordinates from completed square form: (2, -3)",
+          "marks": 2
+        },
+        {
+          "point": "States correct range based on positive quadratic with vertex at minimum: f(x) \u2265 -3",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Incorrect sign when completing the square (e.g., writing +3 instead of -3)",
+        "Misidentifying vertex coordinates from form a(x - h)\u00b2 + k (confusing h and k signs)",
+        "Stating range as f(x) \u2264 -3 (incorrect direction for positive quadratic)"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "2"
+    },
+    {
+      "question": "The points A(2, 5) and B(6, 9) lie on a straight line.\n(a) Find the gradient of the line AB.\n(b) Write down the equation of the line AB in the form y = mx + c.",
+      "marks": 4,
+      "question_type": "short_answer",
+      "difficulty": "easy",
+      "topic": "Coordinate Geometry",
+      "subtopic": "Straight line graphs",
+      "answer": "(a) Gradient m = (9 - 5)/(6 - 2) = 4/4 = 1\n(b) Using point A(2, 5): 5 = 1(2) + c \u2192 c = 3\nEquation: y = x + 3",
+      "mark_scheme": [
+        {
+          "point": "Correct gradient calculation: (9 - 5)/(6 - 2) = 1",
+          "marks": 2
+        },
+        {
+          "point": "Correct substitution into y = mx + c and solving for c",
+          "marks": 1
+        },
+        {
+          "point": "Correct final equation: y = x + 3",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Reversing coordinates in gradient formula: (5 - 9)/(2 - 6)",
+        "Forgetting to solve for c and writing y = x only"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "3"
+    },
+    {
+      "question": "The points A(2, 5) and B(6, 9) lie on a straight line.\n(a) Find the gradient of the line AB.\n(b) Find the equation of the line AB in the form y = mx + c.\n(c) Calculate the distance AB.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "easy",
+      "topic": "Coordinate Geometry",
+      "subtopic": "Straight line graphs, Distance",
+      "answer": "(a) Gradient m = (9 - 5)/(6 - 2) = 4/4 = 1\n(b) Using y - y\u2081 = m(x - x\u2081) with point A(2,5): y - 5 = 1(x - 2) \u2192 y = x + 3\n(c) Distance AB = \u221a[(6-2)\u00b2 + (9-5)\u00b2] = \u221a(4\u00b2 + 4\u00b2) = \u221a(16 + 16) = \u221a32 = 4\u221a2 \u2248 5.66",
+      "mark_scheme": [
+        {
+          "point": "Correct gradient calculation using (y\u2082 - y\u2081)/(x\u2082 - x\u2081)",
+          "marks": 1
+        },
+        {
+          "point": "Correct gradient value (1)",
+          "marks": 1
+        },
+        {
+          "point": "Correct substitution into straight line equation formula",
+          "marks": 1
+        },
+        {
+          "point": "Correct equation in required form (y = x + 3)",
+          "marks": 1
+        },
+        {
+          "point": "Correct application of distance formula \u221a[(x\u2082 - x\u2081)\u00b2 + (y\u2082 - y\u2081)\u00b2]",
+          "marks": 1
+        },
+        {
+          "point": "Correct distance value (4\u221a2 or 5.66)",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Reversing coordinates in gradient formula (x\u2082 - x\u2081)/(y\u2082 - y\u2081)",
+        "Forgetting to simplify gradient (4/4 = 1)",
+        "Using wrong point or incorrect arithmetic in line equation",
+        "Missing square root or squaring errors in distance calculation"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "3"
+    },
+    {
+      "question": "The line L passes through points A(2, 5) and B(6, 1).\n(a) Find the gradient of L.\n(b) Find the equation of L in the form y = mx + c.\n(c) Find the coordinates of the point where L crosses the x-axis.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Coordinate Geometry",
+      "subtopic": "Straight line graphs",
+      "answer": "(a) Gradient m = (1 - 5)/(6 - 2) = (-4)/4 = -1\n(b) Using point A(2,5): y - 5 = -1(x - 2) \u2192 y - 5 = -x + 2 \u2192 y = -x + 7\n(c) When y = 0: 0 = -x + 7 \u2192 x = 7 \u2192 Point is (7, 0)",
+      "mark_scheme": [
+        {
+          "point": "Correct gradient calculation: (1-5)/(6-2) = -1",
+          "marks": 2
+        },
+        {
+          "point": "Correct equation using point-gradient form and simplifying to y = -x + 7",
+          "marks": 2
+        },
+        {
+          "point": "Setting y = 0 and solving correctly to get (7, 0)",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Reversing coordinates in gradient formula: (5-1)/(2-6)",
+        "Forgetting to simplify equation to required form",
+        "Finding y-intercept instead of x-intercept"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "3"
+    },
+    {
+      "question": "The points A(2, 5), B(6, 9) and C(10, 1) are vertices of triangle ABC.\n(a) Find the gradient of line AB.\n(b) Find the equation of line AB in the form y = mx + c.\n(c) Determine whether triangle ABC is right-angled. Show your working.",
+      "marks": 8,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Coordinate Geometry",
+      "subtopic": "Straight line graphs, Distance",
+      "answer": "(a) Gradient AB = (9 - 5)/(6 - 2) = 4/4 = 1\n(b) Using y - y\u2081 = m(x - x\u2081) with point A(2,5): y - 5 = 1(x - 2) \u2192 y = x + 3\n(c) Find lengths: AB = \u221a[(6-2)\u00b2 + (9-5)\u00b2] = \u221a(16+16) = \u221a32 = 4\u221a2\nBC = \u221a[(10-6)\u00b2 + (1-9)\u00b2] = \u221a(16+64) = \u221a80 = 4\u221a5\nAC = \u221a[(10-2)\u00b2 + (1-5)\u00b2] = \u221a(64+16) = \u221a80 = 4\u221a5\nCheck Pythagoras: (4\u221a2)\u00b2 + (4\u221a5)\u00b2 = 32 + 80 = 112, (4\u221a5)\u00b2 = 80 \u2192 Not equal, so not right-angled.",
+      "mark_scheme": [
+        {
+          "point": "Correct gradient calculation: (9-5)/(6-2) = 1",
+          "marks": 2
+        },
+        {
+          "point": "Correct equation using point-gradient form leading to y = x + 3",
+          "marks": 2
+        },
+        {
+          "point": "Correct calculation of at least two side lengths using distance formula",
+          "marks": 2
+        },
+        {
+          "point": "Correct application of Pythagoras theorem and conclusion that triangle is not right-angled",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using wrong coordinates in gradient formula",
+        "Forgetting to simplify gradient",
+        "Incorrect substitution in distance formula",
+        "Assuming right angle without verification"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "3"
+    },
+    {
+      "question": "The curve C has equation y = x\u00b2 - 4x + 7. The line L has equation y = 2x + k, where k is a constant.\n(i) Show that the x-coordinates of the points of intersection of C and L satisfy the equation x\u00b2 - 6x + (7 - k) = 0.\n(ii) Given that L is a tangent to C, find the value of k.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Coordinate Geometry",
+      "subtopic": "Curved graphs, Tangents, Simultaneous equations",
+      "answer": "(i) Set equations equal: x\u00b2 - 4x + 7 = 2x + k \u2192 x\u00b2 - 4x - 2x + 7 - k = 0 \u2192 x\u00b2 - 6x + (7 - k) = 0.\n(ii) For tangency, discriminant = 0: b\u00b2 - 4ac = (-6)\u00b2 - 4(1)(7 - k) = 0 \u2192 36 - 28 + 4k = 0 \u2192 8 + 4k = 0 \u2192 4k = -8 \u2192 k = -2.",
+      "mark_scheme": [
+        {
+          "point": "Correctly equate y = x\u00b2 - 4x + 7 and y = 2x + k",
+          "marks": 1
+        },
+        {
+          "point": "Rearrange to x\u00b2 - 6x + (7 - k) = 0 with no algebraic errors",
+          "marks": 1
+        },
+        {
+          "point": "State condition for tangency: discriminant = 0",
+          "marks": 1
+        },
+        {
+          "point": "Correct substitution into discriminant: (-6)\u00b2 - 4(1)(7 - k)",
+          "marks": 1
+        },
+        {
+          "point": "Simplify to 36 - 28 + 4k = 0 or equivalent",
+          "marks": 1
+        },
+        {
+          "point": "Solve to find k = -2",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Failing to equate equations correctly",
+        "Incorrect discriminant formula or sign errors",
+        "Algebraic mistakes when solving for k"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "3"
+    },
+    {
+      "question": "The points A(\u20133, 2), B(5, 6), and C(9, \u20132) are vertices of triangle ABC.\n(a) Find the equation of the perpendicular bisector of AB. Give your answer in the form y = mx + c.\n(b) Show that the point D(1, 4) lies on the perpendicular bisector of AB.\n(c) Given that D is the midpoint of AC, find the coordinates of point C.\n(d) Calculate the area of triangle ABC.",
+      "marks": 10,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Coordinate Geometry",
+      "subtopic": "Straight line graphs, Distance and midpoint, Area of triangle",
+      "answer": "(a) Midpoint of AB = ((\u20133+5)/2, (2+6)/2) = (1, 4). Gradient of AB = (6\u20132)/(5\u2013(\u20133)) = 4/8 = 1/2. Perpendicular gradient = \u20132. Equation: y \u2013 4 = \u20132(x \u2013 1) \u2192 y = \u20132x + 6.\n(b) Substitute x=1 into y = \u20132(1) + 6 = 4. So D(1, 4) lies on the line.\n(c) Let C = (x, y). Midpoint of AC = ((\u20133+x)/2, (2+y)/2) = (1, 4). Solve: (\u20133+x)/2 = 1 \u2192 x = 5; (2+y)/2 = 4 \u2192 y = 6. So C(5, 6).\n(d) Using coordinates A(\u20133, 2), B(5, 6), C(5, 6): Note B and C are same point, so triangle is degenerate with area 0. Alternatively, using formula: \u00bd|(\u20133)(6\u20136) + 5(6\u20132) + 5(2\u20136)| = \u00bd|0 + 16 \u2013 20| = \u00bd|\u20134| = 2. Correction: C should be (9, \u20132) as given. Area = \u00bd|(\u20133)(6\u2013(\u20132)) + 5(\u20132\u20132) + 9(2\u20136)| = \u00bd|(\u20133)(8) + 5(\u20134) + 9(\u20134)| = \u00bd|\u201324 \u2013 20 \u2013 36| = \u00bd|\u201380| = 40 square units.",
+      "mark_scheme": [
+        {
+          "point": "Finds midpoint of AB correctly: (1, 4)",
+          "marks": 1
+        },
+        {
+          "point": "Finds gradient of AB correctly: 1/2",
+          "marks": 1
+        },
+        {
+          "point": "Finds perpendicular gradient: \u20132",
+          "marks": 1
+        },
+        {
+          "point": "Forms correct equation of perpendicular bisector: y = \u20132x + 6",
+          "marks": 1
+        },
+        {
+          "point": "Substitutes x=1 into equation and shows y=4, confirming D lies on line",
+          "marks": 1
+        },
+        {
+          "point": "Sets up midpoint equations for AC: (\u20133+x)/2 = 1 and (2+y)/2 = 4",
+          "marks": 1
+        },
+        {
+          "point": "Solves to find coordinates of C: (5, 6)",
+          "marks": 1
+        },
+        {
+          "point": "Uses area formula \u00bd|x\u2081(y\u2082\u2013y\u2083) + x\u2082(y\u2083\u2013y\u2081) + x\u2083(y\u2081\u2013y\u2082)| with correct substitution",
+          "marks": 1
+        },
+        {
+          "point": "Correct calculation leading to area = 40",
+          "marks": 1
+        },
+        {
+          "point": "Consistent correct units: square units",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO3",
+      "common_errors": [
+        "Using wrong gradient formula (\u0394x/\u0394y instead of \u0394y/\u0394x)",
+        "Not changing sign for perpendicular gradient",
+        "Misapplying midpoint formula (averaging incorrectly)",
+        "Forgetting absolute value in area calculation",
+        "Arithmetic errors in area computation"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "3"
+    },
+    {
+      "question": "A right-angled triangle has sides of length 6 cm and 8 cm. Calculate the length of the hypotenuse.",
+      "marks": 2,
+      "question_type": "short_answer",
+      "difficulty": "easy",
+      "topic": "Geometry",
+      "subtopic": "Pythagoras and trigonometry",
+      "answer": "Using Pythagoras' theorem: a\u00b2 + b\u00b2 = c\u00b2\n6\u00b2 + 8\u00b2 = c\u00b2\n36 + 64 = c\u00b2\n100 = c\u00b2\nc = \u221a100 = 10 cm",
+      "mark_scheme": [
+        {
+          "point": "Correct application of Pythagoras' theorem (6\u00b2 + 8\u00b2 = c\u00b2)",
+          "marks": 1
+        },
+        {
+          "point": "Correct calculation leading to 10 cm",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Adding sides instead of squaring (6 + 8 = 14)",
+        "Incorrect square root (e.g., \u221a100 = 50)"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "4"
+    },
+    {
+      "question": "The diagram shows triangle ABC.\nAB = 8 cm, BC = 6 cm and angle ABC = 90\u00b0.\n(a) Calculate the length of AC.\n(b) Calculate the area of triangle ABC.\n(c) Triangle DEF is similar to triangle ABC. The area of triangle DEF is 36 cm\u00b2. Calculate the length of DE.",
+      "marks": 8,
+      "question_type": "structured",
+      "difficulty": "easy",
+      "topic": "Geometry",
+      "subtopic": "Pythagoras and trigonometry, Similarity and congruence, Mensuration",
+      "answer": "(a) AC\u00b2 = AB\u00b2 + BC\u00b2 = 8\u00b2 + 6\u00b2 = 64 + 36 = 100 \u2192 AC = \u221a100 = 10 cm\n(b) Area = \u00bd \u00d7 base \u00d7 height = \u00bd \u00d7 8 \u00d7 6 = 24 cm\u00b2\n(c) Area scale factor = 36 \u00f7 24 = 1.5. Length scale factor = \u221a1.5 \u2248 1.225. DE = 8 \u00d7 1.225 \u2248 9.80 cm (or exact: 8\u221a1.5 = 8\u221a(3/2) = 4\u221a6 \u2248 9.80 cm)",
+      "mark_scheme": [
+        {
+          "point": "Correct application of Pythagoras' theorem: AC\u00b2 = 8\u00b2 + 6\u00b2",
+          "marks": 1
+        },
+        {
+          "point": "Correct calculation: AC = 10 cm",
+          "marks": 1
+        },
+        {
+          "point": "Correct area formula: \u00bd \u00d7 base \u00d7 height",
+          "marks": 1
+        },
+        {
+          "point": "Correct calculation: Area = 24 cm\u00b2",
+          "marks": 1
+        },
+        {
+          "point": "Correct area scale factor: 36 \u00f7 24 = 1.5",
+          "marks": 1
+        },
+        {
+          "point": "Understanding length scale factor = \u221a(area scale factor)",
+          "marks": 1
+        },
+        {
+          "point": "Correct multiplication: 8 \u00d7 \u221a1.5",
+          "marks": 1
+        },
+        {
+          "point": "Correct final answer: 9.80 cm (accept 4\u221a6 or 8\u221a1.5)",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using addition instead of Pythagoras: AC = 8 + 6 = 14 cm",
+        "Forgetting the \u00bd in area formula: Area = 8 \u00d7 6 = 48 cm\u00b2",
+        "Using linear scale factor directly for area: DE = 8 \u00d7 1.5 = 12 cm"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "4"
+    },
+    {
+      "question": "A right-angled triangle ABC has AB = 6 cm and BC = 8 cm. D is a point on AC such that BD is perpendicular to AC.\n(a) Calculate the length of AC.\n(b) Calculate the length of BD.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Geometry",
+      "subtopic": "Pythagoras and trigonometry",
+      "answer": "(a) AC = \u221a(6\u00b2 + 8\u00b2) = \u221a(36 + 64) = \u221a100 = 10 cm\n(b) Area of triangle ABC = \u00bd \u00d7 6 \u00d7 8 = 24 cm\u00b2\nAlso area = \u00bd \u00d7 AC \u00d7 BD = \u00bd \u00d7 10 \u00d7 BD = 5 \u00d7 BD\nSo 5 \u00d7 BD = 24 \u2192 BD = 24 \u00f7 5 = 4.8 cm",
+      "mark_scheme": [
+        {
+          "point": "Correct application of Pythagoras' theorem: AC\u00b2 = AB\u00b2 + BC\u00b2",
+          "marks": 2
+        },
+        {
+          "point": "Correct calculation: AC = \u221a(36 + 64) = 10 cm",
+          "marks": 1
+        },
+        {
+          "point": "Correct area calculation using legs: Area = \u00bd \u00d7 6 \u00d7 8 = 24 cm\u00b2",
+          "marks": 1
+        },
+        {
+          "point": "Correct area expression using hypotenuse: Area = \u00bd \u00d7 AC \u00d7 BD",
+          "marks": 1
+        },
+        {
+          "point": "Correct equation and solution: 5 \u00d7 BD = 24 \u2192 BD = 4.8 cm",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using wrong sides for Pythagoras (e.g., AC as hypotenuse)",
+        "Forgetting to divide by 2 in area formula",
+        "Mixing up base and height in area calculation for part (b)"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "4"
+    },
+    {
+      "question": "The diagram shows a right-angled triangle ABC, where angle B = 90\u00b0, AB = 6 cm and BC = 8 cm.\n(a) Calculate the length of AC.\n(b) Triangle ABC is enlarged by scale factor 2.5 to form triangle A'B'C'. Calculate the area of triangle A'B'C'.\n(c) Triangle A'B'C' is then reflected in the line y = x. Describe fully the single transformation that maps triangle ABC onto the final image.",
+      "marks": 9,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Geometry",
+      "subtopic": "Pythagoras and transformations",
+      "answer": "(a) AC = \u221a(6\u00b2 + 8\u00b2) = \u221a(36 + 64) = \u221a100 = 10 cm\n(b) Scale factor = 2.5 \u2192 Area scale factor = (2.5)\u00b2 = 6.25\n    Original area = \u00bd \u00d7 6 \u00d7 8 = 24 cm\u00b2\n    Area of A'B'C' = 24 \u00d7 6.25 = 150 cm\u00b2\n(c) Enlargement scale factor 2.5 followed by reflection in y = x is equivalent to a single transformation: enlargement with scale factor 2.5, centre origin, followed by reflection in y = x. Alternatively: the single transformation is an enlargement with scale factor 2.5 and centre origin, then reflect in y = x (must mention both parts).",
+      "mark_scheme": [
+        {
+          "point": "(a) Correct use of Pythagoras: AC\u00b2 = AB\u00b2 + BC\u00b2",
+          "marks": 1
+        },
+        {
+          "point": "(a) Correct calculation: \u221a(36 + 64) = \u221a100 = 10 cm",
+          "marks": 1
+        },
+        {
+          "point": "(b) Correct area of original triangle: \u00bd \u00d7 6 \u00d7 8 = 24 cm\u00b2",
+          "marks": 1
+        },
+        {
+          "point": "(b) Correct area scale factor: (2.5)\u00b2 = 6.25",
+          "marks": 1
+        },
+        {
+          "point": "(b) Correct final area: 24 \u00d7 6.25 = 150 cm\u00b2",
+          "marks": 1
+        },
+        {
+          "point": "(c) Identifies enlargement scale factor 2.5",
+          "marks": 1
+        },
+        {
+          "point": "(c) States centre of enlargement is origin (or equivalent)",
+          "marks": 1
+        },
+        {
+          "point": "(c) Correctly includes reflection in line y = x",
+          "marks": 1
+        },
+        {
+          "point": "(c) Clear description of combined transformation (both parts)",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using scale factor 2.5 directly on area without squaring",
+        "Confusing reflection in y = x with other reflections like y = -x",
+        "Forgetting to state centre of enlargement"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "4"
+    },
+    {
+      "question": "A solid is made by joining a hemisphere of radius 6 cm to a cylinder of the same radius. The total surface area of the solid is 324\u03c0 cm\u00b2.\n\nCalculate the height of the cylinder.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Mensuration",
+      "subtopic": "Surface area and volume of composite solids",
+      "answer": "Let height of cylinder = h cm.\nCurved surface area of hemisphere = 2\u03c0r\u00b2 = 2\u03c0(6)\u00b2 = 72\u03c0 cm\u00b2.\nCurved surface area of cylinder = 2\u03c0rh = 2\u03c0(6)h = 12\u03c0h cm\u00b2.\nArea of circular base of cylinder (not exposed) = \u03c0r\u00b2 = \u03c0(6)\u00b2 = 36\u03c0 cm\u00b2.\nTotal surface area = curved surface area of hemisphere + curved surface area of cylinder + area of circular top of cylinder (same as base area) = 72\u03c0 + 12\u03c0h + 36\u03c0 = (108 + 12h)\u03c0 cm\u00b2.\nGiven total surface area = 324\u03c0 cm\u00b2.\nSo, 108 + 12h = 324\n12h = 216\nh = 18 cm.",
+      "mark_scheme": [
+        {
+          "point": "Correct expression for curved surface area of hemisphere: 2\u03c0(6)\u00b2 = 72\u03c0",
+          "marks": 1
+        },
+        {
+          "point": "Correct expression for curved surface area of cylinder: 2\u03c0(6)h = 12\u03c0h",
+          "marks": 1
+        },
+        {
+          "point": "Identifies that only one circular face (top of cylinder) is included in total surface area, adds \u03c0(6)\u00b2 = 36\u03c0",
+          "marks": 1
+        },
+        {
+          "point": "Forms correct equation: 72\u03c0 + 12\u03c0h + 36\u03c0 = 324\u03c0 or equivalent simplified form",
+          "marks": 2
+        },
+        {
+          "point": "Solves equation correctly to find h = 18",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO3",
+      "common_errors": [
+        "Forgetting that the circular base of the cylinder is internal/not part of external surface area",
+        "Using total surface area formula for sphere instead of curved surface area for hemisphere",
+        "Not simplifying \u03c0 in the equation correctly"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "4"
+    },
+    {
+      "question": "The diagram shows a composite shape made by joining a right circular cone and a hemisphere. The cone has a vertical height of 12 cm and a base radius of 5 cm. The hemisphere has the same radius as the base of the cone. The shape is placed with the hemisphere at the bottom.\n\n(a) Calculate the total surface area of the composite shape, giving your answer in terms of \u03c0.\n(b) The shape is filled with water. Calculate the volume of water it can hold, giving your answer correct to 3 significant figures.\n(c) A similar composite shape is made with all dimensions doubled. Find the ratio of the surface area of the original shape to the new shape.",
+      "marks": 10,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Mensuration",
+      "subtopic": "Volume and surface area of composite solids, similarity",
+      "answer": "(a) Surface area = curved surface of cone + curved surface of hemisphere (exclude base areas as they are joined).\nCurved surface of cone = \u03c0rl, where l = \u221a(12\u00b2 + 5\u00b2) = \u221a(144 + 25) = \u221a169 = 13 cm.\nSo, curved surface of cone = \u03c0 \u00d7 5 \u00d7 13 = 65\u03c0 cm\u00b2.\nCurved surface of hemisphere = 2\u03c0r\u00b2 = 2\u03c0 \u00d7 5\u00b2 = 50\u03c0 cm\u00b2.\nTotal surface area = 65\u03c0 + 50\u03c0 = 115\u03c0 cm\u00b2.\n\n(b) Volume = volume of cone + volume of hemisphere.\nVolume of cone = (1/3)\u03c0r\u00b2h = (1/3)\u03c0 \u00d7 5\u00b2 \u00d7 12 = (1/3)\u03c0 \u00d7 25 \u00d7 12 = 100\u03c0 cm\u00b3.\nVolume of hemisphere = (2/3)\u03c0r\u00b3 = (2/3)\u03c0 \u00d7 5\u00b3 = (2/3)\u03c0 \u00d7 125 = (250/3)\u03c0 cm\u00b3.\nTotal volume = 100\u03c0 + (250/3)\u03c0 = (300\u03c0/3 + 250\u03c0/3) = (550\u03c0/3) cm\u00b3.\nNumerically: (550 \u00d7 3.14159)/3 \u2248 575.96 cm\u00b3 \u2248 576 cm\u00b3 (3 s.f.).\n\n(c) For similar shapes with all dimensions doubled, linear scale factor = 2.\nSurface area scale factor = 2\u00b2 = 4.\nRatio of surface area (original : new) = 1 : 4.",
+      "mark_scheme": [
+        {
+          "point": "Correct slant height calculation for cone (l = 13 cm)",
+          "marks": 1
+        },
+        {
+          "point": "Correct curved surface area of cone (65\u03c0 cm\u00b2)",
+          "marks": 1
+        },
+        {
+          "point": "Correct curved surface area of hemisphere (50\u03c0 cm\u00b2)",
+          "marks": 1
+        },
+        {
+          "point": "Correct total surface area (115\u03c0 cm\u00b2)",
+          "marks": 1
+        },
+        {
+          "point": "Correct volume of cone (100\u03c0 cm\u00b3)",
+          "marks": 1
+        },
+        {
+          "point": "Correct volume of hemisphere (250\u03c0/3 cm\u00b3)",
+          "marks": 1
+        },
+        {
+          "point": "Correct total volume in \u03c0 form (550\u03c0/3 cm\u00b3)",
+          "marks": 1
+        },
+        {
+          "point": "Correct numerical volume to 3 s.f. (576 cm\u00b3)",
+          "marks": 1
+        },
+        {
+          "point": "Correct identification of linear scale factor (2)",
+          "marks": 1
+        },
+        {
+          "point": "Correct ratio of surface areas (1:4)",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2 and AO3",
+      "common_errors": [
+        "Adding base area of cone or hemisphere to total surface area",
+        "Using wrong formula for curved surface of cone (e.g., \u03c0r\u00b2)",
+        "Forgetting to convert volume to 3 significant figures",
+        "Incorrectly applying similarity to surface area (using linear instead of square factor)"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "4"
+    },
+    {
+      "question": "The table shows the number of goals scored by a football team in 20 matches.\n\n| Goals scored | 0 | 1 | 2 | 3 | 4 |\n| Frequency   | 3 | 5 | 7 | 4 | 1 |\n\n(a) Find the median number of goals scored.\n(b) Calculate the mean number of goals scored.",
+      "marks": 4,
+      "question_type": "short_answer",
+      "difficulty": "easy",
+      "topic": "Probability and Statistics",
+      "subtopic": "Statistical measures (mean, median, mode)",
+      "answer": "(a) Median = 2 goals\n(b) Mean = (0\u00d73 + 1\u00d75 + 2\u00d77 + 3\u00d74 + 4\u00d71) / 20 = (0 + 5 + 14 + 12 + 4) / 20 = 35 / 20 = 1.75 goals",
+      "mark_scheme": [
+        {
+          "point": "Correct median identified as 2 goals",
+          "marks": 1
+        },
+        {
+          "point": "Correct total sum of goals calculated (35)",
+          "marks": 1
+        },
+        {
+          "point": "Correct division by total frequency (20)",
+          "marks": 1
+        },
+        {
+          "point": "Correct mean calculated (1.75)",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Confusing median with mean/mode",
+        "Forgetting to multiply goals by frequency before summing",
+        "Dividing by incorrect total (e.g., 5 instead of 20)"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "5"
+    },
+    {
+      "question": "The table shows the number of goals scored by a football team in 20 matches.\n\n| Goals scored | 0 | 1 | 2 | 3 | 4 |\n| Frequency   | 4 | 6 | 5 | 3 | 2 |\n\n(a) Write down the modal number of goals scored.\n(b) Find the median number of goals scored.\n(c) Calculate the mean number of goals scored.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "easy",
+      "topic": "Probability and Statistics",
+      "subtopic": "Statistical measures (mean, median, mode)",
+      "answer": "(a) Mode = 1 goal\n(b) Median = 1.5 goals\n(c) Mean = 1.6 goals",
+      "mark_scheme": [
+        {
+          "point": "(a) Correctly identifies mode as 1 (highest frequency 6)",
+          "marks": 1
+        },
+        {
+          "point": "(b) Lists all 20 values in order or identifies 10th and 11th values (1 and 2), calculates median as (1+2)/2 = 1.5",
+          "marks": 2
+        },
+        {
+          "point": "(c) Calculates total goals: (0\u00d74)+(1\u00d76)+(2\u00d75)+(3\u00d73)+(4\u00d72) = 0+6+10+9+8 = 32",
+          "marks": 2
+        },
+        {
+          "point": "(c) Divides total by 20: 32 \u00f7 20 = 1.6",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Confusing mode with highest value instead of highest frequency",
+        "Forgetting to average two middle values for median with even dataset",
+        "Miscalculating total in mean by multiplying wrong pairs"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "5"
+    },
+    {
+      "question": "The cumulative frequency curve shows the distribution of marks scored by 80 students in a Mathematics test.\n\n(a) Use the curve to estimate the median mark.\n(b) The pass mark is set at 40. Estimate the number of students who passed the test.\n(c) The top 20% of students receive a distinction. Estimate the minimum mark required for a distinction.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Probability and Statistics",
+      "subtopic": "Cumulative frequency",
+      "answer": "(a) Median = 80/2 = 40th student \u2192 From curve, median \u2248 52 marks\n(b) At mark = 40, cumulative frequency \u2248 28 students \u2192 Passed = 80 - 28 = 52 students\n(c) Top 20% = 16 students \u2192 80 - 16 = 64th student \u2192 From curve, minimum mark \u2248 68 marks",
+      "mark_scheme": [
+        {
+          "point": "Correct method for median (80/2 = 40) and reading from curve (51-53)",
+          "marks": 2
+        },
+        {
+          "point": "Correct reading at mark=40 (27-29) and subtraction (80 - reading) for passes",
+          "marks": 2
+        },
+        {
+          "point": "Correct calculation of top 20% (16 students) and reading 64th student from curve (67-69)",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using 40 marks instead of 40th student for median",
+        "Forgetting to subtract from 80 for number of passes",
+        "Calculating 20% of marks instead of 20% of students"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "5"
+    },
+    {
+      "question": "The table shows the number of hours spent studying per week by 40 students.\n\n| Hours | 0\u20134 | 5\u20139 | 10\u201314 | 15\u201319 | 20\u201324 |\n|-------|-----|-----|-------|-------|-------|\n| Frequency | 5 | 8 | 12 | 10 | 5 |\n\n(a) Calculate an estimate of the mean number of hours studied.\n(b) Write down the modal class.\n(c) A student is chosen at random from the group. Find the probability that the student studied for at least 15 hours per week.",
+      "marks": 8,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Probability and Statistics",
+      "subtopic": "Statistical measures and probability",
+      "answer": "(a) Midpoints: 2, 7, 12, 17, 22\nSum of (midpoint \u00d7 frequency) = (2\u00d75)+(7\u00d78)+(12\u00d712)+(17\u00d710)+(22\u00d75) = 10+56+144+170+110 = 490\nMean = 490 \u00f7 40 = 12.25 hours\n(b) Modal class: 10\u201314 hours\n(c) Number of students studying \u226515 hours = 10 + 5 = 15\nProbability = 15/40 = 3/8 or 0.375",
+      "mark_scheme": [
+        {
+          "point": "Correct midpoints (2, 7, 12, 17, 22)",
+          "marks": 1
+        },
+        {
+          "point": "Correct sum of (midpoint \u00d7 frequency) = 490",
+          "marks": 2
+        },
+        {
+          "point": "Correct mean calculation: 490 \u00f7 40 = 12.25",
+          "marks": 1
+        },
+        {
+          "point": "Correct modal class: 10\u201314",
+          "marks": 1
+        },
+        {
+          "point": "Correct number of students with \u226515 hours: 15",
+          "marks": 1
+        },
+        {
+          "point": "Correct probability: 15/40 = 3/8 or 0.375",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using class limits instead of midpoints for mean",
+        "Confusing modal class with class with highest midpoint",
+        "Incorrect total when calculating probability"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "5"
+    },
+    {
+      "question": "The cumulative frequency curve below shows the distribution of marks (out of 100) for 200 students in a Mathematics examination.\n\n[Assume a typical cumulative frequency curve is provided here with points: (0,0), (20,10), (40,50), (60,120), (80,180), (100,200)]\n\n(a) Use the curve to estimate the median mark. [1]\n(b) The pass mark is set at 45. Estimate the number of students who passed the examination. [2]\n(c) The top 10% of students receive a distinction. Estimate the minimum mark required for a distinction. [2]\n(d) The same group of students took an English examination. The interquartile range (IQR) of the English marks is 25, and the IQR of the Mathematics marks is estimated from the curve. State, with a reason, which subject has marks that are more spread out. [1]",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Probability and Statistics",
+      "subtopic": "Cumulative frequency",
+      "answer": "(a) Median = 50 (read from curve at cumulative frequency = 100)\n(b) Number who passed = 200 - cumulative frequency at mark 45 \u2248 200 - 65 = 135 students\n(c) Top 10% = top 20 students. Minimum distinction mark = mark at cumulative frequency 180 \u2248 78\n(d) Mathematics IQR \u2248 62 - 38 = 24. Since 24 < 25, English marks are more spread out because it has a larger IQR.",
+      "mark_scheme": [
+        {
+          "point": "(a) Correct median read from curve (allow 49-51)",
+          "marks": 1
+        },
+        {
+          "point": "(b) Correct reading of cf at 45 (\u224865) and correct subtraction from 200",
+          "marks": 2
+        },
+        {
+          "point": "(c) Correct identification of top 20 students and reading mark at cf=180 (allow 77-79)",
+          "marks": 2
+        },
+        {
+          "point": "(d) Correct IQR for Maths (23-25) and correct comparison with reason",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO3",
+      "common_errors": [
+        "Reading cumulative frequency values incorrectly from the graph",
+        "Confusing IQR with range or standard deviation",
+        "Not subtracting from total for 'passed' calculation"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "5"
+    },
+    {
+      "question": "A survey recorded the time, t minutes, taken by 120 students to complete a mathematics problem. The results are summarised in the cumulative frequency table.\n\n| Time (t minutes) | Cumulative Frequency |\n|------------------|----------------------|\n| 0 < t \u2264 5        | 8                    |\n| 0 < t \u2264 10       | 28                   |\n| 0 < t \u2264 15       | 64                   |\n| 0 < t \u2264 20       | 96                   |\n| 0 < t \u2264 25       | 120                  |\n\n(a) On the grid, draw a cumulative frequency diagram to represent this information.\n\n(b) Use your diagram to estimate:\n(i) the median time,\n(ii) the interquartile range.\n\n(c) The frequency table for the same data is partially completed below.\n\n| Time (t minutes) | Frequency |\n|------------------|-----------|\n| 0 < t \u2264 5        | 8         |\n| 5 < t \u2264 10       |           |\n| 10 < t \u2264 15      |           |\n| 15 < t \u2264 20      |           |\n| 20 < t \u2264 25      |           |\n\n(i) Complete the frequency table.\n(ii) Calculate an estimate of the mean time.\n\n(d) A student is chosen at random from the 120 students. Given that the student took more than 15 minutes, find the probability that the student took more than 20 minutes.",
+      "marks": 10,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Probability and Statistics",
+      "subtopic": "Histograms and cumulative frequency, Statistical measures, Probability",
+      "answer": "(a) Cumulative frequency diagram plotted with points at (5,8), (10,28), (15,64), (20,96), (25,120) joined with smooth curve or straight lines.\n(b)(i) Median = 120/2 = 60th value \u2192 From diagram, median \u2248 14.5 minutes (accept 14-15).\n(b)(ii) Lower quartile = 30th value \u2248 9.5 minutes, Upper quartile = 90th value \u2248 18.5 minutes \u2192 IQR = 18.5 - 9.5 = 9 minutes.\n(c)(i) Frequencies: 8, 20, 36, 32, 24.\n(c)(ii) Mean estimate = (2.5\u00d78 + 7.5\u00d720 + 12.5\u00d736 + 17.5\u00d732 + 22.5\u00d724) / 120 = (20 + 150 + 450 + 560 + 540) / 120 = 1720 / 120 = 14.33 minutes.\n(d) P(>20 | >15) = (24) / (32+24) = 24/56 = 3/7 \u2248 0.429.",
+      "mark_scheme": [
+        {
+          "point": "(a) Correct points plotted at (5,8), (10,28), (15,64), (20,96), (25,120) and joined with smooth curve/straight lines",
+          "marks": 2
+        },
+        {
+          "point": "(b)(i) Median identified as 60th value and correctly read from their diagram (accept 14-15 minutes)",
+          "marks": 1
+        },
+        {
+          "point": "(b)(ii) Lower quartile (30th) and upper quartile (90th) correctly read, IQR calculated correctly",
+          "marks": 2
+        },
+        {
+          "point": "(c)(i) All frequencies correctly calculated: 8, 20, 36, 32, 24",
+          "marks": 2
+        },
+        {
+          "point": "(c)(ii) Correct midpoints used (2.5,7.5,12.5,17.5,22.5) and mean correctly calculated as 14.33",
+          "marks": 2
+        },
+        {
+          "point": "(d) Correct conditional probability: 24/(32+24) = 3/7",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO3",
+      "common_errors": [
+        "Using cumulative frequency as frequency in mean calculation",
+        "Incorrect reading from cumulative frequency diagram (e.g., using horizontal instead of vertical reading)",
+        "Forgetting to subtract cumulative frequencies to find frequencies",
+        "Using wrong midpoints for class intervals",
+        "Calculating P(>20 and >15) instead of conditional probability"
+      ],
+      "subject_code": "0580_mathematics",
+      "subject_name": "Mathematics (Extended)",
+      "level": "IGCSE",
+      "topic_id": "5"
+    }
+  ]
+}

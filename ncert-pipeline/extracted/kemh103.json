@@ -1,0 +1,583 @@
+{
+  "filename": "kemh103.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "Find the radian measures corresponding to the follow",
+      "content": "1. Find the radian measures corresponding to the following degree measures:\n(i) 25° (ii) – 47°30 ′ (iii) 240°      (iv) 520°\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      49\n",
+      "wordCount": 26,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 2,
+      "title": "Find the degree measures corresponding to the follow",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 3,
+      "title": "TRIGONOMETRIC FUNCTIONS",
+      "content": "Chapter 3\nTRIGONOMETRIC FUNCTIONS\nArya Bhatt\n (476-550)\nFig  3.1Vertex\nReprint 2025-26\n\n44 MATHEMA TICS\ncalled the initial side  and the final position of the ray after rotation is called the\nterminal side  of the angle. The point of rotation is called the vertex . If the direction of\nrotation is anticlockwise, the angle is said to be positive  and if the direction of rotation\nis clockwise, then the angle is negative (Fig 3.1).\nThe measure of an angle is the amount of\nrotation performed to get the terminal side from\nthe initial side. There are several units for\nmeasuring angles. The definition of an angle\nsuggests a unit, viz. one complete r evolution  from the position of the initial side as\nindicated in Fig 3.2.\nThis is often convenient for large angles. For example, we can say that a rapidly\nspinning wheel is making an angle of say 15 revolution per second. We shall  describe\ntwo other units of measurement of an angle which are most commonly used, viz.\ndegree measure and radian measure.\n3.2.1   Degree measure\n  If a rotation from the initial side to terminal side is th1\n360 \n  of\na revolution, the angle is said to have a measure of one degree, written as 1°.  A degree is\ndivided into 60 minutes, and a minute is divided into 60 seconds . One sixtieth of a degree is\ncalled a minute , written as 1 ′, and one sixtieth of a minute is called a second , written as 1 ″.\nThus, 1° = 60 ′, 1′ = 60\n″\nSome of the angles whose measures are 360°,180°, 270°, 420°, – 30°, – 420° are\nshown in Fig 3.3.Fig  3.2\nFig  3.3\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      45\n3.2.2  Radian measure   There is another unit for measurement of an angle, called\nthe radian measure. Angle subtended at the centre by an arc of length 1 unit in a\nunit circle (circle of radius 1 unit) is said to have a measure of 1 radian. In the Fig\n3.4(i) to (iv), OA is the initial side and OB is the terminal side. The figures show the\nangles whose measures are 1 radian, –1 radian, 11\n2 radian and –11\n2 radian.\n(i) (ii)\n(iii)\nFig  3.4 (i) to (iv)(iv)\nWe know that the circumferen ce of a circle of radius  1 unit is 2 π. Thus, one\ncomplete revolution of the initial side subtends an angle of  2 π radian.\nMore generally , in a circle of radius  r, an arc of length r will subtend an angle of\n1 radian. It is well-known that equal arcs of a circle subtend equal angle at the centre.\nSince in a circle of radius r, an arc of length r subtends an angle whose measure is 1\nradian, an arc of length l will subtend an angle whose measure is l\nr radian. Thus, if in\na circle of radius r, an arc of length l subtends an angle θ radian at the centre, we have\nθ  = l\nr  or  l  = r θ.\nReprint 2025-26\n\n46 MATHEMA TICS\n3.2.3  Relation between radian and real numbers\nConsider the unit circle with centre O. Let A be any point\non the circle. Consider OA as initial side of an angle.\nThen the length  of an arc of the circle will give the radian\nmeasure of the angle which the arc will subtend at the\ncentre of the circle. Consider the line P AQ which is\ntangent to the circle at A. Let the point A represent the\nreal number zero, AP represents positive real number and\nAQ represents negative real numbers (Fig 3.5). If we\nrope the line AP in the anticlockwise direction along the\ncircle, and AQ in the clockwise direction, then every real\nnumber will correspond to a radian measure and\nconversely . Thus, radian measures and real numbers can\nbe considered as one and the same .\n3.2.4 \n  Relation between degree and radian    Since a circle subtends at the centre\nan angle whose radian measure is 2 π and its degree measure is 360 °, it follows that\n2π radian = 360 °  or π radian = 180 °\nThe a bove relation enables us to express a radian measure in terms of degree\nmeasure and a degree  measure in terms of radian measure. Using approximate value\nof π as 22\n7, we have\n1 radian = 180\nπ°= 57° 16′ approximately .\nAlso 1° = π\n180 radian  =  0.01746 radian approximately .\nThe relation between degree measures and radian measure of some common angles\nare given in the following t able:A\nO1P\n12\n−1\n−2\nQ0\nFig  3.5\nDegree 30° 45° 60° 90° 180° 270° 360°\nRadianπ\n6π\n4π\n3π\n2π3π\n22π\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      47\nNotational Convention\nSince angles are measured either in degrees or in radians, we adopt the convention\nthat whenever we write angle θ°, we mean the angle whose degree measure is θ and\nwhenever we write angle β, we mean the angle whose radian measure is β.\nNote that when an angle is expressed in radians, the word ‘radian’ is frequently\nomitted. Thus, ππ 180 and 454= ° = °  are written with the understanding that π and π\n4\nare radian measures. Thus, we can say that\nRadian measure = π\n180 ×Degree measure\nDegree measure = 180\nπ×Radian measure\nExample 1   Convert  40° 20 ′  into radian measure.\nSolution   We know that 180° =  π radian.\nHence 40° 20′  = 4 0 1\n3 degree =  π\n180×121\n3 radian = 121π\n540 radian.\nTherefore 40° 20′ = 121π\n540  radian.\nExample 2   Convert 6 radians into degree measure.\nSolution\n   We know that  π radian = 180°.\nHence     6 radians =  180\nπ×6 degree = 1080 7\n22×\ndegree\n= 3437\n11degree = 343° + 760\n11×\n minute [as 1 °  = 60 ′]\n= 343° + 38 ′  + 2\n11 minute [as 1 ′ = 60 ″]\n= 343° + 38 ′ + 10.9 ″ = 343°38′  11″ approximately .\nHence      6 radians = 343° 38 ′ 11″ approximately .\nExample 3    Find the radius of the circle in which a central angle of 60° intercepts an\narc of  length 37.4 cm  (use 22π7= ).\nReprint 2025-26\n\n48 MATHEMA TICS\nSolution   Here l = 37.4 cm and θ = 60° = 60π πradian =180 3\nHence, by r =θl, we have\nr =37.4×3 37.4×3×7=π 22 = 35.7 cm\nExample 4    The minute hand of a watch is 1.5 cm long. How far does its tip move in\n40 minutes? (Use π = 3.14).\nSolution   In 60 minutes, the minute hand of a watch completes one revolution. Therefore,\nin 40 minutes, the minute hand turns through 2\n3 of a revolution. Therefore,  2θ = × 360°3\nor 4π\n3 radian. Hence, the required distance travelled is given by\n l =r θ  =  1.5  ×4π\n3cm = 2 π cm = 2 ×3.14 cm = 6.28 cm.\nExample 5   If the arcs of the same lengths in two circles subtend angles 65°and 1 10°\nat the centre, find the ratio of their radii.\nSolution   Let r1 and r2 be the radii of the two circles. Given that\nθ1 = 65° = π65180×  = 13π\n36 radian\nand θ2  = 110° = π110180×  = 22π\n36radian\nLet l be the length of each of the arc. Then l =  r1θ1 =  r2θ2, which gives\n13π\n36 ×r1 = 22π\n36 ×r2 ,  i.e., 1\n2r\nr= 22\n13\nHence  r1 : r2 = 22 : 13.\nEXERCISE 3.1\n1. Find the radian measures corresponding to the following degree measures:\n(i) 25° (ii) – 47°30 ′ (iii) 240°      (iv) 520°\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      49\n2. Find the degree measures corresponding to the following radian measures\n(Use 22π7= ).\n(i)11\n16(ii) – 4 (iii)5π\n3(iv)7π\n6\n3. A wheel makes 360 revolutions in one minute. Through how many radians does\nit turn in one second?\n",
+      "wordCount": 1336,
+      "examples": [
+        {
+          "chapterNumber": 3,
+          "exampleNumber": 1,
+          "title": "Convert  40° 20 ′  into radian measure.",
+          "question": "Example 1   Convert  40° 20 ′  into radian measure.\nSolution   We know that 180° =  π radian.\nHence 40° 20′  = 4 0 1\n3 degree =  π\n180×121\n3 radian = 121π\n540 radian.\nTherefore 40° 20′ = 121π\n540  radian.\nExample 2   Convert 6 radians into degree measure.\nSolution\n   We know that  π radian = 180°.\nHence     6 radians =  180\nπ×6 degree = 1080 7\n22×\ndegree\n= 3437\n11degree = 343° + 760\n11×\n minute [as 1 °  = 60 ′]\n= 343° + 38 ′  + 2\n11 minute [as 1 ′ = 60 ″]\n= 343° + 38 ′ + 10.9 ″ = 343°38′  11″ ap",
+          "solution": "We know that 180° =  π radian.\nHence 40° 20′  = 4 0 1\n3 degree =  π\n180×121\n3 radian = 121π\n540 radian.\nTherefore 40° 20′ = 121π\n540  radian."
+        },
+        {
+          "chapterNumber": 3,
+          "exampleNumber": 2,
+          "title": "Convert 6 radians into degree measure.",
+          "question": "Example 2   Convert 6 radians into degree measure.\nSolution\n   We know that  π radian = 180°.\nHence     6 radians =  180\nπ×6 degree = 1080 7\n22×\ndegree\n= 3437\n11degree = 343° + 760\n11×\n minute [as 1 °  = 60 ′]\n= 343° + 38 ′  + 2\n11 minute [as 1 ′ = 60 ″]\n= 343° + 38 ′ + 10.9 ″ = 343°38′  11″ approximately .\nHence      6 radians = 343° 38 ′ 11″ approximately .\nExample 3    Find the radius of the circle in which a central angle of 60° intercepts an\narc of  length 37.4 cm  (use 22π7= ).\nReprint 202",
+          "solution": "We know that  π radian = 180°.\nHence     6 radians =  180\nπ×6 degree = 1080 7\n22×\ndegree\n= 3437\n11degree = 343° + 760\n11×\n minute [as 1 °  = 60 ′]\n= 343° + 38 ′  + 2\n11 minute [as 1 ′ = 60 ″]\n= 343° + 38 ′ + 10.9 ″ = 343°38′  11″ approximately .\nHence      6 radians = 343° 38 ′ 11″ approximately ."
+        },
+        {
+          "chapterNumber": 3,
+          "exampleNumber": 3,
+          "title": "Find the radius of the circle in which a central angle of 60° intercepts an",
+          "question": "Example 3    Find the radius of the circle in which a central angle of 60° intercepts an\narc of  length 37.4 cm  (use 22π7= ).\nReprint 2025-26\n\n48 MATHEMA TICS\nSolution   Here l = 37.4 cm and θ = 60° = 60π πradian =180 3\nHence, by r =θl, we have\nr =37.4×3 37.4×3×7=π 22 = 35.7 cm\nExample 4    The minute hand of a watch is 1.5 cm long. How far does its tip move in\n40 minutes? (Use π = 3.14).\nSolution   In 60 minutes, the minute hand of a watch completes one revolution. Therefore,\nin 40 minutes, th",
+          "solution": "Here l = 37.4 cm and θ = 60° = 60π πradian =180 3\nHence, by r =θl, we have\nr =37.4×3 37.4×3×7=π 22 = 35.7 cm"
+        },
+        {
+          "chapterNumber": 3,
+          "exampleNumber": 4,
+          "title": "The minute hand of a watch is 1.5 cm long. How far does its tip move in",
+          "question": "Example 4    The minute hand of a watch is 1.5 cm long. How far does its tip move in\n40 minutes? (Use π = 3.14).\nSolution   In 60 minutes, the minute hand of a watch completes one revolution. Therefore,\nin 40 minutes, the minute hand turns through 2\n3 of a revolution. Therefore,  2θ = × 360°3\nor 4π\n3 radian. Hence, the required distance travelled is given by\n l =r θ  =  1.5  ×4π\n3cm = 2 π cm = 2 ×3.14 cm = 6.28 cm.\nExample 5   If the arcs of the same lengths in two circles subtend angles 65°and",
+          "solution": "In 60 minutes, the minute hand of a watch completes one revolution. Therefore,\nin 40 minutes, the minute hand turns through 2\n3 of a revolution. Therefore,  2θ = × 360°3\nor 4π\n3 radian. Hence, the required distance travelled is given by\n l =r θ  =  1.5  ×4π\n3cm = 2 π cm = 2 ×3.14 cm = 6.28 cm."
+        },
+        {
+          "chapterNumber": 3,
+          "exampleNumber": 5,
+          "title": "If the arcs of the same lengths in two circles subtend angles 65°and 1 10°",
+          "question": "Example 5   If the arcs of the same lengths in two circles subtend angles 65°and 1 10°\nat the centre, find the ratio of their radii.\nSolution   Let r1 and r2 be the radii of the two circles. Given that\nθ1 = 65° = π65180×  = 13π\n36 radian\nand θ2  = 110° = π110180×  = 22π\n36radian\nLet l be the length of each of the arc. Then l =  r1θ1 =  r2θ2, which gives\n13π\n36 ×r1 = 22π\n36 ×r2 ,  i.e., 1\n2r\nr= 22\n13\nHence  r1 : r2 = 22 : 13.\nEXERCISE 3.1\n1. Find the radian measures corresponding to the following",
+          "solution": "Let r1 and r2 be the radii of the two circles. Given that\nθ1 = 65° = π65180×  = 13π\n36 radian\nand θ2  = 110° = π110180×  = 22π\n36radian\nLet l be the length of each of the arc. Then l =  r1θ1 =  r2θ2, which gives\n13π\n36 ×r1 = 22π\n36 ×r2 ,  i.e., 1\n2r\nr= 22\n13\nHence  r1 : r2 = 22 : 1"
+        }
+      ],
+      "exercises": [
+        {
+          "chapterNumber": 3,
+          "exerciseNumber": "3.1",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "Find the radian measures corresponding to the following degree measures:\n(i) 25° (ii) – 47°30 ′ (iii) 240°      (iv) 520°\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "Find the degree measures corresponding to the following radian measures\n(Use 22π7= ).\n(i)11\n16(ii) – 4 (iii)5π\n3(iv)7π\n6"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "A wheel makes 360 revolutions in one minute. Through how many radians does\nit turn in one second?"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 5,
+        "exercisesCount": 3
+      }
+    },
+    {
+      "chapterNumber": 4,
+      "title": "Find the degree measure of the angle subtended at th",
+      "content": "4. Find the degree measure of the angle subtended at the centre of a circle of\nradius 100 cm by an arc of length 22 cm (Use 22π7= ).\n",
+      "wordCount": 29,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 5,
+      "title": "In a circle of diameter 40 cm, the length of a chord",
+      "content": "5. In a circle of diameter 40 cm, the length of a chord is 20 cm. Find the length of\nminor arc of the chord.\n",
+      "wordCount": 25,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 6,
+      "title": "If in two circles, arcs of the same length subtend a",
+      "content": "6. If in two circles, arcs of the same length subtend angles 60° and 75°  at the\ncentre, find the ratio of their radii.\n",
+      "wordCount": 24,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 7,
+      "title": "Find the angle in radian through which a pendulum sw",
+      "content": "7. Find the angle in radian through which a pendulum swings if its length is 75 cm\nand th e tip describes an arc of length\n(i)10 cm (ii) 15 cm (iii) 21 cm\n3.3  Trigonometric Functions\nIn earlier classes, we have studied trigonometric ratios for acute angles as the ratio of\nsides of a right angled triangle. We will now extend the definition of trigonometric\nratios to any angle in terms of radian measure and study them as trigonometric functions.\nConsider a unit circle with centre\nat origin of the coordinate axes. Let\nP (a, b) be any point on the circle with\nangle AOP  = x radian, i.e., length of arc\nAP =  x (Fig 3.6).\nWe define cos x = a and sin x =  b\nSince ∆OMP is a right triangle, we have\nOM2 + MP2 = OP2 or a2 + b2 = 1\nThus, for every point on the unit circle,\nwe have\na2 + b2 = 1 or cos2 x + sin2 x = 1\nSince one complete revolution\nsubtends an angle of 2 π radian at the\ncentre of the circle,  ∠AOB = π\n2, Fig  3.6\nReprint 2025-26\n\n50 MATHEMA TICS\n∠AOC = π and  ∠AOD = 3π\n2. All angles which are integral multiples of π\n2 are called\nquadrantal angles . The coordinates of the points A, B, C and D are, respectively ,\n(1, 0), (0, 1), (–1, 0) and (0, –1). Therefore, for quadrantal angles, we have\ncos 0° = 1 sin 0° = 0,\ncos π\n2= 0 sin π\n2= 1\ncosπ= − 1 sinπ= 0\ncos 3π\n2= 0 sin 3π\n2= –1\ncos 2 π= 1 sin 2 π= 0\nNow, if we take one complete revolution from the point P , we again come back to\nsame point P . Thus, we also observe that if x increases (or decreases) by any integral\nmultiple of 2π, the values of sine and cosine functions do not change.  Thus,\nsin (2 nπ + x)  = sin x, n ∈ Z ,  cos (2 nπ + x) = cos x, n ∈ Z\nFurther , sin x = 0, if x = 0, ± π,  ± 2π , ± 3 π, ..., i.e., when x is an integral multiple of π\nand cos x = 0, if x = ± π\n2, ± 3π\n2 , ± 5π\n2, ... i.e., cos x vanishes when x is an odd\nmultiple of π\n2. Thus\nsin x  = 0 implies x = nπ, π, π, \nπ, π, where n is any integer\ncos x = 0 implies x = (2n + 1) π\n2, where n is any integer .\nWe now define other trigonometric functions in terms of sine and cosine functions:\ncosec x = 1\nsinx, x ≠  nπ, where n is any integer .\nsec x    = 1\ncosx, x ≠ (2n + 1) π\n2, where n  is any  integer .\ntan x     = sin\ncosx\nx, x ≠ (2n +1)π\n2, where n is any integer .\ncot x     = cos\nsinx\nx, x ≠ n π, where n is any integer .\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      51\nnot\ndefinednot\ndefinedWe have shown that for all real x,  sin2 x + cos2 x = 1\nIt follows that\n1 + tan2 x = sec2 x (why?)\n1 + cot2 x = cosec2 x (why?)\nIn earlier classes, we have discussed the values of trigonometric ratios for 0°,\n30°, 45°, 6 0° and 90°. The values of trigonometric functions for these angles are same\nas that of trigonometric ratios studied in earlier classes. Thus, we have the following\ntable:\n0°π\n6π\n4π\n3π\n2π3π\n22π\nsin 01\n21\n23\n21  0 – 1  0\ncos 13\n21\n2 1\n20 – 1   0  1\ntan 01\n3  1 3   0  0\nThe values of cosec x, sec x and cot x\nare the reciprocal of the values of sin x,\ncos x and tan x, respectively .\n3.3.1   Sign of trigonometric functions\nLet P ( a, b) be a point on the unit circle\nwith centre at the origin such that\n∠AOP = x. If ∠AOQ = – x, then the\ncoordinates of the point Q will be ( a, –b)\n(Fig 3.7). Therefor e\ncos (–  x) = cos x\nand sin (–  x) = – sin x\nSince for every point P ( a, b) on\nthe unit circle, – 1 ≤ a ≤ 1 and Fig  3.7\nReprint 2025-26\n\n52 MATHEMA TICS\n– 1 ≤  b ≤ 1, we have – 1 ≤ cos x ≤ 1 and –1 ≤ sin x ≤ 1 for all x . We   have learnt in\nprevious classes that in the first quadrant (0 < x < π\n2) a and b are both positive, in the\nsecond quadrant (π\n2 < x <π) a is negative and b is positive, in the third quadrant\n(π < x < 3π\n2) a and b are both negative and in the fourth quadrant (3π\n2 < x < 2π) a is\npositive and b is negative. Therefore, sin x is positive for 0 < x < π, and negative for\nπ < x < 2π. Similarly , cos x is positive for 0 < x < π\n2, negative for π\n2 <  x < 3π\n2 and also\npositive for 3π\n2<  x < 2π. Likewise, we can find the signs of other trigonometric\nfunctions in different quadrants. In fact, we have the following table.\nI II III IV\nsin x + +  –  –\ncos x +  –  –  +\ntan x +  –  +  –\ncosec x + +  –  –\nsec x +  –  –  +\ncot x +  –  +  –\n3.3.2\n  Domain and range of trigonometric functions  From the definition of sine\nand cosine functions, we observe that they are defined for all real numbers. Further ,\nwe observe that for each real number x,\n – 1 ≤ sin x ≤ 1 and  – 1 ≤ cos x ≤ 1\nThus, domain of y = sin x and y = cos x is the set of all real numbers and range\nis the interval [–1, 1], i.e., – 1 ≤ y ≤ 1.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      53\nSince cosec x = 1\nsinx, the domain of y = cosec x is the set { x : x ∈ R and\nx ≠ n π, n ∈ Z} and range is the set { y : y ∈ R, y  ≥ 1 or y  ≤ – 1}. Similarly , the domain\nof y = sec x is the set { x : x ∈ R and x  ≠ (2n + 1) π\n2, n ∈ Z} and range is the set\n{y : y  ∈ R, y  ≤ – 1or y ≥ 1}. The domain of y = tan \nx is the set { x : x ∈ R and\nx ≠ (2n + 1) π\n2, n ∈ Z} and range is the set of all real numbers. The domain of\ny = cot x is the set { x : x  ∈ R and x ≠ n π, n ∈ Z} and the range is the set of all real\nnumbers.\nWe further observe that in the first quadrant, as x increases from 0 to π\n2, sin x\nincreases from 0 to 1, as x increases from π\n2 to π, sin x decreases from 1 to 0. In the\nthird quadrant, as x increases from π to3π\n2, sin x decreases from 0 to –1and finally , in\nthe fourth quadrant, sin x increases from –1 to 0 as x increases from 3π\n2 to 2 π.\nSimilarly , we can discuss the behaviour of other trigonometric functions. In fact, we\nhave the following table:\nRemar k In the above table, the statement tan x increases from 0 to ∞ (infinity) for\n0 < x < π\n2 simply means that tan x increases as x increases for 0 < x < π\n2 andI quadrant II quadrant III quadrant IV quadrant\nsin increases from 0 to 1 decreases from 1 to 0 decreases from 0 to –1 increases from –1 to 0\ncos decreases from 1 to 0 decreases from 0 to – 1 increases from –1 to 0 increases from 0 to 1\ntan increases from 0 to ∞increases from – ∞to 0 increases from 0 to ∞increases from – ∞to 0\ncot decreases from ∞ to 0 decreases from 0 to– ∞decreases from ∞ to \n0decreases from 0to – ∞\nsec increases from 1 to ∞increases from – ∞to–1 decreases from – 1to–∞decreases from ∞ to 1\ncosec decreases from ∞ to 1 increases from 1 to ∞increases from – ∞to–1 decreases from–1to–∞\nReprint 2025-26\n\n54 MATHEMA TICS\nFig 3.10 Fig 3.1 1Fig 3.8\nFig 3.9assumes arbitraily lar ge positive values as x approaches to π\n2.  Similarly , to say that\ncosec x decreases from –1 to – ∞ (minus infinity) in the fourth quadrant means that\ncosec x decreases for x ∈ (3π\n2, 2π) and assumes arbitrarily large negative values as\nx approaches to 2 π. The symbols ∞ and  – ∞ simply specify certain types of behaviour\nof functions and variable s.\nWe have already seen that values of sin x and cos x repeats after an interval of\n2π. Hence, values of cosec  x and sec x will also repeat after an interval of 2 π. W\ne\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      55\nshall see in the next section that tan ( π + x) = tan x. Hence, values of tan x will repeat\nafter an interval of π. Since cot x is reciprocal of tan x, its values will also repeat after\nan interval of π. Using this knowledge and behaviour of trigonometic functions, we can\nsketch the graph of these functions. The graph of these functions are given above:\nExample 6   If cos x =  –  3\n5, x lies in the third quadrant, find the values of other five\ntrigonometric functions.\nSolution   Since cos \nx  = 3\n5− , we have  sec x = 5\n3−\nNow sin2 x + cos2 x = 1, i.e., sin2 x = 1 – cos2 x\nor sin2 x = 1 – 9\n25  = 16\n25\nHence sin x = ± 4\n5\nSince x lies in third quadrant, sin x is negative. Therefore\nsin x = – 4\n5\nwhich also gives\ncosec x = – 5\n4Fig 3.12 Fig 3.13\nReprint 2025-26\n\n56 MATHEMA TICS\nFurther , we have\ntan x = sin\ncosx\nx = 4\n3 and cot x = cos\nsinx\nx = 3\n4.\nExample 7   If cot \nx = – 5\n12, x lies in second quadrant, find the values of other five\ntrigonometric functions.\nSolution     Since cot x= – 5\n12, we have tan x  = – 12\n5\nNow sec2 x =1 + tan2 x = 1 + 144\n25 = 169\n25\nHence sec x =± 13\n5\nSince x lies in second quadrant, sec x will be negative. Therefore\nsec x =– 13\n5,\nwhich also gives\n                           5cos13x= −\nFurther , we have\nsin x = tan x cos x = (– 12\n5) ×(– 5\n13) = 12\n13\nand cosec x =1\nsinx= 13\n12.\nExample 8    Find the value of sin 31π\n3.\nSolution   We know that values of sin x repeats after an interval of 2 π. Therefore\nsin 31π\n3 = sin (10 π + π\n3) = sin π\n3 = 3\n2.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      57\nExample 9   Find the value of cos (–1710°).\nSolution  We know that values of cos x repeats after an interval of 2 π or 360°.\nTherefore, cos (–1710°) = cos (–1710° + 5 ×360°)\n = cos (–1710° + 1800°) = cos 90° = 0.\nEXERCISE 3.2\nFind the values of other five trigonometric functions in Exercises 1 to 5.\n1.cos x = – 1\n2, x lies in third quadrant.\n2.sin x = 3\n5, x lies in second quadrant.\n3.cot x = 43, x lies in third quadrant.\n4.sec x = 13\n5, x lies in fourth quadrant.\n5.tan x = – 5\n12, x lies in second quadrant.\nFind the values of the trigonometric functions in Exercises 6 to 10.\n6.sin 765° 7. cosec (– 1410°)\n8.tan 19π\n39. sin (– 11π\n3)\n10. cot (– 15π\n4)\n3.4  Trigonometric Functions of Sum and Dif ference of Two Angles\nIn this Section, we shall derive expressions for trigonometric functions of the sum and\ndifference of two numbers (angles) and related expressions. The basic results in this\nconnection are called trigonometric identities . We have seen that\n1.sin (–  x)  = – sin x\n2.cos (–  x) = cos x\nWe shall now prove some more results:\nReprint 2025-26\n\n58 MATHEMA TICS\n3. cos ( x + y) = cos x cos y – sin x sin y\nConsider the unit circle with centre at the origin. Let x be the angle P4OP1and  y be\nthe angle P1OP2. Then ( x + y) is the angle P4OP2. Also let (–  y) be the angle P4OP3.\nTherefore, P1, P2, P3 and P4 will have the coordinates P1(cos x, sin x),\nP2 [cos ( x + y), sin ( x + y)], P3 [cos (–  y), sin (–  y)] and P4 (1, 0) (Fig 3.14).\nConsider the triangles P1OP3 and P2OP4. They are congruent (Why?). Therefore,\nP1P3 and P2P4 are equal. By using distance formula, we get\nP1P32= [cos x – cos (–  y)]2  + [sin x – sin(– y]2\n= (cos x – cos y)2 + (sin x + sin y)2\n= cos2 x + cos2 y – 2 cos x cos y + sin2 x + sin2 y + 2sin x sin \ny\n= 2 – 2 (cos x cos y – sin x sin y) (Why?)\nAlso, P2P42= [1 – cos ( x + y)] 2 + [0 – sin ( x + y)]2\n= 1 – 2cos ( x + y) + cos2 (x + y) + sin2 (x + y)\n= 2 – 2 cos ( x + y)Fig  3.14\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      59\nSince P1P3= P2P4, we have P1P32 = P2P42.\nTherefore, 2 –2 (cos x cos y – sin x sin y) = 2 – 2 cos ( x + y).\nHence  cos ( x + y) = cos x cos y – sin x sin y\n4. cos ( x – y) = cos x cos y + sin x sin y\nReplacing y by – y in identity 3, we get\ncos (x + (– y)) = cos x cos (–  y) – sin x sin ( – y)\nor cos ( x – y) = cos x cos y + sin x sin y\n5. cos ( xπ–2) = sin x\nIf we replace x by π\n2 and y by x in Identity (4), we get\ncos (π\n2x−) = cos π\n2 cos x + sin π\n2 sin x = sin x.\n6. sin ( xπ–2) = cos x\nUsing the Identity 5, we have\nsin (π\n2x−) = cos π π\n2 2x   − −       = cos x.\n7. sin ( x + y) = sin x cos y + cos x sin y\nWe know that\n sin ( x + y) = cos π( )2x y − +   = cos π( )2x y − −  \n = cos (π\n2x−) cos y + sin π( )2x−sin y\n = sin x cos y + cos x sin y\n8. sin (\nx – y) = sin x cos y – cos x  sin y\nIf we replace y by – y, in the Identity 7, we get the result.\n9. By taking suitable values of x and y in the identities 3, 4, 7 and 8, we get the\nfollowing results:\ncos xπ( + )2 = – sin x sin xπ( + )2 = cos x\ncos ( πππ\nππ – x)  = – cos x sin ( π ππ ππ – x)  = sin x\nReprint 2025-26\n\n60 MATHEMA TICS\ncos ( πππ ππ + x)  = – cos x sin ( π ππ ππ + x)  = – sin x\ncos (2 π ππ ππ – x) = cos x sin (2 π ππ ππ – x) = – sin x\nSimilar results for tan x, cot x, sec x and cosec x can be obtained from the results of sin\nx and cos x.\n10. If none of the angles x, y and ( x + y) is an odd multiple of π\n2, then\n    tan ( x + y)= x y\nx ytan + tan\n1 – tan tan\nSince none of the x, y and ( x + y) is an odd multiple of π\n2, it follows that cos x,\ncos y and cos ( x + y) are non-zero. Now\n    tan ( x + y)= sin( )\ncos( )xy\nx y+\n+ = sin cos cos sin\ncos cos sin sinx y x y\nx y x y+\n−.\nDividing numerator and denominator by cos x cos y, we have\n    tan ( x + y)= \ny xy x\ny xy xy xy x\ny xy x\ncos cossin sin\ncos coscos coscos cossin cos\ncos coscos sin\n−+\n= tan tan\n1 – tan tanx y\nx y+\n11.            tan ( x – y)= x y\nx ytan – tan\n1 + tan tan\nIf we replace y by –  y in Identity 10, we get\n     tan ( x – y)= tan [ x + (–  y)]\n=  tan tan ( )\n1 tan tan ( )x y\nx y+ −\n− − = tan tan\n1 tan tanx y\nx y−\n+\n12. If none of the angles x, y and ( x + y) is a multiple of π ππππ, then\n    cot ( \nx + y) = x y\ny xcot cot – 1\ncot +cot\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      61\nSince, none of the x, y and ( x + y) is multiple of π, we find that sin x  sin y and\nsin (x + y) are non-zero. Now ,\ncot ( x + y)=cos ( ) cos cos – sin sin\nsin ( ) sin cos cos sinx y x y x y\nx y x y x y+=\n+ +\nDividing numerator and denominator by sin x sin y, we have\ncot (x + y)=cot cot –1\ncot cotx y\ny x+\n13. cot ( x – y)=x y\ny xcot cot +1\ncot – cot if none of angles x, y and x–y is a multiple of π\nIf we replace y by – y in identity 12, we get the result\n14. cos 2 x  = cos2x – sin2 x = 2 cos2 x – 1 = 1 – 2 si n2 x = x\nx2\n21 – tan\n1 + tan\nWe know that\ncos ( x + y) =cos x  cos y – sin x sin y\nReplacing y by x, we get\n  cos 2 x =cos2x – sin2 x\n=cos2 x – (1 – cos2 x) = 2 cos2x – 1\nAgain, cos 2 x =cos2 x – sin2 x\n=1 – sin2 x – sin2 x = 1 – 2 sin2 x.\nWe have cos 2 x =cos2 x – sin 2 x  =  2 2\n2 2cos sin\ncos sinx x\nx x−\n+\nDividing numerator and denominator by cos2 x, we get\ncos 2 x =2\n21 – tan\n1+ tanx\nx,  ππ2≠ +x n , where   n is an integer\n15. sin 2 x = 2 sin x cos x = x\nx22tan\n1 +t\nan ππ2≠ +x n , where   n is an integer\nWe have\nsin (x + y) = sin x cos y + cos x sin y\nReplacing y by x, we get sin 2 x = 2 sin x cos x.\nAgain sin 2 x = 2 22sin cos\ncos sinx x\nx x+\nReprint 2025-26\n\n62 MATHEMA TICS\nDividing each term by cos2 x, we get\nsin 2 x = 22tan\n1 tanx\nx +\n16. tan 2 x = x\nx22tan\n1 – tan  if π2 π2≠ +x n , where   n is an integer\nWe know that\ntan (x + y) = tan tan\n1 tan tanx y\n– x y+\nReplacing y by x , we get 22 tantan 2\n1 tanxx\nx=\n−\n17. sin 3 x = 3 sin x – 4 sin3 x\nWe have,\nsin 3 x =sin (2 x + x)\n=sin 2 x cos x + cos 2 x sin \nx\n=2 sin x  cos x cos x + (1 – 2sin2 x) sin x\n=2 sin x (1 – sin2 x) + sin x  – 2 sin3 x\n=2 sin x – 2 sin3 x + sin x – 2 sin3 x\n=3 sin x – 4 sin3 x\n18. cos 3 x= 4 cos3 x – 3 cos x\nWe have,\n             cos 3 x = cos (2 x +x)\n=cos 2 x  cos x  – sin 2x  sin x\n=(2cos2 x – 1) cos x – 2sin x cos x sin x\n=(2cos2 x – 1) cos x  – 2cos x  (1 – cos2 x)\n=2cos3 x – cos x – 2cos x + 2 cos3 x\n=4cos3 x – 3cos x.\n19. =x xx\nx3\n23 tan – tantan3\n1– 3tan if π3 π2≠ +x n , where   n is an integer\nWe have tan 3 x =tan (2 x + x)\n=tan 2 tan\n1 tan 2 tanx x\n– x x+2\n22tantan\n1 tan\n2tan tan1\n1 tanxx\n– x\nx . x–\n– x+\n=\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      63\n3 3\n2 2 22tan tan tan 3 tan tan\n1 tan 2tan 1 3tanx x – x x – x\n– x – x – x+= =\n20. (i)cos x + cos y = x y x y+ –2cos cos2 2\n(ii) cos x – cos y = – x y x y+ –2sin sin2 2\n(iii) sin x + sin y = x y x y+ –2sin cos2 2\n(iv) sin x – sin y = x y x y+ –2cos sin2 2\nWe know that\ncos ( x + y) = cos x cos y – sin x sin y ... (1)\nand cos ( x – y) = cos \nx cos y  + sin x sin y ... (2)\nAdding and subtracting (1) and (2), we get\ncos ( x + y) + cos( x – y) =  2 cos x cos y ... (3)\nand cos ( x + y) – cos ( x – y) = – 2 sin x sin y ... (4)\nFurther sin (x  + y) = sin x cos y + cos x sin y ... (5)\nand sin (x – y) = sin x  cos y – cos x sin y ... (6)\nAdding and subtracting (5) and (6), we get\nsin (x  + y) + sin ( x – y) = 2 sin x cos y ... (7)\nsin (x + y) – sin (x  – y) = 2cos x sin y ... (8)\nLet x + y = θ and x – y = φ. Therefore\nθ θand2 2x y+φ −φ   = =       \nSubstituting the values of x and y in (3), (4), (7) and (8), we get\ncos θ + cos φ = 2 cos θ θcos2 2+φ −φ   \n      \ncos θ – cos φ = – 2 sin θ θsin2– + φ φ   \n   2    \nsin θ + sin φ  = 2 sin  θ θcos2 2+φ −φ   \n      \nReprint 2025-26\n\n64 MATHEMA TICS\nsin θ – sin φ = 2 cos  θ θsin2 2+φ −φ   \n      \nSince θ and φ can take any real values, we can replace θ by x and φ by y .\nThus, we get\ncos x + cos y = 2 cos cos2 2x y x y+ −; cos x – cos y = – 2 sin sin2 2x y x y+ −,\nsin x + sin y = 2 sin cos2 2x y x y+ −; sin x – sin y = 2 cos sin2 2x y x y+ −.\nRemark  As a part of identities given in 20, we can prove the following results:\n21. (i)2 cos x cos y = cos ( x + y) + cos ( x – y)\n(ii) –2 sin x sin y = cos ( x + y) – cos ( x – y)\n(iii) 2 sin x cos y = sin ( x + y) + sin ( x – y)\n(iv) 2 cos x sin y = sin ( x + y) – sin ( x – y).\nExample 10\n Prove that\n53sin sec 4sin cot 16 3 6 4π π π π− =\nSolution We have\nL.H.S. =53sin sec 4sin cot6 3 6 4π π π π−\n=3 × 1\n2 × 2 – 4 sin 6π  π−  × 1 = 3 – 4 sin 6π\n=3 – 4 × 1\n2  = 1 = R.H.S.\nExample 1 1 Find the value of sin 15°.\nSolution     We have\nsin 15° = sin (45° – 30°)\n= sin 45° cos 30° – cos 45° sin 30°\n= 1 3 1 1 3 1\n2 22 2 2 2–× − × = .\nExample 12  Find the value of tan 13\n12π.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      65\nSolution We have\ntan 13\n12π=tan 12π  π +   = tan tan12 4 6π π π  = −   \n=tan tan4 6\n1 tan tan4 6π π−\nπ π+= 113 1 32 31 3 11\n3−−= = −\n++\nExample 13 Prove that\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −.\nSolution  We have\n              L.H.S.sin ( ) sin cos cos sin\nsin( ) sin cos cos sinx y x y x y\nx y x y x y+ += =− −\nDividing the numerator and denominator by cos x cos y, we get\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −.\nExample 14   Show that\n   tan 3 x tan 2 x tan \nx = tan 3 x – tan 2 x – tan x\nSolution We know that 3 x = 2x + x\nTherefore, tan 3x  = tan (2x  + x)\nortan 2 tantan31– tan 2 tanx xxx x+=\nor tan 3 x – tan 3 x tan 2 x tan x = tan 2 x + tan x\nor tan 3\nx – tan 2x  – tan x = tan 3 x tan 2x  tan x\nor tan 3x  tan 2 x tan x = tan 3 x – tan 2 x – tan x.\nExample 15 Prove that\ncos cos 2 cos4 4x x xπ π   + + − =      \nSolution Using the Identity 20(i), we have\nReprint 2025-26\n\n66 MATHEMA TICS\n      L.H.S. cos cos4 4x xπ π    = + + −       \n( )4 4 4 42cos cos2 2x x x – xπ π π π   + + − + −   =    \n          \n= 2 cos 4π cos x = 2 × 1\n2 cos x = 2cos x = R.H.S.\nExample 16  Prove that  cos 7 cos 5cot\nsin 7 – sin 5x xx\nx x+=\nSolution Using the Identities 20 (i) and 20 (iv), we get\n      L.H.S.         = 7 5 7 52cos cos2 2\n7 5 7 52cos sin2 2x x x x\nx x x x+ −\n+ − = cos\nsincotx\nxx =  = R.H.S.\nExample 17  Prove that sin 5 2sin 3 sintan\ncos5 cosx x xx\nx x− += =\n−\nSolution W e have\nL.H.S. sin 5 2sin3 sin\ncos5 cosx x x\nx x− +=\n− sin 5 sin 2sin 3\ncos5 cosx x x\nx x+ −=\n−\n 2sin3 cos 2 2sin3\n– 2sin3 sin 2  x x x\nx x−=sin 3 (cos2 1)\nsin 3 sin 2  x x–\nx x−=\n  21 cos 2 2sin\nsin 2 2sin cosx x\nx x x−= =  =  tan x  =  R.H.S.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      67\nEXERCISE 3.3\nProve that:\n1.sin2 π\n6+ cos2 3π– tan2 1–4 2π= 2.   2sin2\n6π+ cosec2  2 7 3cos6 3 2π π=\n3.2 2 5cot cosec 3tan 66 6 6π π π+ + = 4.  2 2 2 32sin 2cos 2sec 104 4 3π π π+ + =\n5.Find the value of:\n(i) sin 75° (ii) tan 15°\nProve the following:\n6.cos cos sin sin sin( )4 4 4 4x y x y x yπ π π π       − − − − − = +              \n7.2πtan1 tan 4\nπ 1 tantan4xx\nxx +  +  = −    −  8.2 cos ( ) cos ( )cot\nsin ( ) cos2x xx\nx xπ + −=π π − +   \n9.3π 3πcos cos (2 π ) cot cot (2π ) 12 2x x x x     + + − + + =           \n10. sin (n + 1)x sin ( n + 2) x + cos ( n + 1) x cos ( n + 2) x = cos x\n11.3 3cos cos 2 sin4 4x x xπ π    + − − = −      \n12. sin2 6x – sin2 4x = sin 2 x sin 10 x 13. cos2 2x – cos2 6x = sin 4 x sin 8 x\n14. sin2 x + 2 sin 4 x + sin 6\nx = 4 cos2 x sin 4 x\n15. cot 4 x (sin 5 x + sin 3x ) = cot x (sin 5 x – sin 3x )\n16.cos cos\nsin sinsin\ncos9 5\n17 32\n10x x\nx xx\nx−\n−= − 17. sin sin\ncos costan5 3\n5 34x x\nx xx+\n+=\n18.sin sin\ncos costanx y\nx yxy −\n+=−\n219. sin sin\ncos costanx x\nx xx+\n+=3\n32\n20.sin sin\nsin cossinx x\nx xx−\n−=322 2 21. cos cos cos\nsin sin sincot4 3 2\n4 3 23x x x\nx x xx+ +\n+ +=\nReprint 2025-26\n\n68 MATHEMA TICS\n22. cot x cot 2 x – cot 2 x cot 3 x – cot 3 x cot x = 1\n23.2\n2 44tan (1 tan )tan 4\n1 6 tan tanx xx\nx x−=\n− +24. cos 4 x = 1 – 8sin2 x cos2 x\n25. cos 6 x = 32 cos6 x – 48cos4 x + 18 cos2 x – 1\nMiscellaneous Examples\nExample 18    If sin x = 3\n5,  cos y = −12\n13, where x and y both lie in second quadrant,\nfind the value of sin ( x + y).\nSolution  We know that\nsin (\nx + y) = sin x cos y + cos x sin y ... (1)\nNow cos2 x= 1 – sin2 x = 1 – 9\n25 = 16\n25\nTherefore cos x = ±4\n5.\nSince x lies in second quadrant, cos x is negative.\nHence cos x = −4\n5\nNow sin2y = 1 – cos2y = 1 – 144\n16925\n169=\ni.e. sin y = ±5\n13.\nSince y lies in second quadrant, hence sin  y is positive. Therefore, sin y = 5\n13. Substituting\nthe values of sin x, sin y, cos x and cos y in (1), we get\nsin( ) x y + = × −\n\n+ −\n\n×3\n512\n134\n55\n13=  36 20 56\n65 65 65− − = − .\nExample 19      Prove that\n9 5cos 2 cos cos 3 cos sin 5 sin2 2 2x x xx x x − = .\nSolution    We have\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      69\nL.H.S. = 1 92cos 2 cos 2cos cos 32 2 2x xx x −  \n= 1 9 9cos 2 cos 2 cos 3 cos 32 2 2 2 2x x x xx x x x         + + − − + − −                \n= 1\n25\n23\n215\n23\n2cos cos cos cosx x x x+ − −\n\n = 1\n25\n215\n2cos cosx x−\n\n\n= 5 15 5 15\n1 2 2 2 22sin sin2 2 2x x x x      + −     −     \n     \n       \n= − −\n\n= sin sin sin sin55\n255\n2xxxx\n = R.H.S.\nExample 20    Find the value of tan π\n",
+      "wordCount": 5667,
+      "examples": [
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 6,
+          "title": "If cos x =  –  3",
+          "question": "Example 6   If cos x =  –  3\n5, x lies in the third quadrant, find the values of other five\ntrigonometric functions.\nSolution   Since cos \nx  = 3\n5− , we have  sec x = 5\n3−\nNow sin2 x + cos2 x = 1, i.e., sin2 x = 1 – cos2 x\nor sin2 x = 1 – 9\n25  = 16\n25\nHence sin x = ± 4\n5\nSince x lies in third quadrant, sin x is negative. Therefore\nsin x = – 4\n5\nwhich also gives\ncosec x = – 5\n4Fig 3.12 Fig 3.13\nReprint 2025-26\n\n56 MATHEMA TICS\nFurther , we have\ntan x = sin\ncosx\nx = 4\n3 and cot x = cos\nsinx\nx =",
+          "solution": "Since cos \nx  = 3\n5− , we have  sec x = 5\n3−\nNow sin2 x + cos2 x = 1, i.e., sin2 x = 1 – cos2 x\nor sin2 x = 1 – 9\n25  = 16\n25\nHence sin x = ± 4\n5\nSince x lies in third quadrant, sin x is negative. Therefore\nsin x = – 4\n5\nwhich also gives\ncosec x = – 5\n4Fig 3.12 Fig 3.13\nReprint 2025-26\n\n56 MATHEMA TICS\nFurther , we have\ntan x = sin\ncosx\nx = 4\n3 and cot x = cos\nsinx\nx = 3"
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 7,
+          "title": "If cot",
+          "question": "Example 7   If cot \nx = – 5\n12, x lies in second quadrant, find the values of other five\ntrigonometric functions.\nSolution     Since cot x= – 5\n12, we have tan x  = – 12\n5\nNow sec2 x =1 + tan2 x = 1 + 144\n25 = 169\n25\nHence sec x =± 13\n5\nSince x lies in second quadrant, sec x will be negative. Therefore\nsec x =– 13\n5,\nwhich also gives\n                           5cos13x= −\nFurther , we have\nsin x = tan x cos x = (– 12\n5) ×(– 5\n13) = 12\n13\nand cosec x =1\nsinx= 13\n12.\nExample 8    Find the value of",
+          "solution": "Since cot x= – 5\n12, we have tan x  = – 12\n5\nNow sec2 x =1 + tan2 x = 1 + 144\n25 = 169\n25\nHence sec x =± 13\n5\nSince x lies in second quadrant, sec x will be negative. Therefore\nsec x =– 13\n5,\nwhich also gives\n                           5cos13x= −\nFurther , we have\nsin x = tan x cos x = (– 12\n5) ×(– 5\n13) = 12\n13\nand cosec x =1\nsinx= 13\n1"
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 8,
+          "title": "Find the value of sin 31π",
+          "question": "Example 8    Find the value of sin 31π\n3.\nSolution   We know that values of sin x repeats after an interval of 2 π. Therefore\nsin 31π\n3 = sin (10 π + π\n3) = sin π\n3 = 3\n2.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      57\nExample 9   Find the value of cos (–1710°).\nSolution  We know that values of cos x repeats after an interval of 2 π or 360°.\nTherefore, cos (–1710°) = cos (–1710° + 5 ×360°)\n = cos (–1710° + 1800°) = cos 90° = 0.\nEXERCISE 3.2\nFind the values of other five trigonometric functions",
+          "solution": "We know that values of sin x repeats after an interval of 2 π. Therefore\nsin 31π\n3 = sin (10 π + π\n3) = sin π\n3 = 3"
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 9,
+          "title": "Find the value of cos (–1710°).",
+          "question": "Example 9   Find the value of cos (–1710°).\nSolution  We know that values of cos x repeats after an interval of 2 π or 360°.\nTherefore, cos (–1710°) = cos (–1710° + 5 ×360°)\n = cos (–1710° + 1800°) = cos 90° = 0.\nEXERCISE 3.2\nFind the values of other five trigonometric functions in Exercises 1 to 5.\n1.cos x = – 1\n2, x lies in third quadrant.\n2.sin x = 3\n5, x lies in second quadrant.\n3.cot x = 43, x lies in third quadrant.\n4.sec x = 13\n5, x lies in fourth quadrant.\n5.tan x = – 5\n12, x lies in sec",
+          "solution": "We know that values of cos x repeats after an interval of 2 π or 360°.\nTherefore, cos (–1710°) = cos (–1710° + 5 ×360°)\n = cos (–1710° + 1800°) = cos 90° ="
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 10,
+          "title": "Prove that",
+          "question": "Example 10\n Prove that\n53sin sec 4sin cot 16 3 6 4π π π π− =\nSolution We have\nL.H.S. =53sin sec 4sin cot6 3 6 4π π π π−\n=3 × 1\n2 × 2 – 4 sin 6π  π−  × 1 = 3 – 4 sin 6π\n=3 – 4 × 1\n2  = 1 = R.H.S.\nExample 1 1 Find the value of sin 15°.\nSolution     We have\nsin 15° = sin (45° – 30°)\n= sin 45° cos 30° – cos 45° sin 30°\n= 1 3 1 1 3 1\n2 22 2 2 2–× − × = .\nExample 12  Find the value of tan 13\n12π.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      65\nSolution We have\ntan 13\n12π=tan 12π  π +   =",
+          "solution": "We have\nL.H.S. =53sin sec 4sin cot6 3 6 4π π π π−\n=3 × 1\n2 × 2 – 4 sin 6π  π−  × 1 = 3 – 4 sin 6π\n=3 – 4 × 1\n2  = 1 = R.H.S."
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 1,
+          "title": "1 Find the value of sin 15°.",
+          "question": "Example 1 1 Find the value of sin 15°.\nSolution     We have\nsin 15° = sin (45° – 30°)\n= sin 45° cos 30° – cos 45° sin 30°\n= 1 3 1 1 3 1\n2 22 2 2 2–× − × = .\nExample 12  Find the value of tan 13\n12π.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      65\nSolution We have\ntan 13\n12π=tan 12π  π +   = tan tan12 4 6π π π  = −   \n=tan tan4 6\n1 tan tan4 6π π−\nπ π+= 113 1 32 31 3 11\n3−−= = −\n++\nExample 13 Prove that\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −.\nSolution  We have",
+          "solution": "We have\nsin 15° = sin (45° – 30°)\n= sin 45° cos 30° – cos 45° sin 30°\n= 1 3 1 1 3 1\n2 22 2 2 2–× − × = ."
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 12,
+          "title": "Find the value of tan 13",
+          "question": "Example 12  Find the value of tan 13\n12π.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      65\nSolution We have\ntan 13\n12π=tan 12π  π +   = tan tan12 4 6π π π  = −   \n=tan tan4 6\n1 tan tan4 6π π−\nπ π+= 113 1 32 31 3 11\n3−−= = −\n++\nExample 13 Prove that\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −.\nSolution  We have\n              L.H.S.sin ( ) sin cos cos sin\nsin( ) sin cos cos sinx y x y x y\nx y x y x y+ += =− −\nDividing the numerator and denominator by cos x cos y, we get\nsin",
+          "solution": "We have\ntan 13\n12π=tan 12π  π +   = tan tan12 4 6π π π  = −   \n=tan tan4 6\n1 tan tan4 6π π−\nπ π+= 113 1 32 31 3 11\n3−−= = −\n++"
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 13,
+          "title": "Prove that",
+          "question": "Example 13 Prove that\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −.\nSolution  We have\n              L.H.S.sin ( ) sin cos cos sin\nsin( ) sin cos cos sinx y x y x y\nx y x y x y+ += =− −\nDividing the numerator and denominator by cos x cos y, we get\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −.\nExample 14   Show that\n   tan 3 x tan 2 x tan \nx = tan 3 x – tan 2 x – tan x\nSolution We know that 3 x = 2x + x\nTherefore, tan 3x  = tan (2x  + x)\nortan 2 tantan31– tan 2 tanx xxx x+=\nor",
+          "solution": "We have\n              L.H.S.sin ( ) sin cos cos sin\nsin( ) sin cos cos sinx y x y x y\nx y x y x y+ += =− −\nDividing the numerator and denominator by cos x cos y, we get\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −."
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 14,
+          "title": "Show that",
+          "question": "Example 14   Show that\n   tan 3 x tan 2 x tan \nx = tan 3 x – tan 2 x – tan x\nSolution We know that 3 x = 2x + x\nTherefore, tan 3x  = tan (2x  + x)\nortan 2 tantan31– tan 2 tanx xxx x+=\nor tan 3 x – tan 3 x tan 2 x tan x = tan 2 x + tan x\nor tan 3\nx – tan 2x  – tan x = tan 3 x tan 2x  tan x\nor tan 3x  tan 2 x tan x = tan 3 x – tan 2 x – tan x.\nExample 15 Prove that\ncos cos 2 cos4 4x x xπ π   + + − =      \nSolution Using the Identity 20(i), we have\nReprint 2025-26\n\n66 MATHEMA TICS",
+          "solution": "We know that 3 x = 2x + x\nTherefore, tan 3x  = tan (2x  + x)\nortan 2 tantan31– tan 2 tanx xxx x+=\nor tan 3 x – tan 3 x tan 2 x tan x = tan 2 x + tan x\nor tan 3\nx – tan 2x  – tan x = tan 3 x tan 2x  tan x\nor tan 3x  tan 2 x tan x = tan 3 x – tan 2 x – tan x."
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 15,
+          "title": "Prove that",
+          "question": "Example 15 Prove that\ncos cos 2 cos4 4x x xπ π   + + − =      \nSolution Using the Identity 20(i), we have\nReprint 2025-26\n\n66 MATHEMA TICS\n      L.H.S. cos cos4 4x xπ π    = + + −       \n( )4 4 4 42cos cos2 2x x x – xπ π π π   + + − + −   =    \n          \n= 2 cos 4π cos x = 2 × 1\n2 cos x = 2cos x = R.H.S.\nExample 16  Prove that  cos 7 cos 5cot\nsin 7 – sin 5x xx\nx x+=\nSolution Using the Identities 20 (i) and 20 (iv), we get\n      L.H.S.         = 7",
+          "solution": "Using the Identity 20(i), we have\nReprint 2025-26\n\n66 MATHEMA TICS\n      L.H.S. cos cos4 4x xπ π    = + + −       \n( )4 4 4 42cos cos2 2x x x – xπ π π π   + + − + −   =    \n          \n= 2 cos 4π cos x = 2 × 1\n2 cos x = 2cos x = R.H.S."
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 16,
+          "title": "Prove that  cos 7 cos 5cot",
+          "question": "Example 16  Prove that  cos 7 cos 5cot\nsin 7 – sin 5x xx\nx x+=\nSolution Using the Identities 20 (i) and 20 (iv), we get\n      L.H.S.         = 7 5 7 52cos cos2 2\n7 5 7 52cos sin2 2x x x x\nx x x x+ −\n+ − = cos\nsincotx\nxx =  = R.H.S.\nExample 17  Prove that sin 5 2sin 3 sintan\ncos5 cosx x xx\nx x− += =\n−\nSolution W e have\nL.H.S. sin 5 2sin3 sin\ncos5 cosx x x\nx x− +=\n− sin 5 sin 2sin 3\ncos5 cosx x x\nx x+ −=\n−\n 2sin3 cos 2 2sin3\n– 2sin3 sin 2  x x x\nx x−=sin 3 (cos2 1)\nsin 3 sin 2  x x–\nx x−=\n  21 cos",
+          "solution": "Using the Identities 20 (i) and 20 (iv), we get\n      L.H.S.         = 7 5 7 52cos cos2 2\n7 5 7 52cos sin2 2x x x x\nx x x x+ −\n+ − = cos\nsincotx\nxx =  = R.H.S."
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 17,
+          "title": "Prove that sin 5 2sin 3 sintan",
+          "question": "Example 17  Prove that sin 5 2sin 3 sintan\ncos5 cosx x xx\nx x− += =\n−\nSolution W e have\nL.H.S. sin 5 2sin3 sin\ncos5 cosx x x\nx x− +=\n− sin 5 sin 2sin 3\ncos5 cosx x x\nx x+ −=\n−\n 2sin3 cos 2 2sin3\n– 2sin3 sin 2  x x x\nx x−=sin 3 (cos2 1)\nsin 3 sin 2  x x–\nx x−=\n  21 cos 2 2sin\nsin 2 2sin cosx x\nx x x−= =  =  tan x  =  R.H.S.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      67\nEXERCISE 3.3\nProve that:\n1.sin2 π\n6+ cos2 3π– tan2 1–4 2π= 2.   2sin2\n6π+ cosec2  2 7 3cos6 3 2π π=\n3.2 2 5cot cosec 3tan 66 6",
+          "solution": "W e have\nL.H.S. sin 5 2sin3 sin\ncos5 cosx x x\nx x− +=\n− sin 5 sin 2sin 3\ncos5 cosx x x\nx x+ −=\n−\n 2sin3 cos 2 2sin3\n– 2sin3 sin 2  x x x\nx x−=sin 3 (cos2 1)\nsin 3 sin 2  x x–\nx x−=\n  21 cos 2 2sin\nsin 2 2sin cosx x\nx x x−= =  =  tan x  =  R.H.S.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      67"
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 18,
+          "title": "If sin x = 3",
+          "question": "Example 18    If sin x = 3\n5,  cos y = −12\n13, where x and y both lie in second quadrant,\nfind the value of sin ( x + y).\nSolution  We know that\nsin (\nx + y) = sin x cos y + cos x sin y ... (1)\nNow cos2 x= 1 – sin2 x = 1 – 9\n25 = 16\n25\nTherefore cos x = ±4\n5.\nSince x lies in second quadrant, cos x is negative.\nHence cos x = −4\n5\nNow sin2y = 1 – cos2y = 1 – 144\n16925\n169=\ni.e. sin y = ±5\n13.\nSince y lies in second quadrant, hence sin  y is positive. Therefore, sin y = 5\n13. Substituting\nthe value",
+          "solution": "We know that\nsin (\nx + y) = sin x cos y + cos x sin y ... (1)\nNow cos2 x= 1 – sin2 x = 1 – 9\n25 = 16\n25\nTherefore cos x = ±4"
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 19,
+          "title": "Prove that",
+          "question": "Example 19      Prove that\n9 5cos 2 cos cos 3 cos sin 5 sin2 2 2x x xx x x − = .\nSolution    We have\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      69\nL.H.S. = 1 92cos 2 cos 2cos cos 32 2 2x xx x −  \n= 1 9 9cos 2 cos 2 cos 3 cos 32 2 2 2 2x x x xx x x x         + + − − + − −                \n= 1\n25\n23\n215\n23\n2cos cos cos cosx x x x+ − −\n\n = 1\n25\n215\n2cos cosx x−\n\n\n= 5 15 5 15\n1 2 2 2 22sin sin2 2 2x x x x      + −     −     \n   ",
+          "solution": "We have\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      69\nL.H.S. = 1 92cos 2 cos 2cos cos 32 2 2x xx x −  \n= 1 9 9cos 2 cos 2 cos 3 cos 32 2 2 2 2x x x xx x x x         + + − − + − −                \n= 1\n25\n23\n215\n23\n2cos cos cos cosx x x x+ − −\n\n = 1\n25\n215\n2cos cosx x−\n\n\n= 5 15 5 15\n1 2 2 2 22sin sin2 2 2x x x x      + −     −     \n     \n       \n= − −\n\n= sin sin sin sin55\n255\n2xxxx\n = R.H.S."
+        },
+        {
+          "chapterNumber": 7,
+          "exampleNumber": 20,
+          "title": "Find the value of tan π",
+          "question": "Example 20    Find the value of tan π",
+          "solution": ""
+        }
+      ],
+      "exercises": [
+        {
+          "chapterNumber": 7,
+          "exerciseNumber": "3.2",
+          "questions": [
+            {
+              "questionNumber": 39,
+              "questionText": "sin (– 11π\n3)"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "cot (– 15π\n4)"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "cos ( x + y) = cos x cos y – sin x sin y\nConsider the unit circle with centre at the origin. Let x be the angle P4OP1and  y be\nthe angle P1OP2. Then ( x + y) is the angle P4OP2. Also let (–  y) be the angle P4OP3.\nTherefore, P1, P2, P3 and P4 will have the coordinates P1(cos x, sin x),\nP2 [cos ( x + y), sin ( x + y)], P3 [cos (–  y), sin (–  y)] and P4 (1, 0) (Fig 3.14).\nConsider the triangles P1OP3 and P2OP4. They are congruent (Why?). Therefore,\nP1P3 and P2P4 are equal. By using distance formula, we get\nP1P32= [cos x – cos (–  y)]2  + [sin x – sin(– y]2\n= (cos x – cos y)2 + (sin x + sin y)2\n= cos2 x + cos2 y – 2 cos x cos y + sin2 x + sin2 y + 2sin x sin \ny\n= 2 – 2 (cos x cos y – sin x sin y) (Why?)\nAlso, P2P42= [1 – cos ( x + y)] 2 + [0 – sin ( x + y)]2\n= 1 – 2cos ( x + y) + cos2 (x + y) + sin2 (x + y)\n= 2 – 2 cos ( x + y)Fig  3.14\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "cos ( x – y) = cos x cos y + sin x sin y\nReplacing y by – y in identity 3, we get\ncos (x + (– y)) = cos x cos (–  y) – sin x sin ( – y)\nor cos ( x – y) = cos x cos y + sin x sin y"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "cos ( xπ–2) = sin x\nIf we replace x by π\n2 and y by x in Identity (4), we get\ncos (π\n2x−) = cos π\n2 cos x + sin π\n2 sin x = sin x."
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "sin ( xπ–2) = cos x\nUsing the Identity 5, we have\nsin (π\n2x−) = cos π π\n2 2x   − −       = cos x."
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "sin ( x + y) = sin x cos y + cos x sin y\nWe know that\n sin ( x + y) = cos π( )2x y − +   = cos π( )2x y − −  \n = cos (π\n2x−) cos y + sin π( )2x−sin y\n = sin x cos y + cos x sin y"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "sin (\nx – y) = sin x cos y – cos x  sin y\nIf we replace y by – y, in the Identity 7, we get the result."
+            },
+            {
+              "questionNumber": 9,
+              "questionText": "By taking suitable values of x and y in the identities 3, 4, 7 and 8, we get the\nfollowing results:\ncos xπ( + )2 = – sin x sin xπ( + )2 = cos x\ncos ( πππ\nππ – x)  = – cos x sin ( π ππ ππ – x)  = sin x\nReprint 2025-26"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 7,
+          "exerciseNumber": "3.3",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "sin (n + 1)x sin ( n + 2) x + cos ( n + 1) x cos ( n + 2) x = cos x"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "sin2 6x – sin2 4x = sin 2 x sin 10 x 13. cos2 2x – cos2 6x = sin 4 x sin 8 x"
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "sin2 x + 2 sin 4 x + sin 6\nx = 4 cos2 x sin 4 x"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "cot 4 x (sin 5 x + sin 3x ) = cot x (sin 5 x – sin 3x )"
+            },
+            {
+              "questionNumber": 22,
+              "questionText": "cot x cot 2 x – cot 2 x cot 3 x – cot 3 x cot x = 1"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "cos 6 x = 32 cos6 x – 48cos4 x + 18 cos2 x – 1\nMiscellaneous Examples\nExample 18    If sin x = 3\n5,  cos y = −12\n13, where x and y both lie in second quadrant,\nfind the value of sin ( x + y).\nSolution  We know that\nsin (\nx + y) = sin x cos y + cos x sin y ... (1)\nNow cos2 x= 1 – sin2 x = 1 – 9\n25 = 16\n25\nTherefore cos x = ±4"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "Since x lies in second quadrant, cos x is negative.\nHence cos x = −4\n5\nNow sin2y = 1 – cos2y = 1 – 144\n16925\n169=\ni.e. sin y = ±5"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "Since y lies in second quadrant, hence sin  y is positive. Therefore, sin y = 5"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "Substituting\nthe values of sin x, sin y, cos x and cos y in (1), we get\nsin( ) x y + = × −\n\n+ −\n\n×3\n512\n134\n55\n13=  36 20 56\n65 65 65− − = − .\nExample 19      Prove that\n9 5cos 2 cos cos 3 cos sin 5 sin2 2 2x x xx x x − = .\nSolution    We have\nReprint 2025-26"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 15,
+        "exercisesCount": 18
+      }
+    },
+    {
+      "chapterNumber": 8,
+      "title": "Solution Let π",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 9,
+      "title": "By taking suitable values of x and y in the identiti",
+      "content": "9. By taking suitable values of x and y in the identities 3, 4, 7 and 8, we get the\nfollowing results:\ncos xπ( + )2 = – sin x sin xπ( + )2 = cos x\ncos ( πππ\nππ – x)  = – cos x sin ( π ππ ππ – x)  = sin x\nReprint 2025-26\n\n60 MATHEMA TICS\ncos ( πππ ππ + x)  = – cos x sin ( π ππ ππ + x)  = – sin x\ncos (2 π ππ ππ – x) = cos x sin (2 π ππ ππ – x) = – sin x\nSimilar results for tan x, cot x, sec x and cosec x can be obtained from the results of sin\nx and cos x.\n",
+      "wordCount": 128,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 10,
+      "title": "If none of the angles x, y and ( x + y) is an odd mu",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "Example 8    Find the value of sin 31π",
+      "content": "12.\nExample 8    Find the value of sin 31π\n3.\nSolution   We know that values of sin x repeats after an interval of 2 π. Therefore\nsin 31π\n3 = sin (10 π + π\n3) = sin π\n3 = 3\n2.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      57\nExample 9   Find the value of cos (–1710°).\nSolution  We know that values of cos x repeats after an interval of 2 π or 360°.\nTherefore, cos (–1710°) = cos (–1710° + 5 ×360°)\n = cos (–1710° + 1800°) = cos 90° = 0.\nEXERCISE 3.2\nFind the values of other five trigonometric functions in Exercises 1 to 5.\n1.cos x = – 1\n2, x lies in third quadrant.\n2.sin x = 3\n5, x lies in second quadrant.\n3.cot x = 43, x lies in third quadrant.\n4.sec x = 13\n5, x lies in fourth quadrant.\n5.tan x = – 5\n12, x lies in second quadrant.\nFind the values of the trigonometric functions in Exercises 6 to 10.\n6.sin 765° 7. cosec (– 1410°)\n8.tan 19π\n39. sin (– 11π\n3)\n10. cot (– 15π\n4)\n3.4  Trigonometric Functions of Sum and Dif ference of Two Angles\nIn this Section, we shall derive expressions for trigonometric functions of the sum and\ndifference of two numbers (angles) and related expressions. The basic results in this\nconnection are called trigonometric identities . We have seen that\n1.sin (–  x)  = – sin x\n2.cos (–  x) = cos x\nWe shall now prove some more results:\nReprint 2025-26\n\n58 MATHEMA TICS\n3. cos ( x + y) = cos x cos y – sin x sin y\nConsider the unit circle with centre at the origin. Let x be the angle P4OP1and  y be\nthe angle P1OP2. Then ( x + y) is the angle P4OP2. Also let (–  y) be the angle P4OP3.\nTherefore, P1, P2, P3 and P4 will have the coordinates P1(cos x, sin x),\nP2 [cos ( x + y), sin ( x + y)], P3 [cos (–  y), sin (–  y)] and P4 (1, 0) (Fig 3.14).\nConsider the triangles P1OP3 and P2OP4. They are congruent (Why?). Therefore,\nP1P3 and P2P4 are equal. By using distance formula, we get\nP1P32= [cos x – cos (–  y)]2  + [sin x – sin(– y]2\n= (cos x – cos y)2 + (sin x + sin y)2\n= cos2 x + cos2 y – 2 cos x cos y + sin2 x + sin2 y + 2sin x sin \ny\n= 2 – 2 (cos x cos y – sin x sin y) (Why?)\nAlso, P2P42= [1 – cos ( x + y)] 2 + [0 – sin ( x + y)]2\n= 1 – 2cos ( x + y) + cos2 (x + y) + sin2 (x + y)\n= 2 – 2 cos ( x + y)Fig  3.14\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      59\nSince P1P3= P2P4, we have P1P32 = P2P42.\nTherefore, 2 –2 (cos x cos y – sin x sin y) = 2 – 2 cos ( x + y).\nHence  cos ( x + y) = cos x cos y – sin x sin y\n4. cos ( x – y) = cos x cos y + sin x sin y\nReplacing y by – y in identity 3, we get\ncos (x + (– y)) = cos x cos (–  y) – sin x sin ( – y)\nor cos ( x – y) = cos x cos y + sin x sin y\n5. cos ( xπ–2) = sin x\nIf we replace x by π\n2 and y by x in Identity (4), we get\ncos (π\n2x−) = cos π\n2 cos x + sin π\n2 sin x = sin x.\n6. sin ( xπ–2) = cos x\nUsing the Identity 5, we have\nsin (π\n2x−) = cos π π\n2 2x   − −       = cos x.\n7. sin ( x + y) = sin x cos y + cos x sin y\nWe know that\n sin ( x + y) = cos π( )2x y − +   = cos π( )2x y − −  \n = cos (π\n2x−) cos y + sin π( )2x−sin y\n = sin x cos y + cos x sin y\n8. sin (\nx – y) = sin x cos y – cos x  sin y\nIf we replace y by – y, in the Identity 7, we get the result.\n9. By taking suitable values of x and y in the identities 3, 4, 7 and 8, we get the\nfollowing results:\ncos xπ( + )2 = – sin x sin xπ( + )2 = cos x\ncos ( πππ\nππ – x)  = – cos x sin ( π ππ ππ – x)  = sin x\nReprint 2025-26\n\n60 MATHEMA TICS\ncos ( πππ ππ + x)  = – cos x sin ( π ππ ππ + x)  = – sin x\ncos (2 π ππ ππ – x) = cos x sin (2 π ππ ππ – x) = – sin x\nSimilar results for tan x, cot x, sec x and cosec x can be obtained from the results of sin\nx and cos x.\n10. If none of the angles x, y and ( x + y) is an odd multiple of π\n2, then\n    tan ( x + y)= x y\nx ytan + tan\n1 – tan tan\nSince none of the x, y and ( x + y) is an odd multiple of π\n2, it follows that cos x,\ncos y and cos ( x + y) are non-zero. Now\n    tan ( x + y)= sin( )\ncos( )xy\nx y+\n+ = sin cos cos sin\ncos cos sin sinx y x y\nx y x y+\n−.\nDividing numerator and denominator by cos x cos y, we have\n    tan ( x + y)= \ny xy x\ny xy xy xy x\ny xy x\ncos cossin sin\ncos coscos coscos cossin cos\ncos coscos sin\n−+\n= tan tan\n1 – tan tanx y\nx y+\n11.            tan ( x – y)= x y\nx ytan – tan\n1 + tan tan\nIf we replace y by –  y in Identity 10, we get\n     tan ( x – y)= tan [ x + (–  y)]\n=  tan tan ( )\n1 tan tan ( )x y\nx y+ −\n− − = tan tan\n1 tan tanx y\nx y−\n+\n12. If none of the angles x, y and ( x + y) is a multiple of π ππππ, then\n    cot ( \nx + y) = x y\ny xcot cot – 1\ncot +cot\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      61\nSince, none of the x, y and ( x + y) is multiple of π, we find that sin x  sin y and\nsin (x + y) are non-zero. Now ,\ncot ( x + y)=cos ( ) cos cos – sin sin\nsin ( ) sin cos cos sinx y x y x y\nx y x y x y+=\n+ +\nDividing numerator and denominator by sin x sin y, we have\ncot (x + y)=cot cot –1\ncot cotx y\ny x+\n13. cot ( x – y)=x y\ny xcot cot +1\ncot – cot if none of angles x, y and x–y is a multiple of π\nIf we replace y by – y in identity 12, we get the result\n14. cos 2 x  = cos2x – sin2 x = 2 cos2 x – 1 = 1 – 2 si n2 x = x\nx2\n21 – tan\n1 + tan\nWe know that\ncos ( x + y) =cos x  cos y – sin x sin y\nReplacing y by x, we get\n  cos 2 x =cos2x – sin2 x\n=cos2 x – (1 – cos2 x) = 2 cos2x – 1\nAgain, cos 2 x =cos2 x – sin2 x\n=1 – sin2 x – sin2 x = 1 – 2 sin2 x.\nWe have cos 2 x =cos2 x – sin 2 x  =  2 2\n2 2cos sin\ncos sinx x\nx x−\n+\nDividing numerator and denominator by cos2 x, we get\ncos 2 x =2\n21 – tan\n1+ tanx\nx,  ππ2≠ +x n , where   n is an integer\n15. sin 2 x = 2 sin x cos x = x\nx22tan\n1 +t\nan ππ2≠ +x n , where   n is an integer\nWe have\nsin (x + y) = sin x cos y + cos x sin y\nReplacing y by x, we get sin 2 x = 2 sin x cos x.\nAgain sin 2 x = 2 22sin cos\ncos sinx x\nx x+\nReprint 2025-26\n\n62 MATHEMA TICS\nDividing each term by cos2 x, we get\nsin 2 x = 22tan\n1 tanx\nx +\n16. tan 2 x = x\nx22tan\n1 – tan  if π2 π2≠ +x n , where   n is an integer\nWe know that\ntan (x + y) = tan tan\n1 tan tanx y\n– x y+\nReplacing y by x , we get 22 tantan 2\n1 tanxx\nx=\n−\n17. sin 3 x = 3 sin x – 4 sin3 x\nWe have,\nsin 3 x =sin (2 x + x)\n=sin 2 x cos x + cos 2 x sin \nx\n=2 sin x  cos x cos x + (1 – 2sin2 x) sin x\n=2 sin x (1 – sin2 x) + sin x  – 2 sin3 x\n=2 sin x – 2 sin3 x + sin x – 2 sin3 x\n=3 sin x – 4 sin3 x\n18. cos 3 x= 4 cos3 x – 3 cos x\nWe have,\n             cos 3 x = cos (2 x +x)\n=cos 2 x  cos x  – sin 2x  sin x\n=(2cos2 x – 1) cos x – 2sin x cos x sin x\n=(2cos2 x – 1) cos x  – 2cos x  (1 – cos2 x)\n=2cos3 x – cos x – 2cos x + 2 cos3 x\n=4cos3 x – 3cos x.\n19. =x xx\nx3\n23 tan – tantan3\n1– 3tan if π3 π2≠ +x n , where   n is an integer\nWe have tan 3 x =tan (2 x + x)\n=tan 2 tan\n1 tan 2 tanx x\n– x x+2\n22tantan\n1 tan\n2tan tan1\n1 tanxx\n– x\nx . x–\n– x+\n=\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      63\n3 3\n2 2 22tan tan tan 3 tan tan\n1 tan 2tan 1 3tanx x – x x – x\n– x – x – x+= =\n20. (i)cos x + cos y = x y x y+ –2cos cos2 2\n(ii) cos x – cos y = – x y x y+ –2sin sin2 2\n(iii) sin x + sin y = x y x y+ –2sin cos2 2\n(iv) sin x – sin y = x y x y+ –2cos sin2 2\nWe know that\ncos ( x + y) = cos x cos y – sin x sin y ... (1)\nand cos ( x – y) = cos \nx cos y  + sin x sin y ... (2)\nAdding and subtracting (1) and (2), we get\ncos ( x + y) + cos( x – y) =  2 cos x cos y ... (3)\nand cos ( x + y) – cos ( x – y) = – 2 sin x sin y ... (4)\nFurther sin (x  + y) = sin x cos y + cos x sin y ... (5)\nand sin (x – y) = sin x  cos y – cos x sin y ... (6)\nAdding and subtracting (5) and (6), we get\nsin (x  + y) + sin ( x – y) = 2 sin x cos y ... (7)\nsin (x + y) – sin (x  – y) = 2cos x sin y ... (8)\nLet x + y = θ and x – y = φ. Therefore\nθ θand2 2x y+φ −φ   = =       \nSubstituting the values of x and y in (3), (4), (7) and (8), we get\ncos θ + cos φ = 2 cos θ θcos2 2+φ −φ   \n      \ncos θ – cos φ = – 2 sin θ θsin2– + φ φ   \n   2    \nsin θ + sin φ  = 2 sin  θ θcos2 2+φ −φ   \n      \nReprint 2025-26\n\n64 MATHEMA TICS\nsin θ – sin φ = 2 cos  θ θsin2 2+φ −φ   \n      \nSince θ and φ can take any real values, we can replace θ by x and φ by y .\nThus, we get\ncos x + cos y = 2 cos cos2 2x y x y+ −; cos x – cos y = – 2 sin sin2 2x y x y+ −,\nsin x + sin y = 2 sin cos2 2x y x y+ −; sin x – sin y = 2 cos sin2 2x y x y+ −.\nRemark  As a part of identities given in 20, we can prove the following results:\n21. (i)2 cos x cos y = cos ( x + y) + cos ( x – y)\n(ii) –2 sin x sin y = cos ( x + y) – cos ( x – y)\n(iii) 2 sin x cos y = sin ( x + y) + sin ( x – y)\n(iv) 2 cos x sin y = sin ( x + y) – sin ( x – y).\nExample 10\n Prove that\n53sin sec 4sin cot 16 3 6 4π π π π− =\nSolution We have\nL.H.S. =53sin sec 4sin cot6 3 6 4π π π π−\n=3 × 1\n2 × 2 – 4 sin 6π  π−  × 1 = 3 – 4 sin 6π\n=3 – 4 × 1\n2  = 1 = R.H.S.\nExample 1 1 Find the value of sin 15°.\nSolution     We have\nsin 15° = sin (45° – 30°)\n= sin 45° cos 30° – cos 45° sin 30°\n= 1 3 1 1 3 1\n2 22 2 2 2–× − × = .\nExample 12  Find the value of tan 13\n12π.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      65\nSolution We have\ntan 13\n12π=tan 12π  π +   = tan tan12 4 6π π π  = −   \n=tan tan4 6\n1 tan tan4 6π π−\nπ π+= 113 1 32 31 3 11\n3−−= = −\n++\nExample 13 Prove that\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −.\nSolution  We have\n              L.H.S.sin ( ) sin cos cos sin\nsin( ) sin cos cos sinx y x y x y\nx y x y x y+ += =− −\nDividing the numerator and denominator by cos x cos y, we get\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −.\nExample 14   Show that\n   tan 3 x tan 2 x tan \nx = tan 3 x – tan 2 x – tan x\nSolution We know that 3 x = 2x + x\nTherefore, tan 3x  = tan (2x  + x)\nortan 2 tantan31– tan 2 tanx xxx x+=\nor tan 3 x – tan 3 x tan 2 x tan x = tan 2 x + tan x\nor tan 3\nx – tan 2x  – tan x = tan 3 x tan 2x  tan x\nor tan 3x  tan 2 x tan x = tan 3 x – tan 2 x – tan x.\nExample 15 Prove that\ncos cos 2 cos4 4x x xπ π   + + − =      \nSolution Using the Identity 20(i), we have\nReprint 2025-26\n\n66 MATHEMA TICS\n      L.H.S. cos cos4 4x xπ π    = + + −       \n( )4 4 4 42cos cos2 2x x x – xπ π π π   + + − + −   =    \n          \n= 2 cos 4π cos x = 2 × 1\n2 cos x = 2cos x = R.H.S.\nExample 16  Prove that  cos 7 cos 5cot\nsin 7 – sin 5x xx\nx x+=\nSolution Using the Identities 20 (i) and 20 (iv), we get\n      L.H.S.         = 7 5 7 52cos cos2 2\n7 5 7 52cos sin2 2x x x x\nx x x x+ −\n+ − = cos\nsincotx\nxx =  = R.H.S.\nExample 17  Prove that sin 5 2sin 3 sintan\ncos5 cosx x xx\nx x− += =\n−\nSolution W e have\nL.H.S. sin 5 2sin3 sin\ncos5 cosx x x\nx x− +=\n− sin 5 sin 2sin 3\ncos5 cosx x x\nx x+ −=\n−\n 2sin3 cos 2 2sin3\n– 2sin3 sin 2  x x x\nx x−=sin 3 (cos2 1)\nsin 3 sin 2  x x–\nx x−=\n  21 cos 2 2sin\nsin 2 2sin cosx x\nx x x−= =  =  tan x  =  R.H.S.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      67\nEXERCISE 3.3\nProve that:\n1.sin2 π\n6+ cos2 3π– tan2 1–4 2π= 2.   2sin2\n6π+ cosec2  2 7 3cos6 3 2π π=\n3.2 2 5cot cosec 3tan 66 6 6π π π+ + = 4.  2 2 2 32sin 2cos 2sec 104 4 3π π π+ + =\n5.Find the value of:\n(i) sin 75° (ii) tan 15°\nProve the following:\n6.cos cos sin sin sin( )4 4 4 4x y x y x yπ π π π       − − − − − = +              \n7.2πtan1 tan 4\nπ 1 tantan4xx\nxx +  +  = −    −  8.2 cos ( ) cos ( )cot\nsin ( ) cos2x xx\nx xπ + −=π π − +   \n9.3π 3πcos cos (2 π ) cot cot (2π ) 12 2x x x x     + + − + + =           \n10. sin (n + 1)x sin ( n + 2) x + cos ( n + 1) x cos ( n + 2) x = cos x\n11.3 3cos cos 2 sin4 4x x xπ π    + − − = −      \n12. sin2 6x – sin2 4x = sin 2 x sin 10 x 13. cos2 2x – cos2 6x = sin 4 x sin 8 x\n14. sin2 x + 2 sin 4 x + sin 6\nx = 4 cos2 x sin 4 x\n15. cot 4 x (sin 5 x + sin 3x ) = cot x (sin 5 x – sin 3x )\n16.cos cos\nsin sinsin\ncos9 5\n17 32\n10x x\nx xx\nx−\n−= − 17. sin sin\ncos costan5 3\n5 34x x\nx xx+\n+=\n18.sin sin\ncos costanx y\nx yxy −\n+=−\n219. sin sin\ncos costanx x\nx xx+\n+=3\n32\n20.sin sin\nsin cossinx x\nx xx−\n−=322 2 21. cos cos cos\nsin sin sincot4 3 2\n4 3 23x x x\nx x xx+ +\n+ +=\nReprint 2025-26\n\n68 MATHEMA TICS\n22. cot x cot 2 x – cot 2 x cot 3 x – cot 3 x cot x = 1\n23.2\n2 44tan (1 tan )tan 4\n1 6 tan tanx xx\nx x−=\n− +24. cos 4 x = 1 – 8sin2 x cos2 x\n25. cos 6 x = 32 cos6 x – 48cos4 x + 18 cos2 x – 1\nMiscellaneous Examples\nExample 18    If sin x = 3\n5,  cos y = −12\n13, where x and y both lie in second quadrant,\nfind the value of sin ( x + y).\nSolution  We know that\nsin (\nx + y) = sin x cos y + cos x sin y ... (1)\nNow cos2 x= 1 – sin2 x = 1 – 9\n25 = 16\n25\nTherefore cos x = ±4\n5.\nSince x lies in second quadrant, cos x is negative.\nHence cos x = −4\n5\nNow sin2y = 1 – cos2y = 1 – 144\n16925\n169=\ni.e. sin y = ±5\n",
+      "wordCount": 3501,
+      "examples": [
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 8,
+          "title": "Find the value of sin 31π",
+          "question": "Example 8    Find the value of sin 31π\n3.\nSolution   We know that values of sin x repeats after an interval of 2 π. Therefore\nsin 31π\n3 = sin (10 π + π\n3) = sin π\n3 = 3\n2.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      57\nExample 9   Find the value of cos (–1710°).\nSolution  We know that values of cos x repeats after an interval of 2 π or 360°.\nTherefore, cos (–1710°) = cos (–1710° + 5 ×360°)\n = cos (–1710° + 1800°) = cos 90° = 0.\nEXERCISE 3.2\nFind the values of other five trigonometric functions",
+          "solution": "We know that values of sin x repeats after an interval of 2 π. Therefore\nsin 31π\n3 = sin (10 π + π\n3) = sin π\n3 = 3"
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 9,
+          "title": "Find the value of cos (–1710°).",
+          "question": "Example 9   Find the value of cos (–1710°).\nSolution  We know that values of cos x repeats after an interval of 2 π or 360°.\nTherefore, cos (–1710°) = cos (–1710° + 5 ×360°)\n = cos (–1710° + 1800°) = cos 90° = 0.\nEXERCISE 3.2\nFind the values of other five trigonometric functions in Exercises 1 to 5.\n1.cos x = – 1\n2, x lies in third quadrant.\n2.sin x = 3\n5, x lies in second quadrant.\n3.cot x = 43, x lies in third quadrant.\n4.sec x = 13\n5, x lies in fourth quadrant.\n5.tan x = – 5\n12, x lies in sec",
+          "solution": "We know that values of cos x repeats after an interval of 2 π or 360°.\nTherefore, cos (–1710°) = cos (–1710° + 5 ×360°)\n = cos (–1710° + 1800°) = cos 90° ="
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 10,
+          "title": "Prove that",
+          "question": "Example 10\n Prove that\n53sin sec 4sin cot 16 3 6 4π π π π− =\nSolution We have\nL.H.S. =53sin sec 4sin cot6 3 6 4π π π π−\n=3 × 1\n2 × 2 – 4 sin 6π  π−  × 1 = 3 – 4 sin 6π\n=3 – 4 × 1\n2  = 1 = R.H.S.\nExample 1 1 Find the value of sin 15°.\nSolution     We have\nsin 15° = sin (45° – 30°)\n= sin 45° cos 30° – cos 45° sin 30°\n= 1 3 1 1 3 1\n2 22 2 2 2–× − × = .\nExample 12  Find the value of tan 13\n12π.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      65\nSolution We have\ntan 13\n12π=tan 12π  π +   =",
+          "solution": "We have\nL.H.S. =53sin sec 4sin cot6 3 6 4π π π π−\n=3 × 1\n2 × 2 – 4 sin 6π  π−  × 1 = 3 – 4 sin 6π\n=3 – 4 × 1\n2  = 1 = R.H.S."
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 1,
+          "title": "1 Find the value of sin 15°.",
+          "question": "Example 1 1 Find the value of sin 15°.\nSolution     We have\nsin 15° = sin (45° – 30°)\n= sin 45° cos 30° – cos 45° sin 30°\n= 1 3 1 1 3 1\n2 22 2 2 2–× − × = .\nExample 12  Find the value of tan 13\n12π.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      65\nSolution We have\ntan 13\n12π=tan 12π  π +   = tan tan12 4 6π π π  = −   \n=tan tan4 6\n1 tan tan4 6π π−\nπ π+= 113 1 32 31 3 11\n3−−= = −\n++\nExample 13 Prove that\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −.\nSolution  We have",
+          "solution": "We have\nsin 15° = sin (45° – 30°)\n= sin 45° cos 30° – cos 45° sin 30°\n= 1 3 1 1 3 1\n2 22 2 2 2–× − × = ."
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 12,
+          "title": "Find the value of tan 13",
+          "question": "Example 12  Find the value of tan 13\n12π.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      65\nSolution We have\ntan 13\n12π=tan 12π  π +   = tan tan12 4 6π π π  = −   \n=tan tan4 6\n1 tan tan4 6π π−\nπ π+= 113 1 32 31 3 11\n3−−= = −\n++\nExample 13 Prove that\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −.\nSolution  We have\n              L.H.S.sin ( ) sin cos cos sin\nsin( ) sin cos cos sinx y x y x y\nx y x y x y+ += =− −\nDividing the numerator and denominator by cos x cos y, we get\nsin",
+          "solution": "We have\ntan 13\n12π=tan 12π  π +   = tan tan12 4 6π π π  = −   \n=tan tan4 6\n1 tan tan4 6π π−\nπ π+= 113 1 32 31 3 11\n3−−= = −\n++"
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 13,
+          "title": "Prove that",
+          "question": "Example 13 Prove that\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −.\nSolution  We have\n              L.H.S.sin ( ) sin cos cos sin\nsin( ) sin cos cos sinx y x y x y\nx y x y x y+ += =− −\nDividing the numerator and denominator by cos x cos y, we get\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −.\nExample 14   Show that\n   tan 3 x tan 2 x tan \nx = tan 3 x – tan 2 x – tan x\nSolution We know that 3 x = 2x + x\nTherefore, tan 3x  = tan (2x  + x)\nortan 2 tantan31– tan 2 tanx xxx x+=\nor",
+          "solution": "We have\n              L.H.S.sin ( ) sin cos cos sin\nsin( ) sin cos cos sinx y x y x y\nx y x y x y+ += =− −\nDividing the numerator and denominator by cos x cos y, we get\nsin ( ) tan tan\nsin ( ) tan tanx y x y\nx y x y+ +=\n− −."
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 14,
+          "title": "Show that",
+          "question": "Example 14   Show that\n   tan 3 x tan 2 x tan \nx = tan 3 x – tan 2 x – tan x\nSolution We know that 3 x = 2x + x\nTherefore, tan 3x  = tan (2x  + x)\nortan 2 tantan31– tan 2 tanx xxx x+=\nor tan 3 x – tan 3 x tan 2 x tan x = tan 2 x + tan x\nor tan 3\nx – tan 2x  – tan x = tan 3 x tan 2x  tan x\nor tan 3x  tan 2 x tan x = tan 3 x – tan 2 x – tan x.\nExample 15 Prove that\ncos cos 2 cos4 4x x xπ π   + + − =      \nSolution Using the Identity 20(i), we have\nReprint 2025-26\n\n66 MATHEMA TICS",
+          "solution": "We know that 3 x = 2x + x\nTherefore, tan 3x  = tan (2x  + x)\nortan 2 tantan31– tan 2 tanx xxx x+=\nor tan 3 x – tan 3 x tan 2 x tan x = tan 2 x + tan x\nor tan 3\nx – tan 2x  – tan x = tan 3 x tan 2x  tan x\nor tan 3x  tan 2 x tan x = tan 3 x – tan 2 x – tan x."
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 15,
+          "title": "Prove that",
+          "question": "Example 15 Prove that\ncos cos 2 cos4 4x x xπ π   + + − =      \nSolution Using the Identity 20(i), we have\nReprint 2025-26\n\n66 MATHEMA TICS\n      L.H.S. cos cos4 4x xπ π    = + + −       \n( )4 4 4 42cos cos2 2x x x – xπ π π π   + + − + −   =    \n          \n= 2 cos 4π cos x = 2 × 1\n2 cos x = 2cos x = R.H.S.\nExample 16  Prove that  cos 7 cos 5cot\nsin 7 – sin 5x xx\nx x+=\nSolution Using the Identities 20 (i) and 20 (iv), we get\n      L.H.S.         = 7",
+          "solution": "Using the Identity 20(i), we have\nReprint 2025-26\n\n66 MATHEMA TICS\n      L.H.S. cos cos4 4x xπ π    = + + −       \n( )4 4 4 42cos cos2 2x x x – xπ π π π   + + − + −   =    \n          \n= 2 cos 4π cos x = 2 × 1\n2 cos x = 2cos x = R.H.S."
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 16,
+          "title": "Prove that  cos 7 cos 5cot",
+          "question": "Example 16  Prove that  cos 7 cos 5cot\nsin 7 – sin 5x xx\nx x+=\nSolution Using the Identities 20 (i) and 20 (iv), we get\n      L.H.S.         = 7 5 7 52cos cos2 2\n7 5 7 52cos sin2 2x x x x\nx x x x+ −\n+ − = cos\nsincotx\nxx =  = R.H.S.\nExample 17  Prove that sin 5 2sin 3 sintan\ncos5 cosx x xx\nx x− += =\n−\nSolution W e have\nL.H.S. sin 5 2sin3 sin\ncos5 cosx x x\nx x− +=\n− sin 5 sin 2sin 3\ncos5 cosx x x\nx x+ −=\n−\n 2sin3 cos 2 2sin3\n– 2sin3 sin 2  x x x\nx x−=sin 3 (cos2 1)\nsin 3 sin 2  x x–\nx x−=\n  21 cos",
+          "solution": "Using the Identities 20 (i) and 20 (iv), we get\n      L.H.S.         = 7 5 7 52cos cos2 2\n7 5 7 52cos sin2 2x x x x\nx x x x+ −\n+ − = cos\nsincotx\nxx =  = R.H.S."
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 17,
+          "title": "Prove that sin 5 2sin 3 sintan",
+          "question": "Example 17  Prove that sin 5 2sin 3 sintan\ncos5 cosx x xx\nx x− += =\n−\nSolution W e have\nL.H.S. sin 5 2sin3 sin\ncos5 cosx x x\nx x− +=\n− sin 5 sin 2sin 3\ncos5 cosx x x\nx x+ −=\n−\n 2sin3 cos 2 2sin3\n– 2sin3 sin 2  x x x\nx x−=sin 3 (cos2 1)\nsin 3 sin 2  x x–\nx x−=\n  21 cos 2 2sin\nsin 2 2sin cosx x\nx x x−= =  =  tan x  =  R.H.S.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      67\nEXERCISE 3.3\nProve that:\n1.sin2 π\n6+ cos2 3π– tan2 1–4 2π= 2.   2sin2\n6π+ cosec2  2 7 3cos6 3 2π π=\n3.2 2 5cot cosec 3tan 66 6",
+          "solution": "W e have\nL.H.S. sin 5 2sin3 sin\ncos5 cosx x x\nx x− +=\n− sin 5 sin 2sin 3\ncos5 cosx x x\nx x+ −=\n−\n 2sin3 cos 2 2sin3\n– 2sin3 sin 2  x x x\nx x−=sin 3 (cos2 1)\nsin 3 sin 2  x x–\nx x−=\n  21 cos 2 2sin\nsin 2 2sin cosx x\nx x x−= =  =  tan x  =  R.H.S.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      67"
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 18,
+          "title": "If sin x = 3",
+          "question": "Example 18    If sin x = 3\n5,  cos y = −12\n13, where x and y both lie in second quadrant,\nfind the value of sin ( x + y).\nSolution  We know that\nsin (\nx + y) = sin x cos y + cos x sin y ... (1)\nNow cos2 x= 1 – sin2 x = 1 – 9\n25 = 16\n25\nTherefore cos x = ±4\n5.\nSince x lies in second quadrant, cos x is negative.\nHence cos x = −4\n5\nNow sin2y = 1 – cos2y = 1 – 144\n16925\n169=\ni.e. sin y = ±5",
+          "solution": "We know that\nsin (\nx + y) = sin x cos y + cos x sin y ... (1)\nNow cos2 x= 1 – sin2 x = 1 – 9\n25 = 16\n25\nTherefore cos x = ±4"
+        }
+      ],
+      "exercises": [
+        {
+          "chapterNumber": 12,
+          "exerciseNumber": "3.2",
+          "questions": [
+            {
+              "questionNumber": 39,
+              "questionText": "sin (– 11π\n3)"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "cot (– 15π\n4)"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "cos ( x + y) = cos x cos y – sin x sin y\nConsider the unit circle with centre at the origin. Let x be the angle P4OP1and  y be\nthe angle P1OP2. Then ( x + y) is the angle P4OP2. Also let (–  y) be the angle P4OP3.\nTherefore, P1, P2, P3 and P4 will have the coordinates P1(cos x, sin x),\nP2 [cos ( x + y), sin ( x + y)], P3 [cos (–  y), sin (–  y)] and P4 (1, 0) (Fig 3.14).\nConsider the triangles P1OP3 and P2OP4. They are congruent (Why?). Therefore,\nP1P3 and P2P4 are equal. By using distance formula, we get\nP1P32= [cos x – cos (–  y)]2  + [sin x – sin(– y]2\n= (cos x – cos y)2 + (sin x + sin y)2\n= cos2 x + cos2 y – 2 cos x cos y + sin2 x + sin2 y + 2sin x sin \ny\n= 2 – 2 (cos x cos y – sin x sin y) (Why?)\nAlso, P2P42= [1 – cos ( x + y)] 2 + [0 – sin ( x + y)]2\n= 1 – 2cos ( x + y) + cos2 (x + y) + sin2 (x + y)\n= 2 – 2 cos ( x + y)Fig  3.14\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "cos ( x – y) = cos x cos y + sin x sin y\nReplacing y by – y in identity 3, we get\ncos (x + (– y)) = cos x cos (–  y) – sin x sin ( – y)\nor cos ( x – y) = cos x cos y + sin x sin y"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "cos ( xπ–2) = sin x\nIf we replace x by π\n2 and y by x in Identity (4), we get\ncos (π\n2x−) = cos π\n2 cos x + sin π\n2 sin x = sin x."
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "sin ( xπ–2) = cos x\nUsing the Identity 5, we have\nsin (π\n2x−) = cos π π\n2 2x   − −       = cos x."
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "sin ( x + y) = sin x cos y + cos x sin y\nWe know that\n sin ( x + y) = cos π( )2x y − +   = cos π( )2x y − −  \n = cos (π\n2x−) cos y + sin π( )2x−sin y\n = sin x cos y + cos x sin y"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "sin (\nx – y) = sin x cos y – cos x  sin y\nIf we replace y by – y, in the Identity 7, we get the result."
+            },
+            {
+              "questionNumber": 9,
+              "questionText": "By taking suitable values of x and y in the identities 3, 4, 7 and 8, we get the\nfollowing results:\ncos xπ( + )2 = – sin x sin xπ( + )2 = cos x\ncos ( πππ\nππ – x)  = – cos x sin ( π ππ ππ – x)  = sin x\nReprint 2025-26"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 12,
+          "exerciseNumber": "3.3",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "sin (n + 1)x sin ( n + 2) x + cos ( n + 1) x cos ( n + 2) x = cos x"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "sin2 6x – sin2 4x = sin 2 x sin 10 x 13. cos2 2x – cos2 6x = sin 4 x sin 8 x"
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "sin2 x + 2 sin 4 x + sin 6\nx = 4 cos2 x sin 4 x"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "cot 4 x (sin 5 x + sin 3x ) = cot x (sin 5 x – sin 3x )"
+            },
+            {
+              "questionNumber": 22,
+              "questionText": "cot x cot 2 x – cot 2 x cot 3 x – cot 3 x cot x = 1"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "cos 6 x = 32 cos6 x – 48cos4 x + 18 cos2 x – 1\nMiscellaneous Examples\nExample 18    If sin x = 3\n5,  cos y = −12\n13, where x and y both lie in second quadrant,\nfind the value of sin ( x + y).\nSolution  We know that\nsin (\nx + y) = sin x cos y + cos x sin y ... (1)\nNow cos2 x= 1 – sin2 x = 1 – 9\n25 = 16\n25\nTherefore cos x = ±4"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "Since x lies in second quadrant, cos x is negative.\nHence cos x = −4\n5\nNow sin2y = 1 – cos2y = 1 – 144\n16925\n169=\ni.e. sin y = ±5"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 11,
+        "exercisesCount": 16
+      }
+    },
+    {
+      "chapterNumber": 13,
+      "title": "Since y lies in second quadrant, hence sin  y is pos",
+      "content": "13.\nSince y lies in second quadrant, hence sin  y is positive. Therefore, sin y = 5\n13. Substituting\nthe values of sin x, sin y, cos x and cos y in (1), we get\nsin( ) x y + = × −\n\n+ −\n\n×3\n512\n134\n55\n13=  36 20 56\n65 65 65− − = − .\nExample 19      Prove that\n9 5cos 2 cos cos 3 cos sin 5 sin2 2 2x x xx x x − = .\nSolution    We have\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      69\nL.H.S. = 1 92cos 2 cos 2cos cos 32 2 2x xx x −  \n= 1 9 9cos 2 cos 2 cos 3 cos 32 2 2 2 2x x x xx x x x         + + − − + − −                \n= 1\n25\n23\n215\n23\n2cos cos cos cosx x x x+ − −\n\n = 1\n25\n215\n2cos cosx x−\n\n\n= 5 15 5 15\n1 2 2 2 22sin sin2 2 2x x x x      + −     −     \n     \n       \n= − −\n\n= sin sin sin sin55\n255\n2xxxx\n = R.H.S.\nExample 20    Find the value of tan π\n8.\nSolution Let π\n8x=. Then π24x=.\nNow tantan\ntan22\n12 xx\nx=−\nor2π2tanπ 8tanπ 41 tan8=\n−\nLet  y = tan π\n8. Then 1 = 212\nyy\n−\nor          y2 + 2y – 1 = 0\nTherefore  y = − ±= − ±2 2 2\n21 2\nReprint 2025-26\n\n70 MATHEMA TICS\nSinceπ\n8 lies in the first quadrant, y = tan π\n8 is positve. Hence\nπtan 2 18= − .\nExample 21  If 3 3 πtan = , π < <4 2x x , find the value of sinx\n2, cosx\n2 and tanx\n2.\nSolution  Since 3ππ2x< < , cos x is negative.\nAlsoπ 3π\n2 2 4x< < .\nTherefore, sin x\n2 is positive and cos x\n2 is negative.\nNow sec2 x = 1 + tan2 x =  19\n1625\n16+ =\nTherefore cos2 x = 16\n25  or cos x = 4\n5–   (Why?)\nNow 222sinx\n  = 1 –  cos x  = 14\n59\n5+ = .\nTherefore sin2 x\n2 = 9\n10\nor sinx\n2 =  3\n10(Why?)\nAgain 2cos2 x\n2 = 1+ cos x = 14\n51\n5− =\nTherefore cos2 x\n2 = 1\n10\nor cos x\n2 = −1\n10(Why?)\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      71\nHence tan x\n2 = sin\ncosx\nx2\n23\n1010\n1= ×−\n\n = – 3.\nExample 22     Prove that cos2 x + cos2 2 π π 3cos3 3 2x x   + + − =      .\nSolution    We have\n      L.H.S. = 2π 2π1 cos 2 1 cos 21 cos 2 3 3\n2 2 2x xx   + + + −    +    + +.\n= 1 2π 2π3 cos 2 cos 2 cos 22 3 3x x x     + + + + −           \n= 1 2π3 cos 2 2cos 2 cos2 3x x + +  \n= 1 π3 cos 2 2cos 2 cos π2 3x x   + + −      \n= 1 π3 cos 2 2cos 2 cos2 3x x + −  \n= [ ]1 33 cos 2 cos 22 2x x + − =  = R.H.S.\nMiscellaneous Exercise on Chapter 3\nProve that:\n1. 013π5cos13π3cos13π9cos13πcos 2 = + +\n2. (sin 3 x + sin x) sin x + (cos 3 x – cos x) cos x = 0\n3.(cos x + cos y)2 + (sin x – sin y)2 = 4 cos2  2x y+\nReprint 2025-26\n\n72 MATHEMA TICS\n4.(cosx– cos y)2 + (sin x– sin y )2 = 4 sin2 \n2x y−\n5.sin x + sin 3 x + sin 5 x + sin 7 x = 4 cos x cos 2 x sin 4 x\n6. 6.6. 6.6.(sin7 sin5 ) (sin 9 sin3 )tan 6(cos7 cos5 ) (cos9 cos3 )x x x xxx x x x+ + +=+ + +\n7.sin 3 x + sin 2 x – sin x = 4sin x cos x\n2 cos 3\n2x\nFind sin x\n2, cos x\n2  and tan x\n2  in each of the following :\n8.tanx =   −4\n3, x in quadrant II 9.cos x = −1\n3, x in quadrant III\n10. sinx = 41, xin quadrant II\nSummary\n®If in a circle of radius r, an arc of length l subtends an angle of  θ radians, then\nl = r θ\n®Radian measure = π\n180× Degree measure\n®Degree measure = 180\nπ× Radian measure\n®cos2 x + sin2 x = 1\n®1 + tan2 x = sec2 x\n®1 + cot2 x = cosec2 x\n®cos (2 nπ + x) = cos x\n®sin (2 nπ + x) = sin x\n®sin (–  x) = – sin x\n®cos (–  x) = cos x\n®cos ( x + y) = cos x cos y – sin x sin y\n®cos (x – y) = cos x cos y + sin x sin y\n®cos (π\n2x−) = sin x\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      73\n®sin (π\n2x−) = cos x\n®sin (x + y) = sin x cos y + cos x sin y\n®sin (x – y) = sin \nx cos y – cos x sin y\n®cos π+2x \n  = – sin x sin π+2x \n   = cos x\ncos ( π  – x) = – cos x sin (π  – x) = sin x\ncos ( π  + x)  = – cos x sin (π  + x) = – sin x\ncos ( 2π  – x) = cos x sin  ( 2π  – \nx) = – sin x\n®If none of the angles x, y and ( x ± y) is an odd multiple of π\n2, then\ntan (x + y) = tan tan\ntan tanx y\nx y+\n−1\n®tan (x – y) = tan tan\ntan tanx y\nx y−\n+1\n®If none of the angles x, y and ( x ± y) is a multiple of π, then\ncot (x + y) = cot cot 1\ncot cot x y\ny x−\n+\n®cot (x – y) = cot cot 1\ncot cotx y\ny x−+\n®cos 2 x= cos2 x – sin2 x = 2cos2 x – 1 = 1 – 2 sin2 x 2\n21 tan\n1 tan– x\nx=\n+\n®sin 2 x = 2 sin x cos x 22 tan\n1 tanx\nx=\n+\n®tan 2 x = 22tan\n1 tanx\nx−\n®sin 3 x = 3sin x – 4sin3x\n®cos 3 x= 4cos3x – 3cos x\nReprint 2025-26\n\n74 MATHEMA TICS\n®tan 3 x = 3\n23tan tan\n1 3tanx x\nx−\n−\n®(i)cos x + cos y = 2cos cos2 2x y x y+ −\n(ii) cos x – cos y = – 2sin sin2 2x y x y+ −\n(iii) sin x + sin y = 2 sin cos2 2x y x y+ −\n(iv) sin x – sin y = 2cos sin2 2x y x y+ −\n®(i)2cos x cos y = cos (x+ y) + cos ( x– y)\n(ii) – 2sin x sin y = cos (x + y) – cos ( x – y)\n(iii) 2sin x cos y = sin (x + y) + sin ( x – y)\n(iv) 2 cos x sin y = sin (x + y) – sin (\nx – y).\nHistorical Note\nThe study of trigonometry was first started in India. The ancient Indian\nMathematicians, Aryabhatta (476), Brahmagupta (598), Bhaskara I (600) and\nBhaskara II (1 114) got important results. All this knowledge first went from\nIndia to middle-east and from there to Europe. The Greeks had also started the\nstudy of trigonometry but their approach was so clumsy that when the Indian\napproach became known, it was immediately adopted throughout the world.\nIn India, the predecessor of the modern trigonometric functions, known as\nthe sine of an angle, and the introduction of the sine function represents the main\ncontribution of the siddhantas (Sanskrit astronomical works) to the history of\nmathematics.\nBhaskara I (about 600) gave formulae to find the values of sine functions\nfor angles more than 90 °. A sixteenth century Malayalam work Yuktibhasa\n(period) contains a proof for the expansion of sin (A + B). Exact expression for\nsines or cosines of 18 °, 36 °, 54 °, 72 °, etc., are given by\nBhaskara II.\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      75\n—vvvvv—The symbols sin–1 x, cos–1 x, etc., for arc sin x, arc cos x, etc., were\nsuggested by the astronomer Sir John F .W. Hersehel (1813) The names of Thales\n(about 600 B.C.) is invariably associated with height and distance problems. He\nis credited with the determination of the height of a great pyramid in Egypt by\nmeasuring shadows of the pyramid and an auxiliary staff (or gnomon) of known\nheight, and comparing the ratios:\nH\nSh\ns= = tan (sun’ s altitude)\nThales is also said to have calculated the distance of a ship at sea through\nthe proportionality of sides of similar triangles. Problems on height and distance\nusing the similarity property are also found in ancient Indian works.\nReprint 2025-26\n\n",
+      "wordCount": 1642,
+      "examples": [
+        {
+          "chapterNumber": 13,
+          "exampleNumber": 19,
+          "title": "Prove that",
+          "question": "Example 19      Prove that\n9 5cos 2 cos cos 3 cos sin 5 sin2 2 2x x xx x x − = .\nSolution    We have\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      69\nL.H.S. = 1 92cos 2 cos 2cos cos 32 2 2x xx x −  \n= 1 9 9cos 2 cos 2 cos 3 cos 32 2 2 2 2x x x xx x x x         + + − − + − −                \n= 1\n25\n23\n215\n23\n2cos cos cos cosx x x x+ − −\n\n = 1\n25\n215\n2cos cosx x−\n\n\n= 5 15 5 15\n1 2 2 2 22sin sin2 2 2x x x x      + −     −     \n   ",
+          "solution": "We have\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      69\nL.H.S. = 1 92cos 2 cos 2cos cos 32 2 2x xx x −  \n= 1 9 9cos 2 cos 2 cos 3 cos 32 2 2 2 2x x x xx x x x         + + − − + − −                \n= 1\n25\n23\n215\n23\n2cos cos cos cosx x x x+ − −\n\n = 1\n25\n215\n2cos cosx x−\n\n\n= 5 15 5 15\n1 2 2 2 22sin sin2 2 2x x x x      + −     −     \n     \n       \n= − −\n\n= sin sin sin sin55\n255\n2xxxx\n = R.H.S."
+        },
+        {
+          "chapterNumber": 13,
+          "exampleNumber": 20,
+          "title": "Find the value of tan π",
+          "question": "Example 20    Find the value of tan π\n8.\nSolution Let π\n8x=. Then π24x=.\nNow tantan\ntan22\n12 xx\nx=−\nor2π2tanπ 8tanπ 41 tan8=\n−\nLet  y = tan π\n8. Then 1 = 212\nyy\n−\nor          y2 + 2y – 1 = 0\nTherefore  y = − ±= − ±2 2 2\n21 2\nReprint 2025-26\n\n70 MATHEMA TICS\nSinceπ\n8 lies in the first quadrant, y = tan π\n8 is positve. Hence\nπtan 2 18= − .\nExample 21  If 3 3 πtan = , π < <4 2x x , find the value of sinx\n2, cosx\n2 and tanx\n2.\nSolution  Since 3ππ2x< < , cos x is negative.\nAlsoπ 3π\n2 2 4x< < .\nTheref",
+          "solution": "Let π\n8x=. Then π24x=.\nNow tantan\ntan22\n12 xx\nx=−\nor2π2tanπ 8tanπ 41 tan8=\n−\nLet  y = tan π\n8. Then 1 = 212\nyy\n−\nor          y2 + 2y – 1 = 0\nTherefore  y = − ±= − ±2 2 2\n21 2\nReprint 2025-26\n\n70 MATHEMA TICS\nSinceπ\n8 lies in the first quadrant, y = tan π\n8 is positve. Hence\nπtan 2 18= − ."
+        },
+        {
+          "chapterNumber": 13,
+          "exampleNumber": 21,
+          "title": "If 3 3 πtan = , π < <4 2x x , find the value of sinx",
+          "question": "Example 21  If 3 3 πtan = , π < <4 2x x , find the value of sinx\n2, cosx\n2 and tanx\n2.\nSolution  Since 3ππ2x< < , cos x is negative.\nAlsoπ 3π\n2 2 4x< < .\nTherefore, sin x\n2 is positive and cos x\n2 is negative.\nNow sec2 x = 1 + tan2 x =  19\n1625\n16+ =\nTherefore cos2 x = 16\n25  or cos x = 4\n5–   (Why?)\nNow 222sinx\n  = 1 –  cos x  = 14\n59\n5+ = .\nTherefore sin2 x\n2 = 9\n10\nor sinx\n2 =  3\n10(Why?)\nAgain 2cos2 x\n2 = 1+ cos x = 14\n51\n5− =\nTherefore cos2 x\n2 = 1\n10\nor cos x\n2 = −1\n10(Why?)\nReprint 2025-2",
+          "solution": "Since 3ππ2x< < , cos x is negative.\nAlsoπ 3π\n2 2 4x< < .\nTherefore, sin x\n2 is positive and cos x\n2 is negative.\nNow sec2 x = 1 + tan2 x =  19\n1625\n16+ =\nTherefore cos2 x = 16\n25  or cos x = 4\n5–   (Why?)\nNow 222sinx\n  = 1 –  cos x  = 14\n59\n5+ = .\nTherefore sin2 x\n2 = 9\n10\nor sinx\n2 =  3\n10(Why?)\nAgain 2cos2 x\n2 = 1+ cos x = 14\n51\n5− =\nTherefore cos2 x\n2 = 1\n10\nor cos x\n2 = −1\n10(Why?)\nReprint 2025-26\n\nTRIGONOMETRIC FUNCTIONS      71\nHence tan x\n2 = sin\ncosx\nx2\n23\n1010\n1= ×−\n\n = –"
+        },
+        {
+          "chapterNumber": 13,
+          "exampleNumber": 22,
+          "title": "Prove that cos2 x + cos2 2 π π 3cos3 3 2x x   + + − =      .",
+          "question": "Example 22     Prove that cos2 x + cos2 2 π π 3cos3 3 2x x   + + − =      .\nSolution    We have\n      L.H.S. = 2π 2π1 cos 2 1 cos 21 cos 2 3 3\n2 2 2x xx   + + + −    +    + +.\n= 1 2π 2π3 cos 2 cos 2 cos 22 3 3x x x     + + + + −           \n= 1 2π3 cos 2 2cos 2 cos2 3x x + +  \n= 1 π3 cos 2 2cos 2 cos π2 3x x   + + −      \n= 1 π3 cos 2 2cos 2 cos2 3x x + −  \n= [ ]1 33 cos 2 cos 22 2x x + − =  = R.H.S.\nMiscellaneous Exercise on Chapt",
+          "solution": "We have\n      L.H.S. = 2π 2π1 cos 2 1 cos 21 cos 2 3 3\n2 2 2x xx   + + + −    +    + +.\n= 1 2π 2π3 cos 2 cos 2 cos 22 3 3x x x     + + + + −           \n= 1 2π3 cos 2 2cos 2 cos2 3x x + +  \n= 1 π3 cos 2 2cos 2 cos π2 3x x   + + −      \n= 1 π3 cos 2 2cos 2 cos2 3x x + −  \n= [ ]1 33 cos 2 cos 22 2x x + − =  = R.H.S.\nMiscellaneous"
+        }
+      ],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 4,
+        "exercisesCount": 0
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 33,
+    "totalWords": 12378
+  }
+}

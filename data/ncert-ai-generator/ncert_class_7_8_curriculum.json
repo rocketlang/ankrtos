@@ -1,0 +1,448 @@
+{
+  "class_7": {
+    "history": {
+      "name": "Our Pasts - II",
+      "board": "CBSE",
+      "class": 7,
+      "subject": "History",
+      "topics": [
+        {
+          "id": "1",
+          "name": "Tracing Changes Through a Thousand Years",
+          "subtopics": [
+            "New and old terminologies",
+            "The emergence of new dynasties",
+            "Forests, pastoralists and nomads",
+            "New technologies and crops"
+          ],
+          "learning_outcomes": [
+            "Understand how historians study the past",
+            "Identify major changes in society over time",
+            "Recognize the importance of sources",
+            "Analyze chronological developments"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Medieval Indian Dynasties",
+          "subtopics": [
+            "Delhi Sultanate",
+            "The Mughals",
+            "Regional kingdoms",
+            "Administration and governance"
+          ],
+          "learning_outcomes": [
+            "Describe the political structure of medieval India",
+            "Explain the administrative systems",
+            "Compare different dynasties",
+            "Understand cultural developments"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Social and Cultural Life",
+          "subtopics": [
+            "The making of regional cultures",
+            "Devotional paths to the divine",
+            "Tribes and society",
+            "Architecture and monuments"
+          ],
+          "learning_outcomes": [
+            "Appreciate cultural diversity",
+            "Understand religious movements",
+            "Analyze social structures",
+            "Recognize architectural achievements"
+          ]
+        }
+      ]
+    },
+    "geography": {
+      "name": "Our Environment",
+      "board": "CBSE",
+      "class": 7,
+      "subject": "Geography",
+      "topics": [
+        {
+          "id": "1",
+          "name": "Environment",
+          "subtopics": [
+            "Natural environment",
+            "Human environment",
+            "Components of environment",
+            "Environmental conservation"
+          ],
+          "learning_outcomes": [
+            "Define environment and its components",
+            "Distinguish between natural and human environment",
+            "Understand human-environment interaction",
+            "Recognize importance of conservation"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Physical Features",
+          "subtopics": [
+            "Inside our Earth",
+            "Landforms",
+            "Water bodies",
+            "Climate and natural vegetation"
+          ],
+          "learning_outcomes": [
+            "Describe Earth's structure",
+            "Identify major landforms",
+            "Understand water cycle",
+            "Explain climate patterns"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Human Settlements and Life",
+          "subtopics": [
+            "Human settlements",
+            "Transport and communication",
+            "Life in different regions",
+            "Urban and rural life"
+          ],
+          "learning_outcomes": [
+            "Compare settlement types",
+            "Understand transport networks",
+            "Analyze life in various regions",
+            "Distinguish urban from rural"
+          ]
+        }
+      ]
+    },
+    "civics": {
+      "name": "Social and Political Life - II",
+      "board": "CBSE",
+      "class": 7,
+      "subject": "Civics",
+      "topics": [
+        {
+          "id": "1",
+          "name": "Equality and Democracy",
+          "subtopics": [
+            "On equality",
+            "Role of government",
+            "Democracy and equality",
+            "State government"
+          ],
+          "learning_outcomes": [
+            "Understand concept of equality",
+            "Explain role of government in ensuring equality",
+            "Describe democratic principles",
+            "Know structure of state government"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Government and Rights",
+          "subtopics": [
+            "Growing up as boys and girls",
+            "Women change the world",
+            "Understanding advertising",
+            "Markets around us"
+          ],
+          "learning_outcomes": [
+            "Recognize gender stereotypes",
+            "Understand women's movements",
+            "Analyze role of media",
+            "Explain market mechanisms"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Local Government",
+          "subtopics": [
+            "A shirt in the market",
+            "Markets and equality",
+            "Local government and democracy"
+          ],
+          "learning_outcomes": [
+            "Understand supply chains",
+            "Analyze market inequalities",
+            "Know functions of local government"
+          ]
+        }
+      ]
+    },
+    "english": {
+      "name": "Honeycomb & An Alien Hand",
+      "board": "CBSE",
+      "class": 7,
+      "subject": "English",
+      "topics": [
+        {
+          "id": "1",
+          "name": "Reading Comprehension",
+          "subtopics": [
+            "Prose passages",
+            "Poetry analysis",
+            "Story elements",
+            "Character analysis"
+          ],
+          "learning_outcomes": [
+            "Read and comprehend texts",
+            "Identify main ideas and themes",
+            "Analyze literary devices",
+            "Make inferences from texts"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Writing Skills",
+          "subtopics": [
+            "Paragraph writing",
+            "Story writing",
+            "Letter writing",
+            "Essay writing"
+          ],
+          "learning_outcomes": [
+            "Write coherent paragraphs",
+            "Develop creative stories",
+            "Write formal and informal letters",
+            "Organize ideas in essays"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Grammar",
+          "subtopics": [
+            "Tenses",
+            "Active and passive voice",
+            "Direct and indirect speech",
+            "Modals"
+          ],
+          "learning_outcomes": [
+            "Use tenses correctly",
+            "Convert between voices",
+            "Change speech forms",
+            "Apply modal auxiliaries"
+          ]
+        }
+      ]
+    }
+  },
+  "class_8": {
+    "history": {
+      "name": "Our Pasts - III",
+      "board": "CBSE",
+      "class": 8,
+      "subject": "History",
+      "topics": [
+        {
+          "id": "1",
+          "name": "Colonial Rule in India",
+          "subtopics": [
+            "How, when and where",
+            "From trade to territory",
+            "Ruling the countryside",
+            "Tribals and colonial rule"
+          ],
+          "learning_outcomes": [
+            "Understand colonial expansion",
+            "Explain British administrative policies",
+            "Analyze impact on agriculture",
+            "Recognize tribal resistance"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Resistance and Reform",
+          "subtopics": [
+            "Weavers, iron smelters and factory owners",
+            "Civilising the native, educating the nation",
+            "1857 Revolt",
+            "Women and reform"
+          ],
+          "learning_outcomes": [
+            "Understand impact on industries",
+            "Analyze educational policies",
+            "Explain causes of 1857 revolt",
+            "Recognize reform movements"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Culture and Identity",
+          "subtopics": [
+            "The making of the national movement",
+            "India after independence",
+            "Art and culture",
+            "Print and society"
+          ],
+          "learning_outcomes": [
+            "Trace freedom movement",
+            "Understand post-independence India",
+            "Appreciate cultural developments",
+            "Analyze role of print media"
+          ]
+        }
+      ]
+    },
+    "geography": {
+      "name": "Resources and Development",
+      "board": "CBSE",
+      "class": 8,
+      "subject": "Geography",
+      "topics": [
+        {
+          "id": "1",
+          "name": "Resources",
+          "subtopics": [
+            "Types of resources",
+            "Resource conservation",
+            "Natural resources",
+            "Human resources"
+          ],
+          "learning_outcomes": [
+            "Classify resources",
+            "Understand conservation needs",
+            "Identify natural resources",
+            "Appreciate human resources"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Land, Soil, Water and Natural Vegetation",
+          "subtopics": [
+            "Land resources",
+            "Soil formation and conservation",
+            "Water resources",
+            "Natural vegetation and wildlife"
+          ],
+          "learning_outcomes": [
+            "Explain land use patterns",
+            "Describe soil types and conservation",
+            "Understand water management",
+            "Recognize biodiversity"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Industries and Human Resources",
+          "subtopics": [
+            "Agriculture and industries",
+            "Mineral and power resources",
+            "Human resources and development"
+          ],
+          "learning_outcomes": [
+            "Classify industries",
+            "Identify mineral deposits",
+            "Understand human development"
+          ]
+        }
+      ]
+    },
+    "civics": {
+      "name": "Social and Political Life - III",
+      "board": "CBSE",
+      "class": 8,
+      "subject": "Civics",
+      "topics": [
+        {
+          "id": "1",
+          "name": "Indian Constitution and Secularism",
+          "subtopics": [
+            "The Indian Constitution",
+            "Understanding secularism",
+            "Why do we need a parliament",
+            "Understanding laws"
+          ],
+          "learning_outcomes": [
+            "Understand constitutional values",
+            "Explain secularism",
+            "Know parliamentary functions",
+            "Understand law-making process"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Judiciary and Governance",
+          "subtopics": [
+            "Judiciary",
+            "Understanding our criminal justice system",
+            "Understanding marginalization",
+            "Confronting marginalization"
+          ],
+          "learning_outcomes": [
+            "Explain judicial system",
+            "Understand criminal justice",
+            "Recognize marginalization",
+            "Analyze government policies"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Economic and Social Justice",
+          "subtopics": [
+            "Public facilities",
+            "Law and social justice",
+            "Economic presence of government"
+          ],
+          "learning_outcomes": [
+            "Understand public services",
+            "Analyze social justice laws",
+            "Explain government's economic role"
+          ]
+        }
+      ]
+    },
+    "english": {
+      "name": "Honeydew & It So Happened",
+      "board": "CBSE",
+      "class": 8,
+      "subject": "English",
+      "topics": [
+        {
+          "id": "1",
+          "name": "Reading Comprehension",
+          "subtopics": [
+            "Unseen passages",
+            "Poetry appreciation",
+            "Story comprehension",
+            "Critical reading"
+          ],
+          "learning_outcomes": [
+            "Comprehend complex texts",
+            "Analyze poetic devices",
+            "Interpret stories",
+            "Develop critical thinking"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Writing Skills",
+          "subtopics": [
+            "Article writing",
+            "Report writing",
+            "Story completion",
+            "Diary entry"
+          ],
+          "learning_outcomes": [
+            "Write informative articles",
+            "Draft reports",
+            "Complete stories creatively",
+            "Express in diary form"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Grammar and Composition",
+          "subtopics": [
+            "Sentence types",
+            "Clauses",
+            "Prepositions and conjunctions",
+            "Editing and proofreading"
+          ],
+          "learning_outcomes": [
+            "Construct varied sentences",
+            "Use clauses correctly",
+            "Apply connectors",
+            "Edit written work"
+          ]
+        }
+      ]
+    }
+  }
+}

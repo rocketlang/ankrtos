@@ -1,0 +1,568 @@
+{
+  "class": 8,
+  "subject": "English",
+  "book": "Honeydew & It So Happened",
+  "board": "CBSE",
+  "total_questions": 16,
+  "questions": [
+    {
+      "question": "Read the following passage from the story 'The Selfish Giant' (It So Happened) and answer the question below:\n\n'Every afternoon, as they were coming from school, the children used to go and play in the Giant's garden. It was a large lovely garden, with soft green grass. Here and there over the grass stood beautiful flowers like stars, and there were twelve peach-trees that in the spring-time broke out into delicate blossoms of pink and pearl, and in the autumn bore rich fruit.'\n\nQuestion: Why did the children enjoy playing in the Giant's garden? Give two reasons from the passage.",
+      "marks": 2,
+      "difficulty": "easy",
+      "question_type": "reading_comprehension",
+      "topic": "Story comprehension - The Selfish Giant",
+      "answer": "The children enjoyed playing in the Giant's garden because: 1) It had soft green grass that was comfortable to play on. 2) There were beautiful flowers and twelve peach trees that bloomed beautifully in spring and bore fruit in autumn, making it an attractive and pleasant place.",
+      "marking_scheme": [
+        {
+          "point": "Mention of soft green grass as a comfortable playing area",
+          "marks": 1
+        },
+        {
+          "point": "Reference to beautiful flowers and peach trees with blossoms/fruit",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Look for descriptive words about the garden in the passage.",
+        "Focus on what made the garden appealing to children."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "1"
+    },
+    {
+      "question": "Read the following passage from 'The Best Christmas Present in the World' (Honeydew) and answer the question below:\n\n\"I found the letter in a secret drawer of the old desk. It was addressed to Connie Macpherson, and it began: 'My dear Connie, I write to you from a trench on Christmas morning. I am thinking of you and the happy times we spent together.' The letter was signed by Jim Macpherson, a British soldier during World War I.\"\n\n**Question:** Why was the letter considered a special discovery? What does it reveal about Jim's feelings?",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "reading_comprehension",
+      "topic": "Story comprehension - The Best Christmas Present in the World",
+      "answer": "The letter was a special discovery because it was found in a secret drawer after many years, addressed to Connie Macpherson from her husband Jim during World War I. It reveals Jim's deep love and longing for his wife, as he writes to her on Christmas morning from a trench, remembering their happy times together despite being in a war situation.",
+      "marking_scheme": [
+        {
+          "point": "Identifies why the letter was special (found in secret drawer after many years, historical value)",
+          "marks": 1
+        },
+        {
+          "point": "Explains Jim's feelings (love, longing, remembrance of happy times)",
+          "marks": 1
+        },
+        {
+          "point": "Mentions the context (Christmas during war, personal connection)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Look at where the letter was found and how old it might be.",
+        "Think about what Jim writes about - what emotions does he express?"
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "1"
+    },
+    {
+      "question": "Read the following passage from an unseen story and answer the question below:\n\n'Ravi stood at the edge of the forest, clutching the old map his grandfather had given him. The paper was yellowed with age, and the ink had faded in places. Yet, the path marked with a dotted line seemed to lead deep into the woods, where an 'X' indicated something precious. His grandfather's words echoed in his mind: \"Sometimes, the real treasure isn't what you find, but what you learn on the way.\" Taking a deep breath, Ravi stepped forward, the crunch of dry leaves under his feet the only sound in the quiet afternoon.'\n\n**Question:** What does the author suggest about Ravi's character and his grandfather's message through the details in the passage? Explain in about 60\u201380 words.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Reading Comprehension (Unseen Passage)",
+      "answer": "The author portrays Ravi as a curious and courageous boy who respects his grandfather's wisdom. Despite the map being old and unclear, Ravi decides to venture into the forest, showing determination. His grandfather's message hints that the journey itself\u2014facing challenges and learning\u2014holds more value than any material treasure. The 'crunch of dry leaves' emphasizes his solitary step into the unknown, highlighting his willingness to learn and grow.",
+      "marking_scheme": [
+        {
+          "point": "Identifies Ravi's traits (curiosity, courage, respect for grandfather) with textual evidence (e.g., clutching map, stepping forward).",
+          "marks": 1
+        },
+        {
+          "point": "Explains the grandfather's message about the journey being more valuable than the treasure.",
+          "marks": 1
+        },
+        {
+          "point": "Analyses a literary detail (e.g., 'crunch of dry leaves' to show solitude/decision) and connects it to theme.",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Look for adjectives and actions describing Ravi.",
+        "Think about what the grandfather's quote implies about life lessons.",
+        "Notice how sensory details (like sound) add to the mood."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "1"
+    },
+    {
+      "question": "Read the following extract from the poem 'The Ant and the Cricket' (Honeydew) and answer the question below:\n\n\"Said the ant to the cricket,\n'Why did you not store\nAnything for winter?'\nSaid the cricket, 'Alas, I was so busy singing\nThat summer and autumn passed me by.'\"\n\n**Question:** What is the central message of this poem? Explain how the poet uses the characters of the ant and the cricket to convey this message. (3 marks)",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Poetry appreciation - The Ant and the Cricket",
+      "answer": "The central message of the poem is the importance of hard work, planning, and responsibility versus the consequences of laziness and carefree living. The poet uses the ant as a symbol of diligence and foresight, who works hard during summer and autumn to store food for winter. In contrast, the cricket represents irresponsibility and short-sighted pleasure, as it spends its time singing and fails to prepare for the future. Through this contrast, the poet highlights that while enjoyment is natural, one must balance it with duty and preparation to avoid hardship later.",
+      "marking_scheme": [
+        {
+          "point": "Identifies the central message (hard work/planning vs. laziness/consequences)",
+          "marks": 1
+        },
+        {
+          "point": "Explains the ant's character as diligent, foresighted, and responsible",
+          "marks": 1
+        },
+        {
+          "point": "Explains the cricket's character as careless, pleasure-seeking, and unprepared",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about what each character represents in the story.",
+        "Consider the outcome for both characters in the full poem."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "1"
+    },
+    {
+      "question": "Read the following excerpt from an unseen passage and answer the questions that follow:\n\n'In the heart of the dense forest, where sunlight barely touched the ground, lived an old banyan tree. Its aerial roots hung like ancient curtains, and generations of birds had nested in its branches. One day, a woodcutter arrived, his axe gleaming in the filtered light. The forest held its breath.'\n\n(i) What mood does the author create in the opening lines? Identify two literary devices used to establish this mood. (2 marks)\n(ii) 'The forest held its breath' is an example of personification. Explain how this device enhances the tension in the passage. (2 marks)\n(iii) Based on the passage, what might be the central conflict? Predict a possible theme the story could explore, justifying your answer with evidence from the text. (2 marks)",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "reading_comprehension",
+      "topic": "Critical Reading & Literary Analysis",
+      "answer": "(i) The author creates a mood of mystery and foreboding. The literary devices used are: \n- Imagery: 'dense forest, where sunlight barely touched the ground' visually establishes a dark, secluded atmosphere.\n- Simile: 'aerial roots hung like ancient curtains' adds a sense of age and hidden secrets.\n\n(ii) Personifying the forest as 'holding its breath' gives human emotion to nature, making the tension palpable. It suggests the entire ecosystem is aware of the threat (the woodcutter), amplifying suspense and making readers feel the impending danger more deeply.\n\n(iii) Central conflict: Man vs. Nature (woodcutter vs. ancient tree/forest). \nPossible theme: The destruction of natural heritage for human needs. Evidence: The 'old banyan tree' with 'generations of birds' represents ecological continuity, while the 'gleaming axe' symbolizes human intrusion. The theme could explore the cost of progress versus conservation.",
+      "marking_scheme": [
+        {
+          "point": "Correct identification of mood (mystery/foreboding) + two accurate literary devices with examples",
+          "marks": 2
+        },
+        {
+          "point": "Explanation of personification showing understanding of how it builds tension and emotional impact",
+          "marks": 2
+        },
+        {
+          "point": "Identification of central conflict (Man vs. Nature) + plausible theme with textual justification",
+          "marks": 2
+        }
+      ],
+      "bloom_level": "Analyzing",
+      "hints": [
+        "Look for descriptive words that evoke feeling. Think about what isn't directly stated.",
+        "Personification gives non-human things human traits\u2014how does that change how you view the scene?",
+        "Conflict often arises from opposing forces. What values might the tree and woodcutter represent?"
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "1"
+    },
+    {
+      "question": "Read the following excerpt from an unseen passage and answer the questions that follow:\n\n'In the heart of the dense forest, there stood an ancient banyan tree, its aerial roots forming a labyrinth of pillars. The villagers believed it was the dwelling of spirits, and no one dared to approach it after sunset. Yet, young Ravi, driven by curiosity, often sat at its periphery, sketching the intricate patterns of its bark and listening to the whispers of the wind through its leaves. One evening, as dusk settled, he noticed a faint, silvery glow emanating from a hollow in the trunk.'\n\n(i) Why did the villagers avoid the banyan tree after sunset? (1 mark)\n(ii) What does Ravi's act of sketching the tree's bark reveal about his character? (2 marks)\n(iii) How does the author create a sense of mystery in the passage? Provide two examples with textual evidence. (3 marks)",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "reading_comprehension",
+      "topic": "Unseen Passage - Critical Reading & Inference",
+      "answer": "(i) The villagers avoided the banyan tree after sunset because they believed it was the dwelling of spirits, which reflects local superstitions and cultural fear of the unknown.\n(ii) Ravi's sketching reveals his observant, curious, and artistic nature. Unlike the villagers, he is not governed by fear but by a desire to understand and appreciate the tree's beauty and intricacies. It shows he is a keen observer who finds wonder in natural details.\n(iii) The author creates mystery through:\n   a) Supernatural belief: 'The villagers believed it was the dwelling of spirits' \u2013 introduces an element of folklore and unseen forces.\n   b) Unusual phenomenon: 'a faint, silvery glow emanating from a hollow' \u2013 uses visual imagery of an unexplained light, suggesting something magical or unknown within the tree, prompting curiosity about its source.",
+      "marking_scheme": [
+        {
+          "point": "Correctly identifies villagers' belief in spirits as the reason for avoidance",
+          "marks": 1
+        },
+        {
+          "point": "Identifies Ravi as observant/curious/artistic with explanation",
+          "marks": 1
+        },
+        {
+          "point": "Explains how this contrasts with villagers' fear",
+          "marks": 1
+        },
+        {
+          "point": "First example of mystery (supernatural belief) with textual evidence",
+          "marks": 1.5
+        },
+        {
+          "point": "Second example of mystery (unusual phenomenon) with textual evidence",
+          "marks": 1.5
+        }
+      ],
+      "bloom_level": "Analyzing",
+      "hints": [
+        "Look for clues about villagers' beliefs in the first few sentences.",
+        "Consider what actions reveal about personality traits.",
+        "Focus on words that build atmosphere, like 'ancient', 'spirits', 'glow'."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "1"
+    },
+    {
+      "question": "You are the Head Boy/Girl of your school. Your school recently organized a 'Cleanliness Drive' in the neighborhood. Write a report for your school magazine in about 80-100 words. Include details like date, purpose, activities, and outcome.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "writing_task",
+      "topic": "Report writing",
+      "answer": "**Report on Cleanliness Drive**\n\n**By:** [Your Name], Head Boy/Girl\n**Event:** Cleanliness Drive\n**Date:** 15th March 2025\n**Venue:** School and surrounding neighborhood\n\nOur school organized a Cleanliness Drive on 15th March 2025 to promote hygiene and community responsibility. Over 50 students and teachers participated. We cleaned the school playground, planted saplings, and swept the nearby park and streets. We also distributed pamphlets on waste segregation. The drive was a success\u2014it made our surroundings cleaner and raised awareness about keeping our environment green and tidy. The local residents appreciated our efforts. Such initiatives teach us the value of teamwork and civic duty.",
+      "marking_scheme": [
+        {
+          "point": "Correct format (heading, byline, date, venue)",
+          "marks": 1
+        },
+        {
+          "point": "Clear description of purpose and activities (cleaning, planting, awareness)",
+          "marks": 1
+        },
+        {
+          "point": "Proper conclusion with outcome/impact (cleaner area, community appreciation, learning value)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Applying",
+      "hints": [
+        "Follow the report structure: Heading \u2192 Byline \u2192 Date \u2192 Details \u2192 Conclusion.",
+        "Mention specific activities like sweeping, planting, or awareness campaigns.",
+        "End with what was achieved or learned."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "2"
+    },
+    {
+      "question": "Write a diary entry expressing your feelings after participating in your school's 'Clean India, Green India' campaign. (Word limit: 100-120 words)",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "writing_task",
+      "topic": "Diary entry",
+      "answer": "Dear Diary,\n\nToday was an inspiring day! Our school organized a 'Clean India, Green India' campaign. We cleaned the school playground and planted ten saplings in the garden. I felt proud wearing the green badge and working with my friends. Sweeping the dried leaves and collecting plastic waste made me realize how much litter we create. When we planted the neem and peepal saplings, I imagined them growing into big, shady trees. Our teacher explained how trees give us oxygen and keep the environment cool. I promised myself to keep my surroundings clean and plant more trees on my birthday. It was tiring but satisfying work. I hope our small effort inspires others too.\n\nGood night!",
+      "marking_scheme": [
+        {
+          "point": "Correct diary format (date, salutation, first-person narrative)",
+          "marks": 1
+        },
+        {
+          "point": "Clear expression of feelings/experiences related to the campaign",
+          "marks": 1
+        },
+        {
+          "point": "Relevant details, coherence, and appropriate word limit",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Remember to use first-person (I, me, my).",
+        "Include specific activities from the campaign.",
+        "Express personal thoughts and future resolutions."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "2"
+    },
+    {
+      "question": "You are the School Captain of Sunshine Public School. Your school recently organized a 'Cleanliness Drive' in the neighborhood. Write a report for your school magazine in about 120-150 words. Include details like the date, participants, activities undertaken, and the outcome.",
+      "marks": 4,
+      "difficulty": "medium",
+      "question_type": "writing_task",
+      "topic": "Report Writing",
+      "answer": "**Report: Cleanliness Drive by Sunshine Public School**\n\n**By:** [Your Name], School Captain\n\nOur school organized a neighborhood Cleanliness Drive on 15th March 2024, as part of the 'Swachh Bharat Abhiyan'. The event saw enthusiastic participation from 60 students of classes 6-8, along with 10 teachers and staff members.\n\nThe drive began at 9 AM. Students were divided into groups, each assigned specific tasks. One group cleaned the park area, collecting plastic waste and dry leaves. Another group focused on the market lane, sweeping and segregating biodegradable and non-biodegradable waste. A third group created awareness by distributing pamphlets and speaking to residents about waste management.\n\nBy 12 PM, we had collected over 30 bags of waste, which were properly disposed of. The local residents appreciated our efforts and promised to maintain cleanliness. The drive not only cleaned the area but also instilled a sense of civic responsibility among us. It was a small step towards a cleaner, greener environment.",
+      "marking_scheme": [
+        {
+          "point": "Correct format (Title, By-line, Date, Place, Name/Designation)",
+          "marks": 1
+        },
+        {
+          "point": "Clear inclusion of required details: date, participants, activities",
+          "marks": 1
+        },
+        {
+          "point": "Logical sequence, coherence, and appropriate length (120-150 words)",
+          "marks": 1
+        },
+        {
+          "point": "Correct language, grammar, spelling, and conclusion/outcome",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Applying",
+      "hints": [
+        "Remember the format: Title, By-line, Date, Place, and your name/designation.",
+        "Use past tense and passive voice where appropriate (e.g., 'was organized', 'were divided').",
+        "Mention specific activities and the impact/response from the community."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "2"
+    },
+    {
+      "question": "You are the Head Boy/Girl of your school. The school recently organized a 'Cleanliness Drive' in the neighborhood. Write a report for your school magazine in about 120-150 words, describing the event, participation, and its impact.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "writing_task",
+      "topic": "Report Writing",
+      "answer": "**Report: Cleanliness Drive by ABC School**\n\n**By:** [Student's Name], Head Boy/Girl\n\nOn 15th March 2024, ABC School organized a 'Cleanliness Drive' in the nearby Rajiv Gandhi Colony as part of our Social Service Week. The drive aimed to promote hygiene and community responsibility.\n\nOver 80 students from classes 6 to 10 participated enthusiastically, along with 10 teachers and staff. Equipped with gloves, masks, and garbage bags, we cleaned public parks, streets, and vacant plots. We collected over 50 bags of plastic waste, paper, and other litter. Additionally, we conducted door-to-door awareness, distributing pamphlets on waste segregation and the importance of cleanliness.\n\nThe local residents appreciated our efforts and some even joined us. The colony looked visibly cleaner post-drive. This initiative not only beautified the area but also instilled a sense of environmental stewardship in us students. We plan to make this a monthly activity to sustain the impact.",
+      "marking_scheme": [
+        {
+          "point": "Correct format (Title, by-line, date, place, purpose) and appropriate length (120-150 words)",
+          "marks": 1
+        },
+        {
+          "point": "Clear description of event details (activities, participation, process)",
+          "marks": 1
+        },
+        {
+          "point": "Impact/outcome and conclusion (community response, learning, future plans)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Applying",
+      "hints": [
+        "Follow the structure: Heading, reporter's name, date, place, then body paragraphs.",
+        "Include: What was done? Who participated? What was the outcome?",
+        "Use past tense and formal yet simple language suitable for a school magazine."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "2"
+    },
+    {
+      "question": "You are the Secretary of the Eco Club of your school, 'Green Valley Public School'. Recently, your school organized a 'Plastic-Free Campus Drive' where students collected plastic waste, conducted awareness rallies, and set up recycling bins. Write a detailed report on this event for your school magazine in about 150-200 words, covering the objectives, activities, participation, and outcomes. Ensure your report follows the standard format with a headline, byline, place, date, and structured paragraphs.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "writing_task",
+      "topic": "Report Writing",
+      "answer": "**Headline:** Green Valley Public School Successfully Conducts Plastic-Free Campus Drive\n**Byline:** By Rohan Sharma, Secretary, Eco Club\n**Place:** New Delhi\n**Date:** 15th March 2025\n\nGreen Valley Public School organized a week-long 'Plastic-Free Campus Drive' from 10th to 14th March 2025, aiming to reduce plastic waste and promote environmental consciousness among students. The drive was inaugurated by our Principal, Mrs. Meena Kapoor, who emphasized the importance of sustainable practices.\n\nThe activities included daily plastic waste collection drives where students segregated plastic bottles, wrappers, and bags. Awareness rallies were conducted with posters and slogans like 'Say No to Plastic'. Interactive sessions by environmental experts educated students on recycling and alternatives to single-use plastics. New recycling bins were installed across the campus.\n\nParticipation was remarkable, with over 300 students and 25 teachers actively involved. The drive collected approximately 50 kg of plastic waste, which was sent to a local recycling unit. The outcomes included heightened awareness, cleaner school premises, and a commitment to continue the practice. The event concluded with a pledge ceremony where students vowed to minimize plastic usage.",
+      "marking_scheme": [
+        {
+          "point": "Correct format (headline, byline, place, date, structured paragraphs)",
+          "marks": 1
+        },
+        {
+          "point": "Clear mention of objectives and inauguration",
+          "marks": 1
+        },
+        {
+          "point": "Description of activities (collection, rallies, sessions, bins)",
+          "marks": 2
+        },
+        {
+          "point": "Details of participation and quantitative outcomes (waste collected, participants)",
+          "marks": 1
+        },
+        {
+          "point": "Language, coherence, and word limit (150-200 words)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Evaluation",
+      "hints": [
+        "Follow the report format: headline, byline, place, date, then paragraphs.",
+        "Include specific details like dates, names, and quantities to make it realistic.",
+        "Structure your report: introduction \u2192 activities \u2192 participation \u2192 outcomes \u2192 conclusion."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "2"
+    },
+    {
+      "question": "You are the Secretary of the Eco-Club in your school. Recently, your school organized a 'Cleanliness Drive' in the nearby park. Write a detailed report for your school magazine in about 150-200 words, covering the event's objectives, activities, participation, and outcomes. Also, suggest two follow-up measures to sustain the impact.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "writing_task",
+      "topic": "Report Writing",
+      "answer": "**Report on 'Cleanliness Drive' at Nehru Park**\n\n**By:** [Student's Name], Secretary, Eco-Club\n**Date:** 15th March 2025\n\nOn 12th March 2025, the Eco-Club of ABC Public School organized a 'Cleanliness Drive' at Nehru Park, adjacent to our school. The primary objectives were to promote environmental awareness, instill civic responsibility, and contribute to a cleaner community.\n\nThe event commenced at 8:00 AM with a briefing by our teacher-in-charge, Ms. Sharma. Over 60 students from classes 6 to 9 participated enthusiastically, divided into teams for waste segregation, sweeping, and planting saplings. Activities included collecting plastic waste, cleaning benches, and creating posters on 'Say No to Plastic.'\n\nThe drive concluded by 11:00 AM, resulting in the collection of 15 bags of recyclable waste and 5 bags of non-recyclable waste. The park's caretaker appreciated our efforts, and local residents joined in during the final hour.\n\n**Follow-up Measures:**\n1. **Monthly Park Visits:** Eco-Club will conduct monthly cleanliness checks and awareness sessions.\n2. **Waste Segregation Bins:** Propose to municipal authorities to install labeled bins in the park for effective waste management.\n\nThis initiative not only beautified the park but also reinforced the importance of community service among students.",
+      "marking_scheme": [
+        {
+          "point": "Correct format (title, byline, date, organized structure)",
+          "marks": 1
+        },
+        {
+          "point": "Clear mention of objectives and event details (date, time, venue)",
+          "marks": 1
+        },
+        {
+          "point": "Description of activities and participation",
+          "marks": 1
+        },
+        {
+          "point": "Coverage of outcomes/impact",
+          "marks": 1
+        },
+        {
+          "point": "Two relevant and practical follow-up measures",
+          "marks": 1
+        },
+        {
+          "point": "Language: coherence, fluency, appropriate vocabulary, and word limit adherence",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Evaluation",
+      "hints": [
+        "Remember the standard format of a report: heading, byline, date, and organized paragraphs.",
+        "Include specific details like number of participants, types of activities, and quantifiable outcomes.",
+        "Ensure your follow-up measures are actionable and related to sustainability."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "2"
+    },
+    {
+      "question": "Identify the type of sentence in the following examples and write one more example of each type:\n(i) Please close the door.\n(ii) What a beautiful painting!\n(iii) The sun rises in the east.\n(iv) Do you like chocolate ice cream?",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Sentence types",
+      "answer": "(i) Imperative sentence \u2013 It gives a command or makes a request. Example: Bring me a glass of water.\n(ii) Exclamatory sentence \u2013 It expresses strong emotion or surprise. Example: How clever she is!\n(iii) Declarative sentence \u2013 It makes a statement or gives information. Example: Delhi is the capital of India.\n(iv) Interrogative sentence \u2013 It asks a question. Example: Where do you live?",
+      "marking_scheme": [
+        {
+          "point": "Correct identification of all four sentence types",
+          "marks": 1
+        },
+        {
+          "point": "One correct example for each sentence type",
+          "marks": 1
+        },
+        {
+          "point": "Clarity and grammatical correctness in examples",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Remember the four types: declarative, interrogative, imperative, exclamatory.",
+        "Look for punctuation clues \u2013 question mark (?) for questions, exclamation mark (!) for exclamations."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "3"
+    },
+    {
+      "question": "Identify the type of sentence in the following examples and write one sentence of your own for each type:\n\na) The sun rises in the east.\nb) Please close the door.\nc) How beautiful the rainbow is!\nd) Do you like to read books?",
+      "marks": 4,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Sentence types",
+      "answer": "a) Declarative sentence (makes a statement). Example: Delhi is the capital of India.\nb) Imperative sentence (gives a command or request). Example: Bring me a glass of water.\nc) Exclamatory sentence (expresses strong emotion). Example: What a wonderful day it is!\nd) Interrogative sentence (asks a question). Example: Where do you live?",
+      "marking_scheme": [
+        {
+          "point": "Correct identification of all four sentence types",
+          "marks": 2
+        },
+        {
+          "point": "One correct example for declarative sentence",
+          "marks": 0.5
+        },
+        {
+          "point": "One correct example for imperative sentence",
+          "marks": 0.5
+        },
+        {
+          "point": "One correct example for exclamatory sentence",
+          "marks": 0.5
+        },
+        {
+          "point": "One correct example for interrogative sentence",
+          "marks": 0.5
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Remember the four main types of sentences: declarative, imperative, exclamatory, and interrogative.",
+        "Look for punctuation clues: statements end with a full stop, questions with a question mark, and exclamations with an exclamation mark."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "3"
+    },
+    {
+      "question": "Read the following sentence: 'Although it was raining heavily, the children decided to play outside because they had new umbrellas.' (a) Identify the main clause and the subordinate clauses. (b) Name the conjunctions used and state their types. (c) Rewrite the sentence using a different conjunction without changing the meaning.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Clauses and Conjunctions",
+      "answer": "(a) Main clause: 'the children decided to play outside'. Subordinate clauses: 'Although it was raining heavily' (adverb clause of concession), 'because they had new umbrellas' (adverb clause of reason). (b) Conjunctions: 'Although' (subordinating conjunction showing contrast), 'because' (subordinating conjunction showing reason). (c) Rewritten sentence: 'Even though it was raining heavily, the children decided to play outside since they had new umbrellas.'",
+      "marking_scheme": [
+        {
+          "point": "Correct identification of main and subordinate clauses",
+          "marks": 1
+        },
+        {
+          "point": "Correct naming and typing of conjunctions",
+          "marks": 1
+        },
+        {
+          "point": "Accurate rewritten sentence with appropriate conjunction",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Applying",
+      "hints": [
+        "Look for the part that can stand alone as a complete sentence for the main clause.",
+        "Subordinating conjunctions introduce dependent clauses.",
+        "Try replacing 'although' with 'even though' or 'though', and 'because' with 'since' or 'as'."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "3"
+    },
+    {
+      "question": "Read the following sentence: 'Although it was raining heavily, the children decided to play outside because they had new umbrellas.' (a) Identify the main clause and the subordinate clauses. (b) Name the conjunctions used and state their type (coordinating/subordinating). (c) Rewrite the sentence using a different conjunction without changing the meaning.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Clauses and Conjunctions",
+      "answer": "(a) Main clause: 'the children decided to play outside'. Subordinate clauses: 'Although it was raining heavily' (adverb clause of concession), 'because they had new umbrellas' (adverb clause of reason). (b) Conjunctions: 'Although' (subordinating conjunction), 'because' (subordinating conjunction). (c) Rewritten sentence: 'Even though it was raining heavily, the children decided to play outside since they had new umbrellas.'",
+      "marking_scheme": [
+        {
+          "point": "Correct identification of main and subordinate clauses",
+          "marks": 1
+        },
+        {
+          "point": "Correct naming and classification of conjunctions",
+          "marks": 1
+        },
+        {
+          "point": "Accurate rewritten sentence with appropriate alternative conjunction",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Applying",
+      "hints": [
+        "Look for the part that can stand alone as a complete sentence for the main clause.",
+        "Subordinating conjunctions introduce dependent clauses.",
+        "Try replacing 'although' with 'even though' or 'because' with 'since'."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeydew & It So Happened",
+      "topic_id": "3"
+    }
+  ]
+}

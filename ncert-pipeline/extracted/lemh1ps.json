@@ -1,0 +1,81 @@
+{
+  "filename": "lemh1ps.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "Relations and Functions 1",
+      "content": "1. Relations and Functions 1\n1.1 Introduction 1\n1.2 Types of Relations 2\n1.3 Types of Functions 7\n1.4 Composition of Functions and Invertible Function 12\n",
+      "wordCount": 26,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 2,
+      "title": "Inverse Trigonometric Functions 18",
+      "content": "2. Inverse Trigonometric Functions 18\n2.1 Introduction 18\n2.2 Basic Concepts 18\n2.3 Properties of Inverse Trigonometric Functions 27\n",
+      "wordCount": 19,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 3,
+      "title": "Matrices 34",
+      "content": "3. Matrices 34\n3.1 Introduction 34\n3.2 Matrix 34\n3.3 Types of Matrices 39\n3.4 Operations on Matrices 43\n3.5 Transpose of a Matrix 61\n3.6 Symmetric and Skew Symmetric Matrices 63\n3.7 Invertible Matrices 68\n",
+      "wordCount": 36,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 4,
+      "title": "Determinants 76",
+      "content": "4. Determinants 76\n4.1 Introduction 76\n4.2 Determinant 76\n4.3 Area of a Triangle 82\n4.4 Minors and Cofactors 84\n4.5 Adjoint and Inverse of a Matrix 87\n4.6 Applications of De terminan ts and Matrices 93\nReprint 2025-26\n\n",
+      "wordCount": 39,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 5,
+      "title": "Cont inuity and Differentiability 104",
+      "content": "5. Cont inuity and Differentiability 104\n5.1 Introduction 104\n5.2 Continuity 104\n5.3 Differentiability 118\n5.4 Exponential and Logarithmic Functions 125\n5.5 Logarithmic Differentiation 130\n5.6 Derivatives of Functions in Parametric Forms 134\n5.7 Second Order Derivative 137\n",
+      "wordCount": 38,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 6,
+      "title": "Application of Derivatives 147",
+      "content": "6. Application of Derivatives 147\n6.1 Introduction 147\n6.2 Rate of Change of Quantities 147\n6.3 Increasing and Decreasing Functions 152\n6.4 Maxima and Minima 159\nAppendix 1: Proofs in Mathematics 187\nA.1.1  Introduction 187\nA.1.2  What is a Proof? 187\nAppendix 2:  Mathematical Modelling 196\nA.2.1  Introduction 196\nA.2.2  Why Mathematical Modelling? 196\nA.2.3  Principles of Mathematical Modelling 197\nAnswers 208\nSupplementary Material 223\nReprint 2025-26\n\n",
+      "wordCount": 67,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 12,
+    "totalWords": 225
+  }
+}

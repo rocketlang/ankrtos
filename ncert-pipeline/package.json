@@ -1,0 +1,19 @@
+{
+  "name": "ncert-pipeline",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.13.5",
+    "cheerio": "^1.2.0",
+    "marked": "^17.0.1",
+    "pdfjs-dist": "^3.11.174",
+    "pg": "^8.18.0"
+  }
+}

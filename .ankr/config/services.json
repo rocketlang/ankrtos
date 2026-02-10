@@ -157,7 +157,7 @@
     "bfc-api": {
       "portPath": "backend.bfc",
       "path": "/root/ankr-bfc/apps/bfc-api",
-      "command": "node dist/main.js",
+      "command": "npm run dev",
       "description": "BFC Banking Finance API",
       "healthEndpoint": "/health",
       "enabled": true,

@@ -1,0 +1,219 @@
+{
+  "filename": "keph207.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "Mechanical waves  can exist in material media and ar",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 2,
+      "title": "In the same way, the",
+      "content": "2. In the same way, the\npositions of antinodes (where the amplitude is\nthe largest) are given by the largest value of sin\nkx :\nsin kx = 1\nwhich implies\nkx = (n + ½) π ; n = 0, 1, 2, 3, ...\nWith k = 2π/λ, we get\n x = (n + ½)2λ ; n = 0, 1, 2, 3, ...                (14.39)\nAgain the distance between any two consecutive\nantinodes is 2λ. Eq. (14.38) can be applied to\nthe case of a stretched string of\nlength L fixed at both ends. Taking\none end to be at x = 0, the boundary\nconditions are that x = 0 and x = L\nare positions of nodes. The x = 0\ncondition is already satisfied. The\nx = L node condition requires that\nthe length L is related to λ by\nL = n 2λ;     n = 1, 2, 3, ...        (14.40)\nThus, the possible wavelengths of\nstationary waves are constrained\nby the relation\nλ  = 2L\nn;    n =  1, 2, 3, …   (14.41)\nwith corresponding frequencies\nv =  \n2Lnv, for  n = 1, 2, 3,   (14.42)\nWe have thus obtained the natural\nfrequencies - the normal modes of\noscillation of the system. The lowest\npossible natural frequency of a\nsystem is called its fundamental\nmode  or the first harmonic . For the\nstretched string fixed at either end\nit is given by v  = v\nL2, corresponding\nto n = 1 of Eq. (14.42). Here v is thespeed of wave determined by the properties of\nthe medium. The n = 2 frequency is called the\nsecond harmonic; n = 3 is the third harmonic\nand so on. W e can label the various har monics by\nthe symbol νn ( n = 1, 2, ...).\nFig. 14.13 shows the first six harmonics of a\nstretched string fixed at either end. A string\nneed not vibrate in one of these modes only.\nGenerally, the vibration of a string will be a\nsuperposition of different modes; some modes\nmay be more strongly excited and some less.\nMusical instruments like sitar or violin are\nbased on this principle. Where the string is\nplucked or bowed, determines which modes are\nmore prominent than others.\nLet us next consider normal modes of\noscillation of an air column with one end closed\nFig. 14.13   The first six harmonics of vibrations of a stretched\nstring fixed at both ends.\nReprint 2025-26\n\nPHYSICS 292\nand the other open. A glass tube partially filled\nwith water illustrates this system. The end in\ncontact with water is a node, while the open end\nis an antinode. At the node the pressure\nchanges are the largest, while the displacement\nis minimum (zero). At the open end - the\nantinode, it is just the other way - least pressure\nchange and maximum amplitude of\ndisplacement. Taking the end in contact with\nwater to be x  = 0, the node condition (Eq. 14.38)\nis already satisfied. If the other end x = L is an\nantinode, Eq. (14.39) gives\nL =   n+\n\n1\n2 2λ, for n = 0, 1, 2, 3, …\nThe possible wavelengths are then restricted by\nthe relation :\nλ  = \n( )2\n1 2L\nn  +/,  for n = 0, 1, 2, 3,... (14.43)\nThe normal modes – the natural frequencies –\nof the system are\nν  =  n+\n\n1\n22v\nL; n = 0, 1, 2, 3, ... (14.44)\nThe fundamental frequency corresponds to n = 0,\nand is given by v\nL4 . The higher frequencies\nare odd harmonics , i.e., odd multiples  of the\nfundamental frequency : 3v\nL4, 5v\nL4, etc.\nFig. 14.14 shows the first six odd harmonics of\nair column with one end closed and the other\nopen. For a pipe open at both ends, each end is\nan antinode. It is then easily seen that an open\nair column at both ends generates all harmonics\n(See Fig. 14.15).\nThe systems above, strings and air columns,\ncan also undergo forced oscillations (Chapter\n13). If the external frequency is close to one of\nthe natural frequencies, the system shows\nresonance .\nNormal modes of a circular membrane rigidly\nclamped to the circumference as in a tabla are\ndetermined by the boundary condition that no\npoint on the circumference of the membrane\nvibrates. Estimation of the frequencies of normalmodes of this system is more complex. This\nproblem involves wave propagation in two\ndimensions. However , the underlying physics is\nthe same.\nu uu uuExample 14.5   A pipe, 30.0 cm long, is open\nat both ends. Which harmonic mode of the\npipe resonates a 1.1 kHz source?  Will\nresonance with the same source be\nobserved if one end of the pipe is closed ?\nTake the speed of sound in air as\n330 m s–1.\nAnswer   The first harmonic frequency is given\nby\n                ν1 = Lv v\n2  \n1=λ     (open pipe)\nwhere L is the length of the pipe. The frequency\nof its nth harmonic is:\nνn = Lnv\n2, for n = 1, 2, 3, ... (open pipe)\nFirst few modes of an open pipe are shown in\nFig. 14.15.\nFor L = 30.0 cm, v = 330 m s–1,\nνn = 1 330 (m s )\n0.6 (m)−n = 550 n s–1\nClearly, a source of frequency 1.1 kHz will\nresonate at v2, i.e. the second harmonic .\nFundamental\nor third fifth\nfirst harmonic harmonic harmonic\nReprint 2025-26\n\nWAVES 293\nwhile tuning their instruments with each other .\nThey go on tuning until their sensitive ears do\nnot detect any beats.\nTo see this mathematically, let us consider\ntwo harmonic sound waves of nearly equal\nangular frequency ω1 and ω2 and fix the location\nto be x = 0 for convenience. Eq. (14.2) with a\nsuitable choice of phase ( φ = π/2 for each) and,\nassuming equal amplitudes, gives\n s1 = a  cos ω1t   and  s2 = a  cos ω2t         (14.45)\nHere we have replaced the symbol y by s,\nsince we are referring to longitudinal not\ntransverse displacement. Let ω1 be the (slightly)\ngreater of the two frequencies. The resultant\ndisplacement is, by the principle of\nsuperposition,\ns =  s1 + s2 = a (cos ω1 t + cos ω2 t)\nUsing the familiar trignometric identity for\ncos A + cosB, we get\n()()1 2 1 2 2 cos  cos2 2t taω ω ω ω  - += (14.46)\nwhich may be written as :\ns = [2 a  cos ωb t] cos ωat (14.47)\nIf |ω1 – ω2| << ω1, ω2, ωa >> ωb, th\nwhere\nωb = ( )1 2\n2ω ω − and  ωa = ( ) 1 2\n2ω ω +\nNow if we assume | ω1 – ω2| << ω1, which means\nωa >> ωb, we can interpret Eq. (14.47) as follows.\nThe resultant wave is oscillating with the average\nangular frequency ωa; however its amplitude is\nnot constant in time, unlike a pure harmonic\nwave. The amplitude is the largest when the\nterm cos ωb t takes its limit +1 or –1. In other\nwords, the intensity of the resultant wave waxes\nand wanes with a frequency which is 2 ωb = ω1 –Fig. 14.14 Normal modes of an air column open at\none end and closed at the other end. Only\nthe odd harmonics are seen to be possible.seventh ninth eleventh\nharmonic harmonic harmonic\nNow if one end of the pipe is closed (Fig. 14.15) ,\nit follows from Eq. (14.15) that the fundamental\nfrequency is\nν1 =  Lv v\n4  \n1=λ (pipe closed at one end)\nand only the odd numbered harmonics are\npresent :\nν3 = 3\n4v\nL,  ν5 = 5\n4v\nL, and so on.\nFor L = 30 cm and v = 330 m s–1, the\nfundamental frequency of the pipe closed at one\nend is 275 Hz and the source frequency\ncorresponds to its fourth harmonic. Since this\nharmonic is not a possible mode, no resonance\nwill be observed with the source, the moment\none end is closed. ⊳\n14.7   BEATS\n‘Beats’ is an interesting phenomenon arising\nfrom interference of waves. When two harmonic\nsound waves of close (but not equal) frequencies\nare heard at the same time, we hear a sound of\nsimilar frequency (the average of two close\nfrequencies), but we hear something else also.\nWe hear audibly distinct waxing and waning of\nthe intensity of the sound, with a frequency\nequal to the difference in the two close\nfrequencies. Artists use this phenomenon oftenFig. 14.15 Standing waves in an open pipe, first four\nharmonics are depicted.\nReprint 2025-26\n\nPHYSICS 294\nω2. Since  ω = 2πν, the beat frequency νbeat, is\ngiven by\nνbeat = ν1 – ν2(14.48)\nFig. 14.16 illustrates the phenomenon of\nbeats for two harmonic waves of frequencies 11\nHz and 9 Hz. The amplitude of the resultant wave\nshows beats at a frequency of 2 Hz.\nu uu uu Example 14.6  Two sitar strings A and B\nplaying the note ‘ Dha’ are slightly out of\ntune and produce beats of frequency 5 Hz.\nThe tension of the string B is slightly\nincreased and the beat frequency is found\nto decrease to 3 Hz. What is the original\nfrequency of B if the frequency of A is\n427 Hz ?\nAnswer  Increase in the tension of a string\nincreases its frequency. If the original frequency\nof B ( νB) were greater than that of A ( νA ), further\nincrease in νB should have resulted in an\nincrease in the beat frequency. But the beat\nfrequency is found to decrease. This shows that\nνB < νA. Since νA – νB = 5 Hz, and νA = 427 Hz, we\nget νB = 422 Hz. ⊳Musical Pillars\nTemples often have some pillars portraying\nhuman figures playing musical instru-\nments, but seldom do these pillars\nthemselves produce  music. At the\nNellaiappar temple in Tamil Nadu, gentle\ntaps on a cluster of pillars carved out of a\nsingle piece of rock produce the basic notes\nof Indian classical music, viz. Sa, Re, Ga,\nMa, Pa, Dha, Ni, Sa. Vibrations of these\npillars depend on elasticity of the stone used,\nits density and shape.\nMusical pillars are categorised into three\ntypes: The first is called the Shruti Pillar ,\nas it can produce the basic notes —  the\n“swaras”. The second type is the Gana\nThoongal , which generates the basic tunes\nthat make up the “ragas”. The third variety\nis the Laya Thoongal  pillars that produce\n“taal” (beats) when tapped. The pillars at the\nNellaiappar temple are a combination of the\nShruti and Laya types.\nArchaeologists date the Nelliappar\ntemple to the 7th century and claim it was\nbuilt by successive rulers of the Pandyan\ndynasty.\nThe musical pillars of Nelliappar and\nseveral other temples in southern India like\nthose at Hampi (picture), Kanyakumari, and\nThiruvananthapuram are unique to the\ncountry and have no parallel in any other\npart of the world.\nFig. 14.16 Superposition of two harmonic waves, one\nof frequency 11 Hz (a), and the other of\nfrequency 9Hz (b), giving rise to beats of\nfrequency 2 Hz, as shown in (c).\nReprint 2025-26\n\nWAVES 295\nSUMMARY\n1. Mechanical waves  can exist in material media and are governed by Newton’s Laws.\n2. Transverse waves  are waves in which the particles of the medium oscillate perpendicular\nto the direction of wave propagation.\n",
+      "wordCount": 1903,
+      "examples": [
+        {
+          "chapterNumber": 2,
+          "exampleNumber": 14,
+          "title": "5   A pipe, 30.0 cm long, is open",
+          "question": "Example 14.5   A pipe, 30.0 cm long, is open\nat both ends. Which harmonic mode of the\npipe resonates a 1.1 kHz source?  Will\nresonance with the same source be\nobserved if one end of the pipe is closed ?\nTake the speed of sound in air as\n330 m s–1.\nAnswer   The first harmonic frequency is given\nby\n                ν1 = Lv v\n2  \n1=λ     (open pipe)\nwhere L is the length of the pipe. The frequency\nof its nth harmonic is:\nνn = Lnv\n2, for n = 1, 2, 3, ... (open pipe)\nFirst few modes of an open pipe ar",
+          "solution": ""
+        },
+        {
+          "chapterNumber": 2,
+          "exampleNumber": 14,
+          "title": "6  Two sitar strings A and B",
+          "question": "Example 14.6  Two sitar strings A and B\nplaying the note ‘ Dha’ are slightly out of\ntune and produce beats of frequency 5 Hz.\nThe tension of the string B is slightly\nincreased and the beat frequency is found\nto decrease to 3 Hz. What is the original\nfrequency of B if the frequency of A is\n427 Hz ?\nAnswer  Increase in the tension of a string\nincreases its frequency. If the original frequency\nof B ( νB) were greater than that of A ( νA ), further\nincrease in νB should have resulted in an\nincrease",
+          "solution": ""
+        }
+      ],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 2,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 3,
+      "title": "Longitudinal waves  are waves in which the particles",
+      "content": "3. Longitudinal waves  are waves in which the particles of the medium oscillate along the\ndirection of wave propagation.\n",
+      "wordCount": 19,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 4,
+      "title": "Progressive wave  is a wave that moves fr om one poi",
+      "content": "4. Progressive wave  is a wave that moves fr om one point of medium to another .\n",
+      "wordCount": 17,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 5,
+      "title": "The displacement  in a sinusoidal wave propagating i",
+      "content": "5. The displacement  in a sinusoidal wave propagating in the positive x direction is given\nby\ny (x, t) = a sin (kx – ωt + φ)\nwher e a is the amplitude  of the wave,  k is the angular wave number , ω is the angular\nfrequency , (kx – ωt + φ) is the phase , and φ is the phase constant or phase angle .\n",
+      "wordCount": 68,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 6,
+      "title": "Wavelength λ of a pr ogressive wave is the distance",
+      "content": "6. Wavelength λ of a pr ogressive wave is the distance between two consecutive points of\nthe same phase at a given time. In a stationary wave, it is twice the  distance between\ntwo  consecutive nodes or antinodes.\n",
+      "wordCount": 38,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 7,
+      "title": "Period T of oscillation of a wave is defined as the",
+      "content": "7. Period T of oscillation of a wave is defined as the time any element of the medium\ntakes to move through one complete oscillation. It is related to the angular frequenc yω\nthrough the relation\nT=2π\nω\n",
+      "wordCount": 38,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 8,
+      "title": "Frequency v of a wave is defined as 1/ T and is rela",
+      "content": "8. Frequency v of a wave is defined as 1/ T and is related to  angular frequency by\n2ων=π\n",
+      "wordCount": 19,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 9,
+      "title": "Speed  of a progressive wave is given by",
+      "content": "9. Speed  of a progressive wave is given by  \nk Tvω λλν = = =\n",
+      "wordCount": 15,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 10,
+      "title": "The speed of a transverse wave  on a stretched strin",
+      "content": "10.  The speed of a transverse wave  on a stretched string is set by the properties of the\nstring. The speed on a string with tension T and linear mass density µ is\nv=T\nµ\n",
+      "wordCount": 35,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 11,
+      "title": "Sound waves  are longitudinal mechanical waves that",
+      "content": "11. Sound waves  are longitudinal mechanical waves that can travel through solids, liquids,\nor gases. The speed v of sound wave in a fluid having bulk modulus B  and density ρ is\nvB=\nρ\nThe speed of longitudinal waves in a metallic bar is\nvY=\nρ\nFor  gases,  since B = γP, the speed of sound is\nvP=γ\nρ\nReprint 2025-26\n\nPHYSICS 296\n",
+      "wordCount": 63,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "When two or more waves traverse simultaneously in th",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 13,
+      "title": "). If the external frequency is close to one of",
+      "content": "Chapter\n13). If the external frequency is close to one of\nthe natural frequencies, the system shows\nresonance .\nNormal modes of a circular membrane rigidly\nclamped to the circumference as in a tabla are\ndetermined by the boundary condition that no\npoint on the circumference of the membrane\nvibrates. Estimation of the frequencies of normalmodes of this system is more complex. This\nproblem involves wave propagation in two\ndimensions. However , the underlying physics is\nthe same.\nu uu uuExample 14.5   A pipe, 30.0 cm long, is open\nat both ends. Which harmonic mode of the\npipe resonates a 1.1 kHz source?  Will\nresonance with the same source be\nobserved if one end of the pipe is closed ?\nTake the speed of sound in air as\n330 m s–1.\nAnswer   The first harmonic frequency is given\nby\n                ν1 = Lv v\n2  \n1=λ     (open pipe)\nwhere L is the length of the pipe. The frequency\nof its nth harmonic is:\nνn = Lnv\n2, for n = 1, 2, 3, ... (open pipe)\nFirst few modes of an open pipe are shown in\nFig. 14.15.\nFor L = 30.0 cm, v = 330 m s–1,\nνn = 1 330 (m s )\n0.6 (m)−n = 550 n s–1\nClearly, a source of frequency 1.1 kHz will\nresonate at v2, i.e. the second harmonic .\nFundamental\nor third fifth\nfirst harmonic harmonic harmonic\nReprint 2025-26\n\nWAVES 293\nwhile tuning their instruments with each other .\nThey go on tuning until their sensitive ears do\nnot detect any beats.\nTo see this mathematically, let us consider\ntwo harmonic sound waves of nearly equal\nangular frequency ω1 and ω2 and fix the location\nto be x = 0 for convenience. Eq. (14.2) with a\nsuitable choice of phase ( φ = π/2 for each) and,\nassuming equal amplitudes, gives\n s1 = a  cos ω1t   and  s2 = a  cos ω2t         (14.45)\nHere we have replaced the symbol y by s,\nsince we are referring to longitudinal not\ntransverse displacement. Let ω1 be the (slightly)\ngreater of the two frequencies. The resultant\ndisplacement is, by the principle of\nsuperposition,\ns =  s1 + s2 = a (cos ω1 t + cos ω2 t)\nUsing the familiar trignometric identity for\ncos A + cosB, we get\n()()1 2 1 2 2 cos  cos2 2t taω ω ω ω  - += (14.46)\nwhich may be written as :\ns = [2 a  cos ωb t] cos ωat (14.47)\nIf |ω1 – ω2| << ω1, ω2, ωa >> ωb, th\nwhere\nωb = ( )1 2\n2ω ω − and  ωa = ( ) 1 2\n2ω ω +\nNow if we assume | ω1 – ω2| << ω1, which means\nωa >> ωb, we can interpret Eq. (14.47) as follows.\nThe resultant wave is oscillating with the average\nangular frequency ωa; however its amplitude is\nnot constant in time, unlike a pure harmonic\nwave. The amplitude is the largest when the\nterm cos ωb t takes its limit +1 or –1. In other\nwords, the intensity of the resultant wave waxes\nand wanes with a frequency which is 2 ωb = ω1 –Fig. 14.14 Normal modes of an air column open at\none end and closed at the other end. Only\nthe odd harmonics are seen to be possible.seventh ninth eleventh\nharmonic harmonic harmonic\nNow if one end of the pipe is closed (Fig. 14.15) ,\nit follows from Eq. (14.15) that the fundamental\nfrequency is\nν1 =  Lv v\n4  \n1=λ (pipe closed at one end)\nand only the odd numbered harmonics are\npresent :\nν3 = 3\n4v\nL,  ν5 = 5\n4v\nL, and so on.\nFor L = 30 cm and v = 330 m s–1, the\nfundamental frequency of the pipe closed at one\nend is 275 Hz and the source frequency\ncorresponds to its fourth harmonic. Since this\nharmonic is not a possible mode, no resonance\nwill be observed with the source, the moment\none end is closed. ⊳\n14.7   BEATS\n‘Beats’ is an interesting phenomenon arising\nfrom interference of waves. When two harmonic\nsound waves of close (but not equal) frequencies\nare heard at the same time, we hear a sound of\nsimilar frequency (the average of two close\nfrequencies), but we hear something else also.\nWe hear audibly distinct waxing and waning of\nthe intensity of the sound, with a frequency\nequal to the difference in the two close\nfrequencies. Artists use this phenomenon oftenFig. 14.15 Standing waves in an open pipe, first four\nharmonics are depicted.\nReprint 2025-26\n\nPHYSICS 294\nω2. Since  ω = 2πν, the beat frequency νbeat, is\ngiven by\nνbeat = ν1 – ν2(14.48)\nFig. 14.16 illustrates the phenomenon of\nbeats for two harmonic waves of frequencies 11\nHz and 9 Hz. The amplitude of the resultant wave\nshows beats at a frequency of 2 Hz.\nu uu uu Example 14.6  Two sitar strings A and B\nplaying the note ‘ Dha’ are slightly out of\ntune and produce beats of frequency 5 Hz.\nThe tension of the string B is slightly\nincreased and the beat frequency is found\nto decrease to 3 Hz. What is the original\nfrequency of B if the frequency of A is\n427 Hz ?\nAnswer  Increase in the tension of a string\nincreases its frequency. If the original frequency\nof B ( νB) were greater than that of A ( νA ), further\nincrease in νB should have resulted in an\nincrease in the beat frequency. But the beat\nfrequency is found to decrease. This shows that\nνB < νA. Since νA – νB = 5 Hz, and νA = 427 Hz, we\nget νB = 422 Hz. ⊳Musical Pillars\nTemples often have some pillars portraying\nhuman figures playing musical instru-\nments, but seldom do these pillars\nthemselves produce  music. At the\nNellaiappar temple in Tamil Nadu, gentle\ntaps on a cluster of pillars carved out of a\nsingle piece of rock produce the basic notes\nof Indian classical music, viz. Sa, Re, Ga,\nMa, Pa, Dha, Ni, Sa. Vibrations of these\npillars depend on elasticity of the stone used,\nits density and shape.\nMusical pillars are categorised into three\ntypes: The first is called the Shruti Pillar ,\nas it can produce the basic notes —  the\n“swaras”. The second type is the Gana\nThoongal , which generates the basic tunes\nthat make up the “ragas”. The third variety\nis the Laya Thoongal  pillars that produce\n“taal” (beats) when tapped. The pillars at the\nNellaiappar temple are a combination of the\nShruti and Laya types.\nArchaeologists date the Nelliappar\ntemple to the 7th century and claim it was\nbuilt by successive rulers of the Pandyan\ndynasty.\nThe musical pillars of Nelliappar and\nseveral other temples in southern India like\nthose at Hampi (picture), Kanyakumari, and\nThiruvananthapuram are unique to the\ncountry and have no parallel in any other\npart of the world.\nFig. 14.16 Superposition of two harmonic waves, one\nof frequency 11 Hz (a), and the other of\nfrequency 9Hz (b), giving rise to beats of\nfrequency 2 Hz, as shown in (c).\nReprint 2025-26\n\nWAVES 295\nSUMMARY\n1. Mechanical waves  can exist in material media and are governed by Newton’s Laws.\n2. Transverse waves  are waves in which the particles of the medium oscillate perpendicular\nto the direction of wave propagation.\n3. Longitudinal waves  are waves in which the particles of the medium oscillate along the\ndirection of wave propagation.\n4. Progressive wave  is a wave that moves fr om one point of medium to another .\n5. The displacement  in a sinusoidal wave propagating in the positive x direction is given\nby\ny (x, t) = a sin (kx – ωt + φ)\nwher e a is the amplitude  of the wave,  k is the angular wave number , ω is the angular\nfrequency , (kx – ωt + φ) is the phase , and φ is the phase constant or phase angle .\n6. Wavelength λ of a pr ogressive wave is the distance between two consecutive points of\nthe same phase at a given time. In a stationary wave, it is twice the  distance between\ntwo  consecutive nodes or antinodes.\n7. Period T of oscillation of a wave is defined as the time any element of the medium\ntakes to move through one complete oscillation. It is related to the angular frequenc yω\nthrough the relation\nT=2π\nω\n8. Frequency v of a wave is defined as 1/ T and is related to  angular frequency by\n2ων=π\n9. Speed  of a progressive wave is given by  \nk Tvω λλν = = =\n10.  The speed of a transverse wave  on a stretched string is set by the properties of the\nstring. The speed on a string with tension T and linear mass density µ is\nv=T\nµ\n11. Sound waves  are longitudinal mechanical waves that can travel through solids, liquids,\nor gases. The speed v of sound wave in a fluid having bulk modulus B  and density ρ is\nvB=\nρ\nThe speed of longitudinal waves in a metallic bar is\nvY=\nρ\nFor  gases,  since B = γP, the speed of sound is\nvP=γ\nρ\nReprint 2025-26\n\nPHYSICS 296\n12. When two or more waves traverse simultaneously in the same medium, the\ndisplacement of any element of the medium is the algebraic sum of the displacements\ndue to each wave. This is known as the principle of superposition  of waves\n1(   )n\ni\niy f x vt\n== −∑\n13. Two sinusoidal waves on the same string exhibit interference , adding or cancelling\naccording to the principle of superposition. If the two are travelling in the same\ndirection and have the same amplitude a and frequency but differ in phase by a phase\nconstant φ, the result is a single wave with the same frequency ω :\ny     (x, t)  = 21\n21\n2a kx cos sin φ ω φ\n\n− +\n\n  t \nIf φ = 0 or an integral multiple of 2 π, the waves are exactly in phase and the interference\nis constructive; if φ = π, they are exactly out of phase and the interference is destructive.\n14. A travelling wave, at a rigid boundary or a closed end, is reflected with a phase\nreversal but the reflection at an open boundary takes place without any phase change.\nFor an incident wave\n                           yi (x, t) = a sin (kx – ωt )\nthe reflected wave at a rigid boundary is\n                         yr (x, t) = – a sin (kx + ωt )\nFor reflection at an open boundary\n                       yr (x,t ) = a sin (kx + ωt)\n",
+      "wordCount": 1783,
+      "examples": [
+        {
+          "chapterNumber": 13,
+          "exampleNumber": 14,
+          "title": "5   A pipe, 30.0 cm long, is open",
+          "question": "Example 14.5   A pipe, 30.0 cm long, is open\nat both ends. Which harmonic mode of the\npipe resonates a 1.1 kHz source?  Will\nresonance with the same source be\nobserved if one end of the pipe is closed ?\nTake the speed of sound in air as\n330 m s–1.\nAnswer   The first harmonic frequency is given\nby\n                ν1 = Lv v\n2  \n1=λ     (open pipe)\nwhere L is the length of the pipe. The frequency\nof its nth harmonic is:\nνn = Lnv\n2, for n = 1, 2, 3, ... (open pipe)\nFirst few modes of an open pipe ar",
+          "solution": ""
+        },
+        {
+          "chapterNumber": 13,
+          "exampleNumber": 14,
+          "title": "6  Two sitar strings A and B",
+          "question": "Example 14.6  Two sitar strings A and B\nplaying the note ‘ Dha’ are slightly out of\ntune and produce beats of frequency 5 Hz.\nThe tension of the string B is slightly\nincreased and the beat frequency is found\nto decrease to 3 Hz. What is the original\nfrequency of B if the frequency of A is\n427 Hz ?\nAnswer  Increase in the tension of a string\nincreases its frequency. If the original frequency\nof B ( νB) were greater than that of A ( νA ), further\nincrease in νB should have resulted in an\nincrease",
+          "solution": ""
+        }
+      ],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 2,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 15,
+      "title": "The interference of two identical waves moving in op",
+      "content": "15. The interference of two identical waves moving in opposite directions produces standing\nwaves. For a string with fixed ends, the standing wave is given by\ny (x, t) = [2 a sin kx ] cos ωt\nStanding waves are characterised by fixed locations of zero displacement called nodes\nand fixed locations of maximum displacements called antinodes.  The separation\nbetween two consecutive nodes or antinodes is λ/2.\nA stretched string of length L fixed at both the ends vibrates with frequencies given by\nv  ,2=n v\nL     n = 1, 2, 3, ...\nThe set of frequencies given by the above relation are called the normal modes of\noscillation of the system. The oscillation mode with lowest frequency is called the\nfundamental mode  or the first harmonic.  The second harmonic  is the oscillation mode\nwith n = 2 and so on.\nA pipe of length L with one end closed and other end open (such as air columns)\nvibrates with frequencies given by\nv ( )n ½  2Lv= + ,       n = 0, 1, 2, 3, ...\nThe set of frequencies represented by the above relation are the normal modes of\noscillation of such a system. The lowest frequency given by v/4L is the fundamental\nmode or the first harmonic.\n16. A string of length L fixed at both ends or an air column closed at one end and open\nat the other end or open at both the ends, vibrates with certain frequencies called\ntheir normal modes. Each of these frequencies is a resonant frequency  of the system.\n",
+      "wordCount": 259,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 17,
+      "title": "Beats  arise when two waves having slightly differen",
+      "content": "17. Beats  arise when two waves having slightly different frequencies, ν1 and ν2 and\ncomparable amplitudes, are superposed. The beat frequency is\nνbeat = ν1 ~ ν2\nReprint 2025-26\n\nWAVES 297\nPOINTS TO PONDER\n1. A wave is not motion of matter as a whole in a medium.  A wind is different from the\nsound wave in air .  The for mer involves motion of air fr om one place to the other .  The\nlatter involves compr essions and rar efactions of layers of air .\n2. In a wave, ener gy and not the matter  is transferr ed from one point to the other .\n3. In a mechanical wave,  energy transfer takes place because of the coupling through\nelastic forces between neighbouring oscillating parts of the medium.\n4. Transverse waves can propagate only in medium with shear modulus of elasticity,\nLongitudinal waves need bulk modulus of elasticity and are therefore, possible in all\nmedia, solids, liquids and gases.\n5. In a harmonic progressive wave of a given frequency, all particles have the same\namplitude but different phases at a given instant of time.  In a stationary wave, all\nparticles between two nodes have the same phase at a given instant but have different\namplitudes.\n6. Relative to an observer at rest in a medium the speed of a mechanical wave in that\nmedium ( v) depends only on elastic and other properties (such as mass density) of\nthe medium. It does not depend on the velocity of the source.\nEXERCISES\n14.1 A string of mass 2.50 kg is under a tension of 200 N. The length of the stretched\nstring is 20.0 m. If the transverse jerk is struck at one end of the string, how long\ndoes the disturbance take to reach the other end?\n14.2 A stone dropped from the top of a tower of height 300 m splashes into the water of\na pond near the base of the tower . When is the splash hear d at the top given that\nthe speed of sound in air is 340 m s–1 ? (g = 9.8 m s–2)\n14.3 A steel wire has a length of 12.0 m and a mass of 2.10 kg. What should be the\ntension in the wire so that speed of a transverse wave on the wire equals the speed\nof sound in dry air at 20 °C = 343 m s–1.\n14.4 Use the formula v  P=γ\nρto explain why the speed of sound in air\n(a) is independent of pressure,\n(b) increases with temperature,\n(c) increases with humidity.\nReprint 2025-26\n\nPHYSICS 298\n14.5 You have lear nt that a travelling wave in one dimension is r epresented by a function\ny = f (x, t)  where x and t must appear in the combination x – v t  or x + v t , i.e.\ny = f (x ± v t) . Is the converse true? Examine if the following functions for y can\npossibly represent a travelling wave :\n(a) (x – vt )2\n(b) log [( x + vt)/x0]\n(c) 1/(x + vt)\n14.6 A bat emits ultrasonic sound of fr equency 1000 kHz in air . If the sound meets a\nwater surface, what is the wavelength of (a) the reflected sound, (b) the transmitted\nsound? Speed of sound in air is 340 m s –1 and in water 1486 m s–1.\n14.7 A hospital uses an ultrasonic scanner to locate tumours in a tissue. What is the\nwavelength of sound in the tissue in which the speed of sound is 1.7 km s–1 ? The\noperating frequency of the scanner is 4.2 MHz.\n14.8 A transverse harmonic wave on a string is described by\n                    y(x, t) = 3.0 sin (36  t + 0.018 x + π/4)\nwhere x and y are in cm and t in s. The positive direction of x is from left to right.\n(a) Is this a travelling wave or a stationary wave ?\nIf it is travelling, what are the speed and direction of its propagation ?\n(b) What are its amplitude and frequency ?\n(c) What is the initial phase at the origin ?\n(d) What is the least distance between two successive crests in the wave ?\n14.9 For the wave described in Exercise 14.8, plot the displacement ( y) versus ( t) graphs\nfor x = 0, 2 and 4 cm. What are the shapes of these graphs? In which aspects does\nthe oscillatory motion in travelling wave differ from one point to another: amplitude,\nfrequency or phase ?\n14.10    For the travelling harmonic wave\ny(x, t) = 2.0 cos 2 π (10t – 0.0080 x + 0.35)\nwhere x and y are in cm and t in s. Calculate the phase difference between oscillatory\nmotion of two points separated by a distance of\n(a) 4 m,\n(b) 0.5 m,\n(c) λ/2,\n(d) 3λ/4\n14.11 The transverse displacement of a string (clamped at its both ends) is given by\ny(x, t) = 0.06 sin 2\n3πx\n\n cos (120 πt)\nwhere x and y are in m and t in s. The length of the string is 1.5 m and its mass is\n3.0 ×10–2 kg.\nAnswer the following :\n(a) Does the function represent a travelling wave or a stationary wave?\n(b) Interpret the wave as a superposition of two waves travelling in opposite\ndirections. What is the wavelength, frequency, and speed of each wave ?\nReprint 2025-26\n\nWAVES 299\n(c) Determine the tension in the string.\n14.12 (i) For the wave on a string described in Exercise 15.11, do all the points on the\nstring oscillate with the same (a) frequency, (b) phase, (c) amplitude? Explain\nyour answers. (ii) What is the amplitude of a point 0.375 m away from one end?\n14.13 Given below are some functions of x and t to represent the displacement (transverse\norlongitudinal) of an elastic wave. State which of these represent (i) a travelling\nwave, (ii) a stationary wave or (iii) none at all:\n(a) y = 2 cos (3 x) sin (10 t)\n(b) y x  vt = −2\n(c) y = 3 sin (5 x – 0.5 t) + 4 cos (5 x – 0.5 t)\n(d) y = cos x sin t + cos 2 x sin 2 t\n14.14 A wire stretched between two rigid supports vibrates in its fundamental mode with\na frequency of 45 Hz. The mass of the wire is 3.5  × 10–2  kg and its linear mass density\nis 4.0× 10–2 kg m–1. What is (a) the speed of a transverse wave on the string, and\n(b) the tension in the string?\n14.15 A metre-long tube open at one end, with a movable piston at the other end, shows\nresonance with a fixed frequency source  (a tuning fork of frequency 340 Hz) when\nthe tube length is 25.5 cm or 79.3 cm. Estimate the speed of sound in air at the\ntemperature of the experiment. The edge effects may be neglected.\n14.16 A steel rod 100 cm long is clamped at its middle. The fundamental frequency of\nlongitudinal vibrations of the rod are given to be 2.53 kHz. What is the speed of\nsound in steel?\n14.17 A pipe 20 cm long is closed at one end. Which harmonic mode of the pipe is\nresonantly excited by a 430 Hz source ? Will the same source be in resonance with\nthe pipe if both ends are open? (speed of sound in air is 340 m s–1).\n14.18 Two sitar strings A and B playing the note ‘ Ga’ are slightly out of tune and produce\nbeats of frequency 6 Hz. The tension in the string A is slightly reduced and the\nbeat  frequency is found to reduce to 3 Hz. If the original frequency of A is 324 Hz,\nwhat is the frequency of B?\n14.19 Explain why (or how):\n(a) in a sound wave, a displacement node is a pressure antinode and vice versa,\n(b) bats can ascertain distances, directions, nature, and sizes of the obstacles\nwithout any “eyes”,\n(c) a violin note and sitar note may have the same frequency, yet we can\ndistinguish between the two notes,\n(d) solids can support both longitudinal and transverse waves, but only\nlongitudinal waves can propagate in gases, and\n(e) the shape of a pulse gets distorted during propagation in a dispersive medium.\nReprint 2025-26\n\n",
+      "wordCount": 1407,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 22,
+    "totalWords": 5664
+  }
+}

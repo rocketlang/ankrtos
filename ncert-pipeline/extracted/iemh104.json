@@ -1,0 +1,77 @@
+{
+  "filename": "iemh104.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 3,
+      "title": "to answer these questions.",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 4,
+      "title": "LINEAR EQUA TIONS IN TWO VARIABLES",
+      "content": "CHAPTER 4\nLINEAR EQUA TIONS IN TWO VARIABLES\nThe principal use of the Analytic Art is to bring Mathematical Problems to\nEquations and to exhibit those Equations in the most simple terms that can be.\n—Edmund Halley\n4.1 Introduction\nIn earlier classes, you have studied linear equations in one variable. Can you write\ndown a linear equation in one variable? You may say that x + 1 = 0, x + 2 = 0 and\n2y + 3 = 0 are examples of linear equations in one variable. You also know that\nsuch equations have a unique (i.e., one and only one) solution. You may also remember\nhow to represent the solution on a number line. In this chapter , the knowledge of linear\nequations in one variable shall be recalled and extended to that of two variables. You\nwill be considering questions like: Does a linear equation in two variables have a\nsolution? If yes, is it unique? What does the solution look like on the Cartesian plane?\nYou shall also use the concepts you studied in Chapter 3 to answer these questions.\n4.2 Linear Equations\nLet us first recall what you have studied so far . Consider the following equation:\n2x + 5 = 0\nIts solution, i.e., the root of the equation, is 5\n2−. This can be represented on the\nnumber line as shown below:\nFig. 4.1\nReprint 2025-26\n\n56 MATHEMA TICS\nWhile solving an equation, you must always keep the following points in mind:\nThe solution of a linear equation is not affected when:\n(i)the same number is added to (or subtracted from) both the sides of the equation.\n(ii)you multiply or divide both the sides of the equation by the same non-zero\nnumber .\nLet us now consider the following situation:\nIn a One-day International Cricket match between India and Sri Lanka played in\nNagpur , two Indian batsmen together scored 176 runs. Express this information in the\nform of an equation.\nHere, you can see that the score of neither of them is known, i.e., there are two\nunknown quantities. Let us use x and y to denote them. So, the number of runs scored\nby one of the batsmen is x, and the number of runs scored by the other is y. We know\nthat\nx + y =176,\nwhich is the required equation.\nThis is an example of a linear equation in two variables. It is customary to denote\nthe variables in such equations by x and y, but other letters may also be used. Some\nexamples of linear equations in two variables are:\n1.2s + 3t = 5, p + 4q =7, πu + 5v = 9 and 3 = 2x – 7y.\nNote that you can put these equations in the form 1.2 s + 3 t – 5 = 0,\np + 4q – 7 = 0, πu + 5v – 9 = 0 and 2x – 7y – 3 = 0, respectively .\nSo, any equation which can be put in the form ax + by + c = 0, where a, b and c\nare real numbers, and a and b are not both zero, is called a linear equation in two\nvariables . This means that you can think of many many such equations.\nExample 1 :  Write each of the following equations in the form ax + by + c = 0 and\nindicate the values of a, b and c in each case:\n(i) 2x + 3y = 4.37 (ii) x – 4 = 3y (iii) 4 = 5 x – 3y (iv) 2 x = y\nSolution :  (i) 2x + 3y = 4.37 can be written as 2 x + 3y – 4.37 = 0. Here a = 2, b = 3\nand c = – 4.37.\n(ii) The equation x – 4 = 3y can be written as x – 3y – 4 = 0. Here a = 1,\nb = – 3 and c = – 4.\n(iii) The equation 4 = 5 x – 3y can be written as 5 x – 3y – 4 = 0. Here a = 5, b = –3\nand c = – 4. Do you agree that it can also be written as –5 x + 3y + 4 = 0 ? In this\ncase a = –5, b = 3 and c = 4.\nReprint 2025-26\n\nLINEAR  EQUA TIONS  IN TWO VARIABLES 57\n(iv) The equation 2 x = y can be written as 2 x – y + 0 = 0. Here a = 2, b = –1 and\nc = 0.\nEquations of the type ax + b = 0 are also examples of linear equations in two variables\nbecause they can be expressed as\nax + 0. y + b =0\nFor example, 4 – 3 x = 0 can be written as –3 x + 0.y + 4 = 0.\nExample 2 :  Write each of the following as an equation in two variables:\n(i) x = –5 (ii) y = 2 (iii) 2 x = 3 (iv) 5 y = 2\nSolution :  (i) x = –5 can be written as 1. x + 0. y = –5, or 1. x + 0.y + 5 = 0.\n(ii) y = 2 can be written as 0. x + 1.y = 2, or0.x + 1.y – 2 = 0.\n(iii) 2 x = 3 can be written as 2 x + 0.y – 3 = 0.\n(iv) 5 y = 2 can be written as 0. x + 5y – 2 = 0.\nEXERCISE 4.1\n1.The cost of a notebook is twice the cost of a pen. Write a linear equation in two\nvariables to represent this statement.\n(Take the cost of a notebook to be ` x and that of a pen to be ` y).\n2.Express the following linear equations in the form ax + by + c = 0 and indicate the\nvalues of a, b and c in each case:\n(i)2x + 3y = 9.35 (ii)x – 5y – 10 = 0 (iii)–2x + 3y = 6 (iv)x = 3y\n(v)2x = –5 y (vi)3x + 2 = 0 (vii) y – 2 = 0 (viii) 5 = 2x\n4.3 Solution of a Linear Equation\nYou have seen that every linear equation in one variable has a unique solution. What\ncan you say about the solution of a linear equation involving two variables? As there\nare two variables in the equation, a solution means a pair of values, one for x and one\nfor y which satisfy the given equation. Let us consider the equation 2 x + 3y = 12.\nHere, x = 3 and y = 2 is a solution because when you substitute x = 3 and y = 2 in the\nequation above, you find that\n2x + 3y =(2 × 3) + (3 × 2) = 12\nThis solution is written as an ordered pair (3, 2), first writing the value for x and\nthen the value for y. Similarly , (0, 4) is also a solution for the equation above.\nReprint 2025-26\n\n58 MATHEMA TICS\nOn the other hand, (1, 4) is not a solution of 2 x + 3y = 12, because on putting\nx = 1 and y = 4 we get 2 x + 3y = 14, which is not 12. Note that (0, 4) is a solution but\nnot (4, 0).\nYou have seen at least two solutions for 2 x + 3y = 12, i.e., (3, 2) and (0, 4). Can\nyou find any other solution? Do you agree that (6, 0) is another solution? Verify the\nsame. In fact, we can get many many solutions in the following way . Pick a value of\nyour choice for x (say x = 2) in 2 x + 3y = 12. Then the equation reduces to 4 + 3 y = 12,\nwhich is a linear equation in one variable. On solving this, you get y = 8\n3. So 82,3 \n   is\nanother solution of 2 x + 3y = 12. Similarly , choosing x = – 5, you find that the equation\nbecomes –10 + 3 y = 12. This gives y = 22\n3. So, 225,3 −   is another solution of\n2x + 3y = 12. So there is no end to different solutions of a linear equation in two\nvariables. That is, a linear equation in two variables has infinitely many solutions.\nExample 3 :  Find four different solutions of the equation x + 2y = 6.\nSolution :  By inspection, x = 2, y = 2 is a solution because for x = 2, y = 2\nx + 2y =2 + 4 = 6\nNow , let us choose x = 0. With this value of x, the given equation reduces to 2 y = 6\nwhich has the unique solution y = 3. So x = 0, y = 3 is also a solution of x + 2y = 6.\nSimilarly , taking y = 0, the given equation reduces to x = 6. So, x = 6, y  = 0 is a solution\nof x + 2y = 6 as well. Finally , let us take y = 1. The given equation now reduces to\nx + 2 = 6, whose solution is given by x = 4. Therefore, (4, 1) is also a solution of the\ngiven equation. So four of the infinitely many solutions of the given equation are:\n(2, 2), (0, 3), (6, 0) and (4, 1).\nRemark :  Note that an easy way of getting a solution is to take x = 0 and get the\ncorresponding value of y. Similarly , we can put y = 0 and obtain the corresponding\nvalue of x.\nExample 4 :  Find two solutions for each of the following equations:\n(i)4x + 3y = 12\n(ii)2x + 5y = 0\n(iii)3y + 4 = 0\nSolution :  (i) Taking x = 0, we get 3 y = 12, i.e., y = 4. So, (0, 4) is a solution of the\ngiven equation. Similarly , by taking y = 0, we get x = 3. Thus, (3, 0) is also a solution.\nReprint 2025-26\n\nLINEAR  EQUA TIONS  IN TWO VARIABLES 59\n(ii) Taking x = 0, we get 5 y = 0, i.e., y = 0. So (0, 0) is a solution of the given equation.\nNow , if you take y = 0, you again get (0, 0) as a solution, which is the same as the\nearlier one. To get another solution, take x = 1, say . Then you can check that the\ncorresponding value of y is 2.\n5− So 21,5 −   is another solution of 2 x + 5y = 0.\n(iii) Writing the equation 3 y + 4 = 0 as 0. x + 3y  + 4 = 0, you will find that y = 4–3 for\nany value of x. Thus, two solutions can be given as 4 40, – and 1, –3 3   \n      .\nEXERCISE 4.2\n1.Which one of the following options is true, and why?\ny = 3x + 5 has\n(i) a unique solution, (ii) only two solutions, (iii) infinitely many solutions\n2.Write four solutions for each of the following equations:\n(i)2x + y = 7 (ii)πx + y = 9 (iii)x = 4y\n3.Check which of the following are solutions of the equation x – 2y = 4 and which are\nnot:\n(i)(0, 2) (ii)(2, 0) (iii)(4, 0)\n(iv)() 2 , 4 2 (v)(1, 1)\n4.Find the value of k, if x = 2, y = 1 is a solution of the equation 2 x + 3y = k.\n4.4 Summary\nIn this chapter , you have studied the following points:\n1.An equation of the form ax + by + c = 0, where a, b and c are real numbers, such that a and\nb are not both zero, is called a linear equation in two variables.\n2.A linear equation in two variables has infinitely many solutions.\n3.Every point on the graph of a linear equation in two variables is a solution of the linear\nequation. Moreover , every solution of the linear equation is a point on the graph of the\nlinear equation.\nReprint 2025-26\n\n",
+      "wordCount": 2079,
+      "examples": [
+        {
+          "chapterNumber": 4,
+          "exampleNumber": 1,
+          "title": ":  Write each of the following equations in the form ax + by + c = 0 and",
+          "question": "Example 1 :  Write each of the following equations in the form ax + by + c = 0 and\nindicate the values of a, b and c in each case:\n(i) 2x + 3y = 4.37 (ii) x – 4 = 3y (iii) 4 = 5 x – 3y (iv) 2 x = y\nSolution :  (i) 2x + 3y = 4.37 can be written as 2 x + 3y – 4.37 = 0. Here a = 2, b = 3\nand c = – 4.37.\n(ii) The equation x – 4 = 3y can be written as x – 3y – 4 = 0. Here a = 1,\nb = – 3 and c = – 4.\n(iii) The equation 4 = 5 x – 3y can be written as 5 x – 3y – 4 = 0. Here a = 5, b = –3\nand c = – 4. Do",
+          "solution": ":  (i) 2x + 3y = 4.37 can be written as 2 x + 3y – 4.37 = 0. Here a = 2, b = 3\nand c = – 4.37.\n(ii) The equation x – 4 = 3y can be written as x – 3y – 4 ="
+        },
+        {
+          "chapterNumber": 4,
+          "exampleNumber": 2,
+          "title": ":  Write each of the following as an equation in two variables:",
+          "question": "Example 2 :  Write each of the following as an equation in two variables:\n(i) x = –5 (ii) y = 2 (iii) 2 x = 3 (iv) 5 y = 2\nSolution :  (i) x = –5 can be written as 1. x + 0. y = –5, or 1. x + 0.y + 5 = 0.\n(ii) y = 2 can be written as 0. x + 1.y = 2, or0.x + 1.y – 2 = 0.\n(iii) 2 x = 3 can be written as 2 x + 0.y – 3 = 0.\n(iv) 5 y = 2 can be written as 0. x + 5y – 2 = 0.\nEXERCISE 4.1\n1.The cost of a notebook is twice the cost of a pen. Write a linear equation in two\nvariables to represent this sta",
+          "solution": ":  (i) x = –5 can be written as 1. x + 0. y = –5, or 1. x + 0.y + 5 = 0.\n(ii) y = 2 can be written as"
+        },
+        {
+          "chapterNumber": 4,
+          "exampleNumber": 3,
+          "title": ":  Find four different solutions of the equation x + 2y = 6.",
+          "question": "Example 3 :  Find four different solutions of the equation x + 2y = 6.\nSolution :  By inspection, x = 2, y = 2 is a solution because for x = 2, y = 2\nx + 2y =2 + 4 = 6\nNow , let us choose x = 0. With this value of x, the given equation reduces to 2 y = 6\nwhich has the unique solution y = 3. So x = 0, y = 3 is also a solution of x + 2y = 6.\nSimilarly , taking y = 0, the given equation reduces to x = 6. So, x = 6, y  = 0 is a solution\nof x + 2y = 6 as well. Finally , let us take y = 1. The given e",
+          "solution": "s of the equation x + 2y = 6.\nSolution :  By inspection, x = 2, y = 2 is a solution because for x = 2, y = 2\nx + 2y =2 + 4 = 6\nNow , let us choose x ="
+        },
+        {
+          "chapterNumber": 4,
+          "exampleNumber": 4,
+          "title": ":  Find two solutions for each of the following equations:",
+          "question": "Example 4 :  Find two solutions for each of the following equations:\n(i)4x + 3y = 12\n(ii)2x + 5y = 0\n(iii)3y + 4 = 0\nSolution :  (i) Taking x = 0, we get 3 y = 12, i.e., y = 4. So, (0, 4) is a solution of the\ngiven equation. Similarly , by taking y = 0, we get x = 3. Thus, (3, 0) is also a solution.\nReprint 2025-26\n\nLINEAR  EQUA TIONS  IN TWO VARIABLES 59\n(ii) Taking x = 0, we get 5 y = 0, i.e., y = 0. So (0, 0) is a solution of the given equation.\nNow , if you take y = 0, you again get (0, 0) a",
+          "solution": "s for each of the following equations:\n(i)4x + 3y = 12\n(ii)2x + 5y = 0\n(iii)3y + 4 = 0\nSolution :  (i) Taking x = 0, we get 3 y = 12, i.e., y ="
+        }
+      ],
+      "exercises": [
+        {
+          "chapterNumber": 4,
+          "exerciseNumber": "4.1",
+          "questions": [
+            {
+              "questionNumber": 3,
+              "questionText": "So 82,3 \n   is\nanother solution of 2 x + 3y = 12. Similarly , choosing x = – 5, you find that the equation\nbecomes –10 + 3 y = 12. This gives y = 22"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "So, 225,3 −   is another solution of\n2x + 3y = 12. So there is no end to different solutions of a linear equation in two\nvariables. That is, a linear equation in two variables has infinitely many solutions.\nExample 3 :  Find four different solutions of the equation x + 2y = 6.\nSolution :  By inspection, x = 2, y = 2 is a solution because for x = 2, y = 2\nx + 2y =2 + 4 = 6\nNow , let us choose x = 0. With this value of x, the given equation reduces to 2 y = 6\nwhich has the unique solution y = 3. So x = 0, y = 3 is also a solution of x + 2y = 6.\nSimilarly , taking y = 0, the given equation reduces to x = 6. So, x = 6, y  = 0 is a solution\nof x + 2y = 6 as well. Finally , let us take y = 1. The given equation now reduces to\nx + 2 = 6, whose solution is given by x = 4. Therefore, (4, 1) is also a solution of the\ngiven equation. So four of the infinitely many solutions of the given equation are:\n(2, 2), (0, 3), (6, 0) and (4, 1).\nRemark :  Note that an easy way of getting a solution is to take x = 0 and get the\ncorresponding value of y. S"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 4,
+        "exercisesCount": 2
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 5,
+    "totalWords": 2079
+  }
+}

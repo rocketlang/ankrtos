@@ -1,0 +1,117 @@
+{
+  "filename": "lemh2ps.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "Relations and Functions 1-17",
+      "content": "Chapter 1 Relations and Functions 1-17\n",
+      "wordCount": 6,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 2,
+      "title": "Inverse Trigonometric Functions 18-33",
+      "content": "Chapter 2 Inverse Trigonometric Functions 18-33\n",
+      "wordCount": 6,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 3,
+      "title": "Matrices 34-75",
+      "content": "Chapter 3 Matrices 34-75\n",
+      "wordCount": 4,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 4,
+      "title": "Determinants 76-103",
+      "content": "Chapter 4 Determinants 76-103\n",
+      "wordCount": 4,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 5,
+      "title": "Continuity and Differentiability 104-146",
+      "content": "Chapter 5 Continuity and Differentiability 104-146\n",
+      "wordCount": 6,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 6,
+      "title": "Application of Derivatives 147-186",
+      "content": "Chapter 6 Application of Derivatives 147-186\nAppendix 1: Proofs in Mathematics 187-195\nAppendix 2:  Mathematical Modelling 196-207\nAnswers 208-224\nReprint 2025-26\n\nContents\nPART II\nForeword iii\nRationalisation of Content in the T extbooks v\nPreface vii\n7.Integrals 225\n7.1 Introduction 225\n7.2 Integration as an Inverse Process of Differentiation 226\n7.3 Methods of Integration 235\n7.4 Integrals of Some Particular Functions 243\n7.5 Integration by Partial Fractions 252\n7.6 Integration by Parts 259\n7.7 Definite Integral 267\n7.8 Fundamental Theorem of Calculus 267\n7.9 Evaluation of Definite Integrals by Substitution 271\n7.10 Some Properties of Definite Integrals 273\n8.Application of Integrals 292\n8.1 Introduction 292\n8.2 Area under Simple Curves 292\n9.Differential Equations 300\n9.1 Introduction 300\n9.2 Basic Concepts 300\n9.3 General and Particular Solutions of a 304\nDifferential Equation\n9.4 Methods of Solving First Order , First Degree 306\nDifferential Equations\n",
+      "wordCount": 143,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 10,
+      "title": "Vector  Algebra 338",
+      "content": "10. Vector  Algebra 338\n10.1 Introduction 338\n10.2 Some Basic Concepts 338\n10.3 Types of Vectors 341\n10.4 Addition of Vectors 343\n10.5 Multiplication of a Vector by a Scalar 346\n10.6 Product of Two Vectors 355\nReprint 2025-26\n\n11.Three Dimensional Geometry 377\n11.1 Introduction 377\n11.2 Direction Cosines and Direction Ratios of a Line 377\n11.3 Equation of a Line in Space 381\n11.4 Angle between Two Lines 383\n11.5 Shortest Distance between Two L\nines 385\n",
+      "wordCount": 78,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "Linear Programming 394",
+      "content": "12. Linear Programming 394\n12.1 Introduction 394\n12.2 Linear Programming Problem and its Mathematical Formulation 395\n",
+      "wordCount": 16,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 13,
+      "title": "Probability 406",
+      "content": "13. Probability 406\n13.1 Introduction 406\n13.2 Conditional Probability 406\n13.3 Multiplication Theorem on Probability 415\n13.4 Independent Events 417\n13.5 Bayes' Theorem 423\nAnswers 439xiv\nReprint 2025-26\n\n",
+      "wordCount": 28,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 14,
+    "totalWords": 291
+  }
+}

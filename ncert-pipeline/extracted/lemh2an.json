@@ -1,0 +1,657 @@
+{
+  "filename": "lemh2an.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 8,
+      "title": "1.(i)7",
+      "content": "Chapter 8\n1.(i)7\n3(ii) 624.8\n2.9 3.4 4.D 5.C\nEXERCISE 9.1\n1.Order 4; Degree not defined 2.Order 1; Degree 1\n3.Order 2; Degree 1 4.Order 2; Degree not defined\n5.Order 2; Degree 1 6.Order 3; Degree 2\n7.Order 3; Degree 1 8.Order 1; Degree 1\n9.Order 2; Degree 1 10. Order 2; Degree 1\n11.D 12. A\nEXERCISE 9.2\n11.D 12. D\nReprint 2025-26\n\nANSWERS 449\nEXERCISE 9.3\n1. 2 tan C2xy x= − + 2.y = 2 sin (x  + C)\n3.y = 1 + Ae–x4.tan tan Cx y =\n5.y = log ( ex + e–x) + C 6.3\n–1tan = + C3xy x +\n7.y = ecx8.x–4 + y–4 = C\n9.y = x sin–1x + 21– x+ C 10. tan y = C ( 1 – ex)\n11.\n12.2\n21 1 1 3log log2 2 4 −= − \n xy\nx13.\n14. y = sec x 15. 2y – 1 = ex ( sin x  – cos x )\n16. y – x + 2 = log (x2 (y + 2)2) 17. y2 – x2 = 4\n18. (x + 4)2 = y + 3 19.1\n3(63 27)t+\n20. 6.93% 21. Rs 1648\n22. 23. A\nEXERCISE 9.4\n1.2( ) Cy\nxx y x e−\n− = 2. log C y x x x= +\n3.–1 2 2 1tan log( ) C2yx yx = + +  4.x2 + y2 = Cx\n5.1 2log log C\n2 2 2x yx\nx y+= +\n−6.2 2 2+ + Cy x y x =\n7.xy cos y\nx = C 8. 1 cos Csiny yxx x    − =        \nReprint 2025-26\n\nMATHEMA TICS 450\n9.cy = log y\nx–1 10. Cx\nyye x+ =\n11.log ( x2 + y2) + 2 tan–1 y\nx = πlog 22+\n12. y + 2x = 3x2 y 13. cot logyexx =  \n14. cos logyexx =  15.2( 0, )1 logxy x x ex= ≠ ≠−\n16. C 17. D\nEXERCISE 9.5\n1.y = 1\n5(2sin x – cos x) + C e–2x2.y = e–2x + C e–3x\n3.4\nC4xxy= + 4.y(sec x + tan x) = sec x + tan x – x + C\n5.y = (tan x – 1) + Ce–tanx6.2\n2(4log 1) C16−= − +xy x x\n7.2log (1 log ) C−= + + y x xx8.1 2 1=(1+ )  log sin C(1 )y x x x− −+ +\n9.1 Ccotsiny xx x x= − +10. (x + y + 1) = C ey\n11.2C\n3= +yxy12. x = 3y2 + Cy\n13. y = cos x – 2 cos2 x 14. y (1 + x2) = tan–1 x – 4π\n15. y = 4 sin3 x – 2 sin2 x 16. x + y + 1 = ex\n17. y = 4 – x  – 2 ex18. C        19.  D\nMiscellaneous Exercise on ",
+      "wordCount": 489,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 8,
+          "exerciseNumber": "9.1",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "2 tan C2xy x= − + 2.y = 2 sin (x  + C)"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "12.2\n21 1 1 3log log2 2 4 −= − \n xy\nx13."
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "y = sec x 15. 2y – 1 = ex ( sin x  – cos x )"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x + 2 = log (x2 (y + 2)2) 17. y2 – x2 = 4"
+            },
+            {
+              "questionNumber": 18,
+              "questionText": "(x + 4)2 = y + 3 19.1\n3(63 27)t+"
+            },
+            {
+              "questionNumber": 20,
+              "questionText": "6.93% 21. Rs 1648"
+            },
+            {
+              "questionNumber": 22,
+              "questionText": "23. A\nEXERCISE 9.4"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "y + 2x = 3x2 y 13. cot logyexx =  "
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "cos logyexx =  15.2( 0, )1 logxy x x ex= ≠ ≠−"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "C 17. D\nEXERCISE 9.5"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "y = cos x – 2 cos2 x 14. y (1 + x2) = tan–1 x – 4π"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "y = 4 sin3 x – 2 sin2 x 16. x + y + 1 = ex"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "y = 4 – x  – 2 ex18. C        19.  D\nMiscellaneous Exercise on"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 8,
+          "exerciseNumber": "9.2",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "2 tan C2xy x= − + 2.y = 2 sin (x  + C)"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "12.2\n21 1 1 3log log2 2 4 −= − \n xy\nx13."
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "y = sec x 15. 2y – 1 = ex ( sin x  – cos x )"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x + 2 = log (x2 (y + 2)2) 17. y2 – x2 = 4"
+            },
+            {
+              "questionNumber": 18,
+              "questionText": "(x + 4)2 = y + 3 19.1\n3(63 27)t+"
+            },
+            {
+              "questionNumber": 20,
+              "questionText": "6.93% 21. Rs 1648"
+            },
+            {
+              "questionNumber": 22,
+              "questionText": "23. A\nEXERCISE 9.4"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "y + 2x = 3x2 y 13. cot logyexx =  "
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "cos logyexx =  15.2( 0, )1 logxy x x ex= ≠ ≠−"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "C 17. D\nEXERCISE 9.5"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "y = cos x – 2 cos2 x 14. y (1 + x2) = tan–1 x – 4π"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "y = 4 sin3 x – 2 sin2 x 16. x + y + 1 = ex"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "y = 4 – x  – 2 ex18. C        19.  D\nMiscellaneous Exercise on"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 8,
+          "exerciseNumber": "9.3",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "2 tan C2xy x= − + 2.y = 2 sin (x  + C)"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "12.2\n21 1 1 3log log2 2 4 −= − \n xy\nx13."
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "y = sec x 15. 2y – 1 = ex ( sin x  – cos x )"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x + 2 = log (x2 (y + 2)2) 17. y2 – x2 = 4"
+            },
+            {
+              "questionNumber": 18,
+              "questionText": "(x + 4)2 = y + 3 19.1\n3(63 27)t+"
+            },
+            {
+              "questionNumber": 20,
+              "questionText": "6.93% 21. Rs 1648"
+            },
+            {
+              "questionNumber": 22,
+              "questionText": "23. A\nEXERCISE 9.4"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "y + 2x = 3x2 y 13. cot logyexx =  "
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "cos logyexx =  15.2( 0, )1 logxy x x ex= ≠ ≠−"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "C 17. D\nEXERCISE 9.5"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "y = cos x – 2 cos2 x 14. y (1 + x2) = tan–1 x – 4π"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "y = 4 sin3 x – 2 sin2 x 16. x + y + 1 = ex"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "y = 4 – x  – 2 ex18. C        19.  D\nMiscellaneous Exercise on"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 8,
+          "exerciseNumber": "9.4",
+          "questions": [
+            {
+              "questionNumber": 12,
+              "questionText": "y + 2x = 3x2 y 13. cot logyexx =  "
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "cos logyexx =  15.2( 0, )1 logxy x x ex= ≠ ≠−"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "C 17. D\nEXERCISE 9.5"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "y = cos x – 2 cos2 x 14. y (1 + x2) = tan–1 x – 4π"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "y = 4 sin3 x – 2 sin2 x 16. x + y + 1 = ex"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "y = 4 – x  – 2 ex18. C        19.  D\nMiscellaneous Exercise on"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 8,
+          "exerciseNumber": "9.5",
+          "questions": [
+            {
+              "questionNumber": 13,
+              "questionText": "y = cos x – 2 cos2 x 14. y (1 + x2) = tan–1 x – 4π"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "y = 4 sin3 x – 2 sin2 x 16. x + y + 1 = ex"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "y = 4 – x  – 2 ex18. C        19.  D\nMiscellaneous Exercise on"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 48
+      }
+    },
+    {
+      "chapterNumber": 9,
+      "title": "1.(i)Order 2; Degree 1 (ii) Order 1; Degree 3",
+      "content": "Chapter 9\n1.(i)Order 2; Degree 1 (ii) Order 1; Degree 3\n(iii) Order 4; Degree not defined\nReprint 2025-26\n\nANSWERS 451\n4.sin–1y + sin–1x = C 6.cos y = sec\n2x\n7.tan–1 y + tan–1(ex) = π\n28. Cx\nye y= +\n9.log – 1 x y x y = + + 10.2(2 C)xy e x = +\n11.2\n2πsin 2 (sin 0)2y x x x = − ≠ 12.2 1log , 11xy xx+= ≠ −+\n13. C 14. C\n15. C\nEXERCISE 10.1\n1.In the adjoining figure, the vector  represents the required displacement.\n2.(i)scalar (ii) vector (iii) scalar (iv) scalar (v) scalar\n(vi) vector\n3.(i)scalar (ii) scalar (iii) vector (iv) vector (v) scalar\n4.(i)Vectors  and  are coinitial\n(ii) Vectors  and  are equal\n(iii) Vectors   and  are collinear but not equal\n5.(i)True (ii) False (iii) False (iv) False\nEXERCISE 10.2\n1.\n2.An infinite number of possible answers.\nReprint 2025-26\n\nMATHEMA TICS 452\n3.An infinite number of possible answers.\n4.x = 2, y = 3 5.–7 and 6; ˆ ˆ–7 and 6i j\n6. ˆˆ4j k− − 7.1 1 2ˆ ˆ ˆ\n6 6 6i j k+ +\n8.1 1 1ˆ ˆ ˆ\n3 3 3i j k+ + 9.1 1ˆ ˆ\n2 2i k+\n10.40 8 16ˆ ˆ ˆ\n30 30 30i j k− + 12.1 2 3, ,\n14 14 14\n13.1 2 2, ,3 3 3− − 15. (i)  1 4 1ˆ ˆ ˆ\n3 3 3i j k− + +    (ii)  ˆ ˆ3 3i k− +\n16. ˆ ˆ ˆ3 2i j k+ + 18. (C) 19.  (B), (C), (D)\nEXERCISE 10.3\n1.π\n42. 3.0\n4.60\n1146.16 2 2 2,\n3 7 3 77.\n8. 9. 13 10. 8\n12. Vector  can be any vector 13.3\n2−\n14. Take any two non-zero perpendicular vectors  and \n15. 18. (D)\nEXERCISE 10.4\n1.19 2 2.2 2 1ˆ ˆ ˆ\n3 3 3i j k±  3.π1 1 1; , ,3 2 2 2\n5.273,26.Either \nReprint 2025-26\n\nANSWERS 453\n8.No; take any two nonzero collinear vectors\n9.61\n210. 15 2 11.(B)        12.  (C)\nMiscellaneous Exercise on ",
+      "wordCount": 345,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 9,
+          "exerciseNumber": "10.1",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "2.An infinite number of possible answers.\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "ˆˆ4j k− − 7.1 1 2ˆ ˆ ˆ\n6 6 6i j k+ +"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "ˆ ˆ ˆ3 2i j k+ + 18. (C) 19.  (B), (C), (D)\nEXERCISE 10.3"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "9. 13 10. 8"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "Vector  can be any vector 13.3\n2−"
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "Take any two non-zero perpendicular vectors  and"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "18. (D)\nEXERCISE 10.4"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 9,
+          "exerciseNumber": "10.2",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "2.An infinite number of possible answers.\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "ˆˆ4j k− − 7.1 1 2ˆ ˆ ˆ\n6 6 6i j k+ +"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "ˆ ˆ ˆ3 2i j k+ + 18. (C) 19.  (B), (C), (D)\nEXERCISE 10.3"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "9. 13 10. 8"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "Vector  can be any vector 13.3\n2−"
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "Take any two non-zero perpendicular vectors  and"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "18. (D)\nEXERCISE 10.4"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 9,
+          "exerciseNumber": "10.3",
+          "questions": [
+            {
+              "questionNumber": 8,
+              "questionText": "9. 13 10. 8"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "Vector  can be any vector 13.3\n2−"
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "Take any two non-zero perpendicular vectors  and"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "18. (D)\nEXERCISE 10.4"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 18
+      }
+    },
+    {
+      "chapterNumber": 10,
+      "title": "1.3 1ˆ ˆ",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "Vector  can be any vector 13.3",
+      "content": "12. Vector  can be any vector 13.3\n2−\n14. Take any two non-zero perpendicular vectors  and \n15. 18. (D)\nEXERCISE 10.4\n1.19 2 2.2 2 1ˆ ˆ ˆ\n3 3 3i j k±  3.π1 1 1; , ,3 2 2 2\n5.273,26.Either \nReprint 2025-26\n\nANSWERS 453\n8.No; take any two nonzero collinear vectors\n9.61\n210. 15 2 11.(B)        12.  (C)\nMiscellaneous Exercise on Chapter 10\n1.3 1ˆ ˆ\n2 2i j+\n2.2 2 2\n2 1 2 1 2 1 2 1 2 1 2 1– , – , ; ( ) ( ) ( )x x y y z z x x y y z z − − + − + −\n3.5 3 3ˆ ˆ\n2 2i j−+\n4.No; take ,  and /arrowrightnospc to represent the sides of a triangle.\n5.1\n3± 6.3 10ˆ ˆ102 2i j+ 7.3 3 2ˆ ˆ ˆ\n22 22 22i j k− +\n8.2 : 3 9.3 + 5 10.1ˆ ˆ ˆ(3 – 6 2 ); 11 57i j k +\n12.1ˆ ˆ ˆ(160 – 5 70 )3i j k + 13. λ = 1 16. (B)\n17. (D) 18. (C) 19. (B)\nEXERCISE 1 1.1\n1.1 10, ,\n2 2−2.1 1 1, ,\n3 3 3± ± ± 3.\n5.2 2 3 2 3 2 4 5 1, , ; , , ; , ,17 17 17 17 17 17 42 42 42− − − − − −\nEXERCISE 1 1.2\n4. , where λ is a real number\n5. and cartesian form is\n14\n21\n12\n−−=+=− z y x\nReprint 2025-26\n\nMATHEMA TICS 454\n6.65\n54\n32 +=−=+ z y x\n7. ˆ ˆ ˆ ˆ ˆ ˆ (5 4 6 ) (3 7 2 )= − + + λ + +/arrowrightnospr i j k i j k\n8.(i)θ = 119cos21− \n  (ii)θ = 18cos\n5 3− \n   \n9.(i)θ = 1 26cos\n9 38− \n   (ii)θ = 12cos3− \n  \n10.70\n11p= 12.3 2\n213. 2 29\n14.3\n1915.298\nMiscellaneous Exercise on Chapter 1 1\n1.90° 2.1 0 0x y z= = 3.10\n7k−=\n4.9 5.\nEXERCISE 12.1\n1.Maximum Z = 16 at (0, 4)\n2.Minimum Z = – 12 at (4, 0)\n3.Maximum Z = 235\n19 at 20\n1945\n19,\n\n\n4.Minimum Z = 7 at 3\n21\n2,\n\n\n5.Maximum Z = 18 at (4, 3)\n6.Minimum Z = 6 at all the points on the line segment joining the points (6, 0)\nand (0, 3).\nReprint 2025-26\n\nANSWERS 455\n7.Minimum Z = 300 at (60, 0);\nMaximum Z = 600 at all the points on the line segment joining the points (120, 0)\nand (60, 30).\n8.Minimum Z = 100 at all the points on the line segment joining the points (0, 50)\nand (20, 40);\nMaximum Z = 400 at (0, 200)\n9.Z has no maximum value\n10. No feasible region, hence no maximum value of Z.\nEXERCISE 13.1\n1. () ()2 1P E|F , P F|E3 3= = 2. ()16P A|B25=\n3.(i)0.32 (ii) 0.64 (iii) 0.98\n4.11\n26\n5.(i)4\n11(ii)4\n5(iii)2\n3\n6.(i)1\n2(ii)3\n7(iii)6\n7\n7.(i)1 (ii) 0\n8.1\n69.1 10. (a) 1\n3,   (b) 1\n9\n11.(i)1\n2, 1\n3(ii)1\n2, 2\n3(iii)3\n4, 1\n4\n12. (i)1\n2(ii)1\n313.5\n9\n14.1\n1515. 0 16. C     17.   D\nReprint 2025-26\n\nMATHEMA TICS 456\nEXERCISE 13.2\n1.3\n252.25\n1023.44\n91\n4.A and B are independent 5.A and B are not independent\n6.E and F are not independent\n7.(i)1\n10p= (ii)1\n5p=\n8.(i)0.12 (ii) 0.58 (iii) 0.3 (iv)    0.4\n9.3\n810. A and B are not independent\n11.(i)0.18 (ii) 0.12 (iii) 0.72 (iv) 0.28\n12.7\n813. (i) 16\n81, (ii) 20\n81, (iii) 40\n81\n14. (i) 2\n3, (ii) 1\n215. (i) , (ii) 16. (a) 1\n5, (b) 1\n3, (c) 1\n2\n17. D 18. B\nEXERCISE 13.3\n1.1\n22.2\n33.9\n134.12\n13\n5.22\n1336.4\n97.1\n528.1\n4\n9.2\n910.8\n1111.5\n3412.11\n50\n13. A 14. C\nMiscellaneous Exercise on ",
+      "wordCount": 672,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 12,
+          "exerciseNumber": "10.4",
+          "questions": [
+            {
+              "questionNumber": 17,
+              "questionText": "(D) 18. (C) 19. (B)\nEXERCISE 1 1.1"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": ", where λ is a real number"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "and cartesian form is\n14\n21\n12\n−−=+=− z y x\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "ˆ ˆ ˆ ˆ ˆ ˆ (5 4 6 ) (3 7 2 )= − + + λ + +/arrowrightnospr i j k i j k"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "No feasible region, hence no maximum value of Z.\nEXERCISE 13.1"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "() ()2 1P E|F , P F|E3 3= = 2. ()16P A|B25="
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "(i)1\n2(ii)1"
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "(i) 2\n3, (ii) 1"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "D 18. B\nEXERCISE 13.3"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "A 14. C\nMiscellaneous Exercise on"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 12,
+          "exerciseNumber": "12.1",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "No feasible region, hence no maximum value of Z.\nEXERCISE 13.1"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "() ()2 1P E|F , P F|E3 3= = 2. ()16P A|B25="
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "(i)1\n2(ii)1"
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "(i) 2\n3, (ii) 1"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "D 18. B\nEXERCISE 13.3"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "A 14. C\nMiscellaneous Exercise on"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 12,
+          "exerciseNumber": "13.1",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "() ()2 1P E|F , P F|E3 3= = 2. ()16P A|B25="
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "(i)1\n2(ii)1"
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "(i) 2\n3, (ii) 1"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "D 18. B\nEXERCISE 13.3"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "A 14. C\nMiscellaneous Exercise on"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 12,
+          "exerciseNumber": "13.2",
+          "questions": [
+            {
+              "questionNumber": 14,
+              "questionText": "(i) 2\n3, (ii) 1"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "D 18. B\nEXERCISE 13.3"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "A 14. C\nMiscellaneous Exercise on"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 12,
+          "exerciseNumber": "13.3",
+          "questions": [
+            {
+              "questionNumber": 13,
+              "questionText": "A 14. C\nMiscellaneous Exercise on"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 25
+      }
+    },
+    {
+      "chapterNumber": 13,
+      "title": "1.(i)1 (ii) 0",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 14,
+      "title": "Take any two non-zero perpendicular vectors  and",
+      "content": "14. Take any two non-zero perpendicular vectors  and \n15. 18. (D)\nEXERCISE 10.4\n1.19 2 2.2 2 1ˆ ˆ ˆ\n3 3 3i j k±  3.π1 1 1; , ,3 2 2 2\n5.273,26.Either \nReprint 2025-26\n\nANSWERS 453\n8.No; take any two nonzero collinear vectors\n9.61\n210. 15 2 11.(B)        12.  (C)\nMiscellaneous Exercise on Chapter 10\n1.3 1ˆ ˆ\n2 2i j+\n2.2 2 2\n2 1 2 1 2 1 2 1 2 1 2 1– , – , ; ( ) ( ) ( )x x y y z z x x y y z z − − + − + −\n3.5 3 3ˆ ˆ\n2 2i j−+\n4.No; take ,  and /arrowrightnospc to represent the sides of a triangle.\n5.1\n3± 6.3 10ˆ ˆ102 2i j+ 7.3 3 2ˆ ˆ ˆ\n22 22 22i j k− +\n8.2 : 3 9.3 + 5 10.1ˆ ˆ ˆ(3 – 6 2 ); 11 57i j k +\n12.1ˆ ˆ ˆ(160 – 5 70 )3i j k + 13. λ = 1 16. (B)\n17. (D) 18. (C) 19. (B)\nEXERCISE 1 1.1\n1.1 10, ,\n2 2−2.1 1 1, ,\n3 3 3± ± ± 3.\n5.2 2 3 2 3 2 4 5 1, , ; , , ; , ,17 17 17 17 17 17 42 42 42− − − − − −\nEXERCISE 1 1.2\n4. , where λ is a real number\n5. and cartesian form is\n14\n21\n12\n−−=+=− z y x\nReprint 2025-26\n\nMATHEMA TICS 454\n6.65\n54\n32 +=−=+ z y x\n7. ˆ ˆ ˆ ˆ ˆ ˆ (5 4 6 ) (3 7 2 )= − + + λ + +/arrowrightnospr i j k i j k\n8.(i)θ = 119cos21− \n  (ii)θ = 18cos\n5 3− \n   \n9.(i)θ = 1 26cos\n9 38− \n   (ii)θ = 12cos3− \n  \n10.70\n11p= 12.3 2\n213. 2 29\n14.3\n1915.298\nMiscellaneous Exercise on Chapter 1 1\n1.90° 2.1 0 0x y z= = 3.10\n7k−=\n4.9 5.\nEXERCISE 12.1\n1.Maximum Z = 16 at (0, 4)\n2.Minimum Z = – 12 at (4, 0)\n3.Maximum Z = 235\n19 at 20\n1945\n19,\n\n\n4.Minimum Z = 7 at 3\n21\n2,\n\n\n5.Maximum Z = 18 at (4, 3)\n6.Minimum Z = 6 at all the points on the line segment joining the points (6, 0)\nand (0, 3).\nReprint 2025-26\n\nANSWERS 455\n7.Minimum Z = 300 at (60, 0);\nMaximum Z = 600 at all the points on the line segment joining the points (120, 0)\nand (60, 30).\n8.Minimum Z = 100 at all the points on the line segment joining the points (0, 50)\nand (20, 40);\nMaximum Z = 400 at (0, 200)\n9.Z has no maximum value\n10. No feasible region, hence no maximum value of Z.\nEXERCISE 13.1\n1. () ()2 1P E|F , P F|E3 3= = 2. ()16P A|B25=\n3.(i)0.32 (ii) 0.64 (iii) 0.98\n4.11\n26\n5.(i)4\n11(ii)4\n5(iii)2\n3\n6.(i)1\n2(ii)3\n7(iii)6\n7\n7.(i)1 (ii) 0\n8.1\n69.1 10. (a) 1\n3,   (b) 1\n9\n11.(i)1\n2, 1\n3(ii)1\n2, 2\n3(iii)3\n4, 1\n4\n12. (i)1\n2(ii)1\n313.5\n9\n14.1\n1515. 0 16. C     17.   D\nReprint 2025-26\n\nMATHEMA TICS 456\nEXERCISE 13.2\n1.3\n252.25\n1023.44\n91\n4.A and B are independent 5.A and B are not independent\n6.E and F are not independent\n7.(i)1\n10p= (ii)1\n5p=\n8.(i)0.12 (ii) 0.58 (iii) 0.3 (iv)    0.4\n9.3\n810. A and B are not independent\n11.(i)0.18 (ii) 0.12 (iii) 0.72 (iv) 0.28\n12.7\n813. (i) 16\n81, (ii) 20\n81, (iii) 40\n81\n14. (i) 2\n3, (ii) 1\n215. (i) , (ii) 16. (a) 1\n5, (b) 1\n3, (c) 1\n2\n17. D 18. B\nEXERCISE 13.3\n1.1\n22.2\n33.9\n134.12\n13\n5.22\n1336.4\n97.1\n528.1\n4\n9.2\n910.8\n1111.5\n3412.11\n50\n13. A 14. C\nMiscellaneous Exercise on Chapter 13\n1.(i)1 (ii) 0\n2.(i)1\n3(ii)1\n2\n3.20\n21\nReprint 2025-26\n\nANSWERS 457\n4. 5.2\n7\n6.1 2 8, ,15 5 157.14\n298.3\n16\n9.(i)0.5 (ii) 0.05 10.16\n31\n11.A 12. C 13. B\n—/xrhombus /xrhombus/xrhombus /xrhombus/xrhombus—\nReprint 2025-26\n\nNotes\nReprint 2025-26\n\n",
+      "wordCount": 707,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 14,
+          "exerciseNumber": "10.4",
+          "questions": [
+            {
+              "questionNumber": 17,
+              "questionText": "(D) 18. (C) 19. (B)\nEXERCISE 1 1.1"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": ", where λ is a real number"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "and cartesian form is\n14\n21\n12\n−−=+=− z y x\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "ˆ ˆ ˆ ˆ ˆ ˆ (5 4 6 ) (3 7 2 )= − + + λ + +/arrowrightnospr i j k i j k"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "No feasible region, hence no maximum value of Z.\nEXERCISE 13.1"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "() ()2 1P E|F , P F|E3 3= = 2. ()16P A|B25="
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "(i)1\n2(ii)1"
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "(i) 2\n3, (ii) 1"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "D 18. B\nEXERCISE 13.3"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "A 14. C\nMiscellaneous Exercise on Chapter 13"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 14,
+          "exerciseNumber": "12.1",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "No feasible region, hence no maximum value of Z.\nEXERCISE 13.1"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "() ()2 1P E|F , P F|E3 3= = 2. ()16P A|B25="
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "(i)1\n2(ii)1"
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "(i) 2\n3, (ii) 1"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "D 18. B\nEXERCISE 13.3"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "A 14. C\nMiscellaneous Exercise on Chapter 13"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 14,
+          "exerciseNumber": "13.1",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "() ()2 1P E|F , P F|E3 3= = 2. ()16P A|B25="
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "(i)1\n2(ii)1"
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "(i) 2\n3, (ii) 1"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "D 18. B\nEXERCISE 13.3"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "A 14. C\nMiscellaneous Exercise on Chapter 13"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 14,
+          "exerciseNumber": "13.2",
+          "questions": [
+            {
+              "questionNumber": 14,
+              "questionText": "(i) 2\n3, (ii) 1"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "D 18. B\nEXERCISE 13.3"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "A 14. C\nMiscellaneous Exercise on Chapter 13"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 14,
+          "exerciseNumber": "13.3",
+          "questions": [
+            {
+              "questionNumber": 13,
+              "questionText": "A 14. C\nMiscellaneous Exercise on Chapter 13"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 25
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 20,
+    "totalWords": 2213
+  }
+}

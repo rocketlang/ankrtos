@@ -1,0 +1,55 @@
+{
+  "filename": "kemh1sm.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 8,
+      "title": "8.6Infinite G.P . and its Sum",
+      "content": "CHAPTER  8\n8.6Infinite G.P . and its Sum\nG.P. of the form a, ar, ar2, ar3, ... is called infinite G.P . Now , to find the formulae for\nfinding sum to infinity of a G.P ., we begin with an example.\nLet us consider the G.P .,\n2 41 , , , .. .\n3 9\nHere a = 1, 2\n3r=. We have\n212 3S 3 12 313n\nn\nn −     = = −      −\nLet us study the behaviour of 2\n3n \n   as n becomes larger and larger:\n  n 1 5 10 20\n2\n3n \n  0.6667 0.1316872428 0.01734152992 0.00030072866\nWe observe that as n becomes lar ger and lar ger, 2\n3n \n  becomes closer and closer to\nzero. Mathematically , we say that as n becomes suf ficiently lar ge, 2\n3n \n   becomes\nsufficiently small. In other words as 2, 0.3n\nn →∞ →    Consequently , we find that the\nsum of infinitely many terms is given by S 3.∞=\nReprint 2025-26\n\n358       MA THEMA TICS\nNow , for a geometric progression, a, ar, ar2, ..., if  numerical value of common ratio r\nis less than 1, then\n(1 )S(1 ) 1 1n n\nna r a ar\nr r r−= = −− − −\nIn this case as ,→∞n rn → 0 since | r| < 1. Therefore\n1naSr→−\nSymbolically sum to infinity is denoted by S or S.∞\nThus, we have S1 –a\nr= .\nFor examples,\n(i)2 31 1 1 11 ... 2 .1 2 2 212+ + + + = =\n−\n(ii) 2 31 1 1 1 1 21 .. .1 1 2 2 2 31 12 2− + − + = = =− + −  \nExercise 8.3\nFind the sum to infinity in each of the following Geometric Progression.\n1.1 11, , ,...3 9(Ans. 1.5) 2. 6, 1.2, .24, ... (Ans. 7.5)\n3.5, 2 0 8 0, , ...7 4 9(Ans. 35\n3) 4.3 3 3, , ,...4 16 64− −(Ans. 3\n5−)\n5.Prove that 1 1 1\n8 2 43 3 3 .. . 3× × =\n6.Let x = 1 + a + a2 + ... and y = 1 + b + b2 + ..., where | a| < 1 and | b| < 1. Prove that\n1 + ab + a2b2 + ... = 1xy\nx y+ −\nReprint 2025-26\n\nSUPPLEMENTARY MATERIAL        359\n",
+      "wordCount": 423,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "12.6 Limits Involving Exponential and Logarithmic Functions",
+      "content": "CHAPTER  12\n12.6 Limits Involving Exponential and Logarithmic Functions\nBefore discussing evaluation of limits of the expressions involving exponential and\nlogarithmic functions, we introduce these two functions stating their domain, range and\nalso sketch their graphs roughly .\nLeonhard Euler (1707–1783), the great Swiss mathematician introduced the number\ne whose value lies between 2 and 3. This number is useful in defining exponential\nfunction and is defined as f (x) = ex, x ∈ R. Its domain is R, range is the set of positive\nreal numbers. The graph of exponential function, i.e., y =  ex is as given in Fig.13.1 1.\nFig. 13.1 1\nSimilarly , the logarithmic function expressed as loge R+ → R is given by loge x = y,\nif and only if ey = x. Its domain is R+ which is the set of all positive real numbers and\nrange is R. The graph of logarithmic function   y = loge x is shown in Fig.13.12.\nReprint 2025-26\n\n360       MA THEMA TICS\nFig. 13.12\nIn order to prove the result \n0– 1lim 1x\nxe\nx→=, we make use of an inequality involving\nthe expression xex1− which runs as follows:\n1\n1x≤+ – 1xe\nx ≤ 1 + ( e – 2) | x| holds for all x in [–1, 1] ~ {0}.\nTheorem 6 Prove that \n01lim 1x\nxe\nx→−=\nProofUsing above inequality , we get\n1\n1≤+x 1xe\nx−\n ≤1 + | x| (e – 2), x Î [–1, 1] ~ {0}\nAlso 0\n01 1 1lim 11 1 lim 1 0x\nxx x→\n→= = =+ + +\nReprint 2025-26\n\nSUPPLEMENTARY MATERIAL        361\nand0 0lim 1 ( 2) 1 ( 2 ) lim 1 ( 2)0 1\nx xe x e x e\n→ →  + − = + − = + − = \nTherefore, by Sandwich theorem, we get\n01lim 1x\nxe\nx→−=\nTheorem 7 Prove that \n0log (1 )lim 1e\nxx\nx→+=\nProof  Letlog (1 )e xy\nx+=. Then\nlog (1 )e x xy+ =\n1xyx e⇒ + =\n11xye\nx−⇒ =\nor1. 1xyeyxy−=\n0 01lim lim 1 (sin ce 0 g iv es 0 )x y\nxy xey x xyxy→ →−⇒ = → →\n0 01lim 1 a s lim 1x y\nx x yeyx y→ → −⇒ = =   \n0lo g (1 )lim 1e\nxx\nx→+⇒ =\nExample 5 Compute 3\n01l i mx\nxe\nx→−\nSolution We have\n3 3\n0 3 0\n01 1limlim 33\n13 lim , w here 3\n3.1 3x x\nx x\ny\nye e\nx x\ney xy→ →\n→− −= ⋅\n −= =   \n= =\nReprint 2025-26\n\n362       MA THEMA TICS\nExample 6 Compute \n0sin 1limx\nxe x\nx→− −\nSolution We have   0 0sin 1 1 sinlim limx x\nx xe x e x\nx x x→ →  − − −= −  \n0 01 sinlim lim 1 1 0x\nx xe x\nx x→ →−= − = − =\nExample 7 Evaluate\n1loglim1e\nxx\nx→−\nSolution Put x = 1 + h, then as 1 0x h→ ⇒ → . Therefore,\n1 0log log (1 )lim lim1e e\nx hx h\nx h→ →+=−0log (1 )1 since lim 1e\nxx\nx→+  = =   .\nExercise  13.2\nEvaluate the following limits, if exist\n1.4\n01limx\nxe\nx→−(Ans. 4) 2.2 2\n0limx\nxe e\nx+\n→−(Ans. e2)\n3.5\n5lim5x\nxe e\nx→−\n−(Ans.  e5) 4.sin\n01limx\nxe\nx→−(Ans. 1)\n5.3\n3lim3x\nxe e\nx→−\n−(Ans. e3) 6.\n0( 1)lim1 cosx\nxx e\nx→−\n−(Ans. 2)\n7.0log (1 2 )lime\nxx\nx→+(Ans. 2) 8.3\n30log (1 )limsinxx\nx→+\n(Ans. 1)\nReprint 2025-26\n\nSUPPLEMENTARY MATERIAL        363\nNotes\nReprint 2025-26\n\n364       MA THEMA TICS\nReprint 2025-26\n\n",
+      "wordCount": 625,
+      "examples": [
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 5,
+          "title": "Compute 3",
+          "question": "Example 5 Compute 3\n01l i mx\nxe\nx→−\nSolution We have\n3 3\n0 3 0\n01 1limlim 33\n13 lim , w here 3\n3.1 3x x\nx x\ny\nye e\nx x\ney xy→ →\n→− −= ⋅\n −= =   \n= =\nReprint 2025-26\n\n362       MA THEMA TICS\nExample 6 Compute \n0sin 1limx\nxe x\nx→− −\nSolution We have   0 0sin 1 1 sinlim limx x\nx xe x e x\nx x x→ →  − − −= −  \n0 01 sinlim lim 1 1 0x\nx xe x\nx x→ →−= − = − =\nExample 7 Evaluate\n1loglim1e\nxx\nx→−\nSolution Put x = 1 + h, then as 1 0x h→ ⇒ → . Therefore,\n1 0log log (1 )lim lim1e e\nx hx h\nx h→ →+",
+          "solution": "We have\n3 3\n0 3 0\n01 1limlim 33\n13 lim , w here 3\n3.1 3x x\nx x\ny\nye e\nx x\ney xy→ →\n→− −= ⋅\n −= =   \n= =\nReprint 2025-26\n\n362       MA THEMA TICS"
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 6,
+          "title": "Compute",
+          "question": "Example 6 Compute \n0sin 1limx\nxe x\nx→− −\nSolution We have   0 0sin 1 1 sinlim limx x\nx xe x e x\nx x x→ →  − − −= −  \n0 01 sinlim lim 1 1 0x\nx xe x\nx x→ →−= − = − =\nExample 7 Evaluate\n1loglim1e\nxx\nx→−\nSolution Put x = 1 + h, then as 1 0x h→ ⇒ → . Therefore,\n1 0log log (1 )lim lim1e e\nx hx h\nx h→ →+=−0log (1 )1 since lim 1e\nxx\nx→+  = =   .\nExercise  13.2\nEvaluate the following limits, if exist\n1.4\n01limx\nxe\nx→−(Ans. 4) 2.2 2\n0limx\nxe e\nx+\n→−(Ans. e2)\n3.5\n5lim5x\nxe e\nx→−\n−(Ans.  e5) 4.s",
+          "solution": "We have   0 0sin 1 1 sinlim limx x\nx xe x e x\nx x x→ →  − − −= −  \n0 01 sinlim lim 1 1 0x\nx xe x\nx x→ →−= − = − ="
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 7,
+          "title": "Evaluate",
+          "question": "Example 7 Evaluate\n1loglim1e\nxx\nx→−\nSolution Put x = 1 + h, then as 1 0x h→ ⇒ → . Therefore,\n1 0log log (1 )lim lim1e e\nx hx h\nx h→ →+=−0log (1 )1 since lim 1e\nxx\nx→+  = =   .\nExercise  13.2\nEvaluate the following limits, if exist\n1.4\n01limx\nxe\nx→−(Ans. 4) 2.2 2\n0limx\nxe e\nx+\n→−(Ans. e2)\n3.5\n5lim5x\nxe e\nx→−\n−(Ans.  e5) 4.sin\n01limx\nxe\nx→−(Ans. 1)\n5.3\n3lim3x\nxe e\nx→−\n−(Ans. e3) 6.\n0( 1)lim1 cosx\nxx e\nx→−\n−(Ans. 2)\n7.0log (1 2 )lime\nxx\nx→+(Ans. 2) 8.3\n30log (1 )limsinxx\nx→+\n(Ans. 1)\nReprint",
+          "solution": "Put x = 1 + h, then as 1 0x h→ ⇒ → . Therefore,\n1 0log log (1 )lim lim1e e\nx hx h\nx h→ →+=−0log (1 )1 since lim 1e\nxx\nx→+  = =   ."
+        }
+      ],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 3,
+        "exercisesCount": 0
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 8,
+    "totalWords": 1048
+  }
+}

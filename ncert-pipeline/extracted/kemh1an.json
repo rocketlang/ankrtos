@@ -1,0 +1,2857 @@
+{
+  "filename": "kemh1an.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "1.A ⊂  B,  A ⊂ C,  B ⊂ C,  D ⊂ A,  D ⊂ B,  D ⊂ C",
+      "content": "Chapter 1\n1.A ⊂  B,  A ⊂ C,  B ⊂ C,  D ⊂ A,  D ⊂ B,  D ⊂ C\n2. (i)False (ii)False (iii)True (iv) False (v)False\n(vi) True\n10. We may take A = { 1, 2 }, B = { 1, 3 }, C = { 2 , 3 }\nEXERCISE 2.1\n1.x = 2 and  y = 1 2.The number of elements in A × B is 9.\n3.G × H = {(7, 5), (7, 4), (7, 2), (8, 5), (8, 4), (8, 2)}\nH × G = {(5, 7), (5, 8), (4, 7), (4, 8), (2, 7), (2, 8)}\n4. (i)False\nP × Q = {( m, n), (m, m), (n, n), (n, m)}\n(ii)True\n(iii)True\n5.A\n × A = {(– 1, – 1), (– 1, 1), (1, – 1), (1, 1)}\nA × \nA × A = {(–1, –1, –1), (–1, –1, 1), (–1, 1, –1), (–1, 1, 1), (1, –1, –1), (1, –1, 1),\n(1, 1, –1), (1, 1, 1)}\n6.A = {a , b}, B = {x , y}\n8.A × B = {(1, 3), (1, 4), (2, 3), (2, 4)}\nA × B will have 24 = 16 subsets.\n9. A = {x , y, z} and B = {1,2}\n10. A = {–1, 0, 1}, remaining elements of\nA × A are (–1, –1), (–1, 1), (0, –1), (0, 0), (1, –1), (1, 0), (1, 1)\nReprint 2025-26\n\n338 MATHEMA TICS\nEXERCISE 2.2\n1.R = {(1, 3), (2, 6), (3, 9), (4, 12)}\nDomain of R = {1, 2, 3, 4}\nRange of R = {3, 6, 9, 12}\nCo domain of R = {1, 2, ..., 14}\n2.R = {(1, 6), (2, 7), (3, 8)}\nDomain of R  = {1, 2, 3}\nRange of R = {6, 7, 8}\n3.R = {(1, 4), (1, 6), (2, 9), (3, 4), (3, 6), (5, 4), (5, 6)}\n4. (i)R = {( x, y) : y = x – 2 for x = 5, 6, 7}\n(ii) R = {(5,3), (6,4), (7,5)}. Domain of R = {5, 6, 7}, Range of  R = {3, 4, 5}\n5. (i)R = {(1, 1), (1,2), (1, 3), (1, 4), (1, 6), (2 4), (2, 6), (2, 2), (4, 4), (6, 6),\n(3, 3), (3, 6)}\n(ii) Domain of R = {1, 2, 3, 4, 6}\n(iii) Range of  R = {1, 2, 3, 4, 6}\n6.Domain of R = {0, 1, 2, 3, 4, 5,} 7.   R = {(2, 8), (3, 27), (5, 125), (7, 343)}\nRange of R = {5, 6, 7, 8, 9, 10}\n8.No\n. of relations from A into B = 269.   Domain of R = Z\n    Range of R = Z\nEXERCISE 2.3\n1. (i)yes, Domain = {2, 5, 8, 1 1, 14, 17}, Range = {1}\n(ii) yes, Domain = (2, 4, 6, 8, 10, 12, 14}, Range = {1, 2, 3, 4, 5, 6, 7}\n(iii)  No.\n2. (i)Domain = R, Range =  (– ∞, 0]\n(ii) Domain of function = { x : –3 ≤  x ≤ 3}\nRange of function = { x : 0 ≤ x ≤ 3}\n3. (i)f (0) = –5 (ii)   f (7) = 9 (iii) f (–3) = –1 1\n4. (i)t (0) = 32 (ii)   t (28) = 412\n5(iii) t (–10) = 14     (iv)   100\n5. (i)Range = (– ∞, 2) (ii) Range = [2, ∞) (iii) Range = R\nReprint 2025-26\n\n  ANSWERS            339\nMiscellaneous Exercise on ",
+      "wordCount": 577,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 1,
+          "exerciseNumber": "2.1",
+          "questions": [
+            {
+              "questionNumber": 4,
+              "questionText": "(i)False\nP × Q = {( m, n), (m, m), (n, n), (n, m)}\n(ii)True\n(iii)True"
+            },
+            {
+              "questionNumber": 9,
+              "questionText": "A = {x , y, z} and B = {1,2}"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "A = {–1, 0, 1}, remaining elements of\nA × A are (–1, –1), (–1, 1), (0, –1), (0, 0), (1, –1), (1, 0), (1, 1)\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)R = {( x, y) : y = x – 2 for x = 5, 6, 7}\n(ii) R = {(5,3), (6,4), (7,5)}. Domain of R = {5, 6, 7}, Range of  R = {3, 4, 5}"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)R = {(1, 1), (1,2), (1, 3), (1, 4), (1, 6), (2 4), (2, 6), (2, 2), (4, 4), (6, 6),\n(3, 3), (3, 6)}\n(ii) Domain of R = {1, 2, 3, 4, 6}\n(iii) Range of  R = {1, 2, 3, 4, 6}"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)yes, Domain = {2, 5, 8, 1 1, 14, 17}, Range = {1}\n(ii) yes, Domain = (2, 4, 6, 8, 10, 12, 14}, Range = {1, 2, 3, 4, 5, 6, 7}\n(iii)  No."
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)Domain = R, Range =  (– ∞, 0]\n(ii) Domain of function = { x : –3 ≤  x ≤ 3}\nRange of function = { x : 0 ≤ x ≤ 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i)f (0) = –5 (ii)   f (7) = 9 (iii) f (–3) = –1 1"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)t (0) = 32 (ii)   t (28) = 412\n5(iii) t (–10) = 14     (iv)   100"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)Range = (– ∞, 2) (ii) Range = [2, ∞) (iii) Range = R\nReprint 2025-26"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 1,
+          "exerciseNumber": "2.2",
+          "questions": [
+            {
+              "questionNumber": 4,
+              "questionText": "(i)R = {( x, y) : y = x – 2 for x = 5, 6, 7}\n(ii) R = {(5,3), (6,4), (7,5)}. Domain of R = {5, 6, 7}, Range of  R = {3, 4, 5}"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)R = {(1, 1), (1,2), (1, 3), (1, 4), (1, 6), (2 4), (2, 6), (2, 2), (4, 4), (6, 6),\n(3, 3), (3, 6)}\n(ii) Domain of R = {1, 2, 3, 4, 6}\n(iii) Range of  R = {1, 2, 3, 4, 6}"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)yes, Domain = {2, 5, 8, 1 1, 14, 17}, Range = {1}\n(ii) yes, Domain = (2, 4, 6, 8, 10, 12, 14}, Range = {1, 2, 3, 4, 5, 6, 7}\n(iii)  No."
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)Domain = R, Range =  (– ∞, 0]\n(ii) Domain of function = { x : –3 ≤  x ≤ 3}\nRange of function = { x : 0 ≤ x ≤ 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i)f (0) = –5 (ii)   f (7) = 9 (iii) f (–3) = –1 1"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)t (0) = 32 (ii)   t (28) = 412\n5(iii) t (–10) = 14     (iv)   100"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)Range = (– ∞, 2) (ii) Range = [2, ∞) (iii) Range = R\nReprint 2025-26"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 1,
+          "exerciseNumber": "2.3",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "(i)yes, Domain = {2, 5, 8, 1 1, 14, 17}, Range = {1}\n(ii) yes, Domain = (2, 4, 6, 8, 10, 12, 14}, Range = {1, 2, 3, 4, 5, 6, 7}\n(iii)  No."
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)Domain = R, Range =  (– ∞, 0]\n(ii) Domain of function = { x : –3 ≤  x ≤ 3}\nRange of function = { x : 0 ≤ x ≤ 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i)f (0) = –5 (ii)   f (7) = 9 (iii) f (–3) = –1 1"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)t (0) = 32 (ii)   t (28) = 412\n5(iii) t (–10) = 14     (iv)   100"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)Range = (– ∞, 2) (ii) Range = [2, ∞) (iii) Range = R\nReprint 2025-26"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 22
+      }
+    },
+    {
+      "chapterNumber": 2,
+      "title": "2.2.1 3.  Domain of function is set of real numbers except 6 and 2.",
+      "content": "Chapter 2\n2.2.1 3.  Domain of function is set of real numbers except 6 and 2.\n4.Domain  = [1, ∞), Range = [0, ∞)\n5.Domain = R,  Range = non-negative real numbers\n6.Range = [0, 1)\n7.(f + g) x = 3x – 2 8. a = 2, b = – 1 9. (i) No    (ii) No (iii) No\n(f – g) x = – \nx + 4\n1 3,2 3 2f xx xg x  += ≠  −  \n10. (i)Yes, (ii) No 11. No 12. Range of  f = {3, 5, 1 1, 13 }\nEXERCISE 3.1\n1. (i)5π\n36(ii) 19π\n72– (iii)  4π\n3(iv) 26π\n9\n2. (i)39° 22′ 30 ″(ii) –229°  5′ 27″     (iii)  300 ° (iv) 210 °\n3.12π          4. 12 ° 36′ 5. 20π\n36.   5 : 4\n7. (i)2\n15(ii) 1\n5 (iii) 7\n25\nEXERCISE 3.2\n1.3 2 1sin cosec sec 2 tan 3 cot2 3 3x , x – , x , x , x= − = = − = =\n2.5 4 5 3 4cosec cos sec tan cot3 5 4 4 3x , x – , x , x , x= = = − = − = −\n3.4 5 3 5 4sin cosec cos sec tan5 4 5 3 3x , x – , x , x , x= − = = − = − =\n4.12 13 5 12 5sin cosec cos tan cot13 12 13 5 12x , x – , x , x , x= − = = = − = −\nReprint 2025-26\n\n340 MATHEMA TICS\n5.5 13 12 13 12sin cosec cos sec cot13 5 13 12 5x , x , x , x , x= = = − = − = −\n6.1\n27.   2      8.  3     9.  3\n2 10.  1\nEXERCISE 3.3\n5. (i)3 1\n2 2+\n    (ii) 2 – 3\nMiscellaneous Exercise on ",
+      "wordCount": 316,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 2,
+          "exerciseNumber": "3.1",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "(i)5π\n36(ii) 19π\n72– (iii)  4π\n3(iv) 26π\n9"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)39° 22′ 30 ″(ii) –229°  5′ 27″     (iii)  300 ° (iv) 210 °"
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "(i)2\n15(ii) 1\n5 (iii) 7\n25\nEXERCISE 3.2"
+            },
+            {
+              "questionNumber": 27,
+              "questionText": "2      8.  3     9.  3\n2 10.  1\nEXERCISE 3.3"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)3 1\n2 2+\n    (ii) 2 – 3\nMiscellaneous Exercise on"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 2,
+          "exerciseNumber": "3.2",
+          "questions": [
+            {
+              "questionNumber": 27,
+              "questionText": "2      8.  3     9.  3\n2 10.  1\nEXERCISE 3.3"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)3 1\n2 2+\n    (ii) 2 – 3\nMiscellaneous Exercise on"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 2,
+          "exerciseNumber": "3.3",
+          "questions": [
+            {
+              "questionNumber": 5,
+              "questionText": "(i)3 1\n2 2+\n    (ii) 2 – 3\nMiscellaneous Exercise on"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 8
+      }
+    },
+    {
+      "chapterNumber": 3,
+      "title": "8.2 5 5 1",
+      "content": "Chapter 3\n8.2 5 5 1\n5 5 2, ,\n9.6 323 3, – , –\n10.8 2 15 8 2 154 154 4, ,+ −+\nEXERCISE   4.1\n1.3 + i0 2.0 + i 0 3.0+i 1 4.14 + 28 i\n5.2 – 7 i 6.19 21\n5 10i− − 7.17 5\n3 3i+ 8. - 4 +  i 0\n9.2422627i − − 10.22 107\n3 27i−− 11.4 3\n25 25i+ 12.5 3\n14 14i−\n13. 0 + i1 14. 0 – i  7 2\n2\nReprint 2025-26\n\n  ANSWERS            341\nMiscellaneous Exercise on ",
+      "wordCount": 93,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 3,
+          "exerciseNumber": "4.1",
+          "questions": [
+            {
+              "questionNumber": 13,
+              "questionText": "0 + i1 14. 0 – i  7 2\n2\nReprint 2025-26"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 1
+      }
+    },
+    {
+      "chapterNumber": 4,
+      "title": "1.2 – 2 i 3.307 599",
+      "content": "Chapter 4\n1.2 – 2 i 3.307 599\n442i +\n5. 2 7.2(i) (ii) 05,−8. x = 3, y = – 3 9. 2\n11.1 12. 0 14. 4\nEXERCISE 5.1\n  1. (i){1, 2, 3, 4} (ii) {... – 3, – 2, –1, 0, 1,2,3,4,}\n  2. (i)No Solution (ii) {... – 4, – 3}\n  3. (i){... – 2, – 1, 0, 1} (ii) (–∞, 2)\n  4. (i){–1, 0, 1, 2, 3, ...} (ii) (–2, ∞)\n  5. (–4, ∞) 6.(– ∞, –3) 7.(–∞, –3] 8.(–∞, 4]\n9.(– ∞, 6) 10. (–∞, –6) 11.(–∞, 2] 12. (– ∞, 120]\n13. (4, ∞) 14. (–∞, 2] 15. (4, ∞) 16. (–∞, 2]\n17. (– ∞, 3),     18.  [–1, ∞),     \n19.  (–1, ∞),  20.2\n7, − ∞   ,   \n21. 35 22. 82\n23. (5,7), (7,9) 24. (6,8), (8,10), (10,12)\n25. 9 cm 26. Greater than or equal to 8cm  but less than or equal to 22cm\nReprint 2025-26\n\n342 MATHEMA TICS\nMiscellaneous Exercise on ",
+      "wordCount": 162,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 4,
+          "exerciseNumber": "5.1",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "(i){1, 2, 3, 4} (ii) {... – 3, – 2, –1, 0, 1,2,3,4,}"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)No Solution (ii) {... – 4, – 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i){... – 2, – 1, 0, 1} (ii) (–∞, 2)"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i){–1, 0, 1, 2, 3, ...} (ii) (–2, ∞)"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(–4, ∞) 6.(– ∞, –3) 7.(–∞, –3] 8.(–∞, 4]"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "(4, ∞) 14. (–∞, 2] 15. (4, ∞) 16. (–∞, 2]"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "(– ∞, 3),     18.  [–1, ∞),"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "(–1, ∞),  20.2\n7, − ∞   ,"
+            },
+            {
+              "questionNumber": 23,
+              "questionText": "(5,7), (7,9) 24. (6,8), (8,10), (10,12)"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "9 cm 26. Greater than or equal to 8cm  but less than or equal to 22cm\nReprint 2025-26"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 10
+      }
+    },
+    {
+      "chapterNumber": 5,
+      "title": "1.[2, 3] 2.(0, 1] 3.[– 4, 2]",
+      "content": "Chapter 5\n1.[2, 3] 2.(0, 1] 3.[– 4, 2]\n4.(– 23, 2] 5.80 10\n3 3– –, \n  6.1113, \n  \n7.(–5, 5)\n8.(–1, 7)\n9.(5, ∞)\n10. [– 7, 1 1]\n11.Between 20°C and 25°C\n12. More than 320 litres but less than 1280 litres.\n13. More than 562.5 litres but less than 900 litres.\n14. 9.6 ≤ MA ≤ 16.8\nEXERCISE 6.1\n1.(i) 125, (ii) 60. 2.  108 3.5040 4.336\n5.8 6.   20\nEXERCISE 6.2\n1.(i) 40320, (ii) 18 2.30, No 3.28 4.64\n5.(i) 30, (ii) 15120\nEXERCISE 6.3\n1.504 2.4536 3.60 4.120, 48\n5.56 6.9 7.(i) 3,  (ii) 4 8.40320\nReprint 2025-26\n\n  ANSWERS            343\n9.(i) 360,  (ii) 720,  (iii) 240 10. 33810\n11.(i) 1814400, (ii) 2419200, (iii) 25401600\nEXERCISE 6.4\n1.45 2.(i) 5, (ii) 6 3.210 4.40\n5.2000 6.778320 7.3960 8.200\n9.35\nMiscellaneous Exercise on ",
+      "wordCount": 142,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 6,
+      "title": "1.3600 2.1440 3.(i) 504,  (ii) 588,  (iii) 1632",
+      "content": "Chapter 6\n1.3600 2.1440 3.(i) 504,  (ii) 588,  (iii) 1632\n4.907200 5.120 6.50400 7.420\n8.4C1×48C49.2880 10.22C7+22C1011.151200\nEXERCISE 7.1\n1.1–10 x + 40 x2 – 80 x3 + 80\nx4 – 32 x5\n2.5\n3\n5 332 40 20 558 32xx xx x x− + − + −\n3.64 x6 –576 x5 + 2160 x4 – 4320 x3 + 4860 x2 – 2916 x + 729\n4.5 3\n3 55 10 10 5 1\n243 81 27 9 3x xxx x x+ + + + +\n5.6 4 2\n2 4 615 6 16 15 20x x x\nx x x+ + + + + +\n6.884736 7.11040808032 8.104060401\n9.9509900499 10. (1.1)10000  > 1000 11.8(a3b + ab3); 40 6\n12. 2(x6 + 15 x4 + 15 x2 + 1), 198\nMiscellaneous Exercise on ",
+      "wordCount": 132,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 6,
+          "exerciseNumber": "7.1",
+          "questions": [
+            {
+              "questionNumber": 12,
+              "questionText": "2(x6 + 15 x4 + 15 x2 + 1), 198\nMiscellaneous Exercise on"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 1
+      }
+    },
+    {
+      "chapterNumber": 7,
+      "title": "2.396 6 3.2a8 + 12 a6 – 10 a4 – 4a2 + 2",
+      "content": "Chapter 7\n2.396 6 3.2a8 + 12 a6 – 10 a4 – 4a2 + 2\n4.0.9510\n5.2 3 4\n2 3 416 8 32 164 52 2 16x x xxxx x x+ − + − + + + −\n6.27x6 – 54 ax5 + 117a2x4 – 116a3x3 + 117a4x2 – 54 a5x + 27 a6\nReprint 2025-26\n\n344 MATHEMA TICS\nEXERCISE 8.1\n1.3, 8, 15, 24, 35 2.1 2 3 4 5\n2 3 4 5 6, , , , 3.2, 4, 8, 16 and 32\n4.1 1 1 5 7and6 6 2 6 6, , ,− 5.25, –125, 625, –3125, 15625\n6.3 9 21 7521and2 2 2 2, , , 7.65, 93 8.49\n128\n9.729 10.360\n23\n11.3, 11, 35, 107, 323;      3 + 1 1 + 35 + 107 + 323 + ...\n12.1 1 1 1 1 1 1 11 12 6 24 120 2 6 24 120, , , , ; – ...− − − − − − − −        − + + + + +              \n13. 2, 2, 1, 0, –1;         2 + 2 + 1 + 0 + (–1) + ... 14.3 5 81 2 and2 3 5, , ,\nEXERCISE 8.2\n1. 205 5\n2 2n, 2.3072 4.– 2187\n5.(a) 13th ,   (b) 12th,   (c) 9th6.± 1 7. ( )20 11 0 16.  − \n8. ( )273 1 3 12n \n+ −   9.( )1\n1na\na − − \n+10.( )3 2\n21\n1nx x\nx−\n−\n11. ( )11322 3 12+ − 12.5 2 2 5 5 2or ; Terms are 1 or 12 5 5 2 2 5r , , , , =\n13. 4 14. ( )16 16;2; 2 17 7n− 15. 2059 or 463\nReprint 2025-26\n\n  ANSWERS            345\n16.4 8 16or 4 8 16 32 643 3 3, , ,... , , , , ,..− − −− − 18. ( )80 810 181 9nn − −\n19. 496 20. rR 21. 3, –6, 12, –24 26. 9 and 27\n27.1\n2–n= 30. 120, 480, 30 (2n) 31. Rs 500 (1.1)10\n32. x2 –16x + 25 = 0\nMiscellaneous Exercise on ",
+      "wordCount": 377,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 7,
+          "exerciseNumber": "8.1",
+          "questions": [
+            {
+              "questionNumber": 13,
+              "questionText": "2, 2, 1, 0, –1;         2 + 2 + 1 + 0 + (–1) + ... 14.3 5 81 2 and2 3 5, , ,\nEXERCISE 8.2"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "205 5\n2 2n, 2.3072 4.– 2187"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )273 1 3 12n \n+ −   9.( )1\n1na\na − − \n+10.( )3 2\n21\n1nx x\nx−\n−"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )11322 3 12+ − 12.5 2 2 5 5 2or ; Terms are 1 or 12 5 5 2 2 5r , , , , ="
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "4 14. ( )16 16;2; 2 17 7n− 15. 2059 or 463\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "496 20. rR 21. 3, –6, 12, –24 26. 9 and 27"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "x2 –16x + 25 = 0\nMiscellaneous Exercise on"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 7,
+          "exerciseNumber": "8.2",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "205 5\n2 2n, 2.3072 4.– 2187"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )273 1 3 12n \n+ −   9.( )1\n1na\na − − \n+10.( )3 2\n21\n1nx x\nx−\n−"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )11322 3 12+ − 12.5 2 2 5 5 2or ; Terms are 1 or 12 5 5 2 2 5r , , , , ="
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "4 14. ( )16 16;2; 2 17 7n− 15. 2059 or 463\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "496 20. rR 21. 3, –6, 12, –24 26. 9 and 27"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "x2 –16x + 25 = 0\nMiscellaneous Exercise on"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 13
+      }
+    },
+    {
+      "chapterNumber": 8,
+      "title": "1.4 2.160; 6 3.± 3 4.8, 16, 32",
+      "content": "Chapter 8\n1.4 2.160; 6 3.± 3 4.8, 16, 32\n5.4 11.(i) ( )50 510 181 9n n− −  ,    (ii) ( )2 21 103 27n n−− −\n12. 1680\n13. Rs 16680 14. Rs 39100 15. Rs 43690 16. Rs 17000; 20,000\n17. Rs 5120 18. 25 days\nEXERCISE 9.1\n1.121squareunit.2\n2.(0, a), (0, – a) and ()3 0−a,or (0, a), (0, – a), and ( )3 0a,\n3.(i) 2 1y y ,− (ii) 2 1x x− 4.1502, \n  5.1\n2−\n7.3– 9.135°\n10. 1 and 2, or 1\n2 and 1, or – 1 and –2, or 1\n2− and – 1\nEXERCISE 9.2\n1.y = 0 and x = 0 2.  x – 2y + 10 = 0 3.y = \nmx\n4.( )( ) ( ) 3 1 3 1 4 3 1 x y –+ − − = 5.2x + y + 6 = 0\n6. 3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26\n\n346 MATHEMA TICS\n8. 3x – 4y + 8 = 0 9.5x – y + 20 = 0\n10. (1 + n)x + 3(1 + n)y = n +11 11.x + y = 5\n12. x + 2y – 6 = 0, 2 x + y – 6 = 0\n13.3 2 0and 3 2 0x y x y + − = + + = 14. 2x – 9y + 85 = 0\n15. ( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9.3\n1. (i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0\n2. (i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis.\n3.  5 units\n4.(– 2, 0) and (8, 0) 5.(i) 65 1units,(ii) units.17 2p r\nl+\n6.3x – 4y + 18 = 0 7.y + 7x  = 21   8.  30° and 150°\n9.22\n9\n11. ( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +\n12. 2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= =\n16. y – x = 1, 2\nMiscellaneous Exercise on ",
+      "wordCount": 430,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 8,
+          "exerciseNumber": "9.1",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "1 and 2, or 1\n2 and 1, or – 1 and –2, or 1\n2− and – 1\nEXERCISE 9.2"
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "3x – 4y + 8 = 0 9.5x – y + 20 = 0"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(1 + n)x + 3(1 + n)y = n +11 11.x + y = 5"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x + 2y – 6 = 0, 2 x + y – 6 = 0"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9.3"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis."
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= ="
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x = 1, 2\nMiscellaneous Exercise on"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 8,
+          "exerciseNumber": "9.2",
+          "questions": [
+            {
+              "questionNumber": 6,
+              "questionText": "3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "3x – 4y + 8 = 0 9.5x – y + 20 = 0"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(1 + n)x + 3(1 + n)y = n +11 11.x + y = 5"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x + 2y – 6 = 0, 2 x + y – 6 = 0"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9.3"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis."
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= ="
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x = 1, 2\nMiscellaneous Exercise on"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 8,
+          "exerciseNumber": "9.3",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "(i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis."
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= ="
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x = 1, 2\nMiscellaneous Exercise on"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 26
+      }
+    },
+    {
+      "chapterNumber": 9,
+      "title": "1.(a) 3, (b) ± 2, (c) 6 or 1",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 10,
+      "title": "We may take A = { 1, 2 }, B = { 1, 3 }, C = { 2 , 3",
+      "content": "10. We may take A = { 1, 2 }, B = { 1, 3 }, C = { 2 , 3 }\nEXERCISE 2.1\n1.x = 2 and  y = 1 2.The number of elements in A × B is 9.\n3.G × H = {(7, 5), (7, 4), (7, 2), (8, 5), (8, 4), (8, 2)}\nH × G = {(5, 7), (5, 8), (4, 7), (4, 8), (2, 7), (2, 8)}\n4. (i)False\nP × Q = {( m, n), (m, m), (n, n), (n, m)}\n(ii)True\n(iii)True\n5.A\n × A = {(– 1, – 1), (– 1, 1), (1, – 1), (1, 1)}\nA × \nA × A = {(–1, –1, –1), (–1, –1, 1), (–1, 1, –1), (–1, 1, 1), (1, –1, –1), (1, –1, 1),\n(1, 1, –1), (1, 1, 1)}\n6.A = {a , b}, B = {x , y}\n8.A × B = {(1, 3), (1, 4), (2, 3), (2, 4)}\nA × B will have 24 = 16 subsets.\n9. A = {x , y, z} and B = {1,2}\n10. A = {–1, 0, 1}, remaining elements of\nA × A are (–1, –1), (–1, 1), (0, –1), (0, 0), (1, –1), (1, 0), (1, 1)\nReprint 2025-26\n\n338 MATHEMA TICS\nEXERCISE 2.2\n1.R = {(1, 3), (2, 6), (3, 9), (4, 12)}\nDomain of R = {1, 2, 3, 4}\nRange of R = {3, 6, 9, 12}\nCo domain of R = {1, 2, ..., 14}\n2.R = {(1, 6), (2, 7), (3, 8)}\nDomain of R  = {1, 2, 3}\nRange of R = {6, 7, 8}\n3.R = {(1, 4), (1, 6), (2, 9), (3, 4), (3, 6), (5, 4), (5, 6)}\n4. (i)R = {( x, y) : y = x – 2 for x = 5, 6, 7}\n(ii) R = {(5,3), (6,4), (7,5)}. Domain of R = {5, 6, 7}, Range of  R = {3, 4, 5}\n5. (i)R = {(1, 1), (1,2), (1, 3), (1, 4), (1, 6), (2 4), (2, 6), (2, 2), (4, 4), (6, 6),\n(3, 3), (3, 6)}\n(ii) Domain of R = {1, 2, 3, 4, 6}\n(iii) Range of  R = {1, 2, 3, 4, 6}\n6.Domain of R = {0, 1, 2, 3, 4, 5,} 7.   R = {(2, 8), (3, 27), (5, 125), (7, 343)}\nRange of R = {5, 6, 7, 8, 9, 10}\n8.No\n. of relations from A into B = 269.   Domain of R = Z\n    Range of R = Z\nEXERCISE 2.3\n1. (i)yes, Domain = {2, 5, 8, 1 1, 14, 17}, Range = {1}\n(ii) yes, Domain = (2, 4, 6, 8, 10, 12, 14}, Range = {1, 2, 3, 4, 5, 6, 7}\n(iii)  No.\n2. (i)Domain = R, Range =  (– ∞, 0]\n(ii) Domain of function = { x : –3 ≤  x ≤ 3}\nRange of function = { x : 0 ≤ x ≤ 3}\n3. (i)f (0) = –5 (ii)   f (7) = 9 (iii) f (–3) = –1 1\n4. (i)t (0) = 32 (ii)   t (28) = 412\n5(iii) t (–10) = 14     (iv)   100\n5. (i)Range = (– ∞, 2) (ii) Range = [2, ∞) (iii) Range = R\nReprint 2025-26\n\n  ANSWERS            339\nMiscellaneous Exercise on Chapter 2\n2.2.1 3.  Domain of function is set of real numbers except 6 and 2.\n4.Domain  = [1, ∞), Range = [0, ∞)\n5.Domain = R,  Range = non-negative real numbers\n6.Range = [0, 1)\n7.(f + g) x = 3x – 2 8. a = 2, b = – 1 9. (i) No    (ii) No (iii) No\n(f – g) x = – \nx + 4\n1 3,2 3 2f xx xg x  += ≠  −  \n10. (i)Yes, (ii) No 11. No 12. Range of  f = {3, 5, 1 1, 13 }\nEXERCISE 3.1\n1. (i)5π\n36(ii) 19π\n72– (iii)  4π\n3(iv) 26π\n9\n2. (i)39° 22′ 30 ″(ii) –229°  5′ 27″     (iii)  300 ° (iv) 210 °\n3.12π          4. 12 ° 36′ 5. 20π\n36.   5 : 4\n7. (i)2\n15(ii) 1\n5 (iii) 7\n25\nEXERCISE 3.2\n1.3 2 1sin cosec sec 2 tan 3 cot2 3 3x , x – , x , x , x= − = = − = =\n2.5 4 5 3 4cosec cos sec tan cot3 5 4 4 3x , x – , x , x , x= = = − = − = −\n3.4 5 3 5 4sin cosec cos sec tan5 4 5 3 3x , x – , x , x , x= − = = − = − =\n4.12 13 5 12 5sin cosec cos tan cot13 12 13 5 12x , x – , x , x , x= − = = = − = −\nReprint 2025-26\n\n340 MATHEMA TICS\n5.5 13 12 13 12sin cosec cos sec cot13 5 13 12 5x , x , x , x , x= = = − = − = −\n6.1\n27.   2      8.  3     9.  3\n2 10.  1\nEXERCISE 3.3\n5. (i)3 1\n2 2+\n    (ii) 2 – 3\nMiscellaneous Exercise on Chapter 3\n8.2 5 5 1\n5 5 2, ,\n9.6 323 3, – , –\n10.8 2 15 8 2 154 154 4, ,+ −+\nEXERCISE   4.1\n1.3 + i0 2.0 + i 0 3.0+i 1 4.14 + 28 i\n5.2 – 7 i 6.19 21\n5 10i− − 7.17 5\n3 3i+ 8. - 4 +  i 0\n9.2422627i − − 10.22 107\n3 27i−− 11.4 3\n25 25i+ 12.5 3\n14 14i−\n13. 0 + i1 14. 0 – i  7 2\n2\nReprint 2025-26\n\n  ANSWERS            341\nMiscellaneous Exercise on Chapter 4\n1.2 – 2 i 3.307 599\n442i +\n5. 2 7.2(i) (ii) 05,−8. x = 3, y = – 3 9. 2\n11.1 12. 0 14. 4\nEXERCISE 5.1\n  1. (i){1, 2, 3, 4} (ii) {... – 3, – 2, –1, 0, 1,2,3,4,}\n  2. (i)No Solution (ii) {... – 4, – 3}\n  3. (i){... – 2, – 1, 0, 1} (ii) (–∞, 2)\n  4. (i){–1, 0, 1, 2, 3, ...} (ii) (–2, ∞)\n  5. (–4, ∞) 6.(– ∞, –3) 7.(–∞, –3] 8.(–∞, 4]\n9.(– ∞, 6) 10. (–∞, –6) 11.(–∞, 2] 12. (– ∞, 120]\n13. (4, ∞) 14. (–∞, 2] 15. (4, ∞) 16. (–∞, 2]\n17. (– ∞, 3),     18.  [–1, ∞),     \n19.  (–1, ∞),  20.2\n7, − ∞   ,   \n21. 35 22. 82\n23. (5,7), (7,9) 24. (6,8), (8,10), (10,12)\n25. 9 cm 26. Greater than or equal to 8cm  but less than or equal to 22cm\nReprint 2025-26\n\n342 MATHEMA TICS\nMiscellaneous Exercise on Chapter 5\n1.[2, 3] 2.(0, 1] 3.[– 4, 2]\n4.(– 23, 2] 5.80 10\n3 3– –, \n  6.1113, \n  \n7.(–5, 5)\n8.(–1, 7)\n9.(5, ∞)\n10. [– 7, 1 1]\n11.Between 20°C and 25°C\n",
+      "wordCount": 1159,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 10,
+          "exerciseNumber": "2.1",
+          "questions": [
+            {
+              "questionNumber": 4,
+              "questionText": "(i)False\nP × Q = {( m, n), (m, m), (n, n), (n, m)}\n(ii)True\n(iii)True"
+            },
+            {
+              "questionNumber": 9,
+              "questionText": "A = {x , y, z} and B = {1,2}"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "A = {–1, 0, 1}, remaining elements of\nA × A are (–1, –1), (–1, 1), (0, –1), (0, 0), (1, –1), (1, 0), (1, 1)\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)R = {( x, y) : y = x – 2 for x = 5, 6, 7}\n(ii) R = {(5,3), (6,4), (7,5)}. Domain of R = {5, 6, 7}, Range of  R = {3, 4, 5}"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)R = {(1, 1), (1,2), (1, 3), (1, 4), (1, 6), (2 4), (2, 6), (2, 2), (4, 4), (6, 6),\n(3, 3), (3, 6)}\n(ii) Domain of R = {1, 2, 3, 4, 6}\n(iii) Range of  R = {1, 2, 3, 4, 6}"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)yes, Domain = {2, 5, 8, 1 1, 14, 17}, Range = {1}\n(ii) yes, Domain = (2, 4, 6, 8, 10, 12, 14}, Range = {1, 2, 3, 4, 5, 6, 7}\n(iii)  No."
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)Domain = R, Range =  (– ∞, 0]\n(ii) Domain of function = { x : –3 ≤  x ≤ 3}\nRange of function = { x : 0 ≤ x ≤ 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i)f (0) = –5 (ii)   f (7) = 9 (iii) f (–3) = –1 1"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)t (0) = 32 (ii)   t (28) = 412\n5(iii) t (–10) = 14     (iv)   100"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)Range = (– ∞, 2) (ii) Range = [2, ∞) (iii) Range = R\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(i)Yes, (ii) No 11. No 12. Range of  f = {3, 5, 1 1, 13 }\nEXERCISE 3.1"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)5π\n36(ii) 19π\n72– (iii)  4π\n3(iv) 26π\n9"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)39° 22′ 30 ″(ii) –229°  5′ 27″     (iii)  300 ° (iv) 210 °"
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "(i)2\n15(ii) 1\n5 (iii) 7\n25\nEXERCISE 3.2"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 10,
+          "exerciseNumber": "2.2",
+          "questions": [
+            {
+              "questionNumber": 4,
+              "questionText": "(i)R = {( x, y) : y = x – 2 for x = 5, 6, 7}\n(ii) R = {(5,3), (6,4), (7,5)}. Domain of R = {5, 6, 7}, Range of  R = {3, 4, 5}"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)R = {(1, 1), (1,2), (1, 3), (1, 4), (1, 6), (2 4), (2, 6), (2, 2), (4, 4), (6, 6),\n(3, 3), (3, 6)}\n(ii) Domain of R = {1, 2, 3, 4, 6}\n(iii) Range of  R = {1, 2, 3, 4, 6}"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)yes, Domain = {2, 5, 8, 1 1, 14, 17}, Range = {1}\n(ii) yes, Domain = (2, 4, 6, 8, 10, 12, 14}, Range = {1, 2, 3, 4, 5, 6, 7}\n(iii)  No."
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)Domain = R, Range =  (– ∞, 0]\n(ii) Domain of function = { x : –3 ≤  x ≤ 3}\nRange of function = { x : 0 ≤ x ≤ 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i)f (0) = –5 (ii)   f (7) = 9 (iii) f (–3) = –1 1"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)t (0) = 32 (ii)   t (28) = 412\n5(iii) t (–10) = 14     (iv)   100"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)Range = (– ∞, 2) (ii) Range = [2, ∞) (iii) Range = R\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(i)Yes, (ii) No 11. No 12. Range of  f = {3, 5, 1 1, 13 }\nEXERCISE 3.1"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)5π\n36(ii) 19π\n72– (iii)  4π\n3(iv) 26π\n9"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)39° 22′ 30 ″(ii) –229°  5′ 27″     (iii)  300 ° (iv) 210 °"
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "(i)2\n15(ii) 1\n5 (iii) 7\n25\nEXERCISE 3.2"
+            },
+            {
+              "questionNumber": 27,
+              "questionText": "2      8.  3     9.  3\n2 10.  1\nEXERCISE 3.3"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)3 1\n2 2+\n    (ii) 2 – 3\nMiscellaneous Exercise on Chapter 3"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "0 + i1 14. 0 – i  7 2\n2\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "2 7.2(i) (ii) 05,−8. x = 3, y = – 3 9. 2"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i){1, 2, 3, 4} (ii) {... – 3, – 2, –1, 0, 1,2,3,4,}"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)No Solution (ii) {... – 4, – 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i){... – 2, – 1, 0, 1}"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 10,
+          "exerciseNumber": "2.3",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "(i)yes, Domain = {2, 5, 8, 1 1, 14, 17}, Range = {1}\n(ii) yes, Domain = (2, 4, 6, 8, 10, 12, 14}, Range = {1, 2, 3, 4, 5, 6, 7}\n(iii)  No."
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)Domain = R, Range =  (– ∞, 0]\n(ii) Domain of function = { x : –3 ≤  x ≤ 3}\nRange of function = { x : 0 ≤ x ≤ 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i)f (0) = –5 (ii)   f (7) = 9 (iii) f (–3) = –1 1"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)t (0) = 32 (ii)   t (28) = 412\n5(iii) t (–10) = 14     (iv)   100"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)Range = (– ∞, 2) (ii) Range = [2, ∞) (iii) Range = R\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(i)Yes, (ii) No 11. No 12. Range of  f = {3, 5, 1 1, 13 }\nEXERCISE 3.1"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)5π\n36(ii) 19π\n72– (iii)  4π\n3(iv) 26π\n9"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)39° 22′ 30 ″(ii) –229°  5′ 27″     (iii)  300 ° (iv) 210 °"
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "(i)2\n15(ii) 1\n5 (iii) 7\n25\nEXERCISE 3.2"
+            },
+            {
+              "questionNumber": 27,
+              "questionText": "2      8.  3     9.  3\n2 10.  1\nEXERCISE 3.3"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)3 1\n2 2+\n    (ii) 2 – 3\nMiscellaneous Exercise on Chapter 3"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "0 + i1 14. 0 – i  7 2\n2\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "2 7.2(i) (ii) 05,−8. x = 3, y = – 3 9. 2"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i){1, 2, 3, 4} (ii) {... – 3, – 2, –1, 0, 1,2,3,4,}"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)No Solution (ii) {... – 4, – 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i){... – 2, – 1, 0, 1} (ii) (–∞, 2)"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i){–1, 0, 1, 2, 3, ...} (ii) (–2, ∞)"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(–4, ∞) 6.(– ∞, –3) 7.(–∞, –3] 8.(–∞, 4]"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "(4, ∞) 14. (–∞, 2] 15. (4, ∞) 16. (–∞, 2]"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "(– ∞, 3),     18.  [–1, ∞),"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "(–1, ∞),  20.2\n7, − ∞   ,"
+            },
+            {
+              "questionNumber": 23,
+              "questionText": "(5,7), (7,9) 24. (6,8), (8,10), (10,12)"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "9 cm 26. Greater than or equal to 8cm  but less than or equal to 22cm\nReprint 2025-26"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 10,
+          "exerciseNumber": "3.1",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "(i)5π\n36(ii) 19π\n72– (iii)  4π\n3(iv) 26π\n9"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)39° 22′ 30 ″(ii) –229°  5′ 27″     (iii)  300 ° (iv) 210 °"
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "(i)2\n15(ii) 1\n5 (iii) 7\n25\nEXERCISE 3.2"
+            },
+            {
+              "questionNumber": 27,
+              "questionText": "2      8.  3     9.  3\n2 10.  1\nEXERCISE 3.3"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)3 1\n2 2+\n    (ii) 2 – 3\nMiscellaneous Exercise on Chapter 3"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "0 + i1 14. 0 – i  7 2\n2\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "2 7.2(i) (ii) 05,−8. x = 3, y = – 3 9. 2"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i){1, 2, 3, 4} (ii) {... – 3, – 2, –1, 0, 1,2,3,4,}"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)No Solution (ii) {... – 4, – 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i){... – 2, – 1, 0, 1} (ii) (–∞, 2)"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i){–1, 0, 1, 2, 3, ...} (ii) (–2, ∞)"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(–4, ∞) 6.(– ∞, –3) 7.(–∞, –3] 8.(–∞, 4]"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "(4, ∞) 14. (–∞, 2] 15. (4, ∞) 16. (–∞, 2]"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "(– ∞, 3),     18.  [–1, ∞),"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "(–1, ∞),  20.2\n7, − ∞   ,"
+            },
+            {
+              "questionNumber": 23,
+              "questionText": "(5,7), (7,9) 24. (6,8), (8,10), (10,12)"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "9 cm 26. Greater than or equal to 8cm  but less than or equal to 22cm\nReprint 2025-26"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 10,
+          "exerciseNumber": "3.2",
+          "questions": [
+            {
+              "questionNumber": 27,
+              "questionText": "2      8.  3     9.  3\n2 10.  1\nEXERCISE 3.3"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i)3 1\n2 2+\n    (ii) 2 – 3\nMiscellaneous Exercise on Chapter 3"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "0 + i1 14. 0 – i  7 2\n2\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "2 7.2(i) (ii) 05,−8. x = 3, y = – 3 9. 2"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i){1, 2, 3, 4} (ii) {... – 3, – 2, –1, 0, 1,2,3,4,}"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)No Solution (ii) {... – 4, – 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i){... – 2, – 1, 0, 1} (ii) (–∞, 2)"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i){–1, 0, 1, 2, 3, ...} (ii) (–2, ∞)"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(–4, ∞) 6.(– ∞, –3) 7.(–∞, –3] 8.(–∞, 4]"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "(4, ∞) 14. (–∞, 2] 15. (4, ∞) 16. (–∞, 2]"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "(– ∞, 3),     18.  [–1, ∞),"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "(–1, ∞),  20.2\n7, − ∞   ,"
+            },
+            {
+              "questionNumber": 23,
+              "questionText": "(5,7), (7,9) 24. (6,8), (8,10), (10,12)"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "9 cm 26. Greater than or equal to 8cm  but less than or equal to 22cm\nReprint 2025-26"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 10,
+          "exerciseNumber": "3.3",
+          "questions": [
+            {
+              "questionNumber": 5,
+              "questionText": "(i)3 1\n2 2+\n    (ii) 2 – 3\nMiscellaneous Exercise on Chapter 3"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "0 + i1 14. 0 – i  7 2\n2\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "2 7.2(i) (ii) 05,−8. x = 3, y = – 3 9. 2"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i){1, 2, 3, 4} (ii) {... – 3, – 2, –1, 0, 1,2,3,4,}"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)No Solution (ii) {... – 4, – 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i){... – 2, – 1, 0, 1} (ii) (–∞, 2)"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i){–1, 0, 1, 2, 3, ...} (ii) (–2, ∞)"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(–4, ∞) 6.(– ∞, –3) 7.(–∞, –3] 8.(–∞, 4]"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "(4, ∞) 14. (–∞, 2] 15. (4, ∞) 16. (–∞, 2]"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "(– ∞, 3),     18.  [–1, ∞),"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "(–1, ∞),  20.2\n7, − ∞   ,"
+            },
+            {
+              "questionNumber": 23,
+              "questionText": "(5,7), (7,9) 24. (6,8), (8,10), (10,12)"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "9 cm 26. Greater than or equal to 8cm  but less than or equal to 22cm\nReprint 2025-26"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 10,
+          "exerciseNumber": "4.1",
+          "questions": [
+            {
+              "questionNumber": 13,
+              "questionText": "0 + i1 14. 0 – i  7 2\n2\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "2 7.2(i) (ii) 05,−8. x = 3, y = – 3 9. 2"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i){1, 2, 3, 4} (ii) {... – 3, – 2, –1, 0, 1,2,3,4,}"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)No Solution (ii) {... – 4, – 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i){... – 2, – 1, 0, 1} (ii) (–∞, 2)"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i){–1, 0, 1, 2, 3, ...} (ii) (–2, ∞)"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(–4, ∞) 6.(– ∞, –3) 7.(–∞, –3] 8.(–∞, 4]"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "(4, ∞) 14. (–∞, 2] 15. (4, ∞) 16. (–∞, 2]"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "(– ∞, 3),     18.  [–1, ∞),"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "(–1, ∞),  20.2\n7, − ∞   ,"
+            },
+            {
+              "questionNumber": 23,
+              "questionText": "(5,7), (7,9) 24. (6,8), (8,10), (10,12)"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "9 cm 26. Greater than or equal to 8cm  but less than or equal to 22cm\nReprint 2025-26"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 10,
+          "exerciseNumber": "5.1",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "(i){1, 2, 3, 4} (ii) {... – 3, – 2, –1, 0, 1,2,3,4,}"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i)No Solution (ii) {... – 4, – 3}"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "(i){... – 2, – 1, 0, 1} (ii) (–∞, 2)"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i){–1, 0, 1, 2, 3, ...} (ii) (–2, ∞)"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(–4, ∞) 6.(– ∞, –3) 7.(–∞, –3] 8.(–∞, 4]"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "(4, ∞) 14. (–∞, 2] 15. (4, ∞) 16. (–∞, 2]"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "(– ∞, 3),     18.  [–1, ∞),"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "(–1, ∞),  20.2\n7, − ∞   ,"
+            },
+            {
+              "questionNumber": 23,
+              "questionText": "(5,7), (7,9) 24. (6,8), (8,10), (10,12)"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "9 cm 26. Greater than or equal to 8cm  but less than or equal to 22cm\nReprint 2025-26"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 121
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "More than 320 litres but less than 1280 litres.",
+      "content": "12. More than 320 litres but less than 1280 litres.\n",
+      "wordCount": 10,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 13,
+      "title": "More than 562.5 litres but less than 900 litres.",
+      "content": "13. More than 562.5 litres but less than 900 litres.\n14. 9.6 ≤ MA ≤ 16.8\nEXERCISE 6.1\n1.(i) 125, (ii) 60. 2.  108 3.5040 4.336\n5.8 6.   20\nEXERCISE 6.2\n1.(i) 40320, (ii) 18 2.30, No 3.28 4.64\n5.(i) 30, (ii) 15120\nEXERCISE 6.3\n1.504 2.4536 3.60 4.120, 48\n5.56 6.9 7.(i) 3,  (ii) 4 8.40320\nReprint 2025-26\n\n  ANSWERS            343\n9.(i) 360,  (ii) 720,  (iii) 240 10. 33810\n11.(i) 1814400, (ii) 2419200, (iii) 25401600\nEXERCISE 6.4\n1.45 2.(i) 5, (ii) 6 3.210 4.40\n5.2000 6.778320 7.3960 8.200\n9.35\nMiscellaneous Exercise on Chapter 6\n1.3600 2.1440 3.(i) 504,  (ii) 588,  (iii) 1632\n4.907200 5.120 6.50400 7.420\n8.4C1×48C49.2880 10.22C7+22C1011.151200\nEXERCISE 7.1\n1.1–10 x + 40 x2 – 80 x3 + 80\nx4 – 32 x5\n2.5\n3\n5 332 40 20 558 32xx xx x x− + − + −\n3.64 x6 –576 x5 + 2160 x4 – 4320 x3 + 4860 x2 – 2916 x + 729\n4.5 3\n3 55 10 10 5 1\n243 81 27 9 3x xxx x x+ + + + +\n5.6 4 2\n2 4 615 6 16 15 20x x x\nx x x+ + + + + +\n6.884736 7.11040808032 8.104060401\n9.9509900499 10. (1.1)10000  > 1000 11.8(a3b + ab3); 40 6\n12. 2(x6 + 15 x4 + 15 x2 + 1), 198\nMiscellaneous Exercise on Chapter 7\n2.396 6 3.2a8 + 12 a6 – 10 a4 – 4a2 + 2\n4.0.9510\n5.2 3 4\n2 3 416 8 32 164 52 2 16x x xxxx x x+ − + − + + + −\n6.27x6 – 54 ax5 + 117a2x4 – 116a3x3 + 117a4x2 – 54 a5x + 27 a6\nReprint 2025-26\n\n344 MATHEMA TICS\nEXERCISE 8.1\n1.3, 8, 15, 24, 35 2.1 2 3 4 5\n2 3 4 5 6, , , , 3.2, 4, 8, 16 and 32\n4.1 1 1 5 7and6 6 2 6 6, , ,− 5.25, –125, 625, –3125, 15625\n6.3 9 21 7521and2 2 2 2, , , 7.65, 93 8.49\n128\n9.729 10.360\n23\n11.3, 11, 35, 107, 323;      3 + 1 1 + 35 + 107 + 323 + ...\n12.1 1 1 1 1 1 1 11 12 6 24 120 2 6 24 120, , , , ; – ...− − − − − − − −        − + + + + +              \n13. 2, 2, 1, 0, –1;         2 + 2 + 1 + 0 + (–1) + ... 14.3 5 81 2 and2 3 5, , ,\nEXERCISE 8.2\n1. 205 5\n2 2n, 2.3072 4.– 2187\n5.(a) 13th ,   (b) 12th,   (c) 9th6.± 1 7. ( )20 11 0 16.  − \n8. ( )273 1 3 12n \n+ −   9.( )1\n1na\na − − \n+10.( )3 2\n21\n1nx x\nx−\n−\n11. ( )11322 3 12+ − 12.5 2 2 5 5 2or ; Terms are 1 or 12 5 5 2 2 5r , , , , =\n13. 4 14. ( )16 16;2; 2 17 7n− 15. 2059 or 463\nReprint 2025-26\n\n  ANSWERS            345\n16.4 8 16or 4 8 16 32 643 3 3, , ,... , , , , ,..− − −− − 18. ( )80 810 181 9nn − −\n19. 496 20. rR 21. 3, –6, 12, –24 26. 9 and 27\n27.1\n2–n= 30. 120, 480, 30 (2n) 31. Rs 500 (1.1)10\n32. x2 –16x + 25 = 0\nMiscellaneous Exercise on Chapter 8\n1.4 2.160; 6 3.± 3 4.8, 16, 32\n5.4 11.(i) ( )50 510 181 9n n− −  ,    (ii) ( )2 21 103 27n n−− −\n12. 1680\n13. Rs 16680 14. Rs 39100 15. Rs 43690 16. Rs 17000; 20,000\n17. Rs 5120 18. 25 days\nEXERCISE 9.1\n1.121squareunit.2\n2.(0, a), (0, – a) and ()3 0−a,or (0, a), (0, – a), and ( )3 0a,\n3.(i) 2 1y y ,− (ii) 2 1x x− 4.1502, \n  5.1\n2−\n7.3– 9.135°\n10. 1 and 2, or 1\n2 and 1, or – 1 and –2, or 1\n2− and – 1\nEXERCISE 9.2\n1.y = 0 and x = 0 2.  x – 2y + 10 = 0 3.y = \nmx\n4.( )( ) ( ) 3 1 3 1 4 3 1 x y –+ − − = 5.2x + y + 6 = 0\n6. 3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26\n\n346 MATHEMA TICS\n8. 3x – 4y + 8 = 0 9.5x – y + 20 = 0\n10. (1 + n)x + 3(1 + n)y = n +11 11.x + y = 5\n12. x + 2y – 6 = 0, 2 x + y – 6 = 0\n13.3 2 0and 3 2 0x y x y + − = + + = 14. 2x – 9y + 85 = 0\n15. ( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9.3\n1. (i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0\n2. (i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis.\n3.  5 units\n4.(– 2, 0) and (8, 0) 5.(i) 65 1units,(ii) units.17 2p r\nl+\n6.3x – 4y + 18 = 0 7.y + 7x  = 21   8.  30° and 150°\n9.22\n9\n11. ( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +\n12. 2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= =\n16. y – x = 1, 2\nMiscellaneous Exercise on Chapter 9\n1.(a) 3, (b) ± 2, (c) 6 or 1\n2.2 3 6 3 2 6x y , x y− = − + = 3.8 320 03 3, , ,   −      \nReprint 2025-26\n\n  ANSWERS            347\n4.Cos2φ θ−      5.5\n22x= − 6.2x – 3y + 18 = 0\n7.k2 square units 8.5 10. 3x – y = 7,   x + 3y = 9\n11.13x + 13 y = 6 13. 1 : 2 14.23 5units18\n15. The line is parallel to x - axis or parallel to y-axis\n16. x = 1,   y = 1. or x  = – 4,   y = 3 17. (–1, – 4).\n18.1 5 2\n7±20. 18x + 12 y + 11 = 0\n21.1305, \n  23. 119x + 102 y = 125\nEXERCISE 10.1\n1.x2 + y2 – 4y = 0 2.x2  + y2 + 4x – 6y –3 = 0\n3.36\nx2  + 36 y2 – 36 x – 18 y + 11 = 0 4.x2 + y2 – 2x  – 2y  = 0\n5.x2 + y2  + 2 ax + 2by + 2b2 = 0 6.c(–5, 3), r = 6\n7.c(2, 4), r  = 65 8.c(4, – 5), r = 53 9.c (1\n4, 0) ;  r  = 1\n4\n10. x2 + y2 – 6x – 8y + 15 = 0 11.x2 + y2 – 7x + 5y – 14 = 0\n12. x2 + y2 + 4x – 21 = 0 &  x2 + y2 – 12 x + 11 = 0\n13. x2 + y2 – ax – by  = 0 14. x2 + y2 – 4x – 4y  = 5\n15. Inside the circle; since the distance of the point to the centre of the circle is less\nthan the radius of the circle.\nEXERCISE 10.2\n1.F (3, 0), axis - x - axis, directrix x = – 3, length of the Latus rectum = 12\n2.F (0, 3\n2), axis - y - axis, directrix y = –  3\n2,  length of the Latus rectum = 6\n3.F (–2, 0), axis - x - axis, directrix x =  2, length of the Latus rectum = 8\nReprint 2025-26\n\n348 MATHEMA TICS\n4.F (0, –4), axis - y - axis, directrix y  =  4, length of the Latus rectum = 16\n5.F (5\n2, 0) axis - x - axis, directrix  x = – 5\n2, length of the Latus rectum = 10\n6.F (0, 9\n4–) , axis - y - axis, directrix y  =  9\n4, length of the Latus rectum = 9\n7.y2 = 24 x 8.x2 = – 12 y 9.y2 = 12 x\n10. y2 = –8 x 11.2\ny2 = 9x 12. 2x2 = 25 y\nEXERCISE 10.3\n1.F (±20,0); V ( ± 6, 0); Major axis = 12; Minor axis = 8 , e  = 20\n6,\n Latus rectum = 16\n3\n2.F (0, ±21); V (0, ± 5); Major axis = 10; Minor axis = 4 , e  =  21\n5;\nLatus rectum = 8\n5\n3.F (±7, 0); V ( ± 4, 0); Major axis = 8; Minor axis = 6 ,  e  = 7\n4 ;\nLatus rectum =  9\n2\n4.F (0, ±75); V (0, ± 10); Major axis = 20; Minor axis = 10 , e = 3\n2 ;\nLatus rectum = 5\n5.F (±13,0); V ( ± 7, 0); Major axis =14 ; Minor axis = 12 , e  = 13\n7;\nLatus rectum = 72\n7\n6.F (0, ±10 3 ); V (0, ± 20); Major axis =40 ; Minor axis = 20 , e  = 3\n2 ;\nLatus rectum = 10\nReprint 2025-26\n\n  ANSWERS            349\n7.F (0, ± 42); V (0, ± 6); Major axis =12 ; Minor axis = 4 , e  = 2 2\n3;\nLatus rectum =4\n3\n8. ( ) F 0 15,± ; V (0, ± 4); Major axis = 8 ; Minor axis = 2 , e = 15\n4;\nLatus rectum =1\n2\n9.F (±5,0); V ( ± 3, 0); Major axis = 6 ; Minor axis = 4 , e = 5\n3;\nLatus rectum =8\n3\n10.2 2\n125 9x y+ = 11.2 2\n1144 169x y+ = 12.2 2\n136 20x y+ =\n13.2 2\n19 4x y+ = 14.2 2\n11 5x y+ = 15.2 2\n1169 144x y+ =\n16. 2 2\n164 100x y+ = 17.2 2\n116 7x y+ = 18.2 2\n125 9x y+ =\n19.2 2\n110 40x y+ = 20. x2 + 4y2 = 52 or 2 2\n152 13x y+ =\nEXERCISE 10.4\n1.Foci ( ± 5, 0), Vertices ( ± 4, 0); e = 45; Latus rectum  = 9\n2\n2.Foci (0 ± 6), Vertices (0, ± 3);  e = 2; Latus rectum = 18\n3.Foci (0,  ±13), Vertices (0, ± 2); e = 13\n2; Latus rectum 9=\n4.Foci ( ± 10, 0), Vertices ( ± 6, 0); e =5\n3; Latus rectum 64\n3=\nReprint 2025-26\n\n350 MATHEMA TICS\n5.Foci (0, ±2 14\n5), Vertices (0, ±6\n5); e =14\n3; Latus rectum 4 5\n3=\n6.Foci (0, ±65), Vertices (0, ± 4); e =65\n4; Latus rectum 49\n2=\n7.2 2\n14 5x y− = 8.2 2\n125 39y x− = 9.2 2\n19 16y x− =\n10.2 2\n116 9x y− = 11.2 2\n125 144y x− = 12.2 2\n125 20x y− =\n13.2 2\n14 12x y− = 14.2 29149 343x y− = 15.2 2\n15 5y x− =\nMiscellaneous Exercise on Chapter 10\n1.Focus is at the mid-point of the given diameter .\n2.2.23 m (approx.) 3.9.11 m (approx.) 4.1.56m (approx.)\n5.2 2\n181 9x y+ = 6.18 sq units 7.2 2\n125 9x y+ =\n8.8 3a\nEXERCISE 1 1.1\n1.y and z - coordinates are zero 2.y - coordinate is zero\n3.I, IV, VIII, V, VI, II, III, VII\n4.(i) XY - plane (ii) (x, y, 0) (iii) Eight\nEXERCISE 1 1.2\n1.(i)2 5 (ii) 43 (iii) 2 26 (iv)2 5\n4.x – 2z = 0 5.9x2 + 25 y2 + 25 z2 – 225 = 0\nMiscellaneous Exercise on Chapter 1 1\n1.(1, – 2, 8) 2.7 34 7, , 3.a = – 2,   b = 16\n3− ,  c = 2\n4.2\n2 2 2 1092 7 22k –x y z x y z+ + − − + =\nReprint 2025-26\n\n  ANSWERS            351\nEXERCISE 12.1\n1.6 2.22π7 −  3.π 4.19\n2\n5.1\n2− 6.5 7.11\n48.108\n7\n9.b 10. 2 11.1 12.1\n4−\n13.a\nb14.a\nb15.1\nπ16.1\nπ\n17. 4 18.1a\nb+19. 0 20. 1\n21. 0 22. 2 23. 3, 6\n24. Limit does not exist at x = 1\n25. Limit does not exist at x = 0 26. Limit does not exist at x = 0\n27. 0 28. a = 0, b = 4\n29.\n1lim\nx a→  f (x) = 0 and lim\nx a→ f (x) = (a – a1) (a – a2) ... (a – ax)\n30.lim\nx a→ f (x) exists for all a ≠ 0. 31. 2\n32. For 0lim\nx→ f (x) to exists, we need m = n; 1lim\nx→ f (x) exists for any integral value\nof m and n .\nEXERCISE 12.2\n1.20 2.1 3.99\n4.(i) 3x2(ii) 2x – 3 (iii) 32\nx−\n(iv)( )22\n1x−\n−\n6.1 2 2 3 1( 1) ( 2)n n n nnx a n x a n x ... a− − − −+ − + − + +\n7.(i) 2x a b− − (ii) ( )24ax ax b +  (iii)( )2a b\nx b−\n−\nReprint 2025-26\n\n352 MATHEMA TICS\n8. 8.8.8.8.( )1\n2n n n nnx anx x a\nx a−− − +\n−\n9. 9.9.9.9.(i)   2 (ii) 20x3 – 15 x2 + 6x – 4 (iii) ( )435 2 x\nx−+ (iv) 15x4 + 524\nx\n(v)5 1012 36–\nx x+   (vi) ( )2 22 (3 2)\n(3 1)1– x x ––\nx – x+10.  – sin x\n11. (i)cos 2 x (ii) sec x tan x\n(iii) 5sec x tan x – 4sin x (iv) – cosec x cot x\n(v) – 3cosec2 x – 5 cosec x cot x(vi) 5cos x+ 6sin x\n(vii) 2sec2 x – 7sec  x tan x\nMiscellaneous Exercise on Chapter 12\n1.(i) – 1  (ii) 21\nx   (iii) cos (x  + 1)   (iv) πsin8x − −    2.   1\n3.2qrps\nx−+ 4.2c (ax+b) (cx + d) + a (cx + d)2\n5.( )2ad bc\ncx d−\n+6.( )2201\n1, x ,\nx –−≠  7.   ()\n( )222ax b\nax bx c− +\n+ +\n8.\n( )2\n222 apx bpx ar bq\npx qx r− − + −\n+ +9. ( )2\n22 apx bpx bq ar\nax b+ + −\n+10.   5 34 2sin−+ −a bx\nx x\n11.2\nx12. ( )1nna ax b−+\n13. ( ) ( ) ( ) ( )1 1 n max b cx d mc ax b na cx d− −+ +  + + +  14.  cos ( x+a)\n15. – cosec3 x – cosec x cot2 x 16.   1\n1 sin−\n+ x\n17.( )22\nsin cos−\n−x x18.( )22sec tan\nsec 1+x x\nx19.   n sinn–1x cos x\nReprint 2025-26\n\n  ANSWERS            353\n20.( )2cos sin\ncos+ +\n+bc x ad x bd\nc d x21.2cos\ncosa\nx\n22.( )35 cos 3 sin 20sin 12cos+ + − x x x x x x x\n23.2sin sin 2 cos− − +x x x x x\n24. ()( )( )2sin cos 2 cos − + + + + q sin x ax x p q x a x x\n25. ()()()2tan cos tan 1 sin− + + − − x x x x x x\n26.\n( )235 15 cos 28cos 28 sin 15sin\n3 7cos+ + + −\n+x x x x x x\nx x\n27.( )\n2πcos 2sin cos4\nsin− x x x x\nx28.( )2\n21 tan sec\n1 tanx x x\nx+ −\n+\n29.( )()( ) ( )2sec 1 sec tan 1 sec tan+ − + − +x x x x x . x x\n30.\n1sin cos\nsin+−\nnx n x x\nx\nEXERCISE 13.1\n1.3 2.8.4 3.2.33 4.7\n5.6.32 6.16 7.3.23 8.5.1\n9.157.92 10. 11.28 11.10.34 12. 7.35\nEXERCISE 13.2\n1.9, 9.25 2.21 1\n2 12n n,+ −3.16.5, 74.25 4.19, 43.4\n5.100, 29.09 6.64, 1.69 7.107, 2276 8.27, 132\n9.93, 105.58, 10.27 10. 5.55, 43.5\nReprint 2025-26\n\n354 MATHEMA TICS\n Miscellaneous Exercise on Chapter 13\n1.4, 8 2.6, 8 3.24, 12\n5.(i) 10.1,  1.99    (ii) 10.2,  1.98\n6.20, 3.036\nEXERCISE 14.1\n1.No.\n2. (i){1, 2, 3, 4, 5, 6}         (ii) φ     (iii)  {3, 6}        (iv)  {1, 2, 3}     (v)  {6}\n(vi) {3, 4, 5, 6}, A∪B = {1, 2, 3, 4, 5, 6},   A∩B = φ, B∪C = {3, 6}, E ∩F = {6},\nD∩E = φ,\nA – C = {1, 2,4,5}, D – E = {1,2,3}, E ∩F′ = φ, F′ = {1, 2}\n3.A = {(3,6), (4,5), (5, 4), (6,3), (4,6), (5,5), (6,4), (5,6), (6,5), (6,6)}\nB = {(1,2), (2,2), (3, 2), (4,2), (5,2), (6,2), (2,1), (2,3), (2,4), (2,5), (2,6)}\nC ={(3,6), (6,3), (5, 4), (4,5), (6,6)}\nA and B, B and C are mutually exclusive.\n4. (i)A and B; A and C; B and C; C and D  (ii) A and C   (iii) B and D\n5. (i) “Getting at least two heads”, and “getting at least two tails”\n(ii) “Getting no heads”, “getting exactly one head” and “getting at least two\nheads”\n(iii) “Getting at most two tails”, and “getting exactly two tails”\n(iv) “Getting exactly one head” and “getting exactly two heads”\n(v) “Getting exactly one tail”, “getting exactly two tails”, and getting exactly\nthree tails”\nANote    There may be other events also as answer to the above question.\n6.A = {(2, 1), (2,2), (2,3), (2,4), (2,5), (2,6), (4,1), (4,2), (4,3), (4,4), (4,5), (4,6),\n(6,1), (6,2), (6,3), (6,4), (6,5), (6,6)}\nB = {(1, 1), (1,2), (1,3), (1,4), (1,5), (1,6), (3,1), (3,2), (3,3), (3,4), (3,5), (3,6),\n(5,1), (5,2), (5,3), (5,4), (5,5), (5,6)}\nC = {(1, 1), (1,2), (1,3), (1,4), (2,1), (2,2), (2,3), (3,1), (3,2), (4,1)}\n(i)A′ ={(1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (3,1), (3,2), (3,3), (3,4), (3,5), (3,6),\n(5,1), (5,2), (5,3), (5,4), (5,5), (5,6)} = B\n(ii) B′ = {(2,1), (2,2), (2,3), (2,4), (2,5), (2,6), (4,1), (4,2), (4,3), (4,4), (4,5), (4,6),\n(6,1), (6,2), (6,3), (6,4), (6,5), (6,6)} = A\n(iii) A∪B = {(1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (3,1), (3,2), (3,3), (3,4), (3,5),\n(3,6), (5,1), (5,2), (5,3), (5,4), (5,5), (5,6), (2,1), (2,2), (2,3), (2,5),\n(2,6), (4,1), (4,2), (4,3), (4,4), (4,5), (4,6), (6,1), (6,2), (6,3), (6,4),\n(6,5), (6,6)} = S\nReprint 2025-26\n\n  ANSWERS            355\n(iv) A ∩ B = φ\n(v) A – C = {(2,4), (2,5), (2,6), (4,2), (4,3), (4,4), (4,5), (4,6), (6,1), (6,2), (6,3),\n(6,4), (6,5), (6,6)}\n(vi) B ∪ C = {(1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (2,1), (2,2), (2,3), (3,1), (3,2),\n(3,3), (3,4), (3,5), (3,6), (4,1), (5,1), (5,2), (5,3), (5,4), (5,5), (5,6)}\n(vii) B ∩ C = {(1,1), (1,2), (1,3), (1,4), (3,1), (3,2)}\n(viii) A ∩ B′ ∩ C′ = {(2,4), (2,5), (2,6), (4,2), (4,3), (4,4), (4,5), (4,6), (6,1), (6,2),\n(6,3), (6,4), (6,5), (6,6)}\n7. (i)True    (ii)  True    (iii)  True    (iv)  False    (v)  False    (vi)  False\nEXERCISE 14.2\n1.(a) Yes     (b) Yes     (c) No    (d) No    (e) No 2.3\n4\n3.(i) 1\n2 (ii) 2\n3 (iii) 1\n6 (iv) 0  (v) 5\n64.(a) 52  (b) 1\n52 (c) 1 1(i) (ii)13 2\n5.1 1(i) (ii)12 126.3\n5\n7.Rs 4.00 gain,   Rs 1.50 gain,   Re 1.00 loss,    Rs 3.50 loss,    Rs 6.00 loss.\nP ( Winning Rs 4.00) 1\n16= , P(W inning Rs 1.50) 1\n4=, P (Losing Re. 1.00) 3\n8=\nP (Losing Rs 3.50) 1\n4=, P (Losing Rs 6.00) 1\n16= .\n8.(i) 1\n8  (ii) 3\n8  (iii) 1\n2  (iv) 7\n8  (v) 1\n8  (vi) 1\n8  (vii) 3\n8  (viii) 1\n8  (ix) 7\n8\n9.9\n1110.6 7(i) (ii)13 1311.1\n38760\n12. (i) No, because P(A ∩B) must be less than or equal to P(A) and P(B),  (ii) Yes\n13.7(i) (ii)0.5 (iii)0.151514.4\n5\n15.5 3(i) (ii)8 816. No 17. (i) 0.58  (ii) 0.52  (iii) 0.74\nReprint 2025-26\n\n356 MATHEMA TICS\n18. 0.6 19. 0.55 20. 0.65\n21.19 11 2(i) (ii) (iii)30 30 15\nMiscellaneous Exercise on ",
+      "wordCount": 3437,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "6.1",
+          "questions": [
+            {
+              "questionNumber": 12,
+              "questionText": "2(x6 + 15 x4 + 15 x2 + 1), 198\nMiscellaneous Exercise on Chapter 7"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "2, 2, 1, 0, –1;         2 + 2 + 1 + 0 + (–1) + ... 14.3 5 81 2 and2 3 5, , ,\nEXERCISE 8.2"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "205 5\n2 2n, 2.3072 4.– 2187"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )273 1 3 12n \n+ −   9.( )1\n1na\na − − \n+10.( )3 2\n21\n1nx x\nx−\n−"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )11322 3 12+ − 12.5 2 2 5 5 2or ; Terms are 1 or 12 5 5 2 2 5r , , , , ="
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "4 14. ( )16 16;2; 2 17 7n− 15. 2059 or 463\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "496 20. rR 21. 3, –6, 12, –24 26. 9 and 27"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "x2 –16x + 25 = 0\nMiscellaneous Exercise on Chapter 8"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "Rs 16680 14. Rs 39100 15. Rs 43690 16. Rs 17000; 20,000"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "Rs 5120 18. 25 days\nEXERCISE 9.1"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "1 and 2, or 1\n2 and 1, or – 1 and –2, or 1\n2− and – 1\nEXERCISE 9.2"
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "3x – 4y + 8 = 0 9.5x – y + 20 = 0"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(1 + n)x + 3(1 + n)y = n +11 11.x + y = 5"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x + 2y – 6 = 0, 2 x + y – 6 = 0\n1"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "6.2",
+          "questions": [
+            {
+              "questionNumber": 12,
+              "questionText": "2(x6 + 15 x4 + 15 x2 + 1), 198\nMiscellaneous Exercise on Chapter 7"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "2, 2, 1, 0, –1;         2 + 2 + 1 + 0 + (–1) + ... 14.3 5 81 2 and2 3 5, , ,\nEXERCISE 8.2"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "205 5\n2 2n, 2.3072 4.– 2187"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )273 1 3 12n \n+ −   9.( )1\n1na\na − − \n+10.( )3 2\n21\n1nx x\nx−\n−"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )11322 3 12+ − 12.5 2 2 5 5 2or ; Terms are 1 or 12 5 5 2 2 5r , , , , ="
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "4 14. ( )16 16;2; 2 17 7n− 15. 2059 or 463\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "496 20. rR 21. 3, –6, 12, –24 26. 9 and 27"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "x2 –16x + 25 = 0\nMiscellaneous Exercise on Chapter 8"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "Rs 16680 14. Rs 39100 15. Rs 43690 16. Rs 17000; 20,000"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "Rs 5120 18. 25 days\nEXERCISE 9.1"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "1 and 2, or 1\n2 and 1, or – 1 and –2, or 1\n2− and – 1\nEXERCISE 9.2"
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "3x – 4y + 8 = 0 9.5x – y + 20 = 0"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(1 + n)x + 3(1 + n)y = n +11 11.x + y = 5"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x + 2y – 6 = 0, 2 x + y – 6 = 0"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "6.3",
+          "questions": [
+            {
+              "questionNumber": 12,
+              "questionText": "2(x6 + 15 x4 + 15 x2 + 1), 198\nMiscellaneous Exercise on Chapter 7"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "2, 2, 1, 0, –1;         2 + 2 + 1 + 0 + (–1) + ... 14.3 5 81 2 and2 3 5, , ,\nEXERCISE 8.2"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "205 5\n2 2n, 2.3072 4.– 2187"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )273 1 3 12n \n+ −   9.( )1\n1na\na − − \n+10.( )3 2\n21\n1nx x\nx−\n−"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )11322 3 12+ − 12.5 2 2 5 5 2or ; Terms are 1 or 12 5 5 2 2 5r , , , , ="
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "4 14. ( )16 16;2; 2 17 7n− 15. 2059 or 463\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "496 20. rR 21. 3, –6, 12, –24 26. 9 and 27"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "x2 –16x + 25 = 0\nMiscellaneous Exercise on Chapter 8"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "Rs 16680 14. Rs 39100 15. Rs 43690 16. Rs 17000; 20,000"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "Rs 5120 18. 25 days\nEXERCISE 9.1"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "1 and 2, or 1\n2 and 1, or – 1 and –2, or 1\n2− and – 1\nEXERCISE 9.2"
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "3x – 4y + 8 = 0 9.5x – y + 20 = 0"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(1 + n)x + 3(1 + n)y = n +11 11.x + y = 5"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x + 2y – 6 = 0, 2 x + y – 6 = 0"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9."
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "6.4",
+          "questions": [
+            {
+              "questionNumber": 12,
+              "questionText": "2(x6 + 15 x4 + 15 x2 + 1), 198\nMiscellaneous Exercise on Chapter 7"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "2, 2, 1, 0, –1;         2 + 2 + 1 + 0 + (–1) + ... 14.3 5 81 2 and2 3 5, , ,\nEXERCISE 8.2"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "205 5\n2 2n, 2.3072 4.– 2187"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )273 1 3 12n \n+ −   9.( )1\n1na\na − − \n+10.( )3 2\n21\n1nx x\nx−\n−"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )11322 3 12+ − 12.5 2 2 5 5 2or ; Terms are 1 or 12 5 5 2 2 5r , , , , ="
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "4 14. ( )16 16;2; 2 17 7n− 15. 2059 or 463\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "496 20. rR 21. 3, –6, 12, –24 26. 9 and 27"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "x2 –16x + 25 = 0\nMiscellaneous Exercise on Chapter 8"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "Rs 16680 14. Rs 39100 15. Rs 43690 16. Rs 17000; 20,000"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "Rs 5120 18. 25 days\nEXERCISE 9.1"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "1 and 2, or 1\n2 and 1, or – 1 and –2, or 1\n2− and – 1\nEXERCISE 9.2"
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "3x – 4y + 8 = 0 9.5x – y + 20 = 0"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(1 + n)x + 3(1 + n)y = n +11 11.x + y = 5"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x + 2y – 6 = 0, 2 x + y – 6 = 0"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9.3"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no interc"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "7.1",
+          "questions": [
+            {
+              "questionNumber": 12,
+              "questionText": "2(x6 + 15 x4 + 15 x2 + 1), 198\nMiscellaneous Exercise on Chapter 7"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "2, 2, 1, 0, –1;         2 + 2 + 1 + 0 + (–1) + ... 14.3 5 81 2 and2 3 5, , ,\nEXERCISE 8.2"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "205 5\n2 2n, 2.3072 4.– 2187"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )273 1 3 12n \n+ −   9.( )1\n1na\na − − \n+10.( )3 2\n21\n1nx x\nx−\n−"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )11322 3 12+ − 12.5 2 2 5 5 2or ; Terms are 1 or 12 5 5 2 2 5r , , , , ="
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "4 14. ( )16 16;2; 2 17 7n− 15. 2059 or 463\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "496 20. rR 21. 3, –6, 12, –24 26. 9 and 27"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "x2 –16x + 25 = 0\nMiscellaneous Exercise on Chapter 8"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "Rs 16680 14. Rs 39100 15. Rs 43690 16. Rs 17000; 20,000"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "Rs 5120 18. 25 days\nEXERCISE 9.1"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "1 and 2, or 1\n2 and 1, or – 1 and –2, or 1\n2− and – 1\nEXERCISE 9.2"
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "3x – 4y + 8 = 0 9.5x – y + 20 = 0"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(1 + n)x + 3(1 + n)y = n +11 11.x + y = 5"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x + 2y – 6 = 0, 2 x + y – 6 = 0"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9.3"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis."
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +\n12"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "8.1",
+          "questions": [
+            {
+              "questionNumber": 13,
+              "questionText": "2, 2, 1, 0, –1;         2 + 2 + 1 + 0 + (–1) + ... 14.3 5 81 2 and2 3 5, , ,\nEXERCISE 8.2"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "205 5\n2 2n, 2.3072 4.– 2187"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )273 1 3 12n \n+ −   9.( )1\n1na\na − − \n+10.( )3 2\n21\n1nx x\nx−\n−"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )11322 3 12+ − 12.5 2 2 5 5 2or ; Terms are 1 or 12 5 5 2 2 5r , , , , ="
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "4 14. ( )16 16;2; 2 17 7n− 15. 2059 or 463\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "496 20. rR 21. 3, –6, 12, –24 26. 9 and 27"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "x2 –16x + 25 = 0\nMiscellaneous Exercise on Chapter 8"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "Rs 16680 14. Rs 39100 15. Rs 43690 16. Rs 17000; 20,000"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "Rs 5120 18. 25 days\nEXERCISE 9.1"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "1 and 2, or 1\n2 and 1, or – 1 and –2, or 1\n2− and – 1\nEXERCISE 9.2"
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "3x – 4y + 8 = 0 9.5x – y + 20 = 0"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(1 + n)x + 3(1 + n)y = n +11 11.x + y = 5"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x + 2y – 6 = 0, 2 x + y – 6 = 0"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9.3"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis."
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= ="
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x = 1, 2\nMiscellaneous Exercise on Chapter 9"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "The line is parallel to x - axis or parallel to y-axis"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "x = 1,   y = 1. or x  = – 4,   y = 3 17. (–1, – 4)."
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "8.2",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "205 5\n2 2n, 2.3072 4.– 2187"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )273 1 3 12n \n+ −   9.( )1\n1na\na − − \n+10.( )3 2\n21\n1nx x\nx−\n−"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )11322 3 12+ − 12.5 2 2 5 5 2or ; Terms are 1 or 12 5 5 2 2 5r , , , , ="
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "4 14. ( )16 16;2; 2 17 7n− 15. 2059 or 463\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 19,
+              "questionText": "496 20. rR 21. 3, –6, 12, –24 26. 9 and 27"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "x2 –16x + 25 = 0\nMiscellaneous Exercise on Chapter 8"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "Rs 16680 14. Rs 39100 15. Rs 43690 16. Rs 17000; 20,000"
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "Rs 5120 18. 25 days\nEXERCISE 9.1"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "1 and 2, or 1\n2 and 1, or – 1 and –2, or 1\n2− and – 1\nEXERCISE 9.2"
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "3x – 4y + 8 = 0 9.5x – y + 20 = 0"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(1 + n)x + 3(1 + n)y = n +11 11.x + y = 5"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x + 2y – 6 = 0, 2 x + y – 6 = 0"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9.3"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis."
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= ="
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x = 1, 2\nMiscellaneous Exercise on Chapter 9"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "The line is parallel to x - axis or parallel to y-axis"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "x = 1,   y = 1. or x  = – 4,   y = 3 17. (–1, – 4)."
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "x2 + y2 – 6x – 8y + 15 = 0 11.x2 + y2 – 7x + 5y – 14 = 0"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x2 + y2 + 4x – 21 = 0 &  x2 + y2 – 12 x + 11 = 0"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "x2 + y2 – ax – by  = 0 14. x2 + y2 – 4x – 4y  = 5"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "Inside the circle; since the distance of the point to the centre of the circle is less\nthan the radius of t"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "9.1",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "1 and 2, or 1\n2 and 1, or – 1 and –2, or 1\n2− and – 1\nEXERCISE 9.2"
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "3x – 4y + 8 = 0 9.5x – y + 20 = 0"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(1 + n)x + 3(1 + n)y = n +11 11.x + y = 5"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x + 2y – 6 = 0, 2 x + y – 6 = 0"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9.3"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis."
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= ="
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x = 1, 2\nMiscellaneous Exercise on Chapter 9"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "The line is parallel to x - axis or parallel to y-axis"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "x = 1,   y = 1. or x  = – 4,   y = 3 17. (–1, – 4)."
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "x2 + y2 – 6x – 8y + 15 = 0 11.x2 + y2 – 7x + 5y – 14 = 0"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x2 + y2 + 4x – 21 = 0 &  x2 + y2 – 12 x + 11 = 0"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "x2 + y2 – ax – by  = 0 14. x2 + y2 – 4x – 4y  = 5"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "Inside the circle; since the distance of the point to the centre of the circle is less\nthan the radius of the circle.\nEXERCISE 10.2"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "y2 = –8 x 11.2\ny2 = 9x 12. 2x2 = 25 y\nEXERCISE 10.3"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "9.2",
+          "questions": [
+            {
+              "questionNumber": 6,
+              "questionText": "3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "3x – 4y + 8 = 0 9.5x – y + 20 = 0"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(1 + n)x + 3(1 + n)y = n +11 11.x + y = 5"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x + 2y – 6 = 0, 2 x + y – 6 = 0"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9.3"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis."
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= ="
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x = 1, 2\nMiscellaneous Exercise on Chapter 9"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "The line is parallel to x - axis or parallel to y-axis"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "x = 1,   y = 1. or x  = – 4,   y = 3 17. (–1, – 4)."
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "x2 + y2 – 6x – 8y + 15 = 0 11.x2 + y2 – 7x + 5y – 14 = 0"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x2 + y2 + 4x – 21 = 0 &  x2 + y2 – 12 x + 11 = 0"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "x2 + y2 – ax – by  = 0 14. x2 + y2 – 4x – 4y  = 5"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "Inside the circle; since the distance of the point to the centre of the circle is less\nthan the radius of the circle.\nEXERCISE 10.2"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "y2 = –8 x 11.2\ny2 = 9x 12. 2x2 = 25 y\nEXERCISE 10.3"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "9.3",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "(i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis."
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= ="
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x = 1, 2\nMiscellaneous Exercise on Chapter 9"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "The line is parallel to x - axis or parallel to y-axis"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "x = 1,   y = 1. or x  = – 4,   y = 3 17. (–1, – 4)."
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "x2 + y2 – 6x – 8y + 15 = 0 11.x2 + y2 – 7x + 5y – 14 = 0"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x2 + y2 + 4x – 21 = 0 &  x2 + y2 – 12 x + 11 = 0"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "x2 + y2 – ax – by  = 0 14. x2 + y2 – 4x – 4y  = 5"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "Inside the circle; since the distance of the point to the centre of the circle is less\nthan the radius of the circle.\nEXERCISE 10.2"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "y2 = –8 x 11.2\ny2 = 9x 12. 2x2 = 25 y\nEXERCISE 10.3"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( ) F 0 15,± ; V (0, ± 4); Major axis = 8 ; Minor axis = 2 , e = 15\n4;\nLatus rectum =1\n2"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "10.1",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "x2 + y2 – 6x – 8y + 15 = 0 11.x2 + y2 – 7x + 5y – 14 = 0"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x2 + y2 + 4x – 21 = 0 &  x2 + y2 – 12 x + 11 = 0"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "x2 + y2 – ax – by  = 0 14. x2 + y2 – 4x – 4y  = 5"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "Inside the circle; since the distance of the point to the centre of the circle is less\nthan the radius of the circle.\nEXERCISE 10.2"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "y2 = –8 x 11.2\ny2 = 9x 12. 2x2 = 25 y\nEXERCISE 10.3"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( ) F 0 15,± ; V (0, ± 4); Major axis = 8 ; Minor axis = 2 , e = 15\n4;\nLatus rectum =1\n2"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "2 2\n164 100x y+ = 17.2 2\n116 7x y+ = 18.2 2\n125 9x y+ ="
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "10.2",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "y2 = –8 x 11.2\ny2 = 9x 12. 2x2 = 25 y\nEXERCISE 10.3"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( ) F 0 15,± ; V (0, ± 4); Major axis = 8 ; Minor axis = 2 , e = 15\n4;\nLatus rectum =1\n2"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "2 2\n164 100x y+ = 17.2 2\n116 7x y+ = 18.2 2\n125 9x y+ ="
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "10.3",
+          "questions": [
+            {
+              "questionNumber": 8,
+              "questionText": "( ) F 0 15,± ; V (0, ± 4); Major axis = 8 ; Minor axis = 2 , e = 15\n4;\nLatus rectum =1\n2"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "2 2\n164 100x y+ = 17.2 2\n116 7x y+ = 18.2 2\n125 9x y+ ="
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "4 18.1a\nb+19. 0 20. 1"
+            },
+            {
+              "questionNumber": 21,
+              "questionText": "0 22. 2 23. 3, 6"
+            },
+            {
+              "questionNumber": 24,
+              "questionText": "Limit does not exist at x = 1"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "Limit does not exist at x = 0 26. Limit does not exist at x = 0"
+            },
+            {
+              "questionNumber": 27,
+              "questionText": "0 28. a = 0, b = 4"
+            },
+            {
+              "questionNumber": 29,
+              "questionText": "1lim\nx a→  f (x) = 0 and lim\nx a→ f (x) = (a – a1) (a – a2) ... (a – ax)"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "For 0lim\nx→ f (x) to exists, we need m = n; 1lim\nx→ f (x) exists for any integral value\nof m and n .\nEXERCISE 12.2"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "10.4",
+          "questions": [
+            {
+              "questionNumber": 17,
+              "questionText": "4 18.1a\nb+19. 0 20. 1"
+            },
+            {
+              "questionNumber": 21,
+              "questionText": "0 22. 2 23. 3, 6"
+            },
+            {
+              "questionNumber": 24,
+              "questionText": "Limit does not exist at x = 1"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "Limit does not exist at x = 0 26. Limit does not exist at x = 0"
+            },
+            {
+              "questionNumber": 27,
+              "questionText": "0 28. a = 0, b = 4"
+            },
+            {
+              "questionNumber": 29,
+              "questionText": "1lim\nx a→  f (x) = 0 and lim\nx a→ f (x) = (a – a1) (a – a2) ... (a – ax)"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "For 0lim\nx→ f (x) to exists, we need m = n; 1lim\nx→ f (x) exists for any integral value\nof m and n .\nEXERCISE 12.2"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "8.8.8.8.( )1\n2n n n nnx anx x a\nx a−− − +\n−"
+            },
+            {
+              "questionNumber": 9,
+              "questionText": "9.9.9.9.(i)   2 (ii) 20x3 – 15 x2 + 6x – 4 (iii) ( )435 2 x\nx−+ (iv) 15x4 + 524\nx\n(v)5 1012 36–\nx x+   (vi) ( )2 22 (3 2)\n(3 1)1– x x ––\nx – x+10.  – sin x"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "(i)cos 2 x (ii) sec x tan x\n(iii) 5sec x tan x – 4sin x (iv) – cosec x cot x\n(v) – 3cosec2 x – 5 cosec x cot x(vi) 5cos x+ 6sin x\n(vii) 2sec2 x – 7sec  x tan x\nMiscellaneous Exercise on Chapter 12"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )2\n222 apx bpx ar bq\npx qx r− − + −\n+ +9. ( )2\n22 apx bpx bq ar\nax b+ + −\n+10.   5 34 2sin−+ −a bx\nx x"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "( ) ( ) ( ) ( )1 1 n max b cx d mc ax b na cx d− −+ +  + + +  14.  cos ( x+a)"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "– cosec3 x – cosec x cot2 x 16.   1\n1 sin−\n+ x"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "12.1",
+          "questions": [
+            {
+              "questionNumber": 17,
+              "questionText": "4 18.1a\nb+19. 0 20. 1"
+            },
+            {
+              "questionNumber": 21,
+              "questionText": "0 22. 2 23. 3, 6"
+            },
+            {
+              "questionNumber": 24,
+              "questionText": "Limit does not exist at x = 1"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "Limit does not exist at x = 0 26. Limit does not exist at x = 0"
+            },
+            {
+              "questionNumber": 27,
+              "questionText": "0 28. a = 0, b = 4"
+            },
+            {
+              "questionNumber": 29,
+              "questionText": "1lim\nx a→  f (x) = 0 and lim\nx a→ f (x) = (a – a1) (a – a2) ... (a – ax)"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "For 0lim\nx→ f (x) to exists, we need m = n; 1lim\nx→ f (x) exists for any integral value\nof m and n .\nEXERCISE 12.2"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "8.8.8.8.( )1\n2n n n nnx anx x a\nx a−− − +\n−"
+            },
+            {
+              "questionNumber": 9,
+              "questionText": "9.9.9.9.(i)   2 (ii) 20x3 – 15 x2 + 6x – 4 (iii) ( )435 2 x\nx−+ (iv) 15x4 + 524\nx\n(v)5 1012 36–\nx x+   (vi) ( )2 22 (3 2)\n(3 1)1– x x ––\nx – x+10.  – sin x"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "(i)cos 2 x (ii) sec x tan x\n(iii) 5sec x tan x – 4sin x (iv) – cosec x cot x\n(v) – 3cosec2 x – 5 cosec x cot x(vi) 5cos x+ 6sin x\n(vii) 2sec2 x – 7sec  x tan x\nMiscellaneous Exercise on Chapter 12"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )2\n222 apx bpx ar bq\npx qx r− − + −\n+ +9. ( )2\n22 apx bpx bq ar\nax b+ + −\n+10.   5 34 2sin−+ −a bx\nx x"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "( ) ( ) ( ) ( )1 1 n max b cx d mc ax b na cx d− −+ +  + + +  14.  cos ( x+a)"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "– cosec3 x – cosec x cot2 x 16.   1\n1 sin−\n+ x"
+            },
+            {
+              "questionNumber": 24,
+              "questionText": "()( )( )2sin cos 2 cos − + + + + q sin x ax x p q x a x x"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "()()()2tan cos tan 1 sin− + + − − x x x x x x"
+            },
+            {
+              "questionNumber": 26,
+              "questionText": "( )235 15 cos 28cos 28 sin 15sin\n3 7cos+ + + −\n+x x x x x x\nx x"
+            },
+            {
+              "questionNumber": 30,
+              "questionText": "1sin cos\nsin+−\nnx n x x\nx\nEXERCISE 13.1"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i){1, 2, 3, 4, 5, 6}         (ii) φ     (iii)  {3, 6}        (iv)  {1, 2, 3}     (v)  {6}\n(vi) {3, 4, 5, 6}, A∪B = {1, 2, 3, 4, 5, 6},   A∩B = φ, B∪C = {3, 6}, E ∩F = {6},\nD∩E = φ,\nA – C = {1, 2,4,5}, D – E = {1,2,3}, E ∩F′ = φ, F′ = {1, 2}"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "12.2",
+          "questions": [
+            {
+              "questionNumber": 8,
+              "questionText": "8.8.8.8.( )1\n2n n n nnx anx x a\nx a−− − +\n−"
+            },
+            {
+              "questionNumber": 9,
+              "questionText": "9.9.9.9.(i)   2 (ii) 20x3 – 15 x2 + 6x – 4 (iii) ( )435 2 x\nx−+ (iv) 15x4 + 524\nx\n(v)5 1012 36–\nx x+   (vi) ( )2 22 (3 2)\n(3 1)1– x x ––\nx – x+10.  – sin x"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "(i)cos 2 x (ii) sec x tan x\n(iii) 5sec x tan x – 4sin x (iv) – cosec x cot x\n(v) – 3cosec2 x – 5 cosec x cot x(vi) 5cos x+ 6sin x\n(vii) 2sec2 x – 7sec  x tan x\nMiscellaneous Exercise on Chapter 12"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )2\n222 apx bpx ar bq\npx qx r− − + −\n+ +9. ( )2\n22 apx bpx bq ar\nax b+ + −\n+10.   5 34 2sin−+ −a bx\nx x"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "( ) ( ) ( ) ( )1 1 n max b cx d mc ax b na cx d− −+ +  + + +  14.  cos ( x+a)"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "– cosec3 x – cosec x cot2 x 16.   1\n1 sin−\n+ x"
+            },
+            {
+              "questionNumber": 24,
+              "questionText": "()( )( )2sin cos 2 cos − + + + + q sin x ax x p q x a x x"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "()()()2tan cos tan 1 sin− + + − − x x x x x x"
+            },
+            {
+              "questionNumber": 26,
+              "questionText": "( )235 15 cos 28cos 28 sin 15sin\n3 7cos+ + + −\n+x x x x x x\nx x"
+            },
+            {
+              "questionNumber": 30,
+              "questionText": "1sin cos\nsin+−\nnx n x x\nx\nEXERCISE 13.1"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i){1, 2, 3, 4, 5, 6}         (ii) φ     (iii)  {3, 6}        (iv)  {1, 2, 3}     (v)  {6}\n(vi) {3, 4, 5, 6}, A∪B = {1, 2, 3, 4, 5, 6},   A∩B = φ, B∪C = {3, 6}, E ∩F = {6},\nD∩E = φ,\nA – C = {1, 2,4,5}, D – E = {1,2,3}, E ∩F′ = φ, F′ = {1, 2}"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)A and B; A and C; B and C; C and D  (ii) A and C   (iii) B and D"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i) “Getting at least two heads”, and “getting at least two tails”\n(ii) “Getting no heads”, “getting exactly one head” and “getting at least two\nheads”\n(iii) “Getting at most two tails”, and “getting exactly two tails”\n(iv) “Getting exactly one head” and “getting exactly two heads”\n(v) “Getting exactly one tail”, “get"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "13.1",
+          "questions": [
+            {
+              "questionNumber": 2,
+              "questionText": "(i){1, 2, 3, 4, 5, 6}         (ii) φ     (iii)  {3, 6}        (iv)  {1, 2, 3}     (v)  {6}\n(vi) {3, 4, 5, 6}, A∪B = {1, 2, 3, 4, 5, 6},   A∩B = φ, B∪C = {3, 6}, E ∩F = {6},\nD∩E = φ,\nA – C = {1, 2,4,5}, D – E = {1,2,3}, E ∩F′ = φ, F′ = {1, 2}"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)A and B; A and C; B and C; C and D  (ii) A and C   (iii) B and D"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i) “Getting at least two heads”, and “getting at least two tails”\n(ii) “Getting no heads”, “getting exactly one head” and “getting at least two\nheads”\n(iii) “Getting at most two tails”, and “getting exactly two tails”\n(iv) “Getting exactly one head” and “getting exactly two heads”\n(v) “Getting exactly one tail”, “getting exactly two tails”, and getting exactly\nthree tails”\nANote    There may be other events also as answer to the above question."
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "(i)True    (ii)  True    (iii)  True    (iv)  False    (v)  False    (vi)  False\nEXERCISE 14.2"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "13.2",
+          "questions": [
+            {
+              "questionNumber": 2,
+              "questionText": "(i){1, 2, 3, 4, 5, 6}         (ii) φ     (iii)  {3, 6}        (iv)  {1, 2, 3}     (v)  {6}\n(vi) {3, 4, 5, 6}, A∪B = {1, 2, 3, 4, 5, 6},   A∩B = φ, B∪C = {3, 6}, E ∩F = {6},\nD∩E = φ,\nA – C = {1, 2,4,5}, D – E = {1,2,3}, E ∩F′ = φ, F′ = {1, 2}"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)A and B; A and C; B and C; C and D  (ii) A and C   (iii) B and D"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i) “Getting at least two heads”, and “getting at least two tails”\n(ii) “Getting no heads”, “getting exactly one head” and “getting at least two\nheads”\n(iii) “Getting at most two tails”, and “getting exactly two tails”\n(iv) “Getting exactly one head” and “getting exactly two heads”\n(v) “Getting exactly one tail”, “getting exactly two tails”, and getting exactly\nthree tails”\nANote    There may be other events also as answer to the above question."
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "(i)True    (ii)  True    (iii)  True    (iv)  False    (v)  False    (vi)  False\nEXERCISE 14.2"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "14.1",
+          "questions": [
+            {
+              "questionNumber": 2,
+              "questionText": "(i){1, 2, 3, 4, 5, 6}         (ii) φ     (iii)  {3, 6}        (iv)  {1, 2, 3}     (v)  {6}\n(vi) {3, 4, 5, 6}, A∪B = {1, 2, 3, 4, 5, 6},   A∩B = φ, B∪C = {3, 6}, E ∩F = {6},\nD∩E = φ,\nA – C = {1, 2,4,5}, D – E = {1,2,3}, E ∩F′ = φ, F′ = {1, 2}"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)A and B; A and C; B and C; C and D  (ii) A and C   (iii) B and D"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i) “Getting at least two heads”, and “getting at least two tails”\n(ii) “Getting no heads”, “getting exactly one head” and “getting at least two\nheads”\n(iii) “Getting at most two tails”, and “getting exactly two tails”\n(iv) “Getting exactly one head” and “getting exactly two heads”\n(v) “Getting exactly one tail”, “getting exactly two tails”, and getting exactly\nthree tails”\nANote    There may be other events also as answer to the above question."
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "(i)True    (ii)  True    (iii)  True    (iv)  False    (v)  False    (vi)  False\nEXERCISE 14.2"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 13,
+          "exerciseNumber": "14.2",
+          "questions": [
+            {
+              "questionNumber": 12,
+              "questionText": "(i) No, because P(A ∩B) must be less than or equal to P(A) and P(B),  (ii) Yes"
+            },
+            {
+              "questionNumber": 18,
+              "questionText": "0.6 19. 0.55 20. 0.65"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 255
+      }
+    },
+    {
+      "chapterNumber": 14,
+      "title": "1.(i) 20",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 15,
+      "title": "The line is parallel to x - axis or parallel to y-ax",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 17,
+      "title": "Rs 5120 18. 25 days",
+      "content": "17. Rs 5120 18. 25 days\nEXERCISE 9.1\n1.121squareunit.2\n2.(0, a), (0, – a) and ()3 0−a,or (0, a), (0, – a), and ( )3 0a,\n3.(i) 2 1y y ,− (ii) 2 1x x− 4.1502, \n  5.1\n2−\n7.3– 9.135°\n10. 1 and 2, or 1\n2 and 1, or – 1 and –2, or 1\n2− and – 1\nEXERCISE 9.2\n1.y = 0 and x = 0 2.  x – 2y + 10 = 0 3.y = \nmx\n4.( )( ) ( ) 3 1 3 1 4 3 1 x y –+ − − = 5.2x + y + 6 = 0\n6. 3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26\n\n346 MATHEMA TICS\n8. 3x – 4y + 8 = 0 9.5x – y + 20 = 0\n10. (1 + n)x + 3(1 + n)y = n +11 11.x + y = 5\n12. x + 2y – 6 = 0, 2 x + y – 6 = 0\n13.3 2 0and 3 2 0x y x y + − = + + = 14. 2x – 9y + 85 = 0\n15. ( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9.3\n1. (i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0\n2. (i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis.\n3.  5 units\n4.(– 2, 0) and (8, 0) 5.(i) 65 1units,(ii) units.17 2p r\nl+\n6.3x – 4y + 18 = 0 7.y + 7x  = 21   8.  30° and 150°\n9.22\n9\n11. ( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +\n12. 2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= =\n16. y – x = 1, 2\nMiscellaneous Exercise on Chapter 9\n1.(a) 3, (b) ± 2, (c) 6 or 1\n2.2 3 6 3 2 6x y , x y− = − + = 3.8 320 03 3, , ,   −      \nReprint 2025-26\n\n  ANSWERS            347\n4.Cos2φ θ−      5.5\n22x= − 6.2x – 3y + 18 = 0\n7.k2 square units 8.5 10. 3x – y = 7,   x + 3y = 9\n11.13x + 13 y = 6 13. 1 : 2 14.23 5units18\n15. The line is parallel to x - axis or parallel to y-axis\n16. x = 1,   y = 1. or x  = – 4,   y = 3 17. (–1, – 4).\n18.1 5 2\n7±20. 18x + 12 y + 11 = 0\n21.1305, \n  23. 119x + 102 y = 125\nEXERCISE 10.1\n1.x2 + y2 – 4y = 0 2.x2  + y2 + 4x – 6y –3 = 0\n3.36\nx2  + 36 y2 – 36 x – 18 y + 11 = 0 4.x2 + y2 – 2x  – 2y  = 0\n5.x2 + y2  + 2 ax + 2by + 2b2 = 0 6.c(–5, 3), r = 6\n7.c(2, 4), r  = 65 8.c(4, – 5), r = 53 9.c (1\n4, 0) ;  r  = 1\n4\n10. x2 + y2 – 6x – 8y + 15 = 0 11.x2 + y2 – 7x + 5y – 14 = 0\n12. x2 + y2 + 4x – 21 = 0 &  x2 + y2 – 12 x + 11 = 0\n13. x2 + y2 – ax – by  = 0 14. x2 + y2 – 4x – 4y  = 5\n15. Inside the circle; since the distance of the point to the centre of the circle is less\nthan the radius of the circle.\nEXERCISE 10.2\n1.F (3, 0), axis - x - axis, directrix x = – 3, length of the Latus rectum = 12\n2.F (0, 3\n2), axis - y - axis, directrix y = –  3\n2,  length of the Latus rectum = 6\n3.F (–2, 0), axis - x - axis, directrix x =  2, length of the Latus rectum = 8\nReprint 2025-26\n\n348 MATHEMA TICS\n4.F (0, –4), axis - y - axis, directrix y  =  4, length of the Latus rectum = 16\n5.F (5\n2, 0) axis - x - axis, directrix  x = – 5\n2, length of the Latus rectum = 10\n6.F (0, 9\n4–) , axis - y - axis, directrix y  =  9\n4, length of the Latus rectum = 9\n7.y2 = 24 x 8.x2 = – 12 y 9.y2 = 12 x\n10. y2 = –8 x 11.2\ny2 = 9x 12. 2x2 = 25 y\nEXERCISE 10.3\n1.F (±20,0); V ( ± 6, 0); Major axis = 12; Minor axis = 8 , e  = 20\n6,\n Latus rectum = 16\n3\n2.F (0, ±21); V (0, ± 5); Major axis = 10; Minor axis = 4 , e  =  21\n5;\nLatus rectum = 8\n5\n3.F (±7, 0); V ( ± 4, 0); Major axis = 8; Minor axis = 6 ,  e  = 7\n4 ;\nLatus rectum =  9\n2\n4.F (0, ±75); V (0, ± 10); Major axis = 20; Minor axis = 10 , e = 3\n2 ;\nLatus rectum = 5\n5.F (±13,0); V ( ± 7, 0); Major axis =14 ; Minor axis = 12 , e  = 13\n7;\nLatus rectum = 72\n7\n6.F (0, ±10 3 ); V (0, ± 20); Major axis =40 ; Minor axis = 20 , e  = 3\n2 ;\nLatus rectum = 10\nReprint 2025-26\n\n  ANSWERS            349\n7.F (0, ± 42); V (0, ± 6); Major axis =12 ; Minor axis = 4 , e  = 2 2\n3;\nLatus rectum =4\n3\n8. ( ) F 0 15,± ; V (0, ± 4); Major axis = 8 ; Minor axis = 2 , e = 15\n4;\nLatus rectum =1\n2\n9.F (±5,0); V ( ± 3, 0); Major axis = 6 ; Minor axis = 4 , e = 5\n3;\nLatus rectum =8\n3\n10.2 2\n125 9x y+ = 11.2 2\n1144 169x y+ = 12.2 2\n136 20x y+ =\n13.2 2\n19 4x y+ = 14.2 2\n11 5x y+ = 15.2 2\n1169 144x y+ =\n16. 2 2\n164 100x y+ = 17.2 2\n116 7x y+ = 18.2 2\n125 9x y+ =\n19.2 2\n110 40x y+ = 20. x2 + 4y2 = 52 or 2 2\n152 13x y+ =\nEXERCISE 10.4\n1.Foci ( ± 5, 0), Vertices ( ± 4, 0); e = 45; Latus rectum  = 9\n2\n2.Foci (0 ± 6), Vertices (0, ± 3);  e = 2; Latus rectum = 18\n3.Foci (0,  ±13), Vertices (0, ± 2); e = 13\n2; Latus rectum 9=\n4.Foci ( ± 10, 0), Vertices ( ± 6, 0); e =5\n3; Latus rectum 64\n3=\nReprint 2025-26\n\n350 MATHEMA TICS\n5.Foci (0, ±2 14\n5), Vertices (0, ±6\n5); e =14\n3; Latus rectum 4 5\n3=\n6.Foci (0, ±65), Vertices (0, ± 4); e =65\n4; Latus rectum 49\n2=\n7.2 2\n14 5x y− = 8.2 2\n125 39y x− = 9.2 2\n19 16y x− =\n10.2 2\n116 9x y− = 11.2 2\n125 144y x− = 12.2 2\n125 20x y− =\n13.2 2\n14 12x y− = 14.2 29149 343x y− = 15.2 2\n15 5y x− =\nMiscellaneous Exercise on Chapter 10\n1.Focus is at the mid-point of the given diameter .\n2.2.23 m (approx.) 3.9.11 m (approx.) 4.1.56m (approx.)\n5.2 2\n181 9x y+ = 6.18 sq units 7.2 2\n125 9x y+ =\n8.8 3a\nEXERCISE 1 1.1\n1.y and z - coordinates are zero 2.y - coordinate is zero\n3.I, IV, VIII, V, VI, II, III, VII\n4.(i) XY - plane (ii) (x, y, 0) (iii) Eight\nEXERCISE 1 1.2\n1.(i)2 5 (ii) 43 (iii) 2 26 (iv)2 5\n4.x – 2z = 0 5.9x2 + 25 y2 + 25 z2 – 225 = 0\nMiscellaneous Exercise on Chapter 1 1\n1.(1, – 2, 8) 2.7 34 7, , 3.a = – 2,   b = 16\n3− ,  c = 2\n4.2\n2 2 2 1092 7 22k –x y z x y z+ + − − + =\nReprint 2025-26\n\n  ANSWERS            351\nEXERCISE 12.1\n1.6 2.22π7 −  3.π 4.19\n2\n5.1\n2− 6.5 7.11\n48.108\n7\n9.b 10. 2 11.1 12.1\n4−\n13.a\nb14.a\nb15.1\nπ16.1\nπ\n17. 4 18.1a\nb+19. 0 20. 1\n21. 0 22. 2 23. 3, 6\n24. Limit does not exist at x = 1\n25. Limit does not exist at x = 0 26. Limit does not exist at x = 0\n27. 0 28. a = 0, b = 4\n29.\n1lim\nx a→  f (x) = 0 and lim\nx a→ f (x) = (a – a1) (a – a2) ... (a – ax)\n30.lim\nx a→ f (x) exists for all a ≠ 0. 31. 2\n32. For 0lim\nx→ f (x) to exists, we need m = n; 1lim\nx→ f (x) exists for any integral value\nof m and n .\nEXERCISE 12.2\n1.20 2.1 3.99\n4.(i) 3x2(ii) 2x – 3 (iii) 32\nx−\n(iv)( )22\n1x−\n−\n6.1 2 2 3 1( 1) ( 2)n n n nnx a n x a n x ... a− − − −+ − + − + +\n7.(i) 2x a b− − (ii) ( )24ax ax b +  (iii)( )2a b\nx b−\n−\nReprint 2025-26\n\n352 MATHEMA TICS\n8. 8.8.8.8.( )1\n2n n n nnx anx x a\nx a−− − +\n−\n9. 9.9.9.9.(i)   2 (ii) 20x3 – 15 x2 + 6x – 4 (iii) ( )435 2 x\nx−+ (iv) 15x4 + 524\nx\n(v)5 1012 36–\nx x+   (vi) ( )2 22 (3 2)\n(3 1)1– x x ––\nx – x+10.  – sin x\n11. (i)cos 2 x (ii) sec x tan x\n(iii) 5sec x tan x – 4sin x (iv) – cosec x cot x\n(v) – 3cosec2 x – 5 cosec x cot x(vi) 5cos x+ 6sin x\n(vii) 2sec2 x – 7sec  x tan x\nMiscellaneous Exercise on Chapter 12\n1.(i) – 1  (ii) 21\nx   (iii) cos (x  + 1)   (iv) πsin8x − −    2.   1\n3.2qrps\nx−+ 4.2c (ax+b) (cx + d) + a (cx + d)2\n5.( )2ad bc\ncx d−\n+6.( )2201\n1, x ,\nx –−≠  7.   ()\n( )222ax b\nax bx c− +\n+ +\n8.\n( )2\n222 apx bpx ar bq\npx qx r− − + −\n+ +9. ( )2\n22 apx bpx bq ar\nax b+ + −\n+10.   5 34 2sin−+ −a bx\nx x\n11.2\nx12. ( )1nna ax b−+\n13. ( ) ( ) ( ) ( )1 1 n max b cx d mc ax b na cx d− −+ +  + + +  14.  cos ( x+a)\n15. – cosec3 x – cosec x cot2 x 16.   1\n1 sin−\n+ x\n17.( )22\nsin cos−\n−x x18.( )22sec tan\nsec 1+x x\nx19.   n sinn–1x cos x\nReprint 2025-26\n\n  ANSWERS            353\n20.( )2cos sin\ncos+ +\n+bc x ad x bd\nc d x21.2cos\ncosa\nx\n22.( )35 cos 3 sin 20sin 12cos+ + − x x x x x x x\n23.2sin sin 2 cos− − +x x x x x\n24. ()( )( )2sin cos 2 cos − + + + + q sin x ax x p q x a x x\n25. ()()()2tan cos tan 1 sin− + + − − x x x x x x\n26.\n( )235 15 cos 28cos 28 sin 15sin\n3 7cos+ + + −\n+x x x x x x\nx x\n27.( )\n2πcos 2sin cos4\nsin− x x x x\nx28.( )2\n21 tan sec\n1 tanx x x\nx+ −\n+\n29.( )()( ) ( )2sec 1 sec tan 1 sec tan+ − + − +x x x x x . x x\n30.\n1sin cos\nsin+−\nnx n x x\nx\nEXERCISE 13.1\n1.3 2.8.4 3.2.33 4.7\n5.6.32 6.16 7.3.23 8.5.1\n9.157.92 10. 11.28 11.10.34 12. 7.35\nEXERCISE 13.2\n1.9, 9.25 2.21 1\n2 12n n,+ −3.16.5, 74.25 4.19, 43.4\n5.100, 29.09 6.64, 1.69 7.107, 2276 8.27, 132\n9.93, 105.58, 10.27 10. 5.55, 43.5\nReprint 2025-26\n\n354 MATHEMA TICS\n Miscellaneous Exercise on Chapter 13\n1.4, 8 2.6, 8 3.24, 12\n5.(i) 10.1,  1.99    (ii) 10.2,  1.98\n6.20, 3.036\nEXERCISE 14.1\n1.No.\n2. (i){1, 2, 3, 4, 5, 6}         (ii) φ     (iii)  {3, 6}        (iv)  {1, 2, 3}     (v)  {6}\n(vi) {3, 4, 5, 6}, A∪B = {1, 2, 3, 4, 5, 6},   A∩B = φ, B∪C = {3, 6}, E ∩F = {6},\nD∩E = φ,\nA – C = {1, 2,4,5}, D – E = {1,2,3}, E ∩F′ = φ, F′ = {1, 2}\n3.A = {(3,6), (4,5), (5, 4), (6,3), (4,6), (5,5), (6,4), (5,6), (6,5), (6,6)}\nB = {(1,2), (2,2), (3, 2), (4,2), (5,2), (6,2), (2,1), (2,3), (2,4), (2,5), (2,6)}\nC ={(3,6), (6,3), (5, 4), (4,5), (6,6)}\nA and B, B and C are mutually exclusive.\n4. (i)A and B; A and C; B and C; C and D  (ii) A and C   (iii) B and D\n5. (i) “Getting at least two heads”, and “getting at least two tails”\n(ii) “Getting no heads”, “getting exactly one head” and “getting at least two\nheads”\n(iii) “Getting at most two tails”, and “getting exactly two tails”\n(iv) “Getting exactly one head” and “getting exactly two heads”\n(v) “Getting exactly one tail”, “getting exactly two tails”, and getting exactly\nthree tails”\nANote    There may be other events also as answer to the above question.\n6.A = {(2, 1), (2,2), (2,3), (2,4), (2,5), (2,6), (4,1), (4,2), (4,3), (4,4), (4,5), (4,6),\n(6,1), (6,2), (6,3), (6,4), (6,5), (6,6)}\nB = {(1, 1), (1,2), (1,3), (1,4), (1,5), (1,6), (3,1), (3,2), (3,3), (3,4), (3,5), (3,6),\n(5,1), (5,2), (5,3), (5,4), (5,5), (5,6)}\nC = {(1, 1), (1,2), (1,3), (1,4), (2,1), (2,2), (2,3), (3,1), (3,2), (4,1)}\n(i)A′ ={(1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (3,1), (3,2), (3,3), (3,4), (3,5), (3,6),\n(5,1), (5,2), (5,3), (5,4), (5,5), (5,6)} = B\n(ii) B′ = {(2,1), (2,2), (2,3), (2,4), (2,5), (2,6), (4,1), (4,2), (4,3), (4,4), (4,5), (4,6),\n(6,1), (6,2), (6,3), (6,4), (6,5), (6,6)} = A\n(iii) A∪B = {(1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (3,1), (3,2), (3,3), (3,4), (3,5),\n(3,6), (5,1), (5,2), (5,3), (5,4), (5,5), (5,6), (2,1), (2,2), (2,3), (2,5),\n(2,6), (4,1), (4,2), (4,3), (4,4), (4,5), (4,6), (6,1), (6,2), (6,3), (6,4),\n(6,5), (6,6)} = S\nReprint 2025-26\n\n  ANSWERS            355\n(iv) A ∩ B = φ\n(v) A – C = {(2,4), (2,5), (2,6), (4,2), (4,3), (4,4), (4,5), (4,6), (6,1), (6,2), (6,3),\n(6,4), (6,5), (6,6)}\n(vi) B ∪ C = {(1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (2,1), (2,2), (2,3), (3,1), (3,2),\n(3,3), (3,4), (3,5), (3,6), (4,1), (5,1), (5,2), (5,3), (5,4), (5,5), (5,6)}\n(vii) B ∩ C = {(1,1), (1,2), (1,3), (1,4), (3,1), (3,2)}\n(viii) A ∩ B′ ∩ C′ = {(2,4), (2,5), (2,6), (4,2), (4,3), (4,4), (4,5), (4,6), (6,1), (6,2),\n(6,3), (6,4), (6,5), (6,6)}\n7. (i)True    (ii)  True    (iii)  True    (iv)  False    (v)  False    (vi)  False\nEXERCISE 14.2\n1.(a) Yes     (b) Yes     (c) No    (d) No    (e) No 2.3\n4\n3.(i) 1\n2 (ii) 2\n3 (iii) 1\n6 (iv) 0  (v) 5\n64.(a) 52  (b) 1\n52 (c) 1 1(i) (ii)13 2\n5.1 1(i) (ii)12 126.3\n5\n7.Rs 4.00 gain,   Rs 1.50 gain,   Re 1.00 loss,    Rs 3.50 loss,    Rs 6.00 loss.\nP ( Winning Rs 4.00) 1\n16= , P(W inning Rs 1.50) 1\n4=, P (Losing Re. 1.00) 3\n8=\nP (Losing Rs 3.50) 1\n4=, P (Losing Rs 6.00) 1\n16= .\n8.(i) 1\n8  (ii) 3\n8  (iii) 1\n2  (iv) 7\n8  (v) 1\n8  (vi) 1\n8  (vii) 3\n8  (viii) 1\n8  (ix) 7\n8\n9.9\n1110.6 7(i) (ii)13 1311.1\n38760\n12. (i) No, because P(A ∩B) must be less than or equal to P(A) and P(B),  (ii) Yes\n13.7(i) (ii)0.5 (iii)0.151514.4\n5\n15.5 3(i) (ii)8 816. No 17. (i) 0.58  (ii) 0.52  (iii) 0.74\nReprint 2025-26\n\n356 MATHEMA TICS\n18. 0.6 19. 0.55 20. 0.65\n21.19 11 2(i) (ii) (iii)30 30 15\nMiscellaneous Exercise on Chapter 14\n1.(i) 20\n5\n60\n5C\nC    (ii) 30\n5\n60\n5C1\nC− 2.13 13\n3 1\n52\n4C . C\nC\n3.1 1 5(i) (ii) (iii)2 2 64.9990\n2\n10000\n2C 999(a) (b)1000 C      9990\n10\n10000\n10C(c)\nC\n5.17 16(a) (b)33 336.2\n3\n7.(i) 0.88    (ii) 0.12    (iii) 0.19    (iv) 0.34 8.4\n5\n9.33 3(i) (ii)83 810.1\n5040\nReprint 2025-26\n\n",
+      "wordCount": 2856,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 17,
+          "exerciseNumber": "9.1",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "1 and 2, or 1\n2 and 1, or – 1 and –2, or 1\n2− and – 1\nEXERCISE 9.2"
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "3x – 4y + 8 = 0 9.5x – y + 20 = 0"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(1 + n)x + 3(1 + n)y = n +11 11.x + y = 5"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x + 2y – 6 = 0, 2 x + y – 6 = 0"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9.3"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis."
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= ="
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x = 1, 2\nMiscellaneous Exercise on Chapter 9"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "The line is parallel to x - axis or parallel to y-axis"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "x = 1,   y = 1. or x  = – 4,   y = 3 17. (–1, – 4)."
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "x2 + y2 – 6x – 8y + 15 = 0 11.x2 + y2 – 7x + 5y – 14 = 0"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x2 + y2 + 4x – 21 = 0 &  x2 + y2 – 12 x + 11 = 0"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "x2 + y2 – ax – by  = 0 14. x2 + y2 – 4x – 4y  = 5"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "Inside the circle; since the distance of the point to the centre of the circle is less\nthan the radius of the circle.\nEXERCISE 10.2"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "y2 = –8 x 11.2\ny2 = 9x 12. 2x2 = 25 y\nEXERCISE 10.3"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 17,
+          "exerciseNumber": "9.2",
+          "questions": [
+            {
+              "questionNumber": 6,
+              "questionText": "3 2 3 0 x y− + = 7. 5x + 3y + 2 = 0\nReprint 2025-26"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "3x – 4y + 8 = 0 9.5x – y + 20 = 0"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "(1 + n)x + 3(1 + n)y = n +11 11.x + y = 5"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x + 2y – 6 = 0, 2 x + y – 6 = 0"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "( )192L C 20 124 94290.. = − + 16. 1340 litres. 18. 2kx + hy = 3kh.\nEXERCISE 9.3"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "(i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis."
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= ="
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x = 1, 2\nMiscellaneous Exercise on Chapter 9"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "The line is parallel to x - axis or parallel to y-axis"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "x = 1,   y = 1. or x  = – 4,   y = 3 17. (–1, – 4)."
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "x2 + y2 – 6x – 8y + 15 = 0 11.x2 + y2 – 7x + 5y – 14 = 0"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x2 + y2 + 4x – 21 = 0 &  x2 + y2 – 12 x + 11 = 0"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "x2 + y2 – ax – by  = 0 14. x2 + y2 – 4x – 4y  = 5"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "Inside the circle; since the distance of the point to the centre of the circle is less\nthan the radius of the circle.\nEXERCISE 10.2"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "y2 = –8 x 11.2\ny2 = 9x 12. 2x2 = 25 y\nEXERCISE 10.3"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 17,
+          "exerciseNumber": "9.3",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "(i)1 10 0;7 7y x , ,= − + −  (ii) 5 52 2 ;3 3y x , ,= − + −  (iii) y = 0x + 0, 0, 0"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i) 14 64 6x y, , ; + =  (ii) 31 2;32 2\n2x y, , + = −−\n(iii)2\n3y ,= −  intercept with y-axis = 2\n3− and no intercept with x-axis."
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "( )( ) 3 2 2 3 1 8 3 1 x – y+ + = + ( )( ) or 3 2 1 2 3 1 8 3 x y –− + + = +"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "2x + y = 5 13.68 49\n25 25, −   14.1 5\n2 2m ,c= ="
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "y – x = 1, 2\nMiscellaneous Exercise on Chapter 9"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "The line is parallel to x - axis or parallel to y-axis"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "x = 1,   y = 1. or x  = – 4,   y = 3 17. (–1, – 4)."
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "x2 + y2 – 6x – 8y + 15 = 0 11.x2 + y2 – 7x + 5y – 14 = 0"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x2 + y2 + 4x – 21 = 0 &  x2 + y2 – 12 x + 11 = 0"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "x2 + y2 – ax – by  = 0 14. x2 + y2 – 4x – 4y  = 5"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "Inside the circle; since the distance of the point to the centre of the circle is less\nthan the radius of the circle.\nEXERCISE 10.2"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "y2 = –8 x 11.2\ny2 = 9x 12. 2x2 = 25 y\nEXERCISE 10.3"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( ) F 0 15,± ; V (0, ± 4); Major axis = 8 ; Minor axis = 2 , e = 15\n4;\nLatus rectum =1\n2"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 17,
+          "exerciseNumber": "10.1",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "x2 + y2 – 6x – 8y + 15 = 0 11.x2 + y2 – 7x + 5y – 14 = 0"
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "x2 + y2 + 4x – 21 = 0 &  x2 + y2 – 12 x + 11 = 0"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "x2 + y2 – ax – by  = 0 14. x2 + y2 – 4x – 4y  = 5"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "Inside the circle; since the distance of the point to the centre of the circle is less\nthan the radius of the circle.\nEXERCISE 10.2"
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "y2 = –8 x 11.2\ny2 = 9x 12. 2x2 = 25 y\nEXERCISE 10.3"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( ) F 0 15,± ; V (0, ± 4); Major axis = 8 ; Minor axis = 2 , e = 15\n4;\nLatus rectum =1\n2"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "2 2\n164 100x y+ = 17.2 2\n116 7x y+ = 18.2 2\n125 9x y+ ="
+            }
+          ]
+        },
+        {
+          "chapterNumber": 17,
+          "exerciseNumber": "10.2",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "y2 = –8 x 11.2\ny2 = 9x 12. 2x2 = 25 y\nEXERCISE 10.3"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( ) F 0 15,± ; V (0, ± 4); Major axis = 8 ; Minor axis = 2 , e = 15\n4;\nLatus rectum =1\n2"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "2 2\n164 100x y+ = 17.2 2\n116 7x y+ = 18.2 2\n125 9x y+ ="
+            }
+          ]
+        },
+        {
+          "chapterNumber": 17,
+          "exerciseNumber": "10.3",
+          "questions": [
+            {
+              "questionNumber": 8,
+              "questionText": "( ) F 0 15,± ; V (0, ± 4); Major axis = 8 ; Minor axis = 2 , e = 15\n4;\nLatus rectum =1\n2"
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "2 2\n164 100x y+ = 17.2 2\n116 7x y+ = 18.2 2\n125 9x y+ ="
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "4 18.1a\nb+19. 0 20. 1"
+            },
+            {
+              "questionNumber": 21,
+              "questionText": "0 22. 2 23. 3, 6"
+            },
+            {
+              "questionNumber": 24,
+              "questionText": "Limit does not exist at x = 1"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "Limit does not exist at x = 0 26. Limit does not exist at x = 0"
+            },
+            {
+              "questionNumber": 27,
+              "questionText": "0 28. a = 0, b = 4"
+            },
+            {
+              "questionNumber": 29,
+              "questionText": "1lim\nx a→  f (x) = 0 and lim\nx a→ f (x) = (a – a1) (a – a2) ... (a – ax)"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "For 0lim\nx→ f (x) to exists, we need m = n; 1lim\nx→ f (x) exists for any integral value\nof m and n .\nEXERCISE 12.2"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 17,
+          "exerciseNumber": "10.4",
+          "questions": [
+            {
+              "questionNumber": 17,
+              "questionText": "4 18.1a\nb+19. 0 20. 1"
+            },
+            {
+              "questionNumber": 21,
+              "questionText": "0 22. 2 23. 3, 6"
+            },
+            {
+              "questionNumber": 24,
+              "questionText": "Limit does not exist at x = 1"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "Limit does not exist at x = 0 26. Limit does not exist at x = 0"
+            },
+            {
+              "questionNumber": 27,
+              "questionText": "0 28. a = 0, b = 4"
+            },
+            {
+              "questionNumber": 29,
+              "questionText": "1lim\nx a→  f (x) = 0 and lim\nx a→ f (x) = (a – a1) (a – a2) ... (a – ax)"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "For 0lim\nx→ f (x) to exists, we need m = n; 1lim\nx→ f (x) exists for any integral value\nof m and n .\nEXERCISE 12.2"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "8.8.8.8.( )1\n2n n n nnx anx x a\nx a−− − +\n−"
+            },
+            {
+              "questionNumber": 9,
+              "questionText": "9.9.9.9.(i)   2 (ii) 20x3 – 15 x2 + 6x – 4 (iii) ( )435 2 x\nx−+ (iv) 15x4 + 524\nx\n(v)5 1012 36–\nx x+   (vi) ( )2 22 (3 2)\n(3 1)1– x x ––\nx – x+10.  – sin x"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "(i)cos 2 x (ii) sec x tan x\n(iii) 5sec x tan x – 4sin x (iv) – cosec x cot x\n(v) – 3cosec2 x – 5 cosec x cot x(vi) 5cos x+ 6sin x\n(vii) 2sec2 x – 7sec  x tan x\nMiscellaneous Exercise on Chapter 12"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )2\n222 apx bpx ar bq\npx qx r− − + −\n+ +9. ( )2\n22 apx bpx bq ar\nax b+ + −\n+10.   5 34 2sin−+ −a bx\nx x"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "( ) ( ) ( ) ( )1 1 n max b cx d mc ax b na cx d− −+ +  + + +  14.  cos ( x+a)"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "– cosec3 x – cosec x cot2 x 16.   1\n1 sin−\n+ x"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 17,
+          "exerciseNumber": "12.1",
+          "questions": [
+            {
+              "questionNumber": 17,
+              "questionText": "4 18.1a\nb+19. 0 20. 1"
+            },
+            {
+              "questionNumber": 21,
+              "questionText": "0 22. 2 23. 3, 6"
+            },
+            {
+              "questionNumber": 24,
+              "questionText": "Limit does not exist at x = 1"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "Limit does not exist at x = 0 26. Limit does not exist at x = 0"
+            },
+            {
+              "questionNumber": 27,
+              "questionText": "0 28. a = 0, b = 4"
+            },
+            {
+              "questionNumber": 29,
+              "questionText": "1lim\nx a→  f (x) = 0 and lim\nx a→ f (x) = (a – a1) (a – a2) ... (a – ax)"
+            },
+            {
+              "questionNumber": 32,
+              "questionText": "For 0lim\nx→ f (x) to exists, we need m = n; 1lim\nx→ f (x) exists for any integral value\nof m and n .\nEXERCISE 12.2"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "8.8.8.8.( )1\n2n n n nnx anx x a\nx a−− − +\n−"
+            },
+            {
+              "questionNumber": 9,
+              "questionText": "9.9.9.9.(i)   2 (ii) 20x3 – 15 x2 + 6x – 4 (iii) ( )435 2 x\nx−+ (iv) 15x4 + 524\nx\n(v)5 1012 36–\nx x+   (vi) ( )2 22 (3 2)\n(3 1)1– x x ––\nx – x+10.  – sin x"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "(i)cos 2 x (ii) sec x tan x\n(iii) 5sec x tan x – 4sin x (iv) – cosec x cot x\n(v) – 3cosec2 x – 5 cosec x cot x(vi) 5cos x+ 6sin x\n(vii) 2sec2 x – 7sec  x tan x\nMiscellaneous Exercise on Chapter 12"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )2\n222 apx bpx ar bq\npx qx r− − + −\n+ +9. ( )2\n22 apx bpx bq ar\nax b+ + −\n+10.   5 34 2sin−+ −a bx\nx x"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "( ) ( ) ( ) ( )1 1 n max b cx d mc ax b na cx d− −+ +  + + +  14.  cos ( x+a)"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "– cosec3 x – cosec x cot2 x 16.   1\n1 sin−\n+ x"
+            },
+            {
+              "questionNumber": 24,
+              "questionText": "()( )( )2sin cos 2 cos − + + + + q sin x ax x p q x a x x"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "()()()2tan cos tan 1 sin− + + − − x x x x x x"
+            },
+            {
+              "questionNumber": 26,
+              "questionText": "( )235 15 cos 28cos 28 sin 15sin\n3 7cos+ + + −\n+x x x x x x\nx x"
+            },
+            {
+              "questionNumber": 30,
+              "questionText": "1sin cos\nsin+−\nnx n x x\nx\nEXERCISE 13.1"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i){1, 2, 3, 4, 5, 6}         (ii) φ     (iii)  {3, 6}        (iv)  {1, 2, 3}     (v)  {6}\n(vi) {3, 4, 5, 6}, A∪B = {1, 2, 3, 4, 5, 6},   A∩B = φ, B∪C = {3, 6}, E ∩F = {6},\nD∩E = φ,\nA – C = {1, 2,4,5}, D – E = {1,2,3}, E ∩F′ = φ, F′ = {1, 2}"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 17,
+          "exerciseNumber": "12.2",
+          "questions": [
+            {
+              "questionNumber": 8,
+              "questionText": "8.8.8.8.( )1\n2n n n nnx anx x a\nx a−− − +\n−"
+            },
+            {
+              "questionNumber": 9,
+              "questionText": "9.9.9.9.(i)   2 (ii) 20x3 – 15 x2 + 6x – 4 (iii) ( )435 2 x\nx−+ (iv) 15x4 + 524\nx\n(v)5 1012 36–\nx x+   (vi) ( )2 22 (3 2)\n(3 1)1– x x ––\nx – x+10.  – sin x"
+            },
+            {
+              "questionNumber": 11,
+              "questionText": "(i)cos 2 x (ii) sec x tan x\n(iii) 5sec x tan x – 4sin x (iv) – cosec x cot x\n(v) – 3cosec2 x – 5 cosec x cot x(vi) 5cos x+ 6sin x\n(vii) 2sec2 x – 7sec  x tan x\nMiscellaneous Exercise on Chapter 12"
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "( )2\n222 apx bpx ar bq\npx qx r− − + −\n+ +9. ( )2\n22 apx bpx bq ar\nax b+ + −\n+10.   5 34 2sin−+ −a bx\nx x"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "( ) ( ) ( ) ( )1 1 n max b cx d mc ax b na cx d− −+ +  + + +  14.  cos ( x+a)"
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "– cosec3 x – cosec x cot2 x 16.   1\n1 sin−\n+ x"
+            },
+            {
+              "questionNumber": 24,
+              "questionText": "()( )( )2sin cos 2 cos − + + + + q sin x ax x p q x a x x"
+            },
+            {
+              "questionNumber": 25,
+              "questionText": "()()()2tan cos tan 1 sin− + + − − x x x x x x"
+            },
+            {
+              "questionNumber": 26,
+              "questionText": "( )235 15 cos 28cos 28 sin 15sin\n3 7cos+ + + −\n+x x x x x x\nx x"
+            },
+            {
+              "questionNumber": 30,
+              "questionText": "1sin cos\nsin+−\nnx n x x\nx\nEXERCISE 13.1"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "(i){1, 2, 3, 4, 5, 6}         (ii) φ     (iii)  {3, 6}        (iv)  {1, 2, 3}     (v)  {6}\n(vi) {3, 4, 5, 6}, A∪B = {1, 2, 3, 4, 5, 6},   A∩B = φ, B∪C = {3, 6}, E ∩F = {6},\nD∩E = φ,\nA – C = {1, 2,4,5}, D – E = {1,2,3}, E ∩F′ = φ, F′ = {1, 2}"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)A and B; A and C; B and C; C and D  (ii) A and C   (iii) B and D"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i) “Getting at least two heads”, and “getting at least two tails”\n(ii) “Getting no heads”, “getting exactly one head” and “getting at least two\nheads”\n(iii) “Getting at most two tails”, and “getting exactly two tails”\n(iv) “Getting exactly one head” and “getting exactly two heads”\n(v) “Getting exactly one tail”, “get"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 17,
+          "exerciseNumber": "13.1",
+          "questions": [
+            {
+              "questionNumber": 2,
+              "questionText": "(i){1, 2, 3, 4, 5, 6}         (ii) φ     (iii)  {3, 6}        (iv)  {1, 2, 3}     (v)  {6}\n(vi) {3, 4, 5, 6}, A∪B = {1, 2, 3, 4, 5, 6},   A∩B = φ, B∪C = {3, 6}, E ∩F = {6},\nD∩E = φ,\nA – C = {1, 2,4,5}, D – E = {1,2,3}, E ∩F′ = φ, F′ = {1, 2}"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)A and B; A and C; B and C; C and D  (ii) A and C   (iii) B and D"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i) “Getting at least two heads”, and “getting at least two tails”\n(ii) “Getting no heads”, “getting exactly one head” and “getting at least two\nheads”\n(iii) “Getting at most two tails”, and “getting exactly two tails”\n(iv) “Getting exactly one head” and “getting exactly two heads”\n(v) “Getting exactly one tail”, “getting exactly two tails”, and getting exactly\nthree tails”\nANote    There may be other events also as answer to the above question."
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "(i)True    (ii)  True    (iii)  True    (iv)  False    (v)  False    (vi)  False\nEXERCISE 14.2"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 17,
+          "exerciseNumber": "13.2",
+          "questions": [
+            {
+              "questionNumber": 2,
+              "questionText": "(i){1, 2, 3, 4, 5, 6}         (ii) φ     (iii)  {3, 6}        (iv)  {1, 2, 3}     (v)  {6}\n(vi) {3, 4, 5, 6}, A∪B = {1, 2, 3, 4, 5, 6},   A∩B = φ, B∪C = {3, 6}, E ∩F = {6},\nD∩E = φ,\nA – C = {1, 2,4,5}, D – E = {1,2,3}, E ∩F′ = φ, F′ = {1, 2}"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)A and B; A and C; B and C; C and D  (ii) A and C   (iii) B and D"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i) “Getting at least two heads”, and “getting at least two tails”\n(ii) “Getting no heads”, “getting exactly one head” and “getting at least two\nheads”\n(iii) “Getting at most two tails”, and “getting exactly two tails”\n(iv) “Getting exactly one head” and “getting exactly two heads”\n(v) “Getting exactly one tail”, “getting exactly two tails”, and getting exactly\nthree tails”\nANote    There may be other events also as answer to the above question."
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "(i)True    (ii)  True    (iii)  True    (iv)  False    (v)  False    (vi)  False\nEXERCISE 14.2"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 17,
+          "exerciseNumber": "14.1",
+          "questions": [
+            {
+              "questionNumber": 2,
+              "questionText": "(i){1, 2, 3, 4, 5, 6}         (ii) φ     (iii)  {3, 6}        (iv)  {1, 2, 3}     (v)  {6}\n(vi) {3, 4, 5, 6}, A∪B = {1, 2, 3, 4, 5, 6},   A∩B = φ, B∪C = {3, 6}, E ∩F = {6},\nD∩E = φ,\nA – C = {1, 2,4,5}, D – E = {1,2,3}, E ∩F′ = φ, F′ = {1, 2}"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "(i)A and B; A and C; B and C; C and D  (ii) A and C   (iii) B and D"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "(i) “Getting at least two heads”, and “getting at least two tails”\n(ii) “Getting no heads”, “getting exactly one head” and “getting at least two\nheads”\n(iii) “Getting at most two tails”, and “getting exactly two tails”\n(iv) “Getting exactly one head” and “getting exactly two heads”\n(v) “Getting exactly one tail”, “getting exactly two tails”, and getting exactly\nthree tails”\nANote    There may be other events also as answer to the above question."
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "(i)True    (ii)  True    (iii)  True    (iv)  False    (v)  False    (vi)  False\nEXERCISE 14.2"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 17,
+          "exerciseNumber": "14.2",
+          "questions": [
+            {
+              "questionNumber": 12,
+              "questionText": "(i) No, because P(A ∩B) must be less than or equal to P(A) and P(B),  (ii) Yes"
+            },
+            {
+              "questionNumber": 18,
+              "questionText": "0.6 19. 0.55 20. 0.65"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 125
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 22,
+    "totalWords": 9691
+  }
+}

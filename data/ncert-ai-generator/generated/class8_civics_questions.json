@@ -1,0 +1,633 @@
+{
+  "class": 8,
+  "subject": "Civics",
+  "book": "Social and Political Life - III",
+  "board": "CBSE",
+  "total_questions": 18,
+  "questions": [
+    {
+      "question": "Define 'secularism' as per the Indian Constitution. List any two features of secularism in India.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Understanding secularism",
+      "answer": "Secularism in the Indian Constitution means that the state does not promote any one religion and treats all religions equally. Two features of secularism in India are:\n1. The state does not have an official religion.\n2. Every citizen has the freedom to practice, profess, and propagate any religion of their choice.",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of secularism (state does not promote any religion, treats all equally)",
+          "marks": 1
+        },
+        {
+          "point": "First feature: No official state religion",
+          "marks": 1
+        },
+        {
+          "point": "Second feature: Freedom to practice any religion",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Refer to Chapter 2: Understanding Secularism in your NCERT textbook.",
+        "Think about how India treats different religions compared to some other countries."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "1"
+    },
+    {
+      "question": "Define 'secularism' as per the Indian Constitution. Why is secularism important in a diverse country like India?",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Understanding secularism",
+      "answer": "Secularism in the Indian Constitution means that the state does not promote any religion as the official religion and treats all religions equally. It ensures that every citizen has the freedom to practice, profess, and propagate any religion of their choice. In a diverse country like India, secularism is important because it promotes unity, prevents discrimination based on religion, and ensures that the government remains neutral in religious matters, thereby maintaining peace and harmony among different religious communities.",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of secularism (state neutrality and equal treatment of all religions)",
+          "marks": 1
+        },
+        {
+          "point": "Importance: promotes unity and prevents religious discrimination",
+          "marks": 1
+        },
+        {
+          "point": "Importance: ensures peace and harmony in a diverse society",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Refer to Article 25-28 of the Indian Constitution.",
+        "Think about India's religious diversity and how secularism helps in governance."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "1"
+    },
+    {
+      "question": "Explain with examples how the Indian Constitution ensures the principle of secularism in a diverse country like India.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Understanding secularism",
+      "answer": "The Indian Constitution ensures secularism through several key provisions and practices. Firstly, it guarantees the Right to Freedom of Religion (Articles 25-28), allowing every citizen to profess, practice, and propagate any religion. Secondly, it prohibits discrimination by the State on grounds of religion (Article 15). Thirdly, it mandates that the State treats all religions equally and does not promote any one religion as the state religion. For example, government schools cannot give religious instruction, and all religious communities can celebrate their festivals freely. This ensures that India remains a secular republic where the State maintains a principled distance from religion while protecting religious freedom.",
+      "marking_scheme": [
+        {
+          "point": "Mention of Right to Freedom of Religion (Articles 25-28) and its meaning",
+          "marks": 1
+        },
+        {
+          "point": "Explanation of State's equal treatment and non-discrimination (Article 15)",
+          "marks": 1
+        },
+        {
+          "point": "Providing a relevant example (e.g., no religious instruction in govt. schools, equal festival celebration)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about Fundamental Rights related to religion.",
+        "Consider how the government treats different religions in public spaces.",
+        "Recall examples from your textbook about festivals or education."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "1"
+    },
+    {
+      "question": "Explain with examples why India is called a 'secular' state. How is this different from theocratic states?",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Understanding secularism",
+      "answer": "India is called a secular state because it does not have any official state religion and treats all religions equally. The Constitution guarantees freedom of religion to all citizens. For example, the government cannot promote or discriminate against any religion in schools or public spaces. This is different from theocratic states like Pakistan (Islamic Republic) or Vatican City (Christian state), where one religion is officially recognized and given special status, often influencing laws and governance.",
+      "marking_scheme": [
+        {
+          "point": "Definition of secularism \u2013 no official state religion, equal treatment",
+          "marks": 1
+        },
+        {
+          "point": "Example from India \u2013 freedom of religion, government neutrality",
+          "marks": 1
+        },
+        {
+          "point": "Difference with theocratic state \u2013 one official religion, special status, influence on laws",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about what 'secular' means in the Preamble.",
+        "Recall how India treats different religious festivals.",
+        "Compare with countries having a state religion."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "1"
+    },
+    {
+      "question": "Critically examine the statement: 'Secularism in India is not just about separation of religion and state, but also about equal respect for all religions.' Support your answer with examples from the Indian Constitution and recent parliamentary debates.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Indian Constitution and Secularism",
+      "answer": "The statement is accurate and reflects the unique model of secularism adopted in India. Unlike Western secularism which emphasizes strict separation, Indian secularism follows the principle of 'principled distance' and equal respect for all religions. This is evident in: 1) Constitutional provisions - Article 25-28 guarantee freedom of religion, Article 15 prohibits discrimination on religious grounds, and the Preamble declares India as a 'secular' republic. 2) State intervention - The government regulates religious practices to ensure equality (e.g., banning untouchability under Article 17, regulating temple funds). 3) Parliamentary debates - Recent discussions on the Citizenship Amendment Act (2019) highlighted how secularism requires balancing religious freedom with national integrity. 4) Practical implementation - Government holidays for major festivals of all religions, state funding for minority educational institutions under Article 30. Thus, Indian secularism is positive, interventionist, and ensures religious harmony while maintaining state neutrality.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of Indian vs. Western secularism with 'principled distance' concept",
+          "marks": 1.5
+        },
+        {
+          "point": "Reference to 3+ constitutional articles (25-28, 15, 17, 30, Preamble)",
+          "marks": 1.5
+        },
+        {
+          "point": "Examples of state intervention for equality (untouchability, temple funds)",
+          "marks": 1
+        },
+        {
+          "point": "Contemporary example from parliamentary debates (CAA, uniform civil code discussions)",
+          "marks": 1
+        },
+        {
+          "point": "Conclusion linking to constitutional values and social harmony",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Evaluation",
+      "hints": [
+        "Refer to Articles 25-28 of Fundamental Rights",
+        "Think about how government regulates religious practices for social reform",
+        "Consider recent parliamentary debates on religious-based laws"
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "1"
+    },
+    {
+      "question": "The Indian Constitution declares India to be a secular state. However, in practice, secularism in India is different from the concept followed in countries like the United States. Critically examine how Indian secularism is unique, and evaluate its significance in maintaining social harmony in a diverse society like India. Support your answer with relevant examples.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Understanding secularism",
+      "answer": "Indian secularism is unique because it follows the principle of 'principled distance' rather than strict separation of religion and state. Unlike the United States, where the state maintains a strict distance from all religions (wall of separation), the Indian state can intervene in religious matters to promote equality, justice, and social reform. This is guided by constitutional values such as freedom of religion (Articles 25-28) and the right to equality (Articles 14-18).\n\nKey features of Indian secularism include:\n1. **Equal respect for all religions** \u2013 The state does not promote or discriminate against any religion.\n2. **State intervention for reform** \u2013 The state can intervene to abolish discriminatory practices (e.g., banning untouchability, enacting laws against triple talaq).\n3. **Protection of minority rights** \u2013 The Constitution ensures cultural and educational rights for religious and linguistic minorities (Article 29-30).\n4. **No official state religion** \u2013 Unlike some countries, India does not have a state religion.\n\nSignificance in maintaining social harmony:\n- Prevents majority domination and protects minority interests.\n- Promotes national integration by respecting diversity.\n- Allows for social reforms within religions (e.g., Hindu Code Bills, banning of Sati).\n- Ensures that personal laws do not violate fundamental rights.\n\nExample: The government's intervention to ban triple talaq was aimed at ensuring gender justice within Muslim personal laws, reflecting the state's role in reforming religious practices for equality.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of 'principled distance' vs strict separation with comparison to US",
+          "marks": 2
+        },
+        {
+          "point": "Description of key features of Indian secularism (equal respect, state intervention, minority rights, no state religion)",
+          "marks": 2
+        },
+        {
+          "point": "Evaluation of significance in social harmony with examples (e.g., triple talaq, Hindu Code Bills)",
+          "marks": 1.5
+        },
+        {
+          "point": "Conclusion linking constitutional values and practical implementation",
+          "marks": 0.5
+        }
+      ],
+      "bloom_level": "Evaluation",
+      "hints": [
+        "Refer to Articles 25-28 and 14-18 of the Constitution.",
+        "Think about how the state balances religious freedom with social reform.",
+        "Consider examples like triple talaq ban or right to temple entry for all castes."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "1"
+    },
+    {
+      "question": "What is the role of the judiciary in protecting the rights of marginalized communities? Explain with one example.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Confronting marginalization",
+      "answer": "The judiciary plays a crucial role in protecting the rights of marginalized communities by ensuring that laws are implemented fairly and by interpreting the Constitution to safeguard fundamental rights. It acts as a guardian of the Constitution and can issue directives to the government to protect marginalized groups. For example, the judiciary has intervened to ensure the implementation of the Right to Education Act (RTE), which mandates free and compulsory education for children aged 6\u201314 years, benefiting marginalized communities by providing them access to education.",
+      "marking_scheme": [
+        {
+          "point": "Role of judiciary in protecting rights (ensuring fair implementation of laws, interpreting Constitution)",
+          "marks": 1
+        },
+        {
+          "point": "Example of judicial intervention (Right to Education Act implementation)",
+          "marks": 1
+        },
+        {
+          "point": "Explanation of how the example benefits marginalized communities (access to education)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about how courts can enforce laws that protect disadvantaged groups.",
+        "Recall a law that ensures education for all children."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "2"
+    },
+    {
+      "question": "What is the role of the judiciary in protecting the rights of marginalized communities? Give two examples.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Confronting marginalization",
+      "answer": "The judiciary plays a crucial role in protecting the rights of marginalized communities by ensuring that laws are implemented fairly and by interpreting the Constitution to safeguard fundamental rights. Two examples are: 1) The judiciary can issue directions to the government to implement policies that protect marginalized groups, such as ensuring access to education and healthcare. 2) It can hear cases filed by marginalized communities or on their behalf to challenge discriminatory practices and secure justice, such as in cases related to untouchability or land rights.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of judiciary's role in protecting rights",
+          "marks": 1
+        },
+        {
+          "point": "First example with brief explanation",
+          "marks": 1
+        },
+        {
+          "point": "Second example with brief explanation",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about how courts interpret laws and the Constitution.",
+        "Recall examples from your textbook about rights of Scheduled Castes/Tribes."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "2"
+    },
+    {
+      "question": "Explain the role of the judiciary in protecting the rights of marginalized communities in India. Provide one example of a law or policy that has been used for this purpose.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Confronting marginalization",
+      "answer": "The judiciary plays a crucial role in protecting the rights of marginalized communities by interpreting the Constitution and ensuring that laws are applied fairly. It acts as a guardian of Fundamental Rights, particularly the Right to Equality (Article 14) and the Right against Exploitation (Article 23). The judiciary can issue directives to the government to implement protective measures and can strike down laws or policies that are discriminatory. For example, the Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989, has been upheld and enforced by the judiciary to prevent crimes and discrimination against Dalits and Adivasis, ensuring legal protection and justice for these communities.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of judiciary's role as interpreter of Constitution and protector of Fundamental Rights for marginalized groups",
+          "marks": 1
+        },
+        {
+          "point": "Mention of specific rights (e.g., Right to Equality, Right against Exploitation) and judicial review power",
+          "marks": 1
+        },
+        {
+          "point": "Correct example with brief explanation (e.g., SC/ST Act, 1989, or Right to Education Act, 2009)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Application",
+      "hints": [
+        "Think about Fundamental Rights in the Indian Constitution.",
+        "Recall laws discussed in Chapter 'Confronting Marginalization'.",
+        "Consider how courts can intervene in cases of discrimination."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "2"
+    },
+    {
+      "question": "Explain the role of the judiciary in protecting the rights of marginalized communities in India, with reference to the Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Confronting Marginalization",
+      "answer": "The judiciary plays a crucial role in protecting the rights of marginalized communities by interpreting and enforcing laws designed to prevent discrimination and violence. The Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989, is a key example. It defines specific crimes against SC/ST communities, such as forced labor, humiliation, or denial of access to public places, as punishable offenses. The judiciary ensures this law is implemented by hearing cases, delivering judgments, and providing legal remedies to victims, thereby upholding constitutional values of equality and justice.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of judiciary's role in interpreting/enforcing laws for marginalized groups",
+          "marks": 1
+        },
+        {
+          "point": "Description of the SC/ST (Prevention of Atrocities) Act, 1989, as a legal tool against discrimination",
+          "marks": 1
+        },
+        {
+          "point": "Example of how judiciary applies this law (e.g., hearing cases, providing justice)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Application",
+      "hints": [
+        "Think about how courts use laws to address inequality.",
+        "Recall the purpose of the 1989 Act mentioned in your textbook."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "2"
+    },
+    {
+      "question": "Critically analyze how the judiciary acts as a guardian of fundamental rights for marginalized communities in India, with reference to specific constitutional provisions and landmark cases. Explain with examples how judicial interventions have helped in confronting marginalization.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Judiciary and Confronting Marginalization",
+      "answer": "The judiciary in India plays a crucial role as the guardian of fundamental rights for marginalized communities through several mechanisms:\n\n1. **Constitutional Mandate**: Article 32 and Article 226 of the Constitution empower the Supreme Court and High Courts respectively to issue writs for enforcement of fundamental rights. This allows marginalized groups to directly approach courts when their rights are violated.\n\n2. **Public Interest Litigation (PIL)**: The judiciary has relaxed the traditional rule of 'locus standi', allowing any public-spirited individual or organization to file cases on behalf of marginalized communities who cannot approach courts themselves.\n\n3. **Landmark Judgments**:\n   - **Kesavananda Bharati Case (1973)**: Established the 'Basic Structure Doctrine', protecting fundamental rights from arbitrary amendments.\n   - **Vishaka Guidelines (1997)**: Laid down guidelines against sexual harassment at workplace, protecting women's rights.\n   - **NALSA Judgment (2014)**: Recognized transgender persons as 'third gender' and affirmed their fundamental rights.\n   - **Right to Food Case (2001)**: Expanded Article 21 to include right to food, benefiting economically marginalized communities.\n\n4. **Interpretation of Rights**: Courts have expanded the scope of Article 21 (Right to Life) to include right to dignity, education, health, and clean environment, which particularly benefit marginalized sections.\n\n5. **Monitoring Implementation**: Courts often appoint committees and commissioners to monitor implementation of their orders for marginalized communities' welfare.\n\nExamples of judicial interventions:\n- Ensuring mid-day meals in schools for children from marginalized backgrounds\n- Protecting forest rights of tribal communities\n- Preventing forced evictions of slum dwellers without rehabilitation\n- Directing reservation policies for Scheduled Castes and Scheduled Tribes in promotions",
+      "marking_scheme": [
+        {
+          "point": "Explanation of constitutional provisions (Articles 32, 226) and their significance for marginalized communities",
+          "marks": 1.5
+        },
+        {
+          "point": "Discussion of PIL as a tool for social justice with appropriate examples",
+          "marks": 1.5
+        },
+        {
+          "point": "Analysis of at least two landmark cases and their impact on marginalized groups",
+          "marks": 1.5
+        },
+        {
+          "point": "Critical evaluation of judiciary's role with contemporary examples of judicial interventions",
+          "marks": 1.5
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Think about Articles 32 and 226 of the Constitution",
+        "Recall the concept of Public Interest Litigation (PIL)",
+        "Remember landmark cases like Vishaka Guidelines and NALSA Judgment",
+        "Consider how Article 21 has been expanded to protect various rights"
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "2"
+    },
+    {
+      "question": "Critically analyze how the judiciary acts as a guardian of the Constitution to protect marginalized communities in India, with reference to specific constitutional provisions and landmark cases. (6 marks)",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Judiciary and Confronting Marginalization",
+      "answer": "The judiciary in India plays a crucial role as the guardian of the Constitution to protect marginalized communities through several mechanisms:\n\n1. **Judicial Review & Fundamental Rights Protection**: The judiciary ensures that laws and government actions do not violate fundamental rights guaranteed under Articles 14-18 (Right to Equality), Articles 19-22 (Right to Freedom), and Articles 23-24 (Right against Exploitation). For example, in the **Kesavananda Bharati case (1973)**, the Supreme Court established the 'Basic Structure Doctrine', preventing Parliament from amending the Constitution in ways that would harm marginalized groups.\n\n2. **Public Interest Litigation (PIL)**: Through PIL, the judiciary allows any citizen or organization to file cases on behalf of marginalized communities who cannot access courts themselves. The **Bandhua Mukti Morcha case (1984)** helped free bonded laborers, while the **Vishaka case (1997)** established guidelines against sexual harassment at workplace, protecting women workers.\n\n3. **Directive Principles Interpretation**: The judiciary interprets laws in light of Directive Principles of State Policy (Articles 36-51), especially Article 46 which mandates promotion of educational and economic interests of Scheduled Castes, Scheduled Tribes, and other weaker sections.\n\n4. **Reservation Policies Protection**: The judiciary has upheld reservation policies under Articles 15(4), 16(4), and 335, ensuring representation for marginalized communities in education and employment, as seen in the **Indra Sawhney case (1992)** which upheld 27% OBC reservation.\n\n5. **Monitoring Implementation**: Courts monitor implementation of welfare schemes through continuing mandamus, ensuring marginalized communities actually receive benefits meant for them.\n\nThus, through constitutional interpretation, PIL, and active monitoring, the judiciary transforms constitutional promises into practical protections for marginalized communities.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of judicial review and fundamental rights protection with Article references",
+          "marks": 1.5
+        },
+        {
+          "point": "Discussion of Public Interest Litigation with relevant case examples",
+          "marks": 1.5
+        },
+        {
+          "point": "Interpretation of Directive Principles, especially Article 46",
+          "marks": 1
+        },
+        {
+          "point": "Protection of reservation policies with constitutional articles and case law",
+          "marks": 1
+        },
+        {
+          "point": "Role in monitoring implementation of welfare schemes",
+          "marks": 0.5
+        },
+        {
+          "point": "Overall critical analysis and conclusion",
+          "marks": 0.5
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Consider Articles 14-24 of the Constitution",
+        "Remember the importance of Public Interest Litigation (PIL)",
+        "Think about how courts interpret laws in favor of marginalized groups",
+        "Recall landmark cases like Kesavananda Bharati and Vishaka"
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "2"
+    },
+    {
+      "question": "Define 'public facilities'. Give two examples and explain why they are important for social justice.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Public facilities",
+      "answer": "Public facilities are essential services provided by the government to all citizens, often at subsidised or free rates, to ensure a basic standard of living and equal opportunities. Examples include government schools and public healthcare centres. They are important for social justice because: (1) They ensure that even the poor can access basic services like education and health, reducing inequality. (2) They promote equal opportunities by providing services to all without discrimination based on income, caste, or religion.",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of public facilities",
+          "marks": 1
+        },
+        {
+          "point": "Two correct examples (e.g., schools, hospitals, water supply, etc.)",
+          "marks": 1
+        },
+        {
+          "point": "Explanation of importance for social justice (equality, access for poor)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think of services provided by the government to everyone.",
+        "Examples: education, health, water, electricity.",
+        "Social justice means fairness and equality in society."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "3"
+    },
+    {
+      "question": "What are public facilities? Give two examples and explain why they are important for social justice.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Public facilities",
+      "answer": "Public facilities are essential services provided by the government to all citizens, often at subsidised rates or free of cost, to ensure a basic quality of life. Examples include government schools and public healthcare centres. They are important for social justice because: 1) They ensure that even the poor can access basic services like education and health, reducing inequality. 2) They promote equal opportunities for all, regardless of economic background, helping to build a fairer society.",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of public facilities",
+          "marks": 1
+        },
+        {
+          "point": "Two valid examples (e.g., schools, hospitals, water supply, electricity)",
+          "marks": 1
+        },
+        {
+          "point": "Explanation of importance for social justice (equality, access for poor, reducing inequality)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think of services everyone uses daily.",
+        "Consider how these help poor and rich alike."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "3"
+    },
+    {
+      "question": "Explain how public facilities like water supply and electricity contribute to economic and social justice in India. Provide examples to support your answer.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Public facilities",
+      "answer": "Public facilities like water supply and electricity contribute to economic and social justice by ensuring equal access to essential services for all citizens, regardless of their economic status. For example, government-provided water supply in rural areas prevents exploitation by private sellers and ensures health and hygiene for the poor. Similarly, subsidized electricity for farmers enables irrigation and increases agricultural productivity, reducing economic disparities. These facilities uphold the Right to Life under Article 21 of the Constitution by providing basic necessities, promoting dignity, and reducing inequality.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of equal access to essential services for all citizens",
+          "marks": 1
+        },
+        {
+          "point": "Example of water supply preventing exploitation and ensuring health",
+          "marks": 1
+        },
+        {
+          "point": "Example of subsidized electricity boosting agriculture and reducing disparities",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Application",
+      "hints": [
+        "Think about how these facilities help poor and rural communities.",
+        "Consider the role of government in providing these services at affordable rates.",
+        "Relate to constitutional rights like Right to Life."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "3"
+    },
+    {
+      "question": "Explain how public facilities like water supply and electricity contribute to economic and social justice in India. Provide examples.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Public facilities",
+      "answer": "Public facilities like water supply and electricity contribute to economic and social justice by ensuring equal access to essential services for all citizens, regardless of their economic background. They help reduce inequalities by providing affordable services to the poor, enabling them to participate in economic activities. For example, reliable electricity allows small businesses to operate, children to study at night, and healthcare facilities to function, while safe water supply prevents water-borne diseases and reduces the burden on women and children who often fetch water from distant sources. The government's role in providing these facilities ensures that private companies do not exploit people by charging high prices, thus promoting social justice.",
+      "marking_scheme": [
+        {
+          "point": "Ensuring equal access to essential services for all citizens, reducing inequalities",
+          "marks": 1
+        },
+        {
+          "point": "Enabling economic participation (e.g., electricity for small businesses, study, healthcare)",
+          "marks": 1
+        },
+        {
+          "point": "Preventing exploitation by private companies through government provision, with examples (water/electricity)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Application",
+      "hints": [
+        "Think about how access to basic services affects people's daily lives and opportunities.",
+        "Consider the role of the government in ensuring these facilities are available to everyone, not just those who can afford them."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "3"
+    },
+    {
+      "question": "Analyze how the Public Distribution System (PDS) in India serves as a tool for both economic and social justice. Evaluate its effectiveness in addressing inequalities and suggest one improvement to make it more efficient.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Economic and Social Justice",
+      "answer": "The Public Distribution System (PDS) is a government-run program that provides subsidized food grains and essential commodities to economically weaker sections of society. It serves as a tool for economic justice by making basic food items affordable to low-income families, thus ensuring their right to food and reducing hunger-driven poverty. Socially, it promotes justice by targeting marginalized communities (SC/ST, BPL families) and reducing caste and class-based disparities in access to nutrition.\n\nEffectiveness:\n- Positives: It has reduced starvation and malnutrition in many regions, stabilized food prices, and provided a safety net during crises like the COVID-19 pandemic.\n- Limitations: Issues like leakage (diversion of grains), inclusion/exclusion errors (eligible families left out), corruption, and poor-quality grains reduce its impact.\n\nSuggested improvement: Implementing a technology-based biometric authentication system (like Aadhaar-linked POS machines) at ration shops to minimize leakage and ensure grains reach genuine beneficiaries.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of PDS as economic justice tool (affordability, poverty reduction)",
+          "marks": 2
+        },
+        {
+          "point": "Explanation of PDS as social justice tool (targeting marginalized, reducing disparities)",
+          "marks": 2
+        },
+        {
+          "point": "Evaluation of effectiveness with both positives and limitations",
+          "marks": 1
+        },
+        {
+          "point": "One practical improvement suggestion with reasoning",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Think about how PDS provides food security and who it targets.",
+        "Consider issues like corruption and how technology can help."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "3"
+    },
+    {
+      "question": "Critically analyze how the Right to Education Act, 2009, and the Public Distribution System (PDS) together reflect the government's role in promoting economic and social justice in India. Support your answer with examples.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Economic and Social Justice",
+      "answer": "The Right to Education Act (RTE), 2009, and the Public Distribution System (PDS) together demonstrate the government's constitutional commitment to promoting both social and economic justice. RTE ensures free and compulsory education for children aged 6\u201314, addressing social inequality by providing equal educational opportunities regardless of economic background. For example, 25% reservation in private schools for disadvantaged groups helps bridge the education gap. Meanwhile, PDS provides subsidized food grains (rice, wheat, sugar) through ration shops, ensuring food security for economically weaker sections\u2014a form of economic justice. Together, they show the government's dual role: RTE empowers through knowledge (breaking social barriers), while PDS ensures basic survival needs (reducing economic disparity). This integrated approach aligns with Directive Principles of State Policy (Articles 39, 41, 47) and fundamental rights (Article 21A), illustrating how laws and public facilities work in tandem to create a just society.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of RTE Act, 2009, as a tool for social justice (free education, reservation)",
+          "marks": 2
+        },
+        {
+          "point": "Explanation of PDS as a tool for economic justice (food security, subsidized grains)",
+          "marks": 2
+        },
+        {
+          "point": "Integration of both to show government's dual role with constitutional basis (DPSP, Fundamental Rights)",
+          "marks": 1
+        },
+        {
+          "point": "Example-based justification and critical analysis (e.g., 25% quota, ration shops)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Think about how education and food are basic needs.",
+        "Recall Articles 21A, 39, and 47 of the Constitution.",
+        "Consider how these schemes reduce inequality."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - III",
+      "topic_id": "3"
+    }
+  ]
+}

@@ -1,0 +1,618 @@
+{
+  "class": 7,
+  "subject": "Civics",
+  "book": "Social and Political Life - II",
+  "board": "CBSE",
+  "total_questions": 18,
+  "questions": [
+    {
+      "question": "Define democracy. How does democracy promote equality among citizens?",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Democracy and equality",
+      "answer": "Democracy is a form of government where the rulers are elected by the people through free and fair elections. It promotes equality among citizens in the following ways: 1) Every citizen has one vote and each vote has equal value, ensuring political equality. 2) All citizens are equal before the law, regardless of their background. 3) Democratic governments work to reduce inequalities through laws and policies that protect the rights of all citizens, especially marginalized groups.",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of democracy (government by the people, elected representatives)",
+          "marks": 1
+        },
+        {
+          "point": "Explanation of political equality through equal voting rights",
+          "marks": 1
+        },
+        {
+          "point": "Mention of equality before law and government efforts to reduce inequalities",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about how people choose their leaders in India.",
+        "Remember the principle of 'one person, one vote'.",
+        "Consider how laws apply equally to all citizens."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "1"
+    },
+    {
+      "question": "Explain any two ways in which the government promotes equality in a democracy.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Equality and Democracy",
+      "answer": "The government promotes equality in a democracy through: 1) Laws and Policies \u2013 It enacts laws like the Right to Education Act (RTE) that ensure equal access to education for all children, and policies such as reservations to provide opportunities to marginalized communities. 2) Welfare Schemes \u2013 It implements schemes like the Mid-Day Meal Scheme in schools to reduce inequality by providing free meals, encouraging attendance, and supporting nutrition for children from poorer families.",
+      "marking_scheme": [
+        {
+          "point": "Mentioning laws/policies with example (e.g., RTE, reservations)",
+          "marks": 1.5
+        },
+        {
+          "point": "Mentioning welfare schemes with example (e.g., Mid-Day Meal Scheme)",
+          "marks": 1.5
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about laws that give equal rights to all.",
+        "Recall government schemes that help underprivileged students."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "1"
+    },
+    {
+      "question": "Explain how the Right to Education Act (RTE), 2009 promotes equality in India. Support your answer with two examples of its provisions.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Equality and Democracy",
+      "answer": "The Right to Education Act (RTE), 2009 promotes equality by making education a fundamental right for all children aged 6\u201314 years, ensuring equal access regardless of social or economic background. Key provisions include: (1) It mandates 25% reservation for children from economically weaker sections (EWS) and disadvantaged groups in private schools, breaking social barriers. (2) It prohibits discrimination, capitation fees, and screening procedures, ensuring no child is denied admission based on caste, religion, or gender. (3) It sets minimum standards for infrastructure, teacher-student ratios, and curriculum, reducing disparities between government and private schools. This law empowers the government to enforce equality through education, a core democratic principle.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of RTE as a tool for equality (fundamental right, age group 6\u201314)",
+          "marks": 1
+        },
+        {
+          "point": "First example: 25% reservation for EWS/disadvantaged groups in private schools",
+          "marks": 1
+        },
+        {
+          "point": "Second example: Prohibition of discrimination/capitation fees and minimum standards",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Application",
+      "hints": [
+        "Think about how education can reduce inequality.",
+        "Recall specific rules in RTE about admissions and school standards."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "1"
+    },
+    {
+      "question": "Explain how the government ensures equality through laws and policies, giving two examples from the Indian context.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Role of government in ensuring equality",
+      "answer": "The government ensures equality through laws and policies by enacting legislation that prohibits discrimination and promotes equal opportunities for all citizens. Two examples from the Indian context are: 1) The Right to Education Act (2009) which makes education free and compulsory for all children aged 6-14 years, ensuring equal access to education regardless of social or economic background. 2) The Scheduled Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989 which protects marginalized communities from discrimination and violence, helping to address historical inequalities.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of how government uses laws/policies to ensure equality",
+          "marks": 1
+        },
+        {
+          "point": "First example with brief explanation (Right to Education Act)",
+          "marks": 1
+        },
+        {
+          "point": "Second example with brief explanation (SC/ST Prevention of Atrocities Act)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about laws that provide equal opportunities to all citizens",
+        "Consider constitutional provisions and specific acts mentioned in your textbook"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "1"
+    },
+    {
+      "question": "The Indian Constitution guarantees equality to all citizens. However, in reality, we see many forms of inequality in society. Critically examine the role of the State Government in addressing these inequalities, with reference to any two specific measures taken by your own state government.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Equality and Democracy",
+      "answer": "The Indian Constitution, under Articles 14 to 18, guarantees equality to all citizens. However, social and economic inequalities persist due to historical discrimination, poverty, and unequal access to resources. The State Government plays a crucial role in addressing these inequalities through legislative, executive, and welfare measures.\n\nFor example, in the state of Karnataka:\n1. **Educational Equity Measures**: The Karnataka government runs the 'Vidyasiri' scheme, which provides scholarships and hostel facilities to students from SC/ST, OBC, and minority communities to ensure equal access to higher education.\n2. **Economic Empowerment**: The 'Anna Bhagya' scheme provides additional food grains at subsidized rates to below-poverty-line families, addressing nutritional inequality.\n\nAdditionally, State Governments implement central laws like the Right to Education Act (RTE), which mandates 25% reservation for economically weaker sections in private schools. They also form State Commissions for SC/ST and Women to address discrimination complaints.\n\nHowever, challenges remain in implementation due to lack of awareness, corruption, and inadequate funding. Therefore, while State Governments have taken significant steps, continuous monitoring and people's participation are essential to achieve substantive equality.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of constitutional equality vs. real inequality",
+          "marks": 1
+        },
+        {
+          "point": "Role of State Government in ensuring equality (legislative/executive/welfare)",
+          "marks": 1
+        },
+        {
+          "point": "First specific state measure with example (e.g., education scheme)",
+          "marks": 1
+        },
+        {
+          "point": "Second specific state measure with example (e.g., food security scheme)",
+          "marks": 1
+        },
+        {
+          "point": "Reference to central laws implemented by states (e.g., RTE)",
+          "marks": 1
+        },
+        {
+          "point": "Critical analysis of challenges and need for monitoring/participation",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Evaluation",
+      "hints": [
+        "Recall Fundamental Rights related to equality from Chapter 1.",
+        "Think about schemes run by your state for education, health, or food security.",
+        "Consider how laws are implemented differently in various states."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "1"
+    },
+    {
+      "question": "Critically examine the statement: 'Democracy automatically ensures equality for all citizens.' Support your answer with examples from the role of state government in India.",
+      "marks": 5,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Democracy and equality",
+      "answer": "While democracy provides a framework for equality, it does not automatically ensure equality. Democracy establishes political equality through universal adult franchise, where every citizen has one vote regardless of wealth, gender, or caste. However, social and economic equality require active government intervention. For example, state governments implement various schemes to promote equality: 1) Mid-day meal schemes in schools ensure nutritional equality for children from poor families, 2) Reservation policies in education and jobs address historical discrimination against marginalized communities, 3) Public distribution systems provide food grains at subsidized rates to economically weaker sections. Without such proactive measures by state governments, democracy alone cannot eliminate existing inequalities based on caste, gender, or economic status. Therefore, democracy creates opportunities for equality but requires continuous government action to make equality a reality.",
+      "marking_scheme": [
+        {
+          "point": "Clear thesis stating democracy doesn't automatically ensure equality",
+          "marks": 1
+        },
+        {
+          "point": "Explanation of political equality through voting rights",
+          "marks": 1
+        },
+        {
+          "point": "Two relevant examples of state government schemes promoting equality",
+          "marks": 2
+        },
+        {
+          "point": "Critical analysis linking government action to actual equality",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Evaluation",
+      "hints": [
+        "Think about the difference between political rights and actual living conditions",
+        "Consider how state governments implement NCERT textbook concepts like mid-day meal scheme",
+        "Remember that equality has multiple dimensions - social, economic, and political"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "1"
+    },
+    {
+      "question": "List any three ways in which advertisements influence our daily lives, as discussed in the chapter 'Understanding advertising'.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Understanding advertising",
+      "answer": "Advertisements influence our daily lives in the following ways:\n1. They shape our choices and preferences by making certain products appear desirable or necessary.\n2. They create stereotypes by portraying certain groups (like women, men, or children) in fixed roles, such as women always shown doing household work.\n3. They affect our self-image and aspirations by linking products with success, beauty, or happiness, making us feel we need those products to fit in or be valued.",
+      "marking_scheme": [
+        {
+          "point": "Shapes choices/preferences by making products seem desirable",
+          "marks": 1
+        },
+        {
+          "point": "Creates stereotypes by showing fixed roles for groups",
+          "marks": 1
+        },
+        {
+          "point": "Affects self-image/aspirations by linking products with success/happiness",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about how ads make you want to buy things.",
+        "Recall examples of ads showing women or men in specific roles.",
+        "Consider how ads make you feel about yourself or your lifestyle."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "2"
+    },
+    {
+      "question": "What is meant by 'gender stereotype'? Give two examples of gender stereotypes commonly seen in our society.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Growing up as boys and girls",
+      "answer": "Gender stereotype refers to the fixed and oversimplified ideas about the roles, abilities, and behaviors of boys and girls or men and women in society. These stereotypes are often unfair and limit individuals based on their gender rather than their personal interests or capabilities.\n\nTwo examples of gender stereotypes commonly seen in our society are:\n1. The belief that girls are naturally good at household chores like cooking and cleaning, while boys are expected to be good at outdoor activities and technical tasks.\n2. The idea that certain professions are suitable only for a particular gender, such as nursing or teaching being seen as 'women's jobs' and engineering or driving being considered 'men's jobs'.",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of gender stereotype",
+          "marks": 1
+        },
+        {
+          "point": "First relevant example with explanation",
+          "marks": 1
+        },
+        {
+          "point": "Second relevant example with explanation",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about common assumptions made about boys and girls",
+        "Consider examples from daily life, advertisements, or family expectations"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "2"
+    },
+    {
+      "question": "Explain how advertising can reinforce gender stereotypes, using examples from advertisements you might see for children's toys. (3 marks)",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Understanding advertising",
+      "answer": "Advertising often reinforces gender stereotypes by presenting boys and girls in fixed, traditional roles. For example, advertisements for children's toys typically show boys playing with action figures, cars, or construction sets, suggesting they are adventurous, strong, and technical. In contrast, girls are shown with dolls, kitchen sets, or beauty kits, implying they are nurturing, domestic, or focused on appearance. These portrayals limit children's choices by suggesting that certain toys are only for one gender, which can shape their interests and self-perception from a young age. By repeatedly showing such images, advertising strengthens societal stereotypes about what is 'appropriate' for boys and girls.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of how advertising presents fixed gender roles (boys as adventurous/technical, girls as nurturing/domestic)",
+          "marks": 1
+        },
+        {
+          "point": "Use of specific, relevant examples from toy advertisements (e.g., action figures for boys, dolls for girls)",
+          "marks": 1
+        },
+        {
+          "point": "Explanation of impact\u2014how these portrayals limit choices and reinforce societal stereotypes",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Application",
+      "hints": [
+        "Think about toy ads you see on TV or online\u2014who is shown playing with what?",
+        "Consider what messages these ads send about what boys and girls 'should' like."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "2"
+    },
+    {
+      "question": "Explain with an example how advertising can reinforce gender stereotypes. Based on your understanding of the chapter 'Understanding advertising', suggest one way to create a more responsible advertisement.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Understanding advertising",
+      "answer": "Advertising often reinforces gender stereotypes by portraying men and women in fixed, traditional roles. For example, many toy advertisements show boys playing with cars, guns, or construction sets (labelled as 'action toys'), while girls are shown with dolls, kitchen sets, or makeup kits (labelled as 'care-giving or beauty toys'). This sends a message that certain activities, interests, or careers are meant only for a particular gender, limiting children's aspirations and reinforcing societal biases. To create a more responsible advertisement, companies can show boys and girls playing with the same toys interchangeably, or depict women in leadership roles and men in caregiving roles, thus challenging stereotypes rather than strengthening them.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of how advertising reinforces gender stereotypes with a clear example (e.g., toys, household products).",
+          "marks": 1
+        },
+        {
+          "point": "Link to social impact\u2014how it limits aspirations and perpetuates bias.",
+          "marks": 1
+        },
+        {
+          "point": "One practical suggestion for a responsible ad that breaks stereotypes.",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Application",
+      "hints": [
+        "Think about ads you see for toys, clothes, or household products.",
+        "How are men and women shown differently in these ads?",
+        "What would an ad look like if it did NOT follow the usual stereotype?"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "2"
+    },
+    {
+      "question": "Analyze how gender stereotypes in advertising can reinforce traditional roles for boys and girls, and evaluate the role of women's movements in challenging these stereotypes. Support your answer with examples from the Indian context.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Understanding advertising and Women change the world",
+      "answer": "Gender stereotypes in advertising often reinforce traditional roles by portraying boys as adventurous, strong, and associated with cars, sports, and technology, while girls are shown as caring, domestic, and focused on beauty, cooking, and nurturing. For example, many Indian advertisements show mothers cooking with kitchen appliances while fathers are shown driving cars or using gadgets. This creates a perception that certain roles are 'natural' for each gender.\n\nWomen's movements have challenged these stereotypes by:\n1. Raising awareness about biased portrayals through campaigns like #WomenNotObjects\n2. Promoting advertisements that show women in diverse roles (e.g., women as scientists, pilots, leaders)\n3. Advocating for guidelines against sexist advertising through bodies like the Advertising Standards Council of India (ASCI)\n4. Creating alternative media that showcases women's achievements beyond traditional roles\n\nExamples from India include the 'Share the Load' campaign by Ariel which challenged the stereotype that laundry is only a woman's responsibility, and the 'Beti Bachao, Beti Padhao' advertisements which promote girls' education and equal opportunities.",
+      "marking_scheme": [
+        {
+          "point": "Analysis of gender stereotypes in advertising with examples",
+          "marks": 2
+        },
+        {
+          "point": "Explanation of how stereotypes reinforce traditional roles",
+          "marks": 1
+        },
+        {
+          "point": "Evaluation of women's movements' role in challenging stereotypes",
+          "marks": 2
+        },
+        {
+          "point": "Relevant Indian examples with specific campaigns",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis and Evaluation",
+      "hints": [
+        "Think about advertisements you see daily - who is shown doing household work?",
+        "Recall campaigns that show women in non-traditional roles",
+        "Consider how movements create awareness about media representation"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "2"
+    },
+    {
+      "question": "Analyze how gender stereotypes in advertising can influence the choices and aspirations of boys and girls in Class 7. Support your answer with examples from advertisements you have seen for toys, clothes, or school products.",
+      "marks": 5,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Understanding advertising",
+      "answer": "Gender stereotypes in advertising reinforce traditional roles and limit the choices and aspirations of children. For example, advertisements for toys often show boys playing with cars, action figures, and construction sets, promoting qualities like aggression, leadership, and adventure. Girls are shown with dolls, kitchen sets, and beauty kits, emphasizing caregiving, appearance, and domestic roles. This shapes children's self-perception and career aspirations from a young age. In clothing ads, boys wear blue, black, or green with slogans about strength, while girls wear pink with messages about beauty. School product ads may show boys in science-related themes and girls in arts. Such portrayals discourage boys from exploring nurturing roles and girls from STEM fields, perpetuating inequality. Critical awareness and media literacy are essential to challenge these stereotypes.",
+      "marking_scheme": [
+        {
+          "point": "Identification of gender stereotypes in advertising with examples (toys, clothes, etc.)",
+          "marks": 2
+        },
+        {
+          "point": "Explanation of how these influence children's choices and aspirations",
+          "marks": 2
+        },
+        {
+          "point": "Conclusion on impact and need for critical awareness",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Think about ads for toys like cars vs. dolls.",
+        "Consider colors, roles, and messages in ads.",
+        "How might these affect what children think they can do or become?"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "2"
+    },
+    {
+      "question": "Explain the role of a Municipal Corporation in providing basic services to urban areas. Give any three examples of such services.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Local Government and Democracy",
+      "answer": "The Municipal Corporation is the local self-government body in urban areas responsible for providing essential civic services to improve the quality of life of residents. Three examples of services provided by a Municipal Corporation are:\n1. Water supply \u2013 ensuring clean drinking water through pipelines and water tanks.\n2. Sanitation and waste management \u2013 collecting and disposing of garbage, maintaining drainage and sewerage systems.\n3. Public health services \u2013 running hospitals and dispensaries, conducting vaccination drives, and maintaining public toilets.",
+      "marking_scheme": [
+        {
+          "point": "Definition/role of Municipal Corporation",
+          "marks": 1
+        },
+        {
+          "point": "First example of service (e.g., water supply)",
+          "marks": 1
+        },
+        {
+          "point": "Second example of service (e.g., sanitation)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think of services you see in your city/town like water, garbage collection, roads, etc.",
+        "Refer to Chapter 7 \u2013 'Urban Administration' in your NCERT textbook."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "3"
+    },
+    {
+      "question": "What is a supply chain? Explain with an example from the chapter 'A Shirt in the Market'.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "A shirt in the market",
+      "answer": "A supply chain is the series of steps and people involved in making a product and bringing it to the consumer. It includes production, transportation, and selling. In the chapter 'A Shirt in the Market', the supply chain for a cotton shirt involves: (1) Cotton farmers growing cotton, (2) Traders buying cotton and selling to ginning mills, (3) Ginning mills cleaning cotton and making bales, (4) Spinning mills making yarn, (5) Weavers making cloth, (6) Garment factories stitching shirts, (7) Wholesalers and retailers selling shirts to consumers.",
+      "marking_scheme": [
+        {
+          "point": "Definition of supply chain",
+          "marks": 1
+        },
+        {
+          "point": "Mention of at least 3 steps from the shirt example",
+          "marks": 1
+        },
+        {
+          "point": "Clear explanation linking example to definition",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think of the journey from cotton field to your wardrobe.",
+        "Recall the different people involved: farmer, trader, weaver, etc."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "3"
+    },
+    {
+      "question": "Explain with an example how the supply chain of a cotton shirt from a farmer to a consumer in a market can show economic inequality. (3 marks)",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "A shirt in the market, Markets and equality",
+      "answer": "The supply chain of a cotton shirt often shows economic inequality because different people involved earn very different amounts. For example: 1) A cotton farmer in Maharashtra sells raw cotton at a low price to a trader. 2) The trader sells it to a textile mill where workers (often women) get low wages to spin and weave the cloth. 3) The cloth goes to a garment factory in Delhi where tailors stitch shirts for minimal daily wages. 4) Finally, the shirt reaches a big retail showroom in a city mall where it is sold at a high price, earning large profits for the business owner. The farmer and factory workers get only a small share of the final price, while traders, factory owners, and retailers earn much more, showing inequality in the market chain.",
+      "marking_scheme": [
+        {
+          "point": "Identifying different stages in the supply chain (farmer \u2192 trader \u2192 factory worker \u2192 retailer)",
+          "marks": 1
+        },
+        {
+          "point": "Explaining the unequal earnings/wages at different stages",
+          "marks": 1
+        },
+        {
+          "point": "Giving a clear example with specific roles (e.g., cotton farmer, garment worker, retailer) and stating who earns less/more",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Application",
+      "hints": [
+        "Think about who grows cotton, who makes the cloth, who stitches the shirt, and who sells it.",
+        "Consider how much money each person in this chain might earn compared to the shirt's selling price."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "3"
+    },
+    {
+      "question": "Explain with an example how the supply chain of a cotton shirt from a farmer to a consumer in a market can show economic inequality. (3 marks)",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "A shirt in the market, Markets and equality",
+      "answer": "The supply chain of a cotton shirt often shows economic inequality because different people involved earn very different amounts. For example: 1) A cotton farmer in Maharashtra sells raw cotton at a low price (maybe \u20b930 per kg) to a trader. 2) The trader sells it to a textile mill where workers (often women) stitch shirts for low daily wages (\u20b9300\u2013400 per day). 3) The finished shirt is sold to a large retail brand in a city for \u20b9200, which then sells it to a consumer for \u20b9800 or more. The farmer and the garment worker get only a small share of the final price, while the brand owner and retailer earn much more. This shows inequality in the market system, where those with more capital and market access earn disproportionately.",
+      "marking_scheme": [
+        {
+          "point": "Correct identification of stages in supply chain (farmer \u2192 trader/mill \u2192 retailer \u2192 consumer)",
+          "marks": 1
+        },
+        {
+          "point": "Explanation of unequal earnings/economic disparity with example figures or roles",
+          "marks": 1
+        },
+        {
+          "point": "Link to market inequality concept \u2013 capital, access, bargaining power",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Application",
+      "hints": [
+        "Think of who grows cotton, who makes the cloth, who stitches, and who finally sells.",
+        "Compare what a farmer earns versus what a mall brand earns from the same shirt."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "3"
+    },
+    {
+      "question": "Analyze how the supply chain of a cotton shirt, from farmer to consumer, reflects economic inequalities in the market. Critically examine the role of local government in addressing these inequalities and promoting fair trade practices.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "A shirt in the market, Markets and equality, Local government and democracy",
+      "answer": "The supply chain of a cotton shirt reveals significant economic inequalities: 1) Cotton farmers receive minimal payment (often \u20b920-30 per kg) while facing high input costs and debt. 2) Weavers and garment workers in factories work long hours for low wages without job security. 3) Factory owners and exporters earn substantial profits through bulk orders. 4) Retailers in shopping malls sell the shirt at 5-10 times the production cost, maximizing their profit margin. This creates an unequal chain where those doing the most labor-intensive work earn the least.\n\nLocal governments can address these inequalities through: 1) Implementing and monitoring minimum wage laws for factory workers. 2) Providing subsidized inputs and fair price procurement for cotton farmers through agricultural markets. 3) Promoting cooperatives where farmers and workers collectively own production units, ensuring profit sharing. 4) Creating awareness about fair trade practices and consumer responsibility. 5) Regulating market spaces to prevent exploitation by middlemen. Through these democratic functions, local government can make markets more equitable and ensure that economic benefits reach all sections of society.",
+      "marking_scheme": [
+        {
+          "point": "Analysis of 3-4 stages in shirt supply chain showing economic inequalities",
+          "marks": 2
+        },
+        {
+          "point": "Explanation of profit distribution imbalance (farmers/workers vs. retailers)",
+          "marks": 1
+        },
+        {
+          "point": "Identification of 3-4 specific roles/functions of local government",
+          "marks": 2
+        },
+        {
+          "point": "Critical examination of how local government promotes fair trade and reduces inequality",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Think about who earns how much at each stage: farmer \u2192 ginning mill \u2192 spinning \u2192 weaving \u2192 stitching \u2192 retail",
+        "Recall Chapter 7 'Markets Around Us' - how different markets work",
+        "Consider local government's responsibilities under the 73rd and 74th Constitutional Amendments"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "3"
+    },
+    {
+      "question": "Analyze how the supply chain of a cotton shirt from a farmer's field to a retail store in Delhi reflects market inequalities. Critically examine the role of local government bodies in addressing these inequalities to promote social justice.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Markets and equality, Local government and democracy",
+      "answer": "The supply chain of a cotton shirt involves multiple stages: cotton cultivation by farmers \u2192 ginning and spinning \u2192 weaving/knitting \u2192 stitching \u2192 wholesale \u2192 retail. At each stage, market inequalities emerge:\n\n1. **Farmers receive minimal profit** \u2013 They sell raw cotton at low prices set by traders, while bearing risks of crop failure and input costs.\n2. **Workers in garment factories face low wages** \u2013 Often employed on temporary contracts without benefits, especially women workers.\n3. **Large companies and retailers capture maximum profit** \u2013 Brands and retail chains markup prices significantly, exploiting cheap labor and materials.\n4. **Consumers pay high prices** unaware of the unfair distribution of earnings.\n\n**Role of local government bodies:**\n- **Municipalities/Panchayats can regulate local markets** \u2013 Ensure fair pricing for farmers through direct market access (e.g., farmer markets).\n- **Enforce labor laws** \u2013 Monitor factories in industrial areas to ensure minimum wages and safe working conditions.\n- **Promote cooperatives** \u2013 Support weaver or artisan cooperatives to bypass middlemen.\n- **Public awareness campaigns** \u2013 Educate consumers about ethical buying and 'Fair Trade'.\n- **Provide infrastructure** \u2013 Better roads, storage facilities, and market yards to reduce post-harvest losses and transport costs for farmers.\n\nThus, while markets often deepen inequalities, proactive local governance can democratize economic opportunities and ensure equitable growth.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of supply chain stages with emphasis on profit distribution inequalities",
+          "marks": 2
+        },
+        {
+          "point": "Identification of specific inequalities (farmers, workers, companies, consumers)",
+          "marks": 2
+        },
+        {
+          "point": "Critical examination of at least three roles/functions of local government in addressing these",
+          "marks": 1.5
+        },
+        {
+          "point": "Conclusion linking local governance to social justice and democratic values",
+          "marks": 0.5
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Think about who earns how much at each step from farm to shop.",
+        "Recall Chapter 7 \u2013 'A Shirt in the Market' and Chapter 9 \u2013 'Local Government' from your NCERT textbook.",
+        "Consider functions of Gram Panchayat and Municipal Corporation regarding markets and welfare."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Civics",
+      "book": "Social and Political Life - II",
+      "topic_id": "3"
+    }
+  ]
+}

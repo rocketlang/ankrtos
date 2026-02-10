@@ -1,0 +1,422 @@
+{
+  "filename": "lemh204.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 10,
+      "title": "VECT OR ALGEBRA",
+      "content": "Chapter 10\nVECT OR ALGEBRA\nW.R. Hamil ton\n(1805-1865)\nReprint 2025-26\n\nVECT OR ALGEBRA 339\nNow  observe that if we restrict the line l to the line segment AB, then a magnitude\nis prescribed on the line l with one of the two directions, so that we obtain a directed\nline segment (Fig 10.1(iii)). Thus, a directed line segment has magnitude as well as\ndirection.\nDefinition 1 A quantity that has magnitude as well as direction is called a vector .\nNotice that a directed line segment is a vector (Fig 10.1(iii)), denoted as  or\nsimply as , and read as ‘vector ’ or ‘vector ’.\nThe point A from where the vector  starts is called its initial point , and the\npoint B where it ends is called its terminal point . The distance between initial and\nterminal po ints of a vector is called the magnitude  (or length) of the vector , denoted as\n||, or ||, or a. The arrow indicates the direction of the vector .\n/handptrtsld1Note    Since the length is never negative, the notation || < 0 has no meaning.\nPosition Vector\nFrom Class XI, recall the three dimensional right handed rectangular coordinate system\n(Fig 10.2(i)). Consider a point P  in space, having coordinates ( x, y, z) with respect to\nthe origin O(0, 0, 0). Then, the vector  having O and P as its initial and terminal\npoints, r espectively , is called the position vector  of the point P  with respect\nto O. Using distance formula (from Class XI), the magnitude of  (or ) is given by\n||=2 2 2x y z+ +\nIn practice, the position vectors of points A, B, C, etc., with respect to the origin O\nare denoted by , , , etc., respectively (Fig 10.2 (ii)).Fig 10.1\nReprint 2025-26\n\n MA THEMA TICS 340\nAOP\n/c9790°\nXYZ\nXAO\nBP( )x,y,zC\n/c97/c98/c103P( )x,y,z\nr\nxyzDirection Cosines\nConsider the position vector  of a point P( x, y, z) as in Fig 10.3. The angles α,\nβ, γ made by the vector  with the positive directions of x, y and z-axes respectively ,\nare called its direction angles . The cosine values of these angles, i.e., co sα, cosβ and\ncosγ are called direction cosines  of the vector , and usually denoted by l, m and n,\nrespectively .\nFig 10.3\nFrom  Fig 10.3, one may note that the triangle OAP is right angled, and in it, we\nhave . Similarly , from the right angled triangles OBP  and\nOCP, we may write cos  and cosy z\nr rβ = γ = . Thus, the coordinates of the point P  may\nalso be expressed as ( lr, mr,nr).  The number s lr, mr and nr, proportional to the direction\ncosines are called as direction ratios  of vector  , and denoted as a, b and c, respectively .Fig 10.2\nReprint 2025-26\n\nVECT OR ALGEBRA 341\n/handptrtsld1Note    One may note that l2 + m2 + n2 = 1 but a2 + b2 + c2 ≠ 1, in general.\n10.3  Types of Vectors\nZero Vector  A vector whose initial and terminal points coincide, is called a zero vector\n(or null vector), and denoted as . Zero vector can not be assigned a definite direction\nas it has zero magnitude. Or , alternatively otherwise, it may be regarded as having any\ndirection. The vectors  represent the zero vector ,\nUnit Vector  A vector whose magnitude is unity (i.e., 1 unit) is called a unit vector . The\nunit vector in the direction of a given vector  is denoted by ˆa.\nCoinitial Vectors  Two or more vectors having the same initial point are called coinitial\nvectors.\nCollinear  Vectors T wo or more vectors are said to be collinear if they are parallel to\nthe same line, irrespective of their magnitudes and directions.\nEqual Vectors  Two vectors  are said to be equal, if they have the same\nmagnitude and direction regardless of the positions of their initial points, and written\nas .\nNegative of a V ector  A vector whose magnitude is the same as that of a given vector\n(say, ), but direction is opposite to that of it, is called negative of the given vector .\nFor example, vector  is negative of the vector , and written as  = – .\nRemark  The vectors defined above are such that any of them may be subject to its\nparallel displacement without changing its magnitude and direction. Such vectors are\ncalled free vectors . Throughout this chapter , we will be dealing with free vectors only .\nExample 1  Represent graphically a displacement\nof 40 km, 30° west of south.\nSolution The vector  represents the required\ndisplacement (Fig 10.4).\nExample 2  Classify the following measures as\nscalars and vectors.\n(i)5 seconds\n(ii)1000 cm3\nFig 10.4\nReprint 2025-26\n\n MA THEMA TICS 342\nFig 10.5(iii)10 Newton (iv) 30 km/hr (v)10 g/cm3\n(vi) 20 m/s towards north\nSolution\n(i)Time-scalar (ii)Volume-scalar (iii)Force-vector\n(iv) Speed-scalar (v)Density-scalar (vi) Velocity-vector\nExample 3 In Fig 10.5, which of the vectors are:\n(i)Collinear (ii)Equal (iii)Coinitial\nSolution\n(i)Collinear vectors : .\n(ii)Equal vectors : \n(iii)Coinitial vectors : \nEXERCISE 10.1\n1.Represent graphically a displacement of 40 km, 30° east of north.\n2.Classify the following measures as scalars and vectors.\n(i)10 kg (ii)2 meters north-west (iii)40°\n(iv) 40 watt (v)10–19 coulomb (vi) 20 m/s2\n3.Classify the following as scalar and vector quantities.\n(i)time period (ii)distance (iii)force\n(iv) velocity (v)work done\n4.In Fig 10.6 (a square),  identify the following vectors.\n(i)Coinitial (ii)Equal\n(iii)Collinear but not equal\n5.Answer the following as true or false.\n(i)  and –  are collinear .\n(ii)Two collinear vectors are always equal in\nmagnitude.\n(iii)Two vectors having same magnitude are collinear .\n(iv) Two collinear vectors having the same magnitude are equal.Fig 10.6\nReprint 2025-26\n\nVECT OR ALGEBRA 343\n10.4  Addition of Vectors\nA vector  simply means the displacement from a point\nA to the point B. Now consider a situation that a girl\nmoves from A to B and then from B to C\n(Fig 10.7). The net displacement made by the girl from\npoint A to the point C, is given by the vector  and\nexpressed as\n = \nThis is known as the triangle law of vector addition.\nIn general, if we have two vectors  and  (Fig 10.8 (i)), then to add them, they are\npositioned so that the initial point of one coincides with the terminal point of the other\n(Fig 10.8(ii)).Fig 10.7\nab\nab\n(i) (iii)AC\nab\n(ii)ab+\nAC\nB B\na\nb––b\nC’\nFig 10.8\nFor example, in Fig 10.8 (ii), we have shifted vector  without changing its magnitude\nand direction, so that it’ s initial point coincides with the terminal point of . Then, the\nvector  + , represented by the third side AC of the triangle ABC, gives us the sum (or\nresultant) of the vectors  and  i.e., in triangle ABC (Fig 10.8 (ii)), we have\n =\nNow again, since , from the above equation, we have\nThis means that when the sides of a triangle are taken in order , it leads to zero\nresultant as the initia l and terminal points get coincided (Fig 10.8(iii)).\nReprint 2025-26\n\n MA THEMA TICS 344\nNow , construct a vector  so that its magnitude is same as the vector , but the\ndirection opposite to that of it (Fig 10.8 (iii)), i.e.,\n =\nThen, on applying triangle law from the Fig 10.8 (iii), we have\n =  \nThe vector  is said to represent the differ ence of .\nNow , consider a boat in a river going from one bank of the river to the other in a\ndirection perpendicular to the flow of the river . Then, it is acted upon by two velocity\nvectors–one is the velocity imparted to the boat by its engine and other one is the\nvelocity of the flow of river water . Under the simultaneous influence of these two\nvelocities, the boat in actual starts travelling with a dif ferent velocity . To have a precise\nidea about the effective speed and direction\n(i.e., the resultant velocity) of the boat, we have\nthe following law of vector addition.\nIf we have  two vectors   represented\nby the two adjacent sides of a parallelogram\nin magnitude and direction (Fig 10.9), then their\nsum  is represented in magnitude and\ndirection by the diagonal of the parallelogram\nthrough their common point. This is known as\nthe parallelogram law of vector addition.\n/handptrtsld1Note     From Fig 10.9, using the triangle law , one may note that\n =\nor  =                                   (since  )\nwhich is parallelogram law . Thus, we may say that the two laws of vector\naddition are equivalent to each other .\nProperties of vector addition\nProperty 1  For any two vectors ,\n = (Commutative property)Fig 10.9\nReprint 2025-26\n\nVECT OR ALGEBRA 345\nProof Consider the parallelogram ABCD\n(Fig 10.10). Let  then using\nthe triangle law , from triangle ABC, we have\nNow , since the opposite sides of a\nparallelogram are equal and parallel, from\nFig10.10, we have,   and\n. Again using triangle law , from\ntriangle ADC, we have\nHence  =\nProperty 2  For any three vectors , anda b c   \n = (Associative property)\nProof Let the vectors  be represented by , respectively , as\nshown in Fig 10.1 1(i) and (ii).\nFig 10.1 1\nThen  =\nand  =\nSo  =Fig 10.10\nReprint 2025-26\n\n MA THEMA TICS 346\na a1212a\n–2aa2and  =\nHence  =\nRemark  The associative property of vector addition enables us to write the sum of\nthree vectors  without using brackets.\nNote that for any vector a , we have\n =\nHere, the zero vector  is called the additive identity  for the vector addition.\n10.5  Multiplication of a Vector  by a Scalar\nLet  be a given vector and λ a scalar . Then the product of the vector  by the scalar\nλ, denoted as λ, is called the multiplication of vector  by the scalar λ. Note that, λ\nis also a vector , collinear to the vector . The vector λ  has the direction same (or\nopposite) to that of vector  according as the value of λ is positive (or negative). Also,\nthe magnitude of vector λ is |λ| times the magnitude of the vector , i.e.,\n|λ| =|λ|||\nA geometric visualisation of multiplication of a vector by a scalar is given\nin Fig 10.12.\nFig 10.12\nWhen λ  = –1, then λ= – , which is a vector having magnitude equal to the\nmagnitude of  and direction opposite to that of the direction of . The vector –  is\ncalled the negative (or additive inverse ) of vector  and we always have\n + (– ) = (– ) +  = \nAlso, if 1=| |aλ , provided  ≠ 0 i.e.  is not a null vector , then\n|λ| =|λ||| = \nReprint 2025-26\n\nVECT OR ALGEBRA 347\nSo, λ  represents the unit vector in the dir ection of  . We write it as\nˆa =1\n| |/arrowrightnosp/arrowrightnospaa\n/handptrtsld1Note   For any scalar k, 0=0./arrowrightnosp /arrowrightnosp\nk\n10.5.1   Components of a vector\nLet us take the points A(1, 0, 0), B(0, 1, 0) and C(0, 0, 1) on the x-axis, y-axis and\nz-axis, respectively . Then, clearly\n||= 1, | |=1 and ||= 1\nThe vectors , each having magnitude 1,\nare called unit vectors along the axes OX, OY and OZ,\nrespectively , and denoted by ˆ ˆ ˆ,   and  i j k , respectively\n(Fig 10.13).\nNow , consider the position vector  of a point P(x, y, z)\nas in Fig 10.14. Let P1 be the foot of the perpendicular from P  on the plane XOY .\nWe, thus, see that P1 P is parallel to z-axis. As ˆ ˆ ˆ,  and i j k  are the unit vectors along the\nx, y and z-axes, respectively , and by the definition of the coordinates of P , we have\n. Similarly ,  and .Fig 10.13\nFig 10.14\nReprint 2025-26\n\n MA THEMA TICS 348\nTherefore, it follows that  =\nand  =\nHence, the position vector of P with reference to O is given by\n =\nThis form of any vector is called its component form. Here, x , y and z are called\nas the scalar components of , and ˆ ˆ ˆ,   andxi yj zk  are called the vector components\nof  along the respective axes. Sometimes x, y and z  are also termed as rectangular\ncomponents .\nThe length of any vector  =ˆ ˆ ˆ r xi yj zk= + + , is readily determined by applying the\nPythagoras theorem twice. We note that in the right angle triangle OQP1 (Fig 10.14)\n = ,\nand in the right angle triangle OP1P, we have\n =\nHence, the length of any vector   =ˆ ˆ ˆ + r xi yj zk= +  is given by\n| | =\nIf  are any two vectors given in the component form 1 2 3ˆ ˆ ˆ + a i a j a k+  and\n1 2 3ˆ ˆ ˆb i b j b k+ + , respectively , then\n(i)the sum (or resultant) of the vectors  is given by\n = 1 1 2 2 3 3ˆ ˆ ˆ ( ) ( ) ( )a b i a b j a b k+ + + + +\n(ii) the difference of the vector  is given by\n = 1 1 2 2 3 3ˆ ˆ ˆ ( ) ( ) ( )a b i a b j a b k− + − + −\n(iii) the vectors  are equal if and only if\na1 =b1, a2 = b2   and   a3 = b3\n(iv) the multiplication of vector  by any scalar λ is given by\nλ =1 2 3ˆ ˆ ˆ ( ) ( ) ( )a i a j a kλ + λ + λ\nReprint 2025-26\n\nVECT OR ALGEBRA 349\nThe addition of vectors and the multiplication of a vector by a scalar together give\nthe following distributive laws:\nLet  be any two vectors, and k and m be any scalars. Then\n(i)\n(ii)\n(iii)\nRemarks\n(i)One may observe that whatever be the value of λ, the vector λ is always\ncollinear to the vector . In fact, two vectors  are collinear if and only if\nthere exists a nonzero scalar λ such that . If the vectors  are given\nin the component form, i.e.  = 1 2 3ˆ ˆ ˆ a a i a j a k= + +  and , then the\ntwo vectors are collinear if and only if\n1 2 3ˆ ˆ ˆb i b j b k+ +  =1 2 3ˆ ˆ ˆ( ) a i a j a kλ + +\n⇔1 2 3ˆ ˆ ˆb i b j b k+ +  =1 2 3ˆ ˆ ˆ ( ) ( ) ( )a i a j a kλ + λ + λ\n⇔1 1b a= λ ,2 2 3 3 , b a b a= λ = λ\n⇔1\n1b\na =3 2\n2 3b b\na a= = λ\n(ii) If  = 1 2 3ˆ ˆ ˆ a a i a j a k= + + , then a1, a2, a3 are also called direction ratios of .\n(iii) In case if it is given that  l, m, n are direction cosines of a vector , then ˆ ˆ ˆli mj nk+ +\n= ˆ ˆ ˆ (cos ) (cos ) (cos ) i j kα + β + γ  is the unit vector in the direction of that vector ,\nwhere α, β and γ  are the angles which the vector makes with x, y and z  axes\nrespectively .\nExample 4  Find the values of x, y and z so that the vectors  and\n are equal.\nSolution  Note that two vectors are equal if and only if their corresponding components\nare equal. Thus, the given vectors  will be equal if and only if\nx = 2, y = 2, z = 1\nReprint 2025-26\n\n MA THEMA TICS 350\nExample 5  Let  and . Is ? Are the vectors  equal?\nSolution  We have  and \nSo, . But, the two vectors are not equal since their corresponding components\nare distinct.\nExample 6 Find unit vector in the direction of vector \nSolution The unit vector in the direction of a vector  is given by .\nNow  =2 2 22 3 1 14+ + =\nTherefore1ˆ ˆ ˆ ˆ (2 3 )\n14a i j k= + +  =2 3 1ˆ ˆ ˆ\n14 14 14i j k+ +\nExample 7  Find a vector in the direction of vector  that has magnitude\n7 units.\nSolution The unit vector in the direction of the given vector  is\n =1 1 2ˆ ˆ ˆ ˆ( 2 )\n5 5 5i j i j− = −\nTherefore, the vector having magnitude equal to 7 and in the direction of  is\n7a∧ =1 27\n5 5i j∧ ∧ −   = 7 14ˆ ˆ\n5 5i j−\nExample 8  Find the unit vector in the direction of the sum of the vectors, \nand .\nSolution The sum of the given vectors is\nand  =2 2 24 3 ( 2) 29+ + − =\nReprint 2025-26\n\nVECT OR ALGEBRA 351\nThus, the required unit vector is\n 1 4 3 2ˆ ˆ ˆ ˆ ˆ ˆ (4 3 2 )\n29 29 29 29i j k i j k = + − = + −\nExample 9   Write the direction ratio’ s of the vector  and hence calculate\nits direction cosines.\nSolution Note that the direction ratio’ s a, b, c of a vector  are just\nthe respective components x, y and z of the vector . So, for the given vector , we have\na = 1, b  = 1 and c = –2. Further , if l, m and n are the direction cosines of the given\nvector , then\nThus, the direction cosines are 1 1 2, , –\n6 6 6 \n  .\n10.5.2   Vector joining two point s\nIf P1(x1, y1, z1) and P2(x2, y2, z2) are any two\npoints, then the vector joining P1 and P2 is the\nvector  (Fig 10.15).\nJoining the points P1 and P2 with the origin\nO, and applying triangle law , from the triangle\nOP1P2, we have\n =\nUsing the properties of vector addition, the\nabove equation becomes\n =\ni.e.    = 2 2 2 1 1 1ˆ ˆ ˆ ˆ ˆ ˆ( ) ( ) x i y j z k x i y j z k+ + − + +\n=2 1 2 1 2 1ˆ ˆ ˆ ( ) ( ) ( )x x i y y j z z k− + − + −\nThe magnitude of vector  is given by\n| | =2 2 2\n2 1 2 1 2 1( ) ( ) ( )x x y y z z− + − + −Fig 10.15\nReprint 2025-26\n\n MA THEMA TICS 352\nExample 10  Find the vector joining the points P(2, 3, 0) and Q(– 1, – 2, – 4) directed\nfrom P to Q.\nSolution  Since the vector is to be directed from P to Q, clearly P is the initial point\nand Q is the terminal point. So, the required vector joining P and Q is the vector ,\ngiven by\n =ˆ ˆ ˆ ( 1 2) ( 2 3) ( 4 0) i j k − − + − − + − −\ni.e.  = ˆ ˆ ˆ3 5 4 .i j k− − −\n10.5.3   Section formula\nLet P and Q be two points represented by the position vectors , respectively ,\nwith respect to the origin O. Then the line segment\njoining the points P and Q may be divided by a third\npoint, say R, in two ways – internally (Fig 10.16)\nand externally (Fig 10.17). Here, we intend to find\nthe position vector  for the point R with respect\nto the origin O. We take the two cases one by on e.\nCase I  When R divides PQ internally (Fig 10.16).\nIf R divides  such that  = ,\nwhere m and n are positive scalars, we say that the point R divides  internally in the\nratio of m : n. Now  from triangles ORQ and OPR, we have\n =\nand  = ,\nTherefore, we have  =    (Why?)\nor  = (on simplification)\nHence, the position vector of the point R which divides P and Q internally in the\nratio of m : n is given by\n =Fig 10.16\nReprint 2025-26\n\nVECT OR ALGEBRA 353\nCase II  When R divides PQ externally (Fig 10.17).\nWe leave it to the reader as an exercise to verify\nthat the position vector of the point R which divides\nthe line segment PQ externally in the ratio\nm : n PRi.e.  QR  =     m\nn is given by\n =\nRemark  If R is the midpoint of PQ , then m = n. And therefore, from Case I, the\nmidpoint R of  , will have its position vector as\n =\nExample 1 1 Consider two points P  and Q with position vectors  and\n. Find the position vector of a point R which divides the line joining P and Q\nin the ratio 2:1, (i) internally , and (ii) externally .\nSolution\n(i)The position vector of the point R dividing the join of P and Q internally in the\nratio 2:1 is\n =\n(ii) The position vector of the point R dividing the join of P and Q externally in the\nratio 2:1 is\n =\nExample 12 Show that the points ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆA(2 ), B( 3 5 ), C(3 4 4 )i j k i j k i j k− + − − − −  are\nthe vertices of a right angled triangle.\nSolution We have\n  = ˆ ˆ ˆ (1 2) ( 3 1) ( 5 1) i j k− + − + + − − ˆ ˆ ˆ2 6i j k= − − −\n   = ˆ ˆ ˆ (3 1) ( 4 3) ( 4 5) i j k− + − + + − + ˆ ˆ ˆ2i j k= − +\nand  = ˆ ˆ ˆ (2 3) ( 1 4) (1 4) i j k− + − + + +  ˆ ˆ ˆ3 5i j k= − + +Fig 10.17\nReprint 2025-26\n\n MA THEMA TICS 354\nFurther , note that\n =\nHence, the triangle is a right angled triangle.\nEXERCISE 10.2\n1.Compute the magnitude of the following vectors:\n = ˆ ˆ ; i j k+ +      = ˆ ˆ ˆ2 7 3 ;i j k− −       =1 1 1ˆ ˆ ˆ\n3 3 3i j k+ −\n2.Write two dif ferent vectors having same magnitude.\n3.Write two dif ferent vectors having same direction.\n4.Find the values of x and y so that the vectors ˆ ˆ ˆ ˆ2 3   and  i j xi yj+ +  are equal.\n5.Find the scalar and vector components of the vector with initial point (2, 1) and\nterminal point (– 5, 7).\n6.Find the sum of the vectors   = ˆ ˆ ˆ2 ,i j k− +   =ˆ ˆ ˆ2 4 5i j k− + + and   = ˆ ˆ ˆ6  – 7 c i j k= − .\n7.Find the unit vector in the direction of the vector  = ˆ ˆ ˆ 2 a i j k= + + .\n8.Find the unit vector in the direction of vector , where P and Q are the points\n(1, 2, 3) and (4, 5, 6), respectively .\n9.For given vectors,  = ˆ ˆ ˆ2 2i j k− + and  = ˆ ˆ ˆi j k− + − , find the unit vector in the\ndirection of the vector .\n10. Find a vector  in the direction of vector ˆ ˆ ˆ5 2i j k− +  which has magnitude 8 units.\n11.Show that the vectors ˆ ˆ ˆ ˆ ˆ ˆ 2 3 4   and 4 6 8i j k i j k− + − + −  are collinear .\n",
+      "wordCount": 3993,
+      "examples": [
+        {
+          "chapterNumber": 10,
+          "exampleNumber": 1,
+          "title": "Represent graphically a displacement",
+          "question": "Example 1  Represent graphically a displacement\nof 40 km, 30° west of south.\nSolution The vector  represents the required\ndisplacement (Fig 10.4).\nExample 2  Classify the following measures as\nscalars and vectors.\n(i)5 seconds\n(ii)1000 cm3\nFig 10.4\nReprint 2025-26\n\n MA THEMA TICS 342\nFig 10.5(iii)10 Newton (iv) 30 km/hr (v)10 g/cm3\n(vi) 20 m/s towards north\nSolution\n(i)Time-scalar (ii)Volume-scalar (iii)Force-vector\n(iv) Speed-scalar (v)Density-scalar (vi) Velocity-vector\nExample 3 In Fig 10.5,",
+          "solution": "The vector  represents the required\ndisplacement (Fig 10.4).\nExample 2  Classify the following measures as\nscalars and vectors.\n(i)5 seconds\n(ii)1000 cm3\nFig 10.4\nReprint 2025-26\n\n MA THEMA TICS 342\nFig 10.5(iii)10 Newton (iv) 30 km/hr (v)10 g/cm3\n(vi) 20 m/s towards north\nSolution\n(i)Time-scalar (ii)Volume-scalar (iii)Force-vector\n(iv) Speed-scalar (v)Density-scalar (vi) Velocity-vector"
+        },
+        {
+          "chapterNumber": 10,
+          "exampleNumber": 2,
+          "title": "Classify the following measures as",
+          "question": "Example 2  Classify the following measures as\nscalars and vectors.\n(i)5 seconds\n(ii)1000 cm3\nFig 10.4\nReprint 2025-26\n\n MA THEMA TICS 342\nFig 10.5(iii)10 Newton (iv) 30 km/hr (v)10 g/cm3\n(vi) 20 m/s towards north\nSolution\n(i)Time-scalar (ii)Volume-scalar (iii)Force-vector\n(iv) Speed-scalar (v)Density-scalar (vi) Velocity-vector\nExample 3 In Fig 10.5, which of the vectors are:\n(i)Collinear (ii)Equal (iii)Coinitial\nSolution\n(i)Collinear vectors : .\n(ii)Equal vectors : \n(iii)Coinitial vectors : \nEX",
+          "solution": "(i)Time-scalar (ii)Volume-scalar (iii)Force-vector\n(iv) Speed-scalar (v)Density-scalar (vi) Velocity-vector"
+        },
+        {
+          "chapterNumber": 10,
+          "exampleNumber": 3,
+          "title": "In Fig 10.5, which of the vectors are:",
+          "question": "Example 3 In Fig 10.5, which of the vectors are:\n(i)Collinear (ii)Equal (iii)Coinitial\nSolution\n(i)Collinear vectors : .\n(ii)Equal vectors : \n(iii)Coinitial vectors : \nEXERCISE 10.1\n1.Represent graphically a displacement of 40 km, 30° east of north.\n2.Classify the following measures as scalars and vectors.\n(i)10 kg (ii)2 meters north-west (iii)40°\n(iv) 40 watt (v)10–19 coulomb (vi) 20 m/s2\n3.Classify the following as scalar and vector quantities.\n(i)time period (ii)distance (iii)force\n(iv) veloc",
+          "solution": ""
+        },
+        {
+          "chapterNumber": 10,
+          "exampleNumber": 4,
+          "title": "Find the values of x, y and z so that the vectors  and",
+          "question": "Example 4  Find the values of x, y and z so that the vectors  and\n are equal.\nSolution  Note that two vectors are equal if and only if their corresponding components\nare equal. Thus, the given vectors  will be equal if and only if\nx = 2, y = 2, z = 1\nReprint 2025-26\n\n MA THEMA TICS 350\nExample 5  Let  and . Is ? Are the vectors  equal?\nSolution  We have  and \nSo, . But, the two vectors are not equal since their corresponding components\nare distinct.\nExample 6 Find unit vector in the direction of",
+          "solution": "Note that two vectors are equal if and only if their corresponding components\nare equal. Thus, the given vectors  will be equal if and only if\nx = 2, y = 2, z = 1\nReprint 2025-26\n\n MA THEMA TICS 350"
+        },
+        {
+          "chapterNumber": 10,
+          "exampleNumber": 5,
+          "title": "Let  and . Is ? Are the vectors  equal?",
+          "question": "Example 5  Let  and . Is ? Are the vectors  equal?\nSolution  We have  and \nSo, . But, the two vectors are not equal since their corresponding components\nare distinct.\nExample 6 Find unit vector in the direction of vector \nSolution The unit vector in the direction of a vector  is given by .\nNow  =2 2 22 3 1 14+ + =\nTherefore1ˆ ˆ ˆ ˆ (2 3 )\n14a i j k= + +  =2 3 1ˆ ˆ ˆ\n14 14 14i j k+ +\nExample 7  Find a vector in the direction of vector  that has magnitude\n7 units.\nSolution The unit vector in the d",
+          "solution": "We have  and \nSo, . But, the two vectors are not equal since their corresponding components\nare distinct."
+        },
+        {
+          "chapterNumber": 10,
+          "exampleNumber": 6,
+          "title": "Find unit vector in the direction of vector",
+          "question": "Example 6 Find unit vector in the direction of vector \nSolution The unit vector in the direction of a vector  is given by .\nNow  =2 2 22 3 1 14+ + =\nTherefore1ˆ ˆ ˆ ˆ (2 3 )\n14a i j k= + +  =2 3 1ˆ ˆ ˆ\n14 14 14i j k+ +\nExample 7  Find a vector in the direction of vector  that has magnitude\n7 units.\nSolution The unit vector in the direction of the given vector  is\n =1 1 2ˆ ˆ ˆ ˆ( 2 )\n5 5 5i j i j− = −\nTherefore, the vector having magnitude equal to 7 and in the direction of  is\n7a∧ =1 27\n5 5i j∧",
+          "solution": "The unit vector in the direction of a vector  is given by .\nNow  =2 2 22 3 1 14+ + =\nTherefore1ˆ ˆ ˆ ˆ (2 3 )\n14a i j k= + +  =2 3 1ˆ ˆ ˆ\n14 14 14i j k+ +"
+        },
+        {
+          "chapterNumber": 10,
+          "exampleNumber": 7,
+          "title": "Find a vector in the direction of vector  that has magnitude",
+          "question": "Example 7  Find a vector in the direction of vector  that has magnitude\n7 units.\nSolution The unit vector in the direction of the given vector  is\n =1 1 2ˆ ˆ ˆ ˆ( 2 )\n5 5 5i j i j− = −\nTherefore, the vector having magnitude equal to 7 and in the direction of  is\n7a∧ =1 27\n5 5i j∧ ∧ −   = 7 14ˆ ˆ\n5 5i j−\nExample 8  Find the unit vector in the direction of the sum of the vectors, \nand .\nSolution The sum of the given vectors is\nand  =2 2 24 3 ( 2) 29+ + − =\nReprint 2025-26\n\nVECT OR ALGEBRA 35",
+          "solution": "The unit vector in the direction of the given vector  is\n =1 1 2ˆ ˆ ˆ ˆ( 2 )\n5 5 5i j i j− = −\nTherefore, the vector having magnitude equal to 7 and in the direction of  is\n7a∧ =1 27\n5 5i j∧ ∧ −   = 7 14ˆ ˆ\n5 5i j−"
+        },
+        {
+          "chapterNumber": 10,
+          "exampleNumber": 8,
+          "title": "Find the unit vector in the direction of the sum of the vectors,",
+          "question": "Example 8  Find the unit vector in the direction of the sum of the vectors, \nand .\nSolution The sum of the given vectors is\nand  =2 2 24 3 ( 2) 29+ + − =\nReprint 2025-26\n\nVECT OR ALGEBRA 351\nThus, the required unit vector is\n 1 4 3 2ˆ ˆ ˆ ˆ ˆ ˆ (4 3 2 )\n29 29 29 29i j k i j k = + − = + −\nExample 9   Write the direction ratio’ s of the vector  and hence calculate\nits direction cosines.\nSolution Note that the direction ratio’ s a, b, c of a vector  are just\nthe respective components x, y and z of",
+          "solution": "The sum of the given vectors is\nand  =2 2 24 3 ( 2) 29+ + − =\nReprint 2025-26\n\nVECT OR ALGEBRA 351\nThus, the required unit vector is\n 1 4 3 2ˆ ˆ ˆ ˆ ˆ ˆ (4 3 2 )\n29 29 29 29i j k i j k = + − = + −"
+        },
+        {
+          "chapterNumber": 10,
+          "exampleNumber": 9,
+          "title": "Write the direction ratio’ s of the vector  and hence calculate",
+          "question": "Example 9   Write the direction ratio’ s of the vector  and hence calculate\nits direction cosines.\nSolution Note that the direction ratio’ s a, b, c of a vector  are just\nthe respective components x, y and z of the vector . So, for the given vector , we have\na = 1, b  = 1 and c = –2. Further , if l, m and n are the direction cosines of the given\nvector , then\nThus, the direction cosines are 1 1 2, , –\n6 6 6 \n  .\n10.5.2   Vector joining two point s\nIf P1(x1, y1, z1) and P2(x2, y2, z2) are a",
+          "solution": "Note that the direction ratio’ s a, b, c of a vector  are just\nthe respective components x, y and z of the vector . So, for the given vector , we have\na = 1, b  = 1 and c = –"
+        },
+        {
+          "chapterNumber": 10,
+          "exampleNumber": 10,
+          "title": "Find the vector joining the points P(2, 3, 0) and Q(– 1, – 2, – 4) directed",
+          "question": "Example 10  Find the vector joining the points P(2, 3, 0) and Q(– 1, – 2, – 4) directed\nfrom P to Q.\nSolution  Since the vector is to be directed from P to Q, clearly P is the initial point\nand Q is the terminal point. So, the required vector joining P and Q is the vector ,\ngiven by\n =ˆ ˆ ˆ ( 1 2) ( 2 3) ( 4 0) i j k − − + − − + − −\ni.e.  = ˆ ˆ ˆ3 5 4 .i j k− − −\n10.5.3   Section formula\nLet P and Q be two points represented by the position vectors , respectively ,\nwith respect to the origin O.",
+          "solution": ""
+        },
+        {
+          "chapterNumber": 10,
+          "exampleNumber": 1,
+          "title": "1 Consider two points P  and Q with position vectors  and",
+          "question": "Example 1 1 Consider two points P  and Q with position vectors  and\n. Find the position vector of a point R which divides the line joining P and Q\nin the ratio 2:1, (i) internally , and (ii) externally .\nSolution\n(i)The position vector of the point R dividing the join of P and Q internally in the\nratio 2:1 is\n =\n(ii) The position vector of the point R dividing the join of P and Q externally in the\nratio 2:1 is\n =\nExample 12 Show that the points ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆA(2 ), B( 3 5 ), C(3 4 4 )i j k i j",
+          "solution": "(i)The position vector of the point R dividing the join of P and Q internally in the\nratio 2:1 is\n =\n(ii) The position vector of the point R dividing the join of P and Q externally in the\nratio 2:1 is\n ="
+        },
+        {
+          "chapterNumber": 10,
+          "exampleNumber": 12,
+          "title": "Show that the points ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆA(2 ), B( 3 5 ), C(3 4 4 )i j k i j k i j k− + − − − −  are",
+          "question": "Example 12 Show that the points ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆA(2 ), B( 3 5 ), C(3 4 4 )i j k i j k i j k− + − − − −  are\nthe vertices of a right angled triangle.\nSolution We have\n  = ˆ ˆ ˆ (1 2) ( 3 1) ( 5 1) i j k− + − + + − − ˆ ˆ ˆ2 6i j k= − − −\n   = ˆ ˆ ˆ (3 1) ( 4 3) ( 4 5) i j k− + − + + − + ˆ ˆ ˆ2i j k= − +\nand  = ˆ ˆ ˆ (2 3) ( 1 4) (1 4) i j k− + − + + +  ˆ ˆ ˆ3 5i j k= − + +Fig 10.17\nReprint 2025-26\n\n MA THEMA TICS 354\nFurther , note that\n =\nHence, the triangle is a right angled triangle.\nEXERCISE 10",
+          "solution": "We have\n  = ˆ ˆ ˆ (1 2) ( 3 1) ( 5 1) i j k− + − + + − − ˆ ˆ ˆ2 6i j k= − − −\n   = ˆ ˆ ˆ (3 1) ( 4 3) ( 4 5) i j k− + − + + − + ˆ ˆ ˆ2i j k= − +\nand  = ˆ ˆ ˆ (2 3) ( 1 4) (1 4) i j k− + − + + +  ˆ ˆ ˆ3 5i j k= − + +Fig 10.17\nReprint 2025-26\n\n MA THEMA TICS 354\nFurther , note that\n =\nHence, the triangle is a right angled triangle."
+        }
+      ],
+      "exercises": [
+        {
+          "chapterNumber": 10,
+          "exerciseNumber": "10.2",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "Find a vector  in the direction of vector ˆ ˆ ˆ5 2i j k− +  which has magnitude 8 units."
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 12,
+        "exercisesCount": 1
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "Find the direction cosines of the vector ˆ ˆ ˆ2 3i j",
+      "content": "12. Find the direction cosines of the vector ˆ ˆ ˆ2 3i j k+ + .\n",
+      "wordCount": 16,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 13,
+      "title": "Find the direction cosines of the vector joining the",
+      "content": "13. Find the direction cosines of the vector joining the points A(1, 2, –3) and\nB (–1, –2, 1), directed from A to B.\n",
+      "wordCount": 24,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 14,
+      "title": "Show that the vector ˆ ˆ ˆi j k+ +  is equally incli",
+      "content": "14. Show that the vector ˆ ˆ ˆi j k+ +  is equally inclined to the axes OX, OY and OZ.\n",
+      "wordCount": 21,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 15,
+      "title": "Find the position vector of a point R which divides",
+      "content": "15. Find the position vector of a point R which divides the line joining two points  P\nand Q whose position vectors are ˆ ˆ ˆ ˆ ˆ ˆ2   and –i j k i j k+ − + +  respectively , in the\nratio 2 : 1\n(i)internally (ii)externally\nReprint 2025-26\n\nVECT OR ALGEBRA 355\n",
+      "wordCount": 55,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 16,
+      "title": "Find the position vector of the mid point of the vec",
+      "content": "16. Find the position vector of the mid point of the vector joining the points  P(2, 3, 4)\nand Q(4, 1, –2).\n",
+      "wordCount": 22,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 17,
+      "title": "Show that the points A, B and C with position vector",
+      "content": "17. Show that the points A, B and C with position vectors,  = ˆ ˆ ˆ3 4 4 ,i j k− −\n = ˆ ˆ ˆ2i j k− +  and  = ˆ ˆ ˆ3 5i j k− − , respectively form the vertices of a right angled\ntriangle.\n",
+      "wordCount": 48,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 18,
+      "title": "In triangle ABC (Fig 10.18), which of the following",
+      "content": "18. In triangle ABC (Fig 10.18), which of the following is not true:\n(A)\n(B)\n(C)\n(D)\n",
+      "wordCount": 17,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 19,
+      "title": "If  are two collinear vectors, then which of the fol",
+      "content": "19. If  are two collinear vectors, then which of the following are incorrect:\n(A)\n(B)\n(C) the respective components of  are not proportional\n(D) both the vectors  have same direction, but different magnitudes.\n10.6  Pr oduct of Two Vectors\nSo far we have studied about addition and subtraction of vectors. An other algebraic\noperation which we intend to discuss regarding vectors is their product. We may\nrecall that product of two numbers is a number , product of two matrices is again a\nmatrix. But in case of functions, we may multiply them in two ways, namely ,\nmultiplication of two functions pointwise and composition of two functions. Similarly ,\nmultiplication of two vectors is also defined in two ways, namely , scalar (or dot)\nproduct where the result is a scalar , and vector (or cross) product where the\nresult is a vector . Based upon these two types of products for vectors, they have\nfound various applications in geometry , mechanics and engineering. In this section,\nwe will discuss these two types of products.\n10.6.1   Scalar (or dot) product of two vectors\nDefinition 2  The scalar product of two nonzero vectors , denoted by , isFig 10.18\nReprint 2025-26\n\n MA THEMA TICS 356\ndefined as  =\nwhere, θ is the angle between  (Fig 10.19).\nIf either  then θ is not defined, and in this case, we\ndefine \nObservations\n1.  is a real number .\n2.Let be two nonzero vectors, then  if and only if are\nperpendicular to each other . i.e.\n3.If θ = 0, then \nIn particular ,  as θ in this case is 0.\n4.If θ = π, then | || | ⋅ = −/arrowrightnosp /arrowrightnosp/arrowrightnosp /arrowrightnospa b a b\nIn particular , , as θ  in this case is π.\n5.In view of the Observations 2 and 3, for mutually perpendicular unit vectors\nˆ ˆ ˆ, and ,i j k  we have\nˆ ˆ ˆ ˆi i j j⋅ = ⋅  =ˆ ˆ1, k k⋅ =\nˆ ˆ ˆ ˆi j j k⋅ = ⋅  =ˆˆ0 k i⋅ =\n6.The angle between two nonzero vectors is given by\n or\n7.The scalar product is commutative. i.e.\n          (Why?)\nTwo impor tant pr operties of scalar  product\nProperty 1  (Distributivity of scalar product over addition) Let  be\nany three vectors, thenFig 10.19\nReprint 2025-26\n\nVECT OR ALGEBRA 357\n(i)B\nC AlB\nl\nA C\n(ii)\nA\nBC l\n(iv)l C\nBA\n(iii)θ θθθ\np p\np p\naa a\na(90□<□□□□<□180□)0 0θ (0□<□□□□<□90□)0 0θ\n(270□<□□□□<□360□)0 0θ (180□<□□□□<□270□)0 0θProper ty 2 Let  be any two vectors, and l be any scalar . Then\nIf two vectors  are given in component form as 1 2 3ˆ ˆ ˆa i a j a k+ +  and\n1 2 3ˆ ˆ ˆb i b j b k+ + , then their scalar product is given as\n =1 2 3 1 2 3ˆ ˆ ˆ ˆ ˆ ˆ( ) ( ) a i a j a k b i b j b k+ + ⋅ + +\n=1 1 2 3 2 1 2 3ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ( ) ( ) a i b i b j b k a j b i b j b k⋅ + + + ⋅ + +  + 3 1 2 3ˆ ˆ ˆ ˆ( ) a k b i b j b k⋅ + +\n= 1 1 1 2 1 3 2 1 2 2 2 3ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ( ) ( ) ( ) ( ) ( ) ( )a b i i a b i j a b i k a b j i a b j j a b j k ⋅ + ⋅ + ⋅ + ⋅ + ⋅ + ⋅\n + 3 1 3 2 3 3ˆ ˆ ˆ ˆˆ ˆ( ) ( ) ( )a b k i a b k j a b k k ⋅ + ⋅ + ⋅ (Using the above Properties 1 and 2)\n=a1b1 + a2b2 + a3b3(Using Observation 5)\nThus  = 1 1 2 2 3 3a b a b a b+ +\n10.6.2   Projection of a vector on a line\nSuppose a vector  makes an angle θ with a given directed line l (say), in the\nanticlockwise dir ection  (Fig 10.20). Then the projection of  on l is a vector \n(say) with magnitude , and the direction of   being the same (or opposite)\nto that of the line l, depending upon whether co sθ is positive or negative. The vector \nFig 10.20\nReprint 2025-26\n\n MA THEMA TICS 358\nis called the projection vector , and its magnitude | | is simply called as the projection\nof the vector  on the directed line l.\nFor example, in each of the following figures (Fig 10.2 0(i) to (iv)), projection vector\nof  along the line l is vector .\nObservations\n1.If ˆp is the unit vector along a line l, then the projection of a vector  on the line\nl is given by ˆa p⋅ .\n2.Projection of a vector  on other vector /arrowrightnosp\nb, is given by\nˆ,a b⋅    or   \n3.If  θ = 0, then the projection vector of  will be  itself and if θ = π, then the\nprojection vector of  will be .\n4.If =2πθ  or 3=2πθ , then the projection vector of  will be zero vector .\nRemark  If α, β and γ are the direction angles of vector 1 2 3ˆ ˆ ˆa i a j a k= + + , then its\ndirection cosines may be given as\nAlso, note that  are respectively the projections of\n along OX, OY and OZ. i.e., the scalar components a1, a2 and a3 of the vector , are\nprecisely the projections of  along x -axis, y-axis and z-axis, respectively . Further , if \nis a unit vector , then it may be expressed in terms of its direction cosines as\nˆ ˆ ˆ cos cos cos i j k = α + β + γ\nExample 13 Find the angle between two vectors with magnitudes 1 and 2\nrespectively and  when   =1.\nSolution Given . We have\nReprint 2025-26\n\nVECT OR ALGEBRA 359\nExample 14  Find angle ‘ θ’ between the vectors .\nSolution  The angle θ between two vectors is given by\ncosθ =\nNow  =ˆ ˆ ˆ ˆ ˆ ˆ( ) ( ) 1 1 1 1i j k i j k+ − ⋅ − + = − − = − .\nTherefore, we have   cos θ =1\n3−\nhence the required angle is θ =\nExample 15  If , then show that the vectors\n are perpendicular .\nSolution We know that two nonzero vectors are perpendicular if their scalar product\nis zero.\nHere  = ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ(5 3 ) ( 3 5 ) 6 2 8i j k i j k i j k− − + + − = + −\nand  = ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ(5 3 ) ( 3 5 ) 4 4 2i j k i j k i j k− − − + − = − +\nSo      ( ) . ( ) ˆ ˆ ˆ ˆ ˆ ˆ(6 2 8 ) (4 4 2 ) 24 8 16 0.i j k i j k= + − ⋅ − + = − − =\nHence  are perpendicular vectors.\nExample 16  Find the projection of the vector ˆ ˆ ˆ2 3 2i j k= + + on the vector\nˆ ˆ ˆ2i j k= + + .\nSolution The projection of vector  on  the vector /arrowrightnosp\nb is given by\n = 2 2 2(2 1 3 2 2 1) 10 5636 (1) (2) (1)× + × + ×= =\n+ +\nExample 17  Find , if two vectors are such that \nand .\nSolution We have\n=\nReprint 2025-26\n\n MA THEMA TICS 360\nBC\nAab+\nab=\n=2 2(2) 2(4) (3)− +\nTherefore  = 5\nExample 18 If  is a unit vector and , then find .\nSolution Since  is a unit vector , . Also,\n                          \nor  =8\nor                                        \nTherefore  =3(as magnitude of a vector is non negative).\nExample 19  For any two vectors , we always have   (Cauchy-\nSchwartz inequality).\nSolution  The inequality holds trivially when either 0  or  0= =/arrowrightnosp/arrowrightnosp /arrowrightnosp/arrowrightnospa b . Actually , in such a\nsituation we have . So, let us assume that .\nThen, we have\n =| cos | 1θ ≤\nTherefore                             \nExample 20  For any two vectors , we always\nhave (triangle inequality).\nSolution The inequality holds trivially in case either\n (How?). So, let . Then,\n        \n=\n=  (scalar product is commutative)\n≤ (since | |x x x≤ ∀ ∈ R)\n≤ (from Example 19)\n=Fig 10.21\nReprint 2025-26\n\nVECT OR ALGEBRA 361\nHence                                    \nRemark  If the equality holds in triangle inequality (in the above Example 20), i.e.\n = ,\nthen  =\nshowing that the points A, B and C are collinear .\nExample 21  Show that the points ˆ ˆ ˆ ˆ ˆ ˆ A( 2 3 5 ), B( 2 3 ) i j k i j k− + + + +  and ˆˆC(7 )i k−\nare collinear .\nSolution We have\n  =ˆ ˆ ˆ ˆ ˆ ˆ (1 2) (2 3) (3 5) 3 2 i j k i j k+ + − + − = − − ,\n =ˆ ˆ ˆ ˆ ˆ ˆ (7 1) (0 2) ( 1 3) 6 2 4 i j k i j k− + − + − − = − − ,\n =ˆ ˆ ˆ ˆ ˆ ˆ (7 2) (0 3) ( 1 5) 9 3 6 i j k i j k+ + − + − − = − −\n =\nTherefore                       \nHence the points A, B and C are collinear .\n/handptrtsld1Note    In Example 21, one may note that although  but the\npoints A, B and C do not form the vertices of a triangle.\nEXERCISE 10.3\n1.Find the angle between two vectors with magnitudes 3  and 2 ,\nrespectively having .\n2.Find the angle between the vectors ˆ ˆ ˆ ˆ ˆ ˆ2 3   and  3 2i j k i j k− + − +  and ˆ ˆ ˆ ˆ ˆ ˆ2 3   and  3 2i j k i j k− + − +\n3.Find the projection of the vector ˆ ˆi j− on the vector ˆ ˆi j+.\n4.Find the projection of the vector ˆ ˆ ˆ3 7i j k+ +  on the vector ˆ ˆ ˆ7 8i j k− + .\n5.Show that each of the given three vectors is a unit vector:\n1 1 1ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ(2 3 6 ), (3 6 2 ),  (6 2 3 )7 7 7i j k i j k i j k+ + − + + −\nAlso, show that they are mutually perpendicular to each other .\nReprint 2025-26\n\n MA THEMA TICS 362\n6.Find , if .\n7.Evaluate the product .\n8.Find the magnitude of two vectors , having the same magnitude and such\nthat the angle between them is 60o and their scalar product is 1\n2.\n9.Find , if for a unit vector , .\n10. If are such that is\nperpendicular to , then find the value of λ.\n11.Show that  is perpendicular to , for any two nonzero\nvectors .\n12. If , then what can be concluded about the vector ?\n13. If are unit vectors such that , find the value of\n.\n14. If either vector . But the converse need not be\ntrue. Justify your answer with an example.\n15. If the vertices A, B, C of a triangle ABC are (1, 2, 3), (–1, 0, 0), (0, 1, 2),\nrespectively , then find ∠ ABC. [ ∠ABC is the angle between the vectors  and\n].\n16. Show that the points A(1, 2, 7), B(2, 6, 3) and C(3, 10, –1) are collinear .\n17. Show that the vectors ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ2 , 3 5 and 3 4 4i j k i j k i j k− + − − − −  form the vertices\nof a right angled triangle.\n18. If  is a nonzero vector of magnitude ‘ a’ and λ a nonzero scalar , then λ is unit\nvector if\n(A) λ = 1 (B) λ = – 1 (C) a = |λ| (D) a = 1/ |λ|\n10.6.3   Vector (or cross) product of two vectors\nIn Section 10.2, we have discussed on the three dimensional right handed rectangular\ncoordinate system. In this system, when the positive x -axis is rotated counterclockwise\nReprint 2025-26\n\nVECT OR ALGEBRA 363\ninto the positive y-axis, a right handed (standard) screw would advance in the direction\nof the positive z-axis (Fig 10.22(i)).\nIn a right handed coordinate system, the thumb of the right hand points in the\ndirection of the positive z-axis when the fingers are curled in the direction away from\nthe positive x-axis toward the positive y-axis (Fig 10.22(ii)).\nFig 10.22 (i), (ii)\nDefinition 3  The vector product of two nonzero vectors , is denoted by \nand defined as\n = ,\nwhere, θ is the angle between , 0≤ θ ≤ π  and ˆn is a\nunit vector perpendicular to both , such that\n form a right handed system (Fig 10.23). i.e., the\nright handed system rotated from moves in the direction\nof ˆn.\nIf either , then θ is not defined and in this case, we define .\nObservations\n1.  is a vector .\n2.Let  be two nonzero vectors. Then  if and only if are\nparallel (or collinear) to each other , i.e.,\n =\nFig 10.23\nReprint 2025-26\n\n MA THEMA TICS 364\nIn particular , and , since in the first situation, θ = 0 and\nin the second one, θ = π , making the value of si nθ to be 0.\n3.If \n2πθ =  then .\n4.In view of the Observations 2 and 3, for mutually perpendicular\nunit vectors ˆ ˆ ˆ, andi j k  (Fig 10.24), we have\nˆ ˆi i× = \nˆ ˆi j×= ˆ ˆ ˆˆ ˆ ˆ ˆ, ,  k j k i k i j × = × =\n5.In terms of vector product, the angle between two vector s may be\ngiven as\nsinθ =\n6.It is always true that the vector product is not commutative, as  = .\nIndeed, , where  form a right handed system,\ni.e., θ is traversed from , Fig 10.25 (i). While, , where\n form a right handed system i.e. θ is traversed from ,\nFig 10.25(ii).\nFig 10.25 (i), (ii)\nThus, if we assume to lie in the plane of the paper , then 1ˆ ˆ and n n  both\nwill be perpendicular to the plane of the paper . But, ˆn being directed above the\npaper while 1ˆn directed below the paper . i.e. 1ˆ ˆn n= − .Fig 10.24\nReprint 2025-26\n\nVECT OR ALGEBRA 365\nHence  =\n=\n7.In view of the Observations 4 and 6, we have\nˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ,  and   . j i k k j i i k j× = − × = − × = −\n8.If represent the adjacent sides of a triangle then its area is given as\n.\nBy definition of the area of a triangle, we have from\nFig 10.26,\nArea of triangle ABC = 1AB CD.2⋅\nBut  (as given), and CD =  sinθ.\nThus,  Area of triangle ABC = \n9.If  represent the adjacent sides of a  parallelogram, then its area is given\nby .\nFrom Fig 10.27, we have\nArea of parallelogram ABCD = AB. DE.\nBut  (as given), and\n.\nThus,\nArea of parallelogram ABCD =\nWe now state two important properties of vector product.\nProperty 3  (Distributivity of vector product over addition): If \nare any three vectors and λ be a scalar , then\n(i)\n(ii)Fig 10.26\n Fig 10.27\nReprint 2025-26\n\n MA THEMA TICS 366\nLet  be two vectors given in component form as 1 2 3ˆ ˆ ˆa i a j a k+ + and\n1 2 3ˆ ˆ ˆb i b j b k+ + , respectively . Then their cross product may be given by\n = 1 2 3\n1 2 3ˆ ˆ ˆi j k\na a a\nb b b\nExplanation  We have\n =1 2 3 1 2 3ˆ ˆ ˆ ˆ ˆ ˆ( ) ( ) a i a j a k b i b j b k+ + × + +\n= 1 1 1 2 1 3 2 1ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ( ) ( ) ( ) ( )a b i i a b i j a b i k a b j i × + × + × + ×\n+ 2 2 2 3ˆ ˆ ˆ ˆ( ) ( )a b j j a b j k × + ×\n+  3 1 3 2 3 3ˆ ˆ ˆ ˆˆ ˆ( ) ( ) ( )a b k i a b k j a b k k × + × + × (by Property 1)\n=1 2 1 3 2 1ˆ ˆ ˆ ˆ ˆ ˆ( ) ( ) ( )a b i j a b k i a b i j × − × − ×\n+  2 3 3 1 3 2ˆ ˆ ˆ ˆ ˆ ˆ ( ) ( ) ( )a b j k a b k i a b j k × + × − ×\nˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ (as 0  and  ,   and  ) i i j j k k i k k i j i i j k j j k× = × = × = × = − × × = − × × = − ×\n=1 2 1 3 2 1 2 3 3 1 3 2ˆ ˆ ˆ ˆ ˆ ˆ a b k a b j a b k a b i a b j a b i − − + + −\nˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ(as ,   and  )i j k j k i k i j× = × = × =\n=2 3 3 2 1 3 3 1 1 2 2 1ˆ ˆ ˆ ( ) ( ) ( )a b a b i a b a b j a b a b k − − − + −\n=1 2 3\n1 2 3ˆ ˆ ˆi j k\na a a\nb b b\nExample 22  Find \nSolution We have\n =ˆ ˆ ˆ\n2 1 3\n3 5 2i j k\n−\n= ˆ ˆ ˆ ( 2 15) ( 4 9) (10 – 3)i j k − − − − − + ˆ ˆ ˆ17 13 7i j k = − + +\nHence  =2 2 2( 17) (13) (7) 507− + + =\nReprint 2025-26\n\nVECT OR ALGEBRA 367\nExample 23  Find a unit vector perpendicular to each of the vectors  and\nwhere .\nSolution  We have \nA vector which is perpendicular to both and+ −/arrowrightnosp /arrowrightnosp/arrowrightnosp /arrowrightnospa b a b  is given by\n =\nNow  = 4 16 4 24 2 6+ + = =\nTherefore, the required unit vector is\n| |/arrowrightnosp\n/arrowrightnospc\nc =1 2 1ˆ ˆ ˆ\n6 6 6i j k−+ −\n/handptrtsld1Note   There are two perpendicular directions to any plane. Thus, another unit\nvector perpendicular to  will be 1 2 1ˆ ˆ ˆ .\n6 6 6i j k− +  But that will\nbe a consequence of .\nExample 24  Find the area of a triangle having the points A(1, 1, 1), B(1, 2, 3)\nand C(2, 3, 1) as its vertices.\nSolution We have . The area of the given triangle\nis .\nNow,  =ˆ ˆ ˆ\nˆ ˆ ˆ 0 1 2 4 2\n1 2 0i j k\ni j k = − + −\nTherefore  =16 4 1 21+ + =\nThus, the required area is 121\n2\nReprint 2025-26\n\n MA THEMA TICS 368\nExample 25  Find the area of a parallelogram whose adjacent sides are given\nby the vectors \nSolution The area of a parallelogram with as its adjacent sides is given\nby .\nNow  =ˆ ˆ ˆ\nˆ ˆ ˆ 3 1 4 5 4\n1 1 1i j k\ni j k= + −\n−\nTherefore  = 25 1 16 42+ + =\nand hence, the required area is 42.\nEXERCISE 10.4\n1.Find .\n2.Find a unit vector perpendicular to each of the vector , where\n.\n3.If a unit vector  makes angles ˆ ˆ with , with3 4i jπ π and an acute angle θ with\nˆk, then find θ and hence, the components of .\n4.Show that\n5.Find λ and µ  if .\n6.Given that  and . What can you conclude about the vectors\n?\n7.Let the vectors  be given as 1 2 3 1 2 3ˆ ˆ ˆ ˆ ˆ ˆ , , a i a j a k b i b j b k+ + + +\n1 2 3ˆ ˆ ˆc i c j c k+ + . Then show that .\n8.If either  then . Is the converse true? Justify your\nanswer with an example.\n9.Find the area of the triangle with vertices A(1, 1, 2), B(2, 3, 5) and C(1, 5, 5).\nReprint 2025-26\n\nVECT OR ALGEBRA 369\n10. Find the area of the parallelogram whose adjacent sides are determined by the\nvectors and .\n11.Let the vectors be such that , then  is a unit\nvector , if the angle between is\n(A) π/6 (B) π/4 (C) π/3 (D) π/2\n12. Area of a rectangle having vertices A, B, C and D with position vectors\n1 1ˆ ˆ ˆ ˆ ˆ ˆ– 4 , 42 2i j k i j k+ + + + , 1ˆ ˆ ˆ 42i j k− +  and 1ˆ ˆ ˆ– 42i j k− + , respectively is\n(A)1\n2(B) 1\n(C) 2 (D) 4\nMiscellaneous Examples\nExample 26 Write all the unit vectors in XY -plane.\nSolution Let  be a unit vector in XY -plane (Fig 10.28). Then, from the\nfigure , we have x = cos θ and y = sin θ (since |  | = 1). So, we may write the vector  as\n=ˆ ˆ cos sin i jθ + θ ... (1)\nClearly , | | =2 2cos sin 1 θ + θ =\nFig 10.28\nAlso, as θ varies from 0 to 2π , the point P (Fig 10.28) traces the circle x2 + y2 = 1\ncounterclockwise, and this covers all possible directions. So, (1) gives every unit vector\nin the XY -plane.\nReprint 2025-26\n\n MA THEMA TICS 370\nExample 27  If ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ , 2 5 , 3 2 3   and  6 + + + + − − −i j k i j i j k i j k  are the position\nvectors of points A, B, C and D respectively , then find the angle between  and .\nDeduce that  and  are collinear .\nSolution Note that if θ is the angle between AB and CD, then θ is also the angle\nbetween  and .\nNow  =Position vector of B – Position vector of A\n=ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ(2 5 ) ( ) 4i j i j k i j k+ − + + = + −\nTherefore || =2 2 2(1) (4) ( 1) 3 2+ + − =\nSimilarly  =ˆ ˆ ˆ2 8 2   and  |CD | 6 2− − + =/combarrowextender/combarrowextender/combarrowextender/arrowrightnosp\ni j k\nThus cosθ =\n=1( 2) 4( 8) ( 1)(2) 36136 (3 2)(6 2)− + − + − −= = −\nSince 0 ≤ θ ≤ π, it follows that θ = π. This shows that  and  are collinear .\nAlternatively,  which implies that  and  are collinear vectors.\nExample 28  Let  be three vectors such that  and\neach one of them being perpendicular to the sum of the other two, find .\nSolution Given \nNow                               \n=\n+ \n=\n=9 + 16 + 25 = 50\nTherefore  = 50 5 2=\nReprint 2025-26\n\nVECT OR ALGEBRA 371\nExample 29  Three vectors  satisfy the condition . Evaluate\nthe quantity .\nSolution  Since , we have\n =0\nor  =0\nTherefore                                                               ... (1)\nAgain,  =0\nor                                                                          ... (2)\nSimilarly  =– 4. ... (3)\nAdding (1), (2) and (3), we have\n =– 29\nor 2µ = – 29, i.e., µ =29\n2−\nExample 30  If with reference to the right handed system of mutually perpendicular\nunit vectors , then express  in the form\nis parallel to  is perpendicular to \nSolution Let  is a scalar , i.e., .\nNow  = ˆ ˆ ˆ (2 3 ) (1 ) 3 i j k − λ + + λ − .\nNow , since 2β/arrowrightnosp\n is to be perpendicular to α/arrowrightnosp, we should have . i.e.,\n3(2 3 ) (1 )− λ − + λ  =0\nor λ =1\n2\nTherefore1 =3 1ˆ ˆ\n2 2i j−   and \nReprint 2025-26\n\n MA THEMA TICS 372\nMiscellaneous Exercise on Chapter 10\n1.Write down a unit vector in XY -plane, making an angle of 30° with the positive\ndirection of x-axis.\n2.Find the scalar components and magnitude of the vector joining the points\nP(x1, y1, z1) and Q(x2, y2, z2).\n3.A girl walks 4 km towards west, then she walks 3 km in a direction 30° east of\nnorth and stops. Determine the girl’ s displacement from her initial point of\ndeparture.\n4.If , then is it true that  ? Justify your answer .\n5.Find the value of x for which ˆ ˆ ˆ( )x i j k+ +  is a unit vector .\n6.Find a vector of magnitude 5 units, and parallel to the resultant of the vectors\n.\n7.If , find a unit vector parallel\nto the vector .\n8.Show that the points A(1, – 2, – 8), B(5, 0, –2) and C(11, 3, 7) are collinear , and\nfind the ratio in which B divides AC.\n9.Find the position vector of a point R which divides the line joining two points\nP and Q whose position vectors are  externally in the ratio\n1 : 2. Also, show that P  is the mid point of the line segment RQ.\n10. The two adjacent sides of a parallelogram are ˆ ˆ ˆ ˆ ˆ ˆ2 4 5  and  2 3i j k i j k− + − − .\nFind the unit vector parallel to its diagonal. Also, find its area.\n11.Show that the direction cosines of a vector equally inclined to the axes OX, OY\nand OZ are ±\n\n1\n31\n31\n3, , .\n12. Let . Find a vector    which\nis perpendicular to both  and  , and .\n13. The scalar product of the vector ˆ ˆ ˆi j k+ +  with a unit vector along the sum of\nvectors ˆ ˆ ˆ2 4 5i j k+ −  and ˆ ˆ ˆ2 3i j kλ + +  is equal to one. Find the value of λ.\n14. If  are mutually perpendicular vectors of equal magnitudes, show that the\nvector  is equally inclined to .\nReprint 2025-26\n\nVECT OR ALGEBRA 373\n15. Prove that , if and only if  are perpendicular , given\n.\nChoose the correct answer in Exercises 16 to 19.\n16. If θ is the angle between two vectors , then  only when\n(A) 02π< θ < (B) 02π≤ θ ≤\n(C) 0 < θ < π (D) 0 ≤ θ ≤ π\n17. Let  be two unit vectors and θ is the angle between them. Then  is\na unit vector if\n(A)\n4πθ = (B)\n3πθ = (C)\n2πθ = (D)2\n3πθ =\n18. The value of ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ.( ) ( ) ( )i j k j i k k i j× + ⋅ × + ⋅ ×  is\n(A) 0 (B) –1 (C) 1 (D) 3\n19. If θ is the angle between any two vectors , then when θ\nis equal to\n(A) 0 (B)4π(C)2π(D) π\nSummary\n/rhombus5Position vector of a point P( x, y, z) is given as , and its\nmagnitude by 2 2 2x y z+ + .\n/rhombus5The scalar components of a vector are its direction ratios, and represent its\nprojections along the respective axes.\n/rhombus5The magnitude (r ), direction ratios ( a, b, c) and direction cosines ( l, m, n) of\nany vector are related as:\n, ,a b cl m nr r r= = =\nReprint 2025-26\n\n MA THEMA TICS 374\n/rhombus5The vector sum of the three sides of a triangle taken in order is .\n/rhombus5The vector sum of two coinitial vectors is given by the diagonal of the\nparallelogram whose adjacent sides are the given vectors.\n/rhombus5The multiplication of a given vector by a scalar λ, changes the magnitude of\nthe vector by the multiple |λ|, and keeps the direction same (or makes it\nopposite) according as the value of λ is positive (or negative).\n/rhombus5For a given vector , the vector  gives the unit vector in the direction\nof .\n/rhombus5The position vector of a point R dividing a line segment joining the points\nP and Q whose position vectors are  respectively , in the ratio m : n\n(i) internally , is given by .\n(ii) externally , is given by .\n/rhombus5The scalar product of two given vectors having angle θ between\nthem is defined as\n.\nAlso, when  is given, the angle ‘ θ’ between the vectors may be\ndetermined by\ncosθ =\n/rhombus5If θ is the angle between two vectors , then their cross product is\ngiven as\nwhere ˆn is a unit vector perpendicular to the plane containing . Such\nthat form right handed system of coordinate axes.\n/rhombus5If we have two vectors , given in component form as\nand λ any scalar ,\nReprint 2025-26\n\nVECT OR ALGEBRA 375\nthen  =1 1 2 2 3 3ˆ ˆ ˆ ( ) ( ) ( )a b i a b j a b k+ + + + + ;\nλ =1 2 3ˆ ˆ ˆ ( ) ( ) ( )a i a j a kλ + λ + λ ;\n = 1 1 2 2 3 3a b a b a b+ + ;\nand  =1 1 1\n2 2 2ˆ ˆ ˆ\n.i j k\na b c\na b c\nHistorical Note\nThe word vector  has been derived from a Latin word vectus , which means\n“to carry”. The germinal ideas of modern vector theory date from around 1800\nwhen Caspar Wessel (1745-1818) and Jean Robert Argand (1768-1822) described\nthat how a complex number a + ib  could be given a geometric interpretation with\nthe help of a directed line segment in a coordinate plane. William Rowen Hamilton\n(1805-1865) an Irish mathematician was the first to use the term vector for a\ndirected line segment in his book Lectur es on Quaternions (1853). Hamilton’ s\nmethod of quaternions (an ordered set of four real numbers given as:\nˆ ˆ ˆ ˆ ˆ ˆ , , , a bi cj dk i j k+ + +  following certain algebraic rules) was a solution to the\nproblem of multiplying vectors in three dimensional space. Though, we must\nmention here that in practice, the idea of vector concept and their addition was\nknown much earlier ever since the time of Aristotle (384-322 B.C.), a Greek\nphilosopher , and pupil of Plato (427-348 B.C.). That time it was supposed to be\nknown that the combined action of two or more forces could be seen by adding\nthem according to parallelogram law . The correct law for the composition of\nforces, that forces add vectorially , had been discovered in the case of perpendicular\nforces by S tevin-Simon (1548-1620). In 1586 A.D., he analysed the principle of\ngeometric addition of forces in his treatise DeBeghinselen der W eeghconst\n(“Principles of the Art of Weighing”), which caused a major breakthrough in the\ndevelopment of mechanics. But it took another 200 years for the general concept\nof vectors to form.\nIn the 1880, Josaih Willard Gibbs (1839-1903), an American physicist and\nmathematician, and Oliver Heaviside (1850-1925), an English engineer , created\nwhat we now know as vector analysis , essentially by separating the real ( scalar )\nReprint 2025-26\n\n MA THEMA TICS 376\npart of quaternion from its imaginary ( vector ) part. In 1881 and 1884, Gibbs\nprinted a treatise entitled Element of V ector Analysis . This book gave a systematic\nand concise account of vectors. However , much of the credit for demonstrating\nthe applications of vectors is due to the D. Heaviside and P .G. Tait (1831-1901)\nwho contributed significantly to this subject.\n—/xrhombus/xrhombus/xrhombus/xrhombus/xrhombus—\nReprint 2025-26\n\n",
+      "wordCount": 5493,
+      "examples": [
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 13,
+          "title": "Find the angle between two vectors with magnitudes 1 and 2",
+          "question": "Example 13 Find the angle between two vectors with magnitudes 1 and 2\nrespectively and  when   =1.\nSolution Given . We have\nReprint 2025-26\n\nVECT OR ALGEBRA 359\nExample 14  Find angle ‘ θ’ between the vectors .\nSolution  The angle θ between two vectors is given by\ncosθ =\nNow  =ˆ ˆ ˆ ˆ ˆ ˆ( ) ( ) 1 1 1 1i j k i j k+ − ⋅ − + = − − = − .\nTherefore, we have   cos θ =1\n3−\nhence the required angle is θ =\nExample 15  If , then show that the vectors\n are perpendicular .\nSolution We know that two nonzero",
+          "solution": "Given . We have\nReprint 2025-26\n\nVECT OR ALGEBRA 359\nExample 14  Find angle ‘ θ’ between the vectors .\nSolution  The angle θ between two vectors is given by\ncosθ =\nNow  =ˆ ˆ ˆ ˆ ˆ ˆ( ) ( ) 1 1 1 1i j k i j k+ − ⋅ − + = − − = − .\nTherefore, we have   cos θ =1\n3−\nhence the required angle is θ ="
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 14,
+          "title": "Find angle ‘ θ’ between the vectors .",
+          "question": "Example 14  Find angle ‘ θ’ between the vectors .\nSolution  The angle θ between two vectors is given by\ncosθ =\nNow  =ˆ ˆ ˆ ˆ ˆ ˆ( ) ( ) 1 1 1 1i j k i j k+ − ⋅ − + = − − = − .\nTherefore, we have   cos θ =1\n3−\nhence the required angle is θ =\nExample 15  If , then show that the vectors\n are perpendicular .\nSolution We know that two nonzero vectors are perpendicular if their scalar product\nis zero.\nHere  = ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ(5 3 ) ( 3 5 ) 6 2 8i j k i j k i j k− − + + − = + −\nand  = ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ",
+          "solution": "The angle θ between two vectors is given by\ncosθ =\nNow  =ˆ ˆ ˆ ˆ ˆ ˆ( ) ( ) 1 1 1 1i j k i j k+ − ⋅ − + = − − = − .\nTherefore, we have   cos θ =1\n3−\nhence the required angle is θ ="
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 15,
+          "title": "If , then show that the vectors",
+          "question": "Example 15  If , then show that the vectors\n are perpendicular .\nSolution We know that two nonzero vectors are perpendicular if their scalar product\nis zero.\nHere  = ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ(5 3 ) ( 3 5 ) 6 2 8i j k i j k i j k− − + + − = + −\nand  = ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ(5 3 ) ( 3 5 ) 4 4 2i j k i j k i j k− − − + − = − +\nSo      ( ) . ( ) ˆ ˆ ˆ ˆ ˆ ˆ(6 2 8 ) (4 4 2 ) 24 8 16 0.i j k i j k= + − ⋅ − + = − − =\nHence  are perpendicular vectors.\nExample 16  Find the projection of the vector ˆ ˆ ˆ2 3 2i j k= +",
+          "solution": "We know that two nonzero vectors are perpendicular if their scalar product\nis zero.\nHere  = ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ(5 3 ) ( 3 5 ) 6 2 8i j k i j k i j k− − + + − = + −\nand  = ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ(5 3 ) ( 3 5 ) 4 4 2i j k i j k i j k− − − + − = − +\nSo      ( ) . ( ) ˆ ˆ ˆ ˆ ˆ ˆ(6 2 8 ) (4 4 2 ) 24 8 16 0.i j k i j k= + − ⋅ − + = − − =\nHence  are perpendicular vectors."
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 16,
+          "title": "Find the projection of the vector ˆ ˆ ˆ2 3 2i j k= + + on the vector",
+          "question": "Example 16  Find the projection of the vector ˆ ˆ ˆ2 3 2i j k= + + on the vector\nˆ ˆ ˆ2i j k= + + .\nSolution The projection of vector  on  the vector /arrowrightnosp\nb is given by\n = 2 2 2(2 1 3 2 2 1) 10 5636 (1) (2) (1)× + × + ×= =\n+ +\nExample 17  Find , if two vectors are such that \nand .\nSolution We have\n=\nReprint 2025-26\n\n MA THEMA TICS 360\nBC\nAab+\nab=\n=2 2(2) 2(4) (3)− +\nTherefore  = 5\nExample 18 If  is a unit vector and , then find .\nSolution Since  is a unit vector , . Also,",
+          "solution": "The projection of vector  on  the vector /arrowrightnosp\nb is given by\n = 2 2 2(2 1 3 2 2 1) 10 5636 (1) (2) (1)× + × + ×= =\n+ +"
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 17,
+          "title": "Find , if two vectors are such that",
+          "question": "Example 17  Find , if two vectors are such that \nand .\nSolution We have\n=\nReprint 2025-26\n\n MA THEMA TICS 360\nBC\nAab+\nab=\n=2 2(2) 2(4) (3)− +\nTherefore  = 5\nExample 18 If  is a unit vector and , then find .\nSolution Since  is a unit vector , . Also,\n                          \nor  =8\nor                                        \nTherefore  =3(as magnitude of a vector is non negative).\nExample 19  For any two vectors , we always have   (Cauchy-\nSchwartz inequality).\nSolution  The inequality holds tri",
+          "solution": "We have\n=\nReprint 2025-26\n\n MA THEMA TICS 360\nBC\nAab+\nab=\n=2 2(2) 2(4) (3)− +\nTherefore  = 5\nExample 18 If  is a unit vector and , then find .\nSolution Since  is a unit vector , . Also,\n                          \nor  =8\nor                                        \nTherefore  =3(as magnitude of a vector is non negative)."
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 18,
+          "title": "If  is a unit vector and , then find .",
+          "question": "Example 18 If  is a unit vector and , then find .\nSolution Since  is a unit vector , . Also,\n                          \nor  =8\nor                                        \nTherefore  =3(as magnitude of a vector is non negative).\nExample 19  For any two vectors , we always have   (Cauchy-\nSchwartz inequality).\nSolution  The inequality holds trivially when either 0  or  0= =/arrowrightnosp/arrowrightnosp /arrowrightnosp/arrowrightnospa b . Actually , in such a\nsituation we have . So, let us assume t",
+          "solution": "Since  is a unit vector , . Also,\n                          \nor  =8\nor                                        \nTherefore  =3(as magnitude of a vector is non negative)."
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 19,
+          "title": "For any two vectors , we always have   (Cauchy-",
+          "question": "Example 19  For any two vectors , we always have   (Cauchy-\nSchwartz inequality).\nSolution  The inequality holds trivially when either 0  or  0= =/arrowrightnosp/arrowrightnosp /arrowrightnosp/arrowrightnospa b . Actually , in such a\nsituation we have . So, let us assume that .\nThen, we have\n =| cos | 1θ ≤\nTherefore                             \nExample 20  For any two vectors , we always\nhave (triangle inequality).\nSolution The inequality holds trivially in case either\n (How?). So, let . Then,",
+          "solution": "The inequality holds trivially when either 0  or  0= =/arrowrightnosp/arrowrightnosp /arrowrightnosp/arrowrightnospa b . Actually , in such a\nsituation we have . So, let us assume that .\nThen, we have\n =| cos | 1θ ≤\nTherefore"
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 20,
+          "title": "For any two vectors , we always",
+          "question": "Example 20  For any two vectors , we always\nhave (triangle inequality).\nSolution The inequality holds trivially in case either\n (How?). So, let . Then,\n        \n=\n=  (scalar product is commutative)\n≤ (since | |x x x≤ ∀ ∈ R)\n≤ (from Example 19)\n=Fig 10.21\nReprint 2025-26\n\nVECT OR ALGEBRA 361\nHence                                    \nRemark  If the equality holds in triangle inequality (in the above Example 20), i.e.\n = ,\nthen  =\nshowing that the points A, B and C are collinear .\nExample 21  Show",
+          "solution": "The inequality holds trivially in case either\n (How?). So, let . Then,\n        \n=\n=  (scalar product is commutative)\n≤ (since | |x x x≤ ∀ ∈ R)\n≤ (from"
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 19,
+          "title": ")",
+          "question": "Example 19)\n=Fig 10.21\nReprint 2025-26\n\nVECT OR ALGEBRA 361\nHence                                    \nRemark  If the equality holds in triangle inequality (in the above Example 20), i.e.\n = ,\nthen  =\nshowing that the points A, B and C are collinear .\nExample 21  Show that the points ˆ ˆ ˆ ˆ ˆ ˆ A( 2 3 5 ), B( 2 3 ) i j k i j k− + + + +  and ˆˆC(7 )i k−\nare collinear .\nSolution We have\n  =ˆ ˆ ˆ ˆ ˆ ˆ (1 2) (2 3) (3 5) 3 2 i j k i j k+ + − + − = − − ,\n =ˆ ˆ ˆ ˆ ˆ ˆ (7 1) (0 2) ( 1 3) 6 2 4 i j k i",
+          "solution": "We have\n  =ˆ ˆ ˆ ˆ ˆ ˆ (1 2) (2 3) (3 5) 3 2 i j k i j k+ + − + − = − − ,\n =ˆ ˆ ˆ ˆ ˆ ˆ (7 1) (0 2) ( 1 3) 6 2 4 i j k i j k− + − + − − = − − ,\n =ˆ ˆ ˆ ˆ ˆ ˆ (7 2) (0 3) ( 1 5) 9 3 6 i j k i j k+ + − + − − = − −\n =\nTherefore                       \nHence the points A, B and C are collinear .\n/handptrtsld1Note    In"
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 20,
+          "title": "), i.e.",
+          "question": "Example 20), i.e.\n = ,\nthen  =\nshowing that the points A, B and C are collinear .\nExample 21  Show that the points ˆ ˆ ˆ ˆ ˆ ˆ A( 2 3 5 ), B( 2 3 ) i j k i j k− + + + +  and ˆˆC(7 )i k−\nare collinear .\nSolution We have\n  =ˆ ˆ ˆ ˆ ˆ ˆ (1 2) (2 3) (3 5) 3 2 i j k i j k+ + − + − = − − ,\n =ˆ ˆ ˆ ˆ ˆ ˆ (7 1) (0 2) ( 1 3) 6 2 4 i j k i j k− + − + − − = − − ,\n =ˆ ˆ ˆ ˆ ˆ ˆ (7 2) (0 3) ( 1 5) 9 3 6 i j k i j k+ + − + − − = − −\n =\nTherefore                       \nHence the points A, B and C are collinear",
+          "solution": "We have\n  =ˆ ˆ ˆ ˆ ˆ ˆ (1 2) (2 3) (3 5) 3 2 i j k i j k+ + − + − = − − ,\n =ˆ ˆ ˆ ˆ ˆ ˆ (7 1) (0 2) ( 1 3) 6 2 4 i j k i j k− + − + − − = − − ,\n =ˆ ˆ ˆ ˆ ˆ ˆ (7 2) (0 3) ( 1 5) 9 3 6 i j k i j k+ + − + − − = − −\n =\nTherefore                       \nHence the points A, B and C are collinear .\n/handptrtsld1Note    In"
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 21,
+          "title": "Show that the points ˆ ˆ ˆ ˆ ˆ ˆ A( 2 3 5 ), B( 2 3 ) i j k i j k− + + + +  and ˆˆC(7 )i k−",
+          "question": "Example 21  Show that the points ˆ ˆ ˆ ˆ ˆ ˆ A( 2 3 5 ), B( 2 3 ) i j k i j k− + + + +  and ˆˆC(7 )i k−\nare collinear .\nSolution We have\n  =ˆ ˆ ˆ ˆ ˆ ˆ (1 2) (2 3) (3 5) 3 2 i j k i j k+ + − + − = − − ,\n =ˆ ˆ ˆ ˆ ˆ ˆ (7 1) (0 2) ( 1 3) 6 2 4 i j k i j k− + − + − − = − − ,\n =ˆ ˆ ˆ ˆ ˆ ˆ (7 2) (0 3) ( 1 5) 9 3 6 i j k i j k+ + − + − − = − −\n =\nTherefore                       \nHence the points A, B and C are collinear .\n/handptrtsld1Note    In Example 21, one may note that although  but the\npoints",
+          "solution": "We have\n  =ˆ ˆ ˆ ˆ ˆ ˆ (1 2) (2 3) (3 5) 3 2 i j k i j k+ + − + − = − − ,\n =ˆ ˆ ˆ ˆ ˆ ˆ (7 1) (0 2) ( 1 3) 6 2 4 i j k i j k− + − + − − = − − ,\n =ˆ ˆ ˆ ˆ ˆ ˆ (7 2) (0 3) ( 1 5) 9 3 6 i j k i j k+ + − + − − = − −\n =\nTherefore                       \nHence the points A, B and C are collinear .\n/handptrtsld1Note    In"
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 21,
+          "title": ", one may note that although  but the",
+          "question": "Example 21, one may note that although  but the\npoints A, B and C do not form the vertices of a triangle.\nEXERCISE 10.3\n1.Find the angle between two vectors with magnitudes 3  and 2 ,\nrespectively having .\n2.Find the angle between the vectors ˆ ˆ ˆ ˆ ˆ ˆ2 3   and  3 2i j k i j k− + − +  and ˆ ˆ ˆ ˆ ˆ ˆ2 3   and  3 2i j k i j k− + − +\n3.Find the projection of the vector ˆ ˆi j− on the vector ˆ ˆi j+.\n4.Find the projection of the vector ˆ ˆ ˆ3 7i j k+ +  on the vector ˆ ˆ ˆ7 8i j k− + .\n5.Show tha",
+          "solution": ""
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 22,
+          "title": "Find",
+          "question": "Example 22  Find \nSolution We have\n =ˆ ˆ ˆ\n2 1 3\n3 5 2i j k\n−\n= ˆ ˆ ˆ ( 2 15) ( 4 9) (10 – 3)i j k − − − − − + ˆ ˆ ˆ17 13 7i j k = − + +\nHence  =2 2 2( 17) (13) (7) 507− + + =\nReprint 2025-26\n\nVECT OR ALGEBRA 367\nExample 23  Find a unit vector perpendicular to each of the vectors  and\nwhere .\nSolution  We have \nA vector which is perpendicular to both and+ −/arrowrightnosp /arrowrightnosp/arrowrightnosp /arrowrightnospa b a b  is given by\n =\nNow  = 4 16 4 24 2 6+ + = =\nTherefore, the required uni",
+          "solution": "We have\n =ˆ ˆ ˆ\n2 1 3\n3 5 2i j k\n−\n= ˆ ˆ ˆ ( 2 15) ( 4 9) (10 – 3)i j k − − − − − + ˆ ˆ ˆ17 13 7i j k = − + +\nHence  =2 2 2( 17) (13) (7) 507− + + =\nReprint 2025-26\n\nVECT OR ALGEBRA 367"
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 23,
+          "title": "Find a unit vector perpendicular to each of the vectors  and",
+          "question": "Example 23  Find a unit vector perpendicular to each of the vectors  and\nwhere .\nSolution  We have \nA vector which is perpendicular to both and+ −/arrowrightnosp /arrowrightnosp/arrowrightnosp /arrowrightnospa b a b  is given by\n =\nNow  = 4 16 4 24 2 6+ + = =\nTherefore, the required unit vector is\n| |/arrowrightnosp\n/arrowrightnospc\nc =1 2 1ˆ ˆ ˆ\n6 6 6i j k−+ −\n/handptrtsld1Note   There are two perpendicular directions to any plane. Thus, another unit\nvector perpendicular to  will be 1 2 1ˆ ˆ ˆ",
+          "solution": "We have \nA vector which is perpendicular to both and+ −/arrowrightnosp /arrowrightnosp/arrowrightnosp /arrowrightnospa b a b  is given by\n =\nNow  = 4 16 4 24 2 6+ + = =\nTherefore, the required unit vector is\n| |/arrowrightnosp\n/arrowrightnospc\nc =1 2 1ˆ ˆ ˆ\n6 6 6i j k−+ −\n/handptrtsld1Note   There are two perpendicular directions to any plane. Thus, another unit\nvector perpendicular to  will be 1 2 1ˆ ˆ ˆ .\n6 6 6i j k− +  But that will\nbe a consequence of ."
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 24,
+          "title": "Find the area of a triangle having the points A(1, 1, 1), B(1, 2, 3)",
+          "question": "Example 24  Find the area of a triangle having the points A(1, 1, 1), B(1, 2, 3)\nand C(2, 3, 1) as its vertices.\nSolution We have . The area of the given triangle\nis .\nNow,  =ˆ ˆ ˆ\nˆ ˆ ˆ 0 1 2 4 2\n1 2 0i j k\ni j k = − + −\nTherefore  =16 4 1 21+ + =\nThus, the required area is 121\n2\nReprint 2025-26\n\n MA THEMA TICS 368\nExample 25  Find the area of a parallelogram whose adjacent sides are given\nby the vectors \nSolution The area of a parallelogram with as its adjacent sides is given\nby .\nNow  =ˆ ˆ ˆ",
+          "solution": "We have . The area of the given triangle\nis .\nNow,  =ˆ ˆ ˆ\nˆ ˆ ˆ 0 1 2 4 2\n1 2 0i j k\ni j k = − + −\nTherefore  =16 4 1 21+ + =\nThus, the required area is 121\n2\nReprint 2025-26\n\n MA THEMA TICS 368"
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 25,
+          "title": "Find the area of a parallelogram whose adjacent sides are given",
+          "question": "Example 25  Find the area of a parallelogram whose adjacent sides are given\nby the vectors \nSolution The area of a parallelogram with as its adjacent sides is given\nby .\nNow  =ˆ ˆ ˆ\nˆ ˆ ˆ 3 1 4 5 4\n1 1 1i j k\ni j k= + −\n−\nTherefore  = 25 1 16 42+ + =\nand hence, the required area is 42.\nEXERCISE 10.4\n1.Find .\n2.Find a unit vector perpendicular to each of the vector , where\n.\n3.If a unit vector  makes angles ˆ ˆ with , with3 4i jπ π and an acute angle θ with\nˆk, then find θ and hence, the componen",
+          "solution": "The area of a parallelogram with as its adjacent sides is given\nby .\nNow  =ˆ ˆ ˆ\nˆ ˆ ˆ 3 1 4 5 4\n1 1 1i j k\ni j k= + −\n−\nTherefore  = 25 1 16 42+ + =\nand hence, the required area is 4"
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 26,
+          "title": "Write all the unit vectors in XY -plane.",
+          "question": "Example 26 Write all the unit vectors in XY -plane.\nSolution Let  be a unit vector in XY -plane (Fig 10.28). Then, from the\nfigure , we have x = cos θ and y = sin θ (since |  | = 1). So, we may write the vector  as\n=ˆ ˆ cos sin i jθ + θ ... (1)\nClearly , | | =2 2cos sin 1 θ + θ =\nFig 10.28\nAlso, as θ varies from 0 to 2π , the point P (Fig 10.28) traces the circle x2 + y2 = 1\ncounterclockwise, and this covers all possible directions. So, (1) gives every unit vector\nin the XY -plane.\nReprint 2025-",
+          "solution": "Let  be a unit vector in XY -plane (Fig 10.28). Then, from the\nfigure , we have x = cos θ and y = sin θ (since |  | = 1). So, we may write the vector  as\n=ˆ ˆ cos sin i jθ + θ ... (1)\nClearly , | | =2 2cos sin 1 θ + θ =\nFig 10.28\nAlso, as θ varies from 0 to 2π , the point P (Fig 10.28) traces the circle x2 + y2 = 1\ncounterclockwise, and this covers all possible directions. So, (1) gives every unit vector\nin the XY -plane.\nReprint 2025-26\n\n MA THEMA TICS 370"
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 27,
+          "title": "If ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ , 2 5 , 3 2 3   and  6 + + + + − − −i j k i j i j k i j k  are the position",
+          "question": "Example 27  If ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ , 2 5 , 3 2 3   and  6 + + + + − − −i j k i j i j k i j k  are the position\nvectors of points A, B, C and D respectively , then find the angle between  and .\nDeduce that  and  are collinear .\nSolution Note that if θ is the angle between AB and CD, then θ is also the angle\nbetween  and .\nNow  =Position vector of B – Position vector of A\n=ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ(2 5 ) ( ) 4i j i j k i j k+ − + + = + −\nTherefore || =2 2 2(1) (4) ( 1) 3 2+ + − =\nSimilarly  =ˆ ˆ ˆ2 8 2",
+          "solution": "Note that if θ is the angle between AB and CD, then θ is also the angle\nbetween  and .\nNow  =Position vector of B – Position vector of A\n=ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ(2 5 ) ( ) 4i j i j k i j k+ − + + = + −\nTherefore || =2 2 2(1) (4) ( 1) 3 2+ + − =\nSimilarly  =ˆ ˆ ˆ2 8 2   and  |CD | 6 2− − + =/combarrowextender/combarrowextender/combarrowextender/arrowrightnosp\ni j k\nThus cosθ =\n=1( 2) 4( 8) ( 1)(2) 36136 (3 2)(6 2)− + − + − −= = −\nSince 0 ≤ θ ≤ π, it follows that θ = π. This shows that  and  are collinear .\nAlternatively,  which implies that  and  are collinear vectors."
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 28,
+          "title": "Let  be three vectors such that  and",
+          "question": "Example 28  Let  be three vectors such that  and\neach one of them being perpendicular to the sum of the other two, find .\nSolution Given \nNow                               \n=\n+ \n=\n=9 + 16 + 25 = 50\nTherefore  = 50 5 2=\nReprint 2025-26\n\nVECT OR ALGEBRA 371\nExample 29  Three vectors  satisfy the condition . Evaluate\nthe quantity .\nSolution  Since , we have\n =0\nor  =0\nTherefore                                                               ... (1)\nAgain,  =0\nor",
+          "solution": "Given \nNow                               \n=\n+ \n=\n=9 + 16 + 25 = 50\nTherefore  = 50 5 2=\nReprint 2025-26\n\nVECT OR ALGEBRA 371"
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 29,
+          "title": "Three vectors  satisfy the condition . Evaluate",
+          "question": "Example 29  Three vectors  satisfy the condition . Evaluate\nthe quantity .\nSolution  Since , we have\n =0\nor  =0\nTherefore                                                               ... (1)\nAgain,  =0\nor                                                                          ... (2)\nSimilarly  =– 4. ... (3)\nAdding (1), (2) and (3), we have\n =– 29\nor 2µ = – 29, i.e., µ =29\n2−\nExample 30  If with reference to the right handed system of mutually perpendicular\nunit vectors , then express  in the",
+          "solution": "Since , we have\n =0\nor  =0\nTherefore                                                               ... (1)\nAgain,  =0\nor                                                                          ... (2)\nSimilarly  =– 4. ... (3)\nAdding (1), (2) and (3), we have\n =– 29\nor 2µ = – 29, i.e., µ =29\n2−"
+        },
+        {
+          "chapterNumber": 19,
+          "exampleNumber": 30,
+          "title": "If with reference to the right handed system of mutually perpendicular",
+          "question": "Example 30  If with reference to the right handed system of mutually perpendicular\nunit vectors , then express  in the form\nis parallel to  is perpendicular to \nSolution Let  is a scalar , i.e., .\nNow  = ˆ ˆ ˆ (2 3 ) (1 ) 3 i j k − λ + + λ − .\nNow , since 2β/arrowrightnosp\n is to be perpendicular to α/arrowrightnosp, we should have . i.e.,\n3(2 3 ) (1 )− λ − + λ  =0\nor λ =1\n2\nTherefore1 =3 1ˆ ˆ\n2 2i j−   and \nReprint 2025-26\n\n MA THEMA TICS 372\nMiscellaneous Exercise on Chapter 10\n1.Write down a",
+          "solution": "Let  is a scalar , i.e., .\nNow  = ˆ ˆ ˆ (2 3 ) (1 ) 3 i j k − λ + + λ − .\nNow , since 2β/arrowrightnosp\n is to be perpendicular to α/arrowrightnosp, we should have . i.e.,\n3(2 3 ) (1 )− λ − + λ  =0\nor λ =1\n2\nTherefore1 =3 1ˆ ˆ\n2 2i j−   and \nReprint 2025-26\n\n MA THEMA TICS 372\nMiscellaneous"
+        }
+      ],
+      "exercises": [
+        {
+          "chapterNumber": 19,
+          "exerciseNumber": "10.3",
+          "questions": [
+            {
+              "questionNumber": 2,
+              "questionText": "9.Find , if for a unit vector , ."
+            },
+            {
+              "questionNumber": 10,
+              "questionText": "If are such that is\nperpendicular to , then find the value of λ."
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "If , then what can be concluded about the vector ?"
+            },
+            {
+              "questionNumber": 13,
+              "questionText": "If are unit vectors such that , find the value of\n."
+            },
+            {
+              "questionNumber": 14,
+              "questionText": "If either vector . But the converse need not be\ntrue. Justify your answer with an example."
+            },
+            {
+              "questionNumber": 15,
+              "questionText": "If the vertices A, B, C of a triangle ABC are (1, 2, 3), (–1, 0, 0), (0, 1, 2),\nrespectively , then find ∠ ABC. [ ∠ABC is the angle between the vectors  and\n]."
+            },
+            {
+              "questionNumber": 16,
+              "questionText": "Show that the points A(1, 2, 7), B(2, 6, 3) and C(3, 10, –1) are collinear ."
+            },
+            {
+              "questionNumber": 17,
+              "questionText": "Show that the vectors ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ ˆ2 , 3 5 and 3 4 4i j k i j k i j k− + − − − −  form the vertices\nof a right angled triangle."
+            },
+            {
+              "questionNumber": 18,
+              "questionText": "If  is a nonzero vector of magnitude ‘ a’ and λ a nonzero scalar , then λ is unit\nvector if\n(A) λ = 1 (B) λ = – 1 (C) a = |λ| (D) a = 1/ |λ|"
+            },
+            {
+              "questionNumber": 1,
+              "questionText": "is a vector ."
+            }
+          ]
+        },
+        {
+          "chapterNumber": 19,
+          "exerciseNumber": "10.4",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "Find the area of the parallelogram whose adjacent sides are determined by the\nvectors and ."
+            },
+            {
+              "questionNumber": 12,
+              "questionText": "Area of a rectangle having vertices A, B, C and D with position vectors\n1 1ˆ ˆ ˆ ˆ ˆ ˆ– 4 , 42 2i j k i j k+ + + + , 1ˆ ˆ ˆ 42i j k− +  and 1ˆ ˆ ˆ– 42i j k− + , respectively is\n(A)1\n2(B) 1\n(C) 2 (D) 4\nMiscellaneous Examples\nExample 26 Write all the unit vectors in XY -plane.\nSolution Let  be a unit vector in XY -plane (Fig 10.28). Then, from the\nfigure , we have x = cos θ and y = sin θ (since |  | = 1). So, we may write the vector  as\n=ˆ ˆ cos sin i jθ + θ ... (1)\nClearly , | | =2 2cos sin 1 θ + θ =\nFig 10.28\nAlso, as θ varies from 0 to 2π , the point P (Fig 10.28) traces the circle x2 + y2 = 1\ncounterclockwise, and this covers all possible directions. So, (1) gives every unit vector\nin the XY -plane.\nReprint 2025-26"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 21,
+        "exercisesCount": 12
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 39,
+    "totalWords": 9689
+  }
+}

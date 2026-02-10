@@ -1,0 +1,165 @@
+{
+  "filename": "kemh1ps.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "Sets 1",
+      "content": "1. Sets 1\n1.1 Introduction 1\n1.2 Sets and their Representations 1\n1.3 The Empty Set 5\n1.4 Finite and Infinite Sets 6\n1.5 Equal  Sets 7\n1.6 Subsets 9\n1.7 Universal Set 12\n1.8 Venn Diagrams 13\n1.9 Operations on Sets 13\n1.10 Complement of a Set 18\n",
+      "wordCount": 49,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 2,
+      "title": "Relations and Functions 24",
+      "content": "2. Relations and Functions 24\n2.1 Introduction 24\n2.2 Cartesian Product of Sets 24\n2.3 Relations 28\n2.4 Functions 30\n",
+      "wordCount": 20,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 3,
+      "title": "Trigonometric Functions 43",
+      "content": "3. Trigonometric Functions 43\n3.1 Introduction 43\n3.2 Angles 43\n3.3 Trigonometric Functions 49\n3.4 Trigonometric Functions of Sum and Dif ference of Two Angles 57\n",
+      "wordCount": 26,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 4,
+      "title": "Complex Numbers and Quadratic Equations 76",
+      "content": "4. Complex Numbers and Quadratic Equations 76\n4.1 Introduction 76\n4.2 Complex Numbers 76\nReprint 2025-26\n\nx4.3 Algebra of Complex Numbers 77\n4.4 The Modulus and the Conjugate of a Complex Number 81\n4.5 Argand Plane and Polar Representation 83\n",
+      "wordCount": 40,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 5,
+      "title": "Linear Inequalities 89",
+      "content": "5. Linear Inequalities 89\n5.1 Introduction 89\n5.2 Inequalities 89\n5.3 Algebraic Solutions of Linear Inequalities in One Variable\nand their Graphical Representation 91\n",
+      "wordCount": 24,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 6,
+      "title": "Permutations and Combinations 100",
+      "content": "6. Permutations and Combinations 100\n6.1 Introduction 100\n6.2 Fundamental Principle of Counting 100\n6.3 Permutations 104\n6.4 Combinations 114\n",
+      "wordCount": 20,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 7,
+      "title": "Binomial Theorem 126",
+      "content": "7. Binomial Theorem 126\n7.1 Introduction 126\n7.2 Binomial Theorem for Positive Integral Indices 126\n",
+      "wordCount": 15,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 8,
+      "title": "Sequences and Series 135",
+      "content": "8. Sequences and Series 135\n8.1 Introduction 135\n8.2 Sequences 135\n8.3 Series 137\n8.4 Geometric Progression (G .P.) 139\n8.5 Relationship Between A.M. and G .M. 144\n",
+      "wordCount": 28,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 9,
+      "title": "Straight Lines 151",
+      "content": "9. Straight Lines 151\n9.1 Introduction 151\n9.2 Slope of a Line 152\n9.3 Various Forms of the Equation of a Line 159\n9.4 Distance of a Point From a Line 164\n",
+      "wordCount": 32,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 10,
+      "title": "Conic Sections 176",
+      "content": "10. Conic Sections 176\n10.1 Introduction 176\n10.2 Sections of a Cone 176\n10.3 Circle 179\nReprint 2025-26\n\nxi10.4 Parabola 182\n10.5 Ellipse 187\n10.6 Hyperbola 195\n11.Introduction to Three Dimensional Geometry 208\n11.1 Introduction 208\n11.2  Coordinate Axes and Coordinate Planes in\nThree Dimensional Space 209\n11.3  Coordinates of a Point in Space 209\n11.4  Distance between Two Points 211\n",
+      "wordCount": 61,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "Limits and Derivatives 217",
+      "content": "12. Limits and Derivatives 217\n12.1 Introduction 217\n12.2 Intuitive Idea of Derivatives 217\n12.3 Limits 220\n12.4 Limits of Trigonometric Functions 234\n12.5 Derivatives 239\n",
+      "wordCount": 26,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 13,
+      "title": "Statistics 257",
+      "content": "13. Statistics 257\n13.1 Introduction 257\n13.2 Measures of Dispersion 259\n13.3 Range 259\n13.4 Mean Deviation 259\n13.5 Variance and S tandard Deviation 271\n",
+      "wordCount": 25,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 14,
+      "title": "Probability 289",
+      "content": "14. Probability 289\n14.1 Event 289\n14.2 Axiomatic Approach to Probability 295\nAppendix 1: Infinite Series 314\nA.1.1  Introduction 314\nA.1.2  Binomial Theorem for any Index 314\nA.1.3  Infinite Geometric Series 316\nA.1.4  Exponential Series 318\nA.1.5  Logarithmic Series 321\nReprint 2025-26\n\nxiiAppendix 2:  Mathematical Modelling 323\nA.2.1  Introduction 323\nA.2.2  Preliminaries 323\nA.2.3  What is Mathematical Modelling 327\nAnswers 335\nSupplementary Material 357\nReprint 2025-26\n\n",
+      "wordCount": 66,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 12,
+    "totalWords": 432
+  }
+}

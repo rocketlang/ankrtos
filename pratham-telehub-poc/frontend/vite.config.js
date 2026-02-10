@@ -3,8 +3,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/pratham/',
   server: {
     port: 3101,
-    host: '0.0.0.0'
+    host: '0.0.0.0',
+    allowedHosts: ['ankr.in', 'localhost']
   }
 });

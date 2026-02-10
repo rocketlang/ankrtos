@@ -1,0 +1,617 @@
+{
+  "class": 8,
+  "subject": "Geography",
+  "book": "Resources and Development",
+  "board": "CBSE",
+  "total_questions": 18,
+  "questions": [
+    {
+      "question": "Define 'resources' and classify them into two main types with examples.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Types of resources",
+      "answer": "Resources are substances or materials available in our environment that can be used to satisfy human needs and have value. The two main types of resources are:\n1. Natural Resources: Resources obtained directly from nature without human intervention. Examples: air, water, soil, minerals, forests, wildlife.\n2. Human-made Resources: Natural substances modified or transformed by human beings to make them more useful. Examples: buildings, roads, machinery, technology, vehicles.",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of resources",
+          "marks": 1
+        },
+        {
+          "point": "Mentioning natural resources with examples",
+          "marks": 1
+        },
+        {
+          "point": "Mentioning human-made resources with examples",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about things we use daily that come from nature.",
+        "Consider how humans modify natural things for better use."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "1"
+    },
+    {
+      "question": "Define 'natural resources' and give two examples. Why is it important to conserve natural resources?",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Types of resources",
+      "answer": "Natural resources are materials or substances that occur in nature and can be used for economic gain or to support life. Examples include forests and water. It is important to conserve natural resources because they are limited in supply, essential for human survival, and their overexploitation can lead to environmental degradation and scarcity for future generations.",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of natural resources",
+          "marks": 1
+        },
+        {
+          "point": "Two correct examples (e.g., forests, water, minerals, soil)",
+          "marks": 1
+        },
+        {
+          "point": "Valid reason for conservation (limited supply, environmental protection, future needs)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think of things we get directly from nature.",
+        "Conservation helps ensure availability for the future."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "1"
+    },
+    {
+      "question": "Explain the difference between natural resources and human resources with suitable examples. Why is the conservation of natural resources essential?",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Resources",
+      "answer": "Natural resources are materials obtained from nature that are used by humans without much modification, such as air, water, soil, minerals, forests, and wildlife. Examples include coal, iron ore, and sunlight. Human resources refer to people and their skills, knowledge, and abilities that contribute to the development of society. Examples include teachers, doctors, engineers, and farmers.\n\nConservation of natural resources is essential because:\n1. They are limited in quantity and many are non-renewable (e.g., fossil fuels).\n2. Overexploitation leads to environmental degradation, loss of biodiversity, and ecological imbalance.\n3. Sustainable use ensures availability for future generations and maintains ecological health.",
+      "marking_scheme": [
+        {
+          "point": "Correct definition and examples of natural resources",
+          "marks": 1
+        },
+        {
+          "point": "Correct definition and examples of human resources",
+          "marks": 1
+        },
+        {
+          "point": "Explanation of conservation necessity with at least two valid reasons",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about what comes directly from nature vs. what people contribute.",
+        "Consider scarcity and long-term availability of resources."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "1"
+    },
+    {
+      "question": "Explain the difference between renewable and non-renewable resources with suitable examples. Why is it important to conserve non-renewable resources?",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Types of resources",
+      "answer": "Renewable resources are those which can be replenished or renewed naturally over a short period of time. Examples include solar energy, wind energy, water (if used sustainably), and forests. Non-renewable resources are those which have a limited stock and take millions of years to form. Once exhausted, they cannot be readily replaced. Examples include coal, petroleum, natural gas, and minerals like iron ore and bauxite. It is important to conserve non-renewable resources because: (1) They are finite and exhaustible, (2) Their over-exploitation leads to environmental degradation, (3) They are essential for industrial development and energy needs, and (4) Future generations also have a right to use them.",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of renewable resources with one example",
+          "marks": 1
+        },
+        {
+          "point": "Correct definition of non-renewable resources with one example",
+          "marks": 1
+        },
+        {
+          "point": "Stating at least two valid reasons for conservation of non-renewable resources",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about the time taken for formation of resources.",
+        "Consider the impact on environment and future needs."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "1"
+    },
+    {
+      "question": "Analyze the statement: 'Human beings are the most valuable resource.' Critically examine how human resources differ from natural resources in terms of development and conservation, with specific examples from India.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Resources",
+      "answer": "Human beings are indeed the most valuable resource because they possess intelligence, skills, and innovation to utilize other resources effectively. Unlike natural resources, human resources are dynamic, self-renewing, and can be enhanced through education and training. Natural resources are finite and depletable (e.g., coal, minerals), while human resources grow in value with proper investment.\n\nDifferences in development:\n1. Natural resources require extraction and processing (e.g., mining iron ore in Odisha), whereas human resources develop through education, healthcare, and skill development (e.g., IT professionals in Bengaluru).\n2. Natural resources are location-specific (e.g., petroleum in Mumbai High), but human resources can be mobile and adaptable.\n\nDifferences in conservation:\n1. Natural resource conservation focuses on sustainable use and reducing waste (e.g., rainwater harvesting, afforestation under Chipko Movement).\n2. Human resource conservation involves protecting health, preventing brain drain, and ensuring equitable opportunities (e.g., Right to Education Act, Skill India Mission).\n\nIn India, while natural resources like forests and water are under stress, investing in human resources through schemes like Beti Bachao Beti Padhao and digital literacy programs demonstrates that human capital drives long-term national development.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of why humans are most valuable resource (intelligence, innovation)",
+          "marks": 1
+        },
+        {
+          "point": "Clear distinction: natural resources (finite, depletable) vs human resources (renewable, enhanceable)",
+          "marks": 1
+        },
+        {
+          "point": "Development difference with Indian examples (extraction vs education/skill development)",
+          "marks": 1.5
+        },
+        {
+          "point": "Conservation difference with Indian examples (sustainable use vs health/education protection)",
+          "marks": 1.5
+        },
+        {
+          "point": "Integrated critical examination linking to India's current scenario",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Think about what makes humans unique compared to minerals or forests.",
+        "Consider how India's population can be an asset or challenge.",
+        "Recall recent government schemes for skill development and resource management."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "1"
+    },
+    {
+      "question": "India is a country rich in natural resources, yet it faces significant challenges in resource management. Critically examine the statement: 'The conservation of natural resources is not just an environmental issue but also an economic and social necessity for India.' Support your answer with examples from different types of resources discussed in your textbook.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Resource Conservation",
+      "answer": "The statement is valid because resource conservation in India integrates environmental, economic, and social dimensions. Environmentally, overexploitation of resources like forests (deforestation in Western Ghats) and water (depleting groundwater in Punjab) leads to ecological imbalance, loss of biodiversity, and climate impacts. Economically, unsustainable use of mineral resources (iron ore in Odisha) and fossil fuels (coal in Jharia) threatens long-term industrial growth and energy security, increasing import dependence. Socially, unequal access to resources like water and fertile land exacerbates poverty and regional disparities, while degradation affects livelihoods of forest-dependent and agricultural communities. Conservation ensures intergenerational equity, sustainable development, and resilience against resource-based conflicts.",
+      "marking_scheme": [
+        {
+          "point": "Environmental justification with example (e.g., deforestation/water depletion)",
+          "marks": 2
+        },
+        {
+          "point": "Economic justification with example (e.g., minerals/fossil fuels)",
+          "marks": 2
+        },
+        {
+          "point": "Social justification with example (e.g., equity/livelihoods)",
+          "marks": 1
+        },
+        {
+          "point": "Integrated conclusion linking all dimensions",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Evaluation",
+      "hints": [
+        "Recall examples of resource depletion from Chapter 1.",
+        "Think about how resources impact jobs, health, and regional development.",
+        "Consider long-term vs. short-term benefits of conservation."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "1"
+    },
+    {
+      "question": "List any three methods of soil conservation suitable for hilly areas, as per NCERT Class 8 Geography.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Soil formation and conservation",
+      "answer": "Three methods of soil conservation suitable for hilly areas are:\n1. **Contour ploughing** \u2013 Ploughing along the contour lines of a slope to slow down water flow and reduce soil erosion.\n2. **Terrace farming** \u2013 Creating flat steps or terraces on hill slopes to reduce surface runoff and soil loss.\n3. **Afforestation** \u2013 Planting trees on slopes to bind the soil with roots and prevent erosion.",
+      "marking_scheme": [
+        {
+          "point": "Contour ploughing \u2013 ploughing along contour lines",
+          "marks": 1
+        },
+        {
+          "point": "Terrace farming \u2013 creating flat steps on slopes",
+          "marks": 1
+        },
+        {
+          "point": "Afforestation \u2013 planting trees to bind soil",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Remembering",
+      "hints": [
+        "Think of methods that reduce water flow on slopes.",
+        "NCERT mentions these in Chapter 2 \u2013 Land, Soil, Water, Natural Vegetation and Wildlife Resources."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "2"
+    },
+    {
+      "question": "Define 'land use pattern' and list any two factors that influence it.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Land resources",
+      "answer": "Land use pattern refers to the way land is utilised for different purposes such as agriculture, forests, settlements, industries, etc. Two factors influencing land use pattern are:\n1. Physical factors \u2013 Relief, climate, soil type, and availability of water.\n2. Human factors \u2013 Population density, technology, economic activities, and government policies.",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of land use pattern",
+          "marks": 1
+        },
+        {
+          "point": "First correct factor (physical or human)",
+          "marks": 1
+        },
+        {
+          "point": "Second correct factor (different from the first)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about how land is divided for farming, housing, etc.",
+        "Consider natural conditions and human activities."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "2"
+    },
+    {
+      "question": "Explain the factors responsible for soil formation. How do these factors influence the type of soil found in different regions of India?",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Soil formation and conservation",
+      "answer": "Soil formation is influenced by five main factors: parent rock, climate, relief, time, and organic matter. Parent rock determines the mineral composition and texture of soil. Climate, especially temperature and rainfall, affects the rate of weathering and humus formation. Relief (slope) influences soil thickness and erosion. Time determines the maturity of soil. Organic matter from plants and animals adds fertility. In India, these factors create regional variations: black soil (regur) from volcanic rocks in Deccan Plateau, alluvial soil in Indo-Gangetic plains from river deposits, laterite soil in high rainfall areas due to leaching, and arid soil in Rajasthan due to low rainfall and high temperature.",
+      "marking_scheme": [
+        {
+          "point": "Correctly names at least three factors of soil formation (parent rock, climate, relief, time, organic matter)",
+          "marks": 1
+        },
+        {
+          "point": "Explains how these factors influence soil characteristics (e.g., parent rock determines minerals, climate affects weathering)",
+          "marks": 1
+        },
+        {
+          "point": "Gives at least two relevant examples linking factors to Indian soil types (e.g., black soil from volcanic rocks, alluvial from rivers)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Recall the five factors of soil formation from your textbook.",
+        "Think about how rainfall and temperature affect soil in different parts of India.",
+        "Relate parent rock type to soil colour and texture examples."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "2"
+    },
+    {
+      "question": "Explain the relationship between land use patterns and soil conservation in India, with reference to two different regions.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Land resources and Soil conservation",
+      "answer": "Land use patterns directly influence soil conservation. In the Himalayan region, terrace farming is practiced on slopes to reduce soil erosion by slowing water runoff. In the Thar Desert, shelterbelts and afforestation are used to prevent wind erosion and stabilize sand dunes. In the Indo-Gangetic plains, crop rotation and contour ploughing help maintain soil fertility and structure. Sustainable land use ensures soil conservation by matching agricultural practices to geographical conditions.",
+      "marking_scheme": [
+        {
+          "point": "Identification of relationship: Land use affects soil conservation",
+          "marks": 1
+        },
+        {
+          "point": "Example 1: Himalayan region - terrace farming prevents water erosion",
+          "marks": 1
+        },
+        {
+          "point": "Example 2: Thar Desert - shelterbelts prevent wind erosion",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Application",
+      "hints": [
+        "Think about how farming methods change in mountains vs. plains.",
+        "Consider what causes soil erosion in different regions."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "2"
+    },
+    {
+      "question": "Analyze how the interplay between land use patterns, soil conservation methods, and water management practices in the Thar Desert region of Rajasthan demonstrates the principles of sustainable development. Critically evaluate one government initiative in this region that integrates these three elements.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Land, Soil, Water and Natural Vegetation",
+      "answer": "The Thar Desert region showcases a critical integration of land, soil, and water management for sustainability. Land use patterns here are adapted to aridity, with pastoralism (animal grazing on scarce vegetation) and limited agriculture in oasis areas being predominant, minimizing pressure on fragile lands. Soil conservation is achieved through techniques like contour bunding (building small barriers along slopes to reduce water runoff and soil erosion) and shelterbelts (rows of trees planted to reduce wind erosion). Water management relies on traditional systems like 'khadins' (embankments built across slopes to capture rainwater for irrigation) and modern drip irrigation to maximize efficiency. A key government initiative is the 'Indira Gandhi Canal Project'. It critically integrates these elements by: (1) Changing land use \u2013 enabling conversion of desert land to irrigated agriculture, (2) Improving soil conservation \u2013 irrigation supports vegetation growth, which stabilizes soil, and (3) Managing water \u2013 transporting water from distant rivers to the region. However, its evaluation must note negative impacts like waterlogging and salinity in some areas due to over-irrigation, highlighting that sustainability requires ongoing balanced management of all three resources.",
+      "marking_scheme": [
+        {
+          "point": "Analysis of adapted land use patterns in Thar Desert (pastoralism, oasis agriculture)",
+          "marks": 1.5
+        },
+        {
+          "point": "Explanation of specific soil conservation methods (contour bunding, shelterbelts) and water management practices (khadins, drip irrigation)",
+          "marks": 1.5
+        },
+        {
+          "point": "Identification and description of the 'Indira Gandhi Canal Project' as an integrating initiative",
+          "marks": 1.5
+        },
+        {
+          "point": "Critical evaluation balancing the project's benefits (land conversion, soil stabilization) and drawbacks (waterlogging, salinity)",
+          "marks": 1.5
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Consider how people in deserts traditionally use land with minimal water. Think of methods to stop soil from blowing away. Recall a major canal project in Rajasthan."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "2"
+    },
+    {
+      "question": "Analyze the interrelationship between land use patterns, soil conservation methods, and water management practices in the context of sustainable development in India. Critically examine how the degradation of any one of these resources impacts the other two, with specific examples from different regions of the country.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Land, Soil, Water and Natural Vegetation",
+      "answer": "Land use patterns, soil conservation, and water management are deeply interconnected components of sustainable development. In India, land use is classified into forests, net sown area, fallow lands, cultivable wasteland, and non-agricultural uses. Soil conservation methods like contour ploughing, terrace farming, and afforestation directly influence water management by reducing surface runoff and increasing groundwater recharge. For example, in the Himalayan region, terrace farming prevents soil erosion and retains moisture, supporting agriculture. Conversely, degradation of one resource severely impacts others. Take soil erosion in the Chambal basin (Madhya Pradesh): excessive gully erosion degrades land, making it unfit for agriculture (land use change from net sown area to wasteland). This increases surface runoff, reducing water infiltration and causing water scarcity. Similarly, over-exploitation of groundwater in Punjab for wheat-paddy cycles has led to water table depletion, causing soil salinity and rendering fertile land barren. Sustainable development requires integrated watershed management, where land use planning (like declaring ecologically sensitive areas), soil conservation (cover crops, check dams), and water conservation (rainwater harvesting, drip irrigation) are implemented together, as seen in the Sukhomajri model (Haryana).",
+      "marking_scheme": [
+        {
+          "point": "Clear explanation of interrelationship between land use, soil conservation, and water management with examples",
+          "marks": 2
+        },
+        {
+          "point": "Critical examination of how degradation of one resource impacts others with specific regional examples (e.g., Chambal erosion, Punjab groundwater)",
+          "marks": 2
+        },
+        {
+          "point": "Analysis of sustainable practices (integrated watershed management, Sukhomajri model) and their role in balancing all three resources",
+          "marks": 1.5
+        },
+        {
+          "point": "Overall structure, coherence, and use of geographical terminology",
+          "marks": 0.5
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Think about how soil erosion affects both land productivity and water availability.",
+        "Recall examples from your textbook: Himalayan terraces, black soil in Deccan, water scarcity in Rajasthan."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "2"
+    },
+    {
+      "question": "Define the term 'industry' and give two examples of agro-based industries.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Industries and Human Resources",
+      "answer": "An industry refers to an economic activity that is concerned with the production of goods, extraction of minerals, or provision of services. Agro-based industries are those which use agricultural raw materials to manufacture finished products. Two examples of agro-based industries are: 1) Sugar industry (uses sugarcane), 2) Cotton textile industry (uses cotton).",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of industry",
+          "marks": 1
+        },
+        {
+          "point": "First correct example of agro-based industry",
+          "marks": 1
+        },
+        {
+          "point": "Second correct example of agro-based industry",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about what industries do with raw materials.",
+        "Agro-based means related to agriculture."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "3"
+    },
+    {
+      "question": "Define the term 'industry' and classify industries based on raw materials used. Give one example for each type.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Industries and Human Resources",
+      "answer": "Industry refers to an economic activity that is concerned with the production of goods, extraction of minerals, or provision of services. Based on raw materials used, industries can be classified into:\n1. Agro-based industries: Use plant and animal-based products as raw materials. Example: Cotton textile industry.\n2. Mineral-based industries: Use minerals and metals as raw materials. Example: Iron and steel industry.\n3. Marine-based industries: Use products from the sea and oceans as raw materials. Example: Fish processing industry.\n4. Forest-based industries: Use forest produce as raw materials. Example: Paper industry.",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of industry",
+          "marks": 1
+        },
+        {
+          "point": "Correct classification into four types based on raw materials",
+          "marks": 1
+        },
+        {
+          "point": "One correct example for each type (total four examples)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about what raw materials come from farms, mines, oceans, and forests.",
+        "Refer to NCERT Geography textbook Chapter 5 - Industries."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "3"
+    },
+    {
+      "question": "Explain how agriculture and industries are interdependent. Support your answer with two examples from India.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Agriculture and industries",
+      "answer": "Agriculture and industries are interdependent as they support each other's growth and development. Industries depend on agriculture for raw materials, while agriculture relies on industries for machinery, fertilizers, and infrastructure. For example, the sugar industry in Uttar Pradesh and Maharashtra depends on sugarcane grown by farmers. In return, the sugar industry provides farmers with a market for their crop and supplies by-products like molasses for animal feed. Another example is the textile industry in Gujarat and Tamil Nadu, which uses cotton grown by farmers and supplies cloth, agricultural sacks, and employment opportunities to rural areas.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of interdependence (raw materials from agriculture to industries; machinery/inputs from industries to agriculture)",
+          "marks": 1
+        },
+        {
+          "point": "First example with details (sugar industry and sugarcane farming)",
+          "marks": 1
+        },
+        {
+          "point": "Second example with details (textile industry and cotton farming)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about what industries need from farms and what farms need from factories.",
+        "Recall major crops in India and related industries."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "3"
+    },
+    {
+      "question": "Explain how agriculture and industries are interdependent. Support your answer with two examples from India.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Agriculture and industries",
+      "answer": "Agriculture and industries are interdependent as they support each other's growth and development. Industries depend on agriculture for raw materials, while agriculture depends on industries for machinery, fertilizers, and infrastructure. For example, the sugar industry in Uttar Pradesh and Maharashtra relies on sugarcane grown by farmers. In return, agriculture uses tractors, harvesters, and fertilizers produced by industries like Mahindra & Mahindra and fertilizer plants. This mutual relationship boosts economic development and employment.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of interdependence (raw materials from agriculture to industries)",
+          "marks": 1
+        },
+        {
+          "point": "Explanation of reverse dependence (machinery/fertilizers from industries to agriculture)",
+          "marks": 1
+        },
+        {
+          "point": "Two valid Indian examples (e.g., sugar industry, tractor/fertilizer industry)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about what industries need from farms.",
+        "Consider what modern farming uses from factories."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "3"
+    },
+    {
+      "question": "Analyze the interdependence between agriculture and industries in India, and evaluate how this relationship impacts human resource development in rural areas. Support your answer with specific examples.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Agriculture and industries, Human resources and development",
+      "answer": "Agriculture and industries in India exhibit a strong interdependence that significantly influences human resource development in rural areas. This relationship can be analyzed through three key dimensions:\n\n1. **Forward Linkage (Agriculture \u2192 Industries)**: Agriculture provides raw materials to agro-based industries like cotton textiles (e.g., textile mills in Maharashtra using Maharashtra cotton), sugar (e.g., Uttar Pradesh sugar mills using sugarcane), and food processing (e.g., Amul dairy products using milk from cooperatives). This creates industrial employment and skill development opportunities for rural populations.\n\n2. **Backward Linkage (Industries \u2192 Agriculture)**: Industries supply essential inputs to agriculture such as fertilizers (e.g., IFFCO plants), pesticides, farm machinery (e.g., tractors from Punjab), and irrigation equipment. This enhances agricultural productivity and creates technical service jobs in rural areas.\n\n3. **Human Resource Development Impact**:\n   - **Skill Development**: Agro-industries provide training in food processing, quality control, and packaging skills\n   - **Employment Generation**: Creates both direct (factory workers) and indirect (transport, storage) employment\n   - **Income Enhancement**: Higher agricultural productivity and industrial wages improve living standards\n   - **Reduced Migration**: Local employment opportunities reduce rural-to-urban migration\n   - **Women Empowerment**: Food processing industries particularly employ rural women (e.g., cashew processing in Kerala)\n\n**Critical Evaluation**: While this interdependence has positive effects, challenges include:\n- Seasonal employment in agro-industries\n- Displacement of traditional artisans by mechanization\n- Environmental concerns from industrial pollution affecting agriculture\n- Need for better infrastructure and education to maximize benefits\n\nExamples: The success of the 'Operation Flood' dairy cooperatives shows how agro-industries can transform rural economies, while the jute industry in West Bengal demonstrates both opportunities and challenges in this interdependence.",
+      "marking_scheme": [
+        {
+          "point": "Clear explanation of agriculture-industry interdependence with forward/backward linkages",
+          "marks": 2
+        },
+        {
+          "point": "Analysis of human resource development impacts with specific examples",
+          "marks": 2
+        },
+        {
+          "point": "Critical evaluation of benefits and challenges",
+          "marks": 1
+        },
+        {
+          "point": "Relevant examples from Indian context",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis and Evaluation",
+      "hints": [
+        "Think about how industries use agricultural products and what industries provide to farmers",
+        "Consider employment, skills, and income effects in rural areas",
+        "Remember to include both positive impacts and challenges"
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "3"
+    },
+    {
+      "question": "Analyze the interdependence between agriculture and industries in India, and evaluate how this relationship contributes to human resource development. Support your answer with specific examples.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Industries and Human Resources",
+      "answer": "Agriculture and industries in India are interdependent in multiple ways, and this relationship significantly contributes to human resource development.\n\n**Interdependence:**\n1. **Agriculture supplies raw materials** to agro-based industries like cotton textiles (cotton), sugar (sugarcane), and edible oils (oilseeds).\n2. **Industries provide inputs** to agriculture such as fertilizers, pesticides, tractors, and irrigation equipment.\n3. **Market linkage:** Industries process agricultural produce, adding value and creating market demand, while agriculture provides a market for industrial goods.\n4. **Employment generation:** Agro-industries create jobs in rural areas, reducing migration to cities.\n\n**Contribution to Human Resource Development:**\n1. **Skill development:** Industries near agricultural zones train farmers in modern techniques and create skilled workers for processing units.\n2. **Income enhancement:** Value addition through industries increases farmers' incomes, enabling better education and healthcare access.\n3. **Infrastructure growth:** Industrial development in rural areas leads to better roads, electricity, and schools.\n4. **Reduced disparities:** Balanced regional development through agro-industries reduces urban-rural gaps.\n\n**Examples:**\n- **Textile industry in Maharashtra and Gujarat** uses local cotton, employs rural youth, and supports related sectors like dyeing and packaging.\n- **Sugar mills in Uttar Pradesh and Maharashtra** provide farmers with assured markets, generate seasonal employment, and fund local development projects.\n- **Food processing units in Punjab and Haryana** reduce post-harvest losses, create jobs, and improve nutritional security through fortified foods.\n\nThus, the synergy between agriculture and industries creates a virtuous cycle of economic growth and human development.",
+      "marking_scheme": [
+        {
+          "point": "Explains 2-3 aspects of interdependence clearly",
+          "marks": 2
+        },
+        {
+          "point": "Links interdependence to human resource development with valid reasoning",
+          "marks": 2
+        },
+        {
+          "point": "Provides 2-3 relevant examples with context",
+          "marks": 1
+        },
+        {
+          "point": "Structured analysis, conclusion, and clarity",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Think about raw materials and finished goods flow.",
+        "Consider how jobs and skills are created in rural areas.",
+        "Recall examples from your textbook like textile or sugar industries."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Resources and Development",
+      "topic_id": "3"
+    }
+  ]
+}

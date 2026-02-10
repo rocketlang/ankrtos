@@ -1,0 +1,1078 @@
+{
+  "subject": "Physics",
+  "code": "0625_physics",
+  "level": "IGCSE",
+  "total_questions": 24,
+  "questions": [
+    {
+      "question": "A student measures the mass of a metal cube as 240 g and its side length as 4.0 cm.\n(a) Calculate the density of the cube in g/cm\u00b3.\n(b) The cube is made of aluminium, which has a density of 2.7 g/cm\u00b3. Suggest whether the student's measurement is likely to be accurate, giving a reason.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "easy",
+      "topic": "General Physics",
+      "subtopic": "Density",
+      "answer": "(a) Volume = side\u00b3 = 4.0 cm \u00d7 4.0 cm \u00d7 4.0 cm = 64 cm\u00b3\nDensity = mass/volume = 240 g / 64 cm\u00b3 = 3.75 g/cm\u00b3\n(b) No, it is not likely to be accurate because the calculated density (3.75 g/cm\u00b3) is significantly higher than the known density of aluminium (2.7 g/cm\u00b3). This suggests a measurement error, possibly in mass or dimensions.",
+      "mark_scheme": [
+        {
+          "point": "Correct volume calculation: 4.0\u00b3 = 64 cm\u00b3",
+          "marks": 1
+        },
+        {
+          "point": "Correct density formula: density = mass/volume",
+          "marks": 1
+        },
+        {
+          "point": "Correct numerical density: 240/64 = 3.75 g/cm\u00b3",
+          "marks": 1
+        },
+        {
+          "point": "Unit correctly stated as g/cm\u00b3",
+          "marks": 1
+        },
+        {
+          "point": "States that measurement is not accurate/likely inaccurate",
+          "marks": 1
+        },
+        {
+          "point": "Valid reason comparing values: calculated density > known density of aluminium",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Forgetting to cube the side length for volume",
+        "Using incorrect formula density = volume/mass",
+        "Not comparing calculated value with given density",
+        "Omitting units in final answer"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "1"
+    },
+    {
+      "question": "A student measures the mass and volume of a metal block to determine its density.\n(a) State the SI unit for density.\n(b) The mass of the block is 240 g and its volume is 30 cm\u00b3. Calculate the density of the block.\n(c) The student now measures the mass of the same block using a spring balance. Explain why the reading on the spring balance is different from the mass measured using a top\u2011pan balance.",
+      "marks": 8,
+      "question_type": "structured",
+      "difficulty": "easy",
+      "topic": "General Physics",
+      "subtopic": "Density, Mass and Weight",
+      "answer": "(a) kg/m\u00b3 (or kg m\u207b\u00b3)\n(b) Density = mass/volume = 240 g / 30 cm\u00b3 = 8 g/cm\u00b3\n(c) A spring balance measures weight (force due to gravity), while a top\u2011pan balance measures mass. Weight = mass \u00d7 gravitational field strength, so the spring balance reading depends on the value of g.",
+      "mark_scheme": [
+        {
+          "point": "States correct SI unit for density: kg/m\u00b3 (accept kg m\u207b\u00b3)",
+          "marks": 1
+        },
+        {
+          "point": "Correctly uses formula: density = mass/volume",
+          "marks": 1
+        },
+        {
+          "point": "Converts units appropriately or works consistently in g/cm\u00b3",
+          "marks": 1
+        },
+        {
+          "point": "Correct calculation: 240 \u00f7 30 = 8",
+          "marks": 1
+        },
+        {
+          "point": "Includes correct unit with answer: g/cm\u00b3",
+          "marks": 1
+        },
+        {
+          "point": "Identifies that spring balance measures weight/force",
+          "marks": 1
+        },
+        {
+          "point": "Identifies that top\u2011pan balance measures mass",
+          "marks": 1
+        },
+        {
+          "point": "Explains that weight = mass \u00d7 g / reading depends on gravitational field strength",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Confusing kg/m\u00b3 with g/cm\u00b3 as SI unit",
+        "Using volume = mass/density incorrectly",
+        "Stating spring balance measures mass",
+        "Not distinguishing between mass and weight clearly"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "1"
+    },
+    {
+      "question": "A student measures the mass of a small metal cube as 24.5 g using a digital balance. The cube has side lengths of 1.5 cm each.\n\n(a) Calculate the density of the metal in g/cm\u00b3.\n(b) The student then uses the same cube to find the density in kg/m\u00b3. Show your working.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "General Physics",
+      "subtopic": "Density",
+      "answer": "(a) Volume = (1.5 cm)\u00b3 = 3.375 cm\u00b3\nDensity = mass/volume = 24.5 g / 3.375 cm\u00b3 \u2248 7.26 g/cm\u00b3\n\n(b) Mass in kg = 0.0245 kg\nVolume in m\u00b3 = (0.015 m)\u00b3 = 3.375 \u00d7 10\u207b\u2076 m\u00b3\nDensity = 0.0245 kg / (3.375 \u00d7 10\u207b\u2076 m\u00b3) \u2248 7259 kg/m\u00b3\n(Alternatively: 7.26 g/cm\u00b3 \u00d7 1000 = 7260 kg/m\u00b3)",
+      "mark_scheme": [
+        {
+          "point": "Correct volume calculation: (1.5)\u00b3 = 3.375 cm\u00b3",
+          "marks": 1
+        },
+        {
+          "point": "Correct density formula application: \u03c1 = m/V",
+          "marks": 1
+        },
+        {
+          "point": "Correct numerical answer for (a): 7.26 g/cm\u00b3 (allow 7.25\u20137.27)",
+          "marks": 1
+        },
+        {
+          "point": "Correct mass conversion to kg: 0.0245 kg",
+          "marks": 1
+        },
+        {
+          "point": "Correct volume conversion to m\u00b3: (0.015)\u00b3 = 3.375\u00d710\u207b\u2076 m\u00b3",
+          "marks": 1
+        },
+        {
+          "point": "Correct final answer for (b): \u2248 7260 kg/m\u00b3 (allow 7200\u20137300)",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Forgetting to cube the side length for volume",
+        "Incorrect unit conversions (especially cm\u00b3 to m\u00b3)",
+        "Using weight instead of mass in calculations"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "1"
+    },
+    {
+      "question": "A student investigates the motion of a toy car down a ramp. The car starts from rest at the top of the ramp and travels 1.2 m in 2.0 s.\n\n(a) Calculate the average speed of the car.\n\n(b) The mass of the car is 0.25 kg.\n(i) Calculate the weight of the car on Earth. (gravitational field strength g = 10 N/kg)\n(ii) Explain why the weight of the car would be different on the Moon.\n\n(c) The student then measures the dimensions of a rectangular metal block to determine its density. The block measures 5.0 cm \u00d7 3.0 cm \u00d7 2.0 cm and has a mass of 270 g.\nCalculate the density of the block in g/cm\u00b3.",
+      "marks": 9,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "General Physics",
+      "subtopic": "Motion, Mass and weight, Density",
+      "answer": "(a) average speed = distance / time = 1.2 m / 2.0 s = 0.6 m/s\n\n(b)(i) weight = mass \u00d7 g = 0.25 kg \u00d7 10 N/kg = 2.5 N\n(ii) The Moon has a smaller gravitational field strength than Earth, so the weight (which depends on g) would be less, although the mass remains the same.\n\n(c) volume = length \u00d7 width \u00d7 height = 5.0 cm \u00d7 3.0 cm \u00d7 2.0 cm = 30 cm\u00b3\ndensity = mass / volume = 270 g / 30 cm\u00b3 = 9.0 g/cm\u00b3",
+      "mark_scheme": [
+        {
+          "point": "(a) Correct use of speed = distance/time with correct substitution and unit (m/s)",
+          "marks": 2
+        },
+        {
+          "point": "(b)(i) Correct calculation of weight using W = mg with correct unit (N)",
+          "marks": 2
+        },
+        {
+          "point": "(b)(ii) Clear explanation linking weight to gravitational field strength and distinguishing from mass",
+          "marks": 2
+        },
+        {
+          "point": "(c) Correct volume calculation in cm\u00b3",
+          "marks": 1
+        },
+        {
+          "point": "(c) Correct density calculation in g/cm\u00b3 with unit",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Confusing mass and weight in part (b)",
+        "Using incorrect units or forgetting to convert (e.g., using meters instead of cm in density calculation)",
+        "Mixing up speed, velocity, and acceleration in part (a)"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "1"
+    },
+    {
+      "question": "A student is given a small irregularly shaped metal object and asked to determine its density. The only equipment available is a measuring cylinder, water, and an electronic balance that can measure up to 200 g with a precision of 0.1 g. The object has a mass of 178.5 g and is too large to fit into the measuring cylinder.\n\nDescribe a method the student could use to find the volume of the object, explaining how to ensure accuracy. Then calculate the density in kg/m\u00b3 if the volume measured is 22.7 cm\u00b3.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "General Physics",
+      "subtopic": "Density, Measurement techniques",
+      "answer": "Method: Use water displacement with a displacement can (or overflow can) if available, or partially fill a larger container, submerge the object, and collect displaced water in the measuring cylinder. Ensure the object is fully submerged without touching sides, and read the meniscus at eye level. \n\nCalculation: Density = mass/volume = 178.5 g / 22.7 cm\u00b3 = 7.86 g/cm\u00b3. Convert to kg/m\u00b3: 7.86 \u00d7 1000 = 7860 kg/m\u00b3.",
+      "mark_scheme": [
+        {
+          "point": "Describes water displacement method clearly (displacement can or collecting overflow)",
+          "marks": 2
+        },
+        {
+          "point": "Identifies at least two accuracy measures (full submersion, no air bubbles, meniscus reading at eye level, dry object)",
+          "marks": 2
+        },
+        {
+          "point": "Correct calculation of density in g/cm\u00b3 and conversion to kg/m\u00b3 with correct units",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Attempting to use measuring cylinder directly without displacement method",
+        "Forgetting to convert g/cm\u00b3 to kg/m\u00b3 (\u00d71000)",
+        "Using mass in kg without conversion or volume in m\u00b3 incorrectly"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "1"
+    },
+    {
+      "question": "A student investigates the motion of a toy car down a ramp. The car starts from rest at the top and accelerates uniformly. The student uses a stopwatch to measure the time taken for the car to travel distances of 0.20 m, 0.40 m, 0.60 m, 0.80 m, and 1.00 m from the start.\n\n(a) The student records the following times:\nDistance (m) | 0.20 | 0.40 | 0.60 | 0.80 | 1.00\nTime (s)     | 0.63 | 0.89 | 1.09 | 1.26 | 1.41\n\n(i) Calculate the average speed of the car between 0.40 m and 0.80 m.\n(ii) Explain whether this average speed is equal to the instantaneous speed at the midpoint of this interval (0.60 m).\n\n(b) The student plots a graph of distance against time squared (t\u00b2). The gradient of the line is 0.50 m/s\u00b2.\n(i) Determine the acceleration of the car.\n(ii) The mass of the car is 0.25 kg. Calculate the weight of the car.\n\n(c) The car is now loaded with metal blocks, increasing its total mass to 0.40 kg. The same experiment is repeated from the same starting point.\n(i) State and explain what happens to the acceleration of the car.\n(ii) The density of the metal blocks is 7800 kg/m\u00b3. If the total volume of the blocks is 1.5 \u00d7 10\u207b\u2075 m\u00b3, verify whether the mass increase stated is consistent.",
+      "marks": 10,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "General Physics",
+      "subtopic": "Motion, Mass and weight, Density",
+      "answer": "(a)(i) Average speed = total distance / total time = (0.80 - 0.40) / (1.26 - 0.89) = 0.40 / 0.37 \u2248 1.08 m/s\n(a)(ii) No, because for uniform acceleration, average speed over an interval equals instantaneous speed at the midpoint of time, not distance. Here the car is accelerating, so speed increases with time.\n(b)(i) For uniform acceleration from rest, s = \u00bdat\u00b2, so gradient of s vs t\u00b2 graph = \u00bda. Therefore a = 2 \u00d7 gradient = 2 \u00d7 0.50 = 1.0 m/s\u00b2.\n(b)(ii) Weight = mass \u00d7 g = 0.25 \u00d7 9.8 = 2.45 N\n(c)(i) Acceleration decreases because weight (down-slope component) increases but inertia (mass) increases proportionally; however, frictional forces may not increase proportionally, and air resistance effect might change slightly.\n(c)(ii) Mass of blocks = density \u00d7 volume = 7800 \u00d7 1.5 \u00d7 10\u207b\u2075 = 0.117 kg. New total mass = 0.25 + 0.117 = 0.367 kg \u2248 0.37 kg, which is close to but not exactly 0.40 kg. Possible reasons: measurement uncertainties or additional mass from adhesive/loading method.",
+      "mark_scheme": [
+        {
+          "point": "(a)(i) Correct calculation of average speed with formula and substitution",
+          "marks": 1
+        },
+        {
+          "point": "(a)(i) Correct numerical answer (1.08 m/s) with unit",
+          "marks": 1
+        },
+        {
+          "point": "(a)(ii) States 'No' with correct reasoning about midpoint in time vs distance",
+          "marks": 1
+        },
+        {
+          "point": "(a)(ii) Explains that speed is not constant due to acceleration",
+          "marks": 1
+        },
+        {
+          "point": "(b)(i) Identifies s = \u00bdat\u00b2 and gradient = \u00bda",
+          "marks": 1
+        },
+        {
+          "point": "(b)(i) Correct acceleration calculation (1.0 m/s\u00b2)",
+          "marks": 1
+        },
+        {
+          "point": "(b)(ii) Correct weight calculation (2.45 N) with formula",
+          "marks": 1
+        },
+        {
+          "point": "(c)(i) States acceleration decreases and explains using force/mass relationship",
+          "marks": 1
+        },
+        {
+          "point": "(c)(ii) Calculates mass of blocks correctly (0.117 kg)",
+          "marks": 1
+        },
+        {
+          "point": "(c)(ii) Compares with stated mass and comments on consistency",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Confusing average speed with instantaneous speed",
+        "Using midpoint of distance instead of time for instantaneous speed",
+        "Forgetting that gradient of s vs t\u00b2 is \u00bda",
+        "Using g = 10 instead of 9.8 without instruction",
+        "Assuming acceleration remains same when mass changes"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "1"
+    },
+    {
+      "question": "A student heats 0.5 kg of water in a beaker using an electric heater. The temperature of the water rises from 20\u00b0C to 80\u00b0C. The specific heat capacity of water is 4200 J/(kg\u00b0C).\n\nCalculate the thermal energy transferred to the water.",
+      "marks": 3,
+      "question_type": "short_answer",
+      "difficulty": "easy",
+      "topic": "Thermal Physics",
+      "subtopic": "Specific heat capacity",
+      "answer": "\u0394Q = m \u00d7 c \u00d7 \u0394\u03b8\n= 0.5 kg \u00d7 4200 J/(kg\u00b0C) \u00d7 (80\u00b0C - 20\u00b0C)\n= 0.5 \u00d7 4200 \u00d7 60\n= 126,000 J (or 126 kJ)",
+      "mark_scheme": [
+        {
+          "point": "Correct formula: \u0394Q = m c \u0394\u03b8",
+          "marks": 1
+        },
+        {
+          "point": "Correct substitution with temperature difference: 0.5 \u00d7 4200 \u00d7 60",
+          "marks": 1
+        },
+        {
+          "point": "Correct final answer with unit: 126,000 J or 126 kJ",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using \u0394\u03b8 = 80\u00b0C instead of 60\u00b0C",
+        "Forgetting to include units in final answer",
+        "Incorrect rearrangement of formula"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "2"
+    },
+    {
+      "question": "A student investigates thermal expansion using a metal rod and a measuring scale.\n\n(a) State what happens to the particles in the metal rod when it is heated. [2]\n(b) The rod's length increases from 1.500 m to 1.503 m when heated from 20\u00b0C to 120\u00b0C. Calculate the increase in length per metre per degree Celsius. [3]\n(c) Explain why a gap is left between sections of a railway track. [1]",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "easy",
+      "topic": "Thermal Physics",
+      "subtopic": "Thermal properties and temperature",
+      "answer": "(a) The particles gain kinetic energy and vibrate more vigorously, increasing the average separation between particles.\n(b) Increase in length = 1.503 m - 1.500 m = 0.003 m\nTemperature change = 120\u00b0C - 20\u00b0C = 100\u00b0C\nIncrease per metre per \u00b0C = 0.003 m / (1.500 m \u00d7 100\u00b0C) = 0.00002 m/\u00b0C/m or 2.0 \u00d7 10\u207b\u2075 m/\u00b0C/m\n(c) To allow for thermal expansion on hot days, preventing buckling of the tracks.",
+      "mark_scheme": [
+        {
+          "point": "(a) Particles gain kinetic energy/vibrate more",
+          "marks": 1
+        },
+        {
+          "point": "(a) Average separation between particles increases",
+          "marks": 1
+        },
+        {
+          "point": "(b) Correct length increase (0.003 m)",
+          "marks": 1
+        },
+        {
+          "point": "(b) Correct temperature change (100\u00b0C)",
+          "marks": 1
+        },
+        {
+          "point": "(b) Correct calculation with units (2.0 \u00d7 10\u207b\u2075 m/\u00b0C/m)",
+          "marks": 1
+        },
+        {
+          "point": "(c) Allows for expansion/prevents buckling",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Confusing particle vibration with movement through material",
+        "Forgetting to divide by original length in expansion calculation",
+        "Stating gaps are for contraction only"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "2"
+    },
+    {
+      "question": "A student heats 0.5 kg of water in a beaker using a 100 W electric heater for 5 minutes. The initial temperature of the water is 20\u00b0C. The specific heat capacity of water is 4200 J/kg\u00b0C.\n\n(a) Calculate the energy supplied by the heater.\n(b) Calculate the expected final temperature of the water, assuming no energy losses.\n(c) State and explain one reason why the actual final temperature might be lower than your calculated value.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Thermal Physics",
+      "subtopic": "Specific heat capacity and energy transfer",
+      "answer": "(a) Energy = Power \u00d7 Time = 100 W \u00d7 (5 \u00d7 60 s) = 100 \u00d7 300 = 30,000 J\n(b) Using Q = mc\u0394T \u2192 \u0394T = Q/(mc) = 30,000 / (0.5 \u00d7 4200) = 30,000 / 2100 = 14.3\u00b0C\n   Final temperature = 20 + 14.3 = 34.3\u00b0C\n(c) Energy losses to the surroundings through convection, radiation, or conduction to the beaker.",
+      "mark_scheme": [
+        {
+          "point": "Correct calculation of energy supplied (E = P \u00d7 t) with correct unit conversion (minutes to seconds)",
+          "marks": 2
+        },
+        {
+          "point": "Correct application of Q = mc\u0394T to find temperature rise and final temperature",
+          "marks": 2
+        },
+        {
+          "point": "Valid reason for lower actual temperature (e.g., heat loss to surroundings/beaker/air) with brief explanation",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Forgetting to convert minutes to seconds in part (a)",
+        "Using \u0394T = Q/m without dividing by c in part (b)",
+        "Stating 'heat loss' without specifying where/how"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "2"
+    },
+    {
+      "question": "A student investigates the specific heat capacity of aluminium using the apparatus shown.\n\n[Diagram description: A block of aluminium with two holes \u2013 one for a thermometer and one for a heater. The block is insulated. A joulemeter measures the energy supplied.]\n\nThe student records:\n- Mass of aluminium block = 0.50 kg\n- Initial temperature = 20.0 \u00b0C\n- Final temperature = 35.0 \u00b0C\n- Energy supplied = 6750 J\n\n(a) Calculate the specific heat capacity of aluminium from these results. Show your working.\n\n(b) The student repeats the experiment but forgets to insulate the block. Explain how this affects the calculated value of specific heat capacity.\n\n(c) Explain why metals are good thermal conductors in terms of the kinetic particle model.",
+      "marks": 8,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Thermal Physics",
+      "subtopic": "Specific heat capacity and conduction",
+      "answer": "(a) Using Q = mc\u0394T\n6750 = 0.50 \u00d7 c \u00d7 (35.0 \u2013 20.0)\n6750 = 0.50 \u00d7 c \u00d7 15.0\nc = 6750 / (0.50 \u00d7 15.0) = 6750 / 7.5 = 900 J/kg\u00b0C\n\n(b) Without insulation, heat is lost to the surroundings. This means more energy is needed to raise the temperature by the same amount, so the calculated specific heat capacity would be higher than the true value.\n\n(c) Metals have free electrons that can move throughout the lattice. When heated, these electrons gain kinetic energy and transfer it rapidly through the metal by colliding with other electrons and ions.",
+      "mark_scheme": [
+        {
+          "point": "(a) Correct use of Q = mc\u0394T with \u0394T = 15\u00b0C",
+          "marks": 1
+        },
+        {
+          "point": "(a) Correct substitution: 6750 = 0.50 \u00d7 c \u00d7 15",
+          "marks": 1
+        },
+        {
+          "point": "(a) Correct calculation leading to c = 900 J/kg\u00b0C",
+          "marks": 1
+        },
+        {
+          "point": "(b) Identifies heat loss to surroundings",
+          "marks": 1
+        },
+        {
+          "point": "(b) Explains that calculated c would be higher than true value",
+          "marks": 1
+        },
+        {
+          "point": "(c) Mentions free electrons in metals",
+          "marks": 1
+        },
+        {
+          "point": "(c) Describes how electrons gain and transfer kinetic energy",
+          "marks": 1
+        },
+        {
+          "point": "(c) Links to rapid energy transfer through collisions",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using \u0394T = 35\u00b0C instead of 15\u00b0C in part (a)",
+        "Stating that lack of insulation gives a lower specific heat capacity",
+        "Confusing conduction with convection in part (c)"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "2"
+    },
+    {
+      "question": "A student investigates the specific heat capacity of cooking oil using an immersion heater and a copper calorimeter. The heater, rated at 48 W, is switched on for 5.0 minutes. The temperature of 0.20 kg of oil rises from 18 \u00b0C to 58 \u00b0C. The calorimeter has a mass of 0.15 kg and a specific heat capacity of 390 J/(kg\u00b7\u00b0C).\n\n(i) Calculate the energy supplied by the heater.\n(ii) Calculate the specific heat capacity of the oil.\n(iii) State two significant sources of error in this experiment and suggest an improvement for each.",
+      "marks": 8,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Thermal Physics",
+      "subtopic": "Specific Heat Capacity",
+      "answer": "(i) Energy = Power \u00d7 Time = 48 W \u00d7 (5.0 \u00d7 60 s) = 14400 J\n(ii) Energy gained by oil + calorimeter = 14400 J\nLet c be specific heat capacity of oil.\nEnergy gained by oil = 0.20 kg \u00d7 c \u00d7 (58 - 18) \u00b0C = 8c J/\u00b0C\nEnergy gained by calorimeter = 0.15 kg \u00d7 390 J/(kg\u00b7\u00b0C) \u00d7 40 \u00b0C = 2340 J\n8c + 2340 = 14400\n8c = 12060\nc = 1507.5 J/(kg\u00b7\u00b0C)\n(iii) 1. Heat loss to surroundings \u2013 use a lid and insulation. 2. Incorrect temperature reading due to uneven heating \u2013 stir the oil thoroughly.",
+      "mark_scheme": [
+        {
+          "point": "Correct calculation of energy supplied (E = P \u00d7 t) with unit (J)",
+          "marks": 2
+        },
+        {
+          "point": "Correct setup of energy balance equation (E = mc\u0394T for oil + mc\u0394T for calorimeter)",
+          "marks": 2
+        },
+        {
+          "point": "Correct algebraic manipulation and final value for c with unit (J/(kg\u00b7\u00b0C))",
+          "marks": 2
+        },
+        {
+          "point": "Two valid sources of error with corresponding practical improvements",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Forgetting to convert minutes to seconds",
+        "Omitting energy gained by the calorimeter in the energy balance",
+        "Confusing specific heat capacity with latent heat",
+        "Suggesting unrealistic or vague improvements"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "2"
+    },
+    {
+      "question": "A student investigates the cooling of a 0.5 kg aluminium block. The block is heated to 120\u00b0C and then allowed to cool in still air. The student plots a cooling curve.\n\n(a) Explain, in terms of the kinetic particle model, why the temperature of the block decreases as it cools.\n\n(b) The specific heat capacity of aluminium is 900 J/kg\u00b0C. Calculate the energy released by the block when its temperature falls from 120\u00b0C to 20\u00b0C.\n\n(c) The student repeats the experiment but places the block on a thick wooden stand instead of a metal one. The cooling curve obtained is less steep. Explain this observation with reference to thermal conduction.",
+      "marks": 9,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Thermal Physics",
+      "subtopic": "Transfer of thermal energy and specific heat capacity",
+      "answer": "(a) As the block cools, its particles lose kinetic energy through collisions with air molecules. The average kinetic energy of the particles decreases, which corresponds to a lower temperature.\n\n(b) Using Q = mc\u0394T:\n\u0394T = 120\u00b0C - 20\u00b0C = 100\u00b0C\nQ = 0.5 kg \u00d7 900 J/kg\u00b0C \u00d7 100\u00b0C = 45,000 J (or 45 kJ)\n\n(c) Wood is a poor thermal conductor compared to metal. The wooden stand reduces the rate of energy transfer from the block to the surroundings via conduction, so the block cools more slowly, producing a less steep cooling curve.",
+      "mark_scheme": [
+        {
+          "point": "Particles lose kinetic energy through collisions with air molecules",
+          "marks": 1
+        },
+        {
+          "point": "Average kinetic energy decreases, leading to lower temperature",
+          "marks": 1
+        },
+        {
+          "point": "Correct substitution into Q = mc\u0394T (m = 0.5, c = 900, \u0394T = 100)",
+          "marks": 1
+        },
+        {
+          "point": "Correct calculation of \u0394T = 100\u00b0C",
+          "marks": 1
+        },
+        {
+          "point": "Correct final answer with unit (45,000 J or 45 kJ)",
+          "marks": 1
+        },
+        {
+          "point": "Identifies wood as a poor thermal conductor/insulator",
+          "marks": 1
+        },
+        {
+          "point": "Explains reduced rate of energy transfer via conduction",
+          "marks": 1
+        },
+        {
+          "point": "Links slower cooling to less steep curve",
+          "marks": 1
+        },
+        {
+          "point": "Compares wood to metal explicitly",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Confusing temperature with total internal energy",
+        "Using \u0394T = 20\u00b0C instead of 100\u00b0C",
+        "Omitting units in calculations",
+        "Stating 'wood is a good insulator' without explaining conduction mechanism"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "2"
+    },
+    {
+      "question": "A student sets up a simple series circuit with a 12 V battery, a fixed resistor, and a variable resistor. The current in the circuit is 0.5 A when the variable resistor is set to its minimum value.\n\n(a) Calculate the total resistance in the circuit under these conditions.\n(b) State what happens to the current in the circuit if the resistance of the variable resistor is increased. Explain your answer.",
+      "marks": 4,
+      "question_type": "short_answer",
+      "difficulty": "easy",
+      "topic": "Electricity and Magnetism",
+      "subtopic": "Simple electrical circuits / Electric circuits",
+      "answer": "(a) Using V = IR: R = V / I = 12 V / 0.5 A = 24 \u03a9.\n(b) The current decreases. Explanation: Increasing the resistance (R) in the circuit reduces the current (I) because I = V / R and the battery voltage (V) is constant.",
+      "mark_scheme": [
+        {
+          "point": "Correct use of V = IR (R = V / I)",
+          "marks": 1
+        },
+        {
+          "point": "Correct calculation: 12 / 0.5 = 24 \u03a9 (with unit)",
+          "marks": 1
+        },
+        {
+          "point": "States current decreases",
+          "marks": 1
+        },
+        {
+          "point": "Correct explanation linking constant V, increased R, and I = V / R",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Forgetting to include the unit (\u03a9) for resistance",
+        "Stating current increases when resistance increases (misunderstanding Ohm's law)",
+        "Failing to explain using I = V / R"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "3"
+    },
+    {
+      "question": "Fig. 1 shows a simple electrical circuit.\n\n[Diagram description: A circuit with a 12 V battery, a switch, a resistor labeled 4.0 \u03a9, and an ammeter all in series.]\n\n(a) State what an ammeter measures and how it must be connected in a circuit.\n(b) Calculate the current in the circuit when the switch is closed.\n(c) The 4.0 \u03a9 resistor is replaced with one of unknown resistance. The current now reads 1.5 A. Calculate the resistance of this new resistor.",
+      "marks": 8,
+      "question_type": "structured",
+      "difficulty": "easy",
+      "topic": "Electricity and Magnetism",
+      "subtopic": "Simple electrical circuits and Electrical quantities",
+      "answer": "(a) An ammeter measures electric current. It must be connected in series.\n(b) Using Ohm's law: V = IR \u2192 I = V/R = 12 V / 4.0 \u03a9 = 3.0 A\n(c) R = V/I = 12 V / 1.5 A = 8.0 \u03a9",
+      "mark_scheme": [
+        {
+          "point": "States ammeter measures current",
+          "marks": 1
+        },
+        {
+          "point": "States it must be connected in series",
+          "marks": 1
+        },
+        {
+          "point": "Correct use of Ohm's law formula: I = V/R",
+          "marks": 1
+        },
+        {
+          "point": "Correct substitution: 12/4.0",
+          "marks": 1
+        },
+        {
+          "point": "Correct current: 3.0 A with unit",
+          "marks": 1
+        },
+        {
+          "point": "Correct rearrangement: R = V/I",
+          "marks": 1
+        },
+        {
+          "point": "Correct substitution: 12/1.5",
+          "marks": 1
+        },
+        {
+          "point": "Correct resistance: 8.0 \u03a9 with unit",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Connecting ammeter in parallel",
+        "Using R = I/V instead of R = V/I",
+        "Omitting units in final answers"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "3"
+    },
+    {
+      "question": "A student sets up the circuit shown below to investigate the resistance of a filament lamp.\n\n[Circuit diagram: A 12 V battery connected in series with an ammeter, a variable resistor, and a filament lamp. A voltmeter is connected in parallel across the lamp.]\n\nThe student adjusts the variable resistor and records the following readings:\nVoltmeter reading (V): 2.0, 4.0, 6.0, 8.0, 10.0\nAmmeter reading (A): 0.80, 0.65, 0.55, 0.48, 0.43\n\n(a) Calculate the resistance of the lamp when the voltmeter reads 6.0 V.\n(b) Explain why the resistance of the filament lamp changes as the voltage across it increases.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Electricity and Magnetism",
+      "subtopic": "Electric circuits, Resistance and Ohm's law",
+      "answer": "(a) R = V / I = 6.0 V / 0.55 A = 10.9 \u03a9 (accept 11 \u03a9)\n(b) As voltage increases, the current through the filament increases, causing the temperature of the filament to rise. The increased temperature increases the lattice vibrations in the metal filament, which makes it harder for electrons to flow, thus increasing the resistance.",
+      "mark_scheme": [
+        {
+          "point": "Correct use of R = V / I with values 6.0 V and 0.55 A",
+          "marks": 1
+        },
+        {
+          "point": "Correct calculation and unit (\u03a9) for resistance",
+          "marks": 1
+        },
+        {
+          "point": "States that increasing voltage increases temperature of filament",
+          "marks": 2
+        },
+        {
+          "point": "Explains that increased temperature increases lattice vibrations, impeding electron flow and increasing resistance",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using incorrect pair of V and I values from the table",
+        "Stating resistance is constant (ohmic behavior) for a filament lamp",
+        "Confusing increased temperature with decreased resistance (as in thermistors)"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "3"
+    },
+    {
+      "question": "Fig. 1 shows a circuit diagram with a 12 V battery, a fixed resistor R of 4.0 \u03a9, and a variable resistor connected in series. An ammeter reads 1.5 A.\n\n(a) Calculate the total resistance of the circuit.\n(b) Determine the resistance of the variable resistor.\n(c) The variable resistor is adjusted until the current becomes 2.0 A. Explain, with calculation, what happens to the power dissipated in resistor R.",
+      "marks": 8,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Electricity and Magnetism",
+      "subtopic": "Electric circuits, Electrical quantities",
+      "answer": "(a) Using V = IR: R_total = V / I = 12 / 1.5 = 8.0 \u03a9\n(b) R_total = R_fixed + R_variable \u2192 8.0 = 4.0 + R_variable \u2192 R_variable = 4.0 \u03a9\n(c) At I = 2.0 A, power in R = I\u00b2R = (2.0)\u00b2 \u00d7 4.0 = 16 W. Initially, power was (1.5)\u00b2 \u00d7 4.0 = 9 W. Power increases because it depends on I\u00b2 (P \u221d I\u00b2).",
+      "mark_scheme": [
+        {
+          "point": "Correct use of V = IR to find total resistance",
+          "marks": 2
+        },
+        {
+          "point": "Correct subtraction to find variable resistance",
+          "marks": 2
+        },
+        {
+          "point": "Correct calculation of power at 2.0 A using P = I\u00b2R",
+          "marks": 2
+        },
+        {
+          "point": "Explanation linking power increase to I\u00b2 relationship",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using P = VI without recognizing constant R",
+        "Forgetting series resistance addition",
+        "Miscalculating square of current"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "3"
+    },
+    {
+      "question": "A student investigates the magnetic field around a current-carrying solenoid. They plot a graph of magnetic flux density (B) against current (I) for three different core materials: air, soft iron, and steel, all with the same number of turns per unit length.\n\n(i) Sketch the expected graph, labeling the three curves clearly.\n(ii) The student then reverses the current direction. State and explain the change observed in the magnetic field pattern outside the solenoid.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Magnetism",
+      "subtopic": "Electromagnets and magnetic materials",
+      "answer": "(i) Graph: All three curves are straight lines through the origin. The line for soft iron has the steepest gradient, steel has a moderately steep gradient, and air has the shallowest gradient. (ii) The magnetic field pattern outside the solenoid reverses direction. This is because the direction of the magnetic field lines is determined by the direction of the conventional current; reversing the current reverses the magnetic polarity.",
+      "mark_scheme": [
+        {
+          "point": "All three lines drawn as straight lines passing through the origin",
+          "marks": 1
+        },
+        {
+          "point": "Correct relative gradients: soft iron steepest, then steel, then air shallowest; curves clearly labeled",
+          "marks": 2
+        },
+        {
+          "point": "States that the magnetic field pattern reverses direction",
+          "marks": 1
+        },
+        {
+          "point": "Correct explanation linking reversal to the reversal of current direction and its effect on magnetic polarity",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Drawing curved lines or lines not through the origin for (i)",
+        "Incorrectly ordering the gradients of the materials (e.g., steel steeper than soft iron)",
+        "For (ii), stating only that the field 'changes' or 'weakens' without specifying reversal of direction"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "3"
+    },
+    {
+      "question": "A student investigates a circuit containing a 12 V battery, a variable resistor, a fixed resistor of 4.0 \u03a9, and an ammeter, all connected in series. The variable resistor is adjusted until the ammeter reads 1.5 A.\n\n(a) Calculate the total resistance of the circuit.\n\n(b) Determine the resistance of the variable resistor at this setting.\n\n(c) The student now replaces the fixed resistor with one of unknown resistance R. The variable resistor is set to 6.0 \u03a9, and the ammeter reads 1.2 A.\n   (i) Calculate the total resistance in this new circuit.\n   (ii) Hence, find the value of R.\n\n(d) The student suggests using a thinner wire for the fixed resistor to increase the circuit's current. Evaluate this suggestion, referring to the factors affecting resistance.",
+      "marks": 10,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Electricity and Magnetism",
+      "subtopic": "Electric circuits, Resistance calculations, Factors affecting resistance",
+      "answer": "(a) Using Ohm's law: V = IR \u2192 R_total = V / I = 12 V / 1.5 A = 8.0 \u03a9\n(b) R_total = R_fixed + R_variable \u2192 8.0 \u03a9 = 4.0 \u03a9 + R_variable \u2192 R_variable = 4.0 \u03a9\n(c)(i) R_total = V / I = 12 V / 1.2 A = 10.0 \u03a9\n(c)(ii) R_total = R_variable + R \u2192 10.0 \u03a9 = 6.0 \u03a9 + R \u2192 R = 4.0 \u03a9\n(d) Using a thinner wire increases resistance (R \u221d 1/A, where A is cross-sectional area). Higher total resistance reduces current (I = V/R). Therefore, the suggestion is incorrect\u2014thinner wire would decrease current.",
+      "mark_scheme": [
+        {
+          "point": "(a) Correct application of Ohm's law: R = V/I",
+          "marks": 1
+        },
+        {
+          "point": "(a) Correct calculation: 12/1.5 = 8.0 \u03a9 (with unit)",
+          "marks": 1
+        },
+        {
+          "point": "(b) Correct equation: R_total = R_fixed + R_variable",
+          "marks": 1
+        },
+        {
+          "point": "(b) Correct subtraction: 8.0 - 4.0 = 4.0 \u03a9 (with unit)",
+          "marks": 1
+        },
+        {
+          "point": "(c)(i) Correct total resistance calculation: 12/1.2 = 10.0 \u03a9",
+          "marks": 1
+        },
+        {
+          "point": "(c)(ii) Correct equation setup: 10.0 = 6.0 + R",
+          "marks": 1
+        },
+        {
+          "point": "(c)(ii) Correct value: R = 4.0 \u03a9 (with unit)",
+          "marks": 1
+        },
+        {
+          "point": "(d) Identifies that thinner wire increases resistance",
+          "marks": 1
+        },
+        {
+          "point": "(d) Explains relationship: R \u221d 1/cross-sectional area",
+          "marks": 1
+        },
+        {
+          "point": "(d) Correct conclusion: current decreases, so suggestion is invalid",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using V = I/R instead of V = IR",
+        "Forgetting to subtract fixed resistor in part (b)",
+        "Adding instead of subtracting in series resistance",
+        "Confusing effect of wire thickness (thinking thinner = less resistance)",
+        "Omitting units in final answers"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "3"
+    },
+    {
+      "question": "A student measures the frequency of a sound wave to be 440 Hz. The speed of sound in air is 330 m/s.\n(a) Calculate the wavelength of this sound wave.\n(b) State what happens to the wavelength if the frequency is increased while the speed of sound remains constant.",
+      "marks": 4,
+      "question_type": "short_answer",
+      "difficulty": "easy",
+      "topic": "Waves",
+      "subtopic": "Sound waves",
+      "answer": "(a) \u03bb = v / f = 330 / 440 = 0.75 m\n(b) The wavelength decreases.",
+      "mark_scheme": [
+        {
+          "point": "Correct formula: \u03bb = v / f or rearrangement",
+          "marks": 1
+        },
+        {
+          "point": "Correct substitution: 330 / 440",
+          "marks": 1
+        },
+        {
+          "point": "Correct answer with unit: 0.75 m (accept 0.75)",
+          "marks": 1
+        },
+        {
+          "point": "States wavelength decreases",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using f = v \u00d7 \u03bb incorrectly",
+        "Forgetting to include unit (m)",
+        "Stating wavelength increases or stays the same"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "4"
+    },
+    {
+      "question": "Fig. 1 shows a water wave in a ripple tank.\n\n[Diagram placeholder: A wave with crests and troughs labeled, showing wavelength \u03bb between two consecutive crests, and amplitude A from rest position to crest.]\n\n(a) (i) On Fig. 1, label the amplitude A and the wavelength \u03bb. [2]\n(ii) State the equation that links wave speed v, frequency f, and wavelength \u03bb. [1]\n\n(b) The wave has a frequency of 5.0 Hz and a wavelength of 0.12 m.\nCalculate the speed of the wave. [2]\n\n(c) The wave passes into a region of shallower water. State what happens to:\n(i) the frequency of the wave, [1]\n(ii) the speed of the wave. [1]",
+      "marks": 7,
+      "question_type": "structured",
+      "difficulty": "easy",
+      "topic": "Waves",
+      "subtopic": "General wave properties",
+      "answer": "(a) (i) Amplitude A correctly labeled from rest position to crest; wavelength \u03bb correctly labeled between two consecutive crests.\n(ii) v = f\u03bb\n\n(b) v = f\u03bb = 5.0 \u00d7 0.12 = 0.6 m/s\n\n(c) (i) Frequency remains the same.\n(ii) Speed decreases.",
+      "mark_scheme": [
+        {
+          "point": "a(i) Amplitude A correctly labeled (from rest position to crest/trough)",
+          "marks": 1
+        },
+        {
+          "point": "a(i) Wavelength \u03bb correctly labeled (between two consecutive crests/troughs)",
+          "marks": 1
+        },
+        {
+          "point": "a(ii) v = f\u03bb (accept v = f \u00d7 \u03bb)",
+          "marks": 1
+        },
+        {
+          "point": "b Correct substitution: 5.0 \u00d7 0.12",
+          "marks": 1
+        },
+        {
+          "point": "b Correct answer with unit: 0.6 m/s (allow 0.60)",
+          "marks": 1
+        },
+        {
+          "point": "c(i) Frequency unchanged / stays the same / constant",
+          "marks": 1
+        },
+        {
+          "point": "c(ii) Speed decreases / reduces / slows down",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Confusing amplitude with wavelength on diagram",
+        "Using incorrect formula v = f/\u03bb or v = \u03bb/f",
+        "Forgetting unit (m/s) in calculation",
+        "Stating frequency changes when wave enters shallower water"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "4"
+    },
+    {
+      "question": "A student uses a ripple tank to investigate water waves. The wave generator produces waves with a frequency of 12 Hz. The student measures the distance between 5 consecutive wave crests as 24 cm.\n\n(i) Calculate the wavelength of the waves.\n(ii) Calculate the speed of the waves.\n(iii) The student reduces the frequency to 6 Hz while keeping the wave speed constant. State and explain what happens to the wavelength.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Waves",
+      "subtopic": "General wave properties",
+      "answer": "(i) Distance between 5 crests = 4 wavelengths. So 4\u03bb = 24 cm \u2192 \u03bb = 6 cm or 0.06 m.\n(ii) v = f\u03bb = 12 \u00d7 0.06 = 0.72 m/s.\n(iii) Wavelength doubles. Since v = f\u03bb and v is constant, if f halves, \u03bb must double to maintain the same wave speed.",
+      "mark_scheme": [
+        {
+          "point": "Correct calculation of wavelength: 24 cm / 4 = 6 cm (or 0.06 m)",
+          "marks": 2
+        },
+        {
+          "point": "Correct use of v = f\u03bb with consistent units: 12 \u00d7 0.06 = 0.72 m/s",
+          "marks": 2
+        },
+        {
+          "point": "States wavelength doubles and correctly explains using v = f\u03bb with constant speed",
+          "marks": 2
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Dividing 24 cm by 5 instead of 4 for wavelength",
+        "Using cm without converting to m in speed calculation",
+        "Stating wavelength changes without linking to constant speed via v = f\u03bb"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "4"
+    },
+    {
+      "question": "A student investigates the refraction of light using a rectangular glass block.\n\n(a) Define the term 'refraction' of light.\n\n(b) The student shines a ray of light at an angle of incidence of 40\u00b0 onto the glass block. The refractive index of the glass is 1.50.\n   (i) Calculate the angle of refraction inside the glass.\n   (ii) Explain why the speed of light decreases when it enters the glass block.\n\n(c) The student replaces the glass block with a prism and observes that white light disperses into a spectrum. Name the electromagnetic radiation that has a longer wavelength than red light in this spectrum.",
+      "marks": 8,
+      "question_type": "structured",
+      "difficulty": "medium",
+      "topic": "Waves",
+      "subtopic": "Light (Refraction and Dispersion)",
+      "answer": "(a) Refraction is the change in direction of a wave when it passes from one medium to another due to a change in its speed.\n(b)(i) Using Snell's Law: n\u2081 sin i = n\u2082 sin r\n1.00 \u00d7 sin 40\u00b0 = 1.50 \u00d7 sin r\nsin r = (sin 40\u00b0)/1.50 = 0.6428/1.50 = 0.4285\nr = sin\u207b\u00b9(0.4285) \u2248 25.4\u00b0\n(b)(ii) The speed decreases because light interacts with the atoms in the dense glass medium, which slows down the wave propagation.\n(c) Infrared radiation.",
+      "mark_scheme": [
+        {
+          "point": "(a) Correct definition of refraction as direction change due to speed change between media",
+          "marks": 1
+        },
+        {
+          "point": "(b)(i) Correct application of Snell's Law formula",
+          "marks": 1
+        },
+        {
+          "point": "(b)(i) Correct substitution and calculation leading to 25\u00b0\u201326\u00b0",
+          "marks": 1
+        },
+        {
+          "point": "(b)(ii) Explanation linking speed decrease to medium density/atomic interaction",
+          "marks": 2
+        },
+        {
+          "point": "(c) Correct identification of infrared radiation",
+          "marks": 1
+        },
+        {
+          "point": "Units and clear presentation throughout",
+          "marks": 1
+        },
+        {
+          "point": "Correct use of significant figures (25.4\u00b0 or similar)",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Confusing refraction with reflection/diffraction",
+        "Using sin i/sin r = n instead of n\u2081 sin i = n\u2082 sin r",
+        "Forgetting that n for air is 1.00",
+        "Stating 'heat' or 'radio waves' instead of infrared for part (c)"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "4"
+    },
+    {
+      "question": "A student investigates diffraction of microwaves using a metal plate with a single slit. The wavelength of the microwaves is 3.0 cm. The slit width is varied. \n\n(i) Calculate the slit width that would produce the first minimum of the diffraction pattern at an angle of 30\u00b0 from the central maximum. \n\n(ii) The student then replaces the microwaves with a laser emitting red light (wavelength 650 nm) and uses the same slit width from part (i). Explain, with a calculation, how the angle to the first minimum would change and why.",
+      "marks": 6,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Waves",
+      "subtopic": "Diffraction",
+      "answer": "(i) Using the diffraction minima formula a sin \u03b8 = n\u03bb, where n=1, \u03bb=0.03 m, \u03b8=30\u00b0. \na = (1 \u00d7 0.03) / sin 30\u00b0 = 0.03 / 0.5 = 0.06 m or 6.0 cm. \n(ii) For light: \u03bb = 6.5 \u00d7 10\u207b\u2077 m, a = 0.06 m. sin \u03b8 = (1 \u00d7 6.5 \u00d7 10\u207b\u2077) / 0.06 = 1.083 \u00d7 10\u207b\u2075. \u03b8 \u2248 0.00062\u00b0. The angle is much smaller because the wavelength of light is about 50,000 times smaller than the microwave wavelength, and diffraction effects are significant only when the slit width is comparable to the wavelength.",
+      "mark_scheme": [
+        {
+          "point": "Correct application of a sin \u03b8 = n\u03bb for microwaves with correct substitution and units",
+          "marks": 2
+        },
+        {
+          "point": "Correct calculation of slit width (0.06 m or 6.0 cm)",
+          "marks": 1
+        },
+        {
+          "point": "Correct application of formula for light with substitution",
+          "marks": 1
+        },
+        {
+          "point": "Correct calculation of very small angle (\u2248 0.00062\u00b0 or equivalent in radians)",
+          "marks": 1
+        },
+        {
+          "point": "Explanation linking change in angle to ratio of wavelengths and condition for significant diffraction",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using the formula for maxima (a sin \u03b8 = (n+\u00bd)\u03bb)",
+        "Confusing cm and m units leading to incorrect powers of ten",
+        "Stating that the angle increases because wavelength decreases, without quantitative comparison or reasoning about scale"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "4"
+    },
+    {
+      "question": "A student investigates the diffraction of microwaves using a metal plate with a single slit of width 4.0 cm. Microwaves of wavelength 3.0 cm are incident normally on the slit.\n\n(a) Calculate the angle of the first minimum in the diffraction pattern. [2]\n\n(b) The student replaces the metal plate with one having a slit width of 8.0 cm, keeping the wavelength unchanged. Explain how this change affects:\n(i) the angular width of the central maximum, [2]\n(ii) the intensity of the central maximum compared to the original setup. [2]\n\n(c) The experiment is repeated using light of wavelength 600 nm with the original 4.0 cm slit. State and explain why no diffraction pattern is observed. [2]",
+      "marks": 8,
+      "question_type": "structured",
+      "difficulty": "hard",
+      "topic": "Waves",
+      "subtopic": "Diffraction",
+      "answer": "(a) Using the diffraction formula for first minimum: a sin \u03b8 = \u03bb, where a = 4.0 cm, \u03bb = 3.0 cm.\n    sin \u03b8 = \u03bb/a = 3.0/4.0 = 0.75\n    \u03b8 = sin\u207b\u00b9(0.75) \u2248 48.6\u00b0\n\n(b) (i) Angular width of central maximum is proportional to \u03bb/a. Since a doubles (4.0 cm \u2192 8.0 cm), angular width halves.\n    (ii) Intensity increases because more wave energy passes through the wider slit.\n\n(c) For light: \u03bb = 600 nm = 6 \u00d7 10\u207b\u2077 m, a = 4.0 cm = 0.04 m.\n    Ratio \u03bb/a \u2248 (6 \u00d7 10\u207b\u2077)/0.04 = 1.5 \u00d7 10\u207b\u2075 (extremely small).\n    Diffraction angle would be negligible (~0.00086\u00b0), so pattern is not observable.",
+      "mark_scheme": [
+        {
+          "point": "(a) Correct use of a sin \u03b8 = \u03bb with values substituted",
+          "marks": 1
+        },
+        {
+          "point": "(a) Correct calculation of \u03b8 = 48.6\u00b0 (allow 48\u00b0\u201349\u00b0)",
+          "marks": 1
+        },
+        {
+          "point": "(b)(i) States angular width \u221d 1/a or uses formula",
+          "marks": 1
+        },
+        {
+          "point": "(b)(i) Correctly concludes angular width halves",
+          "marks": 1
+        },
+        {
+          "point": "(b)(ii) Identifies more energy/waves pass through",
+          "marks": 1
+        },
+        {
+          "point": "(b)(ii) States intensity increases",
+          "marks": 1
+        },
+        {
+          "point": "(c) Calculates or states \u03bb/a is very small",
+          "marks": 1
+        },
+        {
+          "point": "(c) Explains diffraction angle negligible/not observable",
+          "marks": 1
+        }
+      ],
+      "assessment_objective": "AO2",
+      "common_errors": [
+        "Using \u03b8 = \u03bb/a without sin\u207b\u00b9",
+        "Confusing angular width with linear width on screen",
+        "Not converting units consistently (cm vs m)"
+      ],
+      "subject_code": "0625_physics",
+      "subject_name": "Physics",
+      "level": "IGCSE",
+      "topic_id": "4"
+    }
+  ]
+}

@@ -1,0 +1,622 @@
+{
+  "class": 7,
+  "subject": "Geography",
+  "book": "Our Environment",
+  "board": "CBSE",
+  "total_questions": 18,
+  "questions": [
+    {
+      "question": "Define environment. List any four components of the natural environment.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Environment",
+      "answer": "Environment refers to the surroundings or conditions in which a person, animal, or plant lives and operates. It includes both living (biotic) and non-living (abiotic) elements that interact with each other. Four components of the natural environment are:\n1. Lithosphere (land)\n2. Hydrosphere (water)\n3. Atmosphere (air)\n4. Biosphere (living organisms)",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of environment",
+          "marks": 1
+        },
+        {
+          "point": "Listing any two correct components",
+          "marks": 1
+        },
+        {
+          "point": "Listing two more correct components",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Remembering",
+      "hints": [
+        "Think of everything around you \u2013 both living and non-living.",
+        "Natural environment means things not made by humans."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "1"
+    },
+    {
+      "question": "Define environment and list its two main components with examples.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Environment",
+      "answer": "Environment refers to the surroundings or conditions in which living organisms (plants, animals, and humans) exist and interact. It includes both living (biotic) and non-living (abiotic) elements. The two main components are:\n1. **Natural Environment** \u2013 It consists of all naturally occurring elements without human intervention. Examples: air, water, soil, mountains, rivers, plants, and animals.\n2. **Human Environment** \u2013 It includes elements created or modified by human beings. Examples: buildings, roads, bridges, industries, agriculture, and technology.",
+      "marking_scheme": [
+        {
+          "point": "Correct definition of environment",
+          "marks": 1
+        },
+        {
+          "point": "Correct identification of natural environment with example",
+          "marks": 1
+        },
+        {
+          "point": "Correct identification of human environment with example",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about what surrounds us in nature and what humans have built.",
+        "Refer to NCERT Class 7 Geography Chapter 1 \u2013 Environment."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "1"
+    },
+    {
+      "question": "Differentiate between natural environment and human environment with suitable examples.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Environment",
+      "answer": "Natural environment refers to all living and non-living things that occur naturally on Earth, without human intervention. Examples include landforms (mountains, rivers), climate, natural vegetation, and wildlife. Human environment consists of elements created or modified by humans through their activities, technology, and social structures. Examples include buildings, roads, agriculture, industries, and cultural institutions. The key difference is that natural environment exists independently of humans, while human environment is the result of human interaction with and modification of the natural environment.",
+      "marking_scheme": [
+        {
+          "point": "Clear definition of natural environment with one example",
+          "marks": 1
+        },
+        {
+          "point": "Clear definition of human environment with one example",
+          "marks": 1
+        },
+        {
+          "point": "Correct differentiation stating natural exists independently vs. human is modified/created",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about things found in nature vs. things made by humans",
+        "Consider examples like forests vs. cities, rivers vs. canals"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "1"
+    },
+    {
+      "question": "Differentiate between natural environment and human environment with suitable examples.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Environment",
+      "answer": "Natural environment refers to all living and non-living things that occur naturally on Earth, without human intervention. Examples include landforms (mountains, rivers), climate, soil, natural vegetation, and wildlife. Human environment consists of elements created or modified by human beings through their activities, technology, and social structures. Examples include buildings, roads, agriculture, industries, and cultural institutions like schools and hospitals. The key difference is that natural environment exists independently of humans, while human environment is the result of human interaction with and modification of the natural world.",
+      "marking_scheme": [
+        {
+          "point": "Clear definition of natural environment with one example",
+          "marks": 1
+        },
+        {
+          "point": "Clear definition of human environment with one example",
+          "marks": 1
+        },
+        {
+          "point": "Correct differentiation stating natural exists independently vs. human is modified/created",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about things found in nature vs. things built by humans",
+        "Consider examples like forests vs. cities"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "1"
+    },
+    {
+      "question": "The Sundarbans mangrove forest is a unique ecosystem where the Ganges, Brahmaputra, and Meghna rivers meet the Bay of Bengal. Analyze how human activities in this region demonstrate the interdependence between natural and human environments. Also, evaluate two conservation measures that could protect this fragile ecosystem while supporting local communities.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Human-Environment Interaction",
+      "answer": "The Sundarbans exemplifies deep interdependence between natural and human environments through: 1) **Resource Dependency** \u2013 Local communities depend on forests for honey, fish, and wood, while mangroves protect them from cyclones. 2) **Livelihood Impact** \u2013 Fishing and agriculture are shaped by tidal patterns and salinity. 3) **Biodiversity & Economy** \u2013 The Royal Bengal Tiger and diverse species attract tourism, providing income. 4) **Threats from Human Activity** \u2013 Overfishing, deforestation for agriculture, and pollution degrade mangroves, increasing vulnerability to storms. Conservation measures: a) **Community-Based Eco-Tourism** \u2013 Involves locals as guides, ensures income while educating visitors on mangrove importance. b) **Sustainable Resource Zoning** \u2013 Designates areas for fishing, honey collection, and conservation to prevent overexploitation. Both measures balance ecological protection with livelihood security.",
+      "marking_scheme": [
+        {
+          "point": "Analysis of interdependence with 2 valid examples (e.g., resource dependency, livelihood impact)",
+          "marks": 2
+        },
+        {
+          "point": "Explanation of human-induced threats to the ecosystem",
+          "marks": 1
+        },
+        {
+          "point": "Evaluation of first conservation measure with justification",
+          "marks": 1.5
+        },
+        {
+          "point": "Evaluation of second conservation measure with justification",
+          "marks": 1.5
+        }
+      ],
+      "bloom_level": "Analysis & Evaluation",
+      "hints": [
+        "Think about how people use mangrove resources and how mangroves protect people.",
+        "Consider conservation that involves local communities rather than excluding them."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "1"
+    },
+    {
+      "question": "Critically examine the statement: 'Human activities have transformed the natural environment into a human environment.' Support your answer with examples from both rural and urban settings in India. (6 marks)",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Human-Environment Interaction",
+      "answer": "The statement is largely accurate as human activities significantly modify natural environments to meet their needs, creating distinct human environments. However, the degree and nature of transformation vary between rural and urban settings.\n\n**Rural Setting Example (Agriculture):**\n- Natural grasslands or forests are cleared to create farmland (e.g., Punjab plains).\n- Irrigation systems (canals, tube wells) are built, altering natural water cycles.\n- Introduction of non-native crops and use of fertilizers/pesticides change soil composition and local biodiversity.\n- Settlements, roads, and markets develop, adding built components.\n\n**Urban Setting Example (Cities):**\n- Natural landscapes are replaced entirely by concrete structures (buildings, roads).\n- Natural drainage is replaced by engineered sewer systems (e.g., Mumbai).\n- Local climate is modified (urban heat island effect, reduced air quality).\n- Most components (air, water, land) are artificially managed.\n\n**Critical Perspective:**\n- Not all natural elements are eliminated; urban parks, rural woodlots, and water bodies often remain.\n- Some human environments attempt to mimic or preserve natural features (green buildings, wildlife corridors).\n- The transformation is often unsustainable, leading to pollution, resource depletion, and loss of ecological services, highlighting the need for balanced development.",
+      "marking_scheme": [
+        {
+          "point": "Clear explanation of the statement's meaning (transformation from natural to human-made components)",
+          "marks": 1
+        },
+        {
+          "point": "Detailed rural example with specific Indian context and at least two modifications",
+          "marks": 1.5
+        },
+        {
+          "point": "Detailed urban example with specific Indian context and at least two modifications",
+          "marks": 1.5
+        },
+        {
+          "point": "Critical analysis acknowledging limitations or variations in transformation",
+          "marks": 1
+        },
+        {
+          "point": "Link to sustainability or conservation concern",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Evaluation",
+      "hints": [
+        "Think about what 'natural' and 'human' environments include (Fig. 1.1 in NCERT).",
+        "Consider how farming changes land, water, plants, and animals.",
+        "Compare a forest with a city\u2014what is completely gone, and what remains managed?"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "1"
+    },
+    {
+      "question": "Name the three major layers of the Earth's interior and describe one characteristic of each.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Inside our Earth",
+      "answer": "The three major layers of the Earth's interior are:\n1. **Crust** \u2013 It is the outermost solid layer of the Earth. It is thinnest under the oceans (oceanic crust) and thicker under the continents (continental crust).\n2. **Mantle** \u2013 It lies beneath the crust and extends up to a depth of about 2,900 km. It is mostly solid but behaves like a viscous fluid over long periods. It is the source of magma.\n3. **Core** \u2013 It is the innermost layer, divided into the outer core (liquid) and inner core (solid). It is composed mainly of iron and nickel and is responsible for Earth's magnetic field.",
+      "marking_scheme": [
+        {
+          "point": "Correctly names all three layers: Crust, Mantle, Core",
+          "marks": 1
+        },
+        {
+          "point": "Accurately describes one characteristic of the Crust (e.g., outermost layer, thinnest under oceans)",
+          "marks": 1
+        },
+        {
+          "point": "Accurately describes one characteristic of the Mantle or Core (e.g., mantle is source of magma; core is made of iron/nickel)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think of the Earth like an onion with layers.",
+        "The outermost layer is where we live.",
+        "The innermost layer is very hot and dense."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "2"
+    },
+    {
+      "question": "Name the three major layers of the Earth's interior and describe one characteristic of each.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Inside our Earth",
+      "answer": "The three major layers of the Earth's interior are:\n1. **Crust** \u2013 The outermost solid layer of the Earth. It is the thinnest layer and is made up of rocks and soil. The crust is where we live.\n2. **Mantle** \u2013 The middle layer, located beneath the crust. It is mostly solid but can flow very slowly. The mantle is the thickest layer and is rich in minerals like iron and magnesium.\n3. **Core** \u2013 The innermost layer, divided into the outer core (liquid) and inner core (solid). It is mainly composed of iron and nickel and is extremely hot, with temperatures reaching up to 6000\u00b0C.",
+      "marking_scheme": [
+        {
+          "point": "Correctly names all three layers (Crust, Mantle, Core)",
+          "marks": 1
+        },
+        {
+          "point": "Accurately describes one characteristic of the Crust",
+          "marks": 1
+        },
+        {
+          "point": "Accurately describes one characteristic of the Mantle or Core",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think of the Earth like an onion with different layers.",
+        "The outermost layer is where we live; the innermost is very hot and dense."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "2"
+    },
+    {
+      "question": "Explain the formation of a delta and a waterfall, highlighting the key processes involved in each. How do these landforms demonstrate the continuous interaction between water and the Earth's surface?",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Landforms",
+      "answer": "A delta is formed when a river enters a sea or lake and its speed reduces, causing it to deposit sediments like silt, sand, and clay. Over time, these deposits build up, creating a triangular-shaped landform. Examples include the Sundarbans Delta in India. A waterfall is formed when a river flows over hard rock followed by soft rock. The soft rock erodes faster due to hydraulic action and abrasion, creating a vertical drop. Over time, the waterfall retreats upstream. Examples include the Jog Falls in Karnataka. Both landforms show how flowing water shapes the Earth's surface through erosion and deposition, which are part of the water cycle and geological processes.",
+      "marking_scheme": [
+        {
+          "point": "Correct explanation of delta formation with deposition process",
+          "marks": 1
+        },
+        {
+          "point": "Correct explanation of waterfall formation with erosion process",
+          "marks": 1
+        },
+        {
+          "point": "Connection to water-Earth interaction and examples",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about what happens when a river slows down vs. flows over different rocks.",
+        "Recall terms like erosion, deposition, and the water cycle from Chapter 3."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "2"
+    },
+    {
+      "question": "Explain how the movement of tectonic plates leads to the formation of fold mountains, with reference to the Himalayas as an example.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Landforms",
+      "answer": "The movement of tectonic plates leads to the formation of fold mountains through the process of folding. When two continental plates converge (move towards each other), the immense pressure causes the Earth's crust to buckle and fold upwards, creating mountain ranges. The Himalayas were formed due to the collision between the Indian Plate and the Eurasian Plate. This ongoing convergence causes the rocks to compress and fold, resulting in the young fold mountains we see today, which are still rising.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of plate convergence causing folding of Earth's crust",
+          "marks": 1
+        },
+        {
+          "point": "Specific reference to the collision of Indian and Eurasian plates forming the Himalayas",
+          "marks": 1
+        },
+        {
+          "point": "Description of the result as young, still-rising fold mountains",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about what happens when two landmasses push against each other.",
+        "Recall which plates were involved in forming the Himalayas."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "2"
+    },
+    {
+      "question": "The Western Ghats and the Eastern Ghats are both mountain ranges in India, but they influence the climate and natural vegetation of the Peninsular Plateau in very different ways. Critically examine how these two ranges affect rainfall distribution and vegetation types on either side of the plateau, integrating your understanding of landforms, water bodies, and climate patterns.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Physical Features",
+      "answer": "The Western Ghats and Eastern Ghats create distinct climatic and vegetation zones due to their alignment, elevation, and interaction with monsoon winds.\n\n1. **Western Ghats**:\n   - Run parallel to the west coast, acting as a continuous barrier.\n   - Force the moisture-laden southwest monsoon winds to rise, causing heavy orographic rainfall on the windward side (100\u2013400 cm annually).\n   - This supports dense tropical evergreen and moist deciduous forests (e.g., in Kerala, Karnataka).\n   - The leeward side (rain-shadow region like parts of Maharashtra, Karnataka) receives scanty rainfall (50\u201360 cm), leading to dry deciduous forests and thorny vegetation.\n\n2. **Eastern Ghats**:\n   - Discontinuous and lower in height, running parallel to the east coast.\n   - Less effective in blocking the northeast monsoon winds, which are comparatively drier.\n   - Receive moderate rainfall (80\u2013120 cm), mainly from the retreating monsoon and cyclonic disturbances.\n   - Vegetation is mostly dry deciduous and scrub forests, with some moist deciduous patches in higher reaches.\n\n3. **Integration with Water Bodies & Climate**:\n   - The Arabian Sea (west) provides abundant moisture to Western Ghats, while the Bay of Bengal (east) influences Eastern Ghats through cyclones.\n   - The rain-shadow effect of Western Ghats directly impacts river regimes (e.g., east-flowing rivers like Krishna, Godavari are rain-fed but less perennial than west-flowing ones).\n   - Overall, the Western Ghats are crucial for biodiversity and water recharge, whereas Eastern Ghats have a more subdued role in shaping peninsula\u2019s climate.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of Western Ghats' role in causing orographic rainfall and supporting evergreen/moist deciduous forests",
+          "marks": 2
+        },
+        {
+          "point": "Explanation of Eastern Ghats' discontinuous nature leading to moderate rainfall and dry deciduous/scrub forests",
+          "marks": 2
+        },
+        {
+          "point": "Integration with water bodies (Arabian Sea, Bay of Bengal) and rain-shadow effect on rivers/vegetation",
+          "marks": 1
+        },
+        {
+          "point": "Critical comparison highlighting differential impact on climate and vegetation of Peninsular Plateau",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Evaluation",
+      "hints": [
+        "Recall the alignment and height of both mountain ranges.",
+        "Think about wind patterns: southwest monsoon vs. northeast monsoon.",
+        "Consider the concept of 'rain-shadow region'."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "2"
+    },
+    {
+      "question": "The Western Ghats and the Eastern Ghats are both mountain ranges in India, but they exhibit significant differences in climate, biodiversity, and impact on the monsoon. Critically examine how these differences arise from their geographical positioning and structure, and evaluate their respective roles in influencing India's weather patterns and agricultural practices.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Landforms",
+      "answer": "The Western Ghats and Eastern Ghats differ significantly due to their geographical positioning and structure. The Western Ghats run parallel to the western coast, are continuous, higher (average 900\u20131600 m), and act as a barrier to the southwest monsoon winds, causing heavy orographic rainfall (over 250 cm) on the windward side, leading to tropical rainforests and biodiversity hotspots. In contrast, the Eastern Ghats are discontinuous, lower (average 600 m), run parallel to the eastern coast, and receive less rainfall (60\u2013100 cm) as they lie in the rain shadow region, resulting in dry deciduous forests. Their roles in weather and agriculture differ: the Western Ghats are crucial for the monsoon, feeding peninsular rivers and supporting plantation agriculture (e.g., coffee, tea), while the Eastern Ghats influence the northeast monsoon, aiding in water retention for crops like rice and millets through seasonal rivers.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of geographical differences (continuity, height, positioning)",
+          "marks": 2
+        },
+        {
+          "point": "Analysis of climatic impact (monsoon barrier vs. rain shadow, rainfall variation)",
+          "marks": 2
+        },
+        {
+          "point": "Evaluation of biodiversity and agricultural roles (forest types, crop patterns)",
+          "marks": 1
+        },
+        {
+          "point": "Critical examination of overall influence on India's weather and farming",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Evaluation",
+      "hints": [
+        "Consider the direction of monsoon winds and how mountain ranges intercept them.",
+        "Think about the height and continuity of the ranges affecting rainfall distribution.",
+        "Relate climate differences to types of vegetation and crops grown in these regions."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "2"
+    },
+    {
+      "question": "List any three differences between urban and rural settlements.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Urban and rural life",
+      "answer": "Three differences between urban and rural settlements are:\n1. **Population density**: Urban settlements have high population density with crowded living, while rural settlements have low population density with scattered houses.\n2. **Main occupation**: In urban areas, people are mostly engaged in secondary (manufacturing) and tertiary (services) activities like offices, industries, and trade. In rural areas, the main occupation is primary activities such as agriculture, fishing, and forestry.\n3. **Facilities and infrastructure**: Urban areas have well-developed infrastructure like hospitals, schools, roads, and public transport. Rural areas often have limited access to such facilities.",
+      "marking_scheme": [
+        {
+          "point": "Difference in population density",
+          "marks": 1
+        },
+        {
+          "point": "Difference in main occupation/economic activities",
+          "marks": 1
+        },
+        {
+          "point": "Difference in facilities/infrastructure",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about where people live\u2014crowded or scattered?",
+        "What kind of work do people do in cities vs. villages?",
+        "Consider availability of schools, hospitals, and transport."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "3"
+    },
+    {
+      "question": "List three differences between urban and rural settlements in India.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Human Settlements and Life",
+      "answer": "Three differences between urban and rural settlements are:\n1. **Population density**: Urban settlements have high population density with crowded living, while rural settlements have low population density with scattered houses.\n2. **Main occupation**: In urban areas, people are mostly engaged in secondary (manufacturing) and tertiary (services) activities like offices, industries, and trade. In rural areas, the main occupation is primary activities such as agriculture, fishing, and forestry.\n3. **Facilities and infrastructure**: Urban areas have well-developed infrastructure like metalled roads, hospitals, schools, shopping malls, and regular electricity and water supply. Rural areas often have kutcha roads, limited healthcare, fewer educational institutions, and irregular basic amenities.",
+      "marking_scheme": [
+        {
+          "point": "Correctly states difference in population density",
+          "marks": 1
+        },
+        {
+          "point": "Correctly states difference in main occupation",
+          "marks": 1
+        },
+        {
+          "point": "Correctly states difference in facilities/infrastructure",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about where people live closely vs. far apart.",
+        "Consider what kind of work people do in cities vs. villages.",
+        "Recall facilities like roads, hospitals, schools, and water supply."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "3"
+    },
+    {
+      "question": "Compare and contrast the characteristics of urban and rural settlements in India, giving three points of difference for each.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Human Settlements and Life",
+      "answer": "Urban settlements are large, densely populated areas with non-agricultural occupations, advanced infrastructure, and diverse economic activities. Rural settlements are smaller, sparsely populated areas where most people are engaged in agriculture, with basic infrastructure and limited economic diversity.\n\nKey differences:\n1. **Occupation**: Urban \u2013 mainly secondary (industries) and tertiary (services) sectors; Rural \u2013 primarily primary sector (agriculture, fishing, mining).\n2. **Population density**: Urban \u2013 high density with crowded living; Rural \u2013 low density with scattered houses.\n3. **Infrastructure**: Urban \u2013 well-developed roads, hospitals, schools, and communication networks; Rural \u2013 basic facilities, often lacking proper roads, healthcare, and educational institutions.",
+      "marking_scheme": [
+        {
+          "point": "Correct identification of urban settlement characteristics (occupation, density, infrastructure)",
+          "marks": 1
+        },
+        {
+          "point": "Correct identification of rural settlement characteristics (occupation, density, infrastructure)",
+          "marks": 1
+        },
+        {
+          "point": "Clear comparison/contrast with at least three valid points of difference",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analyzing",
+      "hints": [
+        "Think about where people work in cities vs. villages.",
+        "Consider the availability of facilities like hospitals and schools.",
+        "Remember population distribution patterns from your textbook."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "3"
+    },
+    {
+      "question": "Compare and contrast the characteristics of urban and rural settlements in India. Provide at least three points of difference.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Human Settlements and Life",
+      "answer": "Urban and rural settlements in India differ in several ways:\n1. **Population Density**: Urban areas have high population density with compact living, while rural areas have low density with scattered houses.\n2. **Occupation**: Urban people are mostly engaged in secondary (manufacturing) and tertiary (services) activities like IT, banking, and trade. Rural people are primarily involved in primary activities such as agriculture, fishing, and forestry.\n3. **Infrastructure**: Urban settlements have well-developed infrastructure like metalled roads, hospitals, schools, and shopping malls. Rural areas often have kutcha roads, limited healthcare, and basic educational facilities.\n4. **Lifestyle**: Urban life is fast-paced with greater access to entertainment and technology. Rural life is slower, closely connected to nature and traditional customs.",
+      "marking_scheme": [
+        {
+          "point": "Correctly states difference in population density/pattern",
+          "marks": 1
+        },
+        {
+          "point": "Correctly states difference in main occupations/economic activities",
+          "marks": 1
+        },
+        {
+          "point": "Correctly states difference in infrastructure/amenities OR lifestyle",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analyzing",
+      "hints": [
+        "Think about where people live and how close together houses are.",
+        "Consider what kind of work people do in cities versus villages.",
+        "Remember facilities like roads, hospitals, and schools."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "3"
+    },
+    {
+      "question": "Analyze how the development of transport and communication networks has critically influenced the growth and transformation of human settlements from rural to urban areas in India. Support your answer with specific examples from different geographical regions.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Human Settlements and Life",
+      "answer": "The development of transport and communication networks has been a decisive factor in transforming human settlements in India through the following ways:\n\n1. **Connectivity and Accessibility**: Improved road networks (Golden Quadrilateral), railways, and airways have connected remote rural areas to urban centers, enabling migration for education and employment. Example: The Konkan Railway connected isolated coastal villages of Maharashtra, Goa, and Karnataka to Mumbai, leading to urban growth in towns like Ratnagiri.\n\n2. **Economic Integration**: Transport corridors facilitate the movement of goods, linking agricultural hinterlands to urban markets. Example: The NH-44 (old NH-7) connects Kanyakumari to Srinagar, allowing farmers in Tamil Nadu to supply produce to Delhi, encouraging market towns to evolve into larger settlements.\n\n3. **Information Flow and Services**: Communication networks (mobile internet, broadband) have reduced the urban-rural divide by enabling telemedicine, online education, and e-governance in rural areas, slowing out-migration. Example: In Kerala, high mobile penetration and internet access have improved service delivery in villages, supporting balanced regional development.\n\n4. **Industrial and Service Hubs**: Proximity to highways, ports, and airports attracts industries and IT parks, converting rural areas into urban zones. Example: The Delhi-Mumbai Industrial Corridor (DMIC) is transforming rural tracts in Gujarat and Haryana into smart cities and industrial townships.\n\n5. **Socio-Cultural Exchange**: Improved transport allows daily commuting, creating peri-urban settlements where people live in rural-like environments but work in cities. Example: The Delhi Metro extension to Ghaziabad and Noida has led to growth of satellite towns with mixed urban-rural characteristics.\n\nThus, transport and communication networks act as catalysts, not only promoting urban expansion but also enabling functional linkages that redefine settlement patterns across India's diverse geographical regions.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of connectivity/accessibility with example",
+          "marks": 1.5
+        },
+        {
+          "point": "Analysis of economic integration with example",
+          "marks": 1.5
+        },
+        {
+          "point": "Discussion of information flow/services with example",
+          "marks": 1
+        },
+        {
+          "point": "Description of industrial/service hub growth with example",
+          "marks": 1
+        },
+        {
+          "point": "Mention of socio-cultural exchange and peri-urban growth with example",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Think about how roads/railways link villages to cities",
+        "Consider the role of communication technology in reducing migration",
+        "Recall examples of transport corridors like DMIC or specific highways"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "3"
+    },
+    {
+      "question": "Analyze how the development of transport and communication networks has critically influenced the growth and transformation of human settlements in India, with specific reference to urban and rural areas. Evaluate whether these changes have uniformly benefited all regions, justifying your answer with geographical examples.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Human Settlements and Life",
+      "answer": "The development of transport and communication networks has profoundly influenced human settlements in India through three main mechanisms: (1) **Accessibility and connectivity** \u2013 Railways and national highways (like NH44) have enabled faster movement of people and goods, transforming small towns (e.g., Nagpur) into major nodal points. (2) **Economic integration** \u2013 Improved connectivity allows rural areas (e.g., Punjab villages) to access urban markets for agricultural produce, while cities like Bengaluru grew due to IT corridors linked by air/road networks. (3) **Spatial expansion** \u2013 Metro systems (Delhi, Chennai) and suburban railways facilitated urban sprawl, converting peripheral villages into suburbs.\n\nHowever, these changes have **not uniformly benefited all regions**. Developed regions like the National Capital Region or Western Corridor (Mumbai-Pune) gained disproportionately due to existing infrastructure, while remote areas (e.g., Ladakh, Northeast states) still face challenges due to difficult terrain and limited connectivity. Rural-urban migration increased, but many rural settlements remain underserved with poor road/telecom access, widening regional disparities. Thus, while transport/communication networks accelerated settlement growth, their benefits remain unevenly distributed geographically.",
+      "marking_scheme": [
+        {
+          "point": "Analysis of three ways transport/communication networks influence settlements (accessibility, economic integration, spatial expansion) with examples",
+          "marks": 3
+        },
+        {
+          "point": "Evaluation of non-uniform benefits \u2013 contrast developed vs. remote regions with geographical examples",
+          "marks": 2
+        },
+        {
+          "point": "Justified conclusion on uneven regional development",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis/Evaluation",
+      "hints": [
+        "Consider different types of transport networks \u2013 roads, railways, airways \u2013 and their impact on settlement patterns.",
+        "Think about examples from your textbook: the Golden Quadrilateral, rural-urban migration, and life in desert/mountain regions."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "Geography",
+      "book": "Our Environment",
+      "topic_id": "3"
+    }
+  ]
+}

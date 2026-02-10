@@ -1,0 +1,32 @@
+{
+  "filename": "hemh102.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 2,
+      "title": "Check : LHS =",
+      "content": "2.\nCheck : LHS = \n=25 25 252(5 7) 2( 2) 42 22− − = −−= +  = 25 8 33\n22+=\nRHS =\n=26 7 33\n22+=  = LHS.   (as required)Did you observe how we\nsimplified the form of the given\nequation? Here, we had to\nmultiply both sides of the\nequation by the LCM of the\ndenominators of the terms in the\nexpressions of  the equation.\nNote, in this example we\nbrought the equation to a\nsimpler form by opening\nbrackets and combining like\nterms on both sides of  the\nequation.\nReprint 2024-25\n\n\nWHA T HA VE WE DISCUSSED?\n1.An algebraic equation is an equality involving variables. It says that the value of the expression on\none side of the equality sign is equal to the value of the expression on the other side.\n2.The equations we study in Classes VI, VII and VIII are linear equations in one variable. In suchequations, the expressions which form the equation contain only one variable. Further, the equationsare linear , i.e., the highest power of the variable appearing in the equation is 1.\n3.An equation may have linear expressions on both sides. Equations that we studied in Classes VIand VII had just a number on one side of the equation.\n4.Just as numbers, variables can, also, be transposed from one side of the equation to the other .\n5.Occasionally , the expressions forming equations have to be simplified before we can solve them\nby usual methods. Some equations may not even be linear to begin with, but they can be broughtto a linear form by multiplying both sides of the equation by a suitable expression.\n6.The utility of linear equations is in their diverse applications; different problems on numbers, ages,\nperimeters, combination of currency notes, and so on can be solved using linear equations.EXERCISE 2.2\nSolve the following linear equations.\n1.11\n2534xx−=+ 2.352124 6nnn−+= 3.8 17 57362xxx+− = −\n4.53\n35xx−−= 5.32 23 2\n4 33ttt−+− =− 6.12123mmm−−− =−\nSimplify and solve the following linear equations.\n7.3(t – 3) = 5(2t + 1) 8.15(y – 4) –2(y  – 9) + 5( y + 6) = 0\n9.3(5z – 7) – 2(9z  – 11) = 4(8z  – 13) – 17\n10. 0.25(4 f – 3) = 0.05(10 f – 9)\nReprint 2024-25\n\n\nNOTES\nReprint 2024-25\n\n",
+      "wordCount": 385,
+      "examples": [],
+      "exercises": [
+        {
+          "chapterNumber": 2,
+          "exerciseNumber": "2.2",
+          "questions": [
+            {
+              "questionNumber": 10,
+              "questionText": "0.25(4 f – 3) = 0.05(10 f – 9)\nReprint 2024-25"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 1
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 6,
+    "totalWords": 385
+  }
+}

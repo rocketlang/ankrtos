@@ -1,0 +1,165 @@
+{
+  "filename": "keph2an.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 8,
+      "title": "8.1 1.8",
+      "content": "Chapter   8\n8.1 1.8\n8.2 (a) From the given graph for a stress of 150 × 106 N m–2 the strain is 0.002\n(b) Approximate yield strength of the material is 3 × 108 N m–2\n8.3 (a) Material A\n(b) Strength of a material is determined by the amount of stress required to cause\n fracture: material A is stronger than material B.\n8.4 (a) False  (b) True\n8.5 1.5 × 10–4 m (steel); 1.3 ×  10–4 m (brass)\n8.6 Deflection = 4 × 10–6 m\n8.7 2.8 × 10–6\n8.8 0.127\n8.9 7.07 × 104 N\n8.10 Dcopper/Diron = 1.25\n8.11 1.539 × 10–4 m\n8.12 2.026 × 109 Pa\n8.13 1.034 × 103 kg/m3\n8.14 0.0027\n8.15 0.058 cm3\n8.16 2.2\n × 106 N/m2 ANSWERS\nReprint 2025-26\n\nANSWERS 301\n",
+      "wordCount": 131,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 9,
+      "title": "9.3 (a) decreases (b) η of gases increases, η of liquid decreases with temperature (c) shear",
+      "content": "Chapter   9\n9.3 (a) decreases (b) η of gases increases, η of liquid decreases with temperature (c) shear\nstrain, rate of shear strain (d) conservation of mass, Ber noulli’s equation (e) gr eater.\n9.5  6.2 × 106 Pa\n9.6  10.5 m\n19.7 Pressure at that depth in the sea is about 3  × 107 Pa. The structure is suitable since it\ncan withstand far greater pressure or stress.\n9.8 6.92 × 105 Pa\n9.9 0.800\n9.10 Mercury will rise in the arm containing spirit; the difference in levels of mercury will be\n0.221 cm.\n9.11 No, Bernoulli’s principle applies to streamline flow only.\n9.12 No, unless the atmospheric pressures at the two points where Bernoulli’s equation is\napplied are significantly different.\n9.13 9.8 × 102 Pa (The Reynolds number is about 0.3 so the flow is laminar).\n9.14 1.5 × 103 N\n9.15 Fig (a) is incorrect [Reason: at a constriction (i.e. where the area of cross-section of the\ntube is smaller), flow speed is larger due to mass conservation. Consequently pressure\nthere is smaller accor ding to Ber noulli’s equation. W e assume the fluid to be\nincompressible].\n9.16 0.64 m s–1\n9.17 2.5 × 10–2 N m–1\n9.18 4.5 × 10–2  N for (b) and (c), the same as in (a).\n9.19 Excess pr essur e = 310 Pa, total pr essur e = 1.0131 × 105 Pa. However , since data ar e\ncorrect to three significant figures, we should write total pressure inside the drop as\n1.01 × 105 Pa.\n9.20 Excess pressure inside the soap bubble = 20.0 Pa; excess pressure inside the air bubble\nin soap solution = 10.0 Pa. Outside pressure for air bubble = 1.01 × 105 + 0.4 × 103 × 9.8\n× 1.2 = 1.06 × 105 Pa. The excess pressure is so small that up to three significant\nfigures, total pressure inside the air bubble is 1.06 × 105 Pa.\n",
+      "wordCount": 321,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 10,
+      "title": "10.1 Neon:  – 248.58 °C  = – 415.44",
+      "content": "Chapter   10\n10.1 Neon:  – 248.58 °C  = – 415.44 \n°F;\nCO2:  – 56.60 ° C  =  – 69.88 °F\n(use  tF  =  3259\nc+t )\nReprint 2025-26\n\n302 PHYSICS\n10.2 TA  = ( 4/7)  TB\n10.3 384.8 K\n10.4 (a) Triple-point has a unique  temperature; fusion point and boiling point temperatures\ndepend on pressure; (b) The other fixed point is the absolute zero itself; (c) Triple-point\nis 0.01 °C, not 0 °C; (d)  491.69.\n10.5 (a)  TA  =  392.69 K, TB =  391.98 K;  (b) The discrepancy arises because the gases are not\nperfectly ideal. To reduce the discrepancy, readings should be taken for lower and\nlower pressures and the plot between temperature measured versus absolute pressure\nof the gas at triple point should be extrapolated to obtain temperature in the limit\npressur e tends to zer o, when the gases appr oach ideal gas behaviour .\n10.6 Actual length of the r od at 45.0 °C = (63.0 + 0.0136) cm = 63.0136 cm.  (However , we\nshould say that change in length up to three significant figures is 0.0136 cm, but the\ntotal length is 63.0 cm, up to three significant places. Length of the same rod at 27.0 °C\n=  63.0 cm.\n10.7 When the shaft is cooled to temperature – 690C the wheel can slip on the shaft.\n10.8 The diameter increases by an amount = 1.44 × 10–2 cm.\n10.9 3.8 × 102 N\n10.10 Since the ends of the combined rod are not clamped, each rod expands freely.\n∆lbrass =  0.21  cm, ∆lsteel  =  0.126 cm  =  0.13 cm\nTotal change in length = 0.34 cm. No ‘thermal stress’ is developed at the junction since\nthe rods freely expand.\n10.11 0.0147  =  1.5 × 10– 2\n10.12 103 °C\n10.13 1.5 kg\n10.14 0.43 J g –1 K–1 ; smaller\n10.15 The gases are diatomic, and have other degrees of freedom (i.e. have other modes of\nmotion) possible besides the translational degrees of freedom. To raise the temperature\nof the gas by a certain amount, heat is to be supplied to increase the average energy of\nall the modes. Consequently, molar specific heat of diatomic  gases is more than that of\nmonatomic gases. It can be shown that if only rotational modes of motion are considered,\nthe molar specific heat of diatomic gases is nearly (5/2) R which agrees with the\nobservations for all the gases listed in the table, except chlorine. The higher value of\nmolar specific heat of chlori ne indicates that besides rotational modes, vibrational modes\nare also present in chlorine at room temperature.\n10.16 4.3 g/min\n10.17 3.7 kg\n10.18 238 °C\n10.20 9 min\nReprint 2025-26\n\nANSWERS 303\n",
+      "wordCount": 450,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 11,
+      "title": "11.1 16 g per min",
+      "content": "Chapter   11\n11.1 16 g per min\n11.2 934 J\n11.4 2.64\n11.5 16.9 J\n11.6 (a) 0.5 atm (b) zero (c) zero (assuming the gas to be ideal) (d) No, since the process\n(called free expansion) is rapid and cannot be controlled. The intermediate states are\nnon-equilibrium states and do not satisfy the gas equation. In due course, the gas\ndoes return to an equilibrium state.\n11.7 25 W\n11.8 450 J\n",
+      "wordCount": 73,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "12.1 4 × 10–4",
+      "content": "Chapter   12\n12.1 4 × 10–4\n12.3 (a)  The dotted plot corresponds to ‘ideal’ gas behaviour;  (b) T1 > T2; (c) 0.26 J K–1;\n(d) No, 6.3 ×  10–5 kg  of H2 would yield the same value\n12.4 0.14  kg\n12.5 5.3 × 10–6   m3\n12.6 6.10 × 1026\n12.7 (a)  6.2 × 10–21 J (b)  1.24 × 10–19 J                 (c) 2.1 × 10–16 J\n12.8 Yes, accor ding to A vogadr o’s law.  No, vrms is lar gest for the lightest of the thr ee gases;\nneon.\n12.9 2.52 × 103 K\n12.10 Use the formula for mean free path :\n=\nπ21\n2l\nnd\nwhere d is the diameter of a molecule.  For the given pressure and temperature\nN/V = 5.10 × 1025 m–3 and   = 1.0 × 10–7 m.  vrms = 5.1 × 102 m s–1.\nReprint 2025-26\n\n304 PHYSICS\ncollisional fr equency = 9 –1 rms5.1 10 sv\nl= × . Time taken for the collision = d / vrms  = 4 × 10–13 s.\nTime taken between successive collisions = l / vrms = 2 × 10-10 s. Thus the time taken\nbetween successive collisions is 500 times the time taken for a collision. Thus a molecule\nin a gas moves essentially free for most of the time.\n",
+      "wordCount": 213,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 13,
+      "title": "13.1 (b), (c)",
+      "content": "Chapter   13\n13.1 (b), (c)\n13.2(b) and (c): SHM; (a) and (d) represent periodic but not SHM [A polyatomic molecule has a\nnumber of natural frequencies; so in general, its vibration is a superposition of SHM’s of\na number of different frequencies. This superposition is periodic but not SHM].\n13.3 (b) and (d) are periodic, each with a period of 2 s; (a) and (c) are not periodic. [Note in (c),\nrepetition of merely one position is not enough for motion to be periodic; the entire\nmotion during one period must be repeated successively].\n13.4 (a) Simple harmonic, T = (2 π/ω); (b) periodic, T =(2 π/ω) but not simple harmonic;\n(c) simple harmonic, T = (π/ω); (d) periodic,  T = (2 π/ω) but not simple harmonic;\n(e) non-periodic; (f) non-periodic (physically not acceptable as the function → ∞ as t → ∞.\n13.5 (a) 0, +, + ; (b) 0, –, – ; (c) –, 0,0 ;  (d) –, –, – ;  (e) +, +, + ;   ( f) –, –, –.\n13.6 (c) represents a simple harmonic motion.\n13.7 A = 2 cm, φ = 7π/4; B = 2 cm, a = π/4.\n13.8 219 N\n13.9 Frequency 3.2 s–1; maximum acceleration of the mass 8.0 m s–2; maximum speed of the\nmass 0.4 m s–1.\n13.10 (a) x = 2 sin 20 t\n(b) x = 2 cos 20 t\n(c) x = – 2 cos 20 t\nwhere x is in cm. These functions differ neither in amplitude nor frequency.\nThey differ in initial phase.\n13.11 (a) x = – 3 sin πt where x is in cm.\n(b) x = – 2 cos π\n2t where x is in cm.\n13.13 (a) F/k for both (a) and (b).\n(b) T = 2πm\nkfor (a) and 2 π\nkm\n2 for (b)\nReprint 2025-26\n\nANSWERS 305\n13.14 100 m/min\n13.15 8.4 s\n13.16 π\n+2 4 2T = 2\ng /l\nv R . Hint: Effective acceleration due to gravity will get reduced\ndue to radial acceleration  v2/R acting in the horizontal plane.\n13.17 In equilibrium, weight of the cork equals the up thrust. When the cork is depressed\nby an amount x, the net upward force is A xρl g. Thus the force constant k = Aρl g .\nUsing m = Ahρ, and T = 2π\nkm one gets the given expr ession.\n13.18 When both the ends are open to the atmosphere, and the difference in levels of the\nliquid in the two arms is h, the net force  on the liquid column is Ahρg where A is the\narea of cross-section of the tube and ρ is the density of the liquid. Since restoring force\nis proportional to h, motion is simple harmonic.\n",
+      "wordCount": 461,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 14,
+      "title": "14.1 0.5 s",
+      "content": "Chapter  14\n14.1 0.5 s\n14.2 8.7 s\n14.3 2.06 × 104 N\n14.4 Assume ideal gas law: P = ρRT\nM, where ρ is the density, M is the molecular mass, and\nT is the temperature of the gas. This gives v =RT\nMγ. This shows that v is:\n(a)Independent of pressure.\n(b)Increases as T.\n(c)The molecular mass of water (18) is less than that of N2 (28) and O2 (32).\nTherefore as humidity increases, the effective molecular mass of air decreases\nand hence v increases.\n14.5 The converse is not true. An obvious requirement for an acceptable function for a\ntravelling wave is that it should be finite everywhere and at all times. Only function (c)\nsatisfies this condition, the remaining functions cannot possibly represent a travelling\nwave.\n14.6 (a)    3.4 × 10–4 m (b)    1.49 × ×10–3 m\nReprint 2025-26\n\n306 PHYSICS\n14.7 4.1 × 10–4 m\n14.8 (a)A travelling wave. It travels from right to left with a speed of 20 ms–1.\n(b)3.0 cm, 5.7 Hz\n(c) π/4\n(d)3.5 m\n14.9 All the graphs are sinusoidal. They have same amplitude and frequency, but\ndifferent initial phases.\n14.10 (a)6.4 π rad\n(b)   0.8 π rad\n(c) π rad\n(d)(π/2) rad\n14.11 (a)Stationary wave\n(b)l = 3 m, n = 60 Hz, and v = 180 m s–1 for each wave\n(c )648 N\n14.12 (a)All the points except the nodes on the string have the same frequency and\nphase, but not the same amplitude.\n(b)0.042 m\n14.13 (a)Stationary wave.\n(b)Unacceptable function for any wave.\n(c)Travelling harmonic wave.\n(d)Superposition of two stationary waves.\n14.14 (a)79 m s–1\n(b)248 N\n14.15 347 m s–1\nHint : vn = \nlv ) n (\n41 2− ; n = 1,2,3,….for a pipe with one end closed\n14.16 5.06 km s–1\n14.17 First harmonic (fundamental); No.\n14.18 318 Hz\nReprint 2025-26\n\nANSWERS 307\nBIBLIOGRAPHY\nTEXTBOOKS\nFor additional reading on the topics covered in this book, you may like to consult one or\nmore of the following books. Some of these books however are more advanced and contain\nmany more topics than this book.\n1.Ordinary Level Physics , A.F. Abbott, Ar nold-Heinemann (1984).\n2.Advanced Level Physics , M. Nelkon and P . Parker , 6th Edition Ar nold-\nHeinemann (1987).\n3.Advanced Physics , Tom Duncan, John Murray (2000).\n4.Fundamentals of Physics , David Halliday, Robert Resnick and Jearl\nWalker, 7th Edition John W ily (2004).\n5.University Physics , H.D. Y oung, M.W . Zemansky and F .W. Sears, Nar osa\nPub. House (1982).\n6.Problems in Elementary Physics , B. Bukhovtsa, V. Krivchenkov,\nG. Myakishev and V. Shalnov, MIR Publishers, (1971).\n7.Lectures on Physics  (3 volumes), R.P . Feynman, Addision – W esley (1965).\n8.Berkeley Physics Course  (5 volumes) McGraw Hill (1965).\na.Vol. 1 – Mechanics: (Kittel, Knight and Ruder man)\nb.Vol. 2 – Electricity and Magnetism (E.M. Pur cell)\nc.Vol. 3 – W aves and Oscillations (Frank S. Craw-for d)\nd.Vol. 4 – Quantum Physics (W ichmann)\ne.Vol. 5 – Statistical Physics (F . Reif)\n9.Fundamental University Physics , M. Alonso and E. J. Finn, Addison –\nWesley (1967).\n10. College Physics , R.L. W eber, K.V. Manning, M.W . White and G.A. W eygand,\nTata McGraw Hill (1977).\n11. Physics : Foundations and Frontiers, G. Gamow and J.M. Cleveland, Tata\nMcGraw Hill (1978).\n12. Physics for the Inquiring Mind , E.M. Rogers, Princeton University\nPress (1960)\n13. PSSC Physics Course , DC Heath and Co. (1965) Indian Edition, NCER T\n(1967)\n14. Physics Advanced Level , Jim Breithampt, Stanley Thornes Publishers\n(2000).\n",
+      "wordCount": 590,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 15,
+      "title": "Physics, Patrick  Fullick, Heinemann (2000).",
+      "content": "15. Physics, Patrick  Fullick, Heinemann (2000).\nReprint 2025-26\n\n",
+      "wordCount": 8,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 16,
+      "title": "Conceptual Physics,  Paul G. Hewitt, Addision-W esle",
+      "content": "16. Conceptual Physics,  Paul G. Hewitt, Addision-W esley (1998).\n",
+      "wordCount": 9,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 17,
+      "title": "College Physics,  Raymond A. Serway and Jerry S. Fau",
+      "content": "17. College Physics,  Raymond A. Serway and Jerry S. Faughn, Harcourt Brace\nand Co. (1999).\n",
+      "wordCount": 15,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 18,
+      "title": "University Physics,  Harris Benson, John Wiley (1996",
+      "content": "18. University Physics,  Harris Benson, John Wiley (1996).\n",
+      "wordCount": 8,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 19,
+      "title": "University Physics,  William P . Crummet and Arthur",
+      "content": "19. University Physics,  William P . Crummet and Arthur B. W ester n, Wm.C.\nBrown (1994).\n",
+      "wordCount": 16,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 20,
+      "title": "General Physics, Morton M. Sternheim and Joseph W. K",
+      "content": "20. General Physics, Morton M. Sternheim and Joseph W. Kane, John Wiley\n(1988).\n21. Physics, Hans C. Ohanian, W.W. Norton (1989).\n22. Advanced Physics,  Keith Gibbs, Cambridge University Press(1996).\n23. Understanding Basic Mechanics, F. Reif, John W iley (1995).\n24. College Physics,  Jerry D. Wilson and Anthony J. Buffa, Prentice-Hall (1997).\n25. Senior Physics, Part – I, I.K. Kikoin and A.K. Kikoin, Mir Publishers (1987).\n26. Senior Physics, Part – II, B. Bekhovtsev, Mir Publishers (1988).\n27. Understanding Physics, K. Cummings, Patrick J. Cooney, Priscilla W.\nLaws and Edwar d F. Redish, John W iley (2005)\n28. Essentials of Physics, John D. Cutnell and Kenneth W. Johnson, John\nWiley (2005)\nGENERAL BOOKS\nFor instructive and entertaining general reading on science, you may like to read some of\nthe following books. Remember however , that many of these books ar e written at a level far\nbeyond the level of the present book.\n1.Mr. Tompkins  in paperback, G. Gamow, Cambridge University Pr ess (1967).\n2.The Universe and Dr. Einstein , C. Bar nett, T ime Inc. New Y ork (1962).\n3.Thirty years that Shook Physics , G. Gamow, Double Day, New Y ork (1966).\n4.Surely You’re Joking, Mr. Feynman , R.P. Feynman, Bantam books (1986).\n5.One, Two, Three…  Infinity\n, G. Gamow, Viking Inc. (1961).\n6.The Meaning of Relativity, A. Einstein, (Indian Edition) Oxford and IBH\nPub. Co (1965).\n7.Atomic Theory and the Description of Nature , Niels Bohr , Cambridge\n(1934).\n8.The Physical Principles of Quantum Theory , W. Heisenberg, University\nof Chicago Press (1930).\n9.The Physics- Astronomy Frontier , F. Hoyle and J.V . Narlikar , W.H.\nFreeman (1980).\n10. The Flying Circus of Physics with Answer , J. W alker , John W iley and\nSons (1977).\n11. Physics for Everyone (series), L.D. Landau and A.I. Kitaigorodski, MIR\nPublisher (1978).\nBook 1: Physical Bodies\nBook 2: Molecules\nBook 3: Electrons\nBook 4: Photons and Nuclei.\n12. Physics can be Fun , Y. Perelman, MIR Publishers (1986).\n13. Power of Ten , Philip Morrison and Eames, W.H. Freeman (1985).\n14. Physics in your Kitchen Lab ., I.K. Kikoin, MIR Publishers (1985).\n15. How Things Work : The Physics of Everyday Life , Louis A. Bloomfield,\nJohn Wiley (2005)\n16. Physics Matters : An Introduction to Conceptual Physics, James Trefil\nand Robert M. Hazen, John Wiley (2004).PHYSICS 308\nReprint 2025-26\n\nA\nAbsolute scale temperature 280\nAbsolute zero 280\nAcceleration (linear) 45\nAcceleration due to gravity 49,189\nAccuracy 22\nAction-reaction 97\nAddition of vectors 67\nAdiabatic process 311, 312\nAerofoil 262\nAir resistance 79\nAmplitude 344, 372\nAngle of contact 267, 268\nAngstrom 21\nAngular Acceleration 154\nAngular displacement 342\nAngular frequency 344, 373\nAngular momentum 155\nAngular velocity 152\nAngular wave number 372\nAntinodes 381,382\nArchimedes Principle 255\nArea expansion 281\nAtmospheric pressure 253\nAverage acceleration 45, 74\nAverage speed 42\nAverage velocity 42\nAvogardo's law 325\nB\nBanked road 104\nBarometer 254\nBeat frequency 383\nBeats 382, 383\nBending of beam 244\nBernoulli's Principle 258\nBlood pressure 276\nBoiling point 287\nBoyle's law 326\nBuckling 244INDEX\nBulk modulus 242\nBuoyant force 255\nC\nCalorimeter 285\nCapillary rise 268\nCapillary waves 370\nCarnot engine 316\nCentral forces 186\nCentre of Gravity 161\nCentre of mass 144\nCentripetal acceleration 81\nCentripetal force 104\nChange of state 287\nCharle's law 326\nChemical Energy 126\nCircular motion 104\nClausius statement 315\nCoefficient of area expansion 283\nCoefficient of linear expansion 281\nCoefficient of performance 314\nCoefficient of static friction 101\nCoefficient of viscosity 262\nCoefficient of volume expansion 281\nCold reservoir 313\nCollision 129\nCollision in two dimensions 131\nCompressibility 242, 243\nCompressions 368, 369, 374\nCompressive stress 236, 243\nConduction 290\nConservation laws 12\nConservation of angular momentum 157, 173\nConservation of Mechanical Energy 121\nConservation of momentum 98\nConservative force 121\nConstant acceleration 46,75\nContact force 100\nConvection 293\nCouple 159\nCrest 371\nCyclic process 312\nReprint 2025-26\n\nD\nDalton's l aw of partial pressure 325\nDamped oscillations 355\nDamped simple Harmonic motion 355\nDamping constant 355\nDamping force 355\nDerived units 16\nDetergent action 269\nDiastolic pressure 277\nDifferential calculus 61\nDimensional analysis 32\nDimensions 31\nDisplacement vector 66\nDisplacement 40\nDoppler effect 385, 386\nDoppler shift 387\nDriving frequency 358\nDynamics of  rotational motion 169\nE\nEfficiency of heat engine 313\nElastic Collision 129\nElastic deformation 236, 238\nElastic limit 238\nElastic moduli 239\nElasticity 235\nElastomers 239\nElectromagnetic force 8\nEnergy 117\nEquality of vectors 66\nEquation of continuity 257\nEquilibrium of a particle 99\nEquilibrium of Rigid body 158\nEquilibrium position 341, 342, 353\nErrors in measurement 22\nEscape spee d 193\nF\nFirst law of Thermodynamics 307\nFluid pressure 251\nForce 94\nForced frequency 357\nForced oscillations 357, 358\nFracture point 238\nFree Fall 49\nFree-body diagram 100\nFrequency of periodic motion 342, 372\nFriction 101\nFundamental Forces 6\nFundamental mode 381\nFusion 287\nG\nGauge  pressure 253\nGeocentric model 183Geostationary satellite 196\nGravitational constant 189\nGravitational Force 8, 192\nGravitational potential energy 191\nGravity  waves 370\nH\nHarmonic frequency 380, 381\nHarmonics 380, 381\nHeat capacity 284\nHeat engines 313\nHeat pumps 313\nHeat 279\nHeliocentric model 183\nHertz 343\nHooke's law 238\nHorizontal range 78\nHot reservoir 313\nHydraulic brakes 255, 256\nHydraulic lift 255, 256\nHydraulic machines 255\nHydraulic pressure 238\nHydraulic stress 238, 243\nHydrostatic paradox 253\nI\nIdeal gas equation 280\nIdeal gas 280, 325\nImpulse 96\nInelastic collision 129\nInitial phase angle 372\nInstantaneous acceleration 74\nInstantaneous speed 45\nInstantaneous velocity 43\nInterference 377\nInternal energy 306, 330\nIrreversible engine 315, 317\nIrreversible processes 315\nIsobaric process 311, 312\nIsochoric process 311, 312\nIsotherm 310\nIsothermal proce ss 311\nK\nKelvin-Planck statement 315\nKepler's laws of planetary motion 184\nKinematics of Rotational Motion 167\nKinematics 39\nKinetic energy of rolling motion 174\nKinetic Energy 117\nKinetic interpretation of temperature 329\nKinetic theory of gases 328\nL\nLaminar flow 258, 264\nLaplace correction 376310 PHYSICS\nReprint 2025-26\n\nLatent heat of fusion 290\nLatent heat of vaporisation 290\nLatent heat 289\nLaw of cosine 72\nLaw of equipartition of energy 332\nLaw of Inertia 90\nLaw of sine 72\nLinear expansion 281\nLinear harmonic oscillator 349, 351\nLinear momentum 155\nLongitudinal strain 236\nLongitudinal strain 236, 239\nLongitudinal stress 236\nLongitudinal W ave 369, 376\nM\nMagnus effect 261\nManometer 254\nMass Energy Equivalence 126\nMaximum height of projectile 78\nMaxwell Distribution 331\nMean free path 324, 335\nMeasurement of length 18\nMeasurement of mass 21\nMeasurement of temperature 279\nMeasurement of time 22\nMelting point 286\nModes 380\nModulus of elasticity 238\nModulus of rigidity 242\nMolar specific heat capacity 284, 308\nat constant pressure\nMolar specific heat capacity 284, 308\nat constant volume\nMolar specific heat capacity 284\nMolecular nature of matter 323\nMoment of Inertia 163\nMomentum 93\nMotion in a plane 72\nMultiplication of vectors 67\nMusical instruments 384\nN\nNatural frequency 358\nNewton's first law of motion 91\nNewton's Law of cooling 295\nNewton's law of gravitation 185\nNewton's second law of motion 93\nNewton's third law of motion 96\nNewtons' formula for speed of sound 377\nNodes 381\nNormal Modes 381, 382, 384\nNote 384, 385\nNuclear Energy 126\nNull vector 68O\nOdd harmonics 382\nOrbital velocity/speed 194\nOrder of magnitude 28\nOscillations 342\nOscillatory motion 342\nP\nParallax method 18\nParallelogram law of addition of vectors 66\nPascal's law 252\nPath length 40\nPath of projectile 78\nPeriodic force 358\nPeriodic motion 342\nPeriodic time 342\nPermanent set 238\nPhase angle 344\nPhase constant 344\nPipe open at both ends 382\nPipe open at one end 381\nPitch 384\nPlastic deformation 238\nPlasticity 235\nPolar satellite 196\nPosition vector and displacement 73\nPotential energy of a spring 123\nPotential energy 120\nPower 128\nPrecession 143\nPressure gauge 253\nPressure of an ideal gas 328\nPressure 250\nPrinciple of Conservation of Energy 128\nPrinciple of moments 160\nProgressive wave 373\nProjectile motion 77\nProjectile 77\nPropagation constant 371\nPulse 369\nQ\nQuasi-static process 310, 311\nR\nRadiation 294\nRadius of Gyration 164\nRaman effect 11\nRarefactions 369\nRatio of specific heat capacities 334\nReaction time 51\nReal gases 326\nRectilinear motion 39\nReductionism 2\nReflected wave 379\nReflection of waves 378INDEX 311\nReprint 2025-26\n\nRefracted wave 379\nRefrigerator 313\nRegelation 287\nRelative velocity in two dimensions 76\nRelative velocity 51\nResolution of vectors 69\nResonance 358\nRestoring force 236, 350, 369\nReversible engine 316, 317\nReversible processes 315\nReynolds number 264\nRigid body 141\nRolling motion 173\nRoot mean square speed 329\nRotation 142\nS\nS.H.M. (Simple Harmonic Motion) 343\nScalar -product 114\nScalars 65\nScientific Method 1\nSecond law of Thermodynamics 314\nShear modulus 242\nShearing strain 237\nShearing stress 237, 243\nSI units 16\nSignificant figures 27\nSimple pendulum 343, 353\nSoap bubbles 268\nSonography 387\nSound 375\nSpecific hea t capacity  of Solids 308, 335\nSpecific heat capacity of Gases 333, 334\nSpecific heat capacity of W ater 335\nSpecific heat capacity 285, 308\nSpeed of efflux 259\nSpeed of Sound 375, 376\nSpeed of Transverse wave 375, 376\non a stretched string\nSphygmomanometer 277\nSpring constant 352, 355\nStanding waves 380\nStationary waves 382\nSteady flow 257\nStethoscope 281\nStokes' law 263\nStopping distance 50\nStrain 236\nStreamline flow 257, 258\nStreamline 257, 258\nStress 236\nStress-strain curve 238\nStretched string 374\nSublimation 294\nSubtraction of vectors 67\nSuperposition principle 378\nSurface energy 265Surface tension 265\nSymmetry 146\nSystem of units 16\nSystolic pressure 277\nT\nTemperature 279\nTensile strength 238\nTensile stress 236\nTerminal velocity 264\nTheorem of parallel axes 167\nTheorem of perpendicular axes 165\nThermal conductivity 291\nThermal equilibrium 304\nThermal expansion 281\nThermal stress 284\nThermodynamic processes 310\nThermodynamic state variables 309\nThermodynamics 3, 303\nTime of flight 78\nTorque 154\nTorricelli's Law 259, 260\nTrade wind 294\nTransmitted wave 379\nTravelling wave 380\nTriangle law of addition of vectors 66\nTriple point 288\nTrough 371\nTune 384\nTurbul ent flow 258, 259\nU\nUltimate strength 238\nUltrasonic waves 387\nUnification of Forces 10\nUnified Atomic Mass Unit 21\nUniform circular motion 79\nUniform Motion 41\nUniformly accelerated motion 47\nUnit vectors 70\nV\nVane 356\nVaporisation 288\nVector -product 151\nVectors 66\nVelocity amplitude 349\nVenturi meter 260\nVibration 341\nViscosity 262\nVolume expansion 281\nVolume Strain 238\nW\nWave equation 374\nWavelength 372\nWave speed 374312 PHYSICS\nReprint 2025-26\n\nWaves 368\nWaxing and waning of sound 385\nWeak nuclear for ce 9\nWeightlessness 197\nWork done by variable for ce 118\nWork 116\nWork-Ener gy Theor em 116\nWorking substance 313Y\nYield P oint 238\nYield strength 238\nYoung's  modulus 239\nZ\nZeroth law of Thermodynamics 305313 INDEX\nReprint 2025-26\n\n314 PHYSICS\nNOTES\nReprint 2025-26\n\n",
+      "wordCount": 1779,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 15,
+    "totalWords": 4074
+  }
+}

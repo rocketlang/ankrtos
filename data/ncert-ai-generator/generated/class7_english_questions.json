@@ -1,0 +1,276 @@
+{
+  "class": 7,
+  "subject": "English",
+  "book": "Honeycomb & An Alien Hand",
+  "board": "CBSE",
+  "total_questions": 8,
+  "questions": [
+    {
+      "question": "Read the following lines from the poem 'The Squirrel' (Honeycomb) and answer the question below:\n\n'He wore a question mark for tail,\nAn overcoat of gray,\nHe sat up straight to eat a nut.\nHe liked to tease and play.'\n\nWhat two things does the poet compare the squirrel's tail to? What does this comparison tell us about the poet's observation?",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Poetry analysis - The Squirrel",
+      "answer": "The poet compares the squirrel's tail to a question mark. This comparison shows that the poet observes the squirrel's curled tail shape which resembles the punctuation mark '?'. It tells us that the poet observes nature closely and uses creative, everyday comparisons to describe animals in a playful, imaginative way that helps readers visualize the squirrel clearly.",
+      "marking_scheme": [
+        {
+          "point": "Correctly identifies the comparison to 'a question mark'",
+          "marks": 1
+        },
+        {
+          "point": "Explains that the tail's curled shape resembles the punctuation mark",
+          "marks": 1
+        },
+        {
+          "point": "States that it shows the poet's close observation and creative use of everyday comparisons",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Look at the first line of the stanza. What does 'He wore' refer to?",
+        "Think about the shape of a squirrel's tail when it sits. What common symbol does it look like?"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeycomb & An Alien Hand",
+      "topic_id": "1"
+    },
+    {
+      "question": "Read the following lines from the poem 'The Squirrel' (Honeycomb) and answer the question below:\n\n'He wore a question mark for tail,\nAn overcoat of gray,\nHe sat up straight to eat a nut.\nHe liked to tease and play.'\n\nWhat two main characteristics of the squirrel are described in these lines?",
+      "marks": 2,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Poetry analysis - The Squirrel",
+      "answer": "The two main characteristics of the squirrel described in these lines are:\n1. Its physical appearance: The squirrel has a tail that looks like a question mark and wears a gray overcoat (referring to its gray fur).\n2. Its playful behavior: The squirrel likes to tease and play, showing its lively and mischievous nature.",
+      "marking_scheme": [
+        {
+          "point": "Correctly identifies physical appearance (question mark tail/gray overcoat)",
+          "marks": 1
+        },
+        {
+          "point": "Correctly identifies playful behavior (teasing/playing)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Look for words that describe how the squirrel looks.",
+        "Look for words that describe what the squirrel does."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeycomb & An Alien Hand",
+      "topic_id": "1"
+    },
+    {
+      "question": "Read the following extract from the story 'The Ashes that Made Trees Bloom' (Honeycomb) and answer the question below:\n\n\"The old man and his wife were very poor. They had a little dog, which they loved as if it were their child. They shared their scanty meals with it and talked to it all day long.\"\n\nBased on the passage, describe the relationship between the old couple and their dog. What does this tell you about their character?",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Character analysis & Inference",
+      "answer": "The old couple had a deeply affectionate and parental relationship with their dog. Despite being very poor, they treated the dog as their own child by sharing their limited food and constantly talking to it. This shows that they were compassionate, kind-hearted, and capable of selfless love, valuing emotional bonds over material possessions.",
+      "marking_scheme": [
+        {
+          "point": "Identifies the nature of relationship (parental/affectionate)",
+          "marks": 1
+        },
+        {
+          "point": "Explains evidence from passage (sharing food, constant communication)",
+          "marks": 1
+        },
+        {
+          "point": "Infers character traits (compassionate, kind, selfless)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Look for words that show how they treated the dog.",
+        "Think about what their actions reveal when they themselves are poor."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeycomb & An Alien Hand",
+      "topic_id": "1"
+    },
+    {
+      "question": "Read the following lines from the poem 'The Shed' by Frank Flynn (Honeycomb):\n\n'There's a shed at the bottom of our garden\nWith a spider's web hanging across the door,\nThe hinges are rusty and creak in the wind.'\n\nWhat mood or atmosphere does the poet create in these opening lines? Explain with reference to two specific details from the text.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Poetry analysis - Mood and atmosphere",
+      "answer": "The poet creates a mood of mystery, neglect, and slight eeriness. The 'spider's web hanging across the door' suggests the shed is unused and abandoned, adding a sense of stillness and isolation. The 'rusty hinges' that 'creak in the wind' introduce a auditory detail that evokes emptiness and perhaps a hint of suspense, as if the shed holds untold stories or secrets. Together, these details build an atmosphere that is both intriguing and slightly unsettling, inviting the reader's curiosity.",
+      "marking_scheme": [
+        {
+          "point": "Correct identification of mood (mystery/neglect/ eeriness)",
+          "marks": 1
+        },
+        {
+          "point": "Explanation of first detail: spider's web shows abandonment/unused space",
+          "marks": 1
+        },
+        {
+          "point": "Explanation of second detail: rusty hinges creaking adds auditory suspense/emptiness",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Think about what spider webs and rusty sounds might suggest about a place.",
+        "Consider both visual (spider web) and auditory (creaking) details."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeycomb & An Alien Hand",
+      "topic_id": "1"
+    },
+    {
+      "question": "Read the following extract from 'The Ashes that Made Trees Bloom' (Honeycomb) and answer the questions that follow:\n\n\"The old man and his wife were very poor. They had a little dog, which they loved as if it were their child. One day, the dog began to scratch at a spot in the garden. The old man, thinking there might be a bone buried there, dug at the spot and found a box full of gold coins.\"\n\n(i) How does the author establish the emotional bond between the old couple and their dog in the opening lines? (2 marks)\n(ii) The discovery of the gold coins is a turning point in the story. What does this event reveal about the themes of loyalty and reward as presented in the story? Support your answer with evidence from the text. (4 marks)",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "reading_comprehension",
+      "topic": "Character analysis and Theme identification",
+      "answer": "(i) The author establishes the emotional bond by using the simile 'loved as if it were their child', which elevates the dog from a pet to a family member. This comparison suggests deep affection, care, and parental attachment, highlighting the couple's loneliness and capacity for love despite their poverty. (ii) The event reveals that loyalty is rewarded unexpectedly and that genuine affection brings prosperity. The dog's instinctive action ('began to scratch') leads to the discovery, showing that the couple's kindness to the dog is reciprocated. The theme suggests that selfless love (treating the dog as their child) is rewarded with material wealth (gold coins), blending moral values with folktale elements. Evidence includes the dog's intuitive behavior and the couple's consistent care, which contrasts with the greedy neighbor's later actions.",
+      "marking_scheme": [
+        {
+          "point": "Identifies and explains the simile 'loved as if it were their child' to show emotional depth",
+          "marks": 2
+        },
+        {
+          "point": "Analyzes the theme of loyalty: dog's actions as reciprocation of care",
+          "marks": 1.5
+        },
+        {
+          "point": "Analyzes the theme of reward: connection between selfless love and unexpected prosperity",
+          "marks": 1.5
+        },
+        {
+          "point": "Supports answer with textual evidence (e.g., 'scratch at a spot', 'box full of gold coins')",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analyzing",
+      "hints": [
+        "Focus on the literary device used to describe the relationship in part (i).",
+        "For part (ii), consider how the dog's behavior contrasts with human greed in the full story."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeycomb & An Alien Hand",
+      "topic_id": "1"
+    },
+    {
+      "question": "Read the following extract from 'The Ashes that Made Trees Bloom' (Honeycomb) and answer the questions that follow:\n\n\"The old man and his wife were overjoyed. They had never seen so much gold in their lives. They thanked the dog again and again, and fed him the best rice cakes. But the wicked neighbour, hearing of their good fortune, grew jealous. He borrowed the dog, took him to the same spot, and ordered him to find treasure. The dog only scratched at a spot where there was a dead snake.\"\n\na) Why did the wicked neighbour borrow the dog? What does this reveal about his character? (2 marks)\nb) Contrast the reactions of the old couple and the wicked neighbour to the dog's actions. What theme about human nature does this highlight? (3 marks)\nc) Identify and explain one literary device used in this extract. (1 mark)",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "reading_comprehension",
+      "topic": "Character analysis and Theme identification",
+      "answer": "a) The wicked neighbour borrowed the dog out of greed and jealousy after hearing about the old couple's good fortune. This reveals his envious, selfish, and opportunistic character, as he wants to exploit the dog for personal gain without genuine care for the animal.\n\nb) The old couple reacted with gratitude and kindness - they thanked the dog repeatedly and fed him their best rice cakes, showing appreciation and reciprocity. In contrast, the wicked neighbour acted with entitlement and cruelty - he commanded the dog to find treasure and received only a dead snake as result. This highlights the theme that greed and jealousy lead to misfortune, while gratitude and kindness bring rewards. The extract shows how different human values produce different outcomes.\n\nc) One literary device used is **contrast** (or juxtaposition). The writer contrasts the old couple's genuine happiness and gratitude with the neighbour's jealousy and greed, emphasizing the moral lesson about good versus bad character.",
+      "marking_scheme": [
+        {
+          "point": "Correct identification of neighbour's motive (greed/jealousy) and character traits (selfish/opportunistic)",
+          "marks": 2
+        },
+        {
+          "point": "Accurate contrast of reactions: old couple's gratitude vs neighbour's entitlement",
+          "marks": 1
+        },
+        {
+          "point": "Correct theme identification about human values and consequences",
+          "marks": 1
+        },
+        {
+          "point": "Explanation of how the theme is demonstrated through the characters",
+          "marks": 1
+        },
+        {
+          "point": "Correct identification and explanation of literary device (contrast/juxtaposition)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Look for keywords that show emotions: 'overjoyed', 'thanked', 'jealous', 'borrowed'",
+        "Consider what each character's actions say about their values",
+        "Think about what lesson the author wants to teach through these contrasting characters"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeycomb & An Alien Hand",
+      "topic_id": "1"
+    },
+    {
+      "question": "Write a short paragraph (about 80-100 words) on 'My Favourite Festival'.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "paragraph_writing",
+      "topic": "Paragraph writing",
+      "answer": "My favourite festival is Diwali. It is the festival of lights celebrated across India. We clean our house, decorate it with diyas and rangoli, and wear new clothes. In the evening, we light diyas and candles to welcome Goddess Lakshmi. We also burst crackers, but now we celebrate a green Diwali to protect the environment. We exchange sweets and gifts with family and friends. Diwali teaches us that good always wins over evil, as it marks Lord Rama's return to Ayodhya. I love Diwali because it brings joy, light, and togetherness.",
+      "marking_scheme": [
+        {
+          "point": "Clear topic sentence introducing the festival",
+          "marks": 1
+        },
+        {
+          "point": "Description of activities and celebrations (2-3 details)",
+          "marks": 1
+        },
+        {
+          "point": "Proper conclusion with personal reflection or moral",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Start with naming your favourite festival.",
+        "Describe what you do during the festival.",
+        "End with why you like it or what it means to you."
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeycomb & An Alien Hand",
+      "topic_id": "2"
+    },
+    {
+      "question": "Write a short paragraph (about 80-100 words) on 'My Favourite Festival'.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "writing_task",
+      "topic": "Paragraph writing",
+      "answer": "My favourite festival is Diwali, the festival of lights. It is celebrated in October or November. We clean our house and decorate it with diyas and colourful rangoli. On Diwali night, we wear new clothes, light diyas and candles, and worship Goddess Lakshmi. We also burst crackers and enjoy delicious sweets like ladoos and barfis. My family exchanges gifts and visits relatives. Diwali teaches us that good always wins over evil. I love this festival because it brings happiness and togetherness.",
+      "marking_scheme": [
+        {
+          "point": "Clear introduction naming the festival",
+          "marks": 1
+        },
+        {
+          "point": "Description of 2-3 activities or customs",
+          "marks": 1
+        },
+        {
+          "point": "Proper conclusion expressing personal feeling",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Choose one festival you know well",
+        "Describe what you do during the festival",
+        "Explain why you like it"
+      ],
+      "class": 7,
+      "board": "CBSE",
+      "subject": "English",
+      "book": "Honeycomb & An Alien Hand",
+      "topic_id": "2"
+    }
+  ]
+}

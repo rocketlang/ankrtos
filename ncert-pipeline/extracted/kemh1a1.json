@@ -1,0 +1,101 @@
+{
+  "filename": "kemh1a1.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 2,
+      "title": "Note that there are infinite number of terms in the",
+      "content": "2. Note that there are infinite number of terms in the expansion of (1+ x)m, when m\nis a negative integer or a fraction\nConsider ( )ma b+  = 1 1m m\nm b ba aa a    + = +        \n=()211 ...1.2m m mb ba ma a  − + + +       \n=()1 2 2 1...1.2m m m m ma ma b a b− −−+ + +\nThis expansion is valid when 1<b\na or equivalently when | b | < | a |.\nThe general term in the expansion of ( a + b)m is\n()()() 1 2 ... 1\n1.2.3...m r rm m m m r a b\nr−− − − +\nWe give below certain particular cases of Binomial Theorem, when we assume\n1x<, these are left to students as exercises:\n1.(1 + x) – 1 = 1 – x + x2 – x3 + . . .\n2.(1 – x) – 1 = 1 + \nx + x2 + x3 + . . .\n3.(1 + x) – 2 = 1 –2 x + 3x2  –  4 x3 + . . .\n4.(1  –  x) – 2 = 1 +2 x + 3x2 + 4x3 + . . .\nExample 1  Expand 1\n212x− −  , when | x | < 2.\nReprint 2025-26\n\n316        MA THEMA TICS\nSolution We have\n1\n212x− −   =21 1 3\n2 2 211 2 1 2 2x x....    − − −    −       + + − +       \n=231 ...4 32+ + +x x\nA.1.3  Infinite Geometric Series\nFrom Chapter 9, Section 9.5, a sequence a1, a2, a3, ..., an is called G.P ., if\n1+k\nka\na = r (constant) for k = 1, 2, 3, ..., n–1. Particularly , if we take a1 = a, then the\nresulting sequence a, ar, ar2, ..., arn–1\n  is taken as the standard form of G.P ., where a is\nfirst term and r, the common ratio of G.P .\nEarlier , we have discussed the formula to find the sum of finite series\na + ar + ar2 +  ... + arn – 1 which is given by\n() 1\n1n\nna r\nSr−\n=−.\nIn this section, we state the formula to find the sum of infinite geometric series\na + ar + ar2 + ... + arn – 1 + ... and illustrate the same by examples.\nLet us consider the G.P . 2 41, , ,...3 9\nHere a = 1, r = 2\n",
+      "wordCount": 455,
+      "examples": [
+        {
+          "chapterNumber": 2,
+          "exampleNumber": 1,
+          "title": "Expand 1",
+          "question": "Example 1  Expand 1\n212x− −  , when | x | < 2.\nReprint 2025-26\n\n316        MA THEMA TICS\nSolution We have\n1\n212x− −   =21 1 3\n2 2 211 2 1 2 2x x....    − − −    −       + + − +       \n=231 ...4 32+ + +x x\nA.1.3  Infinite Geometric Series\nFrom Chapter 9, Section 9.5, a sequence a1, a2, a3, ..., an is called G.P ., if\n1+k\nka\na = r (constant) for k = 1, 2, 3, ..., n–1. Particularly , if we take a1 = a, then the\nresulting sequence a, ar, ar2, ..., arn–1\n  is",
+          "solution": "We have\n1\n212x− −   =21 1 3\n2 2 211 2 1 2 2x x....    − − −    −       + + − +       \n=231 ...4 32+ + +x x\nA.1.3  Infinite Geometric Series\nFrom Chapter 9, Section 9.5, a sequence a1, a2, a3, ..., an is called G.P ., if\n1+k\nka\na = r (constant) for k = 1, 2, 3, ..., n–"
+        }
+      ],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 1,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 3,
+      "title": "We have",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 8,
+      "title": ", we discussed the Binomial Theorem in which the index was a positive",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 9,
+      "title": "on Sequences and Series, a sequence a1, a2, ..., an, ...",
+      "content": "Chapter 9 on Sequences and Series, a sequence a1, a2, ..., an, ...\nhaving infinite number of terms is called infinite sequence  and its indicated sum, i.e.,\na1 + a2 + a3 + ... + an + ... is called an infinte series associated with infinite sequence.\nThis series can also be expressed in abbreviated form using the sigma notation, i.e.,\na1 + a2 + a3 + .  . .  + \nan + . . . = \n1k\nka∞\n=∑\nIn this Chapter , we shall study about some special types of series which may be\nrequired in different problem situations.\nA.1.2  Binomial Theorem for any Index\nIn Chapter 8, we discussed the Binomial Theorem in which the index was a positive\ninteger . In this Section, we state a more general form of the theorem in which the\nindex is not necessarily a whole number . It gives us a particular type of infinite series,\ncalled Binomial Series . We illustrate few applications, by examples.\nWe know the formula\n(1 + x)n = 0Cn + 1Cn x + . . .  + Cn\nn xn\nHere, n is non-negative integer . Observe that if we replace index n by negative\ninteger or a fraction, then the combinations Cn\nr do not make any sense.\nWe now state (without proof), the Binomial Theorem, giving an infinite series in\nwhich the index is negative or a fraction and not a whole number .\nTheorem  The formula\n( )()()()2 3 1 1 21 11 2 1 2 3m m m m m mx mx x x .... . .− − −+ = + + + +\nholds whenever 1x<.1 Appendix\nINFINITE SERIES\nReprint 2025-26\n\nINFINITE SERIES        315\nRemark  1. Note carefully the condition | x | < 1, i.e., – 1< x < 1 is necessary when m\nis negative integer or a fraction. For example, if we take x =  – 2 and m =  – 2, we\nobtain\n( ) ( )( )()()( )2 2 2 31 2 1 2 2 2 ...1.2− − −− = + − − + − +\nor 1= 1 + 4 + 12 + . . .\nThis is not possible\n2. Note that there are infinite number of terms in the expansion of (1+ x)m, when m\nis a negative integer or a fraction\nConsider ( )ma b+  = 1 1m m\nm b ba aa a    + = +        \n=()211 ...1.2m m mb ba ma a  − + + +       \n=()1 2 2 1...1.2m m m m ma ma b a b− −−+ + +\nThis expansion is valid when 1<b\na or equivalently when | b | < | a |.\nThe general term in the expansion of ( a + b)m is\n()()() 1 2 ... 1\n1.2.3...m r rm m m m r a b\nr−− − − +\nWe give below certain particular cases of Binomial Theorem, when we assume\n1x<, these are left to students as exercises:\n1.(1 + x) – 1 = 1 – x + x2 – x3 + . . .\n2.(1 – x) – 1 = 1 + \nx + x2 + x3 + . . .\n3.(1 + x) – 2 = 1 –2 x + 3x2  –  4 x3 + . . .\n4.(1  –  x) – 2 = 1 +2 x + 3x2 + 4x3 + . . .\nExample 1  Expand 1\n212x− −  , when | x | < 2.\nReprint 2025-26\n\n316        MA THEMA TICS\nSolution We have\n1\n212x− −   =21 1 3\n2 2 211 2 1 2 2x x....    − − −    −       + + − +       \n=231 ...4 32+ + +x x\nA.1.3  Infinite Geometric Series\nFrom Chapter 9, Section 9.5, a sequence a1, a2, a3, ..., an is called G.P ., if\n1+k\nka\na = r (constant) for k = 1, 2, 3, ..., n–1. Particularly , if we take a1 = a, then the\nresulting sequence a, ar, ar2, ..., arn–1\n  is taken as the standard form of G.P ., where a is\nfirst term and r, the common ratio of G.P .\nEarlier , we have discussed the formula to find the sum of finite series\na + ar + ar2 +  ... + arn – 1 which is given by\n() 1\n1n\nna r\nSr−\n=−.\nIn this section, we state the formula to find the sum of infinite geometric series\na + ar + ar2 + ... + arn – 1 + ... and illustrate the same by examples.\nLet us consider the G.P . 2 41, , ,...3 9\nHere a = 1, r = 2\n3. We have\n212 33 12 313n\nn\nnS −     = = −      −... (1)\nLet us study the behaviour of  2\n3n \n  as n becomes lar ger and lar ger.\nReprint 2025-26\n\nINFINITE SERIES        317\nn 1 5 10 20\n2\n3n \n  0.6667 0.1316872428 0.01734152992 0.00030072866\nWe observe that as n becomes lar ger and lar ger, 2\n3n \n  becomes closer and closer to\nzero. Mathematically , we say that as n becomes suf ficiently lar ge, 2\n3n \n  becomes\nsufficiently small. In other words, as 2, 03n\nn →∞ →  . Consequently , we find that\nthe sum of infinitely many  terms is given by S = 3.\nThus , for infinite geometric progression a, ar, ar2, ..., if numerical value of common\nratio r is less than 1, then\nnS=() 1\n1na r\nr−\n− =1 1na ar\nr r−− −\nIn this case, 0nr→  as →∞n  since | | 1<r  and then 0\n1nar\nr→\n−. Therefore,\n1naSr→− as n→∞ .\nSymbolically , sum to infinity of infinite geometric series is denoted by S.  Thus,\nwe have S1a\nr=−\nFor example\n(i)    2 31 1 1 11 ... 21 22 212+ + + + = =\n−\n(ii)   2 31 1 1 1 1 21 ...1 1 2 3 2 21 12 2− + − + = = =\n + − −  \nReprint 2025-26\n\n318        MA THEMA TICS\nExample 2  Find the sum to infinity of the G.P . ;\n5 5 5, , ,....4 16 64− −\nSolution Here 5\n4a−=  and 1\n4r=− . Also | | 1r<.\nHence, the sum to infinity is 5 5\n4 411 514 4− −\n= =−\n+.\nA.1.4  Exponential Series\nLeonhard Euler (1707 – 1783), the great Swiss mathematician introduced the number\ne in his calculus text in 1748. The number e is useful  in calculus as πin the study of the\ncircle.\nConsider the following infinite series of numbers\n1 1 1 11 ...1! 2! 3! 4!+ + + + + ... (1)\nThe sum of the series given in (1) is denoted by the number e\nLet us estimate the value of the number e.\nSince every term of the series (1) is positive, it is clear that its sum is also positive.\nConsider the two sums\n1 1 1 1... ...3! 4! 5! ! n+ + + + + ... (2)\nand2 3 4 11 1 1 1.... ...\n2 2 2 2n−+ + + + + ... (3)\nObserve that\n1 1\n3! 6= and 21 1\n4 2=, which gives 21 1\n3!2<\n1 1\n4! 24=  and 31 1\n8 2=, which gives 31 1\n4! 2<\n1 1\n5! 120=  and 41 1\n16 2= , which gives 41 1\n5! 2< .\nReprint 2025-26\n\nINFINITE SERIES        319\nTherefore, by analogy , we can say that\n11 1\n!2nn−< , when n  > 2\nWe observe that each term in (2) is less than the corresponding term in (3),\nTherefore 2 3 4 11 1 1 1 1 1 1 1... ... ...3! 4! 5! ! 2 2 2 2nn−   + + + + < + + + + +      ... (4)\nAdding1 111! 2! + +   on both sides of (4), we get,\n1 1 1 1 1 11 ... ...1! 2! 3! 4! 5! ! n   + + + + + + + +      \n2 3 4 11 1 1 1 1 11 ... ...1! 2! 2 2 2 2n−     < + + + + + + + +          ... (5)\n= 2 3 4 11 1 1 1 11 1 ... ...22 2 2 2n−   + + + + + + + +      \n= 11 1 2112+ = +\n−= 3\nLeft hand side of (5) represents the series (1). Therefore e < 3 and also e > 2 and\nhence 2 < e < 3.\nRemark  The exponential series involving variable  x can be expressed as\n2 3\n1 ... ...1! 2! 3! !n\nx x x x xen= + + + + + +\nExample 3 Find the coefficient of x2 in the expansion of  e2x+3 as a series in\npowers of x.\nSolution  In the exponential series\nxe =2 3\n11 ! 2! 3!x x x... + + + +\nreplacing  x by (2 x + 3), we get\nReprint 2025-26\n\n320        MA THEMA TICS\n2 3xe+ =()()22 3 2 31 ...1! 2!x x+ ++ + +\nHere, the general term is () 2 3\n!nx\nn+ = (3+2 )\n!nx\nn. This can be expanded by the\nBinomial Theorem as\n( ) ( ) ( )2 1 2\n1 213 C 3 2 C 3 2 ... 2 .!n n n n n nx x xn− −   + + + + \nHere, the coefficient of x2 is 2 2\n2C 3 2\n!− n n\nn. Therefore, the coefficient of x2 in the whole\nseries is\n2 2\n2\n2C 3 2n n\nn n!− ∞\n=∑  =()2\n21 32!n\nnn n\nn− ∞\n=−∑\n=( )–2\n2322 !n\nnn∞\n=−∑   [using n! = n (n – 1) ( n  –  2)!]\n=2 33 3 32 1 ...1! 2! 3! + + + + \n \n=2e3 .\nThus 2 e3 is the coefficient of x2 in the expansion of e2x+3.\nAlternatively  e2x+3 = e3 . e2x\n=2 3\n3 2 (2 ) (2 )1 ...1! 2! 3!x x xe + + + + \n \nThus, the coefficient of x2 in the expansion of  e2x+3 is 2\n3 3 2. 22!e e=\nExample 4  Find the value of e2, rounded off to one decimal place.\nSolution  Using the formula of exponential series involving x, we have\n2 3\n1 ... ...\n1! 2! 3! !n\nx x x x xe\nn= + + + + + +\nReprint 2025-26\n\nINFINITE SERIES        321\nPutting  x  = 2, we get\n2 3 4 5 6\n2 2 2 2 2 2 21 ...1! 2! 3! 4! 5! 6!e= + + + + + + +\n = 4 4 41 2 2 ...3 3 15 452+ + + + + + +\n ≥ the sum of first seven terms ≥ 7.355.\nOn the other hand, we have\n2 3 4 5 2 3\n2\n2 32 2 2 2 2 2 2 21 1 ...1! 2! 3! 4! 5! 6 6 6e   < + + + + + + + + +   \n   \n = 24 1 17 1 ...15 3 3  + + + +      = 4 171 1513 \n \n+ \n −   = 27 7.45+ = .\nThus, e2 lies between 7.355 and 7.4. Therefore, the value of e2, rounded off to one\ndecimal place, is 7.4.\nA.1.5  Logarithmic Series\nAnother very important series is logarithmic series which is also in the form of infinite\nseries. We state the following result without proof and illustrate its application with an\nexample.\nTheorem  If | x | < 1, then\n( )2 3\nlog 1 ...2 3ex xx x+ = − + −\nThe series on the right hand side of the above is called the logarithmic series .\nANote    The expansion of loge (1+x) is valid for x = 1. Substituting x = 1 in the\nexpansion of loge (1+x), we get\n1 1 1log 2 1 – – ...2 3 4e= + +\nReprint 2025-26\n\n322        MA THEMA TICS\nExample 5  If ,α β are the roots of the equation 20 x px q− + = , prove that\n( ) ( )2 2 3 3\n2 2 3log 1 ...2 3e px qx x x xα +βα +β+ + = α+β − + −\nSolution Right hand side  = 2 2 3 3 2 2 3 3\n... ...2 3 2 3x x x xx x    α α β βα − + − + β − + −   \n   \n=()() log 1 log 1e x x+α + +β\n=()( )2log 1e x x+ α+β +αβ\n=()2log 1e px qx+ +   = Left hand side.\nHere, we have used the facts α+β = p and qαβ=  . We know this from the\ngiven roots of the quadratic equation. We have also assumed that both | |xα< 1 and\n| |xβ< 1.\n—vvv\nvv—\nReprint 2025-26\n\n",
+      "wordCount": 2299,
+      "examples": [
+        {
+          "chapterNumber": 9,
+          "exampleNumber": 1,
+          "title": "Expand 1",
+          "question": "Example 1  Expand 1\n212x− −  , when | x | < 2.\nReprint 2025-26\n\n316        MA THEMA TICS\nSolution We have\n1\n212x− −   =21 1 3\n2 2 211 2 1 2 2x x....    − − −    −       + + − +       \n=231 ...4 32+ + +x x\nA.1.3  Infinite Geometric Series\nFrom Chapter 9, Section 9.5, a sequence a1, a2, a3, ..., an is called G.P ., if\n1+k\nka\na = r (constant) for k = 1, 2, 3, ..., n–1. Particularly , if we take a1 = a, then the\nresulting sequence a, ar, ar2, ..., arn–1\n  is",
+          "solution": "We have\n1\n212x− −   =21 1 3\n2 2 211 2 1 2 2x x....    − − −    −       + + − +       \n=231 ...4 32+ + +x x\nA.1.3  Infinite Geometric Series\nFrom Chapter 9, Section 9.5, a sequence a1, a2, a3, ..., an is called G.P ., if\n1+k\nka\na = r (constant) for k = 1, 2, 3, ..., n–"
+        },
+        {
+          "chapterNumber": 9,
+          "exampleNumber": 2,
+          "title": "Find the sum to infinity of the G.P . ;",
+          "question": "Example 2  Find the sum to infinity of the G.P . ;\n5 5 5, , ,....4 16 64− −\nSolution Here 5\n4a−=  and 1\n4r=− . Also | | 1r<.\nHence, the sum to infinity is 5 5\n4 411 514 4− −\n= =−\n+.\nA.1.4  Exponential Series\nLeonhard Euler (1707 – 1783), the great Swiss mathematician introduced the number\ne in his calculus text in 1748. The number e is useful  in calculus as πin the study of the\ncircle.\nConsider the following infinite series of numbers\n1 1 1 11 ...1! 2! 3! 4!+ + + + + ... (1)\nThe sum of the seri",
+          "solution": "Here 5\n4a−=  and 1\n4r=− . Also | | 1r<.\nHence, the sum to infinity is 5 5\n4 411 514 4− −\n= =−\n+.\nA.1.4  Exponential Series\nLeonhard Euler (1707 – 1783), the great Swiss mathematician introduced the number\ne in his calculus text in 174"
+        },
+        {
+          "chapterNumber": 9,
+          "exampleNumber": 3,
+          "title": "Find the coefficient of x2 in the expansion of  e2x+3 as a series in",
+          "question": "Example 3 Find the coefficient of x2 in the expansion of  e2x+3 as a series in\npowers of x.\nSolution  In the exponential series\nxe =2 3\n11 ! 2! 3!x x x... + + + +\nreplacing  x by (2 x + 3), we get\nReprint 2025-26\n\n320        MA THEMA TICS\n2 3xe+ =()()22 3 2 31 ...1! 2!x x+ ++ + +\nHere, the general term is () 2 3\n!nx\nn+ = (3+2 )\n!nx\nn. This can be expanded by the\nBinomial Theorem as\n( ) ( ) ( )2 1 2\n1 213 C 3 2 C 3 2 ... 2 .!n n n n n nx x xn− −   + + + + \nHere, the coefficient of x2 is 2 2\n2",
+          "solution": "In the exponential series\nxe =2 3\n11 ! 2! 3!x x x... + + + +\nreplacing  x by (2 x + 3), we get\nReprint 2025-26\n\n320        MA THEMA TICS\n2 3xe+ =()()22 3 2 31 ...1! 2!x x+ ++ + +\nHere, the general term is () 2 3\n!nx\nn+ = (3+2 )\n!nx\nn. This can be expanded by the\nBinomial Theorem as\n( ) ( ) ( )2 1 2\n1 213 C 3 2 C 3 2 ... 2 .!n n n n n nx x xn− −   + + + + \nHere, the coefficient of x2 is 2 2\n2C 3 2\n!− n n\nn. Therefore, the coefficient of x2 in the whole\nseries is\n2 2\n2\n2C 3 2n n\nn n!− ∞\n=∑  =()2\n21 32!n\nnn n\nn− ∞\n=−∑\n=( )–2\n2322 !n\nnn∞\n=−∑   [using n! = n (n – 1) ( n  –  2)!]\n=2 33 3 32 1 ...1! 2! 3! + + + + \n \n=2e3 .\nThus 2 e3 is the coefficient of x2 in the expansion of e2x+"
+        },
+        {
+          "chapterNumber": 9,
+          "exampleNumber": 4,
+          "title": "Find the value of e2, rounded off to one decimal place.",
+          "question": "Example 4  Find the value of e2, rounded off to one decimal place.\nSolution  Using the formula of exponential series involving x, we have\n2 3\n1 ... ...\n1! 2! 3! !n\nx x x x xe\nn= + + + + + +\nReprint 2025-26\n\nINFINITE SERIES        321\nPutting  x  = 2, we get\n2 3 4 5 6\n2 2 2 2 2 2 21 ...1! 2! 3! 4! 5! 6!e= + + + + + + +\n = 4 4 41 2 2 ...3 3 15 452+ + + + + + +\n ≥ the sum of first seven terms ≥ 7.355.\nOn the other hand, we have\n2 3 4 5 2 3\n2\n2 32 2 2 2 2 2 2 21 1 ...1! 2! 3! 4! 5! 6 6 6e   < +",
+          "solution": "Using the formula of exponential series involving x, we have\n2 3\n1 ... ...\n1! 2! 3! !n\nx x x x xe\nn= + + + + + +\nReprint 2025-26\n\nINFINITE SERIES        321\nPutting  x  = 2, we get\n2 3 4 5 6\n2 2 2 2 2 2 21 ...1! 2! 3! 4! 5! 6!e= + + + + + + +\n = 4 4 41 2 2 ...3 3 15 452+ + + + + + +\n ≥ the sum of first seven terms ≥ 7.35"
+        },
+        {
+          "chapterNumber": 9,
+          "exampleNumber": 5,
+          "title": "If ,α β are the roots of the equation 20 x px q− + = , prove that",
+          "question": "Example 5  If ,α β are the roots of the equation 20 x px q− + = , prove that\n( ) ( )2 2 3 3\n2 2 3log 1 ...2 3e px qx x x xα +βα +β+ + = α+β − + −\nSolution Right hand side  = 2 2 3 3 2 2 3 3\n... ...2 3 2 3x x x xx x    α α β βα − + − + β − + −   \n   \n=()() log 1 log 1e x x+α + +β\n=()( )2log 1e x x+ α+β +αβ\n=()2log 1e px qx+ +   = Left hand side.\nHere, we have used the facts α+β = p and qαβ=  . We know this from the\ngiven roots of the quadratic equation. We have also assumed that both",
+          "solution": ""
+        }
+      ],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 5,
+        "exercisesCount": 0
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 9,
+    "totalWords": 2754
+  }
+}

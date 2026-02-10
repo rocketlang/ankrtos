@@ -1,0 +1,160 @@
+{
+  "filename": "iemh112.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "Reproductive health conditions 31.8",
+      "content": "1. Reproductive health conditions 31.8\n",
+      "wordCount": 5,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 2,
+      "title": "Neuropsychiatric conditions 25.4",
+      "content": "2. Neuropsychiatric conditions 25.4\n",
+      "wordCount": 4,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 3,
+      "title": "Injuries 12.4",
+      "content": "3. Injuries 12.4\n",
+      "wordCount": 3,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 4,
+      "title": "Cardiovascular conditions 4.3",
+      "content": "4. Cardiovascular conditions 4.3\n",
+      "wordCount": 4,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 5,
+      "title": "Respiratory conditions 4.1",
+      "content": "5. Respiratory conditions 4.1\n",
+      "wordCount": 4,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 6,
+      "title": "Other causes 22.0",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "STATISTICS",
+      "content": "CHAPTER 12\nSTATISTICS\n12.1 Graphical Representation of Data\nThe representation of data by tables has already been discussed. Now let us turn our\nattention to another representation of data, i.e., the graphical representation. It is well\nsaid that one picture is better than a thousand words. Usually comparisons among the\nindividual items are best shown by means of graphs. The representation then becomes\neasier to understand than the actual data. We shall study the following graphical\nrepresentations in this section.\n(A)Bar graphs\n(B)Histograms of uniform width, and of varying widths\n(C)Frequency polygons\n(A) Bar Graphs\nIn earlier classes, you have already studied and constructed bar graphs. Here we\nshall discuss them through a more formal approach. Recall that a bar graph is a\npictorial representation of data in which usually bars of uniform width are drawn with\nequal spacing between them on one axis (say , the x-axis), depicting the variable. The\nvalues of the variable are shown on the other axis (say , the y-axis) and the heights of\nthe bars depend on the values of the variable.\nExample 1 :  In a particular section of Class IX, 40 students were asked about the\nmonths of their birth and the following graph was prepared for the data so obtained:\nReprint 2025-26\n\n152 MATHEMA TICS\nFig. 12.1\nObserve the bar graph given above and answer the following questions:\n(i) How many students were born in the month of November?\n(ii) In which month were the maximum number of students born?\nSolution :  Note that the variable here is the ‘month of birth’, and the value of the\nvariable is the ‘Number of students born’.\n(i) 4 students were born in the month of November .\n(ii) The Maximum number of students were born in the month of August.\nLet us now recall how a bar graph is constructed by considering the following example.\nExample 2 :  A family with a monthly income of  ` 20,000 had planned the following\nexpenditures per month under various heads:\nTable 12.1\nHeads Expenditure\n(in thousand rupees)\nGrocery 4\nRent 5\nEducation of children 5\nMedicine 2\nFuel 2\nEntertainment 1\nMiscellaneous 1\nDraw a bar graph for the data above.\nReprint 2025-26\n\nSTATISTICS 153\nSolution :  We draw the bar graph of this data in the following steps. Note that the unit\nin the second column is thousand rupees. So, ‘4’ against ‘grocery’ means `4000.\n1.We represent the Heads (variable) on the horizontal axis choosing any scale,\nsince the width of the bar is not important. But for clarity , we take equal widths\nfor all bars and maintain equal gaps in between. Let one Head be represented by\none unit.\n2.We represent the expenditure (value) on the vertical axis. Since the maximum\nexpenditure is `5000, we can choose the scale as 1 unit = `1000.\n3.To represent our first Head, i.e., grocery , we draw a rectangular bar with width\n1 unit and height 4 units.\n4.Similarly , other Heads are represented leaving a gap of 1 unit in between two\nconsecutive bars.\nThe bar graph is drawn in Fig. 12.2.\nFig. 12.2\nHere, you can easily visualise the relative characteristics of the data at a glance, e.g.,\nthe expenditure on education is more than double that of medical expenses. Therefore,\nin some ways it serves as a better representation of data than the tabular form.\nActivity 1 :  Continuing with the same four groups of Activity 1, represent the data by\nsuitable bar graphs.\nLet us now see how a frequency distribution table for continuous  class intervals\ncan be represented graphically .\nReprint 2025-26\n\n154 MATHEMA TICS\n(B) Histogram\nThis is a form of representation like the bar graph, but it is used for continuous class\nintervals. For instance,  consider the frequency distribution Table 12.2, representing\nthe weights of 36 students of a class:\nTable 12.2\nWeights (in kg) Number of students\n30.5 - 35.5 9\n35.5 - 40.5 6\n40.5 - 45.5 15\n45.5 - 50.5 3\n50.5 - 55.5 1\n55.5 - 60.5 2\nTotal 36\nLet us represent the data given above graphically as follows:\n(i)We represent the weights on the horizontal axis on a suitable scale. We can choose\nthe scale as 1 cm = 5 kg. Also, since the first class interval is starting from 30.5\nand not zero, we show it on the graph by marking a kink or a break on the axis.\n(ii)We represent the number of students (frequency) on the vertical axis on a suitable\nscale. Since the maximum frequency is 15, we need to choose the scale to\naccomodate this maximum frequency .\n(iii)We now draw rectangles (or rectangular bars) of width equal to the class-size\nand lengths according to the frequencies of the corresponding class intervals. For\nexample, the rectangle for the class interval 30.5 - 35.5 will be of width 1 cm and\nlength 4.5 cm.\n(iv)In this way , we obtain the graph as shown in Fig. 12.3:\nReprint 2025-26\n\nSTATISTICS 155\nFig. 12.3\nObserve that since there are no gaps in between consecutive rectangles, the resultant\ngraph appears like a solid figure. This is called a histogram , which is a graphical\nrepresentation of a grouped frequency distribution with continuous classes. Also, unlike\na bar graph, the width of the bar plays a significant role in its construction.\nHere, in fact, areas of the rectangles erected are proportional to the corresponding\nfrequencies. However , since the widths of the rectangles are all equal, the lengths of\nthe rectangles are proportional to the frequencies. That is why , we draw the lengths\naccording to (iii) above.\nNow , consider a situation dif ferent from the one above.\nExample 3 :  A teacher wanted to analyse the performance of two sections of students\nin a mathematics test of 100 marks. Looking at their performances, she found that a\nfew students got under 20 marks and a few got 70 marks or above. So she decided to\ngroup them into intervals of varying sizes as follows: 0 - 20, 20 - 30, . . ., 60 - 70,\n70 - 100. Then she formed the following table:\nReprint 2025-26\n\n156 MATHEMA TICS\nTable 12.3\nMarks Number of students\n  0 - 20 7\n20 - 30 10\n30 - 40 10\n40 - 50 20\n50 - 60 20\n60 - 70 15\n     70 - above 8\nTotal 90\nA histogram for this table was prepared by a student as shown in Fig. 12.4.\nFig. 12.4\nCarefully examine this graphical representation. Do you think that it correctly represents\nthe data? No, the graph is giving us a misleading picture. As we have mentioned\nearlier , the areas of the rectangles are proportional to the frequencies in a histogram.\nEarlier this problem did not arise, because the widths of all the rectangles were equal.\nBut here, since the widths of the rectangles are varying, the histogram above does not\nReprint 2025-26\n\nSTATISTICS 157\ngive a correct picture. For example, it shows a greater frequency in the interval\n70 - 100, than in 60 - 70, which is not the case.\nSo, we need to make certain modifications in the lengths of the rectangles so that\nthe areas are again proportional to the frequencies.\nThe steps to be followed are as given below:\n1.Select a class interval with the minimum class size. In the example above, the\nminimum class-size is 10.\n2.The lengths of the rectangles are then modified to be proportionate to the\nclass-size 10.\nFor instance, when the class-size is 20, the length of the rectangle is 7. So when\nthe class-size is 10, the length of the rectangle will be 7\n20× 10 = 3.5.\nSimilarly , proceeding in this manner , we get the following table:\nTable 12.4\nMarks Frequency Width of Length of the rectangle\nthe class\n0 - 20 7 207\n20 × 10 = 3.5\n20 - 30 10 1010\n10 × 10 = 10\n30 - 40 10 1010\n10 × 10 = 10\n40 - 50 20 1020\n10 × 10 = 20\n50 - 60 20 1020\n10 × 10 = 20\n60 - 70 15 1015\n10 × 10 = 15\n70 - 100 8 308\n30 × 10 = 2.67\nReprint 2025-26\n\n158 MATHEMA TICS\nSince we have calculated these lengths for an interval of 10 marks in each case,\nwe may call these lengths as “proportion of students per 10 marks interval”.\nSo, the correct histogram with varying width is given in Fig. 12.5.\nFig. 12.5\n(C) Frequency Polygon\nThere is yet another visual way of representing quantitative data and its frequencies.\nThis is a polygon. To see what we mean, consider the histogram represented by\nFig. 12.3. Let us join the mid-points of the upper sides of the adjacent rectangles of\nthis histogram by means of line segments. Let us call these mid-points B, C, D, E, F\nand G. When joined by line segments, we obtain the figure BCDEFG (see Fig. 12.6).\nTo complete the polygon, we assume that there is a class interval with frequency zero\nReprint 2025-26\n\nSTATISTICS 159\nbefore 30.5 - 35.5, and one after 55.5 - 60.5, and their mid-points are A and H,\nrespectively . ABCDEFGH is the frequency polygon corresponding to the data shown\nin Fig. 12.3. We have shown this in Fig. 12.6.\nFig. 12.6\nAlthough, there exists no class preceding the lowest class and no class succeeding\nthe highest class, addition of the two class intervals with zero frequency enables us to\nmake the area of the frequency polygon the same as the area of the histogram. Why\nis this so? ( Hint :  Use the properties of congruent triangles.)\nNow , the question arises: how do we complete the polygon when there is no class\npreceding the first class? Let us consider such a situation.\nReprint 2025-26\n\n160 MATHEMA TICS\nExample 4 :  Consider the marks, out of 100, obtained by 51 students of a class in a\ntest, given in Table 12.5.\nTable 12.5\nMarks Number of students\n0 - 10 5\n10 - 20 10\n20 - 30 4\n30 - 40 6\n40 - 50 7\n50 - 60 3\n60 - 70 2\n70 - 80 2\n80 - 90 3\n90 - 100 9\nTotal 51\nDraw a frequency polygon corresponding to this frequency distribution table.\nSolution :  Let us first draw a histogram for this data and mark the mid-points of the\ntops of the rectangles as B, C, D, E, F , G, H, I, J, K, respectively . Here, the first class is\n0-10. So, to find the class preceeding 0-10, we extend the horizontal axis in the negative\ndirection and find the mid-point of the imaginary class-interval (–10) - 0. The first end\npoint, i.e., B is joined to this mid-point with zero frequency on the negative direction of\nthe horizontal axis. The point where this line segment meets the vertical axis is marked\nas A. Let L  be the mid-point of the class succeeding the last class of the given data.\nThen OABCDEFGHIJKL is the frequency polygon, which is shown in Fig. 12.7.\nFig. 12.7\nReprint 2025-26\n\nSTATISTICS 161\nFrequency polygons can also be drawn independently without drawing\nhistograms.  For this, we require the mid-points of the class-intervals used in the data.\nThese mid-points of the class-intervals are called class-marks .\nTo find the class-mark of a class interval, we find the sum of the upper limit and\nlower limit of a class and divide it by 2. Thus,\nClass-mark = Upper limit + Lower limit\n2\nLet us consider an example.\nExample 5 :  In a city , the weekly observations made in a study on the cost of living\nindex are given in the following table:\nTable 12.6\nCost of living index Number of weeks\n140 - 150 5\n150 - 160 10\n160 - 170 20\n170 - 180 9\n180 - 190 6\n190 - 200 2\nTotal 52\nDraw a frequency polygon for the data above (without constructing a histogram).\nSolution :  Since we want to draw a frequency polygon without a histogram, let us find\nthe class-marks of the classes given above, that is of 140 - 150, 150 - 160,....\nFor 140 - 150, the upper limit = 150, and the lower limit = 140\nSo, the class-mark = 150 + 140\n2 = 290\n2 = 145.\nContinuing in the same manner , we find the class-marks of the other classes as well.\nSo, the new table obtained is as shown in the following table:\nReprint 2025-26\n\n162 MATHEMA TICS\nTable 12.7\nClasses Class-marks Frequency\n140 - 150 145 5\n150 - 160 155 10\n160 - 170 165 20\n170 - 180 175 9\n180 - 190 185 6\n190 - 200 195 2\nTotal 52\nWe can now draw a frequency polygon by plotting the class-marks along the horizontal\naxis, the frequencies along the vertical-axis, and then plotting and joining the points\nB(145, 5), C(155, 10), D(165, 20), E(175, 9), F(185, 6) and G(195, 2) by line segments.\nWe should not for get to plot the point corresponding to the class-mark of the class\n130 - 140 (just before the lowest class 140 - 150) with zero frequency , that is,\nA(135, 0), and the point H (205, 0) occurs immediately after G(195, 2). So, the resultant\nfrequency polygon will be ABCDEFGH (see Fig. 12.8).\nFig. 12.8\nReprint 2025-26\n\nSTATISTICS 163\nFrequency polygons are used when the data is continuous and very large. It is\nvery useful for comparing two different sets of data of the same nature, for example,\ncomparing the performance of two different sections of the same class.\nEXERCISE 12.1\n1.A survey conducted by an organisation for the cause of illness and death among\nthe women between the ages 15 - 44 (in years) worldwide, found the following\nfigures (in %):\nS.No. Causes Female fatality rate (%)\n1. Reproductive health conditions 31.8\n2. Neuropsychiatric conditions 25.4\n3. Injuries 12.4\n4. Cardiovascular conditions 4.3\n5. Respiratory conditions 4.1\n6. Other causes 22.0\n(i)Represent the information given above graphically .\n(ii)Which condition is the major cause of women’ s ill health and death worldwide?\n(iii)Try to find out, with the help of your teacher , any two factors which play a major\nrole in the cause in (ii) above being the major cause.\n2.The following data on the number of girls (to the nearest ten) per thousand boys in\ndifferent sections of Indian society is given below .\nSection Number of girls per thousand boys\nScheduled Caste (SC) 940\nScheduled Tribe (ST) 970\nNon SC/ST 920\nBackward districts 950\nNon-backward districts 920\nRural 930\nUrban 910\nReprint 2025-26\n\n164 MATHEMA TICS\n(i)Represent the information above by a bar graph.\n(ii)In the classroom discuss what conclusions can be arrived at from the graph.\n3.Given below are the seats won by different political parties in the polling outcome of\na state assembly elections:\nPolitical Party A B C D E F\nSeats Won 75\n55 37 29 10 37\n(i)Draw a bar graph to represent the polling results.\n(ii)Which political party won the maximum number of seats?\n4.The length of 40 leaves of a plant are measured correct to one millimetre, and the\nobtained data is represented in the following table:\nLength (in mm) Number of leaves\n118 - 126 3\n127 - 135 5\n136 - 144 9\n145 - 153 12\n154 - 162 5\n163 - 171 4\n172 - 180 2\n(i)Draw a histogram to represent the given data. [Hint: First make the class intervals\ncontinuous]\n(ii)Is there any other suitable graphical representation for the same data?\n(iii)Is it correct to conclude that the maximum number of leaves are 153 mm long?\nWhy?\n5.The following table gives the life times of 400 neon lamps:\nLife time (in hours) Number of lamps\n300 - 400 14\n400 - 500 56\n500 - 600 60\n600 - 700 86\n700 - 800 74\n800 - 900 62\n900 - 1000 48\nReprint 2025-26\n\nSTATISTICS 165\n(i)Represent the given information with the help of a histogram.\n(ii)How many lamps have a life time of more than 700 hours?\n6.The following table gives the distribution of students of two sections according to\nthe marks obtained by them:\n                     Section  A                                                    Section B\nMarks Frequency Marks Frequency\n  0 - 10 3   0 - 10 5\n10 - 20 9 10 - 20 19\n20 - 30 17 20 - 30 15\n30 - 40 12 30 - 40 10\n40 - 50 9 40 - 50 1\nRepresent the marks of the students of both the sections on the same graph by two\nfrequency polygons. From the two polygons compare the performance of the two\nsections.\n7.The runs scored by two teams A and B on the first 60 balls in a cricket match are given\nbelow:\nNumber of balls Team A Team B\n1 - 6 2 5\n7 - 12 1 6\n13 - 18 8 2\n19 - 24 9 10\n25 - 30 4 5\n31 - 36 5 6\n37 - 42 6 3\n43 - 48 10 4\n49 - 54 6 8\n55 - 60 2 10\nRepresent the data of both the teams on the same graph by frequency polygons.\n[Hint : First make the class intervals continuous.]\nReprint 2025-26\n\n166 MATHEMA TICS\n8.A random survey of the number of children of various age groups playing in a park\nwas found as follows:\nAge (in years) Number of children\n1 - 2 5\n2 - 3 3\n3 - 5 6\n5 - 7 12\n7 - 10 9\n10 - 15 10\n15 - 17 4\nDraw a histogram to represent the data above.\n9.100 surnames were randomly picked up from a local telephone directory and a frequency\ndistribution of the number of letters in the English alphabet in the surnames was found\nas follows:\nNumber of letters Number of surnames\n1  -4 6\n4  -6 30\n6  -8 44\n8  -12 16\n12  -20 4\n(i)Draw a histogram to depict the given information.\n(ii)Write the class interval in which the maximum number of surnames lie.\n12.2 Summary\nIn this chapter , you have studied the following points:\n1.How data can be presented graphically in the form of bar graphs, histograms and frequency\npolygons.\nReprint 2025-26\n\n",
+      "wordCount": 3072,
+      "examples": [
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 1,
+          "title": ":  In a particular section of Class IX, 40 students were asked about the",
+          "question": "Example 1 :  In a particular section of Class IX, 40 students were asked about the\nmonths of their birth and the following graph was prepared for the data so obtained:\nReprint 2025-26\n\n152 MATHEMA TICS\nFig. 12.1\nObserve the bar graph given above and answer the following questions:\n(i) How many students were born in the month of November?\n(ii) In which month were the maximum number of students born?\nSolution :  Note that the variable here is the ‘month of birth’, and the value of the\nvariable is",
+          "solution": ":  Note that the variable here is the ‘month of birth’, and the value of the\nvariable is the ‘Number of students born’.\n(i) 4 students were born in the month of November .\n(ii) The Maximum number of students were born in the month of August.\nLet us now recall how a bar graph is constructed by considering the following"
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 2,
+          "title": ":  A family with a monthly income of  ` 20,000 had planned the following",
+          "question": "Example 2 :  A family with a monthly income of  ` 20,000 had planned the following\nexpenditures per month under various heads:\nTable 12.1\nHeads Expenditure\n(in thousand rupees)\nGrocery 4\nRent 5\nEducation of children 5\nMedicine 2\nFuel 2\nEntertainment 1\nMiscellaneous 1\nDraw a bar graph for the data above.\nReprint 2025-26\n\nSTATISTICS 153\nSolution :  We draw the bar graph of this data in the following steps. Note that the unit\nin the second column is thousand rupees. So, ‘4’ against ‘grocery’ means",
+          "solution": ""
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 3,
+          "title": ":  A teacher wanted to analyse the performance of two sections of students",
+          "question": "Example 3 :  A teacher wanted to analyse the performance of two sections of students\nin a mathematics test of 100 marks. Looking at their performances, she found that a\nfew students got under 20 marks and a few got 70 marks or above. So she decided to\ngroup them into intervals of varying sizes as follows: 0 - 20, 20 - 30, . . ., 60 - 70,\n70 - 100. Then she formed the following table:\nReprint 2025-26\n\n156 MATHEMA TICS\nTable 12.3\nMarks Number of students\n  0 - 20 7\n20 - 30 10\n30 - 40 10\n40 - 50 20",
+          "solution": ""
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 4,
+          "title": ":  Consider the marks, out of 100, obtained by 51 students of a class in a",
+          "question": "Example 4 :  Consider the marks, out of 100, obtained by 51 students of a class in a\ntest, given in Table 12.5.\nTable 12.5\nMarks Number of students\n0 - 10 5\n10 - 20 10\n20 - 30 4\n30 - 40 6\n40 - 50 7\n50 - 60 3\n60 - 70 2\n70 - 80 2\n80 - 90 3\n90 - 100 9\nTotal 51\nDraw a frequency polygon corresponding to this frequency distribution table.\nSolution :  Let us first draw a histogram for this data and mark the mid-points of the\ntops of the rectangles as B, C, D, E, F , G, H, I, J, K, respectively . Here,",
+          "solution": ":  Let us first draw a histogram for this data and mark the mid-points of the\ntops of the rectangles as B, C, D, E, F , G, H, I, J, K, respectively . Here, the first class is\n0-1"
+        },
+        {
+          "chapterNumber": 12,
+          "exampleNumber": 5,
+          "title": ":  In a city , the weekly observations made in a study on the cost of living",
+          "question": "Example 5 :  In a city , the weekly observations made in a study on the cost of living\nindex are given in the following table:\nTable 12.6\nCost of living index Number of weeks\n140 - 150 5\n150 - 160 10\n160 - 170 20\n170 - 180 9\n180 - 190 6\n190 - 200 2\nTotal 52\nDraw a frequency polygon for the data above (without constructing a histogram).\nSolution :  Since we want to draw a frequency polygon without a histogram, let us find\nthe class-marks of the classes given above, that is of 140 - 150, 150 - 160",
+          "solution": ":  Since we want to draw a frequency polygon without a histogram, let us find\nthe class-marks of the classes given above, that is of 140 - 150, 150 - 160,....\nFor 140 - 150, the upper limit = 150, and the lower limit = 140\nSo, the class-mark = 150 + 140\n2 = 290\n2 = 14"
+        }
+      ],
+      "exercises": [
+        {
+          "chapterNumber": 12,
+          "exerciseNumber": "12.1",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "Reproductive health conditions 31.8"
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "Neuropsychiatric conditions 25.4"
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "Injuries 12.4"
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "Cardiovascular conditions 4.3"
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "Respiratory conditions 4.1"
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "Other causes 22.0\n(i)Represent the information given above graphically .\n(ii)Which condition is the major cause of women’ s ill health and death worldwide?\n(iii)Try to find out, with the help of your teacher , any two factors which play a major\nrole in the cause in (ii) above being the major cause."
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 5,
+        "exercisesCount": 6
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 16,
+    "totalWords": 3092
+  }
+}

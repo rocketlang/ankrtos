@@ -1,0 +1,288 @@
+{
+  "class": 8,
+  "subject": "History",
+  "book": "Our Pasts - III",
+  "board": "CBSE",
+  "total_questions": 8,
+  "questions": [
+    {
+      "question": "Explain how the introduction of British machine-made textiles in the 19th century affected the lives of Indian weavers, with reference to their economic and social conditions.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Weavers, iron smelters and factory owners",
+      "answer": "The introduction of British machine-made textiles in the 19th century severely impacted Indian weavers in the following ways:\n\n1. **Economic Decline**: British textiles were cheaper and produced in large quantities, flooding Indian markets. This led to a sharp decline in demand for handwoven Indian cloth, causing many weavers to lose their livelihoods and fall into debt.\n\n2. **Loss of Patronage**: Earlier, weavers received advances from Indian rulers and merchants. Under British rule, this system ended, and weavers were forced to sell their products at very low prices to Company agents, pushing them into poverty.\n\n3. **Social Distress**: Many weavers abandoned their ancestral profession and migrated to cities in search of work, often becoming agricultural labourers or working in British-owned factories under poor conditions, leading to the breakdown of traditional weaving communities.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of economic decline due to cheap British textiles and loss of demand",
+          "marks": 1
+        },
+        {
+          "point": "Description of loss of patronage and exploitation by Company agents",
+          "marks": 1
+        },
+        {
+          "point": "Mention of social distress, migration, and breakdown of weaving communities",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about the cost and quality difference between handwoven and machine-made cloth.",
+        "Consider how the change in rulers affected the weavers' traditional support systems.",
+        "Recall what happened to weavers who could no longer continue their profession."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "History",
+      "book": "Our Pasts - III",
+      "topic_id": "2"
+    },
+    {
+      "question": "Analyze the impact of the British policies on the Indian industries, particularly on weavers and iron smelters, and evaluate how these policies contributed to the growth of discontent among them, leading up to the 1857 Revolt.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Resistance and Reform",
+      "answer": "The British policies had a devastating impact on Indian industries, particularly on weavers and iron smelters. The imposition of heavy taxes and the introduction of cheap machine-made goods from Britain led to a decline in the demand for Indian textiles and iron products. Many weavers and iron smelters were forced to abandon their traditional occupations and work in British-owned factories, leading to a loss of livelihood and dignity. The British policies also led to the deindustrialization of India, as many Indian industries were unable to compete with the cheap and machine-made goods from Britain. This growth of discontent among weavers and iron smelters contributed to the outbreak of the 1857 Revolt, as many Indians saw the British as responsible for their economic misery and cultural degradation. The revolt was a culmination of various factors, including economic exploitation, cultural imperialism, and political subjugation.",
+      "marking_scheme": [
+        {
+          "point": "Description of the impact of British policies on Indian industries",
+          "marks": 2
+        },
+        {
+          "point": "Analysis of how these policies contributed to the growth of discontent among weavers and iron smelters",
+          "marks": 2
+        },
+        {
+          "point": "Evaluation of the role of these policies in leading up to the 1857 Revolt",
+          "marks": 2
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Consider the economic and social impact of British policies on Indian industries",
+        "Think about how the decline of traditional industries contributed to the growth of discontent among Indians"
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "History",
+      "book": "Our Pasts - III",
+      "topic_id": "2"
+    },
+    {
+      "question": "Critically examine how the introduction of British machine-made textiles in the 19th century impacted the lives of Indian weavers, and evaluate the long-term consequences on India's traditional textile industry. (5 marks)",
+      "marks": 5,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Weavers, iron smelters and factory owners",
+      "answer": "The introduction of British machine-made textiles in the 19th century had a devastating impact on Indian weavers and the traditional textile industry. Initially, Indian textiles like muslin and calico were in high demand globally, but British policies systematically destroyed this industry. \n\nKey impacts:\n1. **Economic ruin**: British imposed heavy duties on Indian textiles in Britain while allowing duty-free import of British cloth into India. This made Indian cloth expensive and British cloth cheap.\n2. **Loss of livelihood**: Thousands of weavers lost their traditional occupations as they couldn't compete with cheap machine-made cloth from Manchester and Lancashire.\n3. **Decline of quality**: The fine art of handloom weaving declined as weavers were forced to take up other menial jobs or work in British factories under poor conditions.\n4. **Raw material exploitation**: India was turned into a supplier of raw cotton to British mills, rather than manufacturing finished products.\n\nLong-term consequences:\n- Complete destruction of India's world-famous textile industry\n- India became a consumer of British goods rather than a producer\n- Traditional skills and knowledge were lost over generations\n- Economic dependency on Britain increased\n- Paved way for the Swadeshi movement in the 20th century as a response to this exploitation.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of British policies (duties, free trade) that favored British textiles",
+          "marks": 1
+        },
+        {
+          "point": "Analysis of immediate impact on weavers' livelihoods and economic conditions",
+          "marks": 1
+        },
+        {
+          "point": "Discussion of quality decline and loss of traditional skills",
+          "marks": 1
+        },
+        {
+          "point": "Evaluation of long-term consequence: India becoming raw material supplier",
+          "marks": 1
+        },
+        {
+          "point": "Connection to broader historical consequences (dependency, Swadeshi movement)",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Evaluation",
+      "hints": [
+        "Think about the economic policies Britain implemented",
+        "Consider both immediate effects and consequences that lasted into the 20th century",
+        "Remember what you learned about the Swadeshi movement"
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "History",
+      "book": "Our Pasts - III",
+      "topic_id": "2"
+    },
+    {
+      "question": "List any three important newspapers published during the Indian national movement and mention one leader associated with each.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Print and society",
+      "answer": "Three important newspapers published during the Indian national movement were:\n1. **Kesari** \u2013 Associated with **Bal Gangadhar Tilak**.\n2. **Young India** \u2013 Edited by **Mahatma Gandhi**.\n3. **Hindustan Times** \u2013 Founded by **K. M. Panikkar** and supported by leaders like **Madan Mohan Malaviya**.\n\nThese newspapers played a key role in spreading nationalist ideas, criticizing British policies, and mobilizing public opinion across India.",
+      "marking_scheme": [
+        {
+          "point": "Correctly naming one newspaper and its associated leader",
+          "marks": 1
+        },
+        {
+          "point": "Correctly naming a second newspaper and its associated leader",
+          "marks": 1
+        },
+        {
+          "point": "Correctly naming a third newspaper and its associated leader",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Remembering",
+      "hints": [
+        "Think of newspapers linked to famous freedom fighters.",
+        "One newspaper was published in Marathi and English by a leader from Maharashtra.",
+        "A newspaper edited by Gandhi had 'Young' in its name."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "History",
+      "book": "Our Pasts - III",
+      "topic_id": "3"
+    },
+    {
+      "question": "List any three ways in which print culture helped in the growth of the national movement in India.",
+      "marks": 3,
+      "difficulty": "easy",
+      "question_type": "short_answer",
+      "topic": "Print and Society",
+      "answer": "Print culture played a crucial role in the growth of the national movement in India in the following ways:\n1. It helped spread nationalist ideas and awareness about British colonial policies among the common people through newspapers, pamphlets, and books.\n2. It allowed leaders like Bal Gangadhar Tilak, Mahatma Gandhi, and others to communicate their messages widely, mobilising public opinion against British rule.\n3. It promoted a sense of unity and shared identity by publishing stories, poems, and articles in Indian languages that highlighted India\u2019s rich cultural heritage and common struggles.",
+      "marking_scheme": [
+        {
+          "point": "Spread of nationalist ideas and awareness through newspapers/pamphlets",
+          "marks": 1
+        },
+        {
+          "point": "Enabled leaders to communicate and mobilise public opinion",
+          "marks": 1
+        },
+        {
+          "point": "Promoted unity and shared identity through Indian language publications",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Understanding",
+      "hints": [
+        "Think about newspapers and leaders' writings.",
+        "Consider how people in different regions got the same message.",
+        "Remember examples like 'Kesari' or 'Young India'."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "History",
+      "book": "Our Pasts - III",
+      "topic_id": "3"
+    },
+    {
+      "question": "Explain how print culture contributed to the growth of nationalism in India during the late 19th and early 20th centuries. Provide three specific examples.",
+      "marks": 3,
+      "difficulty": "medium",
+      "question_type": "short_answer",
+      "topic": "Print and Society",
+      "answer": "Print culture played a crucial role in fostering nationalism by spreading ideas, creating a shared identity, and mobilizing public opinion. Firstly, newspapers like 'Kesari' (Marathi) and 'Amrita Bazar Patrika' (English) highlighted colonial injustices and promoted patriotic feelings. Secondly, nationalist literature, such as Bankim Chandra Chattopadhyay's 'Anandamath' with its song 'Vande Mataram', became symbols of resistance. Thirdly, printed pamphlets and posters during the Swadeshi Movement (1905-1907) encouraged boycott of British goods and revival of Indian industries, uniting people across regions.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of print culture's role in spreading nationalist ideas and creating shared identity",
+          "marks": 1
+        },
+        {
+          "point": "Example 1: Newspapers like Kesari/Amrita Bazar Patrika exposing colonial policies",
+          "marks": 1
+        },
+        {
+          "point": "Example 2: Nationalist literature (e.g., Anandamath) inspiring patriotism",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Application",
+      "hints": [
+        "Think about how printed materials reached common people",
+        "Recall important newspapers and literary works from Chapter 7 (NCERT)",
+        "Consider how print helped during movements like Swadeshi"
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "History",
+      "book": "Our Pasts - III",
+      "topic_id": "3"
+    },
+    {
+      "question": "Critically examine how the print culture in colonial India both supported and challenged British rule, with reference to the role of newspapers and pamphlets in the national movement. Provide specific examples.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Print and Society",
+      "answer": "Print culture in colonial India played a dual role\u2014it was used by the British to consolidate power, but also became a tool for Indians to challenge colonial rule. On one hand, the British introduced printing presses to publish official gazettes, laws, and pro-British newspapers to spread their ideology and administer efficiently. For example, the 'Calcutta Gazette' served as a mouthpiece of the colonial government. On the other hand, Indian reformers and nationalists used print to spread awareness, critique colonial policies, and mobilize people. Newspapers like 'Kesari' (edited by Bal Gangadhar Tilak) and 'Amrita Bazar Patrika' exposed British exploitation and promoted swadeshi. Pamphlets and books, such as those by Raja Rammohan Roy on social reforms and Dadabhai Naoroji's 'Poverty and Un-British Rule in India', provided economic critiques. This created a public sphere where nationalist ideas flourished, ultimately strengthening the freedom movement. Thus, print was a double-edged sword\u2014it aided colonial control but also fueled resistance.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of how print supported British rule (official gazettes, pro-British newspapers, administrative use)",
+          "marks": 2
+        },
+        {
+          "point": "Explanation of how print challenged British rule (nationalist newspapers, pamphlets, spreading awareness, mobilizing masses)",
+          "marks": 2
+        },
+        {
+          "point": "Specific examples (e.g., Kesari, Amrita Bazar Patrika, writings of Raja Rammohan Roy/Dadabhai Naoroji)",
+          "marks": 1
+        },
+        {
+          "point": "Critical conclusion on the dual role of print culture",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Analysis",
+      "hints": [
+        "Think about the British introduction of printing presses and their initial purpose.",
+        "Recall important nationalist newspapers and their editors.",
+        "Consider how print helped in spreading both colonial and anti-colonial ideas."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "History",
+      "book": "Our Pasts - III",
+      "topic_id": "3"
+    },
+    {
+      "question": "Critically examine how the print media in colonial India not only spread nationalist ideas but also helped in shaping a collective Indian identity. Support your answer with examples from the period 1870-1947.",
+      "marks": 6,
+      "difficulty": "hard",
+      "question_type": "long_answer",
+      "topic": "Print and Society",
+      "answer": "Print media played a transformative role in colonial India by acting as a vehicle for nationalist ideas and fostering a collective Indian identity. Firstly, newspapers like 'The Hindu' (1878), 'Kesari' (Marathi, 1881) and 'Amrita Bazar Patrika' (1868) openly criticized British policies, discussed issues of civil rights, and reported on nationalist activities, making people across regions aware of common grievances. Secondly, print helped standardize vernacular languages\u2014through novels, essays, and pamphlets\u2014which allowed ideas to reach the masses beyond the English-educated elite. For example, Bankim Chandra Chattopadhyay's 'Anandamath' (1882) and its song 'Vande Mataram' became a unifying nationalist symbol. Thirdly, print created a public sphere where debates on social reform, self-rule, and cultural pride took place. Publications like 'Young India' edited by Mahatma Gandhi articulated the philosophy of non-violence and swadeshi, emotionally connecting people from different communities and regions. Finally, cartoons, posters, and nationalist literature distributed via print visually represented 'Bharat Mata' and other icons, strengthening a shared symbolic identity. Thus, print media was not merely informative\u2014it was instrumental in weaving a pan-Indian consciousness that transcended local loyalties.",
+      "marking_scheme": [
+        {
+          "point": "Explanation of how newspapers spread nationalist ideas and criticized British policies with examples",
+          "marks": 2
+        },
+        {
+          "point": "Role of print in standardizing languages and reaching masses (vernacular press, novels, pamphlets)",
+          "marks": 1.5
+        },
+        {
+          "point": "Creation of a public sphere for debate on social reform and self-rule (e.g., Gandhi's Young India)",
+          "marks": 1.5
+        },
+        {
+          "point": "Use of visual symbols (Bharat Mata, cartoons) and emotional unifying content to build collective identity",
+          "marks": 1
+        }
+      ],
+      "bloom_level": "Evaluation",
+      "hints": [
+        "Think about newspapers, pamphlets, and novels in Indian languages.",
+        "Consider how print helped people in different regions feel part of one struggle.",
+        "Recall how icons like Bharat Mata or songs like Vande Mataram were popularized."
+      ],
+      "class": 8,
+      "board": "CBSE",
+      "subject": "History",
+      "book": "Our Pasts - III",
+      "topic_id": "3"
+    }
+  ]
+}

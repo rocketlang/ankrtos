@@ -1,0 +1,314 @@
+{
+  "filename": "iemh109.pdf",
+  "chapters": [
+    {
+      "chapterNumber": 2,
+      "title": "Equal chords of a circle (or of congruent circles) s",
+      "content": "2. Equal chords of a circle (or of congruent circles) subtend equal angles at the centre.\n",
+      "wordCount": 16,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 3,
+      "title": "If the angles subtended by two chords of a circle (o",
+      "content": "3. If the angles subtended by two chords of a circle (or of congruent circles) at the centre\n(corresponding centres) are equal, the chords are equal.\n",
+      "wordCount": 26,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 4,
+      "title": "The perpendicular from the centre of a circle to a c",
+      "content": "4. The perpendicular from the centre of a circle to a chord bisects the chord.\n",
+      "wordCount": 15,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 5,
+      "title": "The line drawn through the centre of a circle to bis",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 6,
+      "title": "What do you infer from the table?Fig. 9.17",
+      "content": "6.\nWhat do you infer from the table?Fig. 9.17\nFig. 9.18\nReprint 2025-26\n\n126 MATHEMA TICS\nYou find that ∠A + ∠C = 180° and ∠B + ∠D = 180°, neglecting the error in\nmeasurements. This verifies the following:\nTheorem 9.10 :  The sum of either pair of opposite angles of a cyclic quadrilateral\nis 180º.\nIn fact, the converse of this theorem, which is stated below is also true.\nTheor em 9.1 1 : If the sum of a pair of opposite angles of a quadrilateral is 180º,\nthe quadrilateral is cyclic.\nYou can see the truth of this theorem by following a method similar to the method\nadopted for Theorem 9.9.\nExample 2 :  In Fig. 9.19, AB is a diameter of the circle, CD is a chord equal to the\nradius of the circle. AC and BD when extended intersect at a point E. Prove that\n∠ AEB = 60°.\nSolution :  Join OC, OD and BC.\nTriangle ODC is equilateral (Why?)\nTherefore, ∠ COD = 60°\nNow, ∠ CBD  =1\n2 ∠ COD (Theorem 9.7)\nThis gives ∠ CBD = 30°\nAgain, ∠ ACB = 90° (Why ?)\nSo, ∠ BCE = 180° – ∠ ACB = 90°\nWhich gives ∠ CEB = 90° – 30° = 60°, i.e., ∠ AEB = 60°\nExample 3 :  In Fig 9.20, ABCD is a cyclic\nquadrilateral in which AC and BD are its diagonals.\nIf ∠ DBC = 55° and ∠ BAC = 45°, find ∠ BCD.\nSolution : ∠ CAD = ∠ DBC = 55°\n(Angles in the same segment)\nTherefore, ∠ DAB = ∠ CAD + ∠ BAC\n=55° + 45° = 100°\nBut ∠ DAB + ∠ BCD = 180°\n(Opposite angles of a cyclic quadrilateral)\nSo, ∠ BCD = 180° – 100° = 80°Fig. 9.19\nFig. 9.20\nReprint 2025-26\n\nCIRCLES 127\nExample 4 :  Two circles intersect at two points A\nand B. AD and AC are diameters to the two circles\n(see Fig. 9.21). Prove that B lies on the line segment\nDC.\nSolution :  Join AB.\n∠ ABD = 90° (Angle in a semicircle)\n∠ ABC = 90° (Angle in a semicircle)\nSo, ∠ ABD + ∠ ABC = 90° + 90° = 180°\nTherefore, DBC is a line. That is B lies on the line segment DC.\nExample 5 :  Prove that the quadrilateral formed (if possible) by the internal angle\nbisectors of any quadrilateral is cyclic.\nSolution :  In Fig. 9.22, ABCD is a quadrilateral in\nwhich the angle bisectors AH, BF , CF and DH of\ninternal angles A, B, C and D respectively form a\nquadrilateral EFGH.\nNow , ∠ FEH = ∠ AEB = 180° – ∠ EAB – ∠ EBA (Why ?)\n           = 180° – 1\n2 (∠ A + ∠ B)\nand ∠ FGH = ∠ CGD = 180 ° – ∠ GCD – ∠ GDC (Why ?)\n                      = 180° – 1\n2 (∠ C + ∠ D)\nTherefore, ∠ FEH + ∠ FGH = 180 ° – 1\n2 (∠ A + ∠ B) + 180 ° – 1\n2 (∠ C + ∠ D)\n                 = 360 ° – 1\n2 (∠ A+ ∠ B +∠ C +∠ D) = 360 ° – 1\n2 × 360°\n                 = 360° – 180° = 180°\nTherefore, by Theorem 9.1 1, the quadrilateral EFGH is cyclic.\nEXERCISE 9.3\n1.In Fig. 9.23, A,B and C are three points on a circle\nwith centre  O such that ∠ BOC = 30° and\n∠ AOB = 60°. If D is a point on the circle other\nthan the arc ABC, find ∠ADC.Fig. 9.22\nFig. 9.23Fig. 9.21\nReprint 2025-26\n\n128 MATHEMA TICS\n2.A chord of a circle is equal to the radius of the\ncircle. Find the angle subtended by the chord at\na point on the minor arc and also at a point on the\nmajor arc.\n3.In Fig. 9.24, ∠ PQR = 100°, where P , Q and R are\npoints on a circle with centre O. Find ∠ OPR.\n4.In Fig. 9.25, ∠ ABC = 69°, ∠ ACB = 31°, find\n∠ BDC.\n5.In Fig. 9.26,  A, B, C and D are four points on a\ncircle. AC and BD intersect at a point E such\nthat ∠ BEC = 130° and ∠ ECD = 20°. Find\n∠ BAC.\n6.ABCD is a cyclic quadrilateral whose diagonals intersect at a point E. If ∠ DBC = 70°,\n∠ BAC is 30°, find ∠ BCD. Further , if AB = BC, find ∠ ECD.\n7.If diagonals of a cyclic quadrilateral are diameters of the circle through the vertices of\nthe quadrilateral, prove that it is a rectangle.\n8.If the non-parallel sides of a trapezium are equal, prove that it is cyclic.Fig. 9.24\nFig. 9.25\nFig. 9.26\nReprint 2025-26\n\nCIRCLES 129\n9.Two circles intersect at two points B and C.\nThrough B, two line segments ABD and PBQ\nare drawn to intersect the circles at A, D and P ,\nQ respectively (see Fig. 9.27). Prove that\n∠ ACP  = ∠ QCD.\n10.If circles are drawn taking two sides of a triangle as diameters, prove that the point of\nintersection of these circles lie on the third side.\n11.ABC and ADC are two right triangles with common hypotenuse AC. Prove that\n∠ CAD = ∠ CBD.\n12.Prove that a cyclic parallelogram is a rectangle.\n9.6 Summary\nIn this chapter , you have studied the following points:\n1. A circle is the collection of all points in a plane, which are equidistant from a fixed point in\nthe plane.\n2. Equal chords of a circle (or of congruent circles) subtend equal angles at the centre.\n3. If the angles subtended by two chords of a circle (or of congruent circles) at the centre\n(corresponding centres) are equal, the chords are equal.\n4. The perpendicular from the centre of a circle to a chord bisects the chord.\n5. The line drawn through the centre of a circle to bisect a chord is perpendicular to\nthe chord.\n6. Equal chords of a circle (or of congruent circles) are equidistant from the centre (or\ncorresponding centres).\n",
+      "wordCount": 1021,
+      "examples": [
+        {
+          "chapterNumber": 6,
+          "exampleNumber": 2,
+          "title": ":  In Fig. 9.19, AB is a diameter of the circle, CD is a chord equal to the",
+          "question": "Example 2 :  In Fig. 9.19, AB is a diameter of the circle, CD is a chord equal to the\nradius of the circle. AC and BD when extended intersect at a point E. Prove that\n∠ AEB = 60°.\nSolution :  Join OC, OD and BC.\nTriangle ODC is equilateral (Why?)\nTherefore, ∠ COD = 60°\nNow, ∠ CBD  =1\n2 ∠ COD (Theorem 9.7)\nThis gives ∠ CBD = 30°\nAgain, ∠ ACB = 90° (Why ?)\nSo, ∠ BCE = 180° – ∠ ACB = 90°\nWhich gives ∠ CEB = 90° – 30° = 60°, i.e., ∠ AEB = 60°\nExample 3 :  In Fig 9.20, ABCD is a cyclic\nquadrilateral",
+          "solution": ":  Join OC, OD and BC.\nTriangle ODC is equilateral (Why?)\nTherefore, ∠ COD = 60°\nNow, ∠ CBD  =1\n2 ∠ COD (Theorem 9.7)\nThis gives ∠ CBD = 30°\nAgain, ∠ ACB = 90° (Why ?)\nSo, ∠ BCE = 180° – ∠ ACB = 90°\nWhich gives ∠ CEB = 90° – 30° = 60°, i.e., ∠ AEB = 60°"
+        },
+        {
+          "chapterNumber": 6,
+          "exampleNumber": 3,
+          "title": ":  In Fig 9.20, ABCD is a cyclic",
+          "question": "Example 3 :  In Fig 9.20, ABCD is a cyclic\nquadrilateral in which AC and BD are its diagonals.\nIf ∠ DBC = 55° and ∠ BAC = 45°, find ∠ BCD.\nSolution : ∠ CAD = ∠ DBC = 55°\n(Angles in the same segment)\nTherefore, ∠ DAB = ∠ CAD + ∠ BAC\n=55° + 45° = 100°\nBut ∠ DAB + ∠ BCD = 180°\n(Opposite angles of a cyclic quadrilateral)\nSo, ∠ BCD = 180° – 100° = 80°Fig. 9.19\nFig. 9.20\nReprint 2025-26\n\nCIRCLES 127\nExample 4 :  Two circles intersect at two points A\nand B. AD and AC are diameters to the two circles\n(s",
+          "solution": ": ∠ CAD = ∠ DBC = 55°\n(Angles in the same segment)\nTherefore, ∠ DAB = ∠ CAD + ∠ BAC\n=55° + 45° = 100°\nBut ∠ DAB + ∠ BCD = 180°\n(Opposite angles of a cyclic quadrilateral)\nSo, ∠ BCD = 180° – 100° = 80°Fig. 9.19\nFig. 9.20\nReprint 2025-26\n\nCIRCLES 127"
+        },
+        {
+          "chapterNumber": 6,
+          "exampleNumber": 4,
+          "title": ":  Two circles intersect at two points A",
+          "question": "Example 4 :  Two circles intersect at two points A\nand B. AD and AC are diameters to the two circles\n(see Fig. 9.21). Prove that B lies on the line segment\nDC.\nSolution :  Join AB.\n∠ ABD = 90° (Angle in a semicircle)\n∠ ABC = 90° (Angle in a semicircle)\nSo, ∠ ABD + ∠ ABC = 90° + 90° = 180°\nTherefore, DBC is a line. That is B lies on the line segment DC.\nExample 5 :  Prove that the quadrilateral formed (if possible) by the internal angle\nbisectors of any quadrilateral is cyclic.\nSolution :  In Fig",
+          "solution": ":  Join AB.\n∠ ABD = 90° (Angle in a semicircle)\n∠ ABC = 90° (Angle in a semicircle)\nSo, ∠ ABD + ∠ ABC = 90° + 90° = 180°\nTherefore, DBC is a line. That is B lies on the line segment DC."
+        },
+        {
+          "chapterNumber": 6,
+          "exampleNumber": 5,
+          "title": ":  Prove that the quadrilateral formed (if possible) by the internal angle",
+          "question": "Example 5 :  Prove that the quadrilateral formed (if possible) by the internal angle\nbisectors of any quadrilateral is cyclic.\nSolution :  In Fig. 9.22, ABCD is a quadrilateral in\nwhich the angle bisectors AH, BF , CF and DH of\ninternal angles A, B, C and D respectively form a\nquadrilateral EFGH.\nNow , ∠ FEH = ∠ AEB = 180° – ∠ EAB – ∠ EBA (Why ?)\n           = 180° – 1\n2 (∠ A + ∠ B)\nand ∠ FGH = ∠ CGD = 180 ° – ∠ GCD – ∠ GDC (Why ?)\n                      = 180° – 1\n2 (∠ C + ∠ D)\nTherefore, ∠ FEH +",
+          "solution": ":  In Fig. 9.22, ABCD is a quadrilateral in\nwhich the angle bisectors AH, BF , CF and DH of\ninternal angles A, B, C and D respectively form a\nquadrilateral EFGH.\nNow , ∠ FEH = ∠ AEB = 180° – ∠ EAB – ∠ EBA (Why ?)\n           = 180° – 1\n2 (∠ A + ∠ B)\nand ∠ FGH = ∠ CGD = 180 ° – ∠ GCD – ∠ GDC (Why ?)\n                      = 180° – 1\n2 (∠ C + ∠ D)\nTherefore, ∠ FEH + ∠ FGH = 180 ° – 1\n2 (∠ A + ∠ B) + 180 ° – 1\n2 (∠ C + ∠ D)\n                 = 360 ° – 1\n2 (∠ A+ ∠ B +∠ C +∠ D) = 360 ° – 1\n2 × 360°\n                 = 360° – 180° = 180°\nTherefore, by Theorem 9.1 1, the quadrilateral EFGH is cyclic."
+        }
+      ],
+      "exercises": [
+        {
+          "chapterNumber": 6,
+          "exerciseNumber": "9.3",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "A circle is the collection of all points in a plane, which are equidistant from a fixed point in\nthe plane."
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "Equal chords of a circle (or of congruent circles) subtend equal angles at the centre."
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "If the angles subtended by two chords of a circle (or of congruent circles) at the centre\n(corresponding centres) are equal, the chords are equal."
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "The perpendicular from the centre of a circle to a chord bisects the chord."
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "The line drawn through the centre of a circle to bisect a chord is perpendicular to\nthe chord."
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "Equal chords of a circle (or of congruent circles) are equidistant from the centre (or\ncorresponding centres)."
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 4,
+        "exercisesCount": 6
+      }
+    },
+    {
+      "chapterNumber": 7,
+      "title": "Chords equidistant from the centre (or corresponding",
+      "content": "7. Chords equidistant from the centre (or corresponding centres) of a circle (or of congruent\ncircles) are equal.\n",
+      "wordCount": 18,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 8,
+      "title": "If two arcs of a circle are congruent, then their co",
+      "content": "",
+      "wordCount": 0,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 9,
+      "title": "CIRCLES",
+      "content": "CHAPTER 9\nCIRCLES\n9.1 Angle Subtended by a Chord at a Point\nYou have already studied about circles and its parts in Class VI.\nTake a line segment PQ and a point R not on the line containing PQ. Join PR and QR\n(see Fig. 9.1). Then  ∠ PRQ is called the angle subtended by the line segment PQ at\nthe point R. What are angles POQ, PRQ and PSQ called in Fig. 9.2? ∠ POQ is the\nangle subtended by the chord PQ at the centre O, ∠ PRQ and ∠ \nPSQ are respectively\nthe angles subtended by PQ at points R and S on the major and minor arcs PQ.\nFig. 9.1             Fig. 9.2\nLet us examine the relationship between the size of the chord and the angle\nsubtended by it at the centre. You may see by drawing dif ferent chords of a circle\nand  angles subtended by them at the centre that the longer is the chord, the bigger\nwill be the angle subtended by it at the centre. What will happen if you take two\nequal chords of a circle? Will the angles subtended at the centre be the same\nor not?\nReprint 2025-26\n\nCIRCLES 117\nDraw two or more equal chords of a circle and\nmeasure the angles subtended by them at the centre\n(see Fig.9.3). You will find that the angles subtended\nby them at the centre are equal. Let us give a proof\nof this fact.\nTheor em 9.1 :  Equal chor ds of a cir cle subtend\nequal angles at the centr e.\nProof :  You are given two equal chords AB and CD\nof a circle with centre O (see Fig.9.4). \nYou want to\nprove that ∠ AOB = ∠ COD.\nIn triangles AOB and COD,\nOA = OC (Radii of a circle)\nOB = OD (Radii of a circle)\nAB = CD (Given)\nTherefore, ∆ AOB ≅∆ COD (SSS rule)\nThis gives ∠ AOB = ∠ COD\n               (Corresponding parts of congruent triangles)\nRemark :  For convenience, the abbreviation CPCT will be used in place of\n‘Corresponding parts of congruent triangles’, because we use this very frequently as\nyou will see.\nNow if two chords of a circle subtend equal angles at the centre, what can you\nsay about the chords? Are they equal or not? Let us examine this by the following\nactivity:\nTake a tracing paper and trace a circle on it. Cut\nit along the circle to get a disc. At its centre O, draw\nan angle AOB where A, B are points on the circle.\nMake another angle POQ at the centre equal to\n∠AOB. Cut the disc along AB and PQ\n(see Fig. 9.5). You will get two segments ACB and\nPRQ of the circle. If you put one on the other , what\ndo you observe? They cover each other , i.e., they\nare congruent. So AB  = PQ.Fig. 9.3\nFig. 9.4\nFig. 9.5\nReprint 2025-26\n\n118 MATHEMA TICS\nThough you have seen it for this particular case, try it out for other equal angles\ntoo. The chords will all turn out to be equal because of the following theorem:\nTheor em 9.2 :  If the angles subtended by the chor ds of a cir cle at the centr e are\nequal, then the chor ds ar e equal.\nThe above theorem is the converse of the Theorem 9.1. Note that in Fig. 9.4, if\nyou take ∠ AOB = ∠ COD, then\n           ∆  AOB ≅ ∆ COD (Why?)\nCan you now see that AB = CD?\nEXERCISE 9.1\n1.Recall that two circles are congruent if they have the same radii. Prove that equal\nchords of congruent circles subtend equal angles at their centres.\n2.Prove that if chords of congruent circles subtend equal angles at their centres, then\nthe chords are equal.\n9.2 Perpendicular from the Centre to a Chord\nActivity :  Draw a circle on a tracing paper . Let O\nbe its centre. Draw a chord AB. Fold the paper along\na line through O so that a portion of the chord falls on\nthe other . Let the crease cut AB at the point M. Then,\n∠ OMA = ∠ OMB = 90° or OM is perpendicular to\nAB. Does the point B coincide with A (see Fig.9.6)?\nYes it will. So MA  = MB.\nGive a proof yourself by joining OA and OB and proving the right triangles OMA\nand OMB to be congruent. This example is a particular instance of the following\nresult:\nTheor em 9.3 :  The perpendicular fr om the centr e of a cir cle to a chor d bisects\nthe chor d.\nWhat is the converse of this theorem? To write this, first let us be clear what is\nassumed in Theorem 9.3 and what is proved. Given that the perpendicular from the\ncentre of a circle to a chord is drawn and to prove that it bisects the chord. Thus in the\nconverse, what the hypothesis is ‘if a line from the centre bisects a chord of a\ncircle’ and what is to be proved is ‘the line is perpendicular to the chord’. So the\nconverse is:Fig. 9.6\nReprint 2025-26\n\nCIRCLES 119\nTheor em 9.4 :  The line drawn thr ough the centr e of a cir cle to bisect a chor d is\nperpendicular to the chor d.\nIs this  true? Try it for few cases and see. You will\nsee that it is true for these cases. See if it is true, in\ngeneral, by doing the following exercise. We will write\nthe stages and you give the reasons.\nLet AB be a chord of a circle with centre O and\nO is joined to the mid-point M of AB. You have to\nprove that OM ⊥ AB. Join OA  and OB\n(see Fig. 9.7). In triangles OAM and OBM,\nOA = OB (Why ?)\nAM = BM (Why ?)\nOM = OM (Common)\nTherefore, ∆OAM ≅∆OBM (How ?)\nThis gives ∠OMA = ∠OMB = 90°    (Why ?)\n9.3 Equal Chords and their Distances from the Centre\nLet AB be a line and P  be a point. Since there are\ninfinite numbers of points on a line, if you join these\npoints to P , you will get infinitely many line segments\nPL1, PL2, PM, PL3, PL4, etc. Which of these is the\ndistance of AB from P? You may think a while and\nget the answer . Out of these line segments, the\nperpendicular from P  to AB, namely PM in Fig. 9.8,\nwill be the least. In Mathematics, we define this least\nlength PM to be the distance of AB fr om P\n. So you\nmay say that:\nThe length of the perpendicular fr om a point to a line is the distance of the\nline fr om the point .\nNote that if the point lies on the line, the distance of the line from the point is zero.\nA circle can have infinitely many chords. You may observe by drawing chords of\na circle that longer chord is nearer to the centre than the smaller chord. You may\nobserve it by drawing several chords of a circle of different lengths and measuring\ntheir distances from the centre.  What is the distance of the diameter , which is theFig. 9.7\nFig. 9.8\nReprint 2025-26\n\n120 MATHEMA TICS\nlongest chord from the centre? Since the centre lies on it, the distance is zero. Do you\nthink that there is some relationship between the length of chords and their distances\nfrom the centre? Let us see if this is so.\nFig. 9.9\nActivity :  Draw a circle of any radius on a tracing paper . Draw two equal chords\nAB and CD of it and also the perpendiculars OM and ON on them from the centre\nO. Fold the figure so that D falls on B and C falls on A [see Fig.9.9 (i)]. You may\nobserve that O lies on the crease and N falls on M. Therefore, OM = ON. Repeat\nthe activity by drawing congruent circles with centres O and O ′ and taking equal\nchords AB and CD one on each. Draw perpendiculars OM and O ′N on them [see\nFig. 9.9(ii)]. Cut one circular disc and put it on the other so that AB coincides with\nCD. Then you will find that O coincides with O ′ and M coincides with N. In this\nway you verified the following:\nTheor em 9.5 :  Equal chor ds of a cir cle (or of congr uent cir cles) are equidistant\nfrom the centr e (or centr es).\nNext, it will be seen whether the converse of this theorem is true or not. For\nthis, draw a circle with centre O. From the centre O, draw two line segments OL\nand OM of equal length and lying inside the circle [see Fig. 9.10(i)]. Then draw\nchords PQ and RS of the circle perpendicular to OL and OM respectively [see Fig\n9.10(ii)]. Measure the lengths of PQ and RS. Are these dif ferent? No, both are\nequal. Repeat the activity for more equal line segments and drawing the chords\nperpendicular to them. This verifies the converse of the Theorem 9.5 which is stated\nas follows:\nReprint 2025-26\n\nCIRCLES 121\nTheor em 9.6 :  Chor ds equidistant fr om the centr e of a cir cle ar e equal in length.\nWe now take an example to illustrate the use of the above results:\nExample 1 :  If two intersecting chords of a circle make equal angles with the diameter\npassing through their point of intersection, prove that the chords are equal.\nSolution :  Given that AB and CD are two chords of\na circle, with centre O intersecting at a point E. PQ\nis a diameter through E, such that ∠ AEQ = ∠ DEQ\n(see Fig.9.1 1). You have to prove that AB = CD.\nDraw perpendiculars OL  and OM on chords AB and\nCD, respectively . Now\n∠ LOE = 180° – 90° – ∠ LEO = 90° – ∠ LEO\n(Angle sum property of a triangle)\n=90° – ∠ AEQ = 90° – ∠ DEQ\n=90° – ∠ MEO = ∠ MOE\nIn triangles OLE and OME,\n∠ LEO = ∠ MEO (Why ?)\n∠ LOE = ∠ MOE (Proved above)\nEO = EO (Common)\nTherefore, ∆ OLE ≅∆ OME (Why ?)\nThis gives OL = OM (CPCT)\nSo, AB = CD (Why ?)Fig. 9.10\nFig. 9.1 1\nReprint 2025-26\n\n122 MATHEMA TICS\nEXERCISE 9.2\n1.Two circles of radii 5 cm and 3 cm intersect at two points and the distance between\ntheir centres is 4 cm. Find the length of the common chord.\n2.If two equal chords of a circle intersect within the circle, prove that the segments of\none chord are equal to corresponding segments of the other chord.\n3.If two equal chords of a circle intersect within the circle, prove that the line\njoining the point of intersection to the centre makes equal angles with the chords.\n4.If a line intersects two concentric circles (circles\nwith the same centre) with centre O at A, B, C and\nD, prove that AB = CD (see Fig. 9.12).\n5.Three girls Reshma, Salma and Mandip are\nplaying a game by standing on a circle of radius\n5m drawn in a park. Reshma throws a ball to\nSalma, Salma to Mandip, Mandip to Reshma. If\nthe distance between Reshma and Salma and\nbetween Salma and Mandip is 6m each, what is\nthe distance between Reshma and Mandip?\n6. A circular park of radius 20m is situated in a colony . Three boys Ankur , Syed and\nDavid are sitting at equal distance on its boundary each having a toy telephone in\nhis hands to talk each other . Find the length of the string of each phone.\n9.4 Angle Subtended by an Arc of a Cir cle\nYou have seen that the end points of a chord other than diameter of a circle cuts it into\ntwo arcs – one major and other minor . If you take two equal chords, what can you say\nabout the size of arcs? Is one arc made by first chord equal to the corresponding arc\nmade by another chord? In fact, they are more than just equal in length. They are\ncongruent in the sense that if one arc is put on the other , without bending or twisting,\none superimposes the other completely .\nYou can verify this fact by cutting the arc,\ncorresponding to the chord CD from the circle along\nCD and put it on the corresponding arc made by equal\nchord AB. You will find that the arc CD superimpose\nthe arc AB completely  (see Fig. 9.13). This shows\nthat equal chords make congruent arcs and\nconversely congruent arcs make equal chords of a\ncircle. You can state it as follows:\nIf two chor ds of a cir cle ar e equal, then their cor responding ar cs ar e congr uent\nand conversely , if two ar cs ar e congr uent, then their cor responding chor ds ar e equal.Fig. 9.12\nFig. 9.13\nReprint 2025-26\n\nCIRCLES 123\nAlso the angle subtended by an arc at the centre\nis defined to be angle subtended by the corresponding\nchord at the centre in the sense that the minor arc\nsubtends the angle and the major arc subtends the\nreflex angle. Therefore, in Fig 9.14, the angle\nsubtended by the minor arc PQ at O is ∠POQ and\nthe angle subtended by the major arc PQ at O is\nreflex angle POQ.\n In view of the property above and Theorem 9.1,\nthe following result is true:\nCongr uent ar cs (or equal ar cs) of a cir cle subtend equal angles at the centr e.\nTherefore, the angle subtended by a chord of a circle at its centre is equal to the\nangle subtended by the corresponding (minor) arc at the centre. The following theorem\ngives the relationship between the angles subtended by an arc at the centre and at a\npoint on the circle.\nTheor em 9.7 :  The angle subtended by an ar c at the centr e is double the angle\nsubtended by it at any point on the r emaining par t of the cir cle.\nProof :  Given an arc PQ of a circle subtending angles POQ at the centre O and\nPAQ at a point A on the remaining part of the circle. We need to prove that\n∠ POQ = 2 ∠ PAQ.\nFig. 9.15\nConsider the three different cases as given in Fig. 9.15. In (i), arc PQ is minor; in (ii),\narc PQ is a semicircle and in (iii), arc PQ is major .\nLet us begin by joining AO and extending it to a point B.\nIn all the cases,\n∠ BOQ = ∠ OAQ + ∠ AQO\nbecause an exterior angle of a triangle is equal to the sum of the two interior opposite\nangles.Fig. 9.14\nReprint 2025-26\n\n124 MATHEMA TICS\nAlso in ∆ OAQ,\nOA = OQ (Radii of a circle)\nTherefore, ∠ OAQ = ∠ OQA (Theorem 7.5)\nThis gives ∠ BOQ = 2 ∠ OAQ (1)\nSimilarly , ∠ BOP = 2 ∠ OAP (2)\nFrom (1) and (2), ∠ BOP + ∠ BOQ = 2(∠ OAP + ∠ OAQ)\nThis is the same as ∠ POQ = 2 ∠ PAQ (3)\nFor the case (iii), where PQ is the major arc, (3) is replaced by\nreflex angle POQ = 2 ∠ PAQ\nRemark :  Suppose we join points P and Q and\nform a chord PQ in the above figures. Then\n∠ PAQ is also called the angle formed in the\nsegment P AQP .\nIn Theorem 9.7, A can be any point on the\nremaining part of the circle. So if you take any\nother point C on the remaining part of the circle\n(see Fig. 9.16), you have\n∠ POQ = 2 ∠ PCQ = 2 ∠ PAQ\nTherefore, ∠ PCQ = ∠ PAQ.\nThis proves the following:\nTheor em 9.8 :  Angles in the same segment of a cir cle ar e equal.\nAgain let us discuss the case (ii) of Theorem 10.8 separately . Here ∠PAQ is an angle\nin the segment, which is a semicircle. Also, ∠ PAQ = 1\n2 ∠ POQ = 1\n2 × 180° = 90°.\nIf you take any other point C on the semicircle, again you get that\n∠ PCQ = 90°\nTherefore, you find another property of the circle as:\nAngle in a semicir cle is a right angle.\nThe converse of Theorem 9.8 is also true. It can be stated as:\nTheorem 9.9 :  If a line segment joining two points subtends equal angles at two\nother points lying on the same side of the line containing the line segment, the\nfour points lie on a cir cle (i.e. they ar e concyclic ).Fig. 9.16\nReprint 2025-26\n\nCIRCLES 125\nYou can see the truth of this result as follows:\nIn Fig. 9.17, AB is a line segment, which subtends equal angles at two points C and D.\nThat is\n∠ ACB =  ∠ ADB\nTo show that the points A, B, C and D lie on a circle\nlet us draw a circle through the points A, C and B.\nSuppose it does not pass through the point D. Then it\nwill intersect AD (or extended AD) at a point, say E\n(or E ′).\nIf points A, C, E and B lie on a circle,\n∠ ACB = ∠ AEB (Why?)\nBut it is given that ∠ ACB = ∠ ADB.\nTherefore, ∠ AEB = ∠ ADB.\nThis is not possible unless E coincides with D. (Why?)\nSimilarly , E′ should also coincide with D.\n9.5 Cyclic Quadrilaterals\nA quadrilateral ABCD is called cyclic  if all the four vertices\nof it lie on a circle (see Fig 9.18). You will find a peculiar\nproperty in such quadrilaterals. Draw several cyclic\nquadrilaterals of different sides and name each of these\nas ABCD. (This can be done by drawing several circles\nof different radii and taking four points on each of them.)\nMeasure the opposite angles and write your observations\nin the following table.\n  S.No. of Quadrilateral ∠ A ∠ B ∠ C ∠ D ∠ A +∠ C∠ B +∠ D\n1.\n2.\n3.\n4.\n5.\n6.\nWhat do you infer from the table?Fig. 9.17\nFig. 9.18\nReprint 2025-26\n\n126 MATHEMA TICS\nYou find that ∠A + ∠C = 180° and ∠B + ∠D = 180°, neglecting the error in\nmeasurements. This verifies the following:\nTheorem 9.10 :  The sum of either pair of opposite angles of a cyclic quadrilateral\nis 180º.\nIn fact, the converse of this theorem, which is stated below is also true.\nTheor em 9.1 1 : If the sum of a pair of opposite angles of a quadrilateral is 180º,\nthe quadrilateral is cyclic.\nYou can see the truth of this theorem by following a method similar to the method\nadopted for Theorem 9.9.\nExample 2 :  In Fig. 9.19, AB is a diameter of the circle, CD is a chord equal to the\nradius of the circle. AC and BD when extended intersect at a point E. Prove that\n∠ AEB = 60°.\nSolution :  Join OC, OD and BC.\nTriangle ODC is equilateral (Why?)\nTherefore, ∠ COD = 60°\nNow, ∠ CBD  =1\n2 ∠ COD (Theorem 9.7)\nThis gives ∠ CBD = 30°\nAgain, ∠ ACB = 90° (Why ?)\nSo, ∠ BCE = 180° – ∠ ACB = 90°\nWhich gives ∠ CEB = 90° – 30° = 60°, i.e., ∠ AEB = 60°\nExample 3 :  In Fig 9.20, ABCD is a cyclic\nquadrilateral in which AC and BD are its diagonals.\nIf ∠ DBC = 55° and ∠ BAC = 45°, find ∠ BCD.\nSolution : ∠ CAD = ∠ DBC = 55°\n(Angles in the same segment)\nTherefore, ∠ DAB = ∠ CAD + ∠ BAC\n=55° + 45° = 100°\nBut ∠ DAB + ∠ BCD = 180°\n(Opposite angles of a cyclic quadrilateral)\nSo, ∠ BCD = 180° – 100° = 80°Fig. 9.19\nFig. 9.20\nReprint 2025-26\n\nCIRCLES 127\nExample 4 :  Two circles intersect at two points A\nand B. AD and AC are diameters to the two circles\n(see Fig. 9.21). Prove that B lies on the line segment\nDC.\nSolution :  Join AB.\n∠ ABD = 90° (Angle in a semicircle)\n∠ ABC = 90° (Angle in a semicircle)\nSo, ∠ ABD + ∠ ABC = 90° + 90° = 180°\nTherefore, DBC is a line. That is B lies on the line segment DC.\nExample 5 :  Prove that the quadrilateral formed (if possible) by the internal angle\nbisectors of any quadrilateral is cyclic.\nSolution :  In Fig. 9.22, ABCD is a quadrilateral in\nwhich the angle bisectors AH, BF , CF and DH of\ninternal angles A, B, C and D respectively form a\nquadrilateral EFGH.\nNow , ∠ FEH = ∠ AEB = 180° – ∠ EAB – ∠ EBA (Why ?)\n           = 180° – 1\n2 (∠ A + ∠ B)\nand ∠ FGH = ∠ CGD = 180 ° – ∠ GCD – ∠ GDC (Why ?)\n                      = 180° – 1\n2 (∠ C + ∠ D)\nTherefore, ∠ FEH + ∠ FGH = 180 ° – 1\n2 (∠ A + ∠ B) + 180 ° – 1\n2 (∠ C + ∠ D)\n                 = 360 ° – 1\n2 (∠ A+ ∠ B +∠ C +∠ D) = 360 ° – 1\n2 × 360°\n                 = 360° – 180° = 180°\nTherefore, by Theorem 9.1 1, the quadrilateral EFGH is cyclic.\nEXERCISE 9.3\n1.In Fig. 9.23, A,B and C are three points on a circle\nwith centre  O such that ∠ BOC = 30° and\n∠ AOB = 60°. If D is a point on the circle other\nthan the arc ABC, find ∠ADC.Fig. 9.22\nFig. 9.23Fig. 9.21\nReprint 2025-26\n\n128 MATHEMA TICS\n2.A chord of a circle is equal to the radius of the\ncircle. Find the angle subtended by the chord at\na point on the minor arc and also at a point on the\nmajor arc.\n3.In Fig. 9.24, ∠ PQR = 100°, where P , Q and R are\npoints on a circle with centre O. Find ∠ OPR.\n4.In Fig. 9.25, ∠ ABC = 69°, ∠ ACB = 31°, find\n∠ BDC.\n5.In Fig. 9.26,  A, B, C and D are four points on a\ncircle. AC and BD intersect at a point E such\nthat ∠ BEC = 130° and ∠ ECD = 20°. Find\n∠ BAC.\n6.ABCD is a cyclic quadrilateral whose diagonals intersect at a point E. If ∠ DBC = 70°,\n∠ BAC is 30°, find ∠ BCD. Further , if AB = BC, find ∠ ECD.\n7.If diagonals of a cyclic quadrilateral are diameters of the circle through the vertices of\nthe quadrilateral, prove that it is a rectangle.\n8.If the non-parallel sides of a trapezium are equal, prove that it is cyclic.Fig. 9.24\nFig. 9.25\nFig. 9.26\nReprint 2025-26\n\nCIRCLES 129\n9.Two circles intersect at two points B and C.\nThrough B, two line segments ABD and PBQ\nare drawn to intersect the circles at A, D and P ,\nQ respectively (see Fig. 9.27). Prove that\n∠ ACP  = ∠ QCD.\n10.If circles are drawn taking two sides of a triangle as diameters, prove that the point of\nintersection of these circles lie on the third side.\n11.ABC and ADC are two right triangles with common hypotenuse AC. Prove that\n∠ CAD = ∠ CBD.\n12.Prove that a cyclic parallelogram is a rectangle.\n9.6 Summary\nIn this chapter , you have studied the following points:\n1. A circle is the collection of all points in a plane, which are equidistant from a fixed point in\nthe plane.\n2. Equal chords of a circle (or of congruent circles) subtend equal angles at the centre.\n3. If the angles subtended by two chords of a circle (or of congruent circles) at the centre\n(corresponding centres) are equal, the chords are equal.\n4. The perpendicular from the centre of a circle to a chord bisects the chord.\n5. The line drawn through the centre of a circle to bisect a chord is perpendicular to\nthe chord.\n6. Equal chords of a circle (or of congruent circles) are equidistant from the centre (or\ncorresponding centres).\n7. Chords equidistant from the centre (or corresponding centres) of a circle (or of congruent\ncircles) are equal.\n8. If two arcs of a circle are congruent, then their corresponding chords are equal and\nconversely if two chords of a circle are equal, then their corresponding arcs (minor , major)\nare congruent.\n9. Congruent arcs of a circle subtend equal angles at the centre.\n",
+      "wordCount": 4162,
+      "examples": [
+        {
+          "chapterNumber": 9,
+          "exampleNumber": 1,
+          "title": ":  If two intersecting chords of a circle make equal angles with the diameter",
+          "question": "Example 1 :  If two intersecting chords of a circle make equal angles with the diameter\npassing through their point of intersection, prove that the chords are equal.\nSolution :  Given that AB and CD are two chords of\na circle, with centre O intersecting at a point E. PQ\nis a diameter through E, such that ∠ AEQ = ∠ DEQ\n(see Fig.9.1 1). You have to prove that AB = CD.\nDraw perpendiculars OL  and OM on chords AB and\nCD, respectively . Now\n∠ LOE = 180° – 90° – ∠ LEO = 90° – ∠ LEO\n(Angle sum property",
+          "solution": ":  Given that AB and CD are two chords of\na circle, with centre O intersecting at a point E. PQ\nis a diameter through E, such that ∠ AEQ = ∠ DEQ\n(see Fig.9.1 1). You have to prove that AB = CD.\nDraw perpendiculars OL  and OM on chords AB and\nCD, respectively . Now\n∠ LOE = 180° – 90° – ∠ LEO = 90° – ∠ LEO\n(Angle sum property of a triangle)\n=90° – ∠ AEQ = 90° – ∠ DEQ\n=90° – ∠ MEO = ∠ MOE\nIn triangles OLE and OME,\n∠ LEO = ∠ MEO (Why ?)\n∠ LOE = ∠ MOE (Proved above)\nEO = EO (Common)\nTherefore, ∆ OLE ≅∆ OME (Why ?)\nThis gives OL = OM (CPCT)\nSo, AB = CD (Why ?)Fig. 9.10\nFig. 9.1 1\nReprint 2025-26\n\n122 MATHEMA TICS"
+        },
+        {
+          "chapterNumber": 9,
+          "exampleNumber": 2,
+          "title": ":  In Fig. 9.19, AB is a diameter of the circle, CD is a chord equal to the",
+          "question": "Example 2 :  In Fig. 9.19, AB is a diameter of the circle, CD is a chord equal to the\nradius of the circle. AC and BD when extended intersect at a point E. Prove that\n∠ AEB = 60°.\nSolution :  Join OC, OD and BC.\nTriangle ODC is equilateral (Why?)\nTherefore, ∠ COD = 60°\nNow, ∠ CBD  =1\n2 ∠ COD (Theorem 9.7)\nThis gives ∠ CBD = 30°\nAgain, ∠ ACB = 90° (Why ?)\nSo, ∠ BCE = 180° – ∠ ACB = 90°\nWhich gives ∠ CEB = 90° – 30° = 60°, i.e., ∠ AEB = 60°\nExample 3 :  In Fig 9.20, ABCD is a cyclic\nquadrilateral",
+          "solution": ":  Join OC, OD and BC.\nTriangle ODC is equilateral (Why?)\nTherefore, ∠ COD = 60°\nNow, ∠ CBD  =1\n2 ∠ COD (Theorem 9.7)\nThis gives ∠ CBD = 30°\nAgain, ∠ ACB = 90° (Why ?)\nSo, ∠ BCE = 180° – ∠ ACB = 90°\nWhich gives ∠ CEB = 90° – 30° = 60°, i.e., ∠ AEB = 60°"
+        },
+        {
+          "chapterNumber": 9,
+          "exampleNumber": 3,
+          "title": ":  In Fig 9.20, ABCD is a cyclic",
+          "question": "Example 3 :  In Fig 9.20, ABCD is a cyclic\nquadrilateral in which AC and BD are its diagonals.\nIf ∠ DBC = 55° and ∠ BAC = 45°, find ∠ BCD.\nSolution : ∠ CAD = ∠ DBC = 55°\n(Angles in the same segment)\nTherefore, ∠ DAB = ∠ CAD + ∠ BAC\n=55° + 45° = 100°\nBut ∠ DAB + ∠ BCD = 180°\n(Opposite angles of a cyclic quadrilateral)\nSo, ∠ BCD = 180° – 100° = 80°Fig. 9.19\nFig. 9.20\nReprint 2025-26\n\nCIRCLES 127\nExample 4 :  Two circles intersect at two points A\nand B. AD and AC are diameters to the two circles\n(s",
+          "solution": ": ∠ CAD = ∠ DBC = 55°\n(Angles in the same segment)\nTherefore, ∠ DAB = ∠ CAD + ∠ BAC\n=55° + 45° = 100°\nBut ∠ DAB + ∠ BCD = 180°\n(Opposite angles of a cyclic quadrilateral)\nSo, ∠ BCD = 180° – 100° = 80°Fig. 9.19\nFig. 9.20\nReprint 2025-26\n\nCIRCLES 127"
+        },
+        {
+          "chapterNumber": 9,
+          "exampleNumber": 4,
+          "title": ":  Two circles intersect at two points A",
+          "question": "Example 4 :  Two circles intersect at two points A\nand B. AD and AC are diameters to the two circles\n(see Fig. 9.21). Prove that B lies on the line segment\nDC.\nSolution :  Join AB.\n∠ ABD = 90° (Angle in a semicircle)\n∠ ABC = 90° (Angle in a semicircle)\nSo, ∠ ABD + ∠ ABC = 90° + 90° = 180°\nTherefore, DBC is a line. That is B lies on the line segment DC.\nExample 5 :  Prove that the quadrilateral formed (if possible) by the internal angle\nbisectors of any quadrilateral is cyclic.\nSolution :  In Fig",
+          "solution": ":  Join AB.\n∠ ABD = 90° (Angle in a semicircle)\n∠ ABC = 90° (Angle in a semicircle)\nSo, ∠ ABD + ∠ ABC = 90° + 90° = 180°\nTherefore, DBC is a line. That is B lies on the line segment DC."
+        },
+        {
+          "chapterNumber": 9,
+          "exampleNumber": 5,
+          "title": ":  Prove that the quadrilateral formed (if possible) by the internal angle",
+          "question": "Example 5 :  Prove that the quadrilateral formed (if possible) by the internal angle\nbisectors of any quadrilateral is cyclic.\nSolution :  In Fig. 9.22, ABCD is a quadrilateral in\nwhich the angle bisectors AH, BF , CF and DH of\ninternal angles A, B, C and D respectively form a\nquadrilateral EFGH.\nNow , ∠ FEH = ∠ AEB = 180° – ∠ EAB – ∠ EBA (Why ?)\n           = 180° – 1\n2 (∠ A + ∠ B)\nand ∠ FGH = ∠ CGD = 180 ° – ∠ GCD – ∠ GDC (Why ?)\n                      = 180° – 1\n2 (∠ C + ∠ D)\nTherefore, ∠ FEH +",
+          "solution": ":  In Fig. 9.22, ABCD is a quadrilateral in\nwhich the angle bisectors AH, BF , CF and DH of\ninternal angles A, B, C and D respectively form a\nquadrilateral EFGH.\nNow , ∠ FEH = ∠ AEB = 180° – ∠ EAB – ∠ EBA (Why ?)\n           = 180° – 1\n2 (∠ A + ∠ B)\nand ∠ FGH = ∠ CGD = 180 ° – ∠ GCD – ∠ GDC (Why ?)\n                      = 180° – 1\n2 (∠ C + ∠ D)\nTherefore, ∠ FEH + ∠ FGH = 180 ° – 1\n2 (∠ A + ∠ B) + 180 ° – 1\n2 (∠ C + ∠ D)\n                 = 360 ° – 1\n2 (∠ A+ ∠ B +∠ C +∠ D) = 360 ° – 1\n2 × 360°\n                 = 360° – 180° = 180°\nTherefore, by Theorem 9.1 1, the quadrilateral EFGH is cyclic."
+        }
+      ],
+      "exercises": [
+        {
+          "chapterNumber": 9,
+          "exerciseNumber": "9.2",
+          "questions": [
+            {
+              "questionNumber": 6,
+              "questionText": "A circular park of radius 20m is situated in a colony . Three boys Ankur , Syed and\nDavid are sitting at equal distance on its boundary each having a toy telephone in\nhis hands to talk each other . Find the length of the string of each phone."
+            }
+          ]
+        },
+        {
+          "chapterNumber": 9,
+          "exerciseNumber": "9.3",
+          "questions": [
+            {
+              "questionNumber": 1,
+              "questionText": "A circle is the collection of all points in a plane, which are equidistant from a fixed point in\nthe plane."
+            },
+            {
+              "questionNumber": 2,
+              "questionText": "Equal chords of a circle (or of congruent circles) subtend equal angles at the centre."
+            },
+            {
+              "questionNumber": 3,
+              "questionText": "If the angles subtended by two chords of a circle (or of congruent circles) at the centre\n(corresponding centres) are equal, the chords are equal."
+            },
+            {
+              "questionNumber": 4,
+              "questionText": "The perpendicular from the centre of a circle to a chord bisects the chord."
+            },
+            {
+              "questionNumber": 5,
+              "questionText": "The line drawn through the centre of a circle to bisect a chord is perpendicular to\nthe chord."
+            },
+            {
+              "questionNumber": 6,
+              "questionText": "Equal chords of a circle (or of congruent circles) are equidistant from the centre (or\ncorresponding centres)."
+            },
+            {
+              "questionNumber": 7,
+              "questionText": "Chords equidistant from the centre (or corresponding centres) of a circle (or of congruent\ncircles) are equal."
+            },
+            {
+              "questionNumber": 8,
+              "questionText": "If two arcs of a circle are congruent, then their corresponding chords are equal and\nconversely if two chords of a circle are equal, then their corresponding arcs (minor , major)\nare congruent."
+            },
+            {
+              "questionNumber": 9,
+              "questionText": "Congruent arcs of a circle subtend equal angles at the centre."
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "examplesCount": 5,
+        "exercisesCount": 10
+      }
+    },
+    {
+      "chapterNumber": 10,
+      "title": "The angle subtended by an arc at the centre is doubl",
+      "content": "10. The angle subtended by an arc at the centre is double the angle subtended by it at any\npoint on the remaining part of the circle.\n11.Angles in the same segment of a circle are equal.Fig. 9.27\nReprint 2025-26\n\n130 MATHEMA TICS\n",
+      "wordCount": 43,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "title": "Angle in a semicircle is a right angle.",
+      "content": "12. Angle in a semicircle is a right angle.\n",
+      "wordCount": 9,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 13,
+      "title": "If a line segment joining two points subtends equal",
+      "content": "13. If a line segment joining two points subtends equal angles at two other points lying on\nthe same side of the line containing the line segment, the four points lie on a circle.\n",
+      "wordCount": 34,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 14,
+      "title": "The sum of either pair of opposite angles of a cycli",
+      "content": "14. The sum of either pair of opposite angles of a cyclic quadrilateral is 1800.\n",
+      "wordCount": 15,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    },
+    {
+      "chapterNumber": 15,
+      "title": "If sum of a pair of opposite angles of a quadrilater",
+      "content": "15. If sum of a pair of opposite angles of a quadrilateral is 1800, the quadrilateral is cyclic.\nReprint 2025-26\n\n",
+      "wordCount": 20,
+      "examples": [],
+      "exercises": [],
+      "stats": {
+        "examplesCount": 0,
+        "exercisesCount": 0
+      }
+    }
+  ],
+  "metadata": {
+    "pages": 15,
+    "totalWords": 5379
+  }
+}

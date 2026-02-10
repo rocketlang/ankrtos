@@ -1,0 +1,213 @@
+{
+  "igcse": {
+    "0580_mathematics": {
+      "name": "Mathematics (Extended)",
+      "code": "0580",
+      "level": "IGCSE",
+      "topics": [
+        {
+          "id": "1",
+          "name": "Number",
+          "subtopics": [
+            "Types of number and number operations",
+            "Fractions, decimals, percentages",
+            "Ratio, proportion, rate",
+            "Indices and standard form",
+            "Estimation and approximation"
+          ],
+          "learning_outcomes": [
+            "Perform calculations with integers, fractions, decimals, and percentages",
+            "Use ratios, rates, and proportional reasoning",
+            "Calculate with indices and standard form",
+            "Round numbers and estimate calculations"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Algebra and Graphs",
+          "subtopics": [
+            "Algebraic expressions and manipulation",
+            "Formulae and substitution",
+            "Linear equations and inequalities",
+            "Quadratic expressions and equations",
+            "Functions and graphs",
+            "Sequences and series"
+          ],
+          "learning_outcomes": [
+            "Manipulate algebraic expressions and solve equations",
+            "Work with linear, quadratic, and other functions",
+            "Plot and interpret graphs",
+            "Recognize and extend number patterns"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Coordinate Geometry",
+          "subtopics": [
+            "Cartesian coordinates",
+            "Straight line graphs",
+            "Curved graphs",
+            "Distance and midpoint"
+          ],
+          "learning_outcomes": [
+            "Find equations of straight lines",
+            "Calculate distance and midpoint",
+            "Plot and analyze curves",
+            "Solve problems using coordinate geometry"
+          ]
+        },
+        {
+          "id": "4",
+          "name": "Geometry",
+          "subtopics": [
+            "Angles and geometrical properties",
+            "Symmetry and transformations",
+            "Similarity and congruence",
+            "Pythagoras and trigonometry",
+            "Mensuration (area, perimeter, volume)"
+          ],
+          "learning_outcomes": [
+            "Apply angle properties and theorems",
+            "Perform transformations",
+            "Use Pythagoras' theorem and trigonometric ratios",
+            "Calculate areas and volumes"
+          ]
+        },
+        {
+          "id": "5",
+          "name": "Probability and Statistics",
+          "subtopics": [
+            "Data collection and representation",
+            "Statistical measures (mean, median, mode)",
+            "Probability (single and combined events)",
+            "Histograms and cumulative frequency"
+          ],
+          "learning_outcomes": [
+            "Interpret and draw statistical diagrams",
+            "Calculate and interpret statistical measures",
+            "Calculate probabilities",
+            "Use histograms and cumulative frequency"
+          ]
+        }
+      ],
+      "assessment_objectives": [
+        "AO1: Demonstrate knowledge of mathematical facts, concepts, and relationships",
+        "AO2: Select and apply mathematical techniques and methods",
+        "AO3: Interpret and analyze problems and generate strategies to solve them"
+      ],
+      "question_types": [
+        {
+          "type": "short_answer",
+          "weight": 40,
+          "description": "Single-step calculations and direct applications"
+        },
+        {
+          "type": "structured",
+          "weight": 40,
+          "description": "Multi-step problems requiring reasoning"
+        },
+        {
+          "type": "extended",
+          "weight": 20,
+          "description": "Complex problems requiring analysis and synthesis"
+        }
+      ]
+    },
+    "0625_physics": {
+      "name": "Physics",
+      "code": "0625",
+      "level": "IGCSE",
+      "topics": [
+        {
+          "id": "1",
+          "name": "General Physics",
+          "subtopics": [
+            "Physical quantities and units",
+            "Measurement techniques",
+            "Motion",
+            "Mass and weight",
+            "Density"
+          ],
+          "learning_outcomes": [
+            "Use SI units and convert between units",
+            "Make measurements with appropriate instruments",
+            "Describe motion using speed, velocity, and acceleration",
+            "Distinguish between mass and weight",
+            "Calculate density and apply it to solve problems"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Thermal Physics",
+          "subtopics": [
+            "Kinetic particle model of matter",
+            "Thermal properties and temperature",
+            "Transfer of thermal energy"
+          ],
+          "learning_outcomes": [
+            "Describe states of matter using the kinetic particle model",
+            "Understand temperature scales and thermal expansion",
+            "Explain conduction, convection, and radiation",
+            "Calculate specific heat capacity and latent heat"
+          ]
+        },
+        {
+          "id": "3",
+          "name": "Electricity and Magnetism",
+          "subtopics": [
+            "Simple electrical circuits",
+            "Electrical quantities",
+            "Electric circuits",
+            "Magnetism",
+            "Electromagnetic effects"
+          ],
+          "learning_outcomes": [
+            "Interpret circuit diagrams",
+            "Use Ohm's law and calculate resistance",
+            "Describe magnetic fields and electromagnets",
+            "Explain electromagnetic induction",
+            "Apply principles to practical applications"
+          ]
+        },
+        {
+          "id": "4",
+          "name": "Waves",
+          "subtopics": [
+            "General wave properties",
+            "Light",
+            "Sound",
+            "Electromagnetic spectrum"
+          ],
+          "learning_outcomes": [
+            "Describe wave properties (wavelength, frequency, amplitude)",
+            "Explain reflection, refraction, and diffraction",
+            "Understand the electromagnetic spectrum",
+            "Apply wave principles to sound and light"
+          ]
+        }
+      ],
+      "assessment_objectives": [
+        "AO1: Knowledge with understanding",
+        "AO2: Handling, applying, and evaluating information",
+        "AO3: Experimental skills and investigations"
+      ],
+      "question_types": [
+        {
+          "type": "multiple_choice",
+          "weight": 30,
+          "description": "Testing knowledge and basic application"
+        },
+        {
+          "type": "structured",
+          "weight": 50,
+          "description": "Testing understanding and application"
+        },
+        {
+          "type": "extended_writing",
+          "weight": 20,
+          "description": "Testing analysis and evaluation"
+        }
+      ]
+    }
+  }
+}
