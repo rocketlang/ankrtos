@@ -30,7 +30,7 @@ Pratham Education Foundation operates a 30-person sales team with telecallers fa
 - **15-20% increase** in conversion rates
 - **50% reduction** in manual data entry time
 - **100% visibility** into sales team performance
-- **[Contact for pricing] significant savings vs Exotel-only solution
+- **₹2-5 lakhs savings** in Year 1 vs Exotel-only solution
 
 ---
 
@@ -196,6 +196,13 @@ Pratham Education Foundation operates a 30-person sales team with telecallers fa
 - **Phase 3 (Optimization):** 2-3 weeks
 - **Total:** 10-15 weeks
 
+#### Cost Estimate:
+- **Development:** ₹8-12 lakhs
+- **Infrastructure:** ₹20,000/month
+- **Total Year 1:** ₹12-15 lakhs
+
+---
+
 ### Approach 2: **Microservices Hybrid** 🔗
 **Philosophy:** Keep Laravel CRM, add Node.js microservices for new features
 
@@ -290,6 +297,13 @@ Pratham Education Foundation operates a 30-person sales team with telecallers fa
 - **Phase 3 (AI Services):** 4-6 weeks
 - **Phase 4 (Integration):** 2-3 weeks
 - **Total:** 15-21 weeks
+
+#### Cost Estimate:
+- **Development:** ₹15-22 lakhs
+- **Infrastructure:** ₹40,000/month
+- **Total Year 1:** ₹20-27 lakhs
+
+---
 
 ### Approach 3: **Modern Full-Stack (React + Node.js)** 🚀
 **Philosophy:** Build new platform, sync data from Laravel via APIs
@@ -404,6 +418,13 @@ Laravel publishes events → RabbitMQ → TeleHub consumes
 - **Phase 4 (AI/Advanced):** 4-6 weeks
 - **Phase 5 (Migration):** 2-3 weeks
 - **Total:** 21-29 weeks (5-7 months)
+
+#### Cost Estimate:
+- **Development:** ₹18-28 lakhs
+- **Infrastructure:** ₹50,000/month
+- **Total Year 1:** ₹24-34 lakhs
+
+---
 
 ### Approach 4: **ANKR Platform Integration** 🎯 (RECOMMENDED)
 **Philosophy:** Leverage existing ANKR infrastructure and add TeleHub as a module
@@ -673,11 +694,37 @@ ankr-labs-nx/
 - **Phase 5 (Testing & Launch):** 2-3 weeks
 - **Total:** 14-19 weeks (3.5-4.5 months)
 
+#### Cost Estimate:
+- **Development:** ₹12-18 lakhs
+- **Infrastructure:** ₹35,000/month (shared with ANKR)
+- **Total Year 1:** ₹16-22 lakhs
+
+---
+
+## 📊 Approach Comparison Matrix
+
+| Criteria | Laravel Monolith | Microservices | Modern Full-Stack | ANKR Platform |
+|----------|-----------------|---------------|-------------------|---------------|
+| **Development Time** | 10-15 weeks | 15-21 weeks | 21-29 weeks | 14-19 weeks |
+| **Initial Cost** | ₹12-15L | ₹20-27L | ₹24-34L | ₹16-22L |
+| **Scalability** | ⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **Maintenance** | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **AI Capabilities** | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **Real-time Features** | ⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **Team Learning Curve** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
+| **Laravel Integration** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **Future-Proof** | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **Operational Complexity** | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+
+---
+
+## 🎯 Recommendation
+
 ### **Primary Recommendation: Approach 4 (ANKR Platform Integration)**
 
 **Rationale:**
 1. **Speed to Market:** Fastest path to production (14-19 weeks)
-2. **Cost Effective:** Optimized for maximum ROI
+2. **Cost Effective:** Best ROI at ₹16-22 lakhs
 3. **Proven Technology:** Leverage battle-tested ANKR infrastructure
 4. **AI Superiority:** Industry-leading AI features already built
 5. **Strategic Alignment:** Positions Pratham as ANKR flagship customer
@@ -688,7 +735,7 @@ ankr-labs-nx/
 - Pratham wants full ownership and independence
 - Long-term plan to deprecate Laravel entirely
 - Have DevOps capability for managing multiple services
-- Budget allows for [Contact for pricing] investment
+- Budget allows for ₹20-27 lakhs investment
 
 ---
 
@@ -799,39 +846,56 @@ ankr-labs-nx/
 
 ---
 
+## 💰 Detailed Cost Breakdown (Approach 4)
+
+### Development Costs
+
+| Item | Hours | Rate | Cost |
+|------|-------|------|------|
+| **Backend Development** | 400 | ₹2,500 | ₹10,00,000 |
+| **Frontend Development** | 300 | ₹2,500 | ₹7,50,000 |
+| **AI Integration** | 80 | ₹3,000 | ₹2,40,000 |
+| **PBX Integration** | 60 | ₹2,500 | ₹1,50,000 |
+| **Testing & QA** | 100 | ₹2,000 | ₹2,00,000 |
+| **DevOps & Deployment** | 40 | ₹2,500 | ₹1,00,000 |
+| **Project Management** | 120 | ₹2,000 | ₹2,40,000 |
+| **Documentation & Training** | 40 | ₹2,000 | ₹80,000 |
+| **Contingency (10%)** | - | - | ₹2,76,000 |
+| **Total Development** | - | - | **₹29,36,000** |
+
 ### Infrastructure Costs (Monthly)
 
 | Service | Cost/Month |
 |---------|------------|
-| AWS/Cloud Hosting | [Price on request] |
-| Database (RDS PostgreSQL) | [Price on request] |
-| Redis Cache | [Price on request] |
+| AWS/Cloud Hosting | ₹15,000 |
+| Database (RDS PostgreSQL) | ₹8,000 |
+| Redis Cache | ₹3,000 |
 | Voice API (Exotel/Twilio) | Variable* |
-| AI APIs (Transcription) | [Price on request] |
-| S3 Storage (Recordings) | [Price on request] |
-| Monitoring & Logs | [Price on request] |
-| **Total Infrastructure** | **[Price on request]** |
+| AI APIs (Transcription) | ₹5,000 |
+| S3 Storage (Recordings) | ₹2,000 |
+| Monitoring & Logs | ₹2,000 |
+| **Total Infrastructure** | **₹35,000** |
 
-*Voice costs are usage-based: ~[Price on request].30/min × 30 users × 80 calls/day × 5 min = [Price on request]/month
+*Voice costs are usage-based: ~₹0.30/min × 30 users × 80 calls/day × 5 min = ₹36,000/month
 
 ### Year 1 Total Cost
 
 | Item | Cost |
 |------|------|
-| Development (One-time) | [Price on request] |
-| Infrastructure (12 months × [Price on request]) | [Price on request] |
-| Voice Costs (12 months × [Price on request]) | [Price on request] |
-| Support & Maintenance | [Price on request] |
-| **Year 1 Total** | **[Price on request]** |
+| Development (One-time) | ₹29,36,000 |
+| Infrastructure (12 months × ₹35,000) | ₹4,20,000 |
+| Voice Costs (12 months × ₹36,000) | ₹4,32,000 |
+| Support & Maintenance | ₹3,00,000 |
+| **Year 1 Total** | **₹40,88,000** |
 
 ### Cost Optimization Strategies
 
-1. **Use ANKR Shared Infrastructure:** Save [Price on request]/month
-2. **Negotiate Twilio Volume Pricing:** Save [Price on request].05/min = [Price on request]/month
-3. **Self-host Whisper for Transcription:** Save [Price on request]/month
-4. **Optimize AI Proxy Usage:** Cache responses, save [Price on request]/month
+1. **Use ANKR Shared Infrastructure:** Save ₹10,000/month
+2. **Negotiate Twilio Volume Pricing:** Save ₹0.05/min = ₹6,000/month
+3. **Self-host Whisper for Transcription:** Save ₹5,000/month
+4. **Optimize AI Proxy Usage:** Cache responses, save ₹3,000/month
 
-**Optimized Year 1 Cost: [Contact for pricing]**
+**Optimized Year 1 Cost: ₹32-35 lakhs**
 
 ---
 
@@ -987,12 +1051,12 @@ ANKR TeleHub presents a world-class solution for Pratham's telecalling challenge
 
 ### Recommended Path Forward
 
-**Option A: Quick POC (2 weeks, [Contact for pricing])**
+**Option A: Quick POC (2 weeks, ₹2-3 lakhs)**
 - Build basic dashboard + AI assistant demo
 - Test with 3-5 telecallers
 - Prove value before committing to full build
 
-**Option B: Full Build (4-5 months, [Contact for pricing])**
+**Option B: Full Build (4-5 months, ₹16-22 lakhs)**
 - Complete ANKR Platform integration
 - Phased rollout
 - Training and support included
