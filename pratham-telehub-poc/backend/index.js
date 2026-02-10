@@ -8,11 +8,15 @@ import pg from 'pg';
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { getPlivoService } from './services/PlivoService.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 dotenv.config();
+
+// Initialize Plivo service
+const plivoService = getPlivoService();
 
 const fastify = Fastify({
   logger: true
@@ -205,23 +209,73 @@ fastify.get('/api/team/status', async (request, reply) => {
 fastify.post('/api/calls/start', async (request, reply) => {
   const { lead_id, telecaller_id, campaign_id } = request.body;
 
-  const result = await pool.query(
-    `INSERT INTO calls (lead_id, telecaller_id, campaign_id, status, started_at)
-     VALUES ($1, $2, $3, 'ringing', NOW())
-     RETURNING *`,
-    [lead_id, telecaller_id, campaign_id]
-  );
+  try {
+    // Get lead and telecaller phone numbers
+    const leadQuery = await pool.query('SELECT phone, name FROM leads WHERE id = $1', [lead_id]);
+    const telecallerQuery = await pool.query('SELECT phone, name FROM users WHERE id = $1', [telecaller_id]);
 
-  // Update telecaller status
-  await pool.query(
-    "UPDATE users SET status = 'on_call' WHERE id = $1",
-    [telecaller_id]
-  );
+    if (leadQuery.rows.length === 0 || telecallerQuery.rows.length === 0) {
+      reply.code(404);
+      return { error: 'Lead or telecaller not found' };
+    }
 
-  // Broadcast via WebSocket (if connected)
-  broadcastUpdate('call_started', result.rows[0]);
+    const lead = leadQuery.rows[0];
+    const telecaller = telecallerQuery.rows[0];
 
-  return result.rows[0];
+    // Create call record in database
+    const result = await pool.query(
+      `INSERT INTO calls (lead_id, telecaller_id, campaign_id, status, started_at)
+       VALUES ($1, $2, $3, 'ringing', NOW())
+       RETURNING *`,
+      [lead_id, telecaller_id, campaign_id]
+    );
+
+    const callRecord = result.rows[0];
+
+    // Make actual Plivo call
+    let plivoCall = null;
+    try {
+      plivoCall = await plivoService.makeCall(
+        telecaller.phone,
+        lead.phone,
+        {
+          record: true,
+          recordCallbackUrl: `${process.env.BASE_URL || 'https://ankr.in/pratham'}/api/plivo/recording`,
+          callbackUrl: `${process.env.BASE_URL || 'https://ankr.in/pratham'}/api/plivo/status/${callRecord.id}`
+        }
+      );
+
+      // Update call record with Plivo UUID
+      await pool.query(
+        'UPDATE calls SET plivo_call_uuid = $1 WHERE id = $2',
+        [plivoCall.call_uuid, callRecord.id]
+      );
+
+      callRecord.plivo_call_uuid = plivoCall.call_uuid;
+    } catch (plivoError) {
+      console.error('Plivo call failed:', plivoError);
+      // Continue with mock mode - call record already created
+      callRecord.mock_mode = true;
+    }
+
+    // Update telecaller status
+    await pool.query(
+      "UPDATE users SET status = 'on_call' WHERE id = $1",
+      [telecaller_id]
+    );
+
+    // Broadcast via WebSocket (if connected)
+    broadcastUpdate('call_started', callRecord);
+
+    return {
+      ...callRecord,
+      plivo_status: plivoCall ? 'initiated' : 'mock_mode'
+    };
+  } catch (error) {
+    console.error('Call start error:', error);
+    reply.code(500);
+    return { error: 'Failed to start call', details: error.message };
+  }
 });
 
 // Update call status
@@ -284,6 +338,87 @@ fastify.post('/api/calls/:id/update', async (request, reply) => {
   broadcastUpdate('call_updated', result.rows[0]);
 
   return result.rows[0];
+});
+
+// ============================================================================
+// PLIVO WEBHOOKS
+// ============================================================================
+
+// Plivo Answer URL - Called when telecaller picks up
+fastify.post('/api/plivo/answer', async (request, reply) => {
+  const { lead } = request.query;
+
+  // Return XML to connect telecaller to lead
+  reply.type('application/xml');
+  return plivoService.generateAnswerXML(lead);
+});
+
+// Plivo Call Status Callback
+fastify.post('/api/plivo/status/:callId', async (request, reply) => {
+  const { callId } = request.params;
+  const plivoData = request.body;
+
+  console.log('Plivo status webhook:', { callId, status: plivoData.CallStatus, duration: plivoData.Duration });
+
+  // Map Plivo status to our status
+  let status = 'ringing';
+  if (plivoData.CallStatus === 'in-progress') status = 'in_progress';
+  if (plivoData.CallStatus === 'completed') status = 'completed';
+  if (plivoData.CallStatus === 'failed' || plivoData.CallStatus === 'no-answer') status = 'failed';
+
+  const updates = ['status = $1'];
+  const values = [status];
+  let paramCount = 2;
+
+  if (plivoData.Duration) {
+    updates.push(`duration_seconds = $${paramCount++}`);
+    values.push(parseInt(plivoData.Duration));
+  }
+
+  if (status === 'completed') {
+    updates.push('ended_at = NOW()');
+  } else if (status === 'in_progress') {
+    updates.push('answered_at = NOW()');
+  }
+
+  values.push(callId);
+
+  await pool.query(
+    `UPDATE calls SET ${updates.join(', ')} WHERE id = $${paramCount}`,
+    values
+  );
+
+  // If call completed, update telecaller status
+  if (status === 'completed' || status === 'failed') {
+    const callResult = await pool.query('SELECT telecaller_id FROM calls WHERE id = $1', [callId]);
+    if (callResult.rows.length > 0) {
+      await pool.query(
+        "UPDATE users SET status = 'available' WHERE id = $1",
+        [callResult.rows[0].telecaller_id]
+      );
+    }
+  }
+
+  broadcastUpdate('call_status_updated', { callId, status, duration: plivoData.Duration });
+
+  return { status: 'ok' };
+});
+
+// Plivo Recording Callback
+fastify.post('/api/plivo/recording', async (request, reply) => {
+  const { CallUUID, RecordingURL, Duration } = request.body;
+
+  console.log('Plivo recording webhook:', { CallUUID, RecordingURL, Duration });
+
+  // Find call by plivo_call_uuid and update recording URL
+  await pool.query(
+    'UPDATE calls SET recording_url = $1 WHERE plivo_call_uuid = $2',
+    [RecordingURL, CallUUID]
+  );
+
+  broadcastUpdate('recording_available', { CallUUID, RecordingURL });
+
+  return { status: 'ok' };
 });
 
 // Get AI suggestions for a call (simulated)

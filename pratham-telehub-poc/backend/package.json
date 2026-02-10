@@ -9,10 +9,11 @@
     "dev": "node --watch index.js"
   },
   "dependencies": {
-    "fastify": "^4.26.0",
     "@fastify/cors": "^8.5.0",
     "@fastify/websocket": "^8.3.1",
+    "dotenv": "^16.4.1",
+    "fastify": "^4.26.0",
     "pg": "^8.11.3",
-    "dotenv": "^16.4.1"
+    "plivo": "^4.75.6"
   }
 }
