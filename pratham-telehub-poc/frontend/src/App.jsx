@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import TelecallerDashboard from './pages/TelecallerDashboard';
 import ManagerCommandCenter from './pages/ManagerCommandCenter';
+import Analytics from './pages/Analytics';
+import Team from './pages/Team';
+import Settings from './pages/Settings';
 
 const API_BASE = 'http://localhost:3100';
 
 export default function App() {
-  const [view, setView] = useState('telecaller'); // 'telecaller' or 'manager'
+  const [view, setView] = useState('telecaller'); // 'telecaller', 'manager', 'analytics', 'team', 'settings'
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -44,17 +47,26 @@ export default function App() {
             <span>Command Center</span>
           </div>
 
-          <div className="nav-item">
+          <div
+            className={`nav-item ${view === 'analytics' ? 'active' : ''}`}
+            onClick={() => setView('analytics')}
+          >
             <span>📈</span>
             <span>Analytics</span>
           </div>
 
-          <div className="nav-item">
+          <div
+            className={`nav-item ${view === 'team' ? 'active' : ''}`}
+            onClick={() => setView('team')}
+          >
             <span>👥</span>
             <span>Team</span>
           </div>
 
-          <div className="nav-item">
+          <div
+            className={`nav-item ${view === 'settings' ? 'active' : ''}`}
+            onClick={() => setView('settings')}
+          >
             <span>⚙️</span>
             <span>Settings</span>
           </div>
@@ -78,6 +90,9 @@ export default function App() {
       <div className="main-content">
         {view === 'telecaller' && <TelecallerDashboard user={user} apiBase={API_BASE} />}
         {view === 'manager' && <ManagerCommandCenter apiBase={API_BASE} />}
+        {view === 'analytics' && <Analytics />}
+        {view === 'team' && <Team />}
+        {view === 'settings' && <Settings />}
       </div>
     </div>
   );
