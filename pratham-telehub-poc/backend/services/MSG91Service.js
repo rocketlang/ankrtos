@@ -236,26 +236,20 @@ class MSG91Service {
     }
 
     try {
+      // MSG91 Click-to-Call uses different API endpoint
       const response = await axios.post(
-        'https://api.msg91.com/api/v5/voice/call',
+        `${this.voiceBaseUrl}/makecall.php`,
         {
-          to: [to],
-          from: from,
-          caller_id: options.callerId || process.env.MSG91_CALLER_ID,
-          audio_url: options.audioUrl, // Optional IVR
-          record: options.record !== false // Record by default
-        },
-        {
-          headers: {
-            'authkey': this.authKey,
-            'Content-Type': 'application/json'
-          }
+          authkey: this.authKey,
+          receiver: to,
+          receiver_dtmf: from,
+          route: options.route || '1'
         }
       );
 
       return {
         success: true,
-        call_id: response.data.data?.request_id,
+        call_id: response.data.request_id || 'msg91-' + Date.now(),
         from: from,
         to: to,
         provider: 'msg91',
