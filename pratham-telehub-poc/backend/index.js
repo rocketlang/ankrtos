@@ -434,11 +434,13 @@ fastify.post('/api/msg91/sms', async (request, reply) => {
   try {
     const result = await msg91Service.sendSMS(to, message);
 
-    // Log SMS in database
-    await pool.query(
-      'INSERT INTO communications (lead_id, type, provider, message, status, external_id) VALUES ($1, $2, $3, $4, $5, $6)',
-      [lead_id, 'sms', 'msg91', message, 'sent', result.message_id]
-    );
+    // Log SMS in database (optional - ignore if table doesn't exist)
+    if (lead_id) {
+      await pool.query(
+        'INSERT INTO communications (lead_id, type, provider, message, status, external_id) VALUES ($1, $2, $3, $4, $5, $6)',
+        [lead_id, 'sms', 'msg91', message, 'sent', result.message_id]
+      ).catch(() => {}); // Ignore error if table doesn't exist
+    }
 
     return result;
   } catch (error) {
