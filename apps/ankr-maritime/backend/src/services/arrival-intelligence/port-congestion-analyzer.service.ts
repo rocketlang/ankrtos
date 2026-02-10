@@ -419,12 +419,22 @@ export class PortCongestionAnalyzerService {
     await this.prisma.portCongestionSnapshot.create({
       data: {
         portId,
+        zoneId: null,
         timestamp: congestion.timestamp,
-        vesselsInPort: congestion.vesselsInPort,
-        vesselsAtAnchorage: congestion.vesselsAtAnchorage,
-        averageWaitTime,
-        readinessScore,
-        factors: []
+        vesselCount: congestion.vesselsInPort + congestion.vesselsAtAnchorage,
+        anchoredCount: congestion.vesselsAtAnchorage,
+        mooredCount: congestion.vesselsInPort,
+        cargoCount: 0, // TODO: Break down by vessel type
+        tankerCount: 0,
+        containerCount: 0,
+        bulkCarrierCount: 0,
+        avgWaitTimeHours: averageWaitTime,
+        maxWaitTimeHours: averageWaitTime > 0 ? averageWaitTime * 1.5 : null,
+        medianWaitTimeHours: averageWaitTime > 0 ? averageWaitTime * 0.9 : null,
+        congestionLevel: readinessScore === 'red' ? 'CRITICAL' : readinessScore === 'yellow' ? 'HIGH' : 'LOW',
+        capacityPercent: Math.min(100, ((congestion.vesselsInPort + congestion.vesselsAtAnchorage) / 20) * 100), // Assume 20 is max capacity
+        trend: 'STABLE',
+        changePercent: null
       }
     });
 

@@ -369,6 +369,13 @@ model Vessel {
   masterAlerts           MasterAlert[]         @relation("VesselMasterAlerts")
   daForecasts            DAForecastAccuracy[]  @relation("VesselDAForecasts")
 
+  // GFW (Global Fishing Watch) relations
+  gfwPortVisits          GFWPortVisit[]
+  gfwFishingEvents       GFWFishingEvent[]
+  gfwLoiteringEvents     GFWLoiteringEvent[]
+  gfwEncountersAsVessel1 GFWEncounterEvent[]   @relation("GFWEncounterVessel1")
+  gfwEncountersAsVessel2 GFWEncounterEvent[]   @relation("GFWEncounterVessel2")
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -424,6 +431,9 @@ model Port {
   // Pre-arrival intelligence relations
   arrivals             VesselArrival[]           @relation("PortArrivals")
   daForecasts          DAForecastAccuracy[]      @relation("PortDAForecasts")
+
+  // GFW (Global Fishing Watch) relations
+  gfwPortVisits        GFWPortVisit[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -6596,4 +6606,218 @@ model ExtractedAISRoute {
   @@index([qualityScore])
   @@index([routeType])
   @@map("extracted_ais_routes")
+}
+
+// ===============================
+// GLOBAL FISHING WATCH (GFW) INTEGRATION
+// ===============================
+
+// GFW Port Visit Events
+model GFWPortVisit {
+  id String @id @default(cuid())
+
+  // Vessel identification
+  vesselId   String?
+  mmsi       String
+  imo        String?
+  vesselName String?
+  flag       String?
+  vesselType String?
+
+  // Port information
+  portId        String?
+  portName      String?
+  portUnlocode  String?
+  portLatitude  Float?
+  portLongitude Float?
+  portCountry   String?
+
+  // Visit timing
+  startTime DateTime
+  endTime   DateTime
+  duration  Float // hours
+
+  // Visit characteristics
+  visitType       String? // anchorage, port
+  confidence      Float?
+  intermediateAnchorage Boolean @default(false)
+  
+  // Position data
+  startLatitude  Float?
+  startLongitude Float?
+  endLatitude    Float?
+  endLongitude   Float?
+
+  // Metadata
+  source        String  @default("gfw_api")
+  rawData       Json?
+  importedAt    DateTime @default(now())
+  createdAt     DateTime @default(now())
+
+  vessel Vessel? @relation(fields: [vesselId], references: [id])
+  port   Port?   @relation(fields: [portId], references: [id])
+
+  @@index([vesselId])
+  @@index([mmsi])
+  @@index([portId])
+  @@index([portUnlocode])
+  @@index([startTime, endTime])
+  @@index([importedAt])
+  @@map("gfw_port_visits")
+}
+
+// GFW Fishing Events
+model GFWFishingEvent {
+  id String @id @default(cuid())
+
+  // Vessel identification
+  vesselId   String?
+  mmsi       String
+  imo        String?
+  vesselName String?
+  flag       String?
+
+  // Event details
+  startTime DateTime
+  endTime   DateTime
+  duration  Float // hours
+
+  // Location
+  latitude      Float
+  longitude     Float
+  regionMpa     String?
+  regionRfmo    String?
+  regionEez     String?
+  distanceToShore Float?
+
+  // Fishing characteristics
+  fishingType   String? // longlining, trawling, purse_seining, etc.
+  confidence    Float?
+
+  // Metadata
+  source     String   @default("gfw_api")
+  rawData    Json?
+  importedAt DateTime @default(now())
+  createdAt  DateTime @default(now())
+
+  vessel Vessel? @relation(fields: [vesselId], references: [id])
+
+  @@index([vesselId])
+  @@index([mmsi])
+  @@index([startTime, endTime])
+  @@index([latitude, longitude])
+  @@map("gfw_fishing_events")
+}
+
+// GFW Loitering Events (potential transshipment)
+model GFWLoiteringEvent {
+  id String @id @default(cuid())
+
+  // Vessel identification
+  vesselId   String?
+  mmsi       String
+  imo        String?
+  vesselName String?
+  flag       String?
+  vesselType String?
+
+  // Event details
+  startTime DateTime
+  endTime   DateTime
+  duration  Float // hours
+
+  // Location
+  latitude  Float
+  longitude Float
+  regionEez String?
+  distanceToShore Float?
+
+  // Loitering characteristics
+  loiteringType String? // stationary, slow_movement
+  confidence    Float?
+  totalDistance Float? // nautical miles
+
+  // Metadata
+  source     String   @default("gfw_api")
+  rawData    Json?
+  importedAt DateTime @default(now())
+  createdAt  DateTime @default(now())
+
+  vessel Vessel? @relation(fields: [vesselId], references: [id])
+
+  @@index([vesselId])
+  @@index([mmsi])
+  @@index([startTime, endTime])
+  @@index([latitude, longitude])
+  @@map("gfw_loitering_events")
+}
+
+// GFW Encounter Events (vessel-to-vessel meetings)
+model GFWEncounterEvent {
+  id String @id @default(cuid())
+
+  // Vessel 1 (usually fishing vessel)
+  vessel1Id   String?
+  vessel1Mmsi String
+  vessel1Name String?
+  vessel1Flag String?
+  vessel1Type String?
+
+  // Vessel 2 (usually carrier/reefer)
+  vessel2Id   String?
+  vessel2Mmsi String
+  vessel2Name String?
+  vessel2Flag String?
+  vessel2Type String?
+
+  // Event details
+  startTime DateTime
+  endTime   DateTime
+  duration  Float // hours
+
+  // Location
+  latitude  Float
+  longitude Float
+  regionEez String?
+  distanceToShore Float?
+
+  // Encounter characteristics
+  encounterType  String? // carrier_encounter, support_encounter
+  confidence     Float?
+  medianDistance Float? // meters between vessels
+  medianSpeed    Float? // knots
+
+  // Metadata
+  source     String   @default("gfw_api")
+  rawData    Json?
+  importedAt DateTime @default(now())
+  createdAt  DateTime @default(now())
+
+  vessel1 Vessel? @relation("GFWEncounterVessel1", fields: [vessel1Id], references: [id])
+  vessel2 Vessel? @relation("GFWEncounterVessel2", fields: [vessel2Id], references: [id])
+
+  @@index([vessel1Id])
+  @@index([vessel2Id])
+  @@index([vessel1Mmsi, vessel2Mmsi])
+  @@index([startTime, endTime])
+  @@index([latitude, longitude])
+  @@map("gfw_encounter_events")
+}
+
+// GFW API Sync Status
+model GFWSyncStatus {
+  id String @id @default(cuid())
+
+  eventType     String // port_visits, fishing_events, loitering_events, encounter_events
+  lastSyncTime  DateTime
+  lastEventTime DateTime?
+  eventsCount   Int
+  status        String // success, partial, failed
+  errorMessage  String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([eventType])
+  @@map("gfw_sync_status")
 }

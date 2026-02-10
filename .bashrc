@@ -291,3 +291,12 @@ export PATH=/root/.opencode/bin:$PATH
 
 alias e2e='ssh -i ~/.ssh/e2e root@216.48.185.29'
 alias e2e='ssh -i ~/.ssh/e2e root@216.48.185.29'
+
+# Health Check Aliases
+alias health='/root/health-check.sh'
+alias hc='/root/health-quick.sh'
+alias health-quick='/root/health-quick.sh'
+alias cleanup='/root/disk-cleanup.sh'
+alias disk-cleanup='/root/disk-cleanup.sh'
+alias compress-db='/root/compress-timescaledb.sh'
+alias compress-maritime='/root/compress-timescale-full.sh'
