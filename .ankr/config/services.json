@@ -334,12 +334,12 @@
     "vyomo-api": {
       "portPath": "backend.vyomo",
       "path": "/root/ankr-options-standalone/apps/vyomo-api",
-      "command": "npx tsx watch src/main.ts",
+      "command": "npx tsx src/main.ts",
       "description": "Vyomo Options Trading API (GraphQL)",
       "healthEndpoint": "/health",
       "enabled": true,
       "env": {
-        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5433/ankr_eon"
+        "DATABASE_URL": "postgresql://postgres:@localhost:5432/vyomo"
       }
     },
     "vyomo-web": {
