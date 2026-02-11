@@ -26,17 +26,17 @@
     "fr8x": 3006,
     "dodd": 3007,
     "ankrMaritime": 3008,
+    "curriculum": 3009,
     "coralAstrology": 3010,
+    "vyomo": 3011,
     "ankrWms": 3060,
-    "vyomo": 3010,
     "bfcWeb": 3020,
     "bfcCustomer": 3021,
     "bfcStaff": 3022,
     "adminPortal": 3030,
     "sidecar": 3040,
     "ankrforgeWeb": 3200,
-    "ankrInteract": 5173,
-    "curriculum": 3009
+    "ankrInteract": 5173
   },
   "backend": {
     "_range": "4000-4099",

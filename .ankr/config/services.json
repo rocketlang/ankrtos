@@ -812,6 +812,18 @@
         "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_eon",
         "CORS_ORIGIN": "http://localhost:3009,https://seekho.ankrlabs.org"
       }
+    },
+    "dodd-unified": {
+      "portPath": "backend.dodd",
+      "path": "/root/ankr-labs-nx/packages/dodd",
+      "command": "npx tsx dodd-unified-simple.ts",
+      "description": "DODD ERP Unified Service (Account+Sale+Purchase+WMS - 171 models)",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "env": {
+        "NODE_ENV": "production",
+        "LOG_LEVEL": "info"
+      }
     }
   }
 }
