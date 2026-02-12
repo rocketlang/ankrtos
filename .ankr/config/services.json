@@ -8,48 +8,68 @@
     "ai-proxy": {
       "portPath": "ai.proxy",
       "path": "/root/ankr-labs-nx/apps/ai-proxy",
-      "command": "npx tsx src/server.ts",
+      "command": "/root/.bun/bin/bun run src/server.ts",
       "description": "Central AI Gateway",
       "healthEndpoint": "/health",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-compliance-api": {
       "portPath": "backend.compliance",
       "path": "/root/ankr-compliance",
-      "command": "node dist/apps/api/main.js",
+      "command": "/root/.bun/bin/bun run dist/apps/api/main.js",
       "description": "Compliance API (GraphQL)",
       "healthEndpoint": "/health",
       "enabled": true,
       "env": {
         "DATABASE_URL": "postgresql://ankr:ankrSecure2025@localhost:5434/compliance"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "complymitra-api": {
       "portPath": "backend.complymitra",
       "path": "/root/ankr-labs-nx/apps/complymitra-api",
-      "command": "npx tsx src/index.ts",
+      "command": "/root/.bun/bin/bun run src/index.ts",
       "description": "ComplyMitra Tools API",
       "healthEndpoint": "/health",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-crm-backend": {
       "portPath": "backend.crm",
       "path": "/root/ankr-labs-nx/apps/ankr-crm/backend",
-      "command": "npx tsx src/index.ts",
+      "command": "/root/.bun/bin/bun run src/index.ts",
       "description": "CRM Backend API",
       "healthEndpoint": "/health",
       "enabled": true,
       "env": {
         "DATABASE_URL": "postgresql://postgres:indrA@0612@localhost:5432/ankr_crm"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-crm-bff": {
       "portPath": "backend.crmBff",
       "path": "/root/ankr-labs-nx/apps/ankr-crm/bff",
-      "command": "npx tsx src/index.ts",
+      "command": "/root/.bun/bin/bun run src/index.ts",
       "description": "CRM BFF (GraphQL Gateway)",
       "healthEndpoint": "/health",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-crm-frontend": {
       "portPath": "dev.crmFrontend",
@@ -62,13 +82,17 @@
     "ankrtms-backend": {
       "portPath": "backend.ankrtms",
       "path": "/root/ankr-labs-nx/apps/ankrtms/backend",
-      "command": "npx tsx src/index.ts",
+      "command": "/root/.bun/bin/bun run src/index.ts",
       "description": "ANKR TMS Backend",
       "healthEndpoint": "/health",
       "enabled": true,
       "env": {
         "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/wowtruck?schema=ankrtms"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "swayam-bani": {
       "portPath": "standalone.bani",
@@ -89,10 +113,14 @@
     "saathi-server": {
       "portPath": "backend.saathi",
       "path": "/root/ankr-labs-nx/apps/saathi-server",
-      "command": "npx tsx src/main.ts",
+      "command": "/root/.bun/bin/bun run src/main.ts",
       "description": "Saathi Server (Fastify)",
       "healthEndpoint": "/health",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "verdaccio": {
       "portPath": "registry.verdaccio",
@@ -105,13 +133,17 @@
     "ankr-eon": {
       "portPath": "backend.eon",
       "path": "/root/ankr-labs-nx/packages/ankr-eon",
-      "command": "npx tsx src/server.ts",
+      "command": "/root/.bun/bin/bun run src/server.ts",
       "description": "EON Memory & Learning System",
       "healthEndpoint": "/health",
       "enabled": true,
       "env": {
         "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_eon?schema=public"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-viewer": {
       "portPath": "dashboard.viewer",
@@ -168,11 +200,15 @@
     "freightbox-backend": {
       "portPath": "backend.freightbox",
       "path": "/root/ankr-labs-nx/apps/freightbox/backend",
-      "command": "npx tsx src/main.ts",
+      "command": "/root/.bun/bin/bun run src/main.ts",
       "description": "Freightbox BFF (GraphQL)",
       "healthEndpoint": "/health",
       "enabled": true,
-      "maxMemory": "256M"
+      "maxMemory": "256M",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "freightbox-frontend": {
       "portPath": "frontend.freightbox",
@@ -208,13 +244,17 @@
     "ankrforge-api": {
       "portPath": "admin.ankrforge",
       "path": "/root/ankr-forge/apps/forge-api",
-      "command": "npx tsx src/index.ts",
+      "command": "/root/.bun/bin/bun run src/index.ts",
       "description": "AnkrForge API",
       "healthEndpoint": "/health",
       "enabled": true,
       "env": {
         "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankrforge"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankrforge-web": {
       "portPath": "frontend.ankrforgeWeb",
@@ -227,13 +267,17 @@
     "fr8x-backend": {
       "portPath": "backend.fr8x",
       "path": "/root/ankr-labs-nx/apps/fr8x/backend",
-      "command": "npx tsx src/main.ts",
+      "command": "/root/.bun/bin/bun run src/main.ts",
       "description": "Fr8X Freight Exchange API",
       "healthEndpoint": "/health",
       "enabled": true,
       "env": {
         "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/fr8x?schema=public"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "fr8x-frontend": {
       "portPath": "frontend.fr8x",
@@ -273,10 +317,14 @@
     "devbrain": {
       "portPath": "backend.devbrain",
       "path": "/root/ankr-labs-nx/packages/ankr-devbrain",
-      "command": "node devbrain-api.js",
+      "command": "/root/.bun/bin/bun run devbrain-api.js",
       "description": "DevBrain Code Search API",
       "healthEndpoint": "/health",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-website": {
       "portPath": "frontend.ankrWebsite",
@@ -684,7 +732,7 @@
     "ankr-wms-backend": {
       "portPath": "backend.ankrWms",
       "path": "/root/ankr-labs-nx/apps/ankr-wms/backend",
-      "command": "npx tsx src/main.ts",
+      "command": "/root/.bun/bin/bun run src/main.ts",
       "description": "AnkrWMS Enterprise Warehouse Management API (Fastify + Mercurius GraphQL + Prisma)",
       "healthEndpoint": "/health",
       "enabled": true,
@@ -704,7 +752,11 @@
         "Automation engine with 8 rule templates",
         "Visual Flow Canvas designer",
         "Interactive Setup Wizards (5 wizards)"
-      ]
+      ],
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-wms-frontend": {
       "portPath": "frontend.ankrWms",
@@ -811,19 +863,27 @@
         "AI_PROXY_URL": "http://localhost:4444",
         "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_eon",
         "CORS_ORIGIN": "http://localhost:3009,https://seekho.ankrlabs.org"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "dodd-unified": {
       "portPath": "backend.dodd",
       "path": "/root/ankr-labs-nx/packages/dodd",
-      "command": "npx tsx dodd-unified-simple.ts",
+      "command": "/root/.bun/bin/bun run dodd-unified-simple.ts",
       "description": "DODD ERP Unified Service (Account+Sale+Purchase+WMS - 171 models)",
       "healthEndpoint": "/health",
       "enabled": true,
       "env": {
         "NODE_ENV": "production",
         "LOG_LEVEL": "info"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     }
   }
 }
