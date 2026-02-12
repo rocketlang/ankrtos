@@ -1,0 +1,260 @@
+{
+  "chapter_number": 10,
+  "chapter_title": "The Human Eye and the Colourful World",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What is meant by power of accommodation of the eye?",
+          "hints": [
+            "Recall the definition from section 10.1.1",
+            "Think about how the eye lens changes shape",
+            "Consider the role of ciliary muscles"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "accommodation",
+            "eye physiology",
+            "vision"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "A person with a myopic eye cannot see objects beyond 1.2 m distinctly. What should be the type of the corrective lens used to restore proper vision?",
+          "hints": [
+            "Identify the defect: myopia",
+            "Recall correction method for myopia",
+            "Consider lens type that diverges light"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "myopia",
+            "corrective lenses",
+            "optics"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What is the far point and near point of the human eye with normal vision?",
+          "hints": [
+            "Refer to section 10.1.1",
+            "Recall values for normal eye",
+            "Distinguish between far and near points"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "normal vision",
+            "far point",
+            "near point"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "A student has difficulty reading the blackboard while sitting in the last row. What could be the defect the child is suffering from? How can it be corrected?",
+          "hints": [
+            "Analyze the symptom: difficulty seeing distant objects",
+            "Identify the vision defect",
+            "Recall appropriate corrective measure"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "myopia",
+            "vision defects",
+            "practical application"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "The human eye can focus on objects at different distances by adjusting the focal length of the eye lens. This is due to (a) presbyopia. (b) accommodation. (c) near-sightedness. (d) far-sightedness.",
+          "hints": [
+            "Recall definition from 'What you have learnt' section",
+            "Eliminate vision defects",
+            "Focus on normal eye function"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "accommodation",
+            "multiple choice",
+            "eye function"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The human eye forms the image of an object at its (a) cornea. (b) iris. (c) pupil. (d) retina.",
+          "hints": [
+            "Recall eye anatomy from section 10.1",
+            "Identify light-sensitive part",
+            "Think about where image formation occurs"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "eye anatomy",
+            "image formation",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The least distance of distinct vision for a young adult with normal vision is about (a) 25 m. (b) 2.5 cm. (c) 25 cm. (d) 2.5 m.",
+          "hints": [
+            "Refer to section 10.1.1",
+            "Recall standard value",
+            "Convert units if needed"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "least distance of distinct vision",
+            "near point",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The change in focal length of an eye lens is caused by the action of the (a) pupil. (b) retina. (c) ciliary muscles. (d) iris.",
+          "hints": [
+            "Recall section 10.1.1 on accommodation",
+            "Identify muscles responsible",
+            "Eliminate non-muscular parts"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "accommodation",
+            "ciliary muscles",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "A person needs a lens of power –5.5 dioptres for correcting his distant vision. For correcting his near vision he needs a lens of power +1.5 dioptre. What is the focal length of the lens required for correcting (i) distant vision, and (ii) near vision?",
+          "hints": [
+            "Use formula: Power (P) = 1/f (in meters)",
+            "Convert dioptres to focal length",
+            "Pay attention to sign convention"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "lens power",
+            "focal length",
+            "calculations",
+            "dioptres"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "The far point of a myopic person is 80 cm in front of the eye. What is the nature and power of the lens required to correct the problem?",
+          "hints": [
+            "Identify lens type for myopia correction",
+            "Use formula: P = 1/f (in meters)",
+            "Consider sign convention for concave lens"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "myopia correction",
+            "lens power calculation",
+            "optics"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Make a diagram to show how hypermetropia is corrected. The near point of a hypermetropic eye is 1 m. What is the power of the lens required to correct this defect? Assume that the near point of the normal eye is 25 cm.",
+          "hints": [
+            "Draw ray diagram for hypermetropia correction",
+            "Use lens formula: 1/f = 1/v - 1/u",
+            "Convert all distances to meters"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "hypermetropia",
+            "ray diagram",
+            "lens power calculation",
+            "optics"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Why is a normal eye not able to see clearly the objects placed closer than 25 cm?",
+          "hints": [
+            "Recall concept of near point",
+            "Consider limits of accommodation",
+            "Think about ciliary muscle contraction limits"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "near point",
+            "accommodation limits",
+            "vision physiology"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "What happens to the image distance in the eye when we increase the distance of an object from the eye?",
+          "hints": [
+            "Recall image formation in eye",
+            "Consider lens formula application",
+            "Think about accommodation mechanism"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "image distance",
+            "accommodation",
+            "optics"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Why do stars twinkle?",
+          "hints": [
+            "Refer to section 10.5 on atmospheric refraction",
+            "Consider continuous refraction in atmosphere",
+            "Think about changing refractive index"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "twinkling of stars",
+            "atmospheric refraction",
+            "astronomy"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Explain why the planets do not twinkle.",
+          "hints": [
+            "Compare planets with stars as light sources",
+            "Consider extended vs point sources",
+            "Recall averaging effect explanation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "planets",
+            "twinkling",
+            "extended sources",
+            "astronomy"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Why does the sky appear dark instead of blue to an astronaut?",
+          "hints": [
+            "Recall scattering of light explanation",
+            "Consider absence of atmosphere in space",
+            "Think about Tyndall effect conditions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "scattering of light",
+            "blue sky",
+            "astronaut perspective",
+            "atmosphere"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "chapter_number": 7,
+  "chapter_title": "COORDINATE GEOMETRY",
+  "exercises": [
+    {
+      "exercise_number": "7.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the distance between the following pairs of points : (i) (2, 3), (4, 1) (ii) (– 5, 7), (– 1, 3) (iii) (a, b), (– a, – b)",
+          "hints": [
+            "Use distance formula: √[(x₂ - x₁)² + (y₂ - y₁)²]",
+            "For (iii), simplify after applying formula"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "distance formula",
+            "coordinate geometry"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the distance between the points (0, 0) and (36, 15). Can you now find the distance between the two towns A and B discussed in Section 7.2.",
+          "hints": [
+            "Apply distance formula",
+            "Refer to town example in section 7.2 (36 km east, 15 km north)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "distance formula",
+            "real-world application"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Determine if the points (1, 5), (2, 3) and (– 2, – 11) are collinear.",
+          "hints": [
+            "Check if sum of two distances equals third distance",
+            "Use distance formula for all three pairs"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "collinearity",
+            "distance formula"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Check whether (5, – 2), (6, 4) and (7, – 2) are the vertices of an isosceles triangle.",
+          "hints": [
+            "Calculate all three side lengths",
+            "Check if any two sides are equal"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "triangle",
+            "isosceles",
+            "distance formula"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "In a classroom, 4 friends are seated at the points A, B, C and D as shown in Fig. 7.8. Champa and Chameli walk into the class and after observing for a few minutes Champa asks Chameli, “Don’t you think ABCD is a square?” Chameli disagrees. Using distance formula, find which of them is correct.",
+          "hints": [
+            "Find coordinates from figure (A(3,4), B(6,7), C(9,4), D(6,1) inferred)",
+            "Check all sides equal and diagonals equal"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "square",
+            "distance formula",
+            "coordinate geometry"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Name the type of quadrilateral formed, if any, by the following points, and give reasons for your answer: (i) (– 1, – 2), (1, 0), (– 1, 2), (– 3, 0) (ii) (–3, 5), (3, 1), (0, 3), (–1, – 4) (iii) (4, 5), (7, 6), (4, 3), (1, 2)",
+          "hints": [
+            "Plot points roughly",
+            "Calculate side lengths and diagonals",
+            "Check properties of quadrilaterals"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "quadrilateral",
+            "distance formula",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Find the point on the x-axis which is equidistant from (2, –5) and (–2, 9).",
+          "hints": [
+            "Point on x-axis is (x, 0)",
+            "Use distance formula and set distances equal"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "equidistant",
+            "x-axis",
+            "distance formula"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Find the values of y for which the distance between the points P(2, – 3) and Q(10, y) is 10 units.",
+          "hints": [
+            "Apply distance formula: √[(10-2)² + (y+3)²] = 10",
+            "Solve quadratic equation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "distance formula",
+            "algebra"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "If Q(0, 1) is equidistant from P(5, –3) and R(x, 6), find the values of x. Also find the distances QR and PR.",
+          "hints": [
+            "Set QP = QR using distance formula",
+            "Solve for x",
+            "Then compute distances"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "equidistant",
+            "distance formula"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Find a relation between x and y such that the point (x, y) is equidistant from the point (3, 6) and (– 3, 4).",
+          "hints": [
+            "Use distance formula equality",
+            "Simplify to linear equation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "equidistant",
+            "locus",
+            "distance formula"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "7.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the coordinates of the point which divides the join of (–1, 7) and (4, –3) in the ratio 2 : 3.",
+          "hints": [
+            "Use section formula: x = (m₁x₂ + m₂x₁)/(m₁+m₂), y = (m₁y₂ + m₂y₁)/(m₁+m₂)",
+            "m₁=2, m₂=3"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "section formula",
+            "internal division"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the coordinates of the points of trisection of the line segment joining (4, –1) and (–2, –3).",
+          "hints": [
+            "Trisection means ratio 1:2 and 2:1",
+            "Apply section formula twice"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "trisection",
+            "section formula"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "To conduct Sports Day activities, in your rectangular shaped school ground ABCD, lines have been drawn with chalk powder at a distance of 1m each. 100 flower pots have been placed at a distance of 1m from each other along AD, as shown in Fig. 7.12. Niharika runs 1/4 th the distance AD on the 2nd line and posts a green flag. Preet runs 1/5 th the distance AD on the eighth line and posts a red flag. What is the distance between both the flags? If Rashmi has to post a blue flag exactly halfway between the line segment joining the two flags, where should she post her flag?",
+          "hints": [
+            "Assume coordinates: A(0,0), D(0,100)",
+            "Find coordinates of green flag (2, 25) and red flag (8, 20)",
+            "Use distance formula and midpoint formula"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "real-world application",
+            "distance formula",
+            "midpoint"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the ratio in which the line segment joining the points (– 3, 10) and (6, – 8) is divided by (– 1, 6).",
+          "hints": [
+            "Let ratio k:1",
+            "Use section formula and solve for k"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "section formula",
+            "ratio finding"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the ratio in which the line segment joining A(1, – 5) and B(– 4, 5) is divided by the x-axis. Also find the coordinates of the point of division.",
+          "hints": [
+            "Point on x-axis is (x, 0)",
+            "Let ratio k:1, set y-coordinate from section formula to 0"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "x-axis division",
+            "section formula"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "If (1, 2), (4, y), (x, 6) and (3, 5) are the vertices of a parallelogram taken in order, find x and y.",
+          "hints": [
+            "Diagonals bisect each other",
+            "Use midpoint formula: midpoint of AC = midpoint of BD"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallelogram",
+            "midpoint formula"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Find the coordinates of a point A, where AB is the diameter of a circle whose centre is (2, – 3) and B is (1, 4).",
+          "hints": [
+            "Centre is midpoint of diameter",
+            "Use midpoint formula: (x₁+1)/2=2, (y₁+4)/2=-3"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "circle",
+            "diameter",
+            "midpoint formula"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "If A and B are (– 2, – 2) and (2, – 4), respectively, find the coordinates of P such that AP = 3/7 AB and P lies on the line segment AB.",
+          "hints": [
+            "AP:PB = 3:4",
+            "Use section formula with ratio 3:4"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "section formula",
+            "ratio"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Find the coordinates of the points which divide the line segment joining A(– 2, 2) and B(2, 8) into four equal parts.",
+          "hints": [
+            "Find midpoints successively",
+            "First midpoint of AB, then midpoints of resulting segments"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "quadrisection",
+            "midpoint formula"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Find the area of a rhombus if its vertices are (3, 0), (4, 5), (– 1, 4) and (– 2, – 1) taken in order. [Hint : Area of a rhombus = 1/2 (product of its diagonals)]",
+          "hints": [
+            "Find diagonals by distance formula between opposite vertices",
+            "Area = 1/2 × d₁ × d₂"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "rhombus",
+            "area",
+            "distance formula"
+          ]
+        }
+      ]
+    }
+  ]
+}

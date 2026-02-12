@@ -1,0 +1,470 @@
+{
+  "chapter_number": 3,
+  "chapter_title": "Metals and Non-metals",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Give an example of a metal which (i) is a liquid at room temperature. (ii) can be easily cut with a knife. (iii) is the best conductor of heat. (iv) is a poor conductor of heat.",
+          "hints": [
+            "Recall physical properties of metals discussed in section 3.1.1.",
+            "Think about metals like mercury, sodium, silver, and lead."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "physical properties",
+            "metals",
+            "examples"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Explain the meanings of malleable and ductile.",
+          "hints": [
+            "Refer to Activities 3.3 and 3.4.",
+            "Define based on ability to be hammered into sheets or drawn into wires."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definitions",
+            "malleability",
+            "ductility"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why is sodium kept immersed in kerosene oil?",
+          "hints": [
+            "Consider reactivity of sodium with oxygen and water.",
+            "Recall safety precautions mentioned in Activity 3.2 and Do You Know section."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "reactivity",
+            "safety",
+            "chemical properties"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Write equations for the reactions of (i) iron with steam (ii) calcium and potassium with water.",
+          "hints": [
+            "Refer to section 3.2.2 for reactions with water/steam.",
+            "Balance the chemical equations."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "chemical equations",
+            "reactions with water",
+            "reactivity series"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Samples of four metals A, B, C and D were taken and added to the following solution one by one. The results obtained have been tabulated as follows.\n\nMetal | Iron(II) sulphate | Zinc sulphate | Copper(II) sulphate | Silver nitrate\nA | No reaction | Displacement | - | -\nB | Displacement | - | No reaction | No reaction\nC | No reaction | No reaction | No reaction | Displacement\nD | No reaction | No reaction | No reaction | No reaction\n\nUse the Table above to answer the following questions about metals A, B, C and D.\n(i) Which is the most reactive metal?\n(ii) What would you observe if B is added to a solution of Copper(II) sulphate?\n(iii) Arrange the metals A, B, C and D in the order of decreasing reactivity.",
+          "hints": [
+            "Use displacement reaction principles from section 3.2.4.",
+            "Compare reactivity based on which metal displaces another from its salt solution."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "displacement reactions",
+            "reactivity series",
+            "analysis"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Which gas is produced when dilute hydrochloric acid is added to a reactive metal? Write the chemical reaction when iron reacts with dilute H2SO4.",
+          "hints": [
+            "Recall reaction of metals with acids from section 3.2.3.",
+            "Hydrogen gas is evolved; write balanced equation for Fe + H2SO4."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "reactions with acids",
+            "hydrogen gas",
+            "chemical equations"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What would you observe when zinc is added to a solution of iron(II) sulphate? Write the chemical reaction that takes place.",
+          "hints": [
+            "Check reactivity series: zinc is above iron.",
+            "Displacement reaction will occur; zinc displaces iron."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "displacement reaction",
+            "reactivity series",
+            "observation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "(i) Write the electron-dot structures for sodium, oxygen and magnesium.\n(ii) Show the formation of Na2O and MgO by the transfer of electrons.\n(iii) What are the ions present in these compounds?",
+          "hints": [
+            "Refer to section 3.3 for ionic bond formation.",
+            "Draw Lewis structures; show electron transfer to form cations and anions."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "electron-dot structures",
+            "ionic bonding",
+            "ion formation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why do ionic compounds have high melting points?",
+          "hints": [
+            "Consider strong electrostatic forces between ions.",
+            "Refer to properties in section 3.3.1."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "ionic compounds",
+            "melting point",
+            "properties"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Define the following terms.\n(i) Mineral\n(ii) Ore\n(iii) Gangue",
+          "hints": [
+            "Refer to section 3.4 (Occurrence of Metals).",
+            "Distinguish between naturally occurring compounds and economically extractable ones."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definitions",
+            "metallurgy",
+            "ores"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Name two metals which are found in nature in the free state.",
+          "hints": [
+            "Recall metals low in reactivity series (section 3.4.1).",
+            "Gold, silver, platinum, copper are examples."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "occurrence",
+            "native metals",
+            "reactivity"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What chemical process is used for obtaining a metal from its oxide?",
+          "hints": [
+            "Refer to reduction processes in sections 3.4.3 to 3.4.5.",
+            "Mention reduction using carbon or electrolytic reduction based on reactivity."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "extraction",
+            "reduction",
+            "metallurgy"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Metallic oxides of zinc, magnesium and copper were heated with the following metals.\n\nMetal | Zinc | Magnesium | Copper\nZinc oxide | - | - | -\nMagnesium oxide | - | - | -\nCopper oxide | - | - | -\n\nIn which cases will you find displacement reactions taking place?",
+          "hints": [
+            "Use reactivity series (Table 3.2).",
+            "A more reactive metal can displace a less reactive metal from its oxide."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "displacement reactions",
+            "reactivity series",
+            "metal oxides"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Which metals do not corrode easily?",
+          "hints": [
+            "Consider noble metals and corrosion-resistant alloys.",
+            "Refer to sections 3.5 and 3.5.1."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "corrosion",
+            "resistance",
+            "metals"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What are alloys?",
+          "hints": [
+            "Define as homogeneous mixtures of metals or metals with non-metals.",
+            "Refer to section 3.5.1 for examples and properties."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "alloys",
+            "definition",
+            "properties"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the following pairs will give displacement reactions?\n(a) NaCl solution and copper metal\n(b) MgCl2 solution and aluminium metal\n(c) FeSO4 solution and silver metal\n(d) AgNO3 solution and copper metal.",
+          "hints": [
+            "Check reactivity series: a more reactive metal displaces a less reactive one from its salt solution.",
+            "Copper is less reactive than silver but more than silver? Verify positions."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "displacement reactions",
+            "reactivity series",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Which of the following methods is suitable for preventing an iron frying pan from rusting?\n(a) Applying grease\n(b) Applying paint\n(c) Applying a coating of zinc\n(d) All of the above.",
+          "hints": [
+            "Recall corrosion prevention methods from section 3.5.1.",
+            "All methods create a barrier to moisture and air."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "corrosion prevention",
+            "rusting",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "An element reacts with oxygen to give a compound with a high melting point. This compound is also soluble in water. The element is likely to be\n(a) calcium\n(b) carbon\n(c) silicon\n(d) iron.",
+          "hints": [
+            "Consider metal oxides vs. non-metal oxides.",
+            "Metal oxides are basic and often soluble, forming alkalis."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "metal oxides",
+            "properties",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Food cans are coated with tin and not with zinc because\n(a) zinc is costlier than tin.\n(b) zinc has a higher melting point than tin.\n(c) zinc is more reactive than tin.\n(d) zinc is less reactive than tin.",
+          "hints": [
+            "Think about reactivity and food safety.",
+            "More reactive metals may react with acidic food contents."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "reactivity",
+            "applications",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "You are given a hammer, a battery, a bulb, wires and a switch.\n(a) How could you use them to distinguish between samples of metals and non-metals?\n(b) Assess the usefulness of these tests in distinguishing between metals and non-metals.",
+          "hints": [
+            "Use physical properties (malleability, sonority) and electrical conductivity.",
+            "Set up a circuit to test conductivity; hammer to test malleability/sonority."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "physical properties",
+            "experiment",
+            "conductivity"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "What are amphoteric oxides? Give two examples of amphoteric oxides.",
+          "hints": [
+            "Define oxides that react with both acids and bases.",
+            "Refer to section 3.2.1 for examples like Al2O3 and ZnO."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "amphoteric oxides",
+            "definitions",
+            "examples"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Name two metals which will displace hydrogen from dilute acids, and two metals which will not.",
+          "hints": [
+            "Refer to activity series: metals above H displace H2; those below do not.",
+            "Examples: Zn, Mg displace; Cu, Ag do not."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "displacement of hydrogen",
+            "reactivity series",
+            "examples"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "In the electrolytic refining of a metal M, what would you take as the anode, the cathode and the electrolyte?",
+          "hints": [
+            "Recall electrolytic refining process from section 3.4.6.",
+            "Anode: impure M; Cathode: pure M; Electrolyte: salt solution of M."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "electrolytic refining",
+            "metallurgy",
+            "setup"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Pratyush took sulphur powder on a spatula and heated it. He collected the gas evolved by inverting a test tube over it, as shown in figure below.\n(a) What will be the action of gas on\n(i) dry litmus paper?\n(ii) moist litmus paper?\n(b) Write a balanced chemical equation for the reaction taking place.",
+          "hints": [
+            "Sulphur burning produces SO2, an acidic oxide.",
+            "Acidic oxides turn moist blue litmus red; no effect on dry litmus."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "non-metal oxides",
+            "chemical equations",
+            "litmus test"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "State two ways to prevent the rusting of iron.",
+          "hints": [
+            "Recall methods from section 3.5.1: painting, galvanizing, alloying, etc."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "corrosion prevention",
+            "rusting",
+            "methods"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "What type of oxides are formed when non-metals combine with oxygen?",
+          "hints": [
+            "Non-metal oxides are acidic or neutral.",
+            "Examples: CO2, SO2, P2O5 are acidic."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "non-metal oxides",
+            "acidic oxides",
+            "properties"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Give reasons\n(a) Platinum, gold and silver are used to make jewellery.\n(b) Sodium, potassium and lithium are stored under oil.\n(c) Aluminium is a highly reactive metal, yet it is used to make utensils for cooking.\n(d) Carbonate and sulphide ores are usually converted into oxides during the process of extraction.",
+          "hints": [
+            "(a) Lustre, malleability, corrosion resistance.\n(b) High reactivity with air and water.\n(c) Forms protective oxide layer.\n(d) Oxides are easier to reduce than sulphides/carbonates."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "applications",
+            "reactivity",
+            "metallurgy",
+            "reasoning"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "You must have seen tarnished copper vessels being cleaned with lemon or tamarind juice. Explain why these sour substances are effective in cleaning the vessels.",
+          "hints": [
+            "Tarnish is basic copper carbonate; acids in lemon/tamarind react with it.",
+            "Acid + base → salt + water; removes tarnish layer."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "corrosion",
+            "cleaning",
+            "acid-base reaction"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "Differentiate between metal and non-metal on the basis of their chemical properties.",
+          "hints": [
+            "Compare formation of ions, reaction with acids/water, nature of oxides.",
+            "Refer to summary points in 'What you have learnt' section."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comparison",
+            "chemical properties",
+            "metals vs non-metals"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "A man went door to door posing as a goldsmith. He promised to bring back the glitter of old and dull gold ornaments. An unsuspecting lady gave a set of gold bangles to him which he dipped in a particular solution. The bangles sparkled like new but their weight was reduced drastically. The lady was upset but after a futile argument the man beat a hasty retreat. Can you play the detective to find out the nature of the solution he had used?",
+          "hints": [
+            "Consider aqua regia (HCl + HNO3) that dissolves gold.",
+            "Weight loss indicates gold dissolved; surface cleaned but material lost."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "aqua regia",
+            "gold dissolution",
+            "application",
+            "puzzle"
+          ]
+        },
+        {
+          "question_number": 16,
+          "question_text": "Give reasons why copper is used to make hot water tanks and not steel (an alloy of iron).",
+          "hints": [
+            "Copper is less reactive, does not corrode easily with hot water.",
+            "Iron/steel rusts in presence of water and oxygen."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "corrosion",
+            "applications",
+            "reactivity"
+          ]
+        }
+      ]
+    }
+  ]
+}

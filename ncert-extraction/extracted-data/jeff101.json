@@ -1,0 +1,234 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "A Letter to God",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What did Lencho hope for?",
+          "hints": [
+            "Read the story to understand Lencho's situation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why did Lencho say the raindrops were like ‘new coins’?",
+          "hints": [
+            "Understand Lencho's perspective on the rain"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "How did the rain change? What happened to Lencho’s fields?",
+          "hints": [
+            "Describe the sequence of events in the story"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comprehension"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What were Lencho’s feelings when the hail stopped?",
+          "hints": [
+            "Analyze Lencho's emotions after the hailstorm"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comprehension"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Who or what did Lencho have faith in? What did he do?",
+          "hints": [
+            "Understand Lencho's faith and actions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Who read the letter?",
+          "hints": [
+            "Identify the character who read Lencho's letter"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What did the postmaster do then?",
+          "hints": [
+            "Describe the postmaster's actions after reading the letter"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comprehension"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Who does Lencho have complete faith in? Which sentences in the story tell you this?",
+          "hints": [
+            "Analyze Lencho's faith and identify relevant sentences"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comprehension"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why does the postmaster send money to Lencho? Why does he sign the letter ‘God’?",
+          "hints": [
+            "Understand the postmaster's motivations and actions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comprehension"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Did Lencho try to find out who had sent the money to him? Why/Why not?",
+          "hints": [
+            "Analyze Lencho's actions and motivations"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comprehension"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Who does Lencho think has taken the rest of the money? What is the irony in the situation?",
+          "hints": [
+            "Identify the irony in the situation and Lencho's perspective"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "comprehension",
+            "irony"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Was Lencho surprised to find a letter for him with money in it?",
+          "hints": [
+            "Describe Lencho's reaction to receiving the letter"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What made him angry?",
+          "hints": [
+            "Identify the cause of Lencho's anger"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Match the names in the box with their descriptions below, and fill in the blanks.",
+          "hints": [
+            "Match the storm types with their descriptions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "vocabulary"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Join the sentences given below using who, whom, whose, which, as suggested.",
+          "hints": [
+            "Use relative pronouns to join the sentences"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "grammar"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find sentences in the story with negative words, which express the following ideas emphatically.",
+          "hints": [
+            "Identify sentences with negative words and their emphasis"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "grammar"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find metaphors from the story to complete the table below.",
+          "hints": [
+            "Identify metaphors in the story and complete the table"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "literary devices"
+          ]
+        }
+      ]
+    }
+  ]
+}

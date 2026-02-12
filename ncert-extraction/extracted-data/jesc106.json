@@ -1,0 +1,554 @@
+{
+  "chapter_number": 6,
+  "chapter_title": "Control and Coordination",
+  "exercises": [
+    {
+      "exercise_number": "6.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Look at Fig. 6.1 (a) and identify the parts of a neuron (i) where information is acquired, (ii) through which information travels as an electrical impulse, and (iii) where this impulse must be converted into a chemical signal for onward transmission.",
+          "hints": [
+            "Recall the structure of a neuron: dendrites, axon, axon terminal",
+            "Information acquisition happens at sensory receptors or dendrites",
+            "Electrical impulses travel along the axon",
+            "Chemical conversion occurs at synapses"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "neuron structure",
+            "nerve impulse transmission",
+            "synapse"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Is there a difference in how sugar and food taste if your nose is blocked? If so, why might this be happening? Read and talk about possible explanations for these kinds of differences. Do you come across a similar situation when you have a cold?",
+          "hints": [
+            "Think about the connection between taste and smell",
+            "Consider how olfactory receptors work",
+            "Recall that taste perception involves both gustatory and olfactory senses"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sensory perception",
+            "taste and smell",
+            "olfactory receptors"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Can you now trace the sequence of events which occur when a bright light is focussed on your eyes?",
+          "hints": [
+            "Start with light detection by photoreceptors",
+            "Follow the reflex arc pathway",
+            "Consider pupil constriction as a protective response"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "reflex action",
+            "pupillary reflex",
+            "sensory response"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Study the labelled diagram of the human brain. We have seen that the different parts have specific functions. Can we find out the function of each part?",
+          "hints": [
+            "Identify forebrain, midbrain, and hindbrain regions",
+            "Recall functions like thinking, balance, involuntary control",
+            "Match brain parts to their specific roles in coordination"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "brain anatomy",
+            "brain functions",
+            "coordination centers"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Based on what we have discussed so far, what do you think the differences between these would be?",
+          "hints": [
+            "Compare voluntary and involuntary muscles",
+            "Consider nervous control vs. automatic control",
+            "Think about conscious vs. unconscious movement"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "muscle types",
+            "voluntary vs involuntary",
+            "neural control"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "QUESTIONS_6.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What is the difference between a reflex action and walking?",
+          "hints": [
+            "Reflex actions are automatic and rapid",
+            "Walking involves conscious control and coordination",
+            "Consider brain involvement in both actions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "reflex action",
+            "voluntary action",
+            "nervous system"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What happens at the synapse between two neurons?",
+          "hints": [
+            "Electrical impulse triggers chemical release",
+            "Neurotransmitters cross the synaptic gap",
+            "Signal transmission from one neuron to another"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "synapse",
+            "neurotransmission",
+            "neural communication"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Which part of the brain maintains posture and equilibrium of the body?",
+          "hints": [
+            "Think about balance and coordination center",
+            "Recall hindbrain structures",
+            "Cerebellum is responsible for motor coordination"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "brain parts",
+            "cerebellum",
+            "balance and posture"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "How do we detect the smell of an agarbatti (incense stick)?",
+          "hints": [
+            "Olfactory receptors in nose detect chemicals",
+            "Signal travels to olfactory bulb in brain",
+            "Brain interprets the smell"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "olfaction",
+            "sensory receptors",
+            "smell detection"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What is the role of the brain in reflex action?",
+          "hints": [
+            "Most reflexes occur at spinal cord level",
+            "Brain may receive information but not always initiate",
+            "Some reflexes involve brain processing"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "reflex arc",
+            "brain function",
+            "automatic responses"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Have the old parts of the shoot and root changed direction? Are there differences in the direction of the new growth? What can we conclude from this activity?",
+          "hints": [
+            "Observe directional growth responses",
+            "Compare old vs new growth patterns",
+            "Conclusion about phototropism in plants"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "phototropism",
+            "plant growth",
+            "directional response"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "If 'hydro' means water and 'chemo' refers to chemicals, what would 'hydrotropism' and 'chemotropism' mean? Can we think of examples of these kinds of directional growth movements?",
+          "hints": [
+            "Hydrotropism: growth response to water",
+            "Chemotropism: growth response to chemicals",
+            "Examples: roots growing toward water, pollen tubes toward ovules"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "tropisms",
+            "plant responses",
+            "directional growth"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "QUESTIONS_6.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What are plant hormones?",
+          "hints": [
+            "Chemical messengers in plants",
+            "Regulate growth and development",
+            "Examples: auxins, gibberellins, cytokinins"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "plant hormones",
+            "phytohormones",
+            "growth regulators"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "How is the movement of leaves of the sensitive plant different from the movement of a shoot towards light?",
+          "hints": [
+            "Sensitive plant: rapid, non-growth movement",
+            "Shoot toward light: slow, growth-based movement",
+            "Compare mechanisms: water pressure vs cell elongation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "plant movements",
+            "nastic vs tropic",
+            "growth responses"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Give an example of a plant hormone that promotes growth.",
+          "hints": [
+            "Auxins promote cell elongation",
+            "Gibberellins stimulate stem growth",
+            "Cytokinins promote cell division"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "growth hormones",
+            "auxins",
+            "plant development"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "How do auxins promote the growth of a tendril around a support?",
+          "hints": [
+            "Uneven distribution of auxins",
+            "More growth on side away from support",
+            "Causes curling or coiling movement"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "auxin action",
+            "tendril movement",
+            "thigmotropism"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Design an experiment to demonstrate hydrotropism.",
+          "hints": [
+            "Set up with water source on one side",
+            "Observe root growth direction",
+            "Control for other factors like gravity"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "experiment design",
+            "hydrotropism",
+            "scientific method"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Hormones are secreted by endocrine glands and have specific functions. Complete Table 6.1 based on the hormone, the endocrine gland or the functions provided.",
+          "hints": [
+            "Match hormones to their glands: insulin-pancreas, testosterone-testes",
+            "Recall functions: adrenaline-fight or flight, thyroxin-metabolism",
+            "Use textbook information to fill missing entries"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "endocrine system",
+            "hormone functions",
+            "gland identification"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "QUESTIONS_6.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How does chemical coordination take place in animals?",
+          "hints": [
+            "Hormones secreted by endocrine glands",
+            "Transport through bloodstream",
+            "Target cells with specific receptors"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "endocrine system",
+            "hormonal coordination",
+            "chemical messengers"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why is the use of iodised salt advisable?",
+          "hints": [
+            "Iodine needed for thyroxin synthesis",
+            "Prevents thyroid disorders like goiter",
+            "Essential for proper metabolism"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "nutrition",
+            "thyroid function",
+            "iodine deficiency"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "How does our body respond when adrenaline is secreted into the blood?",
+          "hints": [
+            "Increased heart rate and breathing",
+            "Blood diverted to muscles",
+            "Prepares for fight or flight response"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "adrenaline",
+            "stress response",
+            "emergency hormone"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Why are some patients of diabetes treated by giving injections of insulin?",
+          "hints": [
+            "Insulin regulates blood sugar levels",
+            "Diabetes involves insulin deficiency or resistance",
+            "Injections help maintain glucose homeostasis"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "diabetes",
+            "insulin therapy",
+            "blood sugar regulation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "EXERCISES",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the following is a plant hormone? (a) Insulin (b) Thyroxin (c) Oestrogen (d) Cytokinin.",
+          "hints": [
+            "Insulin: animal hormone from pancreas",
+            "Thyroxin: animal hormone from thyroid",
+            "Oestrogen: animal sex hormone",
+            "Cytokinin: plant hormone promoting cell division"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "plant hormones",
+            "multiple choice",
+            "hormone identification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The gap between two neurons is called a (a) dendrite. (b) synapse. (c) axon. (d) impulse.",
+          "hints": [
+            "Dendrite: receives signals",
+            "Synapse: junction between neurons",
+            "Axon: transmits signals",
+            "Impulse: electrical signal"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "neuron structure",
+            "synapse",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The brain is responsible for (a) thinking. (b) regulating the heart beat. (c) balancing the body. (d) all of the above.",
+          "hints": [
+            "Forebrain: thinking and decision making",
+            "Medulla: regulates heartbeat",
+            "Cerebellum: balance and coordination"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "brain functions",
+            "multiple choice",
+            "coordination"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What is the function of receptors in our body? Think of situations where receptors do not work properly. What problems are likely to arise?",
+          "hints": [
+            "Receptors detect stimuli from environment",
+            "Examples: taste buds, photoreceptors, touch receptors",
+            "Malfunction: sensory impairments, coordination issues"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sensory receptors",
+            "function and disorders",
+            "application"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Draw the structure of a neuron and explain its function.",
+          "hints": [
+            "Label dendrites, cell body, axon, myelin sheath, axon terminal",
+            "Explain signal reception, transmission, and release of neurotransmitters",
+            "Connect structure to function in nervous coordination"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "neuron diagram",
+            "structure-function",
+            "neural transmission"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "How does phototropism occur in plants?",
+          "hints": [
+            "Unequal distribution of auxin",
+            "More growth on shaded side",
+            "Stem bends toward light source"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "phototropism",
+            "auxin action",
+            "plant response"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Which signals will get disrupted in case of a spinal cord injury?",
+          "hints": [
+            "Sensory signals to brain",
+            "Motor signals from brain",
+            "Reflex pathways may be affected"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "spinal cord injury",
+            "signal disruption",
+            "nervous system damage"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "How does chemical coordination occur in plants?",
+          "hints": [
+            "Plant hormones (phytohormones)",
+            "Diffusion or transport to target cells",
+            "Regulate growth, development, responses"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "plant hormones",
+            "chemical coordination",
+            "growth regulation"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "What is the need for a system of control and coordination in an organism?",
+          "hints": [
+            "Respond appropriately to environment",
+            "Maintain internal balance (homeostasis)",
+            "Coordinate different organs and systems"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "control systems",
+            "coordination importance",
+            "homeostasis"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "How are involuntary actions and reflex actions different from each other?",
+          "hints": [
+            "Involuntary: controlled by brain (e.g., heartbeat, breathing)",
+            "Reflex: rapid, automatic, often spinal cord mediated",
+            "Both are automatic but differ in control center and speed"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "involuntary actions",
+            "reflex actions",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Compare and contrast nervous and hormonal mechanisms for control and coordination in animals.",
+          "hints": [
+            "Nervous: fast, electrical impulses, specific pathways",
+            "Hormonal: slow, chemical messengers, widespread effects",
+            "Both work together for integrated control"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "nervous vs hormonal",
+            "comparison",
+            "coordination mechanisms"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "What is the difference between the manner in which movement takes place in a sensitive plant and the movement in our legs?",
+          "hints": [
+            "Sensitive plant: rapid, non-growth, turgor pressure change",
+            "Human leg: voluntary, muscle contraction, nervous control",
+            "Different mechanisms: plant cells vs animal muscle tissue"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "plant vs animal movement",
+            "comparative biology",
+            "movement mechanisms"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,381 @@
+{
+  "chapter_number": 13,
+  "chapter_title": "STATISTICS",
+  "exercises": [
+    {
+      "exercise_number": "13.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A survey was conducted by a group of students as a part of their environment awareness programme, in which they collected the following data regarding the number of plants in 20 houses in a locality. Find the mean number of plants per house.\nNumber of plants: 0-2, 2-4, 4-6, 6-8, 8-10, 10-12, 12-14\nNumber of houses: 1, 2, 1, 5, 6, 2, 3\nWhich method did you use for finding the mean, and why?",
+          "hints": [
+            "Calculate class marks (midpoints) for each interval.",
+            "Use direct method: mean = Σ(fi * xi) / Σfi.",
+            "Choose method based on simplicity; direct method works here as numbers are small."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "grouped data",
+            "mean",
+            "direct method",
+            "frequency distribution"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Consider the following distribution of daily wages of 50 workers of a factory.\nDaily wages (in ₹): 500-520, 520-540, 540-560, 560-580, 580-600\nNumber of workers: 12, 14, 8, 6, 10\nFind the mean daily wages of the workers of the factory by using an appropriate method.",
+          "hints": [
+            "Use assumed mean or step-deviation method since class marks are large.",
+            "Take assumed mean a = 550 (midpoint of 540-560).",
+            "Calculate deviations di = xi - a and proceed."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "grouped data",
+            "mean",
+            "assumed mean method",
+            "wages"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The following distribution shows the daily pocket allowance of children of a locality. The mean pocket allowance is Rs 18. Find the missing frequency f.\nDaily pocket allowance (in ₹): 11-13, 13-15, 15-17, 17-19, 19-21, 21-23, 23-25\nNumber of children: 7, 6, 9, 13, f, 5, 4",
+          "hints": [
+            "Set up equation using direct method formula: mean = Σ(fi * xi) / Σfi = 18.",
+            "Calculate Σfi = 44 + f and Σfi xi in terms of f.",
+            "Solve linear equation for f."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "missing frequency",
+            "mean",
+            "grouped data",
+            "algebraic equation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Thirty women were examined in a hospital by a doctor and the number of heartbeats per minute were recorded and summarised as follows. Find the mean heartbeats per minute for these women, choosing a suitable method.\nNumber of heartbeats per minute: 65-68, 68-71, 71-74, 74-77, 77-80, 80-83, 83-86\nNumber of women: 2, 4, 3, 8, 7, 4, 2",
+          "hints": [
+            "Class intervals are not continuous; adjust to continuous form (e.g., 65-68 becomes 64.5-68.5).",
+            "Use step-deviation method with h = 3.",
+            "Take assumed mean a = midpoint of 74-77 class."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "continuous classes",
+            "mean",
+            "step-deviation method",
+            "medical data"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "In a retail market, fruit vendors were selling mangoes kept in packing boxes. These boxes contained varying number of mangoes. The following was the distribution of mangoes according to the number of boxes.\nNumber of mangoes: 50-52, 53-55, 56-58, 59-61, 62-64\nNumber of boxes: 15, 110, 135, 115, 25\nFind the mean number of mangoes kept in a packing box. Which method of finding the mean did you choose?",
+          "hints": [
+            "Class intervals are not of equal width; adjust class marks carefully.",
+            "Use direct method or step-deviation with careful choice of h.",
+            "Explain choice based on numerical convenience."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "unequal class intervals",
+            "mean",
+            "direct method",
+            "agricultural data"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "The table below shows the daily expenditure on food of 25 households in a locality.\nDaily expenditure (in ₹): 100-150, 150-200, 200-250, 250-300, 300-350\nNumber of households: 4, 5, 12, 2, 2\nFind the mean daily expenditure on food by a suitable method.",
+          "hints": [
+            "Use step-deviation method with h = 50.",
+            "Take assumed mean a = 225 (midpoint of 200-250).",
+            "Calculate ui = (xi - a)/h and proceed."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "grouped data",
+            "mean",
+            "step-deviation method",
+            "expenditure"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "To find out the concentration of SO2 in the air (in parts per million, i.e., ppm), the data was collected for 30 localities in a certain city and is presented below:\nConcentration of SO2 (in ppm): 0.00-0.04, 0.04-0.08, 0.08-0.12, 0.12-0.16, 0.16-0.20, 0.20-0.24\nFrequency: 4, 9, 9, 2, 4, 2\nFind the mean concentration of SO2 in the air.",
+          "hints": [
+            "Class marks are small; direct method is appropriate.",
+            "Calculate xi as midpoints (e.g., 0.02, 0.06, etc.).",
+            "Compute mean = Σ(fi * xi) / Σfi."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "environmental data",
+            "mean",
+            "direct method",
+            "pollution"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "A class teacher has the following absentee record of 40 students of a class for the whole term. Find the mean number of days a student was absent.\nNumber of days: 0-6, 6-10, 10-14, 14-20, 20-28, 28-38, 38-40\nNumber of students: 11, 10, 7, 4, 4, 3, 1",
+          "hints": [
+            "Class intervals are of unequal width; calculate class marks carefully.",
+            "Use step-deviation method with appropriate h (maybe 10).",
+            "Take assumed mean a = midpoint of a central class."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "unequal class intervals",
+            "mean",
+            "step-deviation method",
+            "attendance"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "The following table gives the literacy rate (in percentage) of 35 cities. Find the mean literacy rate.\nLiteracy rate (in %): 45-55, 55-65, 65-75, 75-85, 85-95\nNumber of cities: 3, 10, 11, 8, 3",
+          "hints": [
+            "Use step-deviation method with h = 10.",
+            "Take assumed mean a = 70 (midpoint of 65-75).",
+            "Calculate ui = (xi - a)/h and proceed."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "literacy rate",
+            "mean",
+            "step-deviation method",
+            "socio-economic data"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "13.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "The following table shows the ages of the patients admitted in a hospital during a year:\nAge (in years): 5-15, 15-25, 25-35, 35-45, 45-55, 55-65\nNumber of patients: 6, 11, 21, 23, 14, 5\nFind the mode and the mean of the data given above. Compare and interpret the two measures of central tendency.",
+          "hints": [
+            "Mode: Identify modal class (highest frequency), use formula: Mode = l + ((f1 - f0)/(2f1 - f0 - f2)) * h.",
+            "Mean: Use step-deviation or direct method.",
+            "Compare: Mode is most frequent age, mean is average age; discuss which is higher and why."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "mode",
+            "mean",
+            "comparison",
+            "medical statistics"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The following data gives the information on the observed lifetimes (in hours) of 225 electrical components:\nLifetimes (in hours): 0-20, 20-40, 40-60, 60-80, 80-100, 100-120\nFrequency: 10, 35, 52, 61, 38, 29\nDetermine the modal lifetimes of the components.",
+          "hints": [
+            "Modal class is 60-80 (highest frequency 61).",
+            "Use mode formula with l=60, h=20, f1=61, f0=52, f2=38.",
+            "Compute mode."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "mode",
+            "grouped data",
+            "lifetimes",
+            "electrical components"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The following data gives the distribution of total monthly household expenditure of 200 families of a village. Find the modal monthly expenditure of the families. Also, find the mean monthly expenditure:\nExpenditure (in ₹): 1000-1500, 1500-2000, 2000-2500, 2500-3000, 3000-3500, 3500-4000, 4000-4500, 4500-5000\nNumber of families: 24, 40, 33, 28, 30, 22, 16, 7",
+          "hints": [
+            "Modal class is 1500-2000 (highest frequency 40).",
+            "Use mode formula with l=1500, h=500, f1=40, f0=24, f2=33.",
+            "Mean: Use step-deviation method with a=2500, h=500."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "mode",
+            "mean",
+            "household expenditure",
+            "village data"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The following distribution gives the state-wise teacher-student ratio in higher secondary schools of India. Find the mode and mean of this data. Interpret the two measures.\nNumber of students per teacher: 15-20, 20-25, 25-30, 30-35, 35-40, 40-45, 45-50, 50-55\nNumber of states / U.T.: 3, 8, 9, 10, 3, 0, 0, 2",
+          "hints": [
+            "Modal class is 30-35 (highest frequency 10).",
+            "Use mode formula with l=30, h=5, f1=10, f0=9, f2=3.",
+            "Mean: Use step-deviation method with a=27.5, h=5.",
+            "Interpret: Mode is most common ratio, mean is average ratio."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "mode",
+            "mean",
+            "teacher-student ratio",
+            "education statistics"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "The given distribution shows the number of runs scored by some top batsmen of the world in one-day international cricket matches.\nRuns scored: 3000-4000, 4000-5000, 5000-6000, 6000-7000, 7000-8000, 8000-9000, 9000-10000, 10000-11000\nNumber of batsmen: 4, 18, 9, 7, 6, 3, 1, 1\nFind the mode of the data.",
+          "hints": [
+            "Modal class is 4000-5000 (highest frequency 18).",
+            "Use mode formula with l=4000, h=1000, f1=18, f0=4, f2=9.",
+            "Compute mode."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "mode",
+            "cricket statistics",
+            "runs scored",
+            "sports data"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A student noted the number of cars passing through a spot on a road for 100 periods each of 3 minutes and summarised it in the table given below. Find the mode of the data:\nNumber of cars: 0-10, 10-20, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80\nFrequency: 7, 14, 13, 12, 20, 11, 15, 8",
+          "hints": [
+            "Modal class is 40-50 (highest frequency 20).",
+            "Use mode formula with l=40, h=10, f1=20, f0=12, f2=11.",
+            "Compute mode."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "mode",
+            "traffic data",
+            "frequency distribution",
+            "transport"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "13.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "The following frequency distribution gives the monthly consumption of electricity of 68 consumers of a locality. Find the median, mean and mode of the data and compare them.\nMonthly consumption (in units): 65-85, 85-105, 105-125, 125-145, 145-165, 165-185, 185-205\nNumber of consumers: 4, 5, 13, 20, 14, 8, 4",
+          "hints": [
+            "Median: Find median class using n/2 = 34, cumulative frequency; use formula.",
+            "Mean: Use step-deviation method with a=135, h=20.",
+            "Mode: Modal class is 125-145; use formula.",
+            "Compare: Discuss which measure best represents central tendency."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "median",
+            "mean",
+            "mode",
+            "comparison",
+            "electricity consumption"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "If the median of the distribution given below is 28.5, find the values of x and y.\nClass interval: 0-10, 10-20, 20-30, 30-40, 40-50, 50-60\nFrequency: 5, x, 20, 15, y, 5\nTotal = 60",
+          "hints": [
+            "Set up cumulative frequency table.",
+            "Median class is 20-30 since median=28.5.",
+            "Use median formula: 28.5 = 20 + ((30 - (5+x))/20) * 10.",
+            "Also, total frequency: 5 + x + 20 + 15 + y + 5 = 60 => x + y = 15.",
+            "Solve two equations for x and y."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "median",
+            "missing frequencies",
+            "algebraic equations",
+            "cumulative frequency"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A life insurance agent found the following data for distribution of ages of 100 policy holders. Calculate the median age, if policies are given only to persons having age 18 years onwards but less than 60 year.\nAge (in years): Below 20, Below 25, Below 30, Below 35, Below 40, Below 45, Below 50, Below 55, Below 60\nNumber of policy holders: 2, 6, 24, 45, 78, 89, 92, 98, 100",
+          "hints": [
+            "Convert 'below' data to continuous classes: 18-20, 20-25, 25-30, etc.",
+            "Frequencies: 2, 4, 18, 21, 33, 11, 3, 6, 2 (calculate by subtracting consecutive cumulative frequencies).",
+            "Median class: n/2 = 50, find class where cumulative frequency ≥ 50.",
+            "Use median formula."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "median",
+            "cumulative frequency",
+            "insurance data",
+            "age distribution"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The lengths of 40 leaves of a plant are measured correct to the nearest millimetre, and the data obtained is represented in the following table:\nLength (in mm): 118-126, 127-135, 136-144, 145-153, 154-162, 163-171, 172-180\nNumber of leaves: 3, 5, 9, 12, 5, 4, 2\nFind the median length of the leaves.\n(Hint: The data needs to be converted to continuous classes for finding the median, since the formula assumes continuous classes. The classes then change to 117.5-126.5, 126.5-135.5, . . ., 171.5-180.5.)",
+          "hints": [
+            "Convert to continuous classes as per hint.",
+            "Median class: n/2 = 20, find class where cumulative frequency ≥ 20.",
+            "Use median formula with adjusted class limits."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "median",
+            "continuous classes",
+            "leaf length",
+            "botany data"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "The following table gives the distribution of the life time of 400 neon lamps:\nLife time (in hours): 1500-2000, 2000-2500, 2500-3000, 3000-3500, 3500-4000, 4000-4500, 4500-5000\nNumber of lamps: 14, 56, 60, 86, 74, 62, 48\nFind the median life time of a lamp.",
+          "hints": [
+            "Median class: n/2 = 200, find class where cumulative frequency ≥ 200.",
+            "Use median formula with l=3000, h=500, cf=14+56+60=130, f=86.",
+            "Compute median."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "median",
+            "lifetime",
+            "neon lamps",
+            "industrial data"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "100 surnames were randomly picked up from a local telephone directory and the frequency distribution of the number of letters in the English alphabets in the surnames was obtained as follows:\nNumber of letters: 1-4, 4-7, 7-10, 10-13, 13-16, 16-19\nNumber of surnames: 6, 30, 40, 16, 4, 4\nDetermine the median number of letters in the surnames. Find the mean number of letters in the surnames? Also, find the modal size of the surnames.",
+          "hints": [
+            "Median: Convert to continuous classes (e.g., 0.5-4.5, 4.5-7.5, etc.).",
+            "Median class: n/2 = 50, find class where cumulative frequency ≥ 50.",
+            "Mean: Use step-deviation method with a=8.5, h=3.",
+            "Mode: Modal class is 7-10; use formula."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "median",
+            "mean",
+            "mode",
+            "surnames",
+            "letters"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "The distribution below gives the weights of 30 students of a class. Find the median weight of the students.\nWeight (in kg): 40-45, 45-50, 50-55, 55-60, 60-65, 65-70, 70-75\nNumber of students: 2, 3, 8, 6, 6, 3, 2",
+          "hints": [
+            "Median class: n/2 = 15, find class where cumulative frequency ≥ 15.",
+            "Use median formula with l=55, h=5, cf=2+3+8=13, f=6.",
+            "Compute median."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "median",
+            "weight",
+            "students",
+            "health data"
+          ]
+        }
+      ]
+    }
+  ]
+}

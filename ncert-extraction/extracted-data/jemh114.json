@@ -1,0 +1,293 @@
+{
+  "chapter_number": 14,
+  "chapter_title": "Probability",
+  "exercises": [
+    {
+      "exercise_number": "14.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Complete the following statements: (i) Probability of an event E + Probability of the event ‘not E’ = _______ (ii) The probability of an event that cannot happen is _______ (iii) The probability of an event that is certain to happen is _______ (iv) The sum of the probabilities of all the elementary events of an experiment is _______ (v) The probability of an event is greater than or equal to _______ and less than or equal to _______",
+          "hints": [
+            "basic probability concepts"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "probability",
+            "events"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Which of the following experiments have equally likely outcomes? Explain. (i) A driver attempts to start a car. The car starts or does not start. (ii) A player attempts to shoot a basketball. She/he shoots or misses the shot. (iii) A trial is made to answer a true-false question. The answer is right or wrong. (iv) A baby is born. It is a boy or a girl.",
+          "hints": [
+            "equally likely outcomes"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "experiments",
+            "outcomes"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why is tossing a coin considered to be a fair way of deciding which team should get the ball at the beginning of a football game?",
+          "hints": [
+            "fairness",
+            "coin toss"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fairness",
+            "coin toss"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Which of the following cannot be the probability of an event? (A) 2/3 (B) –1.5 (C) 15% (D) 0.7",
+          "hints": [
+            "probability range"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "probability",
+            "range"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "If P(E) = 0.05, what is the probability of ‘not E’?",
+          "hints": [
+            "complementary events"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "complementary events"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A bag contains lemon flavoured candies only. Malini takes out one candy without looking into the bag. What is the probability that she takes out (i) an orange flavoured candy? (ii) a lemon flavoured candy?",
+          "hints": [
+            "candy flavors"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "candy flavors"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "It is given that in a group of 3 students, the probability of 2 students not having the same birthday is 0.992. What is the probability that the 2 students have the same birthday?",
+          "hints": [
+            "birthday probability"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "birthday probability"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "A bag contains 3 red balls and 5 black balls. A ball is drawn at random from the bag. What is the probability that the ball drawn is (i) red ? (ii) not red?",
+          "hints": [
+            "ball colors"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "ball colors"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "A box contains 5 red marbles, 8 white marbles and 4 green marbles. One marble is taken out of the box at random. What is the probability that the marble taken out will be (i) red ? (ii) white ? (iii) not green?",
+          "hints": [
+            "marble colors"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "marble colors"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "A piggy bank contains hundred 50p coins, fifty ` 1 coins, twenty ` 2 coins and ten ` 5 coins. If it is equally likely that one of the coins will fall out when the bank is turned upside down, what is the probability that the coin (i) will be a 50 p coin ? (ii) will not be a ` 5 coin?",
+          "hints": [
+            "coin values"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "coin values"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Gopi buys a fish from a shop for his aquarium. The shopkeeper takes out one fish at random from a tank containing 5 male fish and 8 female fish. What is the probability that the fish taken out is a male fish?",
+          "hints": [
+            "fish genders"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fish genders"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "A game of chance consists of spinning an arrow which comes to rest pointing at one of the numbers 1, 2, 3, 4, 5, 6, 7, 8. What is the probability that it will point at (i) 8 ? (ii) an odd number? (iii) a number greater than 2? (iv) a number less than 9?",
+          "hints": [
+            "spinner numbers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "spinner numbers"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "A die is thrown once. Find the probability of getting (i) a prime number; (ii) a number lying between 2 and 6; (iii) an odd number.",
+          "hints": [
+            "die outcomes"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "die outcomes"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "One card is drawn from a well-shuffled deck of 52 cards. Find the probability of getting (i) a king of red colour (ii) a face card (iii) a red face card (iv) the jack of hearts (v) a spade (vi) the queen of diamonds",
+          "hints": [
+            "card types"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "card types"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "Five cards—the ten, jack, queen, king and ace of diamonds, are well-shuffled with their face downwards. One card is then picked up at random. (i) What is the probability that the card is the queen? (ii) If the queen is drawn and put aside, what is the probability that the second card picked up is (a) an ace? (b) a queen?",
+          "hints": [
+            "card ranks"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "card ranks"
+          ]
+        },
+        {
+          "question_number": 16,
+          "question_text": "12 defective pens are accidentally mixed with 132 good ones. It is not possible to just look at a pen and tell whether or not it is defective. One pen is taken out at random from this lot. Determine the probability that the pen taken out is a good one.",
+          "hints": [
+            "pen quality"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pen quality"
+          ]
+        },
+        {
+          "question_number": 17,
+          "question_text": "(i) A lot of 20 bulbs contain 4 defective ones. One bulb is drawn at random from the lot. What is the probability that this bulb is defective? (ii) Suppose the bulb drawn in (i) is not defective and is not replaced. Now one bulb is drawn at random from the rest. What is the probability that this bulb is not defective?",
+          "hints": [
+            "bulb quality"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "bulb quality"
+          ]
+        },
+        {
+          "question_number": 18,
+          "question_text": "A box contains 90 discs which are numbered from 1 to 90. If one disc is drawn at random from the box, find the probability that it bears (i) a two-digit number (ii) a perfect square number (iii) a number divisible by 5.",
+          "hints": [
+            "disc numbers"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "disc numbers"
+          ]
+        },
+        {
+          "question_number": 19,
+          "question_text": "A child has a die whose six faces show the letters as given below: The die is thrown once. What is the probability of getting (i) A? (ii) D?",
+          "hints": [
+            "die letters"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "die letters"
+          ]
+        },
+        {
+          "question_number": 20,
+          "question_text": "Suppose you drop a die at random on the rectangular region shown in Fig. 14.6. What is the probability that it will land inside the circle with diameter 1m?",
+          "hints": [
+            "die landing"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "die landing"
+          ]
+        },
+        {
+          "question_number": 21,
+          "question_text": "A lot consists of 144 ball pens of which 20 are defective and the others are good. Nuri will buy a pen if it is good, but will not buy if it is defective. The shopkeeper draws one pen at random and gives it to her. What is the probability that (i) She will buy it ? (ii) She will not buy it ?",
+          "hints": [
+            "pen quality"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pen quality"
+          ]
+        },
+        {
+          "question_number": 22,
+          "question_text": "Refer to Example 13. (i) Complete the following table: Event : ‘Sum on 2 dice’ Probability 2 1/36 3 4 5 6 7 8 9 10 11 12 (ii) A student argues that ‘there are 11 possible outcomes 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 12. Therefore, each of them has a probability 1/11. Do you agree with this argument? Justify your answer.",
+          "hints": [
+            "dice sums"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "dice sums"
+          ]
+        },
+        {
+          "question_number": 23,
+          "question_text": "A game consists of tossing a one rupee coin 3 times and noting its outcome each time. Hanif wins if all the tosses give the same result i.e., three heads or three tails, and loses otherwise. Calculate the probability that Hanif will lose the game.",
+          "hints": [
+            "coin tosses"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "coin tosses"
+          ]
+        },
+        {
+          "question_number": 24,
+          "question_text": "A die is thrown twice. What is the probability that (i) 5 will not come up either time? (ii) 5 will come up at least once?",
+          "hints": [
+            "die outcomes"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "die outcomes"
+          ]
+        },
+        {
+          "question_number": 25,
+          "question_text": "Which of the following arguments are correct and which are not correct? Give reasons for your answer. (i) If two coins are tossed simultaneously there are three possible outcomes —two heads, two tails or one of each. Therefore, for each of these outcomes, the probability is 1/3. (ii) If a die is thrown, there are two possible outcomes— an odd number or an even number. Therefore, the probability of getting an odd number is 1/2.",
+          "hints": [
+            "coin tosses",
+            "die outcomes"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "coin tosses",
+            "die outcomes"
+          ]
+        }
+      ]
+    }
+  ]
+}

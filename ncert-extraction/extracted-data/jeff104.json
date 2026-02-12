@@ -1,0 +1,205 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "A Letter to God",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Do you keep a diary? Given below under ‘A’ are some terms we use to describe a written record of personal experience. Can you match them with their descriptions under ‘B’?",
+          "hints": [
+            "Read the definitions carefully",
+            "Match the terms with their descriptions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "diary",
+            "journal",
+            "log",
+            "memoir"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Here are some entries from personal records. Use the definitions above to decide which of the entries might be from a diary, a journal, a log or a memoir.",
+          "hints": [
+            "Read the entries carefully",
+            "Use the definitions to decide the type of record"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "diary",
+            "journal",
+            "log",
+            "memoir"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Oral Comprehension Check",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What makes writing in a diary a strange experience for Anne Frank?",
+          "hints": [
+            "Read the text carefully",
+            "Understand Anne's feelings"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "diary",
+            "Anne Frank"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why does Anne want to keep a diary?",
+          "hints": [
+            "Read the text carefully",
+            "Understand Anne's motivations"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "diary",
+            "Anne Frank"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why did Anne think she could confide more in her diary than in people?",
+          "hints": [
+            "Read the text carefully",
+            "Understand Anne's feelings"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "diary",
+            "Anne Frank"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Oral Comprehension Check",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why was Mr Keesing annoyed with Anne? What did he ask her to do?",
+          "hints": [
+            "Read the text carefully",
+            "Understand the situation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Mr Keesing",
+            "Anne Frank"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "How did Anne justify her being a chatterbox in her essay?",
+          "hints": [
+            "Read the text carefully",
+            "Understand Anne's argument"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "essay",
+            "Anne Frank"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Do you think Mr Keesing was a strict teacher?",
+          "hints": [
+            "Read the text carefully",
+            "Understand Mr Keesing's character"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Mr Keesing",
+            "teacher"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What made Mr Keesing allow Anne to talk in class?",
+          "hints": [
+            "Read the text carefully",
+            "Understand the situation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Mr Keesing",
+            "Anne Frank"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Thinking about the Text",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Was Anne right when she said that the world would not be interested in the musings of a thirteen-year-old girl?",
+          "hints": [
+            "Read the text carefully",
+            "Understand Anne's thoughts"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "diary",
+            "Anne Frank"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "There are some examples of diary or journal entries in the ‘Before You Read’ section. Compare these with what Anne writes in her diary. What language was the diary originally written in? In what way is Anne’s diary different?",
+          "hints": [
+            "Read the text carefully",
+            "Compare the diary entries"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "diary",
+            "journal",
+            "Anne Frank"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why does Anne need to give a brief sketch about her family? Does she treat ‘Kitty’ as an insider or an outsider?",
+          "hints": [
+            "Read the text carefully",
+            "Understand Anne's motivations"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "diary",
+            "Anne Frank"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "How does Anne feel about her father, her grandmother, Mrs Kuperus and Mr Keesing? What do these tell you about her?",
+          "hints": [
+            "Read the text carefully",
+            "Understand Anne's feelings"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Anne Frank",
+            "relationships"
+          ]
+        }
+      ]
+    }
+  ]
+}

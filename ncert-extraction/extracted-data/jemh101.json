@@ -1,0 +1,172 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "REAL NUMBERS",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Express each number as a product of its prime factors:\n(i) 140\n(ii) 156\n(iii) 3825\n(iv) 5005\n(v) 7429",
+          "hints": [
+            "Use factor tree or repeated division method",
+            "Write each number as product of prime powers",
+            "Check divisibility by small primes (2,3,5,7,11,13,17,19)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "prime factorization",
+            "fundamental theorem of arithmetic"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the LCM and HCF of the following pairs of integers and verify that LCM × HCF = product of the two numbers.\n(i) 26 and 91\n(ii) 510 and 92\n(iii) 336 and 54",
+          "hints": [
+            "First find prime factorization of each number",
+            "HCF = product of smallest powers of common primes",
+            "LCM = product of greatest powers of all primes",
+            "Verify LCM × HCF = product of numbers"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "HCF",
+            "LCM",
+            "prime factorization method",
+            "verification"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the LCM and HCF of the following integers by applying the prime factorisation method.\n(i) 12, 15 and 21\n(ii) 17, 23 and 29\n(iii) 8, 9 and 25",
+          "hints": [
+            "For three numbers, HCF = product of smallest powers of common primes",
+            "LCM = product of greatest powers of all primes",
+            "Note: For prime numbers, HCF = 1 and LCM = product"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "HCF of three numbers",
+            "LCM of three numbers",
+            "prime factorization"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Given that HCF (306, 657) = 9, find LCM (306, 657).",
+          "hints": [
+            "Use formula: HCF × LCM = product of numbers",
+            "LCM = (306 × 657) ÷ HCF",
+            "Verify using prime factorization if needed"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "HCF-LCM relationship",
+            "formula application"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Check whether 6n can end with the digit 0 for any natural number n.",
+          "hints": [
+            "A number ends with 0 if divisible by 10",
+            "10 = 2 × 5, so need both 2 and 5 in prime factors",
+            "Analyze prime factors of 6n = (2×3)n",
+            "Check if 5 appears in factorization"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "number ending with zero",
+            "prime factors",
+            "divisibility",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Explain why 7 × 11 × 13 + 13 and 7 × 6 × 5 × 4 × 3 × 2 × 1 + 5 are composite numbers.",
+          "hints": [
+            "Factor out common terms",
+            "7×11×13+13 = 13(7×11+1)",
+            "7×6×5×4×3×2×1+5 = 5(7×6×4×3×2×1+1)",
+            "Show both have factors other than 1 and themselves"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "composite numbers",
+            "factoring",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "There is a circular path around a sports field. Sonia takes 18 minutes to drive one round of the field, while Ravi takes 12 minutes for the same. Suppose they both start at the same point and at the same time, and go in the same direction. After how many minutes will they meet again at the starting point?",
+          "hints": [
+            "Find LCM of 18 and 12",
+            "They meet when both complete integer rounds",
+            "LCM gives time when both are at starting point simultaneously"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "LCM application",
+            "real-world problem",
+            "time and distance"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Prove that √5 is irrational.",
+          "hints": [
+            "Assume √5 is rational = a/b (coprime)",
+            "Square both sides: 5b² = a²",
+            "Use Theorem 1.2: if 5 divides a² then 5 divides a",
+            "Show contradiction with coprime assumption"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "irrationality proof",
+            "proof by contradiction",
+            "Theorem 1.2 application"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Prove that 3 + 2√5 is irrational.",
+          "hints": [
+            "Assume it is rational = a/b",
+            "Rearrange to isolate √5",
+            "Show √5 = (rational expression)",
+            "Contradiction since √5 is irrational"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "irrationality proof",
+            "sum of rational and irrational",
+            "proof by contradiction"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Prove that the following are irrationals:\n(i) 1/√2\n(ii) 7√5\n(iii) 6 + √2",
+          "hints": [
+            "(i) Assume rational, then √2 = 1/(rational) → contradiction",
+            "(ii) Assume rational, then √5 = rational/7 → contradiction",
+            "(iii) Assume rational, then √2 = rational - 6 → contradiction"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "irrationality proof",
+            "reciprocal of irrational",
+            "product with irrational",
+            "sum with irrational"
+          ]
+        }
+      ]
+    }
+  ]
+}

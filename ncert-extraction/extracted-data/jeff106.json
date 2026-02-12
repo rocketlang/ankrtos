@@ -1,0 +1,475 @@
+{
+  "chapter_number": 106,
+  "chapter_title": "Mijbil the Otter",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Do you have a pet? If you do, you perhaps know that a pet is a serious responsibility. Read in the box below what the SPCA — the Society for the Prevention of Cruelty to Animals — has to say about how to care for a pet.",
+          "hints": [
+            "Read the SPCA guidelines carefully",
+            "List key responsibilities mentioned"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pet care",
+            "responsibility",
+            "reading comprehension"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Imagine someone has gifted you a pet. With your partner's help, make a list of the things you need to know about the pet in order to take good care of it. One has been done for you.\n(i) The food it eats.\n(ii)\n(iii)\n(iv)\n(v)",
+          "hints": [
+            "Consider basic needs: shelter, health, exercise",
+            "Think about training and socialization"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pet care",
+            "list making",
+            "collaboration"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Otters are found in large numbers in the marshes (i.e. wet areas near lakes, rivers or seas) near Basra, a town in Iraq. Imagine you wanted to bring an otter from Iraq to London, as a pet. What special arrangements would you need to make for your pet otter? You would need to find a place with lots of water, for example. What other points should you think about? The information about Iraq and London given below may help you.",
+          "hints": [
+            "Compare climate differences",
+            "Consider habitat requirements",
+            "Think about legal and transportation issues"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comparative analysis",
+            "habitat adaptation",
+            "problem solving"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What 'experiment' did Maxwell think Camusfearna would be suitable for?",
+          "hints": [
+            "Look for Maxwell's initial thought about keeping an otter",
+            "Consider the location description"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "reading comprehension",
+            "inference"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why does he go to Basra? How long does he wait there, and why?",
+          "hints": [
+            "Check the purpose of the Basra visit",
+            "Note the mail delay details"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "detail recall",
+            "sequence of events"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "How does he get the otter? Does he like it? Pick out the words that tell you this.",
+          "hints": [
+            "Look for the gift from friends",
+            "Find descriptive words about his reaction"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "character analysis",
+            "text evidence"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Why was the otter named 'Maxwell's otter'?",
+          "hints": [
+            "Check the scientific naming section",
+            "Look for 'previously unknown to science'"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "scientific context",
+            "detail recall"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Tick the right answer. In the beginning, the otter was\n• aloof and indifferent\n• friendly\n• hostile",
+          "hints": [
+            "Look for initial behavior description",
+            "Check the first 24 hours behavior"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "character behavior"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "What happened when Maxwell took Mijbil to the bathroom? What did it do two days after that?",
+          "hints": [
+            "Describe the bathroom scene",
+            "Note the tap-turning incident"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "event sequence",
+            "detail recall"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How was Mij to be transported to England?",
+          "hints": [
+            "Check the airline restrictions",
+            "Note the box requirements"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "travel arrangements",
+            "detail recall"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What did Mij do to the box?",
+          "hints": [
+            "Look for the blood-spattered scene",
+            "Describe the damage"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "event description",
+            "detail recall"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why did Maxwell put the otter back in the box? How do you think he felt when he did this?",
+          "hints": [
+            "Consider the time constraint",
+            "Infer emotional state from context"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "inference",
+            "emotional analysis"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Why does Maxwell say the airhostess was 'the very queen of her kind'?",
+          "hints": [
+            "Look for her helpful suggestions",
+            "Consider her understanding attitude"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "character appreciation",
+            "text evidence"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What happened when the box was opened?",
+          "hints": [
+            "Describe Mij's escape",
+            "Note the reactions of other passengers"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "event sequence",
+            "detail recall"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What game had Mij invented?",
+          "hints": [
+            "Look for the suitcase game",
+            "Describe the ball rolling activity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "creativity",
+            "detail recall"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What are 'compulsive habits'? What does Maxwell say are the compulsive habits of\n(i) school children\n(ii) Mij?",
+          "hints": [
+            "Define compulsive habits from context",
+            "List both examples given"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "definition",
+            "comparative analysis"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What group of animals do otters belong to?",
+          "hints": [
+            "Look for the Mustellines mention",
+            "List related animals"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "scientific classification",
+            "detail recall"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What guesses did the Londoners make about what Mij was?",
+          "hints": [
+            "List all the incorrect guesses mentioned",
+            "Include the laborer's question"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "detail recall",
+            "list making"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What things does Mij do which tell you that he is an intelligent, friendly and fun-loving animal who needs love?",
+          "hints": [
+            "Look for playful behaviors",
+            "Note affectionate actions",
+            "Consider problem-solving instances"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "character analysis",
+            "text evidence"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What are some of the things we come to know about otters from this text?",
+          "hints": [
+            "List otter characteristics mentioned",
+            "Include behavioral traits"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "information extraction",
+            "list making"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why is Mij's species now known to the world as Maxwell's otter?",
+          "hints": [
+            "Refer to the scientific naming",
+            "Explain the discovery significance"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "scientific context",
+            "detail recall"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Maxwell in the story speaks for the otter, Mij. He tells us what the otter feels and thinks on different occasions. Given below are some things the otter does. Complete the column on the right to say what Maxwell says about what Mij feels and thinks.\nWhat Mij does | How Mij feels or thinks\nplunges, rolls in the water and makes the water splosh and splash | \nScrews the tap in the wrong way | \nNuzzles Maxwell's face and neck in the aeroplane |",
+          "hints": [
+            "Infer emotions from actions",
+            "Use context clues from the text"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "inference",
+            "emotional analysis",
+            "table completion"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Read the story and find the sentences where Maxwell describes his pet otter. Then choose and arrange your sentences to illustrate those statements below that you think are true.\nMaxwell's description\n(i) makes Mij seem almost human, like a small boy.\n(ii) shows that he is often irritated with what Mij does.\n(iii) shows that he is often surprised by what Mij does.\n(iv) of Mij's antics is comical.\n(v) shows that he observes the antics of Mij very carefully.\n(vi) shows that he thinks Mij is a very ordinary otter.\n(vii) shows that he thinks the otter is very unusual.",
+          "hints": [
+            "Find descriptive passages",
+            "Match descriptions to statements",
+            "Provide text evidence"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "text analysis",
+            "evidence selection",
+            "critical thinking"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "From the table below, make as many correct sentences as you can using would and/or used to, as appropriate. (Hint: First decide whether the words in italics show an action, or a state or situation, in the past.) Then add two or three sentences of your own to it.\nEmperor Akbar | be fond of musical evenings.\nEvery evening we | take long walks on the beach.\nFifty years ago, very few people | own cars.\nTill the 1980s, Shanghai | have very dirty streets.\nMy uncle | spend his holidays by the sea.",
+          "hints": [
+            "Distinguish between actions and states",
+            "Apply 'would' for repeated actions",
+            "Apply 'used to' for both actions and states"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "sentence construction",
+            "verb usage"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Look at these examples from the text, and say whether the modifiers (in italics) are nouns, proper nouns, or adjective plus noun.\n(i) An otter fixation\n(ii) The iron railings\n(iii) The Tigris marshes\n(iv) The London streets\n(v) soft velvet fur\n(vi) A four-footed soccer player",
+          "hints": [
+            "Identify the modifying word",
+            "Classify as noun, proper noun, or adjective+noun"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "grammar",
+            "parts of speech",
+            "modifiers"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Given below are some nouns, and a set of modifiers (in the box). Combine the nouns and modifiers to make as many appropriate phrases as you can. (Hint: The nouns and modifiers are all from the texts in this book.)\nNouns: temple, girls, triangle, dresses, person, thoughts, boys, roar, gifts, scream, farewell, expression, time, subject, landscape, handkerchief, crossing, flight, chatterbox, profession, physique, coffee, view, celebration, college\nModifiers: rough, hundred, stone, ordinary, love, uncomfortable, white, slang, slack, bare, railroad, tremendous, family, marriage, plump, invigorating, panoramic, heartbreaking, birthday, incorrigible, ridiculous, loud, first, three",
+          "hints": [
+            "Create meaningful combinations",
+            "Ensure grammatical correctness",
+            "Use modifiers appropriately"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "vocabulary",
+            "phrase construction",
+            "creativity"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Match the words on the left with a word on the right. Some words on the left can go with more than one word on the right.\nLeft: a pool of, flakes of, a gust of, a piece of, a portion of, a huge heap of, little drops of, a pot of\nRight: blood, cotton, stones, gold, fried fish, snow, water, wind",
+          "hints": [
+            "Consider common collocations",
+            "Think about measurable quantities"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "vocabulary",
+            "collocations",
+            "matching"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Use a bit of/a piece of/a bunch of/a cloud of/a lump of with the italicised nouns in the following sentences. The first has been done for you as an example.\n(i) My teacher gave me some advice. → My teacher gave me a bit of advice.\n(ii) Can you give me some clay, please.\n(iii) The information you gave was very useful.\n(iv) Because of these factories, smoke hangs over the city.\n(v) Two stones rubbed together can produce sparks of fire.\n(vi) He gave me some flowers on my birthday.",
+          "hints": [
+            "Choose appropriate quantifiers",
+            "Consider the nature of each noun"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "grammar",
+            "quantifiers",
+            "sentence transformation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "(i) What does Sandburg think the fog is like?\n(ii) How does the fog come?\n(iii) What does 'it' in the third line refer to?\n(iv) Does the poet actually say that the fog is like a cat? Find three things that tell us that the fog is like a cat.",
+          "hints": [
+            "Read the poem carefully",
+            "Look for cat-like attributes",
+            "Identify metaphors"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "poetry analysis",
+            "metaphor",
+            "comprehension"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "(i) Find metaphors for the following words and complete the table below. Also try to say how they are alike. The first is done for you.\nStorm → tiger → pounces over the fields, growls\nTrain → \nFire → \nSchool → \nHome → \n(ii) Think about a storm. Try to visualise the force of the storm, hear the sound of the storm, feel the power of the storm and the sudden calm that happens afterwards. Write a poem about the storm comparing it with an animal.",
+          "hints": [
+            "Think of animal characteristics for each",
+            "Create vivid comparisons",
+            "Use sensory details for the poem"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "creative writing",
+            "metaphor",
+            "poetry",
+            "imagination"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Does this poem have a rhyme scheme? Poetry that does not have an obvious rhythm or rhyme is called 'free verse'.",
+          "hints": [
+            "Check end sounds of lines",
+            "Look for pattern in rhyming"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "poetry form",
+            "rhyme scheme",
+            "analysis"
+          ]
+        }
+      ]
+    }
+  ]
+}

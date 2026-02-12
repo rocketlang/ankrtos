@@ -1,0 +1,211 @@
+{
+  "chapter_number": 8,
+  "chapter_title": "QUADRILATERALS",
+  "exercises": [
+    {
+      "exercise_number": "8.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "If the diagonals of a parallelogram are equal, then show that it is a rectangle.",
+          "hints": [
+            "Use properties of parallelogram and triangle congruence.",
+            "Consider triangles formed by diagonals."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallelogram",
+            "rectangle",
+            "diagonals",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Show that the diagonals of a square are equal and bisect each other at right angles.",
+          "hints": [
+            "Use properties of square and parallelogram.",
+            "Apply congruence of triangles."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "square",
+            "diagonals",
+            "right angles",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Diagonal AC of a parallelogram ABCD bisects ∠ A (see Fig. 8.11). Show that (i) it bisects ∠ C also, (ii) ABCD is a rhombus.",
+          "hints": [
+            "Use alternate interior angles and properties of parallelogram.",
+            "Prove all sides equal using triangle congruence."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "parallelogram",
+            "rhombus",
+            "angle bisector",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "ABCD is a rectangle in which diagonal AC bisects ∠ A as well as ∠ C. Show that: (i) ABCD is a square (ii) diagonal BD bisects ∠ B as well as ∠ D.",
+          "hints": [
+            "Use angle sum property and properties of rectangle.",
+            "Prove all sides equal."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "rectangle",
+            "square",
+            "angle bisector",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "In parallelogram ABCD, two points P and Q are taken on diagonal BD such that DP = BQ (see Fig. 8.12). Show that: (i) ∆ APD ≅ ∆ CQB (ii) AP = CQ (iii) ∆ AQB ≅ ∆ CPD (iv) AQ = CP (v) APCQ is a parallelogram",
+          "hints": [
+            "Use properties of parallelogram and triangle congruence (SAS, ASA).",
+            "Prove opposite sides equal and parallel."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "parallelogram",
+            "triangle congruence",
+            "proof",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "ABCD is a parallelogram and AP and CQ are perpendiculars from vertices A and C on diagonal BD (see Fig. 8.13). Show that (i) ∆ APB ≅ ∆ CQD (ii) AP = CQ",
+          "hints": [
+            "Use properties of parallelogram and AAS congruence.",
+            "Consider alternate interior angles."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallelogram",
+            "perpendiculars",
+            "triangle congruence",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "ABCD is a trapezium in which AB || CD and AD = BC (see Fig. 8.14). Show that (i) ∠ A = ∠ B (ii) ∠ C = ∠ D (iii) ∆ ABC ≅ ∆ BAD (iv) diagonal AC = diagonal BD [Hint : Extend AB and draw a line through C parallel to DA intersecting AB produced at E.]",
+          "hints": [
+            "Extend AB and construct CE parallel to AD.",
+            "Use properties of isosceles triangle and parallelogram."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "trapezium",
+            "isosceles trapezium",
+            "triangle congruence",
+            "proof"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "8.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "ABCD is a quadrilateral in which P, Q, R and S are mid-points of the sides AB, BC, CD and DA (see Fig 8.20). AC is a diagonal. Show that : (i) SR || AC and SR = 1/2 AC (ii) PQ = SR (iii) PQRS is a parallelogram.",
+          "hints": [
+            "Use mid-point theorem for triangles.",
+            "Prove opposite sides equal and parallel."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "quadrilateral",
+            "mid-point theorem",
+            "parallelogram",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "ABCD is a rhombus and P, Q, R and S are the mid-points of the sides AB, BC, CD and DA respectively. Show that the quadrilateral PQRS is a rectangle.",
+          "hints": [
+            "Use properties of rhombus and mid-point theorem.",
+            "Prove angles are 90° using diagonals."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "rhombus",
+            "mid-point theorem",
+            "rectangle",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "ABCD is a rectangle and P, Q, R and S are mid-points of the sides AB, BC, CD and DA respectively. Show that the quadrilateral PQRS is a rhombus.",
+          "hints": [
+            "Use properties of rectangle and mid-point theorem.",
+            "Prove all sides equal using triangle congruence."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "rectangle",
+            "mid-point theorem",
+            "rhombus",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "ABCD is a trapezium in which AB || DC, BD is a diagonal and E is the mid-point of AD. A line is drawn through E parallel to AB intersecting BC at F (see Fig. 8.21). Show that F is the mid-point of BC.",
+          "hints": [
+            "Use converse of mid-point theorem.",
+            "Consider triangle BCD and parallel lines."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "trapezium",
+            "mid-point theorem",
+            "parallel lines",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "In a parallelogram ABCD, E and F are the mid-points of sides AB and CD respectively (see Fig. 8.22). Show that the line segments AF and EC trisect the diagonal BD.",
+          "hints": [
+            "Use properties of parallelogram and mid-point theorem.",
+            "Prove equal intercepts using triangle congruence."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "parallelogram",
+            "mid-point theorem",
+            "trisection",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "ABC is a triangle right angled at C. A line through the mid-point M of hypotenuse AB and parallel to BC intersects AC at D. Show that (i) D is the mid-point of AC (ii) MD ⊥ AC (iii) CM = MA = 1/2 AB",
+          "hints": [
+            "Use mid-point theorem and properties of right triangle.",
+            "Prove perpendicularity using parallel lines."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "right triangle",
+            "mid-point theorem",
+            "hypotenuse",
+            "proof"
+          ]
+        }
+      ]
+    }
+  ]
+}

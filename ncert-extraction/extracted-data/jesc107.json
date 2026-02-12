@@ -1,0 +1,373 @@
+{
+  "chapter_number": 7,
+  "chapter_title": "How do Organisms Reproduce?",
+  "exercises": [
+    {
+      "exercise_number": "7.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What is the importance of DNA copying in reproduction?",
+          "hints": [
+            "DNA contains genetic information",
+            "Ensures inheritance of traits",
+            "Creates variations"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "DNA",
+            "genetics",
+            "reproduction basics"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why is variation beneficial to the species but not necessarily for the individual?",
+          "hints": [
+            "Think about environmental changes",
+            "Population survival vs individual survival",
+            "Evolutionary advantage"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "variation",
+            "evolution",
+            "species survival"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "7.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How does binary fission differ from multiple fission?",
+          "hints": [
+            "Number of daughter cells produced",
+            "Examples: Amoeba vs Plasmodium",
+            "Division pattern"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fission",
+            "asexual reproduction",
+            "unicellular organisms"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "How will an organism be benefited if it reproduces through spores?",
+          "hints": [
+            "Spore wall protection",
+            "Survival in unfavorable conditions",
+            "Dispersal mechanism"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "spore formation",
+            "fungi",
+            "reproductive adaptation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Can you think of reasons why more complex organisms cannot give rise to new individuals through regeneration?",
+          "hints": [
+            "Specialized tissues and organs",
+            "Complex body organization",
+            "Cell differentiation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "regeneration",
+            "complex organisms",
+            "tissue specialization"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Why is vegetative propagation practised for growing some types of plants?",
+          "hints": [
+            "Faster flowering and fruiting",
+            "Preserving desirable traits",
+            "Plants that don't produce seeds"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "vegetative propagation",
+            "agriculture",
+            "plant reproduction"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Why is DNA copying an essential part of the process of reproduction?",
+          "hints": [
+            "Genetic continuity",
+            "Inheritance of characteristics",
+            "Cell division requirement"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "DNA replication",
+            "genetic inheritance",
+            "reproduction fundamentals"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "7.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How is the process of pollination different from fertilisation?",
+          "hints": [
+            "Pollination: transfer of pollen",
+            "Fertilisation: fusion of gametes",
+            "Sequence in reproduction"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pollination",
+            "fertilisation",
+            "plant reproduction"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What is the role of the seminal vesicles and the prostate gland?",
+          "hints": [
+            "Secretion of seminal fluid",
+            "Nutrition for sperms",
+            "Transport medium"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "male reproductive system",
+            "glands",
+            "human reproduction"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What are the changes seen in girls at the time of puberty?",
+          "hints": [
+            "Breast development",
+            "Menstruation onset",
+            "Body hair growth"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "puberty",
+            "female development",
+            "adolescence"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "How does the embryo get nourishment inside the mother's body?",
+          "hints": [
+            "Placenta function",
+            "Umbilical cord",
+            "Nutrient and gas exchange"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "embryo development",
+            "placenta",
+            "pregnancy"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "If a woman is using a copper-T, will it help in protecting her from sexually transmitted diseases?",
+          "hints": [
+            "Copper-T is a contraceptive device",
+            "STD prevention requires barrier methods",
+            "Different modes of action"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "contraception",
+            "STD prevention",
+            "reproductive health"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "End-of-Chapter",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Asexual reproduction takes place through budding in (a) Amoeba. (b) Yeast. (c) Plasmodium. (d) Leishmania.",
+          "hints": [
+            "Budding vs other asexual methods",
+            "Examples of organisms",
+            "Yeast reproduction"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "asexual reproduction",
+            "budding",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Which of the following is not a part of the female reproductive system in human beings? (a) Ovary (b) Uterus (c) Vas deferens (d) Fallopian tube",
+          "hints": [
+            "Identify male vs female reproductive parts",
+            "Vas deferens function",
+            "Female anatomy"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "reproductive system",
+            "human anatomy",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The anther contains (a) sepals. (b) ovules. (c) pistil. (d) pollen grains.",
+          "hints": [
+            "Flower part functions",
+            "Anther location in stamen",
+            "Pollen production"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "flower anatomy",
+            "plant reproduction",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What are the advantages of sexual reproduction over asexual reproduction?",
+          "hints": [
+            "Genetic variation",
+            "Evolutionary adaptation",
+            "Species survival in changing environments"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sexual vs asexual",
+            "genetic diversity",
+            "evolution"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What are the functions performed by the testis in human beings?",
+          "hints": [
+            "Sperm production",
+            "Testosterone secretion",
+            "Male secondary sexual characteristics"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "male reproductive system",
+            "testis",
+            "hormones"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Why does menstruation occur?",
+          "hints": [
+            "Uterine lining preparation",
+            "Unfertilized egg disposal",
+            "Monthly cycle"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "menstruation",
+            "female reproductive cycle",
+            "physiology"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Draw a labelled diagram of the longitudinal section of a flower.",
+          "hints": [
+            "Identify sepals, petals, stamen, pistil",
+            "Show ovary, style, stigma",
+            "Include pollen grains"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "flower diagram",
+            "plant anatomy",
+            "practical skill"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "What are the different methods of contraception?",
+          "hints": [
+            "Barrier methods",
+            "Hormonal methods",
+            "Surgical methods",
+            "IUDs"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "contraception",
+            "family planning",
+            "reproductive health"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "How are the modes for reproduction different in unicellular and multicellular organisms?",
+          "hints": [
+            "Simple vs complex body organization",
+            "Cell specialization",
+            "Examples of each type"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "unicellular vs multicellular",
+            "reproductive strategies",
+            "comparative biology"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "How does reproduction help in providing stability to populations of species?",
+          "hints": [
+            "Maintaining population numbers",
+            "Replacing dying individuals",
+            "Species continuity"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "population dynamics",
+            "species survival",
+            "ecology"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "What could be the reasons for adopting contraceptive methods?",
+          "hints": [
+            "Family planning",
+            "Health reasons",
+            "Population control",
+            "STD prevention"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "contraception",
+            "social reasons",
+            "health education"
+          ]
+        }
+      ]
+    }
+  ]
+}

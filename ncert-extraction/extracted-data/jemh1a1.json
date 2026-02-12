@@ -1,0 +1,414 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "PROOFS IN MATHEMATICS",
+  "exercises": [
+    {
+      "exercise_number": "A1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "State whether the following statements are always true, always false or ambiguous. Justify your answers.\n(i) All mathematics textbooks are interesting.\n(ii) The distance from the Earth to the Sun is approximately 1.5 × 10^8 km.\n(iii) All human beings grow old.\n(iv) The journey from Uttarkashi to Harsil is tiring.\n(v) The woman saw an elephant through a pair of binoculars.",
+          "hints": [
+            "Consider if the statement can be verified as universally true/false or depends on context.",
+            "Check for ambiguity in terms used."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "mathematical statements",
+            "truth value",
+            "ambiguity"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "State whether the following statements are true or false. Justify your answers.\n(i) All hexagons are polygons.\n(ii) Some polygons are pentagons.\n(iii) Not all even numbers are divisible by 2.\n(iv) Some real numbers are irrational.\n(v) Not all real numbers are rational.",
+          "hints": [
+            "Recall definitions of geometric shapes and number sets.",
+            "Use known properties of numbers."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "polygons",
+            "number sets",
+            "rational numbers",
+            "irrational numbers"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Let a and b be real numbers such that ab ≠ 0. Then which of the following statements are true? Justify your answers.\n(i) Both a and b must be zero.\n(ii) Both a and b must be non-zero.\n(iii) Either a or b must be non-zero.",
+          "hints": [
+            "Recall that ab ≠ 0 means the product is non-zero.",
+            "Consider cases where one factor is zero."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "real numbers",
+            "product non-zero",
+            "logical deduction"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Restate the following statements with appropriate conditions, so that they become true.\n(i) If a^2 > b^2, then a > b.\n(ii) If x^2 = y^2, then x = y.\n(iii) If (x + y)^2 = x^2 + y^2, then x = 0.\n(iv) The diagonals of a quadrilateral bisect each other.",
+          "hints": [
+            "Add conditions like positivity, equality cases, or specific quadrilateral types.",
+            "Consider counterexamples to the original statements."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "inequalities",
+            "quadrilaterals",
+            "restating statements",
+            "conditions"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Given that all women are mortal, and suppose that A is a woman, what can we conclude about A?",
+          "hints": [
+            "Use deductive reasoning with the given premise.",
+            "Apply the property to the specific case."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "deductive reasoning",
+            "mortality",
+            "logical conclusion"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Given that the product of two rational numbers is rational, and suppose a and b are rationals, what can you conclude about ab?",
+          "hints": [
+            "Apply the given property directly to a and b."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "rational numbers",
+            "product",
+            "deductive reasoning"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Given that the decimal expansion of irrational numbers is non-terminating, non-recurring, and √17 is irrational, what can we conclude about the decimal expansion of √17?",
+          "hints": [
+            "Use the property of irrational numbers on the specific number √17."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "irrational numbers",
+            "decimal expansion",
+            "square root"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Given that y = x^2 + 6 and x = –1, what can we conclude about the value of y?",
+          "hints": [
+            "Substitute the value of x into the equation."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "algebra",
+            "substitution",
+            "evaluation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Given that ABCD is a parallelogram and ∠B = 80°. What can you conclude about the other angles of the parallelogram?",
+          "hints": [
+            "Use properties of parallelograms: opposite angles equal, adjacent angles supplementary."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "parallelogram",
+            "angles",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Given that PQRS is a cyclic quadrilateral and also its diagonals bisect each other. What can you conclude about the quadrilateral?",
+          "hints": [
+            "Combine properties of cyclic quadrilaterals and diagonals bisecting each other.",
+            "Recall special types of quadrilaterals."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cyclic quadrilateral",
+            "diagonals",
+            "quadrilateral properties"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Given that √p is irrational for all primes p and also suppose that 3721 is a prime. Can you conclude that √3721 is an irrational number? Is your conclusion correct? Why or why not?",
+          "hints": [
+            "Check if 3721 is actually a prime number.",
+            "Verify the premise before applying the property."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "irrational numbers",
+            "prime numbers",
+            "validity of premise"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Prove that the sum of two consecutive odd numbers is divisible by 4.",
+          "hints": [
+            "Let the odd numbers be 2n+1 and 2n+3.",
+            "Find their sum and factorise."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "odd numbers",
+            "divisibility",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Take two consecutive odd numbers. Find the sum of their squares, and then add 6 to the result. Prove that the new number is always divisible by 8.",
+          "hints": [
+            "Let the odd numbers be 2n+1 and 2n+3.",
+            "Compute sum of squares, add 6, and factorise."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "odd numbers",
+            "sum of squares",
+            "divisibility by 8",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "If p ≥ 5 is a prime number, show that p^2 + 2 is divisible by 3. [Hint: Use Example 11].",
+          "hints": [
+            "Use the form of primes greater than 3: 6k+1 or 6k+5.",
+            "Square and check divisibility by 3."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "prime numbers",
+            "divisibility",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Let x and y be rational numbers. Show that xy is a rational number.",
+          "hints": [
+            "Express x and y as fractions of integers.",
+            "Multiply and show the product is rational."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "rational numbers",
+            "product",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "If a and b are positive integers, then you know that a = bq + r, 0 ≤ r < b, where q is a whole number. Prove that HCF (a, b) = HCF (b, r). [Hint : Let HCF (b, r) = h. So, b = k1h and r = k2h, where k1 and k2 are coprime.]",
+          "hints": [
+            "Use the division algorithm and properties of HCF.",
+            "Follow the given hint to express b and r."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "Euclid's algorithm",
+            "HCF",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A line parallel to side BC of a triangle ABC, intersects AB and AC at D and E respectively. Prove that AD/DB = AE/EC.",
+          "hints": [
+            "Use Basic Proportionality Theorem (Thales theorem).",
+            "Consider similar triangles formed."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "triangle",
+            "parallel lines",
+            "Basic Proportionality Theorem",
+            "proof"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A1.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "State the negations for the following statements :\n(i) Man is mortal.\n(ii) Line l is parallel to line m.\n(iii) This chapter has many exercises.\n(iv) All integers are rational numbers.\n(v) Some prime numbers are odd.\n(vi) No student is lazy.\n(vii) Some cats are not black.\n(viii) There is no real number x, such that √x = –1.\n(ix) 2 divides the positive integer a.\n(x) Integers a and b are coprime.",
+          "hints": [
+            "For 'all' statements, negation is 'not all' or 'there exists a counterexample'.",
+            "For 'some' statements, negation is 'none'.",
+            "For 'no' statements, negation is 'there exists at least one'."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "negation",
+            "logical statements",
+            "quantifiers"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "In each of the following questions, there are two statements. State if the second is the negation of the first or not.\n(i) Mumtaz is hungry. Mumtaz is not hungry.\n(ii) Some cats are black. Some cats are brown.\n(iii) All elephants are huge. One elephant is not huge.\n(iv) All fire engines are red. All fire engines are not red.\n(v) No man is a cow. Some men are cows.",
+          "hints": [
+            "Check if the second statement is the logical opposite of the first.",
+            "Consider scope of quantifiers like 'all', 'some', 'no'."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "negation",
+            "logical equivalence",
+            "quantifiers"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A1.5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Write the converses of the following statements.\n(i) If it is hot in Tokyo, then Sharan sweats a lot.\n(ii) If Shalini is hungry, then her stomach grumbles.\n(iii) If Jaswant has a scholarship, then she can get a degree.\n(iv) If a plant has flowers, then it is alive.\n(v) If an animal is a cat, then it has a tail.",
+          "hints": [
+            "Interchange hypothesis and conclusion of the conditional statement."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "converse",
+            "conditional statements"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Write the converses of the following statements. Also, decide in each case whether the converse is true or false.\n(i) If triangle ABC is isosceles, then its base angles are equal.\n(ii) If an integer is odd, then its square is an odd integer.\n(iii) If x^2 = 1, then x = 1.\n(iv) If ABCD is a parallelogram, then AC and BD bisect each other.\n(v) If a, b and c, are whole numbers, then a + (b + c) = (a + b) + c.\n(vi) If x and y are two odd numbers, then x + y is an even number.\n(vii) If vertices of a parallelogram lie on a circle, then it is a rectangle.",
+          "hints": [
+            "Write converse by swapping hypothesis and conclusion.",
+            "Check truth of converse using known theorems or counterexamples."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "converse",
+            "truth value",
+            "geometry",
+            "number properties"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A1.6",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Suppose a + b = c + d, and a < c. Use proof by contradiction to show b > d.",
+          "hints": [
+            "Assume the negation: b ≤ d.",
+            "Combine with a < c to derive contradiction with a + b = c + d."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "proof by contradiction",
+            "inequalities",
+            "algebra"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Let r be a rational number and x be an irrational number. Use proof by contradiction to show that r + x is an irrational number.",
+          "hints": [
+            "Assume r + x is rational.",
+            "Express x = (r + x) - r and use properties of rational numbers."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "proof by contradiction",
+            "rational numbers",
+            "irrational numbers"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Use proof by contradiction to prove that if for an integer a, a^2 is even, then so is a. [Hint : Assume a is not even, that is, it is of the form 2n + 1, for some integer n, and then proceed.]",
+          "hints": [
+            "Assume a is odd: a = 2n+1.",
+            "Square a and show a^2 is odd, contradicting that a^2 is even."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "proof by contradiction",
+            "even numbers",
+            "square"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Use proof by contradiction to prove that if for an integer a, a^2 is divisible by 3, then a is divisible by 3.",
+          "hints": [
+            "Assume a is not divisible by 3, so a = 3k+1 or 3k+2.",
+            "Square and show a^2 is not divisible by 3."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "proof by contradiction",
+            "divisibility by 3",
+            "square"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Use proof by contradiction to show that there is no value of n for which 6n ends with the digit zero.",
+          "hints": [
+            "Assume 6n ends with digit zero, so it is divisible by 10.",
+            "Analyse prime factors of 6n and 10."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "proof by contradiction",
+            "divisibility",
+            "digits"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Prove by contradiction that two distinct lines in a plane cannot intersect in more than one point.",
+          "hints": [
+            "Assume they intersect at two distinct points.",
+            "Use axiom that two distinct points determine a unique line."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "proof by contradiction",
+            "lines in plane",
+            "geometry axioms"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,644 @@
+{
+  "chapter_number": 11,
+  "chapter_title": "Electricity",
+  "exercises": [
+    {
+      "exercise_number": "11.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What does an electric circuit mean?",
+          "hints": [
+            "Think about the path for electric current",
+            "Consider components like cell, bulb, switch, wires"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definition",
+            "electric circuit"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Define the unit of current.",
+          "hints": [
+            "Recall the SI unit named after a French scientist",
+            "Relate charge flow per second"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definition",
+            "ampere",
+            "SI unit"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Calculate the number of electrons constituting one coulomb of charge.",
+          "hints": [
+            "Use charge of one electron = 1.6 × 10⁻¹⁹ C",
+            "Divide total charge by charge per electron"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "calculation",
+            "electron charge",
+            "coulomb"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Name a device that helps to maintain a potential difference across a conductor.",
+          "hints": [
+            "Think of a source of electrical energy",
+            "Commonly used in circuits to drive current"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "device",
+            "potential difference",
+            "battery"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What is meant by saying that the potential difference between two points is 1 V?",
+          "hints": [
+            "Recall definition: work done per unit charge",
+            "1 joule/coulomb"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definition",
+            "volt",
+            "potential difference"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "How much energy is given to each coulomb of charge passing through a 6 V battery?",
+          "hints": [
+            "Use formula: Energy = V × Q",
+            "For 1 coulomb, Q = 1 C"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "calculation",
+            "energy",
+            "battery"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11.5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "On what factors does the resistance of a conductor depend?",
+          "hints": [
+            "Consider length, cross-sectional area, material",
+            "Recall formula R = ρl/A"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "factors",
+            "resistance",
+            "conductor"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Will current flow more easily through a thick wire or a thin wire of the same material, when connected to the same source? Why?",
+          "hints": [
+            "Resistance is inversely proportional to area",
+            "Thick wire has lower resistance"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comparison",
+            "wire thickness",
+            "current flow"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Let the resistance of an electrical component remains constant while the potential difference across the two ends of the component decreases to half of its former value. What change will occur in the current through it?",
+          "hints": [
+            "Use Ohm's law: I = V/R",
+            "If V halves, I also halves (R constant)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Ohm's law",
+            "current change",
+            "potential difference"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Why are coils of electric toasters and electric irons made of an alloy rather than a pure metal?",
+          "hints": [
+            "Alloys have higher resistivity",
+            "They don't oxidize easily at high temperatures"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "alloy",
+            "heating devices",
+            "resistivity"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Use the data in Table 11.2 to answer the following – (a) Which among iron and mercury is a better conductor? (b) Which material is the best conductor?",
+          "hints": [
+            "Lower resistivity means better conductor",
+            "Check values in table: silver has lowest resistivity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "data interpretation",
+            "conductivity",
+            "resistivity table"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11.6.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Draw a schematic diagram of a circuit consisting of a battery of three cells of 2 V each, a 5 Ω resistor, an 8 Ω resistor, and a 12 Ω resistor, and a plug key, all connected in series.",
+          "hints": [
+            "Use standard circuit symbols",
+            "Connect all components end-to-end",
+            "Battery: three cells in series = 6 V total"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circuit diagram",
+            "series connection",
+            "schematic"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Redraw the circuit of Question 1, putting in an ammeter to measure the current through the resistors and a voltmeter to measure the potential difference across the 12 Ω resistor. What would be the readings in the ammeter and the voltmeter?",
+          "hints": [
+            "Ammeter in series, voltmeter in parallel across 12 Ω",
+            "Calculate total resistance, then current using Ohm's law",
+            "Voltage across 12 Ω = I × 12"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "ammeter",
+            "voltmeter",
+            "measurement",
+            "calculation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11.6.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Judge the equivalent resistance when the following are connected in parallel – (a) 1 Ω and 10⁶ Ω, (b) 1 Ω and 10³ Ω, and 10⁶ Ω.",
+          "hints": [
+            "Use parallel resistance formula: 1/Rp = 1/R1 + 1/R2 + ...",
+            "For very large resistance in parallel, equivalent is close to smaller resistance"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallel resistance",
+            "equivalent resistance",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "An electric lamp of 100 Ω, a toaster of resistance 50 Ω, and a water filter of resistance 500 Ω are connected in parallel to a 220 V source. What is the resistance of an electric iron connected to the same source that takes as much current as all three appliances, and what is the current through it?",
+          "hints": [
+            "Find total current through all three appliances",
+            "Use I = V/R for each, then sum",
+            "Equivalent resistance R = V / total current"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "parallel circuit",
+            "equivalent resistance",
+            "current calculation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What are the advantages of connecting electrical devices in parallel with the battery instead of connecting them in series?",
+          "hints": [
+            "Each device gets same voltage",
+            "If one fails, others still work",
+            "Devices can draw different currents as needed"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "advantages",
+            "parallel vs series",
+            "practical applications"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "How can three resistors of resistances 2 Ω, 3 Ω, and 6 Ω be connected to give a total resistance of (a) 4 Ω, (b) 1 Ω?",
+          "hints": [
+            "For 4 Ω: combine parallel and series",
+            "For 1 Ω: all in parallel",
+            "Try different combinations"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "resistor combinations",
+            "series-parallel",
+            "equivalent resistance"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What is (a) the highest, (b) the lowest total resistance that can be secured by combinations of four coils of resistance 4 Ω, 8 Ω, 12 Ω, 24 Ω?",
+          "hints": [
+            "Highest: all in series",
+            "Lowest: all in parallel",
+            "Calculate both values"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "resistor combinations",
+            "maximum resistance",
+            "minimum resistance"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11.7",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why does the cord of an electric heater not glow while the heating element does?",
+          "hints": [
+            "Cord has much lower resistance than heating element",
+            "Heating depends on I²R, so more heat in higher resistance"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "heating effect",
+            "resistance",
+            "practical observation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Compute the heat generated while transferring 96000 coulomb of charge in one hour through a potential difference of 50 V.",
+          "hints": [
+            "Use H = VIt or H = VQ",
+            "Q = 96000 C, V = 50 V",
+            "Convert time to seconds if needed"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "heat calculation",
+            "joule's law",
+            "charge transfer"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "An electric iron of resistance 20 Ω takes a current of 5 A. Calculate the heat developed in 30 s.",
+          "hints": [
+            "Use H = I²Rt",
+            "I = 5 A, R = 20 Ω, t = 30 s"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "heat calculation",
+            "joule's law",
+            "electric iron"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11.8",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What determines the rate at which energy is delivered by a current?",
+          "hints": [
+            "Rate of energy = power",
+            "Power P = VI = I²R = V²/R"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "power",
+            "energy rate",
+            "electric current"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "An electric motor takes 5 A from a 220 V line. Determine the power of the motor and the energy consumed in 2 h.",
+          "hints": [
+            "Power P = VI",
+            "Energy = P × t (convert hours to seconds or use kWh)",
+            "1 kWh = 3.6 × 10⁶ J"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "power calculation",
+            "energy consumption",
+            "electric motor"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Exercises",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A piece of wire of resistance R is cut into five equal parts. These parts are then connected in parallel. If the equivalent resistance of this combination is R′, then the ratio R/R′ is – (a) 1/25 (b) 1/5 (c) 5 (d) 25",
+          "hints": [
+            "Each part has resistance R/5",
+            "Parallel: 1/R′ = 5/(R/5) = 25/R",
+            "So R′ = R/25, ratio R/R′ = 25"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "resistance",
+            "parallel combination",
+            "ratio"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Which of the following terms does not represent electrical power in a circuit? (a) I²R (b) IR² (c) VI (d) V²/R",
+          "hints": [
+            "Power formulas: P = VI = I²R = V²/R",
+            "IR² is not a standard power expression"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "power",
+            "formulas",
+            "identification"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "An electric bulb is rated 220 V and 100 W. When it is operated on 110 V, the power consumed will be – (a) 100 W (b) 75 W (c) 50 W (d) 25 W",
+          "hints": [
+            "Find resistance from rating: R = V²/P",
+            "Then power at 110 V: P' = (110)²/R"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "power rating",
+            "voltage change",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Two conducting wires of the same material and of equal lengths and equal diameters are first connected in series and then parallel in a circuit across the same potential difference. The ratio of heat produced in series and parallel combinations would be – (a) 1:2 (b) 2:1 (c) 1:4 (d) 4:1",
+          "hints": [
+            "Heat H = V²t/R",
+            "For same V and t, H ∝ 1/R",
+            "Compare equivalent resistances: series = 2R, parallel = R/2"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "heat comparison",
+            "series vs parallel",
+            "ratio"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "How is a voltmeter connected in the circuit to measure the potential difference between two points?",
+          "hints": [
+            "Voltmeter is always connected in parallel",
+            "Across the two points where PD is to be measured"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "voltmeter",
+            "connection",
+            "measurement"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A copper wire has diameter 0.5 mm and resistivity of 1.6 × 10⁻⁸ Ω m. What will be the length of this wire to make its resistance 10 Ω? How much does the resistance change if the diameter is doubled?",
+          "hints": [
+            "Use R = ρl/A, A = πd²/4",
+            "Solve for l",
+            "If diameter doubled, area becomes 4 times, resistance becomes 1/4"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "resistance calculation",
+            "wire dimensions",
+            "resistivity"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "The values of current I flowing in a given resistor for the corresponding values of potential difference V across the resistor are given below – I (amperes) 0.5 1.0 2.0 3.0 4.0 V (volts) 1.6 3.4 6.7 10.2 13.2 Plot a graph between V and I and calculate the resistance of that resistor.",
+          "hints": [
+            "Plot V vs I graph",
+            "Slope gives resistance R = ΔV/ΔI",
+            "Use any point or average"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "graph plotting",
+            "Ohm's law",
+            "resistance from data"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "When a 12 V battery is connected across an unknown resistor, there is a current of 2.5 mA in the circuit. Find the value of the resistance of the resistor.",
+          "hints": [
+            "Use Ohm's law: R = V/I",
+            "Convert mA to A: 2.5 mA = 0.0025 A"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Ohm's law",
+            "resistance calculation",
+            "current conversion"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "A battery of 9 V is connected in series with resistors of 0.2 Ω, 0.3 Ω, 0.4 Ω , 0.5 Ω and 12 Ω, respectively. How much current would flow through the 12 Ω resistor?",
+          "hints": [
+            "All in series, same current through each",
+            "Find total resistance, then current I = V/R_total"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "series circuit",
+            "current calculation",
+            "total resistance"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "How many 176 Ω resistors (in parallel) are required to carry 5 A on a 220 V line?",
+          "hints": [
+            "Find equivalent resistance needed: R = V/I = 220/5",
+            "For n parallel resistors of R each: R_eq = R/n",
+            "Solve for n"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "parallel resistors",
+            "number calculation",
+            "current carrying capacity"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Show how you would connect three resistors, each of resistance 6 Ω, so that the combination has a resistance of (i) 9 Ω, (ii) 4 Ω.",
+          "hints": [
+            "For 9 Ω: two in parallel (3 Ω) then in series with one (6+3=9)",
+            "For 4 Ω: two in series (12 Ω) then in parallel with one: 1/R = 1/12 + 1/6 = 1/4"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "resistor combinations",
+            "series-parallel",
+            "equivalent resistance"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Several electric bulbs designed to be used on a 220 V electric supply line, are rated 10 W. How many lamps can be connected in parallel with each other across the two wires of 220 V line if the maximum allowable current is 5 A?",
+          "hints": [
+            "Current per bulb: I = P/V = 10/220",
+            "Number of bulbs = total max current / current per bulb"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallel bulbs",
+            "current limit",
+            "power rating"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "A hot plate of an electric oven connected to a 220 V line has two resistance coils A and B, each of 24 Ω resistance, which may be used separately, in series, or in parallel. What are the currents in the three cases?",
+          "hints": [
+            "Separately: I = V/R = 220/24",
+            "Series: R_total = 48 Ω, I = 220/48",
+            "Parallel: R_total = 12 Ω, I = 220/12"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "current calculation",
+            "series-parallel",
+            "resistance coils"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "Compare the power used in the 2 Ω resistor in each of the following circuits: (i) a 6 V battery in series with 1 Ω and 2 Ω resistors, and (ii) a 4 V battery in parallel with 12 Ω and 2 Ω resistors.",
+          "hints": [
+            "(i) Find current through 2 Ω (same in series), then P = I²R",
+            "(ii) Voltage across 2 Ω = 4 V, P = V²/R",
+            "Compare both powers"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "power comparison",
+            "series circuit",
+            "parallel circuit"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "Two lamps, one rated 100 W at 220 V, and the other 60 W at 220 V, are connected in parallel to electric mains supply. What current is drawn from the line if the supply voltage is 220 V?",
+          "hints": [
+            "Find resistance of each: R = V²/P",
+            "Then parallel equivalent resistance",
+            "Total current I = V/R_eq or sum of individual currents"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallel lamps",
+            "current calculation",
+            "power rating"
+          ]
+        },
+        {
+          "question_number": 16,
+          "question_text": "Which uses more energy, a 250 W TV set in 1 hr, or a 1200 W toaster in 10 minutes?",
+          "hints": [
+            "Energy = Power × time",
+            "Convert time to same units (hours or seconds)",
+            "Compare both energies"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "energy comparison",
+            "power-time product",
+            "units conversion"
+          ]
+        },
+        {
+          "question_number": 17,
+          "question_text": "An electric heater of resistance 44 Ω draws 5 A from the service mains for 2 hours. Calculate the rate at which heat is developed in the heater.",
+          "hints": [
+            "Rate of heat = power = I²R",
+            "Calculate P = (5)² × 44",
+            "Answer in watts"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "heat rate",
+            "power calculation",
+            "electric heater"
+          ]
+        },
+        {
+          "question_number": 18,
+          "question_text": "Explain the following. (a) Why is the tungsten used almost exclusively for filament of electric lamps? (b) Why are the conductors of electric heating devices, such as bread-toasters and electric irons, made of an alloy rather than a pure metal? (c) Why is the series arrangement not used for domestic circuits? (d) How does the resistance of a wire vary with its area of cross-section? (e) Why are copper and aluminium wires usually employed for electricity transmission?",
+          "hints": [
+            "(a) High melting point, can emit light at high temp",
+            "(b) Alloys have high resistivity, don't oxidize easily",
+            "(c) Different devices need different currents, one failure breaks circuit",
+            "(d) R ∝ 1/A, inversely proportional",
+            "(e) Good conductors, low resistivity, cost-effective"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "explanations",
+            "tungsten",
+            "alloys",
+            "domestic circuits",
+            "resistance",
+            "transmission wires"
+          ]
+        }
+      ]
+    }
+  ]
+}

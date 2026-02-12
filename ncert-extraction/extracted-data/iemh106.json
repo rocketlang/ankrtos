@@ -1,0 +1,197 @@
+{
+  "chapter_number": 6,
+  "chapter_title": "LINES AND ANGLES",
+  "exercises": [
+    {
+      "exercise_number": "6.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "In Fig. 6.13, lines AB and CD intersect at O. If ∠ AOC + ∠ BOE = 70° and ∠ BOD = 40°, find ∠ BOE and reflex ∠ COE.",
+          "hints": [
+            "Use vertically opposite angles property",
+            "Apply linear pair axiom",
+            "Reflex angle = 360° - given angle"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "intersecting lines",
+            "vertically opposite angles",
+            "linear pair",
+            "reflex angle"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "In Fig. 6.14, lines XY and MN intersect at O. If ∠ POY = 90° and a : b = 2 : 3, find c.",
+          "hints": [
+            "Use linear pair axiom",
+            "Apply ratio to find angles",
+            "Vertically opposite angles are equal"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "intersecting lines",
+            "linear pair",
+            "ratio",
+            "angle calculation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "In Fig. 6.15, ∠ PQR = ∠ PRQ, then prove that ∠ PQS = ∠ PRT.",
+          "hints": [
+            "Use linear pair axiom",
+            "Substitute given equality",
+            "Show both angles are supplementary to equal angles"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear pair",
+            "proof",
+            "angle equality",
+            "supplementary angles"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "In Fig. 6.16, if x + y = w + z, then prove that AOB is a line.",
+          "hints": [
+            "Sum of angles around point O is 360°",
+            "Use given equation",
+            "Show x + y = 180° using substitution"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "linear pair converse",
+            "proof",
+            "angle sum",
+            "axiom application"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "In Fig. 6.17, POQ is a line. Ray OR is perpendicular to line PQ. OS is another ray lying between rays OP and OR. Prove that ∠ ROS = 1/2 (∠ QOS – ∠ POS).",
+          "hints": [
+            "Use perpendicular angle property (90°)",
+            "Express angles in terms of given ones",
+            "Apply angle addition postulate"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "perpendicular lines",
+            "angle bisector",
+            "proof",
+            "algebraic manipulation"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "It is given that ∠ XYZ = 64° and XY is produced to point P. Draw a figure from the given information. If ray YQ bisects ∠ ZYP, find ∠ XYQ and reflex ∠ QYP.",
+          "hints": [
+            "Draw extended line XY to P",
+            "Use linear pair for ∠ ZYP",
+            "Apply angle bisector property",
+            "Reflex angle = 360° - ∠ QYP"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear pair",
+            "angle bisector",
+            "reflex angle",
+            "construction"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "In Fig. 6.23, if AB || CD, CD || EF and y : z = 3 : 7, find x.",
+          "hints": [
+            "Use consecutive interior angles for parallel lines",
+            "Apply ratio to find y and z",
+            "x is corresponding/alternate to sum of y and z"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallel lines",
+            "transversal",
+            "ratio",
+            "interior angles"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "In Fig. 6.24, if AB || CD, EF ⊥ CD and ∠ GED = 126°, find ∠ AGE, ∠ GEF and ∠ FGE.",
+          "hints": [
+            "Use perpendicular to find right angles",
+            "Apply linear pair for ∠ GEF",
+            "Alternate interior angles for ∠ AGE",
+            "Triangle angle sum for ∠ FGE"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallel lines",
+            "perpendicular",
+            "transversal",
+            "triangle angles"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "In Fig. 6.25, if PQ || ST, ∠ PQR = 110° and ∠ RST = 130°, find ∠ QRS. [Hint : Draw a line parallel to ST through point R.]",
+          "hints": [
+            "Draw auxiliary parallel line through R",
+            "Use alternate interior angles",
+            "Apply linear pair axiom",
+            "Combine angles around point R"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "parallel lines",
+            "auxiliary line",
+            "angle sum",
+            "construction"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "In Fig. 6.26, if AB || CD, ∠ APQ = 50° and ∠ PRD = 127°, find x and y.",
+          "hints": [
+            "Corresponding angles for x",
+            "Linear pair for angle adjacent to 127°",
+            "Alternate interior angles for y",
+            "Use triangle angle sum if needed"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallel lines",
+            "transversal",
+            "corresponding angles",
+            "alternate angles"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "In Fig. 6.27, PQ and RS are two mirrors placed parallel to each other. An incident ray AB strikes the mirror PQ at B, the reflected ray moves along the path BC and strikes the mirror RS at C and again reflects back along CD. Prove that AB || CD.",
+          "hints": [
+            "Use law of reflection (angle of incidence = angle of reflection)",
+            "Alternate interior angles formed by transversal",
+            "Show equal angles using reflection property",
+            "Apply converse of alternate angles theorem"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "parallel lines",
+            "reflection",
+            "proof",
+            "real-world application"
+          ]
+        }
+      ]
+    }
+  ]
+}

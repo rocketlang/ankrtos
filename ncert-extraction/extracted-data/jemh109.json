@@ -1,0 +1,237 @@
+{
+  "chapter_number": 9,
+  "chapter_title": "SOME APPLICATIONS OF TRIGONOMETRY",
+  "exercises": [
+    {
+      "exercise_number": "9.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A circus artist is climbing a 20 m long rope, which is tightly stretched and tied from the top of a vertical pole to the ground. Find the height of the pole, if the angle made by the rope with the ground level is 30° (see Fig. 9.11).",
+          "hints": [
+            "Use sine ratio: sin θ = opposite/hypotenuse",
+            "Rope length is hypotenuse, pole height is opposite side to 30° angle"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "height calculation",
+            "sine ratio",
+            "right triangle"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "A tree breaks due to storm and the broken part bends so that the top of the tree touches the ground making an angle 30° with it. The distance between the foot of the tree to the point where the top touches the ground is 8 m. Find the height of the tree.",
+          "hints": [
+            "Broken tree forms two segments: vertical stump and inclined broken part",
+            "Use cosine for horizontal distance, sine for vertical height of broken part",
+            "Total height = stump height + broken part height"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "real-life application",
+            "broken tree problem",
+            "trigonometric ratios"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A contractor plans to install two slides for the children to play in a park. For the children below the age of 5 years, she prefers to have a slide whose top is at a height of 1.5 m, and is inclined at an angle of 30° to the ground, whereas for elder children, she wants to have a steep slide at a height of 3m, and inclined at an angle of 60° to the ground. What should be the length of the slide in each case?",
+          "hints": [
+            "Slide length is hypotenuse",
+            "Use sine ratio: sin θ = height/length",
+            "Calculate separately for 30° and 60° cases"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "practical application",
+            "slide length",
+            "sine ratio"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The angle of elevation of the top of a tower from a point on the ground, which is 30 m away from the foot of the tower, is 30°. Find the height of the tower.",
+          "hints": [
+            "Use tangent ratio: tan θ = height/distance",
+            "Similar to Example 1 in chapter"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "tower height",
+            "angle of elevation",
+            "tangent ratio"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "A kite is flying at a height of 60 m above the ground. The string attached to the kite is temporarily tied to a point on the ground. The inclination of the string with the ground is 60°. Find the length of the string, assuming that there is no slack in the string.",
+          "hints": [
+            "String is hypotenuse",
+            "Height is opposite side to 60° angle",
+            "Use sine ratio: sin 60° = height/string length"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "kite problem",
+            "string length",
+            "sine ratio"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A 1.5 m tall boy is standing at some distance from a 30 m tall building. The angle of elevation from his eyes to the top of the building increases from 30° to 60° as he walks towards the building. Find the distance he walked towards the building.",
+          "hints": [
+            "Consider effective height = building height - boy's eye height",
+            "Set up two equations for two positions",
+            "Subtract distances to find walked distance"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "two positions",
+            "distance walked",
+            "angle change"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "From a point on the ground, the angles of elevation of the bottom and the top of a transmission tower fixed at the top of a 20 m high building are 45° and 60° respectively. Find the height of the tower.",
+          "hints": [
+            "Building height is known (20 m)",
+            "Use tangent for both angles",
+            "Tower height = total height - building height"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "transmission tower",
+            "building with tower",
+            "two angles of elevation"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "A statue, 1.6 m tall, stands on the top of a pedestal. From a point on the ground, the angle of elevation of the top of the statue is 60° and from the same point the angle of elevation of the top of the pedestal is 45°. Find the height of the pedestal.",
+          "hints": [
+            "Similar to Example 4",
+            "Let pedestal height = h",
+            "Total height = h + 1.6",
+            "Set up equations using tangent ratios"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "statue on pedestal",
+            "two angles from same point",
+            "tangent application"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "The angle of elevation of the top of a building from the foot of the tower is 30° and the angle of elevation of the top of the tower from the foot of the building is 60°. If the tower is 50 m high, find the height of the building.",
+          "hints": [
+            "Reciprocal observation problem",
+            "Distance between buildings is common",
+            "Use tangent ratios for both directions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "reciprocal angles",
+            "tower and building",
+            "simultaneous equations"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Two poles of equal heights are standing opposite each other on either side of the road, which is 80 m wide. From a point between them on the road, the angles of elevation of the top of the poles are 60° and 30°, respectively. Find the height of the poles and the distances of the point from the poles.",
+          "hints": [
+            "Let height = h, distances = x and (80 - x)",
+            "Set up two equations using tan 60° and tan 30°",
+            "Solve for h and x"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "two poles",
+            "road width",
+            "point between poles"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "A TV tower stands vertically on a bank of a canal. From a point on the other bank directly opposite the tower, the angle of elevation of the top of the tower is 60°. From another point 20 m away from this point on the line joing this point to the foot of the tower, the angle of elevation of the top of the tower is 30° (see Fig. 9.12). Find the height of the tower and the width of the canal.",
+          "hints": [
+            "Similar to Example 5",
+            "Let width = x, height = h",
+            "Set up equations: tan 60° = h/x, tan 30° = h/(x + 20)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "TV tower",
+            "canal width",
+            "two observation points"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "From the top of a 7 m high building, the angle of elevation of the top of a cable tower is 60° and the angle of depression of its foot is 45°. Determine the height of the tower.",
+          "hints": [
+            "Angle of depression to foot = 45° gives horizontal distance",
+            "Use this distance to find tower top height above building",
+            "Total tower height = building height + extra height"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cable tower",
+            "angle of elevation and depression",
+            "building observation"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "As observed from the top of a 75 m high lighthouse from the sea-level, the angles of depression of two ships are 30° and 45°. If one ship is exactly behind the other on the same side of the lighthouse, find the distance between the two ships.",
+          "hints": [
+            "Angles of depression = angles of elevation from ships",
+            "Find distances of ships from lighthouse base",
+            "Distance between ships = difference of distances"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "lighthouse",
+            "two ships",
+            "angles of depression"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "A 1.2 m tall girl spots a balloon moving with the wind in a horizontal line at a height of 88.2 m from the ground. The angle of elevation of the balloon from the eyes of the girl at any instant is 60°. After some time, the angle of elevation reduces to 30° (see Fig. 9.13). Find the distance travelled by the balloon during the interval.",
+          "hints": [
+            "Effective height = balloon height - girl's eye height",
+            "Calculate horizontal distances for both angles",
+            "Distance travelled = difference of horizontal distances"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "balloon tracking",
+            "changing angle of elevation",
+            "horizontal motion"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "A straight highway leads to the foot of a tower. A man standing at the top of the tower observes a car at an angle of depression of 30°, which is approaching the foot of the tower with a uniform speed. Six seconds later, the angle of depression of the car is found to be 60°. Find the time taken by the car to reach the foot of the tower from this point.",
+          "hints": [
+            "Let tower height = h",
+            "Find distances from tower for both angles",
+            "Distance covered in 6 seconds = difference of distances",
+            "Use uniform speed to find remaining time"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "time calculation",
+            "uniform speed",
+            "changing angle of depression",
+            "relative motion"
+          ]
+        }
+      ]
+    }
+  ]
+}

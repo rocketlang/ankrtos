@@ -1,0 +1,50 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Chapter 1",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "(i)",
+          "hints": [
+            "Refer to the main chapter content for context.",
+            "Check definitions or formulas related to the topic."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "answer_format",
+            "placeholder"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "(d)",
+          "hints": [
+            "Review multiple-choice options from the chapter.",
+            "Eliminate incorrect choices based on key concepts."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple_choice",
+            "conceptual"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "(a)",
+          "hints": [
+            "Analyze the question statement in the chapter.",
+            "Apply relevant principles or calculations."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "application",
+            "problem_solving"
+          ]
+        }
+      ]
+    }
+  ]
+}

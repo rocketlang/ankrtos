@@ -1,0 +1,115 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Real Numbers",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Express each number as a product of its prime factors: (i) 140 (ii) 156 (iii) 3825 (iv) 5005 (v) 7429",
+          "hints": [
+            "Use prime factorization method",
+            "Divide by smallest prime numbers",
+            "Continue until quotient is 1"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "prime factorization",
+            "real numbers"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the LCM and HCF of the following pairs of integers and verify that LCM × HCF = product of the two numbers: (i) 26 and 91 (ii) 510 and 92 (iii) 336 and 54",
+          "hints": [
+            "Find prime factors of both numbers",
+            "HCF = product of common prime factors with lowest powers",
+            "LCM = product of all prime factors with highest powers"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "LCM",
+            "HCF",
+            "prime factorization",
+            "verification"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the LCM and HCF of the following integers by applying the prime factorisation method: (i) 12, 15 and 21 (ii) 17, 23 and 29 (iii) 8, 9 and 25",
+          "hints": [
+            "Find prime factors of all numbers",
+            "HCF = product of common prime factors across all numbers",
+            "LCM = product of all prime factors with highest powers"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "prime factorization",
+            "LCM",
+            "HCF",
+            "multiple numbers"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Given that HCF (306, 657) = 9, find LCM (306, 657).",
+          "hints": [
+            "Use formula: LCM × HCF = product of two numbers",
+            "Rearrange to find LCM"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "LCM",
+            "HCF",
+            "formula application"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Check whether 6n can end with the digit 0 for any natural number n.",
+          "hints": [
+            "A number ends with 0 if it has factors 2 and 5",
+            "Analyze prime factors of 6n"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "number theory",
+            "prime factors",
+            "reasoning"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Explain why 7 × 11 × 13 + 13 and 7 × 6 × 5 × 4 × 3 × 2 × 1 + 5 are composite numbers.",
+          "hints": [
+            "Factor out common terms",
+            "Show both factors are greater than 1",
+            "Definition of composite numbers"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "composite numbers",
+            "factorization",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "There is a circular path around a sports field. Sonia takes 18 minutes to drive one round of the field, while Ravi takes 12 minutes for the same. Suppose they both start at the same point and at the same time, and go in the same direction. After how many minutes will they meet again at the starting point?",
+          "hints": [
+            "Find LCM of 18 and 12",
+            "They meet when both complete integer number of rounds",
+            "Time = LCM of their individual times"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "LCM application",
+            "real-world problem",
+            "circular motion"
+          ]
+        }
+      ]
+    }
+  ]
+}

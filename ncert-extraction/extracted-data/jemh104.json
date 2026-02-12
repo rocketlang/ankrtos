@@ -1,0 +1,216 @@
+{
+  "chapter_number": 4,
+  "chapter_title": "Quadratic Equations",
+  "exercises": [
+    {
+      "exercise_number": "4.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Check whether the following are quadratic equations: (i) (x + 1)² = 2(x – 3) (ii) x² – 2x = (–2) (3 – x) (iii) (x – 2)(x + 1) = (x – 1)(x + 3) (iv) (x – 3)(2x +1) = x(x + 5) (v) (2x – 1)(x – 3) = (x + 5)(x – 1) (vi) x² + 3x + 1 = (x – 2)² (vii) (x + 2)³ = 2x (x² – 1) (viii) x³ – 4x² – x + 1 = (x – 2)³",
+          "hints": [
+            "Expand both sides and simplify to standard form ax² + bx + c = 0",
+            "Check if highest power of x is 2 after simplification"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "identification",
+            "standard form",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Represent the following situations in the form of quadratic equations: (i) The area of a rectangular plot is 528 m². The length of the plot (in metres) is one more than twice its breadth. We need to find the length and breadth of the plot. (ii) The product of two consecutive positive integers is 306. We need to find the integers. (iii) Rohan’s mother is 26 years older than him. The product of their ages (in years) 3 years from now will be 360. We would like to find Rohan’s present age. (iv) A train travels a distance of 480 km at a uniform speed. If the speed had been 8 km/h less, then it would have taken 3 hours more to cover the same distance. We need to find the speed of the train.",
+          "hints": [
+            "Define variables for unknown quantities",
+            "Form equations based on given conditions",
+            "Simplify to standard quadratic form"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "word problems",
+            "application",
+            "equation formation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the roots of the following quadratic equations by factorisation: (i) x² – 3x – 10 = 0 (ii) 2x² + x – 6 = 0 (iii) 2x² + 7x + 5√2 = 0 (iv) 2x² – x + 1/8 = 0 (v) 100x² – 20x + 1 = 0",
+          "hints": [
+            "Split middle term appropriately",
+            "Group terms and factor common factors",
+            "Set each factor equal to zero"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "factorisation",
+            "roots",
+            "splitting middle term"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Solve the problems given in Example 1.",
+          "hints": [
+            "Refer to Example 1 in chapter text",
+            "Form quadratic equations from word problems",
+            "Solve using factorisation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "application",
+            "word problems",
+            "factorisation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find two numbers whose sum is 27 and product is 182.",
+          "hints": [
+            "Let numbers be x and (27-x)",
+            "Form equation x(27-x) = 182",
+            "Solve quadratic equation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "number problems",
+            "sum and product",
+            "factorisation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find two consecutive positive integers, sum of whose squares is 365.",
+          "hints": [
+            "Let integers be x and x+1",
+            "Form equation x² + (x+1)² = 365",
+            "Simplify and solve"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "consecutive integers",
+            "sum of squares",
+            "quadratic equation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "The altitude of a right triangle is 7 cm less than its base. If the hypotenuse is 13 cm, find the other two sides.",
+          "hints": [
+            "Let base = x cm, altitude = (x-7) cm",
+            "Apply Pythagoras theorem: x² + (x-7)² = 13²",
+            "Solve quadratic equation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "geometry",
+            "right triangle",
+            "Pythagoras theorem"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A cottage industry produces a certain number of pottery articles in a day. It was observed on a particular day that the cost of production of each article (in rupees) was 3 more than twice the number of articles produced on that day. If the total cost of production on that day was ₹ 90, find the number of articles produced and the cost of each article.",
+          "hints": [
+            "Let number of articles = x",
+            "Cost per article = (2x + 3) rupees",
+            "Form equation: x(2x + 3) = 90",
+            "Solve quadratic equation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "word problems",
+            "cost calculation",
+            "quadratic equation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the nature of the roots of the following quadratic equations. If the real roots exist, find them: (i) 2x² – 3x + 5 = 0 (ii) 3x² – 4√3 x + 4 = 0 (iii) 2x² – 6x + 3 = 0",
+          "hints": [
+            "Calculate discriminant D = b² - 4ac",
+            "Determine nature based on D value",
+            "If D ≥ 0, find roots using formula or factorisation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "discriminant",
+            "nature of roots",
+            "quadratic formula"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the values of k for each of the following quadratic equations, so that they have two equal roots. (i) 2x² + kx + 3 = 0 (ii) kx(x – 2) + 6 = 0",
+          "hints": [
+            "For equal roots, discriminant D = 0",
+            "Expand equations to standard form",
+            "Set D = 0 and solve for k"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "equal roots",
+            "discriminant",
+            "parameter finding"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Is it possible to design a rectangular mango grove whose length is twice its breadth, and the area is 800 m²? If so, find its length and breadth.",
+          "hints": [
+            "Let breadth = x m, length = 2x m",
+            "Area equation: 2x * x = 800",
+            "Solve quadratic equation and check feasibility"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "geometry",
+            "area",
+            "feasibility check"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Is the following situation possible? If so, determine their present ages. The sum of the ages of two friends is 20 years. Four years ago, the product of their ages in years was 48.",
+          "hints": [
+            "Let present ages be x and (20-x) years",
+            "Four years ago: (x-4)(16-x) = 48",
+            "Solve and check if roots are real and positive"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "age problems",
+            "feasibility",
+            "quadratic equation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Is it possible to design a rectangular park of perimeter 80 m and area 400 m²? If so, find its length and breadth.",
+          "hints": [
+            "Let length = l, breadth = b",
+            "Equations: 2(l+b) = 80 and lb = 400",
+            "Form quadratic equation and check discriminant"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "geometry",
+            "perimeter and area",
+            "feasibility"
+          ]
+        }
+      ]
+    }
+  ]
+}

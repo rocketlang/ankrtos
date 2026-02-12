@@ -1,0 +1,332 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Number Systems",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Is zero a rational number? Can you write it in the form p/q, where p and q are integers and q ≠ 0?",
+          "hints": [
+            "Recall the definition of rational numbers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "rational numbers",
+            "definition"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find six rational numbers between 3 and 4.",
+          "hints": [
+            "Use the formula (r + s)/2 to find a rational number between r and s"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rational numbers",
+            "between numbers"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find five rational numbers between 3/5 and 4/5.",
+          "hints": [
+            "Use the formula (r + s)/2 to find a rational number between r and s"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rational numbers",
+            "between numbers"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "State whether the following statements are true or false. Give reasons for your answers. (i) Every natural number is a whole number. (ii) Every integer is a whole number. (iii) Every rational number is a whole number.",
+          "hints": [
+            "Recall the definitions of natural numbers, whole numbers, and rational numbers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "number systems",
+            "definitions"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "State whether the following statements are true or false. Justify your answers. (i) Every irrational number is a real number. (ii) Every point on the number line is of the form √m, where m is a natural number. (iii) Every real number is an irrational number.",
+          "hints": [
+            "Recall the definitions of irrational numbers and real numbers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "irrational numbers",
+            "real numbers",
+            "definitions"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Are the square roots of all positive integers irrational? If not, give an example of the square root of a number that is a rational number.",
+          "hints": [
+            "Recall the definition of irrational numbers and square roots"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "irrational numbers",
+            "square roots"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Show how √5 can be represented on the number line.",
+          "hints": [
+            "Use the Pythagorean theorem to find the length of the line segment"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "irrational numbers",
+            "number line"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Show how √10 can be represented on the number line.",
+          "hints": [
+            "Use the Pythagorean theorem to find the length of the line segment"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "irrational numbers",
+            "number line"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Write the following in decimal form and say what kind of decimal expansion each has: (i) 36/100 (ii) 1/3 (iii) 4/11 (iv) 121/13 (v) 11/15 (vi) 23/2 3",
+          "hints": [
+            "Use long division to convert the fractions to decimal form"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "decimal expansions",
+            "fractions"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "You know that 1/7 = 0.142857. Can you predict what the decimal expansions of 2/7, 3/7, 4/7, 5/7, 6/7 are without actually doing the long division? If so, how?",
+          "hints": [
+            "Use the pattern of the decimal expansion of 1/7 to find the decimal expansions of the other fractions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "decimal expansions",
+            "fractions"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Express the following in the form p/q, where p and q are integers and q ≠ 0: (i) 0.6 (ii) 0.47 (iii) 0.001",
+          "hints": [
+            "Use the definition of rational numbers to express the decimals as fractions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "rational numbers",
+            "decimal expansions"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Express 0.99999... in the form p/q, where p and q are integers and q ≠ 0.",
+          "hints": [
+            "Use the definition of rational numbers to express the decimal as a fraction"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "rational numbers",
+            "decimal expansions"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What can the maximum number of digits be in the repeating block of digits in the decimal expansion of 1/17? Perform the division to check your answer.",
+          "hints": [
+            "Use long division to find the decimal expansion of 1/17"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "decimal expansions",
+            "fractions"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Look at several examples of rational numbers in the form p/q, where p and q are integers and q ≠ 0, and having terminating decimal representations (expansions). Can you guess what property q must satisfy?",
+          "hints": [
+            "Analyze the decimal expansions of the rational numbers to find a pattern"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rational numbers",
+            "decimal expansions"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Write three numbers whose decimal expansions are non-terminating non-recurring.",
+          "hints": [
+            "Use the definition of irrational numbers to find examples of non-terminating non-recurring decimals"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "irrational numbers",
+            "decimal expansions"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Find three different irrational numbers between the rational numbers 5/7 and 9/11.",
+          "hints": [
+            "Use the definition of irrational numbers to find examples of irrational numbers between the given rational numbers"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "irrational numbers",
+            "between numbers"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Classify the following numbers as rational or irrational: (i) 23 (ii) 225 (iii) 0.3796 (iv) 7.478478... (v) 1.101001000100001...",
+          "hints": [
+            "Use the definitions of rational and irrational numbers to classify the given numbers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "number systems",
+            "definitions"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Classify the following numbers as rational or irrational: (i) (2 - √5) (ii) (3 + √2) (iii) 2π (iv) 7√5 (v) 5 + 3",
+          "hints": [
+            "Use the definitions of rational and irrational numbers to classify the given numbers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "number systems",
+            "definitions"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Simplify each of the following expressions: (i) (3 + √3) (2 + √2) (ii) 3 + √3 (iii) (5 + √2) (5 - √2) (iv) (7 - √5) (7 + √5)",
+          "hints": [
+            "Use the properties of radicals to simplify the expressions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "radicals",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Recall, π is defined as the ratio of the circumference (say c) of a circle to its diameter (say d). That is, π = c/d. This seems to contradict the fact that π is irrational. How will you resolve this contradiction?",
+          "hints": [
+            "Use the definition of π and the properties of irrational numbers to resolve the contradiction"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "π",
+            "irrational numbers"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Represent √9.3 on the number line.",
+          "hints": [
+            "Use the properties of radicals to find the value of √9.3"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "radicals",
+            "number line"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Rationalise the denominators of the following: (i) 1/√7 (ii) 1/(5 + √2) (iii) 1/(5 - √2) (iv) 1/(√5 + √3)",
+          "hints": [
+            "Use the properties of radicals to rationalize the denominators"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "radicals",
+            "rationalization"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find: (i) 64^(1/2) (ii) 32^(1/5) (iii) 125^(1/3)",
+          "hints": [
+            "Use the properties of exponents to find the values"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "properties"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find: (i) 9^(1/2) (ii) 32^(1/5) (iii) 16^(1/4) (iv) 125^(1/3)",
+          "hints": [
+            "Use the properties of exponents to find the values"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "properties"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Simplify: (i) 2^(1/3) * 2^(1/5) (ii) (1/2)^(1/3) (iii) (7^(1/2))^(1/2) (iv) 7^(1/2) * 8^(1/2)",
+          "hints": [
+            "Use the properties of exponents to simplify the expressions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "exponents",
+            "simplification"
+          ]
+        }
+      ]
+    }
+  ]
+}

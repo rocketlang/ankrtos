@@ -1,0 +1,389 @@
+{
+  "chapter_number": 2,
+  "chapter_title": "Polynomials",
+  "exercises": [
+    {
+      "exercise_number": "2.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the following expressions are polynomials in one variable and which are not? State reasons for your answer.",
+          "hints": [
+            "Check if the exponent of the variable is a whole number"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "polynomial",
+            "variable"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Write the coefficients of x2 in each of the following:",
+          "hints": [
+            "Identify the term with x2"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "coefficient",
+            "x2"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Give one example each of a binomial of degree 35, and of a monomial of degree 100.",
+          "hints": [
+            "Recall the definition of binomial and monomial"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "binomial",
+            "monomial",
+            "degree"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Write the degree of each of the following polynomials:",
+          "hints": [
+            "Identify the highest power of the variable"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "degree",
+            "polynomial"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Classify the following as linear, quadratic and cubic polynomials:",
+          "hints": [
+            "Check the degree of the polynomial"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "linear",
+            "quadratic",
+            "cubic",
+            "polynomial"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the value of the polynomial 5x – 4x2 + 3 at",
+          "hints": [
+            "Replace x with the given value"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "polynomial",
+            "evaluation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find p(0), p(1) and p(2) for each of the following polynomials:",
+          "hints": [
+            "Replace x with the given value"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "polynomial",
+            "evaluation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Verify whether the following are zeroes of the polynomial, indicated against them.",
+          "hints": [
+            "Check if p(x) = 0"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "zero",
+            "polynomial"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the zero of the polynomial in each of the following cases:",
+          "hints": [
+            "Solve the equation p(x) = 0"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "zero",
+            "polynomial"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Determine which of the following polynomials has (x + 1) a factor:",
+          "hints": [
+            "Check if p(-1) = 0"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "factor",
+            "polynomial"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Use the Factor Theorem to determine whether g(x) is a factor of p(x) in each of the following cases:",
+          "hints": [
+            "Check if p(x) = 0"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "factor",
+            "polynomial"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the value of k, if x – 1 is a factor of p(x) in each of the following cases:",
+          "hints": [
+            "Check if p(1) = 0"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "factor",
+            "polynomial"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Factorise:",
+          "hints": [
+            "Use the Factor Theorem"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "factor",
+            "polynomial"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Factorise:",
+          "hints": [
+            "Use the Factor Theorem"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "factor",
+            "polynomial"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Use suitable identities to find the following products:",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "identity",
+            "product"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Evaluate the following products without multiplying directly:",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "identity",
+            "product"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Factorise the following using appropriate identities:",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "identity",
+            "factor"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Expand each of the following, using suitable identities:",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "identity",
+            "expand"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Factorise:",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "identity",
+            "factor"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Write the following cubes in expanded form:",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "identity",
+            "cube"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Evaluate the following using suitable identities:",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "identity",
+            "evaluate"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Factorise each of the following:",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "identity",
+            "factor"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Verify:",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "identity",
+            "verify"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Factorise each of the following:",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "identity",
+            "factor"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Factorise:",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "identity",
+            "factor"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Verify that",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "identity",
+            "verify"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "If x + y + z = 0, show that",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "identity",
+            "show"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "Without actually calculating the cubes, find the value of each of the following:",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "identity",
+            "find"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "Give possible expressions for the length and breadth of each of the following rectangles, in which their areas are given:",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "identity",
+            "expressions"
+          ]
+        },
+        {
+          "question_number": 16,
+          "question_text": "What are the possible expressions for the dimensions of the cuboids whose volumes are given below?",
+          "hints": [
+            "Use the given identities"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "identity",
+            "expressions"
+          ]
+        }
+      ]
+    }
+  ]
+}

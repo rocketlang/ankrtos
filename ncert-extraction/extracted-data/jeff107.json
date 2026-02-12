@@ -1,0 +1,255 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Madam Rides the Bus",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What was Valli’s favourite pastime?",
+          "hints": [
+            "Read the story to find out Valli's favourite pastime"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Valli",
+            "pastime"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What was a source of unending joy for Valli? What was her strongest desire?",
+          "hints": [
+            "Read the story to find out Valli's source of joy and desire"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Valli",
+            "joy",
+            "desire"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What did Valli find out about the bus journey? How did she find out these details?",
+          "hints": [
+            "Read the story to find out what Valli learned about the bus journey"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Valli",
+            "bus journey"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What do you think Valli was planning to do?",
+          "hints": [
+            "Read the story to find out what Valli was planning"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Valli",
+            "planning"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why does the conductor call Valli ‘madam’?",
+          "hints": [
+            "Read the story to find out why the conductor calls Valli 'madam'"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "conductor",
+            "Valli"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why does Valli stand up on the seat? What does she see now?",
+          "hints": [
+            "Read the story to find out why Valli stands up and what she sees"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Valli",
+            "seat"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What does Valli tell the elderly man when he calls her a child?",
+          "hints": [
+            "Read the story to find out what Valli says to the elderly man"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Valli",
+            "elderly man"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Why didn’t Valli want to make friends with the elderly woman?",
+          "hints": [
+            "Read the story to find out why Valli doesn't want to be friends with the elderly woman"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Valli",
+            "elderly woman"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How did Valli save up money for her first journey? Was it easy for her?",
+          "hints": [
+            "Read the story to find out how Valli saved money"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Valli",
+            "money"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What did Valli see on her way that made her laugh?",
+          "hints": [
+            "Read the story to find out what makes Valli laugh"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Valli",
+            "laugh"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why didn’t she get off the bus at the bus station?",
+          "hints": [
+            "Read the story to find out why Valli doesn't get off the bus"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Valli",
+            "bus station"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Why didn’t Valli want to go to the stall and have a drink? What does this tell you about her?",
+          "hints": [
+            "Read the story to find out why Valli doesn't want a drink"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Valli",
+            "drink"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What was Valli’s deepest desire? Find the words and phrases in the story that tell you this.",
+          "hints": [
+            "Read the story to find out Valli's deepest desire"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Valli",
+            "desire"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "How did Valli plan her bus ride? What did she find out about the bus, and how did she save up the fare?",
+          "hints": [
+            "Read the story to find out how Valli planned her bus ride"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Valli",
+            "bus ride"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What kind of a person is Valli? To answer this question, pick out the following sentences from the text and fill in the blanks.",
+          "hints": [
+            "Read the story to find out what kind of person Valli is"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "Valli",
+            "personality"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Why does the conductor refer to Valli as ‘madam’?",
+          "hints": [
+            "Read the story to find out why the conductor calls Valli 'madam'"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "conductor",
+            "Valli"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the lines in the text which tell you that Valli was enjoying her ride on the bus.",
+          "hints": [
+            "Read the story to find out if Valli enjoyed her ride"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Valli",
+            "bus ride"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Why does Valli refuse to look out of the window on her way back?",
+          "hints": [
+            "Read the story to find out why Valli doesn't look out the window"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Valli",
+            "window"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "What does Valli mean when she says, “I was just agreeing with what you said about things happening without our knowledge.”",
+          "hints": [
+            "Read the story to find out what Valli means"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Valli",
+            "knowledge"
+          ]
+        }
+      ]
+    }
+  ]
+}

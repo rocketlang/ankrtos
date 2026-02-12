@@ -1,0 +1,237 @@
+{
+  "chapter_number": 12,
+  "chapter_title": "Surface Areas and Volumes",
+  "exercises": [
+    {
+      "exercise_number": "12.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "2 cubes each of volume 64 cm3 are joined end to end. Find the surface area of the resulting cuboid.",
+          "hints": [
+            "Calculate the surface area of each cube and then find the total surface area of the resulting cuboid"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "surface area",
+            "cuboid"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "A vessel is in the form of a hollow hemisphere mounted by a hollow cylinder. The diameter of the hemisphere is 14 cm and the total height of the vessel is 13 cm. Find the inner surface area of the vessel.",
+          "hints": [
+            "Calculate the surface area of the hemisphere and the cylinder separately and then find the total surface area"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "surface area",
+            "hemisphere",
+            "cylinder"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A toy is in the form of a cone of radius 3.5 cm mounted on a hemisphere of same radius. The total height of the toy is 15.5 cm. Find the total surface area of the toy.",
+          "hints": [
+            "Calculate the surface area of the cone and the hemisphere separately and then find the total surface area"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "surface area",
+            "cone",
+            "hemisphere"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "A cubical block of side 7 cm is surmounted by a hemisphere. What is the greatest diameter the hemisphere can have? Find the surface area of the solid.",
+          "hints": [
+            "Calculate the diameter of the hemisphere and then find the surface area of the solid"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "surface area",
+            "cuboid",
+            "hemisphere"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "A hemispherical depression is cut out from one face of a cubical wooden block such that the diameter l of the hemisphere is equal to the edge of the cube. Determine the surface area of the remaining solid.",
+          "hints": [
+            "Calculate the surface area of the cube and the hemisphere separately and then find the total surface area"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "surface area",
+            "cube",
+            "hemisphere"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A medicine capsule is in the shape of a cylinder with two hemispheres stuck to each of its ends. The length of the entire capsule is 14 mm and the diameter of the capsule is 5 mm. Find its surface area.",
+          "hints": [
+            "Calculate the surface area of the cylinder and the hemispheres separately and then find the total surface area"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "surface area",
+            "cylinder",
+            "hemisphere"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "A tent is in the shape of a cylinder surmounted by a conical top. If the height and diameter of the cylindrical part are 2.1 m and 4 m respectively, and the slant height of the top is 2.8 m, find the area of the canvas used for making the tent. Also, find the cost of the canvas of the tent at the rate of ` 500 per m2.",
+          "hints": [
+            "Calculate the surface area of the cylinder and the cone separately and then find the total surface area"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "surface area",
+            "cylinder",
+            "cone"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "From a solid cylinder whose height is 2.4 cm and diameter 1.4 cm, a conical cavity of the same height and same diameter is hollowed out. Find the total surface area of the remaining solid to the nearest cm2.",
+          "hints": [
+            "Calculate the surface area of the cylinder and the cone separately and then find the total surface area"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "surface area",
+            "cylinder",
+            "cone"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "A wooden article was made by scooping out a hemisphere from each end of a solid cylinder, as shown in Fig. 12.11. If the height of the cylinder is 10 cm, and its base is of radius 3.5 cm, find the total surface area of the article.",
+          "hints": [
+            "Calculate the surface area of the cylinder and the hemispheres separately and then find the total surface area"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "surface area",
+            "cylinder",
+            "hemisphere"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A solid is in the shape of a cone standing on a hemisphere with both their radii being equal to 1 cm and the height of the cone is equal to its radius. Find the volume of the solid in terms of π.",
+          "hints": [
+            "Calculate the volume of the cone and the hemisphere separately and then find the total volume"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "volume",
+            "cone",
+            "hemisphere"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Rachel, an engineering student, was asked to make a model shaped like a cylinder with two cones attached at its two ends by using a thin aluminium sheet. The diameter of the model is 3 cm and its length is 12 cm. If each cone has a height of 2 cm, find the volume of air contained in the model that Rachel made.",
+          "hints": [
+            "Calculate the volume of the cylinder and the cones separately and then find the total volume"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "volume",
+            "cylinder",
+            "cone"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A gulab jamun, contains sugar syrup up to about 30% of its volume. Find approximately how much syrup would be found in 45 gulab jamuns, each shaped like a cylinder with two hemispherical ends with length 5 cm and diameter 2.8 cm.",
+          "hints": [
+            "Calculate the volume of the gulab jamun and then find the volume of the syrup"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "volume",
+            "cylinder",
+            "hemisphere"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "A pen stand made of wood is in the shape of a cuboid with four conical depressions to hold pens. The dimensions of the cuboid are 15 cm by 10 cm by 3.5 cm. The radius of each of the depressions is 0.5 cm and the depth is 1.4 cm. Find the volume of wood in the entire stand.",
+          "hints": [
+            "Calculate the volume of the cuboid and the cones separately and then find the total volume"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "volume",
+            "cuboid",
+            "cone"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "A vessel is in the form of an inverted cone. Its height is 8 cm and the radius of its top, which is open, is 5 cm. It is filled with water up to the brim. When lead shots, each of which is a sphere of radius 0.5 cm are dropped into the vessel, one-fourth of the water flows out. Find the number of lead shots dropped in the vessel.",
+          "hints": [
+            "Calculate the volume of the water and the lead shots separately and then find the number of lead shots"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "volume",
+            "cone",
+            "sphere"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A solid iron pole consists of a cylinder of height 220 cm and base diameter 24 cm, which is surmounted by another cylinder of height 60 cm and radius 8 cm. Find the mass of the pole, given that 1 cm3 of iron has approximately 8g mass.",
+          "hints": [
+            "Calculate the volume of the cylinders separately and then find the total mass"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "volume",
+            "cylinder",
+            "mass"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "A solid consisting of a right circular cone of height 120 cm and radius 60 cm standing on a hemisphere of radius 60 cm is placed upright in a right circular cylinder full of water such that it touches the bottom. Find the volume of water left in the cylinder, if the radius of the cylinder is 60 cm and its height is 180 cm.",
+          "hints": [
+            "Calculate the volume of the water and the solid separately and then find the volume of the water left"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "volume",
+            "cone",
+            "hemisphere",
+            "cylinder"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "A spherical glass vessel has a cylindrical neck 8 cm long, 2 cm in diameter; the diameter of the spherical part is 8.5 cm. By measuring the amount of water it holds, a child finds its volume to be 345 cm3. Check whether she is correct, taking the above as the inside measurements, and π = 3.14.",
+          "hints": [
+            "Calculate the volume of the vessel and then check if it matches the given volume"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "volume",
+            "sphere",
+            "cylinder"
+          ]
+        }
+      ]
+    }
+  ]
+}

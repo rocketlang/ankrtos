@@ -1,0 +1,346 @@
+{
+  "chapter_number": 12,
+  "chapter_title": "Magnetic Effects of Electric Current",
+  "exercises": [
+    {
+      "exercise_number": "12.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why does a compass needle get deflected when brought near a bar magnet?",
+          "hints": [
+            "Think about magnetic fields",
+            "Consider interaction between magnetic poles"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "magnetic field",
+            "compass",
+            "bar magnet"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Draw magnetic field lines around a bar magnet.",
+          "hints": [
+            "Use iron filings pattern",
+            "Remember field lines emerge from north pole and merge at south pole"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "magnetic field lines",
+            "bar magnet",
+            "visualization"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "List the properties of magnetic field lines.",
+          "hints": [
+            "Consider direction, strength representation",
+            "Think about intersection and closed nature"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "properties",
+            "magnetic field lines",
+            "characteristics"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why don't two magnetic field lines intersect each other?",
+          "hints": [
+            "Think about direction at intersection point",
+            "Consider compass needle behavior"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "field lines",
+            "intersection",
+            "direction"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Consider a circular loop of wire lying in the plane of the table. Let the current pass through the loop clockwise. Apply the right-hand rule to find out the direction of the magnetic field inside and outside the loop.",
+          "hints": [
+            "Use right-hand thumb rule",
+            "Consider direction of current in circular loop"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circular loop",
+            "right-hand rule",
+            "magnetic field direction"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The magnetic field in a given region is uniform. Draw a diagram to represent it.",
+          "hints": [
+            "Uniform field means parallel lines",
+            "Equal spacing indicates constant strength"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "uniform magnetic field",
+            "diagram",
+            "representation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Choose the correct option. The magnetic field inside a long straight solenoid-carrying current (a) is zero. (b) decreases as we move towards its end. (c) increases as we move towards its end. (d) is the same at all points.",
+          "hints": [
+            "Recall solenoid field properties",
+            "Think about parallel straight lines inside solenoid"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "solenoid",
+            "magnetic field",
+            "multiple choice"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the following property of a proton can change while it moves freely in a magnetic field? (There may be more than one correct answer.) (a) mass (b) speed (c) velocity (d) momentum",
+          "hints": [
+            "Consider force on charged particle in magnetic field",
+            "Recall magnetic force is perpendicular to velocity"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "proton",
+            "magnetic field",
+            "charged particle",
+            "multiple correct"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "In Activity 12.7, how do we think the displacement of rod AB will be affected if (i) current in rod AB is increased; (ii) a stronger horse-shoe magnet is used; and (iii) length of the rod AB is increased?",
+          "hints": [
+            "Consider force formula F = BIL",
+            "Think about proportionality relationships"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "force on conductor",
+            "magnetic field",
+            "current",
+            "length"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A positively-charged particle (alpha-particle) projected towards west is deflected towards north by a magnetic field. The direction of magnetic field is (a) towards south (b) towards east (c) downward (d) upward",
+          "hints": [
+            "Use Fleming's left-hand rule",
+            "Remember positive charge direction is opposite to electron flow"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "alpha-particle",
+            "magnetic deflection",
+            "direction",
+            "multiple choice"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Name two safety measures commonly used in electric circuits and appliances.",
+          "hints": [
+            "Think about protection devices",
+            "Consider earthing and fuses"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "safety measures",
+            "electric circuits",
+            "appliances"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "An electric oven of 2 kW power rating is operated in a domestic electric circuit (220 V) that has a current rating of 5 A. What result do you expect? Explain.",
+          "hints": [
+            "Calculate current using P = VI",
+            "Compare with circuit rating"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "power calculation",
+            "circuit rating",
+            "overloading"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What precaution should be taken to avoid the overloading of domestic electric circuits?",
+          "hints": [
+            "Consider appliance connections",
+            "Think about circuit capacity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "overloading",
+            "precautions",
+            "domestic circuits"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "End",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the following correctly describes the magnetic field near a long straight wire? (a) The field consists of straight lines perpendicular to the wire. (b) The field consists of straight lines parallel to the wire. (c) The field consists of radial lines originating from the wire. (d) The field consists of concentric circles centred on the wire.",
+          "hints": [
+            "Recall pattern from iron filings experiment",
+            "Think about right-hand thumb rule"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "straight wire",
+            "magnetic field pattern",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "At the time of short circuit, the current in the circuit (a) reduces substantially. (b) does not change. (c) increases heavily. (d) vary continuously.",
+          "hints": [
+            "Consider resistance during short circuit",
+            "Recall Ohm's law"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "short circuit",
+            "current",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "State whether the following statements are true or false. (a) The field at the centre of a long circular coil carrying current will be parallel straight lines. (b) A wire with a green insulation is usually the live wire of an electric supply.",
+          "hints": [
+            "Recall solenoid field pattern",
+            "Remember color coding of wires"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "true/false",
+            "solenoid",
+            "wire color coding"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "List two methods of producing magnetic fields.",
+          "hints": [
+            "Think about natural and artificial methods",
+            "Consider current-carrying conductors"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "magnetic field production",
+            "methods"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "When is the force experienced by a current-carrying conductor placed in a magnetic field largest?",
+          "hints": [
+            "Consider angle between current and magnetic field",
+            "Recall F = BIL sinθ"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "force on conductor",
+            "maximum force",
+            "angle"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Imagine that you are sitting in a chamber with your back to one wall. An electron beam, moving horizontally from back wall towards the front wall, is deflected by a strong magnetic field to your right side. What is the direction of magnetic field?",
+          "hints": [
+            "Use Fleming's left-hand rule",
+            "Remember electron has negative charge"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "electron beam",
+            "magnetic deflection",
+            "direction determination"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "State the rule to determine the direction of a (i) magnetic field produced around a straight conductor-carrying current, (ii) force experienced by a current-carrying straight conductor placed in a magnetic field which is perpendicular to it, and (iii) current induced in a coil due to its rotation in a magnetic field.",
+          "hints": [
+            "Recall right-hand thumb rule",
+            "Remember Fleming's left-hand and right-hand rules"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rules",
+            "direction determination",
+            "magnetic effects"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "When does an electric short circuit occur?",
+          "hints": [
+            "Consider direct contact between live and neutral wires",
+            "Think about insulation damage"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "short circuit",
+            "electric fault",
+            "causes"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "What is the function of an earth wire? Why is it necessary to earth metallic appliances?",
+          "hints": [
+            "Consider safety during leakage",
+            "Think about providing low-resistance path"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "earth wire",
+            "safety",
+            "metallic appliances"
+          ]
+        }
+      ]
+    }
+  ]
+}

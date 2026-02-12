@@ -1,0 +1,214 @@
+{
+  "chapter_number": 3,
+  "chapter_title": "PAIR OF LINEAR EQUATIONS IN TWO VARIABLES",
+  "exercises": [
+    {
+      "exercise_number": "3.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Form the pair of linear equations in the following problems, and find their solutions graphically. (i) 10 students of Class X took part in a Mathematics quiz. If the number of girls is 4 more than the number of boys, find the number of boys and girls who took part in the quiz. (ii) 5 pencils and 7 pens together cost ` 50, whereas 7 pencils and 5 pens together cost ` 46. Find the cost of one pencil and that of one pen.",
+          "hints": [
+            "Define variables for unknowns",
+            "Translate word problem into equations",
+            "Plot both equations on graph",
+            "Find intersection point"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "word problem",
+            "graphical method",
+            "linear equations"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "On comparing the ratios a1/a2, b1/b2 and c1/c2, find out whether the lines representing the following pairs of linear equations intersect at a point, are parallel or coincident: (i) 5x – 4y + 8 = 0 and 7x + 6y – 9 = 0 (ii) 9x + 3y + 12 = 0 and 18x + 6y + 24 = 0 (iii) 6x – 3y + 10 = 0 and 2x – y + 9 = 0",
+          "hints": [
+            "Calculate a1/a2, b1/b2, c1/c2",
+            "Compare ratios to determine relationship",
+            "Use Table 3.1 as reference"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "ratio comparison",
+            "line relationship",
+            "coefficients"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "On comparing the ratios a1/a2, b1/b2 and c1/c2, find out whether the following pair of linear equations are consistent, or inconsistent. (i) 3x + 2y = 5 ; 2x – 3y = 7 (ii) 2x – 3y = 8 ; 4x – 6y = 9 (iii) 3/2 x + 5/3 y = 7 ; 9x – 10y = 14 (iv) 5x – 3y = 11 ; – 10x + 6y = –22 (v) 4/3 x + 2y = 8 ; 2x + 3y = 12",
+          "hints": [
+            "Calculate ratios of coefficients",
+            "Check if a1/a2 = b1/b2",
+            "If equal, check if also equal to c1/c2",
+            "Refer to consistency conditions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "consistency",
+            "inconsistency",
+            "ratio comparison"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Which of the following pairs of linear equations are consistent/inconsistent? If consistent, obtain the solution graphically: (i) x + y = 5, 2x + 2y = 10 (ii) x – y = 8, 3x – 3y = 16 (iii) 2x + y – 6 = 0, 4x – 2y – 4 = 0 (iv) 2x – 2y – 2 = 0, 4x – 4y – 5 = 0",
+          "hints": [
+            "First check consistency using ratios",
+            "If consistent, find two points for each line",
+            "Plot lines on graph",
+            "Find intersection point if exists"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "graphical solution",
+            "consistency check",
+            "intersection"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Half the perimeter of a rectangular garden, whose length is 4 m more than its width, is 36 m. Find the dimensions of the garden.",
+          "hints": [
+            "Let width = x, length = x+4",
+            "Perimeter = 2(length + width)",
+            "Half perimeter = 36",
+            "Form two equations from given conditions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "word problem",
+            "geometry",
+            "perimeter"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Given the linear equation 2x + 3y – 8 = 0, write another linear equation in two variables such that the geometrical representation of the pair so formed is: (i) intersecting lines (ii) parallel lines (iii) coincident lines",
+          "hints": [
+            "For intersecting: a1/a2 ≠ b1/b2",
+            "For parallel: a1/a2 = b1/b2 ≠ c1/c2",
+            "For coincident: a1/a2 = b1/b2 = c1/c2",
+            "Choose coefficients accordingly"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "line relationships",
+            "coefficient selection",
+            "geometrical representation"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Draw the graphs of the equations x – y + 1 = 0 and 3x + 2y – 12 = 0. Determine the coordinates of the vertices of the triangle formed by these lines and the x-axis, and shade the triangular region.",
+          "hints": [
+            "Find x and y intercepts for both lines",
+            "Plot both lines on graph",
+            "Find intersection point of lines",
+            "Find intersection points with x-axis (y=0)",
+            "Identify triangle vertices"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "graph plotting",
+            "triangle vertices",
+            "intercepts"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Solve the following pair of linear equations by the substitution method. (i) x + y = 14 and x – y = 4 (ii) s – t = 3 and s/3 + t/2 = 6 (iii) 3x – y = 3 and 9x – 3y = 9 (iv) 0.2x + 0.3y = 1.3 and 0.4x + 0.5y = 2.3 (v) √2 x + √3 y = 0 and √3 x – √8 y = 0 (vi) 3x/2 – 5y/3 = –2 and x/3 + y/2 = 13/6",
+          "hints": [
+            "Express one variable in terms of other from first equation",
+            "Substitute into second equation",
+            "Solve for one variable",
+            "Substitute back to find other variable"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "substitution method",
+            "solving equations",
+            "algebraic method"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Solve 2x + 3y = 11 and 2x – 4y = –24 and hence find the value of 'm' for which y = mx + 3.",
+          "hints": [
+            "Solve the two equations using substitution or elimination",
+            "Find values of x and y",
+            "Substitute x and y into y = mx + 3",
+            "Solve for m"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "substitution",
+            "parameter finding",
+            "linear equations"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Form the pair of linear equations for the following problems and find their solution by substitution method. (i) The difference between two numbers is 26 and one number is three times the other. Find them. (ii) The larger of two supplementary angles exceeds the smaller by 18 degrees. Find them. (iii) The coach of a cricket team buys 7 bats and 6 balls for ` 3800. Later, she buys 3 bats and 5 balls for ` 1750. Find the cost of each bat and each ball. (iv) The taxi charges in a city consist of a fixed charge together with the charge for the distance covered. For a distance of 10 km, the charge paid is ` 105 and for a journey of 15 km, the charge paid is ` 155. What are the fixed charges and the charge per km? How much does a person have to pay for travelling a distance of 25 km? (v) A fraction becomes 9/11, if 2 is added to both the numerator and the denominator. If 3 is added to both the numerator and the denominator it becomes 5/6. Find the fraction. (vi) Five years hence, the age of Jacob will be three times that of his son. Five years ago, Jacob's age was seven times that of his son. What are their present ages?",
+          "hints": [
+            "Define variables for unknowns",
+            "Translate word problems into equations",
+            "Use substitution method to solve",
+            "Verify solution satisfies original conditions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "word problems",
+            "substitution method",
+            "real-life applications"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Solve the following pair of linear equations by the elimination method and the substitution method: (i) x + y = 5 and 2x – 3y = 4 (ii) 3x + 4y = 10 and 2x – 2y = 2 (iii) 3x – 5y – 4 = 0 and 9x = 2y + 7 (iv) x/2 + 2y/3 = –1 and x – y/3 = 3",
+          "hints": [
+            "For elimination: make coefficients of one variable equal",
+            "Add or subtract equations to eliminate variable",
+            "For substitution: express one variable in terms of other",
+            "Compare results from both methods"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "elimination method",
+            "substitution method",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Form the pair of linear equations in the following problems, and find their solutions (if they exist) by the elimination method: (i) If we add 1 to the numerator and subtract 1 from the denominator, a fraction reduces to 1. It becomes 1/2 if we only add 1 to the denominator. What is the fraction? (ii) Five years ago, Nuri was thrice as old as Sonu. Ten years later, Nuri will be twice as old as Sonu. How old are Nuri and Sonu? (iii) The sum of the digits of a two-digit number is 9. Also, nine times this number is twice the number obtained by reversing the order of the digits. Find the number. (iv) Meena went to a bank to withdraw ` 2000. She asked the cashier to give her ` 50 and ` 100 notes only. Meena got 25 notes in all. Find how many notes of ` 50 and ` 100 she received. (v) A lending library has a fixed charge for the first three days and an additional charge for each day thereafter. Saritha paid ` 27 for a book kept for seven days, while Susy paid ` 21 for the book she kept for five days. Find the fixed charge and the charge for each extra day.",
+          "hints": [
+            "Define variables appropriately",
+            "Form two equations from given conditions",
+            "Use elimination method (make coefficients equal)",
+            "Eliminate one variable by addition/subtraction",
+            "Check if solution exists"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "word problems",
+            "elimination method",
+            "real-life applications"
+          ]
+        }
+      ]
+    }
+  ]
+}

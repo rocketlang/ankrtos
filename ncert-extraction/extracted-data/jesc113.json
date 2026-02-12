@@ -1,0 +1,285 @@
+{
+  "chapter_number": 13,
+  "chapter_title": "Our Environment",
+  "exercises": [
+    {
+      "exercise_number": "13.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What are trophic levels? Give an example of a food chain and state the different trophic levels in it.",
+          "hints": [
+            "Recall that trophic levels represent feeding positions in a food chain",
+            "Start with producers (plants), then primary consumers (herbivores), then secondary consumers (carnivores)",
+            "Example: Grass → Grasshopper → Frog → Snake"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "trophic levels",
+            "food chain",
+            "ecosystem",
+            "energy flow"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What is the role of decomposers in the ecosystem?",
+          "hints": [
+            "Think about what happens to dead organisms and waste",
+            "Decomposers break down complex organic matter",
+            "They recycle nutrients back into the soil"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "decomposers",
+            "nutrient cycling",
+            "ecosystem balance",
+            "microorganisms"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "13.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why are some substances biodegradable and some non-biodegradable?",
+          "hints": [
+            "Consider the chemical structure of substances",
+            "Think about whether enzymes can break them down",
+            "Natural vs synthetic materials"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "biodegradable",
+            "non-biodegradable",
+            "enzymes",
+            "chemical structure"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Give any two ways in which biodegradable substances would affect the environment.",
+          "hints": [
+            "They can be broken down by microorganisms",
+            "They can cause foul smell if accumulated",
+            "They can be used as compost/manure"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "biodegradable",
+            "environmental impact",
+            "waste management",
+            "composting"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Give any two ways in which non-biodegradable substances would affect the environment.",
+          "hints": [
+            "They accumulate and cause pollution",
+            "They can harm animals if ingested",
+            "They take up landfill space for long periods"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "non-biodegradable",
+            "pollution",
+            "waste accumulation",
+            "plastics"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "13.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What is ozone and how does it affect any ecosystem?",
+          "hints": [
+            "Ozone is O3 molecule",
+            "It forms a protective layer in stratosphere",
+            "It blocks harmful UV radiation",
+            "UV radiation can damage living organisms"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "ozone layer",
+            "UV radiation",
+            "ecosystem protection",
+            "atmosphere"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "How can you help in reducing the problem of waste disposal? Give any two methods.",
+          "hints": [
+            "Practice segregation of biodegradable and non-biodegradable waste",
+            "Reduce, reuse, recycle",
+            "Use cloth bags instead of plastic",
+            "Compost kitchen waste"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "waste disposal",
+            "recycling",
+            "reduce reuse recycle",
+            "environmental responsibility"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "End-of-Chapter",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the following groups contain only biodegradable items? (a) Grass, flowers and leather (b) Grass, wood and plastic (c) Fruit-peels, cake and lime-juice (d) Cake, wood and grass",
+          "hints": [
+            "Plastic is non-biodegradable",
+            "Leather is biodegradable as it comes from animals",
+            "All items in option (c) are organic and biodegradable"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "biodegradable",
+            "multiple choice",
+            "waste classification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Which of the following constitute a food-chain? (a) Grass, wheat and mango (b) Grass, goat and human (c) Goat, cow and elephant (d) Grass, fish and goat",
+          "hints": [
+            "A food chain shows energy transfer from one organism to another",
+            "It must include producers and consumers",
+            "Option (b) shows grass (producer) → goat (primary consumer) → human (secondary consumer)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "food chain",
+            "multiple choice",
+            "energy transfer"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Which of the following are environment-friendly practices? (a) Carrying cloth-bags to put purchases in while shopping (b) Switching off unnecessary lights and fans (c) Walking to school instead of getting your mother to drop you on her scooter (d) All of the above",
+          "hints": [
+            "All options reduce environmental impact",
+            "Cloth bags reduce plastic waste",
+            "Switching off saves energy",
+            "Walking reduces pollution"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "environment-friendly",
+            "sustainable practices",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What will happen if we kill all the organisms in one trophic level?",
+          "hints": [
+            "It will disrupt the food chain",
+            "The trophic level above will starve",
+            "The trophic level below may overpopulate",
+            "Ecosystem balance will be disturbed"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "trophic levels",
+            "ecosystem disruption",
+            "food chain balance"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Will the impact of removing all the organisms in a trophic level be different for different trophic levels? Can the organisms of any trophic level be removed without causing any damage to the ecosystem?",
+          "hints": [
+            "Removing producers affects entire ecosystem",
+            "Removing top predators may cause prey overpopulation",
+            "No trophic level can be removed without consequences",
+            "Each level has specific ecological role"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "trophic levels",
+            "ecosystem stability",
+            "interdependence"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "What is biological magnification? Will the levels of this magnification be different at different levels of the ecosystem?",
+          "hints": [
+            "It's accumulation of non-biodegradable chemicals in food chain",
+            "Concentration increases at higher trophic levels",
+            "Top predators have highest concentration",
+            "Example: DDT in eagles"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "biological magnification",
+            "bioaccumulation",
+            "pesticides",
+            "food chain"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "What are the problems caused by the non-biodegradable wastes that we generate?",
+          "hints": [
+            "They cause land pollution",
+            "They can choke drains and cause floods",
+            "Animals may eat them and die",
+            "They release toxic chemicals when burned"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "non-biodegradable waste",
+            "pollution",
+            "environmental problems",
+            "plastics"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "If all the waste we generate is biodegradable, will this have no impact on the environment?",
+          "hints": [
+            "Biodegradable waste can still cause problems",
+            "It can produce methane (greenhouse gas)",
+            "It can cause foul smell and attract pests",
+            "It requires proper management like composting"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "biodegradable waste",
+            "waste management",
+            "environmental impact"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Why is damage to the ozone layer a cause for concern? What steps are being taken to limit this damage?",
+          "hints": [
+            "Ozone layer blocks harmful UV radiation",
+            "UV causes skin cancer, cataracts, damages plants",
+            "Montreal Protocol banned CFCs",
+            "CFC-free refrigerators are now mandatory"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "ozone layer depletion",
+            "UV radiation",
+            "CFCs",
+            "Montreal Protocol"
+          ]
+        }
+      ]
+    }
+  ]
+}

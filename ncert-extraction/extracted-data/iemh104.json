@@ -1,0 +1,110 @@
+{
+  "chapter_number": 4,
+  "chapter_title": "LINEAR EQUATIONS IN TWO VARIABLES",
+  "exercises": [
+    {
+      "exercise_number": "4.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "The cost of a notebook is twice the cost of a pen. Write a linear equation in two variables to represent this statement. (Take the cost of a notebook to be ` x and that of a pen to be ` y).",
+          "hints": [
+            "Let notebook cost = x, pen cost = y",
+            "Twice means multiply by 2",
+            "Equation: x = 2y or x - 2y = 0"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "word problem",
+            "equation formation",
+            "cost comparison"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Express the following linear equations in the form ax + by + c = 0 and indicate the values of a, b and c in each case: (i) 2x + 3y = 9.35 (ii) x – y/5 – 10 = 0 (iii) –2x + 3y = 6 (iv) x = 3y (v) 2x = –5y (vi) 3x + 2 = 0 (vii) y – 2 = 0 (viii) 5 = 2x",
+          "hints": [
+            "Rearrange to ax + by + c = 0 form",
+            "Identify coefficients a, b, c",
+            "Remember c can be negative",
+            "Standard form requires all terms on one side"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "standard form",
+            "coefficient identification",
+            "equation rearrangement"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which one of the following options is true, and why? y = 3x + 5 has (i) a unique solution, (ii) only two solutions, (iii) infinitely many solutions",
+          "hints": [
+            "Recall linear equations in two variables have infinite solutions",
+            "For each x value, there's a corresponding y",
+            "Check if it fits ax + by + c = 0 form"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "solution properties",
+            "infinite solutions",
+            "linear equation characteristics"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Write four solutions for each of the following equations: (i) 2x + y = 7 (ii) πx + y = 9 (iii) x = 4y",
+          "hints": [
+            "Choose different x values (0, 1, 2, etc.)",
+            "Solve for corresponding y",
+            "Verify each pair satisfies equation",
+            "Solutions can be written as ordered pairs (x, y)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "solution finding",
+            "ordered pairs",
+            "substitution method"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Check which of the following are solutions of the equation x – 2y = 4 and which are not: (i) (0, 2) (ii) (2, 0) (iii) (4, 0) (iv) (√2, 4√2) (v) (1, 1)",
+          "hints": [
+            "Substitute x and y values into equation",
+            "Calculate left side",
+            "Check if equals 4",
+            "Remember order: (x, y)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "solution verification",
+            "substitution",
+            "ordered pair checking"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the value of k, if x = 2, y = 1 is a solution of the equation 2x + 3y = k.",
+          "hints": [
+            "Substitute x=2, y=1 into equation",
+            "Calculate 2(2) + 3(1)",
+            "Result equals k",
+            "Simple arithmetic calculation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "parameter finding",
+            "substitution",
+            "linear equation solving"
+          ]
+        }
+      ]
+    }
+  ]
+}

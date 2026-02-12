@@ -1,0 +1,125 @@
+{
+  "chapter_number": 8,
+  "chapter_title": "Introduction to Trigonometry",
+  "exercises": [
+    {
+      "exercise_number": "8.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "In ΔABC, right-angled at B, AB = 24 cm, BC = 7 cm. Determine (i) sin A, cos A (ii) sin C, cos C",
+          "hints": [
+            "Use trigonometric ratios",
+            "Identify the sides of the triangle"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "trigonometric ratios",
+            "right triangle"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "In Fig. 8.13, find tan P – cot R",
+          "hints": [
+            "Use trigonometric ratios",
+            "Identify the sides of the triangle"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "trigonometric ratios",
+            "right triangle"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "If sin A = 3/5, calculate cos A and tan A",
+          "hints": [
+            "Use trigonometric ratios",
+            "Pythagorean identity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "trigonometric ratios",
+            "Pythagorean identity"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Given 15 cot A = 8, find sin A and sec A",
+          "hints": [
+            "Use trigonometric ratios",
+            "Reciprocal identity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "trigonometric ratios",
+            "reciprocal identity"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "8.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Evaluate the following (i) sin 60° cos 30° + sin 30° cos 60° (ii) 2 tan2 45° + cos2 30° – sin2 60°",
+          "hints": [
+            "Use trigonometric values for 30°, 45°, and 60°",
+            "Apply trigonometric identities"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "trigonometric values",
+            "trigonometric identities"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Choose the correct option and justify your choice (i) 2 tan 30° / (1 + tan2 30°) = (A) sin 60° (B) cos 60° (C) tan 60° (D) sin 30°",
+          "hints": [
+            "Use trigonometric values for 30° and 60°",
+            "Apply trigonometric identities"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "trigonometric values",
+            "trigonometric identities"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "8.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Express the trigonometric ratios sin A, sec A and tan A in terms of cot A",
+          "hints": [
+            "Use reciprocal identity",
+            "Use Pythagorean identity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "reciprocal identity",
+            "Pythagorean identity"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Write all the other trigonometric ratios of ∠A in terms of sec A",
+          "hints": [
+            "Use reciprocal identity",
+            "Use Pythagorean identity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "reciprocal identity",
+            "Pythagorean identity"
+          ]
+        }
+      ]
+    }
+  ]
+}

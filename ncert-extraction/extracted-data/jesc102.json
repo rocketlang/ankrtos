@@ -1,0 +1,448 @@
+{
+  "chapter_number": 2,
+  "chapter_title": "Acids, Bases and Salts",
+  "exercises": [
+    {
+      "exercise_number": "2.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "You have been provided with three test tubes. One of them contains distilled water and the other two contain an acidic solution and a basic solution, respectively. If you are given only red litmus paper, how will you identify the contents of each test tube?",
+          "hints": [
+            "Use red litmus paper to test for acidity or basicity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "acids",
+            "bases",
+            "litmus test"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why should curd and sour substances not be kept in brass and copper vessels?",
+          "hints": [
+            "Consider the chemical properties of curd and sour substances"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "acids",
+            "metals",
+            "corrosion"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Which gas is usually liberated when an acid reacts with a metal? Illustrate with an example. How will you test for the presence of this gas?",
+          "hints": [
+            "Consider the reaction between an acid and a metal"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "acids",
+            "metals",
+            "hydrogen gas"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Metal compound A reacts with dilute hydrochloric acid to produce effervescence. The gas evolved extinguishes a burning candle. Write a balanced chemical equation for the reaction if one of the compounds formed is calcium chloride.",
+          "hints": [
+            "Consider the reaction between a metal compound and an acid"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "acids",
+            "metals",
+            "chemical equations"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why do HCl, HNO3, etc., show acidic characters in aqueous solutions while solutions of compounds like alcohol and glucose do not show acidic character?",
+          "hints": [
+            "Consider the chemical properties of HCl and HNO3"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "acids",
+            "aqueous solutions"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why does an aqueous solution of an acid conduct electricity?",
+          "hints": [
+            "Consider the chemical properties of acids in aqueous solutions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "acids",
+            "electricity"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why does dry HCl gas not change the colour of the dry litmus paper?",
+          "hints": [
+            "Consider the chemical properties of HCl gas"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "acids",
+            "litmus test"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "While diluting an acid, why is it recommended that the acid should be added to water and not water to the acid?",
+          "hints": [
+            "Consider the safety precautions when handling acids"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "acids",
+            "safety precautions"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "How is the concentration of hydronium ions (H3O+) affected when a solution of an acid is diluted?",
+          "hints": [
+            "Consider the chemical properties of acids in aqueous solutions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "acids",
+            "dilution"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "How is the concentration of hydroxide ions (OH–) affected when excess base is dissolved in a solution of sodium hydroxide?",
+          "hints": [
+            "Consider the chemical properties of bases in aqueous solutions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "bases",
+            "dilution"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "You have two solutions, A and B. The pH of solution A is 6 and pH of solution B is 8. Which solution has more hydrogen ion concentration? Which of this is acidic and which one is basic?",
+          "hints": [
+            "Consider the pH scale"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pH scale",
+            "acids",
+            "bases"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What effect does the concentration of H+(aq) ions have on the nature of the solution?",
+          "hints": [
+            "Consider the chemical properties of acids in aqueous solutions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "acids",
+            "concentration"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Do basic solutions also have H+(aq) ions? If yes, then why are these basic?",
+          "hints": [
+            "Consider the chemical properties of bases in aqueous solutions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "bases",
+            "H+ ions"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Under what soil condition do you think a farmer would treat the soil of his fields with quick lime (calcium oxide) or slaked lime (calcium hydroxide) or chalk (calcium carbonate)?",
+          "hints": [
+            "Consider the chemical properties of soil"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "soil",
+            "fertilizers"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What is the common name of the compound Ca(ClO)2?",
+          "hints": [
+            "Consider the chemical properties of Ca(ClO)2"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "compounds",
+            "nomenclature"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Name the substance which on treatment with chlorine yields bleaching powder.",
+          "hints": [
+            "Consider the chemical properties of bleaching powder"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "bleaching powder",
+            "chlorine"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Name the sodium compound which is used for softening hard water.",
+          "hints": [
+            "Consider the chemical properties of sodium compounds"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sodium compounds",
+            "water softening"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What will happen if a solution of sodium hydrocarbonate is heated? Give the equation of the reaction involved.",
+          "hints": [
+            "Consider the chemical properties of sodium hydrocarbonate"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sodium hydrocarbonate",
+            "heating"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Write an equation to show the reaction between Plaster of Paris and water.",
+          "hints": [
+            "Consider the chemical properties of Plaster of Paris"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Plaster of Paris",
+            "water"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Exercises",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A solution turns red litmus blue, its pH is likely to be",
+          "hints": [
+            "Consider the pH scale"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pH scale",
+            "litmus test"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "A solution reacts with crushed egg-shells to give a gas that turns lime-water milky. The solution contains",
+          "hints": [
+            "Consider the chemical properties of the solution"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "chemical reactions",
+            "lime water"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "10 mL of a solution of NaOH is found to be completely neutralised by 8 mL of a given solution of HCl. If we take 20 mL of the same solution of NaOH, the amount HCl solution (the same solution as before) required to neutralise it will be",
+          "hints": [
+            "Consider the chemical properties of NaOH and HCl"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "chemical reactions",
+            "neutralization"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Which one of the following types of medicines is used for treating indigestion?",
+          "hints": [
+            "Consider the medical uses of different types of medicines"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "medicines",
+            "indigestion"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Write word equations and then balanced equations for the reaction taking place when – (a) dilute sulphuric acid reacts with zinc granules. (b) dilute hydrochloric acid reacts with magnesium ribbon. (c) dilute sulphuric acid reacts with aluminium powder. (d) dilute hydrochloric acid reacts with iron filings.",
+          "hints": [
+            "Consider the chemical properties of the reactants"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "chemical reactions",
+            "balanced equations"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Compounds such as alcohols and glucose also contain hydrogen but are not categorised as acids. Describe an Activity to prove it.",
+          "hints": [
+            "Consider the chemical properties of alcohols and glucose"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "chemical properties",
+            "acids"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Why does distilled water not conduct electricity, whereas rain water does?",
+          "hints": [
+            "Consider the chemical properties of water"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "water",
+            "electricity"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Why do acids not show acidic behaviour in the absence of water?",
+          "hints": [
+            "Consider the chemical properties of acids"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "acids",
+            "water"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Five solutions A, B, C, D and E when tested with universal indicator showed pH as 4, 1, 11, 7 and 9, respectively. Which solution is (a) neutral? (b) strongly alkaline? (c) strongly acidic? (d) weakly acidic? (e) weakly alkaline? Arrange the pH in increasing order of hydrogen-ion concentration.",
+          "hints": [
+            "Consider the pH scale"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "pH scale",
+            "universal indicator"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Equal lengths of magnesium ribbons are taken in test tubes A and B. Hydrochloric acid (HCl) is added to test tube A, while acetic acid (CH3COOH) is added to test tube B. Amount and concentration taken for both the acids are same. In which test tube will the fizzing occur more vigorously and why?",
+          "hints": [
+            "Consider the chemical properties of HCl and CH3COOH"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "chemical reactions",
+            "fizzing"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Fresh milk has a pH of 6. How do you think the pH will change as it turns into curd? Explain your answer.",
+          "hints": [
+            "Consider the chemical properties of milk and curd"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "milk",
+            "curd",
+            "pH scale"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "A milkman adds a very small amount of baking soda to fresh milk. (a) Why does he shift the pH of the fresh milk from 6 to slightly alkaline? (b) Why does this milk take a long time to set as curd?",
+          "hints": [
+            "Consider the chemical properties of baking soda and milk"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "baking soda",
+            "milk",
+            "pH scale"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "Plaster of Paris should be stored in a moisture-proof container. Explain why?",
+          "hints": [
+            "Consider the chemical properties of Plaster of Paris"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Plaster of Paris",
+            "storage"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "What is a neutralisation reaction? Give two examples.",
+          "hints": [
+            "Consider the chemical properties of acids and bases"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "neutralization reactions",
+            "acids",
+            "bases"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "Give two important uses of washing soda and baking soda.",
+          "hints": [
+            "Consider the chemical properties of washing soda and baking soda"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "washing soda",
+            "baking soda",
+            "uses"
+          ]
+        }
+      ]
+    }
+  ]
+}

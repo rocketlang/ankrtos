@@ -1,0 +1,102 @@
+{
+  "chapter_number": 10,
+  "chapter_title": "HERON’S FORMULA",
+  "exercises": [
+    {
+      "exercise_number": "10.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A traffic signal board, indicating ‘SCHOOL AHEAD’, is an equilateral triangle with side ‘a’. Find the area of the signal board, using Heron’s formula. If its perimeter is 180 cm, what will be the area of the signal board?",
+          "hints": [
+            "For equilateral triangle, all sides are equal.",
+            "Use Heron's formula: Area = √[s(s-a)(s-b)(s-c)] where s = (a+b+c)/2.",
+            "If perimeter is 180 cm, side a = perimeter/3."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "equilateral triangle",
+            "Heron's formula",
+            "perimeter"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The triangular side walls of a flyover have been used for advertisements. The sides of the walls are 122 m, 22 m and 120 m (see Fig. 10.6). The advertisements yield an earning of ` 5000 per m2 per year. A company hired one of its walls for 3 months. How much rent did it pay?",
+          "hints": [
+            "First find area of triangular wall using Heron's formula.",
+            "Calculate s = (122+22+120)/2.",
+            "Then compute area = √[s(s-122)(s-22)(s-120)].",
+            "Rent for 3 months = (area * 5000 * 3)/12."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Heron's formula",
+            "area application",
+            "rent calculation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "There is a slide in a park. One of its side walls has been painted in some colour with a message “KEEP THE PARK GREEN AND CLEAN” (see Fig. 10.7 ). If the sides of the wall are 15 m, 11 m and 6 m, find the area painted in colour.",
+          "hints": [
+            "The painted area is the area of the triangular wall.",
+            "Use Heron's formula with sides 15 m, 11 m, 6 m.",
+            "Compute s = (15+11+6)/2."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Heron's formula",
+            "real-life application",
+            "triangle area"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the area of a triangle two sides of which are 18cm and 10cm and the perimeter is 42cm.",
+          "hints": [
+            "Let sides be a=18 cm, b=10 cm, perimeter=42 cm.",
+            "Find third side c = perimeter - (a+b).",
+            "Then use Heron's formula with s = perimeter/2."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Heron's formula",
+            "perimeter",
+            "triangle sides"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Sides of a triangle are in the ratio of 12 : 17 : 25 and its perimeter is 540cm. Find its area.",
+          "hints": [
+            "Let sides be 12x, 17x, 25x.",
+            "Perimeter = 12x+17x+25x = 540 cm, solve for x.",
+            "Then find actual sides and use Heron's formula."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "ratio",
+            "Heron's formula",
+            "perimeter"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "An isosceles triangle has perimeter 30 cm and each of the equal sides is 12 cm. Find the area of the triangle.",
+          "hints": [
+            "Equal sides = 12 cm each, perimeter = 30 cm.",
+            "Find third side = perimeter - 2*12.",
+            "Then use Heron's formula with s = perimeter/2."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "isosceles triangle",
+            "Heron's formula",
+            "perimeter"
+          ]
+        }
+      ]
+    }
+  ]
+}

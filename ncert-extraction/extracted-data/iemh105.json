@@ -1,0 +1,138 @@
+{
+  "chapter_number": 5,
+  "chapter_title": "INTRODUCTION TO EUCLID’S GEOMETRY",
+  "exercises": [
+    {
+      "exercise_number": "5.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the following statements are true and which are false? Give reasons for your answers.\n(i) Only one line can pass through a single point.\n(ii) There are an infinite number of lines which pass through two distinct points.\n(iii) A terminated line can be produced indefinitely on both the sides.\n(iv) If two circles are equal, then their radii are equal.\n(v) In Fig. 5.9, if AB = PQ and PQ = XY, then AB = XY.",
+          "hints": [
+            "Recall Euclid's axioms and postulates.",
+            "For (i), consider how many lines can pass through a single point.",
+            "For (ii), recall the axiom about lines through two distinct points.",
+            "For (iii), refer to Postulate 2.",
+            "For (iv), think about the definition of equal circles.",
+            "For (v), use Euclid's first axiom: things equal to the same thing are equal to one another."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "true/false",
+            "Euclid's axioms",
+            "postulates",
+            "reasoning"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Give a definition for each of the following terms. Are there other terms that need to be defined first? What are they, and how might you define them?\n(i) parallel lines\n(ii) perpendicular lines\n(iii) line segment\n(iv) radius of a circle\n(v) square",
+          "hints": [
+            "Start with basic undefined terms: point, line, plane.",
+            "For parallel lines, consider lines that never meet.",
+            "For perpendicular lines, think of lines meeting at right angles.",
+            "For line segment, recall it as a part of a line with two endpoints.",
+            "For radius, it's the distance from centre to any point on the circle.",
+            "For square, it's a quadrilateral with all sides equal and all angles right angles.",
+            "Identify prerequisite terms like 'right angle', 'circle', 'quadrilateral'."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "definitions",
+            "geometry terms",
+            "prerequisite terms",
+            "Euclidean geometry"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Consider two ‘postulates’ given below:\n(i) Given any two distinct points A and B, there exists a third point C which is in between A and B.\n(ii) There exist at least three points that are not on the same line.\nDo these postulates contain any undefined terms? Are these postulates consistent? Do they follow from Euclid’s postulates? Explain.",
+          "hints": [
+            "Identify undefined terms: 'point', 'line', 'between', 'distinct'.",
+            "Check consistency: see if they contradict each other or Euclid's postulates.",
+            "Recall Euclid's postulates do not explicitly guarantee a point between two points or non-collinear points.",
+            "Consider if these can be derived from Euclid's system or are independent assumptions."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "postulates",
+            "undefined terms",
+            "consistency",
+            "Euclid's geometry"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "If a point C lies between two points A and B such that AC = BC, then prove that AC = 1/2 AB. Explain by drawing the figure.",
+          "hints": [
+            "Draw a line segment AB with point C between A and B.",
+            "Use the given AC = BC.",
+            "Express AB as AC + BC (since C is between A and B).",
+            "Substitute BC with AC to get AB = AC + AC = 2AC.",
+            "Rearrange to find AC = AB/2."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "line segment",
+            "mid-point",
+            "proof",
+            "Euclidean geometry"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "In Question 4, point C is called a mid-point of line segment AB. Prove that every line segment has one and only one mid-point.",
+          "hints": [
+            "Assume there are two mid-points C and D of segment AB.",
+            "Use definition: mid-point means AC = CB and AD = DB.",
+            "Show that if C and D are both mid-points, then AC = AD (since both equal half of AB).",
+            "Conclude that C and D must coincide, proving uniqueness.",
+            "Use Euclid's axiom: things equal to the same thing are equal."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "mid-point",
+            "uniqueness proof",
+            "line segment",
+            "Euclidean geometry"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "In Fig. 5.10, if AC = BD, then prove that AB = CD.",
+          "hints": [
+            "From the figure, note that AC = AB + BC and BD = BC + CD.",
+            "Given AC = BD, so AB + BC = BC + CD.",
+            "Subtract BC from both sides using Euclid's axiom: if equals are subtracted from equals, remainders are equal.",
+            "You get AB = CD."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "line segments",
+            "equality proof",
+            "Euclid's axioms",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Why is Axiom 5, in the list of Euclid’s axioms, considered a ‘universal truth’? (Note that the question is not about the fifth postulate.)",
+          "hints": [
+            "Recall Axiom 5: The whole is greater than the part.",
+            "Explain that this is self-evident in all contexts, not just geometry.",
+            "Give an example: if A is a whole and B is a part of A, then A > B.",
+            "Mention that it applies to magnitudes like length, area, volume, etc.",
+            "It is accepted without proof as an obvious universal truth."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Euclid's axioms",
+            "universal truth",
+            "whole and part",
+            "geometry foundations"
+          ]
+        }
+      ]
+    }
+  ]
+}

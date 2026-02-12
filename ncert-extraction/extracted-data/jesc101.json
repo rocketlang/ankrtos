@@ -1,0 +1,446 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Chemical Reactions and Equations",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why should a magnesium ribbon be cleaned before burning in air?",
+          "hints": [
+            "Think about surface oxidation",
+            "What forms on magnesium when exposed to air?",
+            "How does cleaning affect the reaction?"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "chemical reactions",
+            "magnesium",
+            "practical activity"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Write the balanced equation for the following chemical reactions.\n(i) Hydrogen + Chlorine → Hydrogen chloride\n(ii) Barium chloride + Aluminium sulphate → Barium sulphate + Aluminium chloride\n(iii) Sodium + Water → Sodium hydroxide + Hydrogen",
+          "hints": [
+            "Count atoms on both sides",
+            "Use correct chemical formulas",
+            "Balance using coefficients"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "balancing equations",
+            "chemical equations",
+            "stoichiometry"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Write a balanced chemical equation with state symbols for the following reactions.\n(i) Solutions of barium chloride and sodium sulphate in water react to give insoluble barium sulphate and the solution of sodium chloride.\n(ii) Sodium hydroxide solution (in water) reacts with hydrochloric acid solution (in water) to produce sodium chloride solution and water.",
+          "hints": [
+            "Include (aq) for aqueous solutions",
+            "(s) for solids/precipitates",
+            "Balance both mass and charge"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "balanced equations",
+            "state symbols",
+            "precipitation reaction"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A solution of a substance 'X' is used for whitewashing.\n(i) Name the substance 'X' and write its formula.\n(ii) Write the reaction of the substance 'X' named in (i) above with water.",
+          "hints": [
+            "Think about whitewashing materials",
+            "What compound gives shiny finish?",
+            "Calcium compounds are commonly used"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "whitewashing",
+            "calcium compounds",
+            "application"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why is the amount of gas collected in one of the test tubes in Activity 1.7 double of the amount collected in the other? Name this gas.",
+          "hints": [
+            "Recall electrolysis of water",
+            "Ratio of hydrogen to oxygen",
+            "Chemical formula of water"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "electrolysis",
+            "water decomposition",
+            "gas collection"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why does the colour of copper sulphate solution change when an iron nail is dipped in it?",
+          "hints": [
+            "Think about displacement reaction",
+            "What metal is more reactive?",
+            "Color of copper ions vs iron ions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "displacement reaction",
+            "reactivity series",
+            "color change"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Give an example of a double displacement reaction other than the one given in Activity 1.10.",
+          "hints": [
+            "Exchange of ions between compounds",
+            "Formation of precipitate",
+            "Common salt reactions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "double displacement",
+            "precipitation",
+            "ionic exchange"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Identify the substances that are oxidised and the substances that are reduced in the following reactions.\n(i) 4Na(s) + O₂(g) → 2Na₂O(s)\n(ii) CuO(s) + H₂(g) → Cu(s) + H₂O(l)",
+          "hints": [
+            "Oxidation = gain of oxygen/loss of hydrogen",
+            "Reduction = loss of oxygen/gain of hydrogen",
+            "Track oxygen atoms"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "oxidation",
+            "reduction",
+            "redox reactions"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Exercises",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the statements about the reaction below are incorrect?\n2PbO(s) + C(s) → 2Pb(s) + CO₂(g)\n(a) Lead is getting reduced.\n(b) Carbon dioxide is getting oxidised.\n(c) Carbon is getting oxidised.\n(d) Lead oxide is getting reduced.\n(i) (a) and (b)\n(ii) (a) and (c)\n(iii) (a), (b) and (c)\n(iv) all",
+          "hints": [
+            "Identify oxidation and reduction",
+            "Check gain/loss of oxygen",
+            "Lead oxide loses oxygen"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "redox",
+            "oxidation reduction",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Fe₂O₃ + 2Al → Al₂O₃ + 2Fe\nThe above reaction is an example of a\n(a) combination reaction.\n(b) double displacement reaction.\n(c) decomposition reaction.\n(d) displacement reaction.",
+          "hints": [
+            "Check if elements are displacing each other",
+            "Aluminum displaces iron",
+            "More reactive metal replaces less reactive"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "displacement",
+            "thermite reaction",
+            "type of reaction"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What happens when dilute hydrochloric acid is added to iron fillings? Tick the correct answer.\n(a) Hydrogen gas and iron chloride are produced.\n(b) Chlorine gas and iron hydroxide are produced.\n(c) No reaction takes place.\n(d) Iron salt and water are produced.",
+          "hints": [
+            "Acid + metal reaction",
+            "Recall reactivity series",
+            "Hydrogen gas evolution"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "acid-metal reaction",
+            "hydrogen gas",
+            "single displacement"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What is a balanced chemical equation? Why should chemical equations be balanced?",
+          "hints": [
+            "Law of conservation of mass",
+            "Atoms cannot be created/destroyed",
+            "Equal atoms on both sides"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "balanced equations",
+            "conservation of mass",
+            "chemical equations"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Translate the following statements into chemical equations and then balance them.\n(a) Hydrogen gas combines with nitrogen to form ammonia.\n(b) Hydrogen sulphide gas burns in air to give water and sulphur dioxide.\n(c) Barium chloride reacts with aluminium sulphate to give aluminium chloride and a precipitate of barium sulphate.\n(d) Potassium metal reacts with water to give potassium hydroxide and hydrogen gas.",
+          "hints": [
+            "Write word equations first",
+            "Use correct formulas",
+            "Balance atom counts"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "word to equation",
+            "balancing",
+            "chemical formulas"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Balance the following chemical equations.\n(a) HNO₃ + Ca(OH)₂ → Ca(NO₃)₂ + H₂O\n(b) NaOH + H₂SO₄ → Na₂SO₄ + H₂O\n(c) NaCl + AgNO₃ → AgCl + NaNO₃\n(d) BaCl₂ + H₂SO₄ → BaSO₄ + HCl",
+          "hints": [
+            "Count each type of atom",
+            "Start with most complex compound",
+            "Use smallest whole numbers"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "balancing equations",
+            "acid-base",
+            "precipitation"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Write the balanced chemical equations for the following reactions.\n(a) Calcium hydroxide + Carbon dioxide → Calcium carbonate + Water\n(b) Zinc + Silver nitrate → Zinc nitrate + Silver\n(c) Aluminium + Copper chloride → Aluminium chloride + Copper\n(d) Barium chloride + Potassium sulphate → Barium sulphate + Potassium chloride",
+          "hints": [
+            "Identify reaction types",
+            "Check reactivity series for displacement",
+            "Include state symbols if possible"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "reaction writing",
+            "displacement",
+            "precipitation"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Write the balanced chemical equation for the following and identify the type of reaction in each case.\n(a) Potassium bromide(aq) + Barium iodide(aq) → Potassium iodide(aq) + Barium bromide(s)\n(b) Zinc carbonate(s) → Zinc oxide(s) + Carbon dioxide(g)\n(c) Hydrogen(g) + Chlorine(g) → Hydrogen chloride(g)\n(d) Magnesium(s) + Hydrochloric acid(aq) → Magnesium chloride(aq) + Hydrogen(g)",
+          "hints": [
+            "Classify as combination/decomposition/displacement",
+            "Balance equations",
+            "Note physical states"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "reaction types",
+            "balanced equations",
+            "classification"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "What does one mean by exothermic and endothermic reactions? Give examples.",
+          "hints": [
+            "Energy release vs absorption",
+            "Temperature changes",
+            "Common examples from chapter"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exothermic",
+            "endothermic",
+            "energy changes"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Why is respiration considered an exothermic reaction? Explain.",
+          "hints": [
+            "Energy release in cells",
+            "Glucose oxidation",
+            "Body heat production"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "respiration",
+            "exothermic",
+            "biological reactions"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Why are decomposition reactions called the opposite of combination reactions? Write equations for these reactions.",
+          "hints": [
+            "One forms multiple products, other forms single product",
+            "Reverse processes",
+            "Examples from activities"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "decomposition",
+            "combination",
+            "opposite reactions"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Write one equation each for decomposition reactions where energy is supplied in the form of heat, light or electricity.",
+          "hints": [
+            "Thermal: heating compounds",
+            "Photolytic: sunlight on silver salts",
+            "Electrolytic: water decomposition"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "decomposition",
+            "energy types",
+            "examples"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "What is the difference between displacement and double displacement reactions? Write equations for these reactions.",
+          "hints": [
+            "Single element vs ion exchange",
+            "Reactivity series for displacement",
+            "Precipitation for double displacement"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "displacement",
+            "double displacement",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "In the refining of silver, the recovery of silver from silver nitrate solution involved displacement by copper metal. Write down the reaction involved.",
+          "hints": [
+            "Copper is more reactive than silver",
+            "Silver gets displaced",
+            "Copper goes into solution"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "displacement",
+            "silver refining",
+            "reactivity series"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "What do you mean by a precipitation reaction? Explain by giving examples.",
+          "hints": [
+            "Formation of insoluble solid",
+            "Ionic compounds in solution",
+            "Double displacement often involved"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "precipitation",
+            "insoluble salts",
+            "examples"
+          ]
+        },
+        {
+          "question_number": 16,
+          "question_text": "Explain the following in terms of gain or loss of oxygen with two examples each.\n(a) Oxidation\n(b) Reduction",
+          "hints": [
+            "Oxidation = gain of oxygen",
+            "Reduction = loss of oxygen",
+            "Use examples from chapter"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "oxidation",
+            "reduction",
+            "oxygen transfer"
+          ]
+        },
+        {
+          "question_number": 17,
+          "question_text": "A shiny brown coloured element 'X' on heating in air becomes black in colour. Name the element 'X' and the black coloured compound formed.",
+          "hints": [
+            "Common brown metal that oxidizes",
+            "Copper turns black when heated",
+            "Forms copper(II) oxide"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "oxidation",
+            "copper",
+            "color change"
+          ]
+        },
+        {
+          "question_number": 18,
+          "question_text": "Why do we apply paint on iron articles?",
+          "hints": [
+            "Prevent contact with air/moisture",
+            "Stop corrosion/rusting",
+            "Protective layer"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "corrosion prevention",
+            "painting",
+            "rust protection"
+          ]
+        },
+        {
+          "question_number": 19,
+          "question_text": "Oil and fat containing food items are flushed with nitrogen. Why?",
+          "hints": [
+            "Prevent oxidation",
+            "Avoid rancidity",
+            "Inert atmosphere"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "rancidity",
+            "food preservation",
+            "nitrogen flushing"
+          ]
+        },
+        {
+          "question_number": 20,
+          "question_text": "Explain the following terms with one example each.\n(a) Corrosion\n(b) Rancidity",
+          "hints": [
+            "Corrosion: metal degradation",
+            "Rancidity: fat/oil oxidation",
+            "Common examples from daily life"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "corrosion",
+            "rancidity",
+            "definitions"
+          ]
+        }
+      ]
+    }
+  ]
+}

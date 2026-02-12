@@ -1,0 +1,267 @@
+{
+  "chapter_number": 10,
+  "chapter_title": "Circles",
+  "exercises": [
+    {
+      "exercise_number": "10.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How many tangents can a circle have?",
+          "hints": [
+            "Consider different positions of a point relative to the circle (inside, on, outside).",
+            "Recall the three cases discussed in Section 10.3."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "tangent",
+            "basic properties"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Fill in the blanks : (i) A tangent to a circle intersects it in ______ point (s). (ii) A line intersecting a circle in two points is called a ______. (iii) A circle can have ______ parallel tangents at the most. (iv) The common point of a tangent to a circle and the circle is called ______.",
+          "hints": [
+            "Refer to definitions of tangent, secant, and point of contact.",
+            "Think about the maximum number of tangents parallel to a given secant."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definitions",
+            "terminology",
+            "fill in blanks"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A tangent PQ at a point P of a circle of radius 5 cm meets a line through the centre O at a point Q so that OQ = 12 cm. Length PQ is : (A) 12 cm (B) 13 cm (C) 8.5 cm (D) √119 cm.",
+          "hints": [
+            "Apply Theorem 10.1: tangent is perpendicular to radius at point of contact.",
+            "Use Pythagoras theorem in right triangle OPQ."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "tangent length",
+            "Pythagoras theorem",
+            "radius",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Draw a circle and two lines parallel to a given line such that one is a tangent and the other, a secant to the circle.",
+          "hints": [
+            "Recall Activity 2: lines parallel to a secant can become tangents.",
+            "Consider the positions where the chord length becomes zero."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "construction",
+            "tangent and secant",
+            "parallel lines",
+            "geometric drawing"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "10.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "From a point Q, the length of the tangent to a circle is 24 cm and the distance of Q from the centre is 25 cm. The radius of the circle is (A) 7 cm (B) 12 cm (C) 15 cm (D) 24.5 cm",
+          "hints": [
+            "Use Theorem 10.2: tangents from external point are equal.",
+            "Apply Pythagoras theorem: radius² = (distance from centre)² - (tangent length)²."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "tangent length",
+            "radius",
+            "Pythagoras theorem",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "In Fig. 10.11, if TP and TQ are the two tangents to a circle with centre O so that ∠ POQ = 110°, then ∠ PTQ is equal to (A) 60° (B) 70° (C) 80° (D) 90°",
+          "hints": [
+            "Use Theorem 10.2: tangents from external point are equal, so triangle PTQ is isosceles.",
+            "Sum of angles in quadrilateral OPTQ is 360°. Use right angles at P and Q."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "tangent properties",
+            "angle calculation",
+            "quadrilateral angles",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "If tangents PA and PB from a point P to a circle with centre O are inclined to each other at angle of 80°, then ∠ POA is equal to (A) 50° (B) 60° (C) 70° (D) 80°",
+          "hints": [
+            "Tangents from external point are equal, so triangle PAB is isosceles.",
+            "OP bisects angle APB (Theorem 10.2 remark). Use right triangle OPA."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "tangent properties",
+            "angle bisector",
+            "right triangle",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Prove that the tangents drawn at the ends of a diameter of a circle are parallel.",
+          "hints": [
+            "Use Theorem 10.1: tangent is perpendicular to radius at point of contact.",
+            "If two lines are perpendicular to the same line, they are parallel."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "proof",
+            "parallel tangents",
+            "diameter",
+            "perpendicular lines"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Prove that the perpendicular at the point of contact to the tangent to a circle passes through the centre.",
+          "hints": [
+            "This is essentially the converse of Theorem 10.1.",
+            "Assume a line through point of contact perpendicular to tangent. Show it must contain centre."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "proof",
+            "converse theorem",
+            "perpendicular tangent",
+            "centre"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "The length of a tangent from a point A at distance 5 cm from the centre of the circle is 4 cm. Find the radius of the circle.",
+          "hints": [
+            "Apply Pythagoras theorem: radius² = (distance from centre)² - (tangent length)².",
+            "Similar to Q1 but with numbers given differently."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "tangent length",
+            "radius calculation",
+            "Pythagoras theorem"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Two concentric circles are of radii 5 cm and 3 cm. Find the length of the chord of the larger circle which touches the smaller circle.",
+          "hints": [
+            "Refer to Example 1: chord of larger circle touching smaller circle is bisected at point of contact.",
+            "Use Pythagoras theorem in right triangle formed by radius of smaller circle, half chord, and radius of larger circle."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "concentric circles",
+            "chord length",
+            "tangent chord",
+            "Pythagoras theorem"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "A quadrilateral ABCD is drawn to circumscribe a circle (see Fig. 10.12). Prove that AB + CD = AD + BC",
+          "hints": [
+            "Use Theorem 10.2: lengths of tangents from an external point to a circle are equal.",
+            "Let points of contact be P, Q, R, S on sides AB, BC, CD, DA respectively. Express sides in terms of tangent segments."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circumscribed quadrilateral",
+            "tangent properties",
+            "side sum proof",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "In Fig. 10.13, XY and X′Y′ are two parallel tangents to a circle with centre O and another tangent AB with point of contact C intersecting XY at A and X′Y′ at B. Prove that ∠ AOB = 90°.",
+          "hints": [
+            "Join OA, OB, OC. Use Theorem 10.1: tangents are perpendicular to radius at point of contact.",
+            "Consider triangles OAC and OBC. Use angle sum property in quadrilateral AOB?"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "parallel tangents",
+            "angle proof",
+            "right angle",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Prove that the angle between the two tangents drawn from an external point to a circle is supplementary to the angle subtended by the line-segment joining the points of contact at the centre.",
+          "hints": [
+            "Let external point P, tangents PA and PB, centre O. Need to prove ∠APB + ∠AOB = 180°.",
+            "Use Theorem 10.2: PA = PB, so triangle PAB is isosceles. Also OA ⟂ PA, OB ⟂ PB."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "tangent angle",
+            "supplementary angles",
+            "centre angle",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Prove that the parallelogram circumscribing a circle is a rhombus.",
+          "hints": [
+            "Use result of Q8: for circumscribed quadrilateral, sum of opposite sides are equal.",
+            "In parallelogram, opposite sides are equal. Combine to show all sides equal."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circumscribed parallelogram",
+            "rhombus proof",
+            "tangent properties",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "A triangle ABC is drawn to circumscribe a circle of radius 4 cm such that the segments BD and DC into which BC is divided by the point of contact D are of lengths 8 cm and 6 cm respectively (see Fig. 10.14). Find the sides AB and AC.",
+          "hints": [
+            "Let points of contact on AB, AC be E and F respectively. Use Theorem 10.2: tangents from a point to circle are equal.",
+            "Set AE = AF = x. Then AB = x + 8, AC = x + 6, BC = 14. Use Heron's formula or other methods to find x."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "circumscribed triangle",
+            "tangent segments",
+            "side calculation",
+            "geometry problem"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "Prove that opposite sides of a quadrilateral circumscribing a circle subtend supplementary angles at the centre of the circle.",
+          "hints": [
+            "Let quadrilateral ABCD circumscribe circle with centre O. Need to prove ∠AOB + ∠COD = 180° and ∠BOC + ∠DOA = 180°.",
+            "Join OA, OB, OC, OD to points of contact. Use fact that tangents are perpendicular to radii and angle sum around point O is 360°."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "circumscribed quadrilateral",
+            "supplementary angles at centre",
+            "tangent properties",
+            "proof"
+          ]
+        }
+      ]
+    }
+  ]
+}

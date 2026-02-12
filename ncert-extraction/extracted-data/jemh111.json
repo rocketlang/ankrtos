@@ -1,0 +1,238 @@
+{
+  "chapter_number": 11,
+  "chapter_title": "AREAS RELATED TO CIRCLES",
+  "exercises": [
+    {
+      "exercise_number": "11.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the area of a sector of a circle with radius 6 cm if angle of the sector is 60°.",
+          "hints": [
+            "Use formula: Area = (θ/360) × πr²",
+            "Substitute θ = 60°, r = 6 cm",
+            "Use π = 22/7 as stated"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sector area",
+            "basic formula"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the area of a quadrant of a circle whose circumference is 22 cm.",
+          "hints": [
+            "First find radius from circumference: C = 2πr",
+            "Quadrant means sector with θ = 90°",
+            "Use area formula for sector"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "quadrant",
+            "circumference",
+            "sector area"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The length of the minute hand of a clock is 14 cm. Find the area swept by the minute hand in 5 minutes.",
+          "hints": [
+            "Minute hand sweeps 360° in 60 minutes",
+            "In 5 minutes, angle = (5/60) × 360° = 30°",
+            "Use sector area formula with r = 14 cm"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "clock problem",
+            "real-life application",
+            "sector area"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "A chord of a circle of radius 10 cm subtends a right angle at the centre. Find the area of the corresponding : (i) minor segment (ii) major sector. (Use π = 3.14)",
+          "hints": [
+            "For minor segment: Area = Area of sector - Area of triangle",
+            "Sector angle = 90°, triangle is right-angled isosceles",
+            "Major sector area = πr² - minor sector area"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "segment area",
+            "right angle",
+            "major sector",
+            "triangle area"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "In a circle of radius 21 cm, an arc subtends an angle of 60° at the centre. Find: (i) the length of the arc (ii) area of the sector formed by the arc (iii) area of the segment formed by the corresponding chord",
+          "hints": [
+            "Arc length = (θ/360) × 2πr",
+            "Sector area = (θ/360) × πr²",
+            "Segment area = Sector area - Area of triangle",
+            "Triangle is equilateral (60° angle)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "arc length",
+            "sector area",
+            "segment area",
+            "equilateral triangle"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A chord of a circle of radius 15 cm subtends an angle of 60° at the centre. Find the areas of the corresponding minor and major segments of the circle. (Use π = 3.14 and √3 = 1.73)",
+          "hints": [
+            "Minor segment = Sector area - Triangle area",
+            "Triangle is equilateral with side = radius",
+            "Major segment = πr² - minor segment"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "minor segment",
+            "major segment",
+            "equilateral triangle",
+            "numerical calculation"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "A chord of a circle of radius 12 cm subtends an angle of 120° at the centre. Find the area of the corresponding segment of the circle. (Use π = 3.14 and √3 = 1.73)",
+          "hints": [
+            "Segment area = Sector area - Triangle area",
+            "Triangle is isosceles with vertex angle 120°",
+            "Use trigonometry to find triangle area"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "segment area",
+            "120° angle",
+            "trigonometry",
+            "isosceles triangle"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "A horse is tied to a peg at one corner of a square shaped grass field of side 15 m by means of a 5 m long rope (see Fig. 11.8). Find (i) the area of that part of the field in which the horse can graze. (ii) the increase in the grazing area if the rope were 10 m long instead of 5 m. (Use π = 3.14)",
+          "hints": [
+            "Grazing area is a quadrant (quarter circle)",
+            "Radius = rope length",
+            "Area = (1/4)πr²",
+            "Compare areas for r=5 and r=10"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "real-life application",
+            "quadrant",
+            "area comparison",
+            "square field"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "A brooch is made with silver wire in the form of a circle with diameter 35 mm. The wire is also used in making 5 diameters which divide the circle into 10 equal sectors as shown in Fig. 11.9. Find : (i) the total length of the silver wire required. (ii) the area of each sector of the brooch.",
+          "hints": [
+            "Total wire = Circumference + 5 diameters",
+            "Circumference = πd, diameter = 35 mm",
+            "Each sector angle = 360°/10 = 36°",
+            "Sector area = (36/360) × πr²"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "wire length",
+            "multiple sectors",
+            "diameter",
+            "practical application"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "An umbrella has 8 ribs which are equally spaced (see Fig. 11.10). Assuming umbrella to be a flat circle of radius 45 cm, find the area between the two consecutive ribs of the umbrella.",
+          "hints": [
+            "Area between ribs = Area of one sector",
+            "Number of sectors = number of ribs = 8",
+            "Sector angle = 360°/8 = 45°",
+            "Use sector area formula"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "equal sectors",
+            "ribs",
+            "umbrella",
+            "practical geometry"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "A car has two wipers which do not overlap. Each wiper has a blade of length 25 cm sweeping through an angle of 115°. Find the total area cleaned at each sweep of the blades.",
+          "hints": [
+            "Each wiper cleans a sector",
+            "Total area = 2 × sector area",
+            "Sector angle = 115°, radius = 25 cm",
+            "Use sector area formula"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "wiper problem",
+            "multiple sectors",
+            "real-life application",
+            "area sum"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "To warn ships for underwater rocks, a lighthouse spreads a red coloured light over a sector of angle 80° to a distance of 16.5 km. Find the area of the sea over which the ships are warned. (Use π = 3.14)",
+          "hints": [
+            "This is a sector area problem",
+            "Radius = 16.5 km",
+            "Angle = 80°",
+            "Convert km to appropriate units if needed"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "lighthouse",
+            "warning area",
+            "large scale",
+            "real-world application"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "A round table cover has six equal designs as shown in Fig. 11.11. If the radius of the cover is 28 cm, find the cost of making the designs at the rate of ₹ 0.35 per cm². (Use √3 = 1.7)",
+          "hints": [
+            "Each design is a segment",
+            "Number of designs = 6",
+            "Each sector angle = 360°/6 = 60°",
+            "Find area of one segment then multiply by 6",
+            "Multiply by rate for total cost"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "cost calculation",
+            "multiple segments",
+            "design",
+            "practical problem"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "Tick the correct answer in the following : Area of a sector of angle p (in degrees) of a circle with radius R is (A) p/180 × 2πR (B) p/180 × πR² (C) p/360 × 2πR (D) p/720 × 2πR²",
+          "hints": [
+            "Recall sector area formula: (θ/360) × πr²",
+            "Here θ = p, r = R",
+            "Match with given options"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "formula recall",
+            "multiple choice",
+            "conceptual"
+          ]
+        }
+      ]
+    }
+  ]
+}

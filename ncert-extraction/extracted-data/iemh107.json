@@ -1,0 +1,344 @@
+{
+  "chapter_number": 7,
+  "chapter_title": "TRIANGLES",
+  "exercises": [
+    {
+      "exercise_number": "7.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "In quadrilateral ACBD, AC = AD and AB bisects ∠ A (see Fig. 7.16). Show that ∆ ABC ≅ ∆ ABD. What can you say about BC and BD?",
+          "hints": [
+            "Use SAS congruence rule",
+            "AB is common side",
+            "∠CAB = ∠DAB because AB bisects ∠A"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "SAS congruence",
+            "angle bisector",
+            "quadrilateral"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "ABCD is a quadrilateral in which AD = BC and ∠ DAB = ∠ CBA (see Fig. 7.17). Prove that (i) ∆ ABD ≅ ∆ BAC (ii) BD = AC (iii) ∠ ABD = ∠ BAC.",
+          "hints": [
+            "AB is common to both triangles",
+            "Use SAS congruence rule",
+            "Corresponding parts of congruent triangles are equal"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "SAS congruence",
+            "quadrilateral",
+            "CPCT"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "AD and BC are equal perpendiculars to a line segment AB (see Fig. 7.18). Show that CD bisects AB.",
+          "hints": [
+            "Consider triangles AOD and BOC",
+            "Use AAS or ASA congruence",
+            "Vertical angles are equal"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "perpendicular lines",
+            "congruence",
+            "bisector"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "l and m are two parallel lines intersected by another pair of parallel lines p and q (see Fig. 7.19). Show that ∆ ABC ≅ ∆ CDA.",
+          "hints": [
+            "Alternate interior angles are equal",
+            "AC is common side",
+            "Use ASA or AAS congruence"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallel lines",
+            "alternate angles",
+            "congruence"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Line l is the bisector of an angle ∠ A and B is any point on l. BP and BQ are perpendiculars from B to the arms of ∠ A (see Fig. 7.20). Show that: (i) ∆ APB ≅ ∆ AQB (ii) BP = BQ or B is equidistant from the arms of ∠ A.",
+          "hints": [
+            "AB is common hypotenuse",
+            "∠PAB = ∠QAB (l bisects ∠A)",
+            "Use AAS or RHS congruence"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "angle bisector",
+            "perpendicular",
+            "RHS congruence"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "In Fig. 7.21, AC = AE, AB = AD and ∠ BAD = ∠ EAC. Show that BC = DE.",
+          "hints": [
+            "Add ∠BAC to both sides of ∠BAD = ∠EAC",
+            "Use SAS congruence for triangles ABC and ADE",
+            "Corresponding sides are equal"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "SAS congruence",
+            "angle addition",
+            "corresponding sides"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "AB is a line segment and P is its mid-point. D and E are points on the same side of AB such that ∠ BAD = ∠ ABE and ∠ EPA = ∠ DPB (see Fig. 7.22). Show that (i) ∆ DAP ≅ ∆ EBP (ii) AD = BE",
+          "hints": [
+            "AP = BP (P is midpoint)",
+            "∠DAP = ∠EBP from given angles",
+            "Use ASA congruence"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "midpoint",
+            "ASA congruence",
+            "line segment"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "In right triangle ABC, right angled at C, M is the mid-point of hypotenuse AB. C is joined to M and produced to a point D such that DM = CM. Point D is joined to point B (see Fig. 7.23). Show that: (i) ∆ AMC ≅ ∆ BMD (ii) ∠ DBC is a right angle. (iii) ∆ DBC ≅ ∆ ACB (iv) CM = 1/2 AB",
+          "hints": [
+            "Vertical angles at M are equal",
+            "Use SAS for part (i)",
+            "Corresponding angles in congruent triangles",
+            "Use RHS for part (iii)"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "right triangle",
+            "midpoint",
+            "SAS congruence",
+            "RHS congruence"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "7.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "In an isosceles triangle ABC, with AB = AC, the bisectors of ∠ B and ∠ C intersect each other at O. Join A to O. Show that : (i) OB = OC (ii) AO bisects ∠ A",
+          "hints": [
+            "Angles opposite equal sides are equal",
+            "Half of equal angles are equal",
+            "Use AAS or ASA congruence"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "isosceles triangle",
+            "angle bisector",
+            "congruence"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "In ∆ ABC, AD is the perpendicular bisector of BC (see Fig. 7.30). Show that ∆ ABC is an isosceles triangle in which AB = AC.",
+          "hints": [
+            "BD = DC (AD bisects BC)",
+            "∠ADB = ∠ADC = 90°",
+            "Use SAS congruence"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "perpendicular bisector",
+            "isosceles triangle",
+            "SAS congruence"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "ABC is an isosceles triangle in which altitudes BE and CF are drawn to equal sides AC and AB respectively (see Fig. 7.31). Show that these altitudes are equal.",
+          "hints": [
+            "∠A is common angle",
+            "∠AEB = ∠AFC = 90°",
+            "Use AAS congruence"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "isosceles triangle",
+            "altitudes",
+            "AAS congruence"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "ABC is a triangle in which altitudes BE and CF to sides AC and AB are equal (see Fig. 7.32). Show that (i) ∆ ABE ≅ ∆ ACF (ii) AB = AC, i.e., ABC is an isosceles triangle.",
+          "hints": [
+            "∠A is common",
+            "∠AEB = ∠AFC = 90°",
+            "BE = CF given",
+            "Use AAS congruence"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "altitudes",
+            "AAS congruence",
+            "isosceles triangle"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "ABC and DBC are two isosceles triangles on the same base BC (see Fig. 7.33). Show that ∠ ABD = ∠ ACD.",
+          "hints": [
+            "AB = AC and DB = DC",
+            "Use SSS congruence for triangles ABD and ACD",
+            "Corresponding angles are equal"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "isosceles triangles",
+            "common base",
+            "SSS congruence"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "∆ABC is an isosceles triangle in which AB = AC. Side BA is produced to D such that AD = AB (see Fig. 7.34). Show that ∠ BCD is a right angle.",
+          "hints": [
+            "AB = AC = AD",
+            "Angles in triangle ABC are equal",
+            "Use angle sum property in triangle BCD"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "isosceles triangle",
+            "angle properties",
+            "right angle"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "ABC is a right angled triangle in which ∠ A = 90° and AB = AC. Find ∠ B and ∠ C.",
+          "hints": [
+            "Angles opposite equal sides are equal",
+            "Sum of angles in triangle = 180°",
+            "∠B + ∠C = 90°"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "right triangle",
+            "isosceles triangle",
+            "angle calculation"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Show that the angles of an equilateral triangle are 60° each.",
+          "hints": [
+            "All sides equal in equilateral triangle",
+            "Angles opposite equal sides are equal",
+            "Sum of angles = 180°"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "equilateral triangle",
+            "angle proof",
+            "basic geometry"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "7.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "∆ ABC and ∆ DBC are two isosceles triangles on the same base BC and vertices A and D are on the same side of BC (see Fig. 7.39). If AD is extended to intersect BC at P, show that (i) ∆ ABD ≅ ∆ ACD (ii) ∆ ABP ≅ ∆ ACP (iii) AP bisects ∠ A as well as ∠ D. (iv) AP is the perpendicular bisector of BC.",
+          "hints": [
+            "AB = AC and DB = DC",
+            "Use SSS congruence for part (i)",
+            "Corresponding parts from congruent triangles",
+            "Use SAS for part (ii)"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "isosceles triangles",
+            "common base",
+            "SSS congruence",
+            "perpendicular bisector"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "AD is an altitude of an isosceles triangle ABC in which AB = AC. Show that (i) AD bisects BC (ii) AD bisects ∠ A.",
+          "hints": [
+            "Consider triangles ABD and ACD",
+            "∠ADB = ∠ADC = 90°",
+            "Use RHS congruence"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "altitude",
+            "isosceles triangle",
+            "RHS congruence"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Two sides AB and BC and median AM of one triangle ABC are respectively equal to sides PQ and QR and median PN of ∆ PQR (see Fig. 7.40). Show that: (i) ∆ ABM ≅ ∆ PQN (ii) ∆ ABC ≅ ∆ PQR",
+          "hints": [
+            "BM = 1/2 BC, QN = 1/2 QR",
+            "Use SSS congruence for part (i)",
+            "Corresponding angles from part (i)",
+            "Use SAS for part (ii)"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "median",
+            "SSS congruence",
+            "SAS congruence"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "BE and CF are two equal altitudes of a triangle ABC. Using RHS congruence rule, prove that the triangle ABC is isosceles.",
+          "hints": [
+            "Consider triangles BEC and CFB",
+            "BC is common hypotenuse",
+            "BE = CF given",
+            "Corresponding sides are equal"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "altitudes",
+            "RHS congruence",
+            "isosceles triangle"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "ABC is an isosceles triangle with AB = AC. Draw AP ⊥ BC to show that ∠ B = ∠ C.",
+          "hints": [
+            "Consider triangles APB and APC",
+            "AP is common side",
+            "∠APB = ∠APC = 90°",
+            "Use RHS congruence"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "isosceles triangle",
+            "perpendicular",
+            "RHS congruence"
+          ]
+        }
+      ]
+    }
+  ]
+}

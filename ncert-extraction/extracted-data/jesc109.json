@@ -1,0 +1,178 @@
+{
+  "chapter_number": 9,
+  "chapter_title": "Light – Reflection and Refraction",
+  "exercises": [
+    {
+      "exercise_number": "9.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Define the principal focus of a concave mirror.",
+          "hints": [
+            "Recall the definition from the text.",
+            "Think about where parallel rays meet after reflection."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definition",
+            "concave mirror",
+            "principal focus"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The radius of curvature of a spherical mirror is 20 cm. What is its focal length?",
+          "hints": [
+            "Use the relationship R = 2f.",
+            "Solve for f given R = 20 cm."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "calculation",
+            "radius of curvature",
+            "focal length"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Name a mirror that can give an erect and enlarged image of an object.",
+          "hints": [
+            "Recall the image characteristics for different mirrors.",
+            "Think about which mirror produces virtual, erect, and enlarged images."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "mirror types",
+            "image characteristics",
+            "application"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Why do we prefer a convex mirror as a rear-view mirror in vehicles?",
+          "hints": [
+            "Consider the field of view and image nature.",
+            "Think about safety and visibility aspects."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "convex mirror",
+            "application",
+            "safety",
+            "optics"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "9.2.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the focal length of a convex mirror whose radius of curvature is 32 cm.",
+          "hints": [
+            "Use R = 2f for spherical mirrors.",
+            "Note the sign convention for convex mirrors."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "calculation",
+            "convex mirror",
+            "focal length",
+            "radius of curvature"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "A concave mirror produces three times magnified (enlarged) real image of an object placed at 10 cm in front of it. Where is the image located?",
+          "hints": [
+            "Use magnification formula m = -v/u.",
+            "Given m = -3 (real image), u = -10 cm, solve for v."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "concave mirror",
+            "magnification",
+            "image distance",
+            "real image"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "9.3.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A ray of light travelling in air enters obliquely into water. Does the light ray bend towards the normal or away from the normal? Why?",
+          "hints": [
+            "Recall refraction principles.",
+            "Compare refractive indices of air and water."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "refraction",
+            "snell's law",
+            "optical density"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Light enters from air to glass having refractive index 1.50. What is the speed of light in the glass? The speed of light in vacuum is 3 × 10^8 m s^-1.",
+          "hints": [
+            "Use formula n = c/v.",
+            "Solve for v given n = 1.50, c = 3e8 m/s."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "refractive index",
+            "speed of light",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find out, from Table 9.3, the medium having highest optical density. Also find the medium with lowest optical density.",
+          "hints": [
+            "Refer to Table 9.3 in the text.",
+            "Optical density correlates with refractive index."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "optical density",
+            "refractive index",
+            "table reading"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "You are given kerosene, turpentine and water. In which of these does the light travel fastest? Use the information given in Table 9.3.",
+          "hints": [
+            "Speed is inversely proportional to refractive index.",
+            "Compare refractive indices from the table."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "speed of light",
+            "refractive index",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "The refractive index of diamond is 2.42. What is the meaning of this statement?",
+          "hints": [
+            "Recall definition of refractive index.",
+            "It relates speed of light in vacuum to speed in medium."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "refractive index",
+            "definition",
+            "diamond"
+          ]
+        }
+      ]
+    }
+  ]
+}

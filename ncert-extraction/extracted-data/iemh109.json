@@ -1,0 +1,295 @@
+{
+  "chapter_number": 9,
+  "chapter_title": "Circles",
+  "exercises": [
+    {
+      "exercise_number": "9.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Recall that two circles are congruent if they have the same radii. Prove that equal chords of congruent circles subtend equal angles at their centres.",
+          "hints": [
+            "Use the definition of congruent circles",
+            "Apply the concept of equal chords and subtended angles"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "congruent circles",
+            "equal chords",
+            "subtended angles"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Prove that if chords of congruent circles subtend equal angles at their centres, then the chords are equal.",
+          "hints": [
+            "Use the converse of the previous result",
+            "Apply the concept of equal subtended angles and chord length"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "congruent circles",
+            "equal subtended angles",
+            "chord length"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "9.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Two circles of radii 5 cm and 3 cm intersect at two points and the distance between their centres is 4 cm. Find the length of the common chord.",
+          "hints": [
+            "Draw a diagram",
+            "Apply the concept of intersecting circles and common chord"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "intersecting circles",
+            "common chord"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "If two equal chords of a circle intersect within the circle, prove that the segments of one chord are equal to corresponding segments of the other chord.",
+          "hints": [
+            "Use the concept of equal chords and intersecting chords",
+            "Apply the concept of segment equality"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "equal chords",
+            "intersecting chords",
+            "segment equality"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "If two equal chords of a circle intersect within the circle, prove that the line joining the point of intersection to the centre makes equal angles with the chords.",
+          "hints": [
+            "Use the concept of equal chords and intersecting chords",
+            "Apply the concept of angle equality"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "equal chords",
+            "intersecting chords",
+            "angle equality"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "If a line intersects two concentric circles (circles with the same centre) with centre O at A, B, C and D, prove that AB = CD.",
+          "hints": [
+            "Use the concept of concentric circles",
+            "Apply the concept of intersecting lines and circle properties"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "concentric circles",
+            "intersecting lines",
+            "circle properties"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Three girls Reshma, Salma and Mandip are playing a game by standing on a circle of radius 5m drawn in a park. Reshma throws a ball to Salma, Salma to Mandip, Mandip to Reshma. If the distance between Reshma and Salma and between Salma and Mandip is 6m each, what is the distance between Reshma and Mandip?",
+          "hints": [
+            "Draw a diagram",
+            "Apply the concept of circle and distance"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "circle",
+            "distance"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A circular park of radius 20m is situated in a colony. Three boys Ankur, Syed and David are sitting at equal distance on its boundary each having a toy telephone in his hands to talk each other. Find the length of the string of each phone.",
+          "hints": [
+            "Draw a diagram",
+            "Apply the concept of circle and distance"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "circle",
+            "distance"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "9.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "In Fig. 9.23, A,B and C are three points on a circle with centre O such that ∠ BOC = 30° and ∠ AOB = 60°. If D is a point on the circle other than the arc ABC, find ∠ADC.",
+          "hints": [
+            "Use the concept of circle and angles",
+            "Apply the concept of angle subtended by an arc"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "angles",
+            "angle subtended by an arc"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "A chord of a circle is equal to the radius of the circle. Find the angle subtended by the chord at a point on the minor arc and also at a point on the major arc.",
+          "hints": [
+            "Use the concept of circle and chord",
+            "Apply the concept of angle subtended by a chord"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "chord",
+            "angle subtended by a chord"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "In Fig. 9.24, ∠ PQR = 100°, where P, Q and R are points on a circle with centre O. Find ∠ OPR.",
+          "hints": [
+            "Use the concept of circle and angles",
+            "Apply the concept of angle subtended by an arc"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "angles",
+            "angle subtended by an arc"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "In Fig. 9.25, ∠ ABC = 69°, ∠ ACB = 31°, find ∠ BDC.",
+          "hints": [
+            "Use the concept of circle and angles",
+            "Apply the concept of angle subtended by an arc"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "angles",
+            "angle subtended by an arc"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "In Fig. 9.26, A, B, C and D are four points on a circle. AC and BD intersect at a point E such that ∠ BEC = 130° and ∠ ECD = 20°. Find ∠ BAC.",
+          "hints": [
+            "Use the concept of circle and angles",
+            "Apply the concept of angle subtended by an arc"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "angles",
+            "angle subtended by an arc"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "ABCD is a cyclic quadrilateral whose diagonals intersect at a point E. If ∠ DBC = 70°, ∠ BAC is 30°, find ∠ BCD. Further, if AB = BC, find ∠ ECD.",
+          "hints": [
+            "Use the concept of cyclic quadrilateral",
+            "Apply the concept of angle sum property"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "cyclic quadrilateral",
+            "angle sum property"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "If diagonals of a cyclic quadrilateral are diameters of the circle through the vertices of the quadrilateral, prove that it is a rectangle.",
+          "hints": [
+            "Use the concept of cyclic quadrilateral",
+            "Apply the concept of diameter and rectangle"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "cyclic quadrilateral",
+            "diameter",
+            "rectangle"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "If the non-parallel sides of a trapezium are equal, prove that it is cyclic.",
+          "hints": [
+            "Use the concept of trapezium",
+            "Apply the concept of cyclic quadrilateral"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "trapezium",
+            "cyclic quadrilateral"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Two circles intersect at two points B and C. Through B, two line segments ABD and PBQ are drawn to intersect the circles at A, D and P, Q respectively. Prove that ∠ ACP = ∠ QCD.",
+          "hints": [
+            "Use the concept of intersecting circles",
+            "Apply the concept of angle subtended by an arc"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "intersecting circles",
+            "angle subtended by an arc"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "If circles are drawn taking two sides of a triangle as diameters, prove that the point of intersection of these circles lie on the third side.",
+          "hints": [
+            "Use the concept of circle and diameter",
+            "Apply the concept of triangle and intersection"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "circle",
+            "diameter",
+            "triangle",
+            "intersection"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "ABC and ADC are two right triangles with common hypotenuse AC. Prove that ∠ CAD = ∠ CBD.",
+          "hints": [
+            "Use the concept of right triangle",
+            "Apply the concept of angle subtended by an arc"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "right triangle",
+            "angle subtended by an arc"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Prove that a cyclic parallelogram is a rectangle.",
+          "hints": [
+            "Use the concept of cyclic quadrilateral",
+            "Apply the concept of parallelogram and rectangle"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "cyclic quadrilateral",
+            "parallelogram",
+            "rectangle"
+          ]
+        }
+      ]
+    }
+  ]
+}

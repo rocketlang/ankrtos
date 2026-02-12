@@ -1,0 +1,113 @@
+{
+  "book": "Class 10 Mathematics NCERT",
+  "class": 10,
+  "subject": "mathematics",
+  "total_chapters": 15,
+  "extraction_date": "2026-02-11",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Real Numbers",
+      "module_id": "ch1-real-numbers",
+      "pdf_file": "jemh101.pdf",
+      "exercises": [
+        {
+          "exercise_number": "1.1",
+          "questions": [
+            {
+              "question_number": 1,
+              "question_text": "Express each number as a product of its prime factors:\n(i) 140\n(ii) 156\n(iii) 3825\n(iv) 5005\n(v) 7429",
+              "hints": ["Use factor tree method", "Divide by smallest prime repeatedly", "Continue until you get 1"],
+              "difficulty": "easy",
+              "tags": ["prime factorization", "factors"],
+              "order": 1
+            },
+            {
+              "question_number": 2,
+              "question_text": "Find the LCM and HCF of the following pairs of integers and verify that LCM × HCF = product of the two numbers.\n(i) 26 and 91\n(ii) 510 and 92\n(iii) 336 and 54",
+              "hints": ["Find prime factorization of both numbers", "HCF uses lowest powers", "LCM uses highest powers"],
+              "difficulty": "medium",
+              "tags": ["LCM", "HCF", "prime factorization"],
+              "order": 2
+            },
+            {
+              "question_number": 3,
+              "question_text": "Find the LCM and HCF of the following integers by applying the prime factorisation method.\n(i) 12, 15 and 21\n(ii) 17, 23 and 29\n(iii) 8, 9 and 25",
+              "hints": ["Find prime factorization for all three numbers", "HCF is product of common factors with lowest powers", "LCM is product of all factors with highest powers"],
+              "difficulty": "medium",
+              "tags": ["LCM", "HCF", "prime factorization", "three numbers"],
+              "order": 3
+            },
+            {
+              "question_number": 4,
+              "question_text": "Given that HCF (306, 657) = 9, find LCM (306, 657).",
+              "hints": ["Use formula: HCF × LCM = Product of numbers", "HCF(a,b) × LCM(a,b) = a × b"],
+              "difficulty": "easy",
+              "tags": ["HCF", "LCM", "formula"],
+              "order": 4
+            },
+            {
+              "question_number": 5,
+              "question_text": "Check whether 6^n can end with the digit 0 for any natural number n.",
+              "hints": ["For a number to end with 0, it must be divisible by 10", "10 = 2 × 5", "Check prime factorization of 6"],
+              "difficulty": "medium",
+              "tags": ["divisibility", "prime factorization", "proof"],
+              "order": 5
+            },
+            {
+              "question_number": 6,
+              "question_text": "Explain why 7 × 11 × 13 + 13 and 7 × 6 × 5 × 4 × 3 × 2 × 1 + 5 are composite numbers.",
+              "hints": ["Factor out common terms", "Composite numbers have factors other than 1 and itself"],
+              "difficulty": "medium",
+              "tags": ["composite numbers", "factorization"],
+              "order": 6
+            },
+            {
+              "question_number": 7,
+              "question_text": "There is a circular path around a sports field. Sonia takes 18 minutes to drive one round of the field, while Ravi takes 12 minutes for the same. Suppose they both start at the same point and at the same time, and go in the same direction. After how many minutes will they meet again at the starting point?",
+              "hints": ["This is an LCM problem", "Find LCM of 18 and 12", "They meet when both complete whole rounds"],
+              "difficulty": "easy",
+              "tags": ["LCM", "application", "word problem"],
+              "order": 7
+            }
+          ]
+        },
+        {
+          "exercise_number": "1.2",
+          "questions": [
+            {
+              "question_number": 1,
+              "question_text": "Prove that √5 is irrational.",
+              "hints": ["Assume √5 is rational and write it as a/b", "Use proof by contradiction", "Use Fundamental Theorem of Arithmetic"],
+              "difficulty": "medium",
+              "tags": ["irrational numbers", "proof", "contradiction"],
+              "order": 1
+            },
+            {
+              "question_number": 2,
+              "question_text": "Prove that 3 + 2√5 is irrational.",
+              "hints": ["Assume it's rational", "Rearrange to isolate √5", "Show contradiction since √5 is irrational"],
+              "difficulty": "medium",
+              "tags": ["irrational numbers", "proof"],
+              "order": 2
+            },
+            {
+              "question_number": 3,
+              "question_text": "Prove that the following are irrationals:\n(i) 1/√2\n(ii) 7√5\n(iii) 6 + √2",
+              "hints": ["Use proof by contradiction for each", "Use fact that √2 and √5 are irrational", "Product/sum of rational and irrational is irrational"],
+              "difficulty": "hard",
+              "tags": ["irrational numbers", "proof", "multiple parts"],
+              "order": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "chapter_1_exercises": 2,
+    "chapter_1_questions": 10,
+    "status": "Chapter 1 complete - manual extraction",
+    "next_steps": "Extract remaining 14 chapters programmatically"
+  }
+}
