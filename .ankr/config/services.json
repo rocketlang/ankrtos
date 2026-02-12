@@ -105,7 +105,7 @@
       "description": "BANI Voice AI Server",
       "healthEndpoint": "/health",
       "enabled": true,
-      "_note": "Uses Node.js/tsx - module resolution issues with Bun",
+      "_note": "Uses Node.js/tsx - Missing kb-postgres module and dependency issues",
       "interpreter": "tsx",
       "runtime": "node"
     },
@@ -144,17 +144,18 @@
     "ankr-eon": {
       "portPath": "backend.eon",
       "path": "/root/ankr-labs-nx/packages/ankr-eon",
-      "command": "/root/.bun/bin/bun run src/server.ts",
+      "command": "npx tsx src/server.ts",
       "description": "EON Memory & Learning System",
       "healthEndpoint": "/health",
       "enabled": true,
       "env": {
         "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_eon?schema=public"
       },
-      "interpreter": "bun",
+      "interpreter": "tsx",
       "interpreterPath": "/root/.bun/bin/bun",
-      "runtime": "bun",
-      "runtimeVersion": "1.3.9"
+      "runtime": "node",
+      "runtimeVersion": "1.3.9",
+      "_note": "Uses Node.js/tsx - Complex ESM type imports have issues with Bun"
     },
     "ankr-viewer": {
       "portPath": "dashboard.viewer",
@@ -227,15 +228,16 @@
     "freightbox-backend": {
       "portPath": "backend.freightbox",
       "path": "/root/ankr-labs-nx/apps/freightbox/backend",
-      "command": "/root/.bun/bin/bun run src/main.ts",
+      "command": "npx tsx src/main.ts",
       "description": "Freightbox BFF (GraphQL)",
       "healthEndpoint": "/health",
       "enabled": true,
       "maxMemory": "256M",
-      "interpreter": "bun",
+      "interpreter": "tsx",
       "interpreterPath": "/root/.bun/bin/bun",
-      "runtime": "bun",
-      "runtimeVersion": "1.3.9"
+      "runtime": "node",
+      "runtimeVersion": "1.3.9",
+      "_note": "Uses Node.js/tsx - @ankr/twin package has ESM export conflicts with Bun"
     },
     "freightbox-frontend": {
       "portPath": "frontend.freightbox",

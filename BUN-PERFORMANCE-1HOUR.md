@@ -860,3 +860,130 @@
 | 14:38:20 | fr8x-frontend | 3006 | [32mRUNNING |  | ❌ CRASHED |
 | 14:38:20 | freightbox-frontend | 3001 | [32mRUNNING |  | ❌ CRASHED |
 | 14:38:20 | odoo-freightbox | 8019 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | ankrforge-api | 4201 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | ai-proxy | 4444 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | ankr-compliance-api | 4001 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | ankr-crm-backend | 4010 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | ankr-crm-bff | 4011 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | ankrtms-backend | 4000 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | devbrain | 4030 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | dodd-unified | 4007 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | fr8x-backend | 4050 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | saathi-server | 4008 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | ankr-crm-frontend | 5177 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | ankr-wms-frontend | 3060 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | ankrforge-web | 3200 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | fr8x-frontend | 3006 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | freightbox-frontend | 3001 | [32mRUNNING |  | ❌ CRASHED |
+| 14:39:23 | odoo-freightbox | 8019 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | ankrforge-api | 4201 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | ai-proxy | 4444 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | ankr-compliance-api | 4001 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | ankr-crm-backend | 4010 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | ankr-crm-bff | 4011 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | ankrtms-backend | 4000 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | devbrain | 4030 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | dodd-unified | 4007 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | fr8x-backend | 4050 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | saathi-server | 4008 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | ankr-crm-frontend | 5177 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | ankr-wms-frontend | 3060 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | ankrforge-web | 3200 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | fr8x-frontend | 3006 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | freightbox-frontend | 3001 | [32mRUNNING |  | ❌ CRASHED |
+| 14:40:26 | odoo-freightbox | 8019 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | ankrforge-api | 4201 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | ai-proxy | 4444 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | ankr-compliance-api | 4001 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | ankr-crm-backend | 4010 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | ankr-crm-bff | 4011 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | ankrtms-backend | 4000 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | devbrain | 4030 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | dodd-unified | 4007 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | fr8x-backend | 4050 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | saathi-server | 4008 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | ankr-crm-frontend | 5177 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | ankr-wms-frontend | 3060 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | ankrforge-web | 3200 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | fr8x-frontend | 3006 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | freightbox-frontend | 3001 | [32mRUNNING |  | ❌ CRASHED |
+| 14:41:29 | odoo-freightbox | 8019 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | ankrforge-api | 4201 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | ai-proxy | 4444 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | ankr-compliance-api | 4001 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | ankr-crm-backend | 4010 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | ankr-crm-bff | 4011 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | ankrtms-backend | 4000 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | devbrain | 4030 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | dodd-unified | 4007 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | fr8x-backend | 4050 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | saathi-server | 4008 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | ankr-crm-frontend | 5177 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | ankr-wms-frontend | 3060 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | ankrforge-web | 3200 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | fr8x-frontend | 3006 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | freightbox-frontend | 3001 | [32mRUNNING |  | ❌ CRASHED |
+| 14:42:32 | odoo-freightbox | 8019 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | ankrforge-api | 4201 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | ai-proxy | 4444 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | ankr-compliance-api | 4001 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | ankr-crm-backend | 4010 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | ankr-crm-bff | 4011 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | ankrtms-backend | 4000 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | devbrain | 4030 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | dodd-unified | 4007 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | fr8x-backend | 4050 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | saathi-server | 4008 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | ankr-crm-frontend | 5177 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | ankr-wms-frontend | 3060 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | ankrforge-web | 3200 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | fr8x-frontend | 3006 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | freightbox-frontend | 3001 | [32mRUNNING |  | ❌ CRASHED |
+| 14:43:34 | odoo-freightbox | 8019 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | ankrforge-api | 4201 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | ai-proxy | 4444 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | ankr-compliance-api | 4001 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | ankr-crm-backend | 4010 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | ankr-crm-bff | 4011 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | ankrtms-backend | 4000 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | devbrain | 4030 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | dodd-unified | 4007 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | fr8x-backend | 4050 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | saathi-server | 4008 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | ankr-crm-frontend | 5177 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | ankr-wms-frontend | 3060 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | ankrforge-web | 3200 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | fr8x-frontend | 3006 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | freightbox-frontend | 3001 | [32mRUNNING |  | ❌ CRASHED |
+| 14:44:37 | odoo-freightbox | 8019 | [32mRUNNING |  | ❌ CRASHED |
+
+## Summary
+
+**End Time:** Thu Feb 12 02:45:40 PM IST 2026
+**Total Samples:** 58
+
+### Final State
+
+║ ankrforge-api             │ Admin     │ 4201   │ [32mRUNNING [0m │ 2198578  │ 0.0%  │ 59.8 MB │ 41m       │ -                                ║
+║ ai-proxy                  │ AI        │ 4444   │ [32mRUNNING [0m │ 2199583  │ 0.2%  │ 73.5 MB │ 41m       │ -                                ║
+║ ankr-compliance-api       │ Backend   │ 4001   │ [32mRUNNING [0m │ 2200516  │ 0.1%  │ 113.1 MB │ 41m       │ -                                ║
+║ ankr-crm-backend          │ Backend   │ 4010   │ [32mRUNNING [0m │ 2201334  │ 0.0%  │ 66.1 MB │ 40m       │ -                                ║
+║ ankr-crm-bff              │ Backend   │ 4011   │ [32mRUNNING [0m │ 2202807  │ 0.0%  │ 67.9 MB │ 40m       │ -                                ║
+║ ankrtms-backend           │ Backend   │ 4000   │ [32mRUNNING [0m │ 2203796  │ 0.1%  │ 96.4 MB │ 40m       │ -                                ║
+║ devbrain                  │ Backend   │ 4030   │ [32mRUNNING [0m │ 2206025  │ 0.0%  │ 47.1 MB │ 40m       │ -                                ║
+║ dodd-unified              │ Backend   │ 4007   │ [32mRUNNING [0m │ 2206801  │ 0.0%  │ 59.4 MB │ 39m       │ -                                ║
+║ fr8x-backend              │ Backend   │ 4050   │ [32mRUNNING [0m │ 2207896  │ 0.0%  │ 64.3 MB │ 39m       │ fr8x                             ║
+║ saathi-server             │ Backend   │ 4008   │ [32mRUNNING [0m │ 2209442  │ 0.0%  │ 53.9 MB │ 39m       │ -                                ║
+║ ankr-crm-frontend         │ Dev       │ 5177   │ [32mRUNNING [0m │ 2213676  │ 0.0%  │ 64.3 MB │ 38m       │ -                                ║
+║ ankr-wms-frontend         │ Frontend  │ 3060   │ [32mRUNNING [0m │ 2217276  │ 0.0%  │ 55.1 MB │ 38m       │ -                                ║
+║ ankrforge-web             │ Frontend  │ 3200   │ [32mRUNNING [0m │ 2218105  │ 0.0%  │ 65.0 MB │ 38m       │ -                                ║
+║ fr8x-frontend             │ Frontend  │ 3006   │ [32mRUNNING [0m │ 2222132  │ 0.0%  │ 97.4 MB │ 37m       │ -                                ║
+║ freightbox-frontend       │ Frontend  │ 3001   │ [32mRUNNING [0m │ 2222933  │ 0.1%  │ 167.0 MB │ 37m       │ -                                ║
+║ odoo-freightbox           │ Service   │ 8019   │ [32mRUNNING [0m │ 1705894  │ 0.0%  │ 34.7 MB │ 2h        │ odoo_freightbox                  ║
+║ ankr-eon                  │ Backend   │ 4005   │ [31mSTOPPED [0m │ -        │ -     │ -       │ -         │ -                                ║
+║ ankr-wms-backend          │ Backend   │ 4060   │ [31mSTOPPED [0m │ -        │ -     │ -       │ -         │ -                                ║
+║ complymitra-api           │ Backend   │ 4015   │ [31mSTOPPED [0m │ -        │ -     │ -       │ -         │ -                                ║
+║ freightbox-backend        │ Backend   │ 4003   │ [31mSTOPPED [0m │ -        │ -     │ -       │ -         │ -                                ║
+
+**Report Generated:** Thu Feb 12 02:45:42 PM IST 2026
+**Report Location:** /root/BUN-PERFORMANCE-1HOUR.md
