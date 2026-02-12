@@ -127,7 +127,7 @@
       "publicUrl": "https://ankr.in/project/documents/",
       "env": {
         "ANKR_VIEWER_PORT": "${PORT}",
-        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_viewer?schema=public"
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_eon?schema=public"
       }
     },
     "ankr-docs-server": {

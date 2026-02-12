@@ -300,3 +300,7 @@ alias cleanup='/root/disk-cleanup.sh'
 alias disk-cleanup='/root/disk-cleanup.sh'
 alias compress-db='/root/compress-timescaledb.sh'
 alias compress-maritime='/root/compress-timescale-full.sh'
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
