@@ -582,3 +582,9 @@
 | 14:20:36 | dodd-unified | 4007 | [32mRUNNING |  | ❌ CRASHED |
 | 14:20:36 | fr8x-backend | 4050 | [32mRUNNING |  | ❌ CRASHED |
 | 14:20:36 | saathi-server | 4008 | [32mRUNNING |  | ❌ CRASHED |
+| 14:20:36 | ankr-crm-frontend | 5177 | [32mRUNNING |  | ❌ CRASHED |
+| 14:20:36 | ankr-wms-frontend | 3060 | [32mRUNNING |  | ❌ CRASHED |
+| 14:20:36 | ankrforge-web | 3200 | [32mRUNNING |  | ❌ CRASHED |
+| 14:20:36 | fr8x-frontend | 3006 | [32mRUNNING |  | ❌ CRASHED |
+| 14:20:36 | freightbox-frontend | 3001 | [32mRUNNING |  | ❌ CRASHED |
+| 14:20:36 | odoo-freightbox | 8019 | [32mRUNNING |  | ❌ CRASHED |
