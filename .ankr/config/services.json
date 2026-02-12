@@ -101,14 +101,13 @@
     "swayam-bani": {
       "portPath": "standalone.bani",
       "path": "/root/swayam/api-bani",
-      "command": "/root/.bun/bin/bun run server.ts",
+      "command": "npx tsx server.ts",
       "description": "BANI Voice AI Server",
       "healthEndpoint": "/health",
       "enabled": true,
-      "interpreter": "bun",
-      "interpreterPath": "/root/.bun/bin/bun",
-      "runtime": "bun",
-      "runtimeVersion": "1.3.9"
+      "_note": "Uses Node.js/tsx - module resolution issues with Bun",
+      "interpreter": "tsx",
+      "runtime": "node"
     },
     "swayam-dashboard": {
       "portPath": "standalone.swayamDashboard",
@@ -869,12 +868,13 @@
     "ankr-maritime-backend": {
       "portPath": "backend.ankrMaritime",
       "path": "/root/apps/ankr-maritime/backend",
-      "command": "/root/.bun/bin/bun run src/main.ts",
+      "command": "npx tsx src/main.ts",
       "description": "Mari8X Maritime Operations API (Fastify + Mercurius GraphQL + Pothos + Prisma)",
       "healthEndpoint": "/health",
       "enabled": true,
       "pm2Name": "mari8x-backend",
       "domain": "mari8x.com",
+      "_note": "Uses Node.js/tsx - canvas native module incompatible with Bun",
       "env": {
         "NODE_ENV": "production",
         "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_maritime",
@@ -891,10 +891,8 @@
         "Notification system with polling",
         "Vendor rating aggregation"
       ],
-      "interpreter": "bun",
-      "interpreterPath": "/root/.bun/bin/bun",
-      "runtime": "bun",
-      "runtimeVersion": "1.3.9"
+      "interpreter": "tsx",
+      "runtime": "node"
     },
     "ankr-maritime-frontend": {
       "portPath": "frontend.ankrMaritime",
