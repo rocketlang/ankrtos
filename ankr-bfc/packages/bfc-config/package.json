@@ -1,5 +1,6 @@
 {
   "name": "@ankr-bfc/config",
+  "type": "module",
   "version": "1.0.0",
   "description": "BFC Configuration Package",
   "main": "src/index.ts",

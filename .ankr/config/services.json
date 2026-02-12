@@ -77,7 +77,11 @@
       "command": "npx vite --host 0.0.0.0 --port ${PORT}",
       "description": "CRM Frontend (Vite)",
       "healthEndpoint": "/",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankrtms-backend": {
       "portPath": "backend.ankrtms",
@@ -97,10 +101,14 @@
     "swayam-bani": {
       "portPath": "standalone.bani",
       "path": "/root/swayam/api-bani",
-      "command": "npx tsx server.ts",
+      "command": "/root/.bun/bin/bun run server.ts",
       "description": "BANI Voice AI Server",
       "healthEndpoint": "/health",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "swayam-dashboard": {
       "portPath": "standalone.swayamDashboard",
@@ -108,7 +116,11 @@
       "command": "npx serve -s . -l ${PORT}",
       "description": "Swayam Dashboard (Static)",
       "healthEndpoint": "/",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "saathi-server": {
       "portPath": "backend.saathi",
@@ -148,7 +160,7 @@
     "ankr-viewer": {
       "portPath": "dashboard.viewer",
       "path": "/root/ankr-labs-nx/packages/ankr-interact",
-      "command": "npx tsx src/server/index.ts",
+      "command": "/root/.bun/bin/bun run src/server/index.ts",
       "description": "ANKR Interact - Knowledge Browser & NotebookLLM",
       "healthEndpoint": "/",
       "enabled": true,
@@ -160,12 +172,16 @@
       "env": {
         "ANKR_VIEWER_PORT": "${PORT}",
         "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_eon?schema=public"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-docs-server": {
       "portPath": "dashboard.docsServer",
       "path": "/root",
-      "command": "node ankr-viewer-server.js",
+      "command": "/root/.bun/bin/bun run ankr-viewer-server.js",
       "description": "ANKR Docs Server - Eon-powered hybrid search, document API, auto-ingest",
       "healthEndpoint": "/api/health",
       "enabled": true,
@@ -175,16 +191,24 @@
       "env": {
         "EON_URL": "http://localhost:4005",
         "DOCS_ROOT": "/root/ankr-universe-docs"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-security": {
       "portPath": "ai.security",
       "path": "/root/ankr-labs-nx/packages/ankr-security",
-      "command": "node dist/server.js",
+      "command": "/root/.bun/bin/bun run dist/server.js",
       "description": "ANKR Security Gateway",
       "healthEndpoint": "/health",
       "enabled": false,
-      "_note": "Disabled - needs npm run build"
+      "_note": "Disabled - needs npm run build",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "bfc-api": {
       "portPath": "backend.bfc",
@@ -195,7 +219,11 @@
       "enabled": true,
       "env": {
         "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/bfc"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "freightbox-backend": {
       "portPath": "backend.freightbox",
@@ -213,15 +241,19 @@
     "freightbox-frontend": {
       "portPath": "frontend.freightbox",
       "path": "/root/ankr-labs-nx/apps/freightbox/frontend",
-      "command": "node node_modules/next/dist/bin/next start -p ${PORT}",
+      "command": "/root/.bun/bin/bun run node_modules/next/dist/bin/next start -p ${PORT}",
       "description": "Freightbox Dashboard (Next.js)",
       "healthEndpoint": "/",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "erpbharat-api": {
       "portPath": "backend.erpbharat",
       "path": "/root/power-erp/apps/api",
-      "command": "npx tsx src/index.ts",
+      "command": "/root/.bun/bin/bun run src/index.ts",
       "description": "ERP Bharat API",
       "healthEndpoint": "/health",
       "enabled": true,
@@ -231,15 +263,23 @@
         "DATABASE_URL": "postgresql://erpbharat:ErpBharat2026@localhost:5432/erpbharat?schema=public",
         "JWT_SECRET": "ankr-erp-jwt-secret-2026",
         "JWT_REFRESH_SECRET": "ankr-erp-refresh-secret-2026"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "everpure-api": {
       "portPath": "backend.everpure",
       "path": "/root/everpure-backend",
-      "command": "npx tsx src/server.ts",
+      "command": "/root/.bun/bin/bun run src/server.ts",
       "description": "Ever Pure E-commerce API",
       "healthEndpoint": "/health",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankrforge-api": {
       "portPath": "admin.ankrforge",
@@ -262,7 +302,11 @@
       "command": "npx vite --host 0.0.0.0 --port ${PORT}",
       "description": "AnkrForge Web Frontend",
       "healthEndpoint": "/",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "fr8x-backend": {
       "portPath": "backend.fr8x",
@@ -288,7 +332,11 @@
       "enabled": true,
       "env": {
         "NODE_ENV": "development"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "driver-app": {
       "portPath": "frontend.driverApp",
@@ -296,7 +344,11 @@
       "command": "npx expo start --web",
       "description": "Driver Mobile App",
       "healthEndpoint": "/",
-      "enabled": false
+      "enabled": false,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-pulse": {
       "portPath": "dashboard.pulse",
@@ -304,15 +356,23 @@
       "command": "npx vite --host 0.0.0.0 --port ${PORT}",
       "description": "Real-time Observability Dashboard",
       "healthEndpoint": "/",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-status-api": {
       "portPath": "dashboard.statusApi",
       "path": "/root/ankr-labs-nx/apps/ankr-status-api",
-      "command": "npx tsx src/index.ts",
+      "command": "/root/.bun/bin/bun run src/index.ts",
       "description": "Enhanced Service Status API",
       "healthEndpoint": "/health",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "devbrain": {
       "portPath": "backend.devbrain",
@@ -329,32 +389,44 @@
     "ankr-website": {
       "portPath": "frontend.ankrWebsite",
       "path": "/root/ankr-labs-nx/apps/ankr-website",
-      "command": "node node_modules/next/dist/bin/next start -p ${PORT}",
+      "command": "/root/.bun/bin/bun run node_modules/next/dist/bin/next start -p ${PORT}",
       "description": "ANKR Labs Website (Next.js)",
       "healthEndpoint": "/",
       "enabled": false,
-      "_note": "Disabled - needs pnpm install first"
+      "_note": "Disabled - needs pnpm install first",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "pulse-control": {
       "portPath": "dashboard.pulseControl",
       "path": "/root/ankr-labs-nx/apps/ankr-pulse-control",
-      "command": "npx tsx src/index.ts",
+      "command": "/root/.bun/bin/bun run src/index.ts",
       "description": "Pulse Control Service",
       "healthEndpoint": "/health",
       "enabled": false,
-      "_note": "Disabled - src/index.ts missing"
+      "_note": "Disabled - src/index.ts missing",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-slm-router": {
       "portPath": "ai.slmRouter",
       "path": "/root/ankr-labs-nx/packages/ankr-slm-router",
-      "command": "node dist/mcp/server.js",
+      "command": "/root/.bun/bin/bun run dist/mcp/server.js",
       "description": "SLM Router (MCP stdio server - used by Claude)",
       "healthEndpoint": "/health",
       "enabled": false,
       "_note": "MCP server runs via stdio, not HTTP - used by .mcp.json",
       "env": {
         "OLLAMA_URL": "http://localhost:11434"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "odoo-freightbox": {
       "portPath": "erp.odoo",
@@ -370,25 +442,33 @@
     "sunosunao-api": {
       "portPath": "voice.sunosunaoApi",
       "path": "/root/ankr-labs-nx/packages/sunosunao/backend",
-      "command": "npx tsx src/server-simple.ts",
+      "command": "/root/.bun/bin/bun run src/server-simple.ts",
       "description": "SunoSunao Voice AI Backend",
       "healthEndpoint": "/health",
       "enabled": false,
       "_note": "Disabled - needs: cd path && npx prisma generate",
       "env": {
         "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5433/ankr_eon"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "vyomo-api": {
       "portPath": "backend.vyomo",
       "path": "/root/ankr-options-standalone/apps/vyomo-api",
-      "command": "npx tsx src/main.ts",
+      "command": "/root/.bun/bin/bun run src/main.ts",
       "description": "Vyomo Options Trading API (GraphQL)",
       "healthEndpoint": "/health",
       "enabled": true,
       "env": {
         "DATABASE_URL": "postgresql://postgres:@localhost:5432/vyomo"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "vyomo-web": {
       "portPath": "frontend.vyomo",
@@ -396,7 +476,11 @@
       "command": "npx vite --host 0.0.0.0 --port ${PORT}",
       "description": "Vyomo Options Trading Frontend (React)",
       "healthEndpoint": "/",
-      "enabled": true
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "dodd-backend": {
       "portPath": "backend.dodd",
@@ -405,7 +489,11 @@
       "description": "DODD ERP (Odoo-based)",
       "healthEndpoint": "/",
       "enabled": false,
-      "_note": "DODD is Odoo-based, uses same instance as FreightBox"
+      "_note": "DODD is Odoo-based, uses same instance as FreightBox",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-interact-frontend": {
       "portPath": "frontend.ankrInteract",
@@ -418,7 +506,11 @@
       "autoStart": true,
       "env": {
         "VITE_API_URL": "http://localhost:3199"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "openclaude-backend": {
       "portPath": "ide.openclaudeGraphQL",
@@ -433,7 +525,11 @@
         "PORT": "4000",
         "NODE_ENV": "development"
       },
-      "_note": "Provides 20 AI services via GraphQL: Code Review, Test Generator, AI Completion, Security Scanner, Performance Analyzer, etc."
+      "_note": "Provides 20 AI services via GraphQL: Code Review, Test Generator, AI Completion, Security Scanner, Performance Analyzer, etc.",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "openclaude-ide": {
       "portPath": "ide.openclaudeFrontend",
@@ -457,7 +553,11 @@
         "AI Performance Analyzer",
         "Collaboration & Chat",
         "22 Theia AI Packages Integrated"
-      ]
+      ],
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-docs-portal": {
       "portPath": "knowledgeBase.docsPortal",
@@ -468,12 +568,16 @@
       "enabled": true,
       "critical": false,
       "autoStart": true,
-      "pm2Name": "ankr-docs-portal"
+      "pm2Name": "ankr-docs-portal",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-slack-bot": {
       "portPath": "knowledgeBase.slackBot",
       "path": "/root/ankr-labs-nx/apps/ankr-slack-bot",
-      "command": "npx tsx src/index.ts",
+      "command": "/root/.bun/bin/bun run src/index.ts",
       "description": "ANKR Slack Bot - Knowledge base search via Slack",
       "healthEndpoint": "/health",
       "enabled": true,
@@ -485,12 +589,16 @@
         "SLACK_APP_TOKEN": "${SLACK_APP_TOKEN}",
         "SLACK_SIGNING_SECRET": "${SLACK_SIGNING_SECRET}"
       },
-      "_note": "Requires Slack app tokens - set in environment"
+      "_note": "Requires Slack app tokens - set in environment",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-voice-search": {
       "portPath": "knowledgeBase.voiceSearch",
       "path": "/root/ankr-labs-nx/apps/ankr-voice-search",
-      "command": "npx tsx src/index.ts",
+      "command": "/root/.bun/bin/bun run src/index.ts",
       "description": "ANKR Voice Search - Multilingual voice queries (Hindi/English/Tamil/Telugu)",
       "healthEndpoint": "/health",
       "enabled": true,
@@ -505,7 +613,11 @@
         "Text-to-speech responses",
         "WebSocket streaming",
         "Hindi/English/Tamil/Telugu support"
-      ]
+      ],
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-academy": {
       "portPath": "knowledgeBase.academy",
@@ -522,12 +634,16 @@
         "Progress tracking & XP system",
         "Certificates on completion",
         "Syntax highlighting for code"
-      ]
+      ],
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-copilot": {
       "portPath": "knowledgeBase.copilot",
       "path": "/root/ankr-labs-nx/apps/ankr-copilot",
-      "command": "npx tsx src/index.ts",
+      "command": "/root/.bun/bin/bun run src/index.ts",
       "description": "ANKR Code Copilot - AI code completion with ANKR context",
       "healthEndpoint": "/health",
       "enabled": true,
@@ -546,7 +662,11 @@
         "Code diagnostics",
         "LSP-compatible endpoints",
         "WebSocket real-time API"
-      ]
+      ],
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-marketplace": {
       "portPath": "knowledgeBase.marketplace",
@@ -555,7 +675,11 @@
       "description": "RocketLang Template Marketplace",
       "healthEndpoint": "/",
       "enabled": true,
-      "pm2Name": "ankr-marketplace"
+      "pm2Name": "ankr-marketplace",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-test-recorder": {
       "portPath": "knowledgeBase.testRecorder",
@@ -564,132 +688,188 @@
       "description": "Test Recorder - Record actions to Playwright/TesterBot tests",
       "healthEndpoint": "/",
       "enabled": true,
-      "pm2Name": "ankr-test-recorder"
+      "pm2Name": "ankr-test-recorder",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-code-review": {
       "portPath": "knowledgeBase.codeReview",
       "path": "/root/ankr-labs-nx/apps/ankr-code-review",
-      "command": "node dist/index.js",
+      "command": "/root/.bun/bin/bun run dist/index.js",
       "description": "AI Code Review - Security, best practices, GitHub PR integration",
       "healthEndpoint": "/health",
       "enabled": true,
-      "pm2Name": "ankr-code-review"
+      "pm2Name": "ankr-code-review",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-bug-predictor": {
       "portPath": "knowledgeBase.bugPredictor",
       "path": "/root/ankr-labs-nx/apps/ankr-bug-predictor",
-      "command": "node dist/index.js",
+      "command": "/root/.bun/bin/bun run dist/index.js",
       "description": "Bug Predictor - 10 pattern detectors with risk scoring",
       "healthEndpoint": "/health",
       "enabled": true,
-      "pm2Name": "ankr-bug-predictor"
+      "pm2Name": "ankr-bug-predictor",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-smart-docs": {
       "portPath": "knowledgeBase.smartDocs",
       "path": "/root/ankr-labs-nx/apps/ankr-smart-docs",
-      "command": "node dist/index.js",
+      "command": "/root/.bun/bin/bun run dist/index.js",
       "description": "Smart Documentation - Auto-generate docs from code",
       "healthEndpoint": "/health",
       "enabled": true,
-      "pm2Name": "ankr-smart-docs"
+      "pm2Name": "ankr-smart-docs",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-kb-multi-tenant": {
       "portPath": "knowledgeBase.kbMultiTenant",
       "path": "/root/ankr-labs-nx/apps/ankr-kb-multi-tenant",
-      "command": "node dist/index.js",
+      "command": "/root/.bun/bin/bun run dist/index.js",
       "description": "Multi-Tenant Knowledge Base - Per-client KB with isolation",
       "healthEndpoint": "/health",
       "enabled": true,
       "pm2Name": "ankr-kb-multi-tenant",
       "env": {
         "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_eon"
-      }
+      },
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-plugins": {
       "portPath": "knowledgeBase.plugins",
       "path": "/root/ankr-labs-nx/apps/ankr-plugins",
-      "command": "node dist/index.js",
+      "command": "/root/.bun/bin/bun run dist/index.js",
       "description": "Plugin System - Extend RocketLang/TesterBot with plugins",
       "healthEndpoint": "/health",
       "enabled": true,
-      "pm2Name": "ankr-plugins"
+      "pm2Name": "ankr-plugins",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-api-marketplace": {
       "portPath": "knowledgeBase.apiMarketplace",
       "path": "/root/ankr-labs-nx/apps/ankr-api-marketplace",
-      "command": "node dist/index.js",
+      "command": "/root/.bun/bin/bun run dist/index.js",
       "description": "API Marketplace - Monetize ANKR tools as APIs",
       "healthEndpoint": "/health",
       "enabled": true,
-      "pm2Name": "ankr-api-marketplace"
+      "pm2Name": "ankr-api-marketplace",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-whitelabel": {
       "portPath": "knowledgeBase.whitelabel",
       "path": "/root/ankr-labs-nx/apps/ankr-whitelabel",
-      "command": "node dist/index.js",
+      "command": "/root/.bun/bin/bun run dist/index.js",
       "description": "White-Label Solution - Enterprise platform reselling",
       "healthEndpoint": "/health",
       "enabled": true,
-      "pm2Name": "ankr-whitelabel"
+      "pm2Name": "ankr-whitelabel",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-code-poetry": {
       "portPath": "knowledgeBase.codePoetry",
       "path": "/root/ankr-labs-nx/apps/ankr-code-poetry",
-      "command": "node dist/index.js",
+      "command": "/root/.bun/bin/bun run dist/index.js",
       "description": "Code Poetry Generator - Haiku/limerick from errors",
       "healthEndpoint": "/health",
       "enabled": true,
-      "pm2Name": "ankr-code-poetry"
+      "pm2Name": "ankr-code-poetry",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-gamification": {
       "portPath": "knowledgeBase.gamification",
       "path": "/root/ankr-labs-nx/apps/ankr-gamification",
-      "command": "node dist/index.js",
+      "command": "/root/.bun/bin/bun run dist/index.js",
       "description": "Gamification System - Developer achievements & XP",
       "healthEndpoint": "/health",
       "enabled": true,
-      "pm2Name": "ankr-gamification"
+      "pm2Name": "ankr-gamification",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-time-travel": {
       "portPath": "knowledgeBase.timeTravel",
       "path": "/root/ankr-labs-nx/apps/ankr-time-travel",
-      "command": "node dist/index.js",
+      "command": "/root/.bun/bin/bun run dist/index.js",
       "description": "Code Time Travel - Git history visualization",
       "healthEndpoint": "/health",
       "enabled": true,
-      "pm2Name": "ankr-time-travel"
+      "pm2Name": "ankr-time-travel",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-pair-programming": {
       "portPath": "knowledgeBase.pairProgramming",
       "path": "/root/ankr-labs-nx/apps/ankr-pair-programming",
-      "command": "node dist/index.js",
+      "command": "/root/.bun/bin/bun run dist/index.js",
       "description": "AI Pair Programming - Real-time collaboration with AI",
       "healthEndpoint": "/health",
       "enabled": true,
-      "pm2Name": "ankr-pair-programming"
+      "pm2Name": "ankr-pair-programming",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-commit-sentiment": {
       "portPath": "knowledgeBase.commitSentiment",
       "path": "/root/ankr-labs-nx/apps/ankr-commit-sentiment",
-      "command": "node dist/index.js",
+      "command": "/root/.bun/bin/bun run dist/index.js",
       "description": "Commit Sentiment Analysis - Team mood from commits",
       "healthEndpoint": "/health",
       "enabled": true,
-      "pm2Name": "ankr-commit-sentiment"
+      "pm2Name": "ankr-commit-sentiment",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-code-music": {
       "portPath": "knowledgeBase.codeMusic",
       "path": "/root/ankr-labs-nx/apps/ankr-code-music",
-      "command": "node dist/index.js",
+      "command": "/root/.bun/bin/bun run dist/index.js",
       "description": "Code Music Generator - Generate music from code structure",
       "healthEndpoint": "/health",
       "enabled": true,
-      "pm2Name": "ankr-code-music"
+      "pm2Name": "ankr-code-music",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-maritime-backend": {
       "portPath": "backend.ankrMaritime",
       "path": "/root/apps/ankr-maritime/backend",
-      "command": "npx tsx src/main.ts",
+      "command": "/root/.bun/bin/bun run src/main.ts",
       "description": "Mari8X Maritime Operations API (Fastify + Mercurius GraphQL + Pothos + Prisma)",
       "healthEndpoint": "/health",
       "enabled": true,
@@ -710,7 +890,11 @@
         "Sea route calculator with Haversine + great circle",
         "Notification system with polling",
         "Vendor rating aggregation"
-      ]
+      ],
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-maritime-frontend": {
       "portPath": "frontend.ankrMaritime",
@@ -727,7 +911,11 @@
         "Charter Party builder with clause library",
         "Notification bell with polling",
         "Free/Pro/Enterprise tier feature flags"
-      ]
+      ],
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-wms-backend": {
       "portPath": "backend.ankrWms",
@@ -774,12 +962,16 @@
         "Interactive Setup Wizards with multi-step forms",
         "Barcode scanner interface",
         "Dark theme with Tailwind CSS"
-      ]
+      ],
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "ankr-doctor": {
       "portPath": "knowledgeBase.doctor",
       "path": "/root/ankr-labs-nx/apps/ankr-doctor",
-      "command": "node dist/index.js watch --interval 30",
+      "command": "/root/.bun/bin/bun run dist/index.js watch --interval 30",
       "description": "Automated E2E Scanner & Healer - scans all ANKR frontends, diagnoses issues, auto-fixes",
       "healthEndpoint": "/health",
       "enabled": true,
@@ -790,12 +982,16 @@
         "Auto-fix with safety guards and verification",
         "JSON reports + Telegram alerts",
         "Watch mode with configurable interval"
-      ]
+      ],
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "corals-astrology-backend": {
       "portPath": "backend.coralAstrology",
       "path": "/root/apps/corals-astrology/backend",
-      "command": "npx tsx watch src/main.ts",
+      "command": "/root/.bun/bin/bun run watch src/main.ts",
       "description": "CORALS Astrology API - Comprehensive Vedic Astrology Platform (GraphQL)",
       "healthEndpoint": "/health",
       "enabled": true,
@@ -819,7 +1015,11 @@
         "Palmistry system",
         "AI-powered personalized readings",
         "Freemium model with Razorpay integration"
-      ]
+      ],
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "corals-astrology-frontend": {
       "portPath": "frontend.coralAstrology",
@@ -839,7 +1039,11 @@
         "Scripture reader with search",
         "WhatsApp bot integration",
         "Push notification support"
-      ]
+      ],
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "curriculum-admin": {
       "portPath": "frontend.curriculum",
@@ -848,7 +1052,11 @@
       "description": "ANKR Curriculum Admin Panel (seekho.ankrlabs.org)",
       "healthEndpoint": "/",
       "enabled": true,
-      "type": "frontend"
+      "type": "frontend",
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9"
     },
     "curriculum-backend": {
       "portPath": "backend.curriculum",
