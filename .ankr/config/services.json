@@ -35,14 +35,13 @@
     "complymitra-api": {
       "portPath": "backend.complymitra",
       "path": "/root/ankr-labs-nx/apps/complymitra-api",
-      "command": "/root/.bun/bin/bun run src/index.ts",
-      "description": "ComplyMitra Tools API",
+      "command": "npx tsx src/index.ts",
+      "description": "ComplyMitra Tools API (145 compliance tools)",
       "healthEndpoint": "/health",
       "enabled": true,
-      "interpreter": "bun",
-      "interpreterPath": "/root/.bun/bin/bun",
-      "runtime": "bun",
-      "runtimeVersion": "1.3.9"
+      "interpreter": "tsx",
+      "runtime": "node",
+      "_note": "Uses Node.js/tsx - Compliance packages use CommonJS (require())"
     },
     "ankr-crm-backend": {
       "portPath": "backend.crm",
