@@ -1,0 +1,339 @@
+{
+  "chapter_number": 5,
+  "chapter_title": "THE FUNDAMENTAL UNIT OF LIFE",
+  "exercises": [
+    {
+      "exercise_number": "5.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Who discovered cells, and how?",
+          "hints": [
+            "Look for historical discovery in the text",
+            "Check the year and scientist mentioned",
+            "Focus on the observation method"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cell discovery",
+            "history of science",
+            "Robert Hooke"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why is the cell called the structural and functional unit of life?",
+          "hints": [
+            "Consider both structure and function aspects",
+            "Think about basic building blocks",
+            "Relate to organism organization"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cell theory",
+            "structural unit",
+            "functional unit",
+            "basic unit of life"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How do substances like CO2 and water move in and out of the cell? Discuss.",
+          "hints": [
+            "Consider diffusion and osmosis processes",
+            "Think about concentration gradients",
+            "Mention selectively permeable membrane"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "diffusion",
+            "osmosis",
+            "cell membrane",
+            "transport mechanisms"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why is the plasma membrane called a selectively permeable membrane?",
+          "hints": [
+            "Consider what it allows through",
+            "Think about what it prevents",
+            "Relate to cell protection and regulation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "plasma membrane",
+            "selective permeability",
+            "cell regulation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Fill in the gaps in the following table illustrating differences between prokaryotic and eukaryotic cells.\n\nProkaryotic Cell\n1. Size : generally small (1-10 µm) 1 µm = 10–6 m\n2. Nuclear region: _______________ and known as __\n3. Chromosome: single\n4. Membrane-bound cell organelles absent\n\nEukaryotic Cell\n1. Size: generally large (5-100 µm)\n2. Nuclear region: well defined and surrounded by a nuclear membrane\n3. More than one chromosome\n4. _______________",
+          "hints": [
+            "Compare nuclear region characteristics",
+            "Think about organelle presence",
+            "Consider membrane-bound structures"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "prokaryotic vs eukaryotic",
+            "cell comparison",
+            "nuclear region",
+            "organelles"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Can you name the two organelles we have studied that contain their own genetic material?",
+          "hints": [
+            "Look for organelles with DNA",
+            "Check mitochondria and plastids sections",
+            "Think about self-replication capability"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "organelles with DNA",
+            "mitochondria",
+            "plastids",
+            "genetic material"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "If the organisation of a cell is destroyed due to some physical or chemical influence, what will happen?",
+          "hints": [
+            "Consider cellular functions",
+            "Think about metabolic processes",
+            "Relate to cell survival"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cell organization",
+            "cell damage",
+            "cellular functions",
+            "homeostasis"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why are lysosomes known as suicide bags?",
+          "hints": [
+            "Consider their digestive function",
+            "Think about what happens when they burst",
+            "Relate to cellular damage"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "lysosomes",
+            "suicide bags",
+            "digestive enzymes",
+            "cellular digestion"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Where are proteins synthesised inside the cell?",
+          "hints": [
+            "Look for protein manufacturing sites",
+            "Check ribosomes and ER sections",
+            "Think about protein production process"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "protein synthesis",
+            "ribosomes",
+            "endoplasmic reticulum",
+            "cellular manufacturing"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Exercises",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Make a comparison and write down ways in which plant cells are different from animal cells.",
+          "hints": [
+            "Consider cell wall presence",
+            "Think about chloroplasts and vacuoles",
+            "Compare organelle differences"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "plant vs animal cells",
+            "cell comparison",
+            "cell wall",
+            "chloroplasts",
+            "vacuoles"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "How is a prokaryotic cell different from a eukaryotic cell?",
+          "hints": [
+            "Compare nuclear organization",
+            "Consider organelle complexity",
+            "Think about size differences"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "prokaryotic vs eukaryotic",
+            "cell structure",
+            "nuclear membrane",
+            "organelles"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What would happen if the plasma membrane ruptures or breaks down?",
+          "hints": [
+            "Consider selective permeability loss",
+            "Think about cellular contents leakage",
+            "Relate to cell survival"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "plasma membrane",
+            "cell rupture",
+            "selective permeability",
+            "cell integrity"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What would happen to the life of a cell if there was no Golgi apparatus?",
+          "hints": [
+            "Consider packaging and dispatch functions",
+            "Think about storage and modification",
+            "Relate to cellular transport"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Golgi apparatus",
+            "cellular transport",
+            "packaging",
+            "modification"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Which organelle is known as the powerhouse of the cell? Why?",
+          "hints": [
+            "Look for energy production organelle",
+            "Think about ATP generation",
+            "Consider chemical reactions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "mitochondria",
+            "powerhouse",
+            "ATP",
+            "energy production"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Where do the lipids and proteins constituting the cell membrane get synthesised?",
+          "hints": [
+            "Check ER functions",
+            "Think about membrane biogenesis",
+            "Consider lipid and protein synthesis"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cell membrane synthesis",
+            "endoplasmic reticulum",
+            "lipids",
+            "proteins",
+            "membrane biogenesis"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "How does an Amoeba obtain its food?",
+          "hints": [
+            "Consider endocytosis process",
+            "Think about pseudopodia formation",
+            "Relate to food vacuoles"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Amoeba",
+            "food acquisition",
+            "endocytosis",
+            "food vacuole"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "What is osmosis?",
+          "hints": [
+            "Define water movement",
+            "Consider selectively permeable membrane",
+            "Think about concentration gradients"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "osmosis",
+            "water movement",
+            "selective permeability",
+            "diffusion"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Carry out the following osmosis experiment:\n• Take four peeled potato halves and scoos each one out to make potato cups. One of these potato cups should be made from a boiled potato. Put each potato cup in a trough containing water. Now,\n(a) Keep cup A empty\n(b) Put one teaspoon sugar in cup B\n(c) Put one teaspoon salt in cup C\n(d) Put one teaspoon sugar in the boiled potato cup D.\nKeep these for two hours. Then observe the four potato cups and answer the following:\n(i) Explain why water gathers in the hollowed portion of B and C.\n(ii) Why is potato A necessary for this experiment?\n(iii) Explain why water does not gather in the hollowed out portions of A and D.",
+          "hints": [
+            "Consider osmosis principles",
+            "Think about solute concentration effects",
+            "Compare living vs dead cells",
+            "Analyze control setup"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "osmosis experiment",
+            "potato experiment",
+            "concentration gradient",
+            "living cells",
+            "control setup"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Which type of cell division is required for growth and repair of body and which type is involved in formation of gametes?",
+          "hints": [
+            "Compare mitosis and meiosis",
+            "Think about chromosome numbers",
+            "Consider growth vs reproduction"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cell division",
+            "mitosis",
+            "meiosis",
+            "growth",
+            "repair",
+            "gamete formation"
+          ]
+        }
+      ]
+    }
+  ]
+}

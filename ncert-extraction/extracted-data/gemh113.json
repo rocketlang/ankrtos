@@ -1,0 +1,257 @@
+{
+  "chapter_number": 13,
+  "chapter_title": "Visualising Solid Shapes",
+  "exercises": [
+    {
+      "exercise_number": "13.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Identify the nets which can be used to make cubes (cut out copies of the nets and try it): (i) (ii) (iii) (iv) (v) (vi)",
+          "hints": [
+            "Check if the net has exactly 6 squares",
+            "Ensure squares are arranged so they can fold into a cube without overlap",
+            "Opposite faces should not be adjacent in the net"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "nets",
+            "cube",
+            "spatial visualization"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Dice are cubes with dots on each face. Opposite faces of a die always have a total of seven dots on them. Here are two nets to make dice (cubes); the numbers inserted in each square indicate the number of dots in that box. Insert suitable numbers in the blanks, remembering that the number on the opposite faces should total to 7.",
+          "hints": [
+            "Remember opposite faces sum to 7: 1↔6, 2↔5, 3↔4",
+            "Visualize how the net folds into a cube",
+            "Check adjacent faces in the net won't become opposite in the cube"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "dice",
+            "nets",
+            "opposite faces",
+            "cube"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Can this be a net for a die? Explain your answer.",
+          "hints": [
+            "Check if all faces 1-6 are present exactly once",
+            "Verify opposite faces rule (sum to 7) can be satisfied when folded",
+            "Ensure the net can fold into a cube without overlap"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "dice",
+            "nets",
+            "validation",
+            "explanation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Here is an incomplete net for making a cube. Complete it in at least two different ways. Remember that a cube has six faces. How many are there in the net here? (Give two separate diagrams. If you like, you may use a squared sheet for easy manipulation.)",
+          "hints": [
+            "A cube has 6 square faces",
+            "The incomplete net shows some squares already",
+            "Add missing squares ensuring they connect properly to form a valid net",
+            "There are multiple possible completions"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "nets",
+            "cube",
+            "completion",
+            "multiple solutions"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Match the nets with appropriate solids: (a) (i) (b) (ii) (c) (iii) (d) (iv)",
+          "hints": [
+            "Identify the 3D shape each net would form when folded",
+            "Look for characteristic faces: triangles for pyramids, circles for cylinders/cones",
+            "Count faces and their shapes"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "matching",
+            "nets",
+            "solids",
+            "visualization"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "13.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Use isometric dot paper and make an isometric sketch for each one of the given shapes: (i) (ii) (iii) (iv)",
+          "hints": [
+            "Use isometric dot paper to maintain proportions",
+            "Start with the front face and work backwards",
+            "Use dotted lines for hidden edges"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "isometric sketch",
+            "dot paper",
+            "3D drawing",
+            "proportions"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The dimensions of a cuboid are 5 cm, 3 cm and 2 cm. Draw three different isometric sketches of this cuboid.",
+          "hints": [
+            "Maintain exact proportions: 5:3:2",
+            "You can orient the cuboid differently in each sketch",
+            "All edges should be drawn to scale on isometric paper"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cuboid",
+            "isometric sketch",
+            "dimensions",
+            "multiple views"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Three cubes each with 2 cm edge are placed side by side to form a cuboid. Sketch an oblique or isometric sketch of this cuboid.",
+          "hints": [
+            "Resulting cuboid dimensions: length=6cm (2+2+2), breadth=2cm, height=2cm",
+            "Choose either oblique or isometric method",
+            "For oblique: front face true shape, receding edges at angle"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cubes",
+            "cuboid",
+            "composition",
+            "oblique/isometric sketch"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Make an oblique sketch for each one of the given isometric shapes:",
+          "hints": [
+            "Oblique sketches don't need proportional lengths",
+            "Front face drawn true shape",
+            "Receding edges drawn at an angle (usually 45°)",
+            "Hidden edges as dotted lines"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "oblique sketch",
+            "conversion",
+            "3D representation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Give (i) an oblique sketch and (ii) an isometric sketch for each of the following: (a) A cuboid of dimensions 5 cm, 3 cm and 2 cm. (Is your sketch unique?) (b) A cube with an edge 4 cm long.",
+          "hints": [
+            "For (a): draw both oblique and isometric of 5×3×2 cuboid",
+            "For (b): draw both sketches of 4cm cube",
+            "Oblique: front face true, receding edges at angle; Isometric: all edges to scale",
+            "Sketches not unique - different orientations possible"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "cuboid",
+            "cube",
+            "oblique sketch",
+            "isometric sketch",
+            "multiple representations"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "13.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What cross-sections do you get when you give a (i) vertical cut (ii) horizontal cut to the following solids? (a) A brick (b) A round apple (c) A die (d) A circular pipe (e) An ice cream cone",
+          "hints": [
+            "Vertical cut: parallel to vertical axis",
+            "Horizontal cut: parallel to ground/ base",
+            "Consider shape of solid and cutting plane",
+            "Brick: rectangular prism; Apple: sphere; Die: cube; Pipe: cylinder; Cone: cone"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cross-sections",
+            "vertical cut",
+            "horizontal cut",
+            "solids",
+            "slicing"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "13.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A bulb is kept burning just right above the following solids. Name the shape of the shadows obtained in each case. Attempt to give a rough sketch of the shadow. (You may try to experiment first and then answer these questions). A ball (i) A cylindrical pipe (ii) A book (iii)",
+          "hints": [
+            "Light directly above creates shadow similar to base shape",
+            "Ball (sphere): circular shadow",
+            "Cylindrical pipe: rectangular or circular depending on orientation",
+            "Book (cuboid): rectangular shadow"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "shadows",
+            "projection",
+            "light source",
+            "3D to 2D"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Here are the shadows of some 3-D objects, when seen under the lamp of an overhead projector. Identify the solid(s) that match each shadow. (There may be multiple answers for these!) A circle (i) A square (ii) A triangle (iii) A rectangle (iv)",
+          "hints": [
+            "Circle: sphere, cylinder (from top), cone (from base)",
+            "Square: cube, cuboid (from face)",
+            "Triangle: cone (from side), triangular prism",
+            "Rectangle: cuboid, cylinder (from side)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "shadows",
+            "multiple solids",
+            "projection",
+            "identification"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Examine if the following are true statements: (i) The cube can cast a shadow in the shape of a rectangle. (ii) The cube can cast a shadow in the shape of a hexagon.",
+          "hints": [
+            "(i) True: when light shines on cube at an angle, shadow can be rectangular",
+            "(ii) True: with specific light angles and surface orientations, cube can cast hexagonal shadow",
+            "Think about different orientations of cube relative to light source"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "cube",
+            "shadows",
+            "geometry",
+            "true/false",
+            "proof"
+          ]
+        }
+      ]
+    }
+  ]
+}

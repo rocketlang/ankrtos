@@ -1,0 +1,235 @@
+{
+  "chapter_number": 2,
+  "chapter_title": "MICROORGANISMS : FRIEND AND FOE",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Fill in the blanks.\n(a) Microorganisms can be seen with the help of a ____________.\n(b) Blue green algae fix __________ directly from air and enhance fertility of soil.\n(c) Alcohol is produced with the help of __________.\n(d) Cholera is caused by __________.",
+          "hints": [
+            "Recall the tools used to see microorganisms",
+            "Think about nitrogen-fixing organisms",
+            "Remember which microorganism is used in fermentation",
+            "Check Table 2.1 for disease-causing microorganisms"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fill in blanks",
+            "basic concepts",
+            "microorganisms"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Tick the correct answer.\n(a) Yeast is used in the production of\n(i) sugar (ii) alcohol (iii) hydrochloric acid (iv) oxygen\n(b) The following is an antibiotic\n(i) Sodium bicarbonate (ii) Streptomycin (iii) Alcohol (iv) Yeast\n(c) Carrier of malaria-causing protozoan is\n(i) female Anopheles mosquito (ii) cockroach (iii) housefly (iv) butterfly\n(d) The most common carrier of communicable diseases is\n(i) ant (ii) housefly (iii) dragonfly (iv) spider\n(e) The bread or idli dough rises because of\n(i) heat (ii) grinding (iii) growth of yeast cells (iv) kneading\n(f) The process of conversion of sugar into alcohol is called\n(i) nitrogen fixation (ii) moulding (iii) fermentation (iv) infection",
+          "hints": [
+            "Refer to section on commercial use of microorganisms",
+            "Check medicinal use of microorganisms section",
+            "Look at Fig. 2.8 and related text",
+            "Recall discussion on carriers of diseases",
+            "Think about Activity 2.3 with yeast",
+            "Remember Activity 2.4 with sugar solution"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "multiple choice",
+            "applications",
+            "disease transmission",
+            "fermentation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Match the organisms in Column A with their action in Column B.\nA\t\t\t\t\tB\n(i) Bacteria\t\t\t(a) Fixing nitrogen\n(ii) Rhizobium\t\t\t(b) Setting of curd\n(iii) Lactobacillus\t\t(c) Baking of bread\n(iv) Yeast\t\t\t(d) Causing malaria\n(v) A protozoan\t\t\t(e) Causing cholera\n(vi) A virus\t\t\t(f) Causing AIDS\n\t\t\t\t(g) Producing antibodies",
+          "hints": [
+            "Check Table 2.1 for disease-causing microorganisms",
+            "Recall nitrogen fixation by Rhizobium",
+            "Remember Lactobacillus in curd formation",
+            "Think about yeast in bread making",
+            "Consider viruses and their effects"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "matching",
+            "microorganism functions",
+            "diseases",
+            "applications"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Can microorganisms be seen with the naked eye? If not, how can they be seen?",
+          "hints": [
+            "Refer to introduction paragraph",
+            "Think about size of microorganisms",
+            "Consider tools mentioned in the chapter"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "basic concepts",
+            "observation",
+            "microscopy"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What are the major groups of microorganisms?",
+          "hints": [
+            "Look at section 2.1",
+            "Check classification paragraph",
+            "Remember the four main groups"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "classification",
+            "microorganism types",
+            "basic biology"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Name the microorganisms which can fix atmospheric nitrogen in the soil.",
+          "hints": [
+            "Check section 2.6 on nitrogen fixation",
+            "Look at Fig. 2.7",
+            "Recall Rhizobium and blue-green algae"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "nitrogen fixation",
+            "soil fertility",
+            "bacteria",
+            "algae"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Write 10 lines on the usefulness of microorganisms in our lives.",
+          "hints": [
+            "Consider food production (curd, bread, alcohol)",
+            "Think about medicinal uses (antibiotics)",
+            "Recall environmental cleaning",
+            "Consider soil fertility improvement",
+            "Remember vaccine production"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "applications",
+            "beneficial microorganisms",
+            "essay writing"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Write a short paragraph on the harmful effects of microorganisms.",
+          "hints": [
+            "Consider disease-causing microorganisms",
+            "Think about food spoilage",
+            "Recall plant diseases",
+            "Consider food poisoning"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "harmful effects",
+            "diseases",
+            "food spoilage",
+            "essay writing"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "What are antibiotics? What precautions must be taken while taking antibiotics?",
+          "hints": [
+            "Check medicinal use of microorganisms section",
+            "Recall definition of antibiotics",
+            "Think about doctor's advice",
+            "Consider complete course requirement",
+            "Remember not to take unnecessarily"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "antibiotics",
+            "medicines",
+            "precautions",
+            "health"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Extended Learning",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Pull out a gram or bean plant from the field. Observe its roots. You will find round structures called root nodules on the roots. Draw a diagram of the root and show the root nodules.",
+          "hints": [
+            "Refer to Fig. 2.9",
+            "Recall leguminous plants",
+            "Think about symbiotic relationship",
+            "Consider nitrogen fixation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "practical activity",
+            "observation",
+            "drawing",
+            "nitrogen fixation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Collect the labels from the bottles of jams and jellies. Write down the list of contents printed on the labels.",
+          "hints": [
+            "Think about food preservation methods",
+            "Recall chemical preservatives",
+            "Check section on preservation by sugar"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "practical activity",
+            "food preservation",
+            "observation",
+            "label analysis"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Visit a doctor. Find out why antibiotics should not be overused. Prepare a short report.",
+          "hints": [
+            "Consider antibiotic resistance",
+            "Think about killing beneficial bacteria",
+            "Recall making drugs less effective",
+            "Check precautions in antibiotics section"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "research activity",
+            "antibiotics",
+            "health education",
+            "report writing"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Project : Requirements – 2 test tubes, marker pen, sugar, yeast powder, 2 balloons and lime water.\nTake two test tubes and mark them A and B. Clamp these tubes in a stand and fill them with water leaving some space at the top. Put two spoonfuls of sugar in each of the test tubes. Add a spoonful of yeast in test tube B. Inflate the two balloons incompletely. Now tie the balloons on the mouths of each test tube. Keep them in a warm place, away from sunlight. Watch the setup every day for next 3-4 days. Record your observations and think of an explanation.\nNow take another test tube filled 1/4 with lime water. Remove the balloon from test tube B in such a manner that gas inside the balloon does not escape. Fit the balloon on the test tube and shake well. Observe and explain.",
+          "hints": [
+            "Recall Activity 2.4",
+            "Think about fermentation process",
+            "Consider gas production by yeast",
+            "Remember carbon dioxide testing with lime water"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "project",
+            "experiment",
+            "fermentation",
+            "yeast activity",
+            "scientific method"
+          ]
+        }
+      ]
+    }
+  ]
+}

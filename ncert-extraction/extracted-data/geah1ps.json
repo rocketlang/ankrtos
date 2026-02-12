@@ -1,0 +1,179 @@
+{
+  "chapter_number": 7,
+  "chapter_title": "An Alien Hand",
+  "exercises": [
+    {
+      "exercise_number": "7.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How does Tilloo manage to find his way to the forbidden passage?",
+          "hints": [
+            "Look for clues about Tilloo's curiosity and observation skills.",
+            "Consider how he might have watched his father's actions."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension",
+            "character analysis",
+            "plot understanding"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What did Tilloo hope to see when he reached the 'forbidden passage'?",
+          "hints": [
+            "Think about Tilloo's fascination with the outside world.",
+            "Recall what he had heard or imagined about the surface."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "inference",
+            "character motivation",
+            "setting"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why did Tilloo's father advise him not to try to reach the surface of the planet?",
+          "hints": [
+            "Consider the environmental conditions on the surface.",
+            "Think about the survival mechanisms needed."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cause and effect",
+            "safety",
+            "environmental adaptation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What changes had occurred, which forced people to live in underground homes?",
+          "hints": [
+            "Look for references to atmospheric or climatic changes.",
+            "Recall why the surface became uninhabitable."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "world-building",
+            "science fiction",
+            "environmental change"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Why was everyone in the Control Room greatly excited?",
+          "hints": [
+            "Consider the unexpected detection or event observed.",
+            "Think about the significance of the 'alien hand'."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "plot development",
+            "suspense",
+            "alien encounter"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Was the spacecraft manned or unmanned? How do you know?",
+          "hints": [
+            "Look for descriptions of the spacecraft's actions or signals.",
+            "Consider how the characters in the story deduce this."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "deduction",
+            "evidence-based reasoning",
+            "space technology"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "What did Number One and Number Two suggest should be done about the alien spacecraft?",
+          "hints": [
+            "Compare the two proposed courses of action.",
+            "Think about the risks and benefits of each."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "decision-making",
+            "ethics",
+            "first contact"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "What do you think the mechanical hand was trying to do?",
+          "hints": [
+            "Consider the hand's actions toward the spacecraft.",
+            "Relate it to the title 'An Alien Hand'."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "interpretation",
+            "symbolism",
+            "science fiction"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Tilloo pressed the red button and \"the damage was done\". What was the damage?",
+          "hints": [
+            "Recall the immediate consequences of pressing the button.",
+            "Think about the effect on the mechanical hand and the spacecraft."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cause and effect",
+            "consequences",
+            "technology"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Where had the spacecraft come from?",
+          "hints": [
+            "Look for clues about its origin in the story.",
+            "Consider the perspective of the characters observing it."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "setting",
+            "space exploration",
+            "mystery"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "On which planet do Tilloo and his parents live?",
+          "hints": [
+            "Look for descriptions of the planet's environment and star.",
+            "Recall references to the Sun and conditions."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "setting",
+            "planet identification",
+            "science fiction"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "What do you know about the Viking Mission to Mars?",
+          "hints": [
+            "Relate the story's events to real historical space missions.",
+            "Consider the purpose and findings of the Viking landers."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "real-world connection",
+            "space history",
+            "Mars exploration"
+          ]
+        }
+      ]
+    }
+  ]
+}

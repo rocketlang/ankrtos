@@ -1,0 +1,242 @@
+{
+  "chapter_number": 8,
+  "chapter_title": "Reproduction in Plants",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Fill in the blanks:\n(a) Production of new individuals from the vegetative part of parent is called_____________.\n(b) A flower may have either male or female reproductive parts. Such a flower is called_____________.\n(c) The transfer of pollen grains from the anther to the stigma of the same or of another flower of the same kind is known as _____________.\n(d) The fusion of male and female gametes is termed as _____________.\n(e) Seed dispersal takes place by means of _____________, _____________ and _____________.",
+          "hints": [
+            "Recall definitions from the chapter",
+            "Check the keywords section",
+            "Think about different modes of reproduction and pollination"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definitions",
+            "reproduction basics",
+            "pollination",
+            "seed dispersal"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Describe the different methods of asexual reproduction. Give examples.",
+          "hints": [
+            "List vegetative propagation, budding, fragmentation, spore formation",
+            "Include examples like rose, potato, yeast, spirogyra, fern"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "asexual reproduction",
+            "vegetative propagation",
+            "budding",
+            "fragmentation",
+            "spore formation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Explain what you understand by sexual reproduction.",
+          "hints": [
+            "Mention fusion of male and female gametes",
+            "Include flower structure, pollination, fertilization"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sexual reproduction",
+            "gametes",
+            "fertilization",
+            "flower structure"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "State the main difference between asexual and sexual reproduction.",
+          "hints": [
+            "Compare involvement of seeds vs. no seeds",
+            "Single parent vs. two parents",
+            "Genetic similarity vs. variation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comparison",
+            "asexual vs sexual",
+            "reproduction types"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Sketch the reproductive parts of a flower.",
+          "hints": [
+            "Draw stamen (anther, filament) and pistil (stigma, style, ovary)",
+            "Label all parts clearly",
+            "Show pollen grains and ovules"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "flower diagram",
+            "reproductive parts",
+            "stamen",
+            "pistil",
+            "drawing"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Explain the difference between self-pollination and cross-pollination.",
+          "hints": [
+            "Define each type",
+            "Compare same flower/plant vs. different plants",
+            "Give examples"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pollination types",
+            "self-pollination",
+            "cross-pollination",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "How does the process of fertilisation take place in flowers?",
+          "hints": [
+            "Start with pollen landing on stigma",
+            "Describe pollen tube growth",
+            "Explain fusion of male and female gametes",
+            "Result is zygote"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "fertilization process",
+            "pollen tube",
+            "gamete fusion",
+            "zygote formation"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Describe the various ways by which seeds are dispersed.",
+          "hints": [
+            "List wind, water, animals, explosion",
+            "Give examples for each method",
+            "Explain adaptations"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "seed dispersal",
+            "wind dispersal",
+            "water dispersal",
+            "animal dispersal",
+            "explosive dispersal"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Match items in Column I with those in Column II:\nColumn I\n(a) Bud\n(b) Eyes\n(c) Fragmentation\n(d) Wings\n(e) Spores\nColumn II\n(i) Maple\n(ii) Spirogyra\n(iii) Yeast\n(iv) Bread mould\n(v) Potato\n(vi) Rose",
+          "hints": [
+            "Bud - yeast/rose",
+            "Eyes - potato",
+            "Fragmentation - spirogyra",
+            "Wings - maple",
+            "Spores - bread mould"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "matching",
+            "reproduction examples",
+            "plant parts"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Tick (✓) the correct answer:\n(a) The reproductive part of a plant is the\n(i) leaf (ii) stem (iii) root (iv) flower\n(b) The process of fusion of the male and the female gametes is called\n(i) fertilisation (ii) pollination (iii) reproduction (iv) seed formation\n(c) Mature ovary forms the\n(i) seed (ii) stamen (iii) pistil (iv) fruit\n(d) A spore producing organism is\n(i) rose (ii) bread mould (iii) potato (iv) ginger\n(e) Bryophyllum can reproduce by its\n(i) stem (ii) leaves (iii) roots (iv) flower",
+          "hints": [
+            "Recall chapter content",
+            "Check definitions",
+            "Remember examples from activities"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "definitions",
+            "plant reproduction",
+            "examples"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Extended Learning",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Make your own cactus garden by collecting pieces cut from different kinds of cacti. Grow the variety in one single flat container or in separate pots.",
+          "hints": [
+            "Use vegetative propagation method",
+            "Ensure cuttings have nodes",
+            "Provide proper soil and sunlight"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "practical activity",
+            "cactus garden",
+            "vegetative propagation",
+            "gardening"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Visit a fruit market and collect as many local fruits as possible. If many fruits are not available, you can collect tomatoes and cucumbers (these are fruits, though we use them as vegetables). Make drawings of the different fruits. Split the fruits and examine the seeds within. Look for any special characteristics in the fruits and their seeds. You can visit a library also to learn about this.",
+          "hints": [
+            "Observe seed structure and arrangement",
+            "Note adaptations for dispersal",
+            "Compare different fruit types"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "field activity",
+            "fruit observation",
+            "seed study",
+            "drawing"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Think of ten different fruit-bearing plants. Remember that many vegetables are also fruits of the plants. Discuss with your teacher, parents, farmers, fruit growers and agricultural experts (if available nearby) and find out the manner of their dispersal. Present your data in the form of a table as shown below:\nS. No. | Name of fruit-bearing plant | Agent through which seeds are dispersed | Part of or seed which helps in dispersal",
+          "hints": [
+            "Include plants like mango, coconut, drumstick, xanthium",
+            "Consider wind, water, animals, explosion methods",
+            "Look for special structures like wings, hooks, hairs"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "research project",
+            "seed dispersal study",
+            "data collection",
+            "table presentation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Suppose there is one member of a particular kind of organism in a culture dish, which doubles itself in one hour through asexual reproduction. Work out the number of members of that kind of organism which will be present in the culture dish after ten hours. Such a colony of individuals arising from one parent is called a 'clone'.",
+          "hints": [
+            "Use exponential growth: 2^n where n is hours",
+            "Start with 1, double each hour",
+            "Calculate 2^10"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "mathematical problem",
+            "exponential growth",
+            "clone concept",
+            "asexual reproduction calculation"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "chapter_number": 3,
+  "chapter_title": "Heat",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "State similarities and differences between the laboratory thermometer and the clinical thermometer.",
+          "hints": [
+            "Compare temperature ranges",
+            "Consider design features like kink",
+            "Think about usage purposes"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "thermometer",
+            "comparison",
+            "measurement"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Give two examples each of conductors and insulators of heat.",
+          "hints": [
+            "Recall materials from Activity 3.7",
+            "Think about kitchen utensils",
+            "Consider clothing materials"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "conductors",
+            "insulators",
+            "materials"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Fill in the blanks : (a) The hotness of an object is determined by its __________. (b) Temperature of boiling water cannot be measured by a _____________ thermometer. (c) Temperature is measured in degree ______________. (d) No medium is required for transfer of heat by the process of __________. (e) A cold steel spoon is dipped in a cup of hot milk. Heat is transferred to its other end by the process of ______________. (f) Clothes of ______________ colours absorb more heat better than clothes of light colours.",
+          "hints": [
+            "Recall definition of temperature",
+            "Think about thermometer ranges",
+            "Remember heat transfer methods",
+            "Consider color absorption properties"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "fill-in-blanks",
+            "heat-transfer",
+            "temperature"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Match the following : (i) Land breeze blows during (a) summer (ii) Sea breeze blows during (b) winter (iii) Dark coloured clothes are preferred during (c) day (iv) Light coloured clothes are preferred during (d) night",
+          "hints": [
+            "Recall sea/land breeze timing",
+            "Think about color absorption in seasons",
+            "Consider day/night temperature patterns"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "matching",
+            "breeze",
+            "clothing"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Discuss why wearing more layers of clothing during winter keeps us warmer than wearing just one thick piece of clothing .",
+          "hints": [
+            "Think about trapped air layers",
+            "Recall wool insulation properties",
+            "Consider conduction through layers"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "insulation",
+            "clothing",
+            "air-trapping"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Look at Fig. 3.13. Mark where the heat is being transferred by conduction, by convection and by radiation.",
+          "hints": [
+            "Identify solid objects for conduction",
+            "Look for fluid movement for convection",
+            "Find direct heat transfer without medium for radiation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "heat-transfer",
+            "conduction",
+            "convection",
+            "radiation"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "In places of hot climate it is advised that the outer walls of houses be painted white. Explain.",
+          "hints": [
+            "Recall color absorption properties",
+            "Think about Activity 3.10 results",
+            "Consider heat reflection"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "color-absorption",
+            "heat-reflection",
+            "practical-application"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "One litre of water at 30°C is mixed with one litre of water at 50°C. The temperature of the mixture will be (a) 80°C (b) more than 50°C but less than 80°C (c) 20°C (d) between 30°C and 50°C",
+          "hints": [
+            "Calculate average temperature",
+            "Consider equal volumes",
+            "Think about heat equilibrium"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "temperature-mixing",
+            "calculation",
+            "heat-equilibrium"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "An iron ball at 40°C is dropped in a mug containing water at 40°C. The heat will (a) flow from iron ball to water. (b) not flow from iron ball to water or from water to iron ball. (c) flow from water to iron ball. (d) increase the temperature of both.",
+          "hints": [
+            "Recall heat flow principle",
+            "Consider equal temperatures",
+            "Think about thermal equilibrium"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "heat-flow",
+            "thermal-equilibrium",
+            "temperature"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "A wooden spoon is dipped in a cup of ice cream. Its other end (a) becomes cold by the process of conduction. (b) becomes cold by the process of convection. (c) becomes cold by the process of radiation. (d) does not become cold.",
+          "hints": [
+            "Recall wood as insulator",
+            "Think about heat transfer in solids",
+            "Consider Activity 3.7 results"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "insulators",
+            "heat-transfer",
+            "materials"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Stainless steel pans are usually provided with copper bottoms. The reason for this could be that (a) copper bottom makes the pan more durable. (b) such pans appear colourful. (c) copper is a better conductor of heat than the stainless steel. (d) copper is easier to clean than the stainless steel.",
+          "hints": [
+            "Recall conductor properties",
+            "Think about cooking efficiency",
+            "Consider heat distribution"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "conductors",
+            "practical-application",
+            "materials"
+          ]
+        }
+      ]
+    }
+  ]
+}

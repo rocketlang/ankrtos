@@ -1,0 +1,212 @@
+{
+  "chapter_number": 2,
+  "chapter_title": "Oceans and Continents",
+  "exercises": [
+    {
+      "exercise_number": "2.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What are the circular lines in each map called? And do you know what the lines radiating out of the two poles are called? (Hint: you studied them in the previous chapter, but here they are presented differently.)",
+          "hints": [
+            "Refer to geographical grid lines",
+            "Think of lines of latitude and longitude"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "map reading",
+            "geography basics",
+            "hemispheres"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Which hemisphere holds more water?",
+          "hints": [
+            "Observe the blue areas in both hemisphere maps",
+            "Compare Northern vs Southern Hemisphere"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "hemispheres",
+            "water distribution",
+            "observation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What do you think could be the approximate proportion of water to land in the Northern Hemisphere? And in the Southern Hemisphere? Discuss in groups.",
+          "hints": [
+            "Estimate from visual observation of maps",
+            "Consider that Earth's surface is ~71% water"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "estimation",
+            "proportions",
+            "group discussion",
+            "hemispheres"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Are all the oceans connected with one another, or are there separations between them?",
+          "hints": [
+            "Look at the world map showing oceans",
+            "Consider if water can flow between them"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "ocean connectivity",
+            "marine geography",
+            "world map"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Locate the five oceans and, in the table below, mark the hemisphere or hemispheres they belong to. Northern Hemisphere, Southern Hemisphere: Pacific Ocean, Atlantic Ocean, Indian Ocean, Southern Ocean, Arctic Ocean",
+          "hints": [
+            "Use world map reference",
+            "Check which hemispheres each ocean spans"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "oceans",
+            "hemispheres",
+            "table completion",
+            "geography"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Counting the numbers of squares, name the largest continent and the smallest.",
+          "hints": [
+            "Refer to continent size diagram",
+            "Count squares for each continent"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "continent sizes",
+            "comparison",
+            "diagram analysis"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Which one is larger — North America or South America? Africa or North America? Antarctica or Australia?",
+          "hints": [
+            "Compare square counts in diagram",
+            "Use visual comparison of sizes"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "continent comparison",
+            "size analysis",
+            "visual estimation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Re-colour the diagram by having a single colour for Europe and Asia and rename the result as 'Eurasia'. Compare its size with South America's.",
+          "hints": [
+            "Combine Europe and Asia squares",
+            "Compare total with South America"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "continent combination",
+            "Eurasia",
+            "comparative analysis"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Write down the list of continents from the smallest to the largest.",
+          "hints": [
+            "Arrange all seven continents by size",
+            "Use square counts from diagram"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "ordering",
+            "continent sizes",
+            "data organization"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Explain the following terms: (a) Continent (b) Ocean (c) Island",
+          "hints": [
+            "Refer to definitions in chapter",
+            "Use your own words based on understanding"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definitions",
+            "geography terms",
+            "concept explanation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Let us draw – Without looking at the maps in this chapter, draw the continents free hand on a sheet of paper and colour them. Then compare your drawing with the map of oceans and continents in the chapter.",
+          "hints": [
+            "Recall shapes of continents from memory",
+            "Focus on relative positions and sizes"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "drawing",
+            "memory recall",
+            "geography skills",
+            "visualization"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Let us do – On the outline map of the world given below, label all the continents and oceans.",
+          "hints": [
+            "Use knowledge of continent and ocean names",
+            "Refer to world map for correct placement"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "map labeling",
+            "geography practice",
+            "world map"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Solve this crossword with clues: Across: 1. Abundantly produced by the oceans, 3. A large expanse of landmass, 5. The smallest continent, 6. A large continent of which India is a part, 8. A major source of pollution of the oceans, 10. The coldest continent. Down: 2. The largest island on Earth, 4. A huge destructive wave from the ocean, 7. The largest body of water on the Earth, 9. A landmass (but not a continent) surrounded by the sea or ocean.",
+          "hints": [
+            "Use chapter content for answers",
+            "Think of key terms learned"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "crossword",
+            "vocabulary",
+            "concept review",
+            "puzzle"
+          ]
+        }
+      ]
+    }
+  ]
+}

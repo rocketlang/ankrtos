@@ -1,0 +1,289 @@
+{
+  "chapter_number": 11,
+  "chapter_title": "SOUND",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What is sound and how is it produced?",
+          "hints": [
+            "Define sound as a form of energy",
+            "Explain vibration of objects",
+            "Give examples like vocal cords, tuning fork"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definition",
+            "production of sound",
+            "vibration"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Describe with the help of a diagram, how compressions and rarefactions are produced in air near a source of sound.",
+          "hints": [
+            "Draw vibrating object",
+            "Show forward motion creating compression",
+            "Show backward motion creating rarefaction",
+            "Label regions of high and low pressure"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "compression",
+            "rarefaction",
+            "wave propagation",
+            "diagram"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why is sound wave called a longitudinal wave?",
+          "hints": [
+            "Define longitudinal wave",
+            "Compare with slinky experiment",
+            "Explain particle motion parallel to wave direction"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "longitudinal wave",
+            "wave types",
+            "particle motion"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Which characteristic of the sound helps you to identify your friend by his voice while sitting with others in a dark room?",
+          "hints": [
+            "Consider quality/timber of sound",
+            "Explain unique voice characteristics",
+            "Distinguish from pitch and loudness"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sound characteristics",
+            "quality",
+            "timber",
+            "voice recognition"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Flash and thunder are produced simultaneously. But thunder is heard a few seconds after the flash is seen, why?",
+          "hints": [
+            "Compare speed of light and sound",
+            "Light travels faster (3×10^8 m/s)",
+            "Sound speed ~340 m/s",
+            "Calculate time difference based on distance"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "speed of sound",
+            "speed of light",
+            "thunder and lightning"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A person has a hearing range from 20 Hz to 20 kHz. What are the typical wavelengths of sound waves in air corresponding to these two frequencies? Take the speed of sound in air as 344 m s⁻¹.",
+          "hints": [
+            "Use formula v = λν",
+            "For 20 Hz: λ = v/ν = 344/20",
+            "For 20 kHz: λ = 344/20000",
+            "Convert to appropriate units"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "wavelength",
+            "frequency",
+            "hearing range",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Two children are at opposite ends of an aluminium rod. One strikes the end of the rod with a stone. Find the ratio of times taken by the sound wave in air and in aluminium to reach the second child.",
+          "hints": [
+            "Use speed values from Table 11.1",
+            "Speed in aluminium = 6420 m/s",
+            "Speed in air = 346 m/s",
+            "Time = distance/speed, ratio = v_aluminium/v_air"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "speed in different media",
+            "ratio",
+            "aluminium",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "The frequency of a source of sound is 100 Hz. How many times does it vibrate in a minute?",
+          "hints": [
+            "Frequency = vibrations per second",
+            "1 minute = 60 seconds",
+            "Multiply frequency by 60",
+            "100 × 60 = 6000 vibrations"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "frequency",
+            "vibrations",
+            "time conversion",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Does sound follow the same laws of reflection as light does? Explain.",
+          "hints": [
+            "State laws of reflection",
+            "Angle of incidence = angle of reflection",
+            "Incident ray, reflected ray, normal in same plane",
+            "Give example of echo"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "reflection of sound",
+            "laws of reflection",
+            "comparison with light"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "When a sound is reflected from a distant object, an echo is produced. Let the distance between the reflecting surface and the source of sound production remains the same. Do you hear echo sound on a hotter day?",
+          "hints": [
+            "Speed of sound increases with temperature",
+            "Time for echo = 2d/v",
+            "Higher temperature → higher speed → shorter time",
+            "Check if time > 0.1s threshold"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "echo",
+            "temperature effect",
+            "speed of sound",
+            "hearing threshold"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Give two practical applications of reflection of sound waves.",
+          "hints": [
+            "Megaphones/loudhailers",
+            "Stethoscopes",
+            "Curved ceilings in halls",
+            "Sound boards"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "applications",
+            "reflection",
+            "real-world examples"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "A stone is dropped from the top of a tower 500 m high into a pond of water at the base of the tower. When is the splash heard at the top? Given, g = 10 m s⁻² and speed of sound = 340 m s⁻¹.",
+          "hints": [
+            "Calculate time for stone to fall: s = ½gt²",
+            "Then calculate time for sound to travel up: t = distance/speed",
+            "Add both times",
+            "Use s = 500m, g = 10 m/s², v_sound = 340 m/s"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "free fall",
+            "speed of sound",
+            "time calculation",
+            "kinematics"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "A sound wave travels at a speed of 339 m s⁻¹. If its wavelength is 1.5 cm, what is the frequency of the wave? Will it be audible?",
+          "hints": [
+            "Convert cm to m: 1.5 cm = 0.015 m",
+            "Use v = λν → ν = v/λ",
+            "ν = 339/0.015",
+            "Compare with audible range (20-20000 Hz)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "frequency calculation",
+            "wavelength",
+            "audible range",
+            "unit conversion"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "What is reverberation? How can it be reduced?",
+          "hints": [
+            "Define repeated reflection causing persistence",
+            "Explain in auditoriums/halls",
+            "Use sound-absorbent materials",
+            "Mention fibreboard, rough plaster, draperies"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "reverberation",
+            "sound absorption",
+            "acoustics"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "What is loudness of sound? What factors does it depend on?",
+          "hints": [
+            "Loudness is physiological response",
+            "Depends on amplitude of wave",
+            "Energy of vibration",
+            "Distance from source"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "loudness",
+            "amplitude",
+            "sound characteristics"
+          ]
+        },
+        {
+          "question_number": 16,
+          "question_text": "How is ultrasound used for cleaning?",
+          "hints": [
+            "High frequency waves in cleaning solution",
+            "Detach dust, grease, dirt particles",
+            "Used for spiral tubes, odd-shaped parts",
+            "Thorough cleaning of electronic components"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "ultrasound",
+            "cleaning",
+            "industrial applications"
+          ]
+        },
+        {
+          "question_number": 17,
+          "question_text": "Explain how defects in a metal block can be detected using ultrasound.",
+          "hints": [
+            "Ultrasonic waves sent through metal",
+            "Detectors receive transmitted waves",
+            "Defects reflect waves back",
+            "Cannot be done with ordinary sound (bending)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "ultrasound",
+            "defect detection",
+            "non-destructive testing",
+            "industrial applications"
+          ]
+        }
+      ]
+    }
+  ]
+}

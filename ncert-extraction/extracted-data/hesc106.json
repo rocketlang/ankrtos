@@ -1,0 +1,168 @@
+{
+  "chapter_number": 6,
+  "chapter_title": "REPRODUCTION IN ANIMALS",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Explain the importance of reproduction in organisms.",
+          "hints": [
+            "Think about continuation of species",
+            "Consider what would happen if organisms didn't reproduce",
+            "Relate to survival and genetic continuity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "importance of reproduction",
+            "species continuation",
+            "biological significance"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Describe the process of fertilisation in human beings.",
+          "hints": [
+            "Start with sperm and egg meeting",
+            "Explain fusion of nuclei",
+            "Describe zygote formation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "fertilisation",
+            "human reproduction",
+            "zygote formation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Choose the most appropriate answer.\n(a) Internal fertilisation occurs\n(i) in female body.\n(ii) outside female body.\n(iii) in male body.\n(iv) outside male body.\n(b) A tadpole develops into an adult frog by the process of\n(i) fertilisation\n(ii) metamorphosis\n(iii) embedding\n(iv) budding\n(c) The number of nuclei present in a zygote is\n(i) none\n(ii) one\n(iii) two\n(iv) four",
+          "hints": [
+            "Recall where internal fertilisation happens",
+            "Remember frog life cycle stages",
+            "Think about what happens during fertilisation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "internal fertilisation",
+            "metamorphosis",
+            "zygote structure"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Indicate whether the following statements are True (T) or False (F).\n(a) Oviparous animals give birth to young ones. ( )\n(b) Each sperm is a single cell. ( )\n(c) External fertilisation takes place in frog. ( )\n(d) A new human individual develops from a cell called gamete. ( )\n(e) Egg laid after fertilisation is made up of a single cell. ( )\n(f) Amoeba reproduces by budding. ( )\n(g) Fertilisation is necessary even in asexual reproduction. ( )\n(h) Binary fission is a method of asexual reproduction. ( )\n(i) A zygote is formed as a result of fertilisation. ( )\n(j) An embryo is made up of a single cell. ( )",
+          "hints": [
+            "Review definitions of oviparous/viviparous",
+            "Check sperm structure",
+            "Recall frog reproduction method",
+            "Understand zygote vs gamete",
+            "Know amoeba reproduction method"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "true false",
+            "reproduction concepts",
+            "definitions",
+            "comparative analysis"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Give two differences between a zygote and a foetus.",
+          "hints": [
+            "Consider developmental stage",
+            "Think about size and complexity",
+            "Recall when each term applies"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comparison",
+            "developmental stages",
+            "zygote",
+            "foetus"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Define asexual reproduction. Describe two methods of asexual reproduction in animals.",
+          "hints": [
+            "Start with single parent definition",
+            "Recall hydra and amoeba examples",
+            "Explain budding and binary fission"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "asexual reproduction",
+            "budding",
+            "binary fission",
+            "definition"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "In which female reproductive organ does the embryo get embedded?",
+          "hints": [
+            "Think about where baby develops",
+            "Recall human reproductive system"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "female reproductive system",
+            "embryo development",
+            "human anatomy"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "What is metamorphosis? Give examples.",
+          "hints": [
+            "Define drastic change",
+            "Think about frog life cycle",
+            "Consider other animals with similar changes"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "metamorphosis",
+            "life cycles",
+            "examples",
+            "definition"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Differentiate between internal fertilisation and external fertilisation.",
+          "hints": [
+            "Compare location of fertilisation",
+            "Think about examples of each",
+            "Consider advantages/disadvantages"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comparison",
+            "fertilisation types",
+            "internal vs external"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Complete the crossword puzzle using the hints given below.\nAcross\n1. The process of the fusion of the gametes.\n6. The type of fertilisation in hen.\n7. The term used for bulges observed on the sides of the body of hydra.\n8. Eggs are produced here.\nDown\n2. Sperms are produced in these male reproductive organs.\n3. Another term for in vitro fertilisation.\n4. These animals lay eggs.\n5. A type of fission in amoeba.",
+          "hints": [
+            "Review key terms from chapter",
+            "Match definitions with vocabulary",
+            "Check spelling of scientific terms"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "crossword",
+            "vocabulary",
+            "key terms",
+            "puzzle"
+          ]
+        }
+      ]
+    }
+  ]
+}

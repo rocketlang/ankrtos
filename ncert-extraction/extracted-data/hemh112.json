@@ -1,0 +1,200 @@
+{
+  "chapter_number": 12,
+  "chapter_title": "Factorisation",
+  "exercises": [
+    {
+      "exercise_number": "12.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the common factors of the given terms. (i) 12x, 36 (ii) 2y, 22xy (iii) 14 pq, 28p2q2 (iv) 2x, 3x2, 4 (v) 6 abc, 24ab2, 12 a2b (vi) 16 x3, – 4x2, 32x (vii) 10 pq, 20qr, 30rp (viii) 3x2 y3, 10x3 y2, 6 x2 y2 z",
+          "hints": [
+            "Write each term as a product of irreducible factors",
+            "Identify factors that appear in all terms"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "common factors",
+            "irreducible factors"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Factorise the following expressions. (i) 7x – 42 (ii) 6p – 12q (iii) 7a2 + 14a (iv) – 16 z + 20 z3 (v) 20 l2 m + 30 a l m (vi) 5 x2 y – 15 xy2 (vii) 10 a2 – 15 b2 + 20 c2 (viii) – 4 a2 + 4 ab – 4 ca (ix) x2 y z + x y2z + x y z2 (x) a x2 y + b x y2 + c x y z",
+          "hints": [
+            "Find the common factor in all terms",
+            "Use distributive law to factor out the common factor"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "factorisation",
+            "common factor method",
+            "distributive law"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Factorise. (i) x2 + x y + 8x + 8y (ii) 15 xy – 6x + 5y – 2 (iii) ax + bx – ay – by (iv) 15 pq + 15 + 9q + 25p (v) z – 7 + 7 x y – x y z",
+          "hints": [
+            "Group terms with common factors",
+            "Factorise each group separately",
+            "Look for a common binomial factor"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "factorisation by regrouping",
+            "grouping terms"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Factorise the following expressions. (i) a2 + 8a + 16 (ii) p2 – 10 p + 25 (iii) 25m2 + 30m + 9 (iv) 49y2 + 84yz + 36z2 (v) 4x2 – 8x + 4 (vi) 121b2 – 88bc + 16c2 (vii) (l + m)2 – 4lm (Hint: Expand ( l + m)2 first) (viii) a4 + 2a2b2 + b4",
+          "hints": [
+            "Check if the expression is a perfect square trinomial",
+            "Use identities: (a + b)² = a² + 2ab + b² or (a - b)² = a² - 2ab + b²"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "perfect square trinomial",
+            "algebraic identities"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Factorise. (i) 4p2 – 9q2 (ii) 63a2 – 112b2 (iii) 49x2 – 36 (iv) 16x5 – 144x3 (v) (l + m)2 – (l – m)2 (vi) 9x2 y2 – 16 (vii) (x2 – 2xy + y2) – z2 (viii) 25a2 – 4b2 + 28bc – 49c2",
+          "hints": [
+            "Look for difference of squares: a² - b² = (a + b)(a - b)",
+            "Factor out common factors first if needed",
+            "Rearrange terms to apply identities"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "difference of squares",
+            "algebraic identities",
+            "factorisation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Factorise the expressions. (i) ax2 + bx (ii) 7p2 + 21q2 (iii) 2x3 + 2xy2 + 2xz2 (iv) am2 + bm2 + bn2 + an2 (v) (lm + l) + m + 1 (vi) y (y + z) + 9 (y + z) (vii) 5y2 – 20y – 8z + 2yz (viii) 10ab + 4a + 5b + 2 (ix) 6xy – 4y + 6 – 9x",
+          "hints": [
+            "Look for common factors",
+            "Use grouping method for four-term expressions",
+            "Rearrange terms if necessary"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "common factor",
+            "grouping method",
+            "factorisation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Factorise. (i) a4 – b4 (ii) p4 – 81 (iii) x4 – (y + z)4 (iv) x4 – (x – z)4 (v) a4 – 2a2b2 + b4",
+          "hints": [
+            "Treat as difference of squares: a⁴ - b⁴ = (a²)² - (b²)²",
+            "Apply identity multiple times if needed",
+            "For (v), recognize it as (a² - b²)²"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "difference of squares",
+            "higher powers",
+            "algebraic identities"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Factorise the following expressions. (i) p2 + 6p + 8 (ii) q2 – 10q + 21 (iii) p2 + 6p – 16",
+          "hints": [
+            "Find two numbers that multiply to constant term and add to coefficient of middle term",
+            "Use identity: x² + (a+b)x + ab = (x+a)(x+b)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "quadratic factorisation",
+            "splitting middle term"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Carry out the following divisions. (i) 28x4 ÷ 56x (ii) –36y3 ÷ 9y2 (iii) 66pq2r3 ÷ 11qr2 (iv) 34x3y3z3 ÷ 51xy2z3 (v) 12a8b8 ÷ (– 6a6b4)",
+          "hints": [
+            "Write numerator and denominator in irreducible factor form",
+            "Cancel common factors"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "division of monomials",
+            "cancelling common factors"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Divide the given polynomial by the given monomial. (i) (5x2 – 6x) ÷ 3x (ii) (3y8 – 4y6 + 5y4) ÷ y4 (iii) 8(x3y2z2 + x2y3z2 + x2y2z3) ÷ 4x2y2z2 (iv) (x3 + 2x2 + 3x) ÷ 2x (v) (p3q6 – p6q3) ÷ p3q3",
+          "hints": [
+            "Divide each term of polynomial by the monomial",
+            "Alternatively, factor out common factor and cancel"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "polynomial division",
+            "division by monomial"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Work out the following divisions. (i) (10x – 25) ÷ 5 (ii) (10x – 25) ÷ (2x – 5) (iii) 10y(6y + 21) ÷ 5(2y + 7) (iv) 9x2y2(3z – 24) ÷ 27xy(z – 8) (v) 96abc(3a – 12) (5b – 30) ÷ 144(a – 4) (b – 6)",
+          "hints": [
+            "Factorise numerator and denominator completely",
+            "Cancel common factors"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "division of algebraic expressions",
+            "factorisation before division"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Divide as directed. (i) 5(2x + 1) (3x + 5) ÷ (2x + 1) (ii) 26xy(x + 5) (y – 4) ÷ 13x(y – 4) (iii) 52pqr (p + q) (q + r) (r + p) ÷ 104pq(q + r) (r + p) (iv) 20(y + 4) (y2 + 5y + 3) ÷ 5(y + 4) (v) x(x + 1) (x + 2) (x + 3) ÷ x(x + 1)",
+          "hints": [
+            "Cancel common factors directly",
+            "No need to expand expressions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cancellation",
+            "division of products"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Factorise the expressions and divide them as directed. (i) (y2 + 7y + 10) ÷ (y + 5) (ii) (m2 – 14m – 32) ÷ (m + 2) (iii) (5p2 – 25p + 20) ÷ (p – 1) (iv) 4yz(z2 + 6z – 16) ÷ 2y(z + 8) (v) 5pq(p2 – q2) ÷ 2p(p + q) (vi) 12xy(9x2 – 16y2) ÷ 4xy(3x + 4y) (vii) 39y3(50y2 – 98) ÷ 26y2(5y + 7)",
+          "hints": [
+            "Factorise numerator completely first",
+            "Cancel common factors with denominator",
+            "Use identities like a² - b² = (a+b)(a-b)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "factorisation before division",
+            "algebraic identities",
+            "cancellation"
+          ]
+        }
+      ]
+    }
+  ]
+}

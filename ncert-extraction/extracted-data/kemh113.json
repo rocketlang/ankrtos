@@ -1,0 +1,351 @@
+{
+  "chapter_number": 13,
+  "chapter_title": "STATISTICS",
+  "exercises": [
+    {
+      "exercise_number": "13.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the mean deviation about the mean for the data: 4, 7, 8, 9, 10, 12, 13, 17",
+          "hints": [
+            "Calculate the mean first",
+            "Find absolute deviations from mean",
+            "Take average of absolute deviations"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "mean deviation",
+            "ungrouped data",
+            "central tendency"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the mean deviation about the mean for the data: 38, 70, 48, 40, 42, 55, 63, 46, 54, 44",
+          "hints": [
+            "Compute mean of 10 observations",
+            "Find |xi - mean| for each",
+            "Sum and divide by 10"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "mean deviation",
+            "ungrouped data",
+            "dispersion"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the mean deviation about the median for the data: 13, 17, 16, 14, 11, 13, 10, 16, 11, 18, 12, 17",
+          "hints": [
+            "Arrange data in ascending order",
+            "Find median (even n)",
+            "Compute absolute deviations from median"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "median deviation",
+            "ungrouped data",
+            "central tendency"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the mean deviation about the median for the data: 36, 72, 46, 42, 60, 45, 53, 46, 51, 49",
+          "hints": [
+            "Sort data ascending",
+            "Locate median",
+            "Calculate mean of absolute deviations from median"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "median deviation",
+            "ungrouped data",
+            "dispersion"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the mean deviation about the mean for the data:\nxi: 5, 10, 15, 20, 25\nfi: 7, 4, 6, 3, 5",
+          "hints": [
+            "Calculate weighted mean",
+            "Find |xi - mean|",
+            "Multiply by fi, sum, divide by N"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "discrete frequency",
+            "mean deviation",
+            "weighted average"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Find the mean deviation about the mean for the data:\nxi: 10, 30, 50, 70, 90\nfi: 4, 24, 28, 16, 8",
+          "hints": [
+            "Compute N = sum fi",
+            "Find mean using weighted average",
+            "Calculate fi * |xi - mean|, then average"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "discrete frequency",
+            "mean deviation",
+            "dispersion"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Find the mean deviation about the median for the data:\nxi: 5, 7, 9, 10, 12, 15\nfi: 8, 6, 2, 2, 2, 6",
+          "hints": [
+            "Find cumulative frequency",
+            "Locate median class/value",
+            "Compute fi * |xi - median|, then average"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "discrete frequency",
+            "median deviation",
+            "cumulative frequency"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Find the mean deviation about the median for the data:\nxi: 15, 21, 27, 30, 35\nfi: 3, 5, 6, 7, 8",
+          "hints": [
+            "Calculate N and cumulative frequencies",
+            "Determine median observation",
+            "Compute mean deviation using formula"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "discrete frequency",
+            "median deviation",
+            "central tendency"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Find the mean deviation about the mean for the data:\nIncome per day (₹): 0-100, 100-200, 200-300, 300-400, 400-500, 500-600, 600-700, 700-800\nNumber of persons: 4, 8, 9, 10, 7, 5, 4, 3",
+          "hints": [
+            "Use mid-points of classes",
+            "Compute weighted mean",
+            "Find |mid-point - mean|, multiply by fi, average"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "continuous frequency",
+            "grouped data",
+            "mean deviation"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Find the mean deviation about the mean for the data:\nHeight (cm): 95-105, 105-115, 115-125, 125-135, 135-145, 145-155\nNumber of boys: 9, 13, 26, 30, 12, 10",
+          "hints": [
+            "Take class mid-points",
+            "Calculate mean height",
+            "Compute fi * |xi - mean|, divide by N"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "continuous frequency",
+            "grouped data",
+            "dispersion"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Find the mean deviation about median for the following data:\nMarks: 0-10, 10-20, 20-30, 30-40, 40-50, 50-60\nNumber of Girls: 6, 8, 14, 16, 4, 2",
+          "hints": [
+            "Find median class using cumulative frequency",
+            "Apply median formula for continuous data",
+            "Compute mean deviation using mid-points"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "continuous frequency",
+            "median deviation",
+            "grouped data"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Calculate the mean deviation about median age for the age distribution of 100 persons given below:\nAge (years): 16-20, 21-25, 26-30, 31-35, 36-40, 41-45, 46-50, 51-55\nNumber: 5, 6, 12, 14, 26, 12, 16, 9\n[Hint: Convert the given data into continuous frequency distribution by subtracting 0.5 from the lower limit and adding 0.5 to the upper limit of each class interval]",
+          "hints": [
+            "Adjust class boundaries as per hint",
+            "Compute cumulative frequencies",
+            "Find median using formula for continuous data",
+            "Calculate mean deviation about median"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "continuous frequency",
+            "median deviation",
+            "class boundaries",
+            "adjustment"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "13.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the mean and variance for the data: 6, 7, 10, 12, 13, 4, 8, 12",
+          "hints": [
+            "Calculate mean first",
+            "Use variance formula for ungrouped data",
+            "Sum of squared deviations divided by n"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "variance",
+            "ungrouped data",
+            "standard deviation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the mean and variance for first n natural numbers",
+          "hints": [
+            "Use formula for sum of first n natural numbers",
+            "Mean = (n+1)/2",
+            "Variance formula for arithmetic progression"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "natural numbers",
+            "variance",
+            "formula derivation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the mean and variance for first 10 multiples of 3",
+          "hints": [
+            "List: 3,6,9,...,30",
+            "Mean = average of first and last",
+            "Use variance formula for AP with d=3"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "multiples",
+            "arithmetic progression",
+            "variance"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the mean and variance for the data:\nxi: 6, 10, 14, 18, 24, 28, 30\nfi: 2, 4, 7, 12, 8, 4, 3",
+          "hints": [
+            "Compute weighted mean",
+            "Use variance formula for discrete frequency",
+            "Calculate fi*(xi-mean)^2, sum, divide by N"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "discrete frequency",
+            "variance",
+            "weighted mean"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the mean and variance for the data:\nxi: 92, 93, 97, 98, 102, 104, 109\nfi: 3, 2, 3, 2, 6, 3, 3",
+          "hints": [
+            "Calculate N = sum fi",
+            "Find mean using weighted average",
+            "Compute variance using formula for discrete data"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "discrete frequency",
+            "variance",
+            "central tendency"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Find the mean and standard deviation using short-cut method.\nxi: 60, 61, 62, 63, 64, 65, 66, 67, 68\nfi: 2, 1, 12, 29, 25, 12, 10, 4, 5",
+          "hints": [
+            "Choose assumed mean (e.g., 64)",
+            "Compute di = (xi - A)",
+            "Use shortcut formulas for mean and variance"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "shortcut method",
+            "assumed mean",
+            "standard deviation"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Find the mean and variance for the frequency distribution:\nClasses: 0-30, 30-60, 60-90, 90-120, 120-150, 150-180, 180-210\nFrequencies: 2, 3, 5, 10, 3, 5, 2",
+          "hints": [
+            "Use mid-points of classes",
+            "Compute weighted mean",
+            "Apply variance formula for continuous frequency"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "continuous frequency",
+            "grouped data",
+            "variance"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Find the mean and variance for the frequency distribution:\nClasses: 0-10, 10-20, 20-30, 30-40, 40-50\nFrequencies: 5, 8, 15, 16, 6",
+          "hints": [
+            "Take class mid-points",
+            "Calculate mean using weighted average",
+            "Compute variance using appropriate formula"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "continuous frequency",
+            "grouped data",
+            "variance"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Find the mean, variance and standard deviation using short-cut method\nHeight (cm): 70-75, 75-80, 80-85, 85-90, 90-95, 95-100, 100-105, 105-110, 110-115\nNo. of children: 3, 4, 7, 7, 15, 9, 6, 6, 3",
+          "hints": [
+            "Choose assumed mean (e.g., 92.5)",
+            "Compute di = (xi - A)/h",
+            "Use shortcut formulas for mean, variance, SD"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "shortcut method",
+            "step deviation",
+            "grouped data",
+            "standard deviation"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "The diameters of circles (in mm) drawn in a design are given below:\nDiameters: 33-36, 37-40, 41-44, 45-48, 49-52\nNo. of circles: 15, 17, 21, 22, 25\nCalculate the standard deviation and mean diameter of the circles.\n[Hint: First make the data continuous by making the classes as 32.5-36.5, 36.5-40.5, 40.5-44.5, 44.5-48.5, 48.5-52.5 and then proceed.]",
+          "hints": [
+            "Adjust class boundaries as per hint",
+            "Find mid-points",
+            "Use shortcut method for efficiency",
+            "Compute mean and standard deviation"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "continuous data adjustment",
+            "class boundaries",
+            "standard deviation",
+            "grouped data"
+          ]
+        }
+      ]
+    }
+  ]
+}

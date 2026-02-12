@@ -1,0 +1,301 @@
+{
+  "chapter_number": 3,
+  "chapter_title": "ATOMS AND MOLECULES",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "In a reaction, 5.3 g of sodium carbonate reacted with 6 g of acetic acid. The products were 2.2 g of carbon dioxide, 0.9 g water and 8.2 g of sodium acetate. Show that these observations are in agreement with the law of conservation of mass.\nsodium carbonate + acetic acid → sodium acetate + carbon dioxide + water",
+          "hints": [
+            "Calculate total mass of reactants",
+            "Calculate total mass of products",
+            "Compare both totals"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "law of conservation of mass",
+            "mass calculation",
+            "chemical reaction"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Hydrogen and oxygen combine in the ratio of 1:8 by mass to form water. What mass of oxygen gas would be required to react completely with 3 g of hydrogen gas?",
+          "hints": [
+            "Use the given mass ratio 1:8",
+            "Set up proportion: hydrogen mass / oxygen mass = 1/8",
+            "Solve for oxygen mass when hydrogen = 3g"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "law of constant proportions",
+            "mass ratio",
+            "stoichiometry"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Which postulate of Dalton's atomic theory is the result of the law of conservation of mass?",
+          "hints": [
+            "Review Dalton's atomic theory postulates",
+            "Identify which postulate aligns with 'atoms cannot be created or destroyed'",
+            "Relate to conservation of mass"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Dalton's atomic theory",
+            "law of conservation of mass",
+            "postulates"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Which postulate of Dalton's atomic theory can explain the law of definite proportions?",
+          "hints": [
+            "Review Dalton's atomic theory postulates",
+            "Identify which postulate explains fixed composition",
+            "Relate to constant mass ratios in compounds"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Dalton's atomic theory",
+            "law of definite proportions",
+            "chemical combination"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Define the atomic mass unit.",
+          "hints": [
+            "Refer to carbon-12 standard",
+            "Define as 1/12th mass of carbon-12 atom",
+            "Mention the unit 'u'"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "atomic mass unit",
+            "definition",
+            "measurement"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why is it not possible to see an atom with naked eyes?",
+          "hints": [
+            "Consider size of atoms (nanometer scale)",
+            "Compare with wavelength of visible light",
+            "Think about magnification limits"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "atomic size",
+            "visibility",
+            "nanometer scale"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Write down the formulae of (i) sodium oxide (ii) aluminium chloride (iii) sodium sulphide (iv) magnesium hydroxide",
+          "hints": [
+            "Determine valencies from Table 3.6",
+            "Criss-cross valencies to balance charges",
+            "Use brackets for polyatomic ions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "chemical formulae",
+            "valency",
+            "ionic compounds"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Write down the names of compounds represented by the following formulae: (i) Al2(SO4)3 (ii) CaCl2 (iii) K2SO4 (iv) KNO3 (v) CaCO3",
+          "hints": [
+            "Identify cations and anions",
+            "Use Table 3.6 for ion names",
+            "Combine names with correct prefixes"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "naming compounds",
+            "chemical nomenclature",
+            "ionic compounds"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What is meant by the term chemical formula?",
+          "hints": [
+            "Define as symbolic representation",
+            "Mention composition of compound",
+            "Include element symbols and atom counts"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "chemical formula",
+            "definition",
+            "symbolic representation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "How many atoms are present in a (i) H2S molecule and (ii) PO43– ion?",
+          "hints": [
+            "Count atoms in H2S: H=2, S=1",
+            "Count atoms in PO43-: P=1, O=4",
+            "Total atoms in each species"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "atom counting",
+            "molecular composition",
+            "polyatomic ions"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Calculate the molecular masses of H2, O2, Cl2, CO2, CH4, C2H6, C2H4, NH3, CH3OH.",
+          "hints": [
+            "Use atomic masses: H=1, C=12, O=16, N=14, Cl=35.5",
+            "Sum atomic masses of all atoms in molecule",
+            "Multiply atomic mass by number of atoms"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "molecular mass calculation",
+            "atomic masses",
+            "summation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Calculate the formula unit masses of ZnO, Na2O, K2CO3, given atomic masses of Zn = 65 u, Na = 23 u, K = 39 u, C = 12 u, and O = 16 u.",
+          "hints": [
+            "Sum atomic masses of all atoms in formula unit",
+            "For ionic compounds, treat same as molecular mass",
+            "Multiply and add carefully"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "formula unit mass",
+            "ionic compounds",
+            "mass calculation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A 0.24 g sample of compound of oxygen and boron was found by analysis to contain 0.096 g of boron and 0.144 g of oxygen. Calculate the percentage composition of the compound by weight.",
+          "hints": [
+            "Percentage = (mass of element / total mass) × 100",
+            "Calculate for boron and oxygen separately",
+            "Check sum equals 100%"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "percentage composition",
+            "mass percentage",
+            "chemical analysis"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "When 3.0 g of carbon is burnt in 8.00 g oxygen, 11.00 g of carbon dioxide is produced. What mass of carbon dioxide will be formed when 3.00 g of carbon is burnt in 50.00 g of oxygen? Which law of chemical combination will govern your answer?",
+          "hints": [
+            "Identify limiting reactant (carbon or oxygen)",
+            "Use law of constant proportions",
+            "Calculate based on fixed C:O ratio in CO2"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "limiting reactant",
+            "law of constant proportions",
+            "stoichiometry"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What are polyatomic ions? Give examples.",
+          "hints": [
+            "Define as groups of atoms with net charge",
+            "Provide examples from Table 3.6",
+            "Mention both cations and anions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "polyatomic ions",
+            "definition",
+            "examples"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Write the chemical formulae of the following. (a) Magnesium chloride (b) Calcium oxide (c) Copper nitrate (d) Aluminium chloride (e) Calcium carbonate.",
+          "hints": [
+            "Determine valencies from Table 3.6",
+            "Criss-cross to balance charges",
+            "Use brackets for polyatomic ions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "chemical formulae",
+            "ionic compounds",
+            "valency"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Give the names of the elements present in the following compounds. (a) Quick lime (b) Hydrogen bromide (c) Baking powder (d) Potassium sulphate.",
+          "hints": [
+            "Identify chemical formulae first",
+            "List elements from each formula",
+            "Use proper element names"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "element identification",
+            "compound composition",
+            "chemical names"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Calculate the molar mass of the following substances. (a) Ethyne, C2H2 (b) Sulphur molecule, S8 (c) Phosphorus molecule, P4 (Atomic mass of phosphorus = 31) (d) Hydrochloric acid, HCl (e) Nitric acid, HNO3",
+          "hints": [
+            "Sum atomic masses of all atoms",
+            "Multiply atomic mass by subscript",
+            "Use given atomic masses"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "molar mass",
+            "molecular mass",
+            "calculation"
+          ]
+        }
+      ]
+    }
+  ]
+}

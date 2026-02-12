@@ -1,0 +1,207 @@
+{
+  "chapter_number": 9,
+  "chapter_title": "Motion and Time",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Classify the following as motion along a straight line, circular or oscillatory motion:\n(i) Motion of your hands while running.\n(ii) Motion of a horse pulling a cart on a straight road.\n(iii) Motion of a child in a merry-go-round.\n(iv) Motion of a child on a see-saw.\n(v) Motion of the hammer of an electric bell.\n(vi) Motion of a train on a straight bridge.",
+          "hints": [
+            "Recall definitions of straight line, circular, and oscillatory motion",
+            "Think about the path followed by each object",
+            "Consider if motion repeats back and forth"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "motion classification",
+            "types of motion",
+            "physics basics"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Which of the following are not correct?\n(i) The basic unit of time is second.\n(ii) Every object moves with a constant speed.\n(iii) Distances between two cities are measured in kilometres.\n(iv) The time period of a given pendulum is constant.\n(v) The speed of a train is expressed in m/h.",
+          "hints": [
+            "Check SI units",
+            "Consider if speed always remains constant",
+            "Think about common units used in daily life"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "units",
+            "speed concepts",
+            "pendulum properties"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A simple pendulum takes 32 s to complete 20 oscillations. What is the time period of the pendulum?",
+          "hints": [
+            "Time period = Total time / Number of oscillations",
+            "Divide 32 by 20",
+            "Remember units (seconds)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pendulum",
+            "time period",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The distance between two stations is 240 km. A train takes 4 hours to cover this distance. Calculate the speed of the train.",
+          "hints": [
+            "Speed = Distance / Time",
+            "Use formula: speed = 240 km / 4 h",
+            "Units: km/h"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "speed calculation",
+            "distance-time",
+            "basic physics"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "The odometer of a car reads 57321.0 km when the clock shows the time 08:30 AM. What is the distance moved by the car, if at 08:50 AM, the odometer reading has changed to 57336.0 km? Calculate the speed of the car in km/min during this time. Express the speed in km/h also.",
+          "hints": [
+            "Distance moved = Final reading - Initial reading",
+            "Time interval = 20 minutes",
+            "Speed = Distance / Time",
+            "Convert km/min to km/h by multiplying by 60"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "odometer",
+            "speed calculation",
+            "unit conversion"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Salma takes 15 minutes from her house to reach her school on a bicycle. If the bicycle has a speed of 2 m/s, calculate the distance between her house and the school.",
+          "hints": [
+            "Convert minutes to seconds: 15 min = 900 s",
+            "Distance = Speed × Time",
+            "Use formula: distance = 2 m/s × 900 s"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "distance calculation",
+            "unit conversion",
+            "speed-time"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Show the shape of the distance-time graph for the motion in the following cases:\n(i) A car moving with a constant speed.\n(ii) A car parked on a side road.",
+          "hints": [
+            "Constant speed gives straight line with positive slope",
+            "Parked car means zero distance change over time",
+            "Think about slope representing speed"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "distance-time graph",
+            "graph interpretation",
+            "motion visualization"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Which of the following relations is correct?\n(i) Speed = Distance × Time\n(ii) Speed = Distance / Time\n(iii) Speed = Time / Distance\n(iv) Speed = 1 / (Distance × Time)",
+          "hints": [
+            "Recall formula: Speed = Distance / Time",
+            "Check units: m/s = m ÷ s"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "speed formula",
+            "physics equations",
+            "basic concepts"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "The basic unit of speed is:\n(i) km/min\n(ii) m/min\n(iii) km/h\n(iv) m/s",
+          "hints": [
+            "SI unit of speed is m/s",
+            "Basic units: meter for distance, second for time"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "SI units",
+            "speed units",
+            "measurement"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "A car moves with a speed of 40 km/h for 15 minutes and then with a speed of 60 km/h for the next 15 minutes. The total distance covered by the car is:\n(i) 100 km\n(ii) 25 km\n(iii) 15 km\n(iv) 10 km",
+          "hints": [
+            "Convert minutes to hours: 15 min = 0.25 h",
+            "Distance1 = 40 × 0.25",
+            "Distance2 = 60 × 0.25",
+            "Add both distances"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "distance calculation",
+            "multiple speeds",
+            "time conversion"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Suppose the two photographs, shown in Fig. 9.1 and Fig. 9.2, had been taken at an interval of 10 seconds. If a distance of 100 metres is shown by 1 cm in these photographs, calculate the speed of the fastest car.",
+          "hints": [
+            "Measure distance moved by fastest car in cm",
+            "Convert cm to meters using scale",
+            "Speed = Distance / Time (10 seconds)",
+            "Convert to appropriate units"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "scale conversion",
+            "graphical analysis",
+            "speed from images"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Fig. 9.15 shows the distance-time graph for the motion of two vehicles A and B. Which one of them is moving faster?",
+          "hints": [
+            "Steeper slope means higher speed",
+            "Compare slopes of lines A and B",
+            "Check which covers more distance in same time"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "graph interpretation",
+            "slope analysis",
+            "comparative speed"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "Which of the following distance-time graphs shows a truck moving with speed which is not constant?\n(i) [straight line]\n(ii) [curved line]\n(iii) [horizontal line]\n(iv) [zigzag line]",
+          "hints": [
+            "Constant speed gives straight line",
+            "Changing speed gives curved or non-linear graph",
+            "Horizontal line means zero speed"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "distance-time graph",
+            "non-uniform motion",
+            "graph analysis"
+          ]
+        }
+      ]
+    }
+  ]
+}

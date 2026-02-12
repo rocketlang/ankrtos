@@ -1,0 +1,286 @@
+{
+  "chapter_number": 3,
+  "chapter_title": "Data Handling",
+  "exercises": [
+    {
+      "exercise_number": "3.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the range of heights of any ten students of your class.",
+          "hints": [
+            "Measure the heights of 10 students",
+            "Find the difference between the tallest and shortest"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "heights",
+            "range"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Organise the following marks in a class assessment, in a tabular form. 4, 6, 7, 5, 3, 5, 4, 5, 2, 6, 2, 5, 1, 9, 6, 5, 8, 4, 6, 7",
+          "hints": [
+            "Create a table with marks and frequency",
+            "Count the frequency of each mark"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "marks",
+            "frequency"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the mean of the first five whole numbers.",
+          "hints": [
+            "List the first five whole numbers",
+            "Calculate the mean"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "mean",
+            "whole numbers"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "A cricketer scores the following runs in eight innings: 58, 76, 40, 35, 46, 45, 0, 100. Find the mean score.",
+          "hints": [
+            "Calculate the total runs",
+            "Divide by the number of innings"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cricket",
+            "mean score"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Following table shows the points of each player scored in four games: ... Now answer the following questions: (i) Find the mean to determine A’s average number of points scored per game. (ii) To find the mean number of points per game for C, would you divide the total points by 3 or by 4? Why? (iii) B played in all the four games. How would you find the mean? (iv) Who is the best performer?",
+          "hints": [
+            "Calculate the total points for each player",
+            "Divide by the number of games played"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "games",
+            "mean score"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "The marks (out of 100) obtained by a group of students in a science test are 85, 76, 90, 85, 39, 48, 56, 95, 81 and 75. Find the: (i) Highest and the lowest marks obtained by the students. (ii) Range of the marks obtained. (iii) Mean marks obtained by the group.",
+          "hints": [
+            "Find the highest and lowest marks",
+            "Calculate the range and mean"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "marks",
+            "range",
+            "mean"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "The enrolment in a school during six consecutive years was as follows: 1555, 1670, 1750, 2013, 2540, 2820 Find the mean enrolment of the school for this period.",
+          "hints": [
+            "Calculate the total enrolment",
+            "Divide by the number of years"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "enrolment",
+            "mean"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "The rainfall (in mm) in a city on 7 days of a certain week was recorded as follows: ... (i) Find the range of the rainfall in the above data. (ii) Find the mean rainfall for the week. (iii) On how many days was the rainfall less than the mean rainfall.",
+          "hints": [
+            "Find the highest and lowest rainfall",
+            "Calculate the range and mean"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rainfall",
+            "range",
+            "mean"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "The heights of 10 girls were measured in cm and the results are as follows: 135, 150, 139, 128, 151, 132, 146, 149, 143, 141. (i) What is the height of the tallest girl? (ii) What is the height of the shortest girl? (iii) What is the range of the data? (iv) What is the mean height of the girls? (v) How many girls have heights more than the mean height.",
+          "hints": [
+            "Find the highest and lowest heights",
+            "Calculate the range and mean"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "heights",
+            "range",
+            "mean"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "The scores in mathematics test (out of 25) of 15 students is as follows: 19, 25, 23, 20, 9, 20, 15, 10, 5, 16, 25, 20, 24, 12, 20 Find the mode and median of this data. Are they same?",
+          "hints": [
+            "Find the mode and median",
+            "Compare the values"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "mode",
+            "median"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The runs scored in a cricket match by 11 players is as follows: 6, 15, 120, 50, 100, 80, 10, 15, 8, 10, 15 Find the mean, mode and median of this data. Are the three same?",
+          "hints": [
+            "Calculate the mean, mode, and median",
+            "Compare the values"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "mean",
+            "mode",
+            "median"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The weights (in kg.) of 15 students of a class are: 38, 42, 35, 37, 45, 50, 32, 43, 43, 40, 36, 38, 43, 38, 47 (i) Find the mode and median of this data. (ii) Is there more than one mode?",
+          "hints": [
+            "Find the mode and median",
+            "Check for multiple modes"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "mode",
+            "median"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the mode and median of the data: 13, 16, 12, 14, 19, 12, 14, 13, 14",
+          "hints": [
+            "Find the mode and median",
+            "Compare the values"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "mode",
+            "median"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Tell whether the statement is true or false: (i) The mode is always one of the numbers in a data. (ii) The mean is one of the numbers in a data. (iii) The median is always one of the numbers in a data. (iv) The data 6, 4, 3, 8, 9, 12, 13, 9 has mean 9.",
+          "hints": [
+            "Check each statement",
+            "Verify the calculations"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "mode",
+            "mean",
+            "median"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Use the bar graph (Fig 3.3) to answer the following questions. (a) Which is the most popular pet? (b) How many students have dog as a pet?",
+          "hints": [
+            "Analyze the bar graph",
+            "Find the most popular pet and the number of students with dogs"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "bar graph",
+            "pets"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Read the bar graph (Fig 3.4) which shows the number of books sold by a bookstore during five consecutive years and answer the following questions: (i) About how many books were sold in 1989? 1990? 1992? (ii) In which year were about 475 books sold? About 225 books sold? (iii) In which years were fewer than 250 books sold? (iv) Can you explain how you would estimate the number of books sold in 1989?",
+          "hints": [
+            "Analyze the bar graph",
+            "Find the number of books sold in each year and estimate for 1989"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "bar graph",
+            "books sold"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Number of children in six different classes are given below. Represent the data on a bar graph. ... (a) How would you choose a scale? (b) Answer the following questions: (i) Which class has the maximum number of children? And the minimum? (ii) Find the ratio of students of class sixth to the students of class eight.",
+          "hints": [
+            "Create a bar graph",
+            "Choose a suitable scale and answer the questions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "bar graph",
+            "class size"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The performance of a student in 1st Term and 2nd Term is given. Draw a double bar graph choosing appropriate scale and answer the following: (i) In which subject, has the child improved his performance the most? (ii) In which subject is the improvement the least? (iii) Has the performance gone down in any subject?",
+          "hints": [
+            "Create a double bar graph",
+            "Analyze the improvement in each subject"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "double bar graph",
+            "performance"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Consider this data collected from a survey of a colony. ... (i) Draw a double bar graph choosing an appropriate scale. What do you infer from the bar graph? (ii) Which sport is most popular? (iii) Which is more preferred, watching or participating in sports?",
+          "hints": [
+            "Create a double bar graph",
+            "Analyze the preferences and popularity"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "double bar graph",
+            "sports"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Take the data giving the minimum and the maximum temperature of various cities given in the beginning of this Chapter (Table 3.1). Plot a double bar graph using the data and answer the following: (i) Which city has the largest difference in the minimum and maximum temperature on the given date? (ii) Which is the hottest city and which is the coldest city? (iii) Name two cities where maximum temperature of one was less than the minimum temperature of the other. (iv) Name the city which has the least difference between its minimum and the maximum temperature.",
+          "hints": [
+            "Create a double bar graph",
+            "Analyze the temperature differences and extremes"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "double bar graph",
+            "temperature"
+          ]
+        }
+      ]
+    }
+  ]
+}

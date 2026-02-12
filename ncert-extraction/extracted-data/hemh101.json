@@ -1,0 +1,57 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Rational Numbers",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Name the property under multiplication used in each of the following.\n(i) -4/5 × 1 = 1 × (-4/5) = -4/5\n(ii) -13/17 × (-2/7) = (-2/7) × (-13/17)\n(iii) (-19/29) × (29/-19) = 1",
+          "hints": [
+            "Recall properties: multiplicative identity, commutativity, multiplicative inverse",
+            "Check if numbers are being multiplied by 1, swapped, or giving product 1",
+            "Match each case to the appropriate property"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiplication properties",
+            "identity",
+            "commutativity",
+            "inverse"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Tell what property allows you to compute 1/3 × (6 × 4/3) as (1/3 × 6) × 4/3.",
+          "hints": [
+            "Look at how the grouping of multiplication changes",
+            "Recall properties involving grouping of operations",
+            "This property works for addition as well"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "associative property",
+            "multiplication",
+            "grouping"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The product of two rational numbers is always a ___.",
+          "hints": [
+            "Consider closure property for rational numbers",
+            "Recall if rational numbers are closed under multiplication",
+            "Check if product of two fractions is always a fraction"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "closure property",
+            "multiplication",
+            "rational numbers"
+          ]
+        }
+      ]
+    }
+  ]
+}

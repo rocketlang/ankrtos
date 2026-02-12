@@ -1,0 +1,127 @@
+{
+  "chapter_number": 2,
+  "chapter_title": "INTRODUCTION TO MATHEMATICAL MODELLING",
+  "exercises": [
+    {
+      "exercise_number": "A2.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Suppose a company needs a computer for some period of time. The company can either hire a computer for ` 2,000 per month or buy one for ` 25,000. If the company has to use the computer for a long period, the company will pay such a high rent, that buying a computer will be cheaper. On the other hand, if the company has to use the computer for say, just one month, then hiring a computer will be cheaper. Find the number of months beyond which it will be cheaper to buy a computer.",
+          "hints": [
+            "Formulate cost equations for hiring and buying",
+            "Set hiring cost = buying cost to find break-even point",
+            "Interpret the solution in months"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cost comparison",
+            "linear equation",
+            "break-even analysis"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Suppose a car starts from a place A and travels at a speed of 40 km/h towards another place B. At the same instance, another car starts from B and travels towards A at a speed of 30 km/h. If the distance between A and B is 100 km, after how much time will the cars meet?",
+          "hints": [
+            "Use relative speed concept",
+            "Sum the speeds since they are moving towards each other",
+            "Apply time = distance / relative speed"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "relative speed",
+            "time-distance",
+            "meeting point"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The moon is about 3,84,000 km from the earth, and its path around the earth is nearly circular. Find the speed at which it orbits the earth, assuming that it orbits the earth in 24 hours. (Use π = 3.14)",
+          "hints": [
+            "Calculate circumference of circular orbit",
+            "Use formula: speed = distance/time",
+            "Ensure units are consistent"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "circular motion",
+            "speed calculation",
+            "astronomy application"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "A family pays ` 1000 for electricity on an average in those months in which it does not use a water heater. In the months in which it uses a water heater, the average electricity bill is ` 1240. The cost of using the water heater is ` 8.00 per hour. Find the average number of hours the water heater is used in a day.",
+          "hints": [
+            "Find extra cost due to water heater",
+            "Divide extra cost by hourly rate to get total hours",
+            "Divide by number of days in a month (assume 30 days)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cost analysis",
+            "unit rate",
+            "daily average calculation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A2.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "We have given the timings of the gold medalists in the 400-metre race from the time the event was included in the Olympics, in the table below. Construct a mathematical model relating the years and timings. Use it to estimate the timing in the next Olympics.",
+          "hints": [
+            "Plot year vs timing data",
+            "Find trend line (linear regression concept)",
+            "Extrapolate for future year"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "data modeling",
+            "trend analysis",
+            "prediction",
+            "Olympics"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A2.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How are the solving of word problems that you come across in textbooks different from the process of mathematical modelling?",
+          "hints": [
+            "Compare steps: formulation, solution, interpretation, validation",
+            "Note that modeling includes validation and refinement",
+            "Textbook problems often have fixed solutions without real-world checking"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comparison",
+            "modeling process",
+            "word problems"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Suppose you want to minimise the waiting time of vehicles at a traffic junction of four roads. Which of these factors are important and which are not? (i) Price of petrol. (ii) The rate at which the vehicles arrive in the four different roads. (iii) The proportion of slow-moving vehicles like cycles and rickshaws and fast moving vehicles like cars and motorcycles.",
+          "hints": [
+            "Consider factors directly affecting traffic flow and waiting time",
+            "Ignore factors not directly related to traffic dynamics",
+            "Focus on arrival rates and vehicle mix"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "traffic modeling",
+            "factor analysis",
+            "optimization"
+          ]
+        }
+      ]
+    }
+  ]
+}

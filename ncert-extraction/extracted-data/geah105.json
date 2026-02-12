@@ -1,0 +1,131 @@
+{
+  "chapter_number": 105,
+  "chapter_title": "The Bear Story",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Where did the lady find the bear cub? How did she bring it up?",
+          "hints": [
+            "Look for location in the forest",
+            "Note the feeding method mentioned"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension",
+            "character background"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The bear grew up but “he was a most amiable bear”. Give three examples to prove this.",
+          "hints": [
+            "Look for interactions with animals",
+            "Note behavior with children",
+            "Observe reaction to teasing"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "evidence",
+            "character traits",
+            "examples"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What did the bear eat? There were two things he was not allowed to do. What were they?",
+          "hints": [
+            "List food items mentioned",
+            "Identify prohibited actions from text"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "diet",
+            "rules",
+            "restrictions"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "When was the bear tied up with a chain? Why?",
+          "hints": [
+            "Note specific times mentioned",
+            "Understand safety reasons"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "routine",
+            "safety",
+            "discipline"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What happened one Sunday when the lady was going to her sister’s house? What did the lady do? What was the bear’s reaction?",
+          "hints": [
+            "Describe the encounter in forest",
+            "Note lady's actions",
+            "Observe bear's response"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "plot event",
+            "conflict",
+            "reaction"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Why was the bear looking sorry for himself in the evening? Why did the cook get angry with her mistress?",
+          "hints": [
+            "Consider mistaken identity",
+            "Note cook's defense of bear"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "misunderstanding",
+            "loyalty",
+            "character perspective"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Most people keep dogs and cats as pets. Can you think of some unusual pets that people keep?",
+          "hints": [
+            "Consider exotic animals",
+            "Think beyond common pets",
+            "Research unusual pet examples"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "discussion",
+            "creative thinking",
+            "animals"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The second bear did not attack the lady because he was afraid of her. Do you agree?",
+          "hints": [
+            "Analyze bear's behavior",
+            "Consider alternative reasons",
+            "Interpret animal psychology"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "interpretation",
+            "debate",
+            "character analysis"
+          ]
+        }
+      ]
+    }
+  ]
+}

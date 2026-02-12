@@ -1,0 +1,222 @@
+{
+  "chapter_number": 10,
+  "chapter_title": "SOUND",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Choose the correct answer. Sound can travel through (a) gases only (b) solids only (c) liquids only (d) solids, liquids and gases.",
+          "hints": [
+            "Recall mediums where sound travels",
+            "Think about examples from daily life",
+            "Consider vacuum vs. different states of matter"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sound propagation",
+            "medium",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Voice of which of the following is likely to have minimum frequency? (a) Baby girl (b) Baby boy (c) A man (d) A woman",
+          "hints": [
+            "Frequency determines pitch",
+            "Compare vocal cord lengths",
+            "Think about low-pitched voices"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "frequency",
+            "pitch",
+            "human voice",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "In the following statements, tick 'T' against those which are true, and 'F' against those which are false. (a) Sound cannot travel in vacuum. (T/F) (b) The number of oscillations per second of a vibrating object is called its time period. (T/F) (c) If the amplitude of vibration is large, sound is feeble. (T/F) (d) For human ears, the audible range is 20 Hz to 20,000 Hz. (T/F) (e) The lower the frequency of vibration, the higher is the pitch. (T/F) (f) Unwanted or unpleasant sound is termed as music. (T/F) (g) Noise pollution may cause partial hearing impairment. (T/F)",
+          "hints": [
+            "Review definitions of terms",
+            "Check relationship between amplitude and loudness",
+            "Recall audible frequency range",
+            "Distinguish between noise and music"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "true false",
+            "definitions",
+            "sound properties",
+            "noise pollution"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Fill in the blanks with suitable words. (a) Time taken by an object to complete one oscillation is called __________. (b) Loudness is determined by the __________ of vibration. (c) The unit of frequency is __________ (d) Unwanted sound is called __________. (e) Shrillness of a sound is determined by the __________ of vibration.",
+          "hints": [
+            "Recall time period definition",
+            "Amplitude affects loudness",
+            "Frequency unit is hertz",
+            "Noise vs. music distinction",
+            "Pitch depends on frequency"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fill in blanks",
+            "definitions",
+            "sound terminology"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "A pendulum oscillates 40 times in 4 seconds. Find its time period and frequency.",
+          "hints": [
+            "Time period = Total time / Number of oscillations",
+            "Frequency = 1 / Time period",
+            "Check units consistency"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "calculations",
+            "time period",
+            "frequency",
+            "pendulum"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "The sound from a mosquito is produced when it vibrates its wings at an average rate of 500 vibrations per second. What is the time period of the vibration?",
+          "hints": [
+            "Time period = 1 / Frequency",
+            "500 vibrations per second means frequency = 500 Hz",
+            "Convert to appropriate time unit"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "calculations",
+            "time period",
+            "frequency",
+            "insect sound"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Identify the part which vibrates to produce sound in the following instruments. (a) Dholak (b) Sitar (c) Flute",
+          "hints": [
+            "Dholak: stretched membrane",
+            "Sitar: stretched strings",
+            "Flute: air column",
+            "Think about vibrating parts in musical instruments"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "musical instruments",
+            "vibrating parts",
+            "sound production"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "What is the difference between noise and music? Can music become noise sometimes?",
+          "hints": [
+            "Define both terms",
+            "Consider pleasantness factor",
+            "Think about volume and context",
+            "Examples of music becoming noise"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "noise vs music",
+            "definitions",
+            "real-life examples"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "List sources of noise pollution in your surroundings.",
+          "hints": [
+            "Think about vehicles, machines, construction",
+            "Consider household sources",
+            "Include public events and loudspeakers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "noise pollution",
+            "sources",
+            "environmental science"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Explain in what way noise pollution is harmful to human.",
+          "hints": [
+            "Health effects: hearing loss, hypertension",
+            "Psychological effects: stress, anxiety",
+            "Sleep disturbance",
+            "Long-term consequences"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "noise pollution",
+            "health effects",
+            "explanation"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Your parents are going to buy a house. They have been offered one on the roadside and another three lanes away from the roadside. Which house would you suggest your parents should buy? Explain your answer.",
+          "hints": [
+            "Consider noise pollution from traffic",
+            "Think about distance reducing sound intensity",
+            "Health and quality of life factors",
+            "Practical living conditions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "application",
+            "noise pollution",
+            "decision making",
+            "real-life scenario"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Sketch larynx and explain its function in your own words.",
+          "hints": [
+            "Draw voice box structure",
+            "Show vocal cords and air passage",
+            "Explain vibration producing sound",
+            "Include role in speech production"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "human anatomy",
+            "larynx",
+            "sound production",
+            "diagram"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "Lightning and thunder take place in the sky at the same time and at the same distance from us. Lightning is seen earlier and thunder is heard later. Can you explain why?",
+          "hints": [
+            "Compare speed of light vs speed of sound",
+            "Light travels faster than sound",
+            "Calculate time difference based on distance",
+            "Real-world observation explanation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "speed of sound",
+            "speed of light",
+            "comparison",
+            "natural phenomena"
+          ]
+        }
+      ]
+    }
+  ]
+}

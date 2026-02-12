@@ -1,0 +1,226 @@
+{
+  "chapter_number": 2,
+  "chapter_title": "Nutrition in Animals",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Fill in the blanks:\n(a) The main steps of nutrition in humans are __________, __________, __________, _________ and __________.\n(b) The largest gland in the human body is __________.\n(c) The stomach releases hydrochloric acid and ___________ juices which act on food.\n(d) The inner wall of the small intestine has many finger-like outgrowths called _________.\n(e) Amoeba digests its food in the ____________ .",
+          "hints": [
+            "Recall the five steps of nutrition",
+            "Think about digestive system glands",
+            "Remember stomach secretions",
+            "Recall small intestine structure",
+            "Think about Amoeba's digestive process"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fill in blanks",
+            "nutrition steps",
+            "digestive system",
+            "human anatomy",
+            "amoeba"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Mark 'T' if the statement is true and 'F' if it is false:\n(a) Digestion of starch starts in the stomach. (T/F)\n(b) The tongue helps in mixing food with saliva. (T/F)\n(c) The gall bladder temporarily stores bile. (T/F)\n(d) The ruminants bring back swallowed grass into their mouth and chew it for some time. (T/F)",
+          "hints": [
+            "Where does starch digestion begin?",
+            "What is tongue's function?",
+            "What does gall bladder do?",
+            "What is rumination?"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "true false",
+            "digestion process",
+            "organ functions",
+            "ruminants"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Tick (✓) mark the correct answer in each of the following:\n(a) Fat is completely digested in the\n(i) stomach (ii) mouth (iii) small intestine (iv) large intestine\n(b) Water from the undigested food is absorbed mainly in the\n(i) stomach (ii) foodpipe (iii) small intestine (iv) large intestine",
+          "hints": [
+            "Where does fat digestion complete?",
+            "Where is water absorbed?"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "fat digestion",
+            "water absorption",
+            "digestive organs"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Match the items of Column I with those given in Column II:\nColumn I\nFood components\nCarbohydrates\nProteins\nFats\n\nColumn II\nProduct(s) of digestion\nFatty acids and glycerol\nSugar\nAmino acids",
+          "hints": [
+            "What are carbohydrates broken into?",
+            "What are proteins broken into?",
+            "What are fats broken into?"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "matching",
+            "digestion products",
+            "food components",
+            "nutrients"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What are villi? What is their location and function?",
+          "hints": [
+            "Describe finger-like structures",
+            "Where are they found?",
+            "What do they increase?",
+            "How do they help absorption?"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "definition",
+            "small intestine",
+            "absorption",
+            "anatomy"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Where is the bile produced? Which component of the food does it help to digest?",
+          "hints": [
+            "Which organ produces bile?",
+            "What does bile emulsify?"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "bile production",
+            "liver",
+            "fat digestion",
+            "digestive juices"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Name the type of carbohydrate that can be digested by ruminants but not by humans. Give the reason also.",
+          "hints": [
+            "Think about grass component",
+            "What do ruminants have that humans don't?",
+            "Bacteria in rumen"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cellulose",
+            "ruminants",
+            "digestion comparison",
+            "carbohydrates"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Why do we get instant energy from glucose?",
+          "hints": [
+            "Is glucose simple or complex?",
+            "How is it absorbed?",
+            "Direct energy source"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "glucose",
+            "energy source",
+            "simple sugar",
+            "metabolism"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Which part of the digestive canal is involved in:\n(i) absorption of food ________________.\n(ii) chewing of food ________________.\n(iii) killing of bacteria ________________.\n(iv) complete digestion of food ________________.\n(v) formation of faeces ________________.",
+          "hints": [
+            "Where are villi located?",
+            "Where does mechanical breakdown occur?",
+            "Where is HCl secreted?",
+            "Where do all juices act?",
+            "Where is water absorbed?"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "organ functions",
+            "digestive process",
+            "absorption",
+            "digestion"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Write one similarity and one difference between the nutrition in amoeba and human beings.",
+          "hints": [
+            "Both have digestion process",
+            "Different digestive systems",
+            "Intracellular vs extracellular digestion"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comparison",
+            "amoeba",
+            "human nutrition",
+            "digestion types"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Match the items of Column I with suitable items in Column II\nColumn I\n(a) Salivary gland\n(b) Stomach\n(c) Liver\n(d) Rectum\n(e) Small intestine\n(f) Large intestine\n\nColumn II\n(i) Bile juice secretion\n(ii) Storage of undigested food\n(iii) Saliva secretion\n(iv) Acid release\n(v) Digestion is completed\n(vi) Absorption of water\n(vii) Release of faeces",
+          "hints": [
+            "What does each organ secrete?",
+            "What is each organ's function?",
+            "Where does final digestion occur?"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "matching",
+            "organ functions",
+            "digestive system",
+            "secretions"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Label Fig. 2.11 of the digestive system.",
+          "hints": [
+            "Identify mouth, stomach, intestines",
+            "Locate liver, pancreas",
+            "Find oesophagus, rectum"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "diagram labeling",
+            "digestive system",
+            "anatomy",
+            "organs"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "Can we survive only on raw, leafy vegetables/grass? Discuss.",
+          "hints": [
+            "Consider cellulose digestion",
+            "Think about nutrient requirements",
+            "Compare with ruminants",
+            "Human digestive limitations"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "discussion",
+            "nutrition",
+            "cellulose",
+            "human digestion",
+            "survival"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "chapter_number": 6,
+  "chapter_title": "Cubes and Cube Roots",
+  "exercises": [
+    {
+      "exercise_number": "6.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the following numbers are not perfect cubes? (i) 216 (ii) 128 (iii) 1000 (iv) 100 (v) 46656",
+          "hints": [
+            "Check if each prime factor appears three times in prime factorisation",
+            "Find prime factors of each number",
+            "Group factors in triplets"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "perfect cubes",
+            "prime factorisation",
+            "verification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the smallest number by which each of the following numbers must be multiplied to obtain a perfect cube. (i) 243 (ii) 256 (iii) 72 (iv) 675 (v) 100",
+          "hints": [
+            "Perform prime factorisation",
+            "Identify factors that don't appear in groups of three",
+            "Multiply by missing factors to complete triplets"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "perfect cubes",
+            "prime factorisation",
+            "multiplication factor"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the smallest number by which each of the following numbers must be divided to obtain a perfect cube. (i) 81 (ii) 128 (iii) 135 (iv) 192 (v) 704",
+          "hints": [
+            "Perform prime factorisation",
+            "Identify extra factors that prevent perfect cube",
+            "Divide by factors that don't form complete triplets"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "perfect cubes",
+            "prime factorisation",
+            "division factor"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Parikshit makes a cuboid of plasticine of sides 5 cm, 2 cm, 5 cm. How many such cuboids will he need to form a cube?",
+          "hints": [
+            "Calculate volume of one cuboid",
+            "Find LCM of dimensions to get cube side",
+            "Divide cube volume by cuboid volume"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "volume",
+            "cuboid",
+            "cube formation",
+            "application"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the cube root of each of the following numbers by prime factorisation method. (i) 64 (ii) 512 (iii) 10648 (iv) 27000 (v) 15625 (vi) 13824 (vii) 110592 (viii) 46656 (ix) 175616 (x) 91125",
+          "hints": [
+            "Perform prime factorisation",
+            "Group factors in triplets",
+            "Take one factor from each triplet",
+            "Multiply the factors"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cube root",
+            "prime factorisation",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "State true or false. (i) Cube of any odd number is even. (ii) A perfect cube does not end with two zeros. (iii) If square of a number ends with 5, then its cube ends with 25. (iv) There is no perfect cube which ends with 8. (v) The cube of a two digit number may be a three digit number. (vi) The cube of a two digit number may have seven or more digits. (vii) The cube of a single digit number may be a single digit number.",
+          "hints": [
+            "Test with examples",
+            "Consider properties of odd/even numbers",
+            "Check cube endings pattern",
+            "Analyze digit counts"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "properties",
+            "verification",
+            "reasoning",
+            "patterns"
+          ]
+        }
+      ]
+    }
+  ]
+}

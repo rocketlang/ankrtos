@@ -1,0 +1,210 @@
+{
+  "chapter_number": 12,
+  "chapter_title": "Forests: Our Lifeline",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Explain how animals dwelling in the forest help it grow and regenerate.",
+          "hints": [
+            "Think about seed dispersal",
+            "Consider nutrient cycling through droppings",
+            "Recall how animals contribute to forest food chains"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "animal roles",
+            "forest regeneration",
+            "ecosystem"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Explain how forests prevent floods.",
+          "hints": [
+            "Consider how forests absorb rainwater",
+            "Think about soil binding by roots",
+            "Recall the role of canopy in slowing rainfall"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "flood prevention",
+            "water cycle",
+            "soil conservation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What are decomposers? Name any two of them. What do they do in the forest?",
+          "hints": [
+            "Define organisms that break down dead matter",
+            "Examples: fungi, bacteria",
+            "Explain their role in nutrient recycling"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "decomposers",
+            "nutrient cycle",
+            "micro-organisms"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Explain the role of forest in maintaining the balance between oxygen and carbon dioxide in the atmosphere.",
+          "hints": [
+            "Recall photosynthesis process",
+            "Think about oxygen production",
+            "Consider carbon dioxide absorption"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "oxygen-carbon dioxide balance",
+            "photosynthesis",
+            "green lungs"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Explain why there is no waste in a forest.",
+          "hints": [
+            "Think about decomposition process",
+            "Consider nutrient cycling",
+            "Recall how everything gets reused"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "waste management",
+            "nutrient cycling",
+            "ecosystem balance"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "List five products we get from forests?",
+          "hints": [
+            "Think about wood products",
+            "Consider medicinal plants",
+            "Recall food items",
+            "Remember other forest resources"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "forest products",
+            "resources",
+            "utilization"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Fill in the blanks:\n(a) The insects, butterflies, honeybees and birds help flowering plants in ______.\n(b) A forest is a purifier of ______ and ______.\n(c) Herbs form the ______ layer in the forest.\n(d) The decaying leaves and animal droppings in a forest enrich the ______.",
+          "hints": [
+            "Think about pollination for (a)",
+            "Consider air and water purification for (b)",
+            "Recall forest layers for (c)",
+            "Think about soil enrichment for (d)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fill in blanks",
+            "forest functions",
+            "layers",
+            "pollination"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Why should we worry about the conditions and issues related to forests far from us?",
+          "hints": [
+            "Consider global climate impact",
+            "Think about interconnected ecosystems",
+            "Recall how forests affect water cycles globally"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "global concern",
+            "interconnectedness",
+            "environmental impact"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Explain why there is a need of variety of animals and plants in a forest.",
+          "hints": [
+            "Think about biodiversity importance",
+            "Consider food chain stability",
+            "Recall ecosystem resilience"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "biodiversity",
+            "ecosystem stability",
+            "interdependence"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "In Fig. 12.15, the artist has forgotten to put the labels and directions on the arrows. Mark the directions on the arrows and label the diagram using the following labels:\nclouds, rain, atmosphere, carbon dioxide, oxygen, plants, animals, soil, roots, water table.",
+          "hints": [
+            "Identify the water cycle components",
+            "Recognize gas exchange between plants and animals",
+            "Locate soil and root systems"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "diagram labeling",
+            "water cycle",
+            "gas exchange",
+            "forest ecosystem"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Which of the following is not a forest product?\n(i) Gum\n(ii) Plywood\n(iii) Sealing wax\n(iv) Kerosene",
+          "hints": [
+            "Recall natural vs manufactured products",
+            "Think about petroleum-based products",
+            "Remember forest-derived materials"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "forest products",
+            "identification"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Which of the following statements is not correct?\n(i) Forests protect the soil from erosion.\n(ii) Plants and animals in a forest are not dependent on one another.\n(iii) Forests influence the climate and water cycle.\n(iv) Soil helps forests to grow and regenerate.",
+          "hints": [
+            "Identify the false statement about interdependence",
+            "Recall how forest components are connected",
+            "Eliminate the obviously true statements"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "true/false",
+            "interdependence"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "Micro-organisms act upon the dead plants to produce\n(i) sand\n(ii) mushrooms\n(iii) humus\n(iv) wood",
+          "hints": [
+            "Recall decomposition products",
+            "Think about what dead plants become",
+            "Remember the dark organic substance in soil"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "decomposition",
+            "humus"
+          ]
+        }
+      ]
+    }
+  ]
+}

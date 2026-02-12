@@ -1,0 +1,177 @@
+{
+  "chapter_number": 4,
+  "chapter_title": "Acids, Bases and Salts",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "State differences between acids and bases.",
+          "hints": [
+            "Compare taste, effect on litmus paper, chemical nature",
+            "Think about examples from daily life",
+            "Consider touch/feel properties"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "acid properties",
+            "base properties",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Ammonia is found in many household products, such as window cleaners. It turns red litmus blue. What is its nature?",
+          "hints": [
+            "Recall what happens when red litmus turns blue",
+            "Think about the definition of bases",
+            "Consider the indicator behavior"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "ammonia",
+            "litmus test",
+            "basic nature"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Name the source from which litmus solution is obtained. What is the use of this solution?",
+          "hints": [
+            "Recall the natural source mentioned in the chapter",
+            "Think about how indicators work",
+            "Consider its color changes"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "litmus",
+            "natural indicator",
+            "lichens"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Is the distilled water acidic/basic/neutral? How would you verify it?",
+          "hints": [
+            "Think about what neutral solutions are",
+            "Recall the litmus test procedure",
+            "Consider what happens to both red and blue litmus"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "distilled water",
+            "neutral solutions",
+            "verification"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Describe the process of neutralisation with the help of an example.",
+          "hints": [
+            "Define neutralisation reaction",
+            "Include acid + base → salt + water",
+            "Give a specific chemical example"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "neutralisation",
+            "chemical reaction",
+            "example"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Mark 'T' if the statement is true and 'F' if it is false:\n(i) Nitric acid turn red litmus blue. (T/F)\n(ii) Sodium hydroxide turns blue litmus red. (T/F)\n(iii) Sodium hydroxide and hydrochloric acid neutralise each other and form salt and water. (T/F)\n(iv) Indicator is a substance which shows different colours in acidic and basic solutions. (T/F)\n(v) Tooth decay is caused by the presence of a base. (T/F)",
+          "hints": [
+            "Recall acid-base properties",
+            "Remember neutralisation reaction products",
+            "Think about causes of tooth decay"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "true false",
+            "acid-base properties",
+            "neutralisation"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Dorji has a few bottles of soft drink in his restaurant. But, unfortunately, these are not labelled. He has to serve the drinks on the demand of customers. One customer wants acidic drink, another wants basic and third one wants neutral drink. How will Dorji decide which drink is to be served to whom?",
+          "hints": [
+            "Think about using indicators",
+            "Consider different types of indicators available",
+            "Plan a testing procedure"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "practical application",
+            "indicators",
+            "problem solving"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Explain why:\n(a) An antacid tablet is taken when you suffer from acidity.\n(b) Calamine solution is applied on the skin when an ant bites.\n(c) Factory waste is neutralised before disposing it into the water bodies.",
+          "hints": [
+            "Think about neutralisation in daily life",
+            "Consider stomach acid and antacids",
+            "Recall formic acid from ant bites",
+            "Think about environmental protection"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "real-life applications",
+            "neutralisation",
+            "environment"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Three liquids are given to you. One is hydrochloric acid, another is sodium hydroxide and third is a sugar solution. How will you identify them? You have only turmeric indicator.",
+          "hints": [
+            "Recall turmeric's behavior with acids and bases",
+            "Plan a step-by-step testing procedure",
+            "Consider neutral solutions"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "identification",
+            "turmeric indicator",
+            "experimental design"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Blue litmus paper is dipped in a solution. It remains blue. What is the nature of the solution? Explain.",
+          "hints": [
+            "Recall what happens to blue litmus in different solutions",
+            "Consider all possibilities: acidic, basic, neutral",
+            "Think about the definition"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "litmus test",
+            "solution nature",
+            "reasoning"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Consider the following statements:\n(a) Both acids and bases change colour of all indicators.\n(b) If an indicator gives a colour change with an acid, it does not give a change with a base.\n(c) If an indicator changes colour with a base, it does not change colour with an acid.\n(d) Change of colour in an acid and a base depends on the type of the indicator.\nWhich of these statements are correct?\n(i) All four\n(ii) a and d\n(iii) b, c and d\n(iv) only d",
+          "hints": [
+            "Recall indicator properties",
+            "Think about universal indicators vs specific ones",
+            "Consider phenolphthalein behavior"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "indicator properties",
+            "multiple choice",
+            "critical thinking"
+          ]
+        }
+      ]
+    }
+  ]
+}

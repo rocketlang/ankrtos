@@ -1,0 +1,384 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "MATTER IN OUR SURROUNDINGS",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the following are matter? Chair, air, love, smell, hate, almonds, thought, cold, lemon water, smell of perfume.",
+          "hints": [
+            "Recall definition of matter: anything that occupies space and has mass",
+            "Distinguish between physical substances and abstract concepts"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definition of matter",
+            "classification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Give reasons for the following observation: The smell of hot sizzling food reaches you several metres away, but to get the smell from cold food you have to go close.",
+          "hints": [
+            "Think about particle movement and kinetic energy",
+            "Consider effect of temperature on diffusion rate"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "diffusion",
+            "kinetic energy",
+            "temperature effect"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A diver is able to cut through water in a swimming pool. Which property of matter does this observation show?",
+          "hints": [
+            "Consider the arrangement and forces between particles in liquids",
+            "Think about fluidity and particle spacing"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "properties of liquids",
+            "fluidity",
+            "particle arrangement"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What are the characteristics of the particles of matter?",
+          "hints": [
+            "Recall activities 1.1 to 1.8",
+            "List properties like space between particles, continuous motion, attraction forces"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "particle characteristics",
+            "properties of matter"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "The mass per unit volume of a substance is called density. (density = mass/volume). Arrange the following in order of increasing density – air, exhaust from chimneys, honey, water, chalk, cotton and iron.",
+          "hints": [
+            "Compare states of matter: gases have lowest density",
+            "Solids generally have higher density than liquids"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "density",
+            "states of matter",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "(a) Tabulate the differences in the characteristics of states of matter. (b) Comment upon the following: rigidity, compressibility, fluidity, filling a gas container, shape, kinetic energy and density.",
+          "hints": [
+            "Create table with columns for solids, liquids, gases",
+            "For part (b), explain each term with examples"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "states of matter comparison",
+            "properties",
+            "tabular form"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Give reasons (a) A gas fills completely the vessel in which it is kept. (b) A gas exerts pressure on the walls of the container. (c) A wooden table should be called a solid. (d) We can easily move our hand in air but to do the same through a solid block of wood we need a karate expert.",
+          "hints": [
+            "For (a): Consider particle movement and space",
+            "For (b): Think about particle collisions",
+            "For (c): Recall properties of solids",
+            "For (d): Compare particle spacing in gases vs solids"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "gas properties",
+            "solid properties",
+            "particle theory"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Liquids generally have lower density as compared to solids. But you must have observed that ice floats on water. Find out why.",
+          "hints": [
+            "Consider anomalous expansion of water",
+            "Think about hydrogen bonding and crystal structure"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "density anomaly",
+            "water properties",
+            "hydrogen bonding"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Convert the following temperature to celsius scale: a. 300 K b. 573 K",
+          "hints": [
+            "Use formula: °C = K - 273",
+            "Remember 0°C = 273 K"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "temperature conversion",
+            "kelvin to celsius"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What is the physical state of water at: a. 250°C b. 100°C ?",
+          "hints": [
+            "Recall boiling point of water is 100°C",
+            "Consider what happens above boiling point"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "states of water",
+            "boiling point"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "For any substance, why does the temperature remain constant during the change of state?",
+          "hints": [
+            "Think about latent heat",
+            "Energy is used to overcome forces between particles"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "latent heat",
+            "change of state",
+            "energy absorption"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Suggest a method to liquefy atmospheric gases.",
+          "hints": [
+            "Consider effect of pressure and temperature",
+            "Recall principles of compression and cooling"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "liquefaction of gases",
+            "pressure effect",
+            "temperature effect"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why does a desert cooler cool better on a hot dry day?",
+          "hints": [
+            "Consider evaporation rate",
+            "Think about humidity effect on evaporation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "evaporation cooling",
+            "humidity effect"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "How does the water kept in an earthen pot (matka) become cool during summer?",
+          "hints": [
+            "Recall evaporation through porous walls",
+            "Think about latent heat of vaporization"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "evaporation cooling",
+            "porous materials"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why does our palm feel cold when we put some acetone or petrol or perfume on it?",
+          "hints": [
+            "Consider evaporation absorbing heat",
+            "Think about latent heat requirement"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "evaporation cooling",
+            "latent heat"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Why are we able to sip hot tea or milk faster from a saucer rather than a cup?",
+          "hints": [
+            "Consider surface area for evaporation",
+            "Think about cooling rate"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "evaporation rate",
+            "surface area effect"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What type of clothes should we wear in summer?",
+          "hints": [
+            "Consider evaporation of sweat",
+            "Think about fabric properties"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "evaporation cooling",
+            "clothing materials"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Convert the following temperatures to the celsius scale. (a) 293 K (b) 470 K",
+          "hints": [
+            "Use formula: °C = K - 273",
+            "Check calculations carefully"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "temperature conversion",
+            "kelvin to celsius"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Convert the following temperatures to the kelvin scale. (a) 25°C (b) 373°C",
+          "hints": [
+            "Use formula: K = °C + 273",
+            "Remember 0°C = 273 K"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "temperature conversion",
+            "celsius to kelvin"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Give reason for the following observations. (a) Naphthalene balls disappear with time without leaving any solid. (b) We can get the smell of perfume sitting several metres away.",
+          "hints": [
+            "For (a): Think about sublimation",
+            "For (b): Consider diffusion of gases"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sublimation",
+            "diffusion",
+            "particle movement"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Arrange the following substances in increasing order of forces of attraction between the particles— water, sugar, oxygen.",
+          "hints": [
+            "Consider states of matter at room temperature",
+            "Strongest forces in solids, weakest in gases"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "intermolecular forces",
+            "states of matter"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What is the physical state of water at— (a) 25°C (b) 0°C (c) 100°C ?",
+          "hints": [
+            "Recall melting and boiling points",
+            "Consider if temperature is exactly at phase change points"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "states of water",
+            "phase changes"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Give two reasons to justify— (a) water at room temperature is a liquid. (b) an iron almirah is a solid at room temperature.",
+          "hints": [
+            "For (a): Consider melting and boiling points",
+            "For (b): Consider rigidity and definite shape"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "properties of liquids",
+            "properties of solids",
+            "room temperature states"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Why is ice at 273 K more effective in cooling than water at the same temperature?",
+          "hints": [
+            "Consider latent heat of fusion",
+            "Think about energy absorption during melting"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "latent heat",
+            "cooling effect",
+            "phase change"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "What produces more severe burns, boiling water or steam?",
+          "hints": [
+            "Consider latent heat of vaporization",
+            "Think about extra energy in steam"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "latent heat of vaporization",
+            "energy content",
+            "burns"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Name A,B,C,D,E and F in the following diagram showing change in its state",
+          "hints": [
+            "Identify phase changes: melting, vaporization, condensation, freezing",
+            "Consider direction of temperature change"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "phase change diagram",
+            "states of matter",
+            "interconversion"
+          ]
+        }
+      ]
+    }
+  ]
+}

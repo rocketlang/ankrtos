@@ -1,0 +1,458 @@
+{
+  "chapter_number": 4,
+  "chapter_title": "Structure of the Atom",
+  "exercises": [
+    {
+      "exercise_number": "4.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What are canal rays?",
+          "hints": [
+            "canal rays are positively charged radiations"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sub-atomic particles",
+            "radiations"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "If an atom contains one electron and one proton, will it carry any charge or not?",
+          "hints": [
+            "opposite charges cancel each other"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "atomic structure",
+            "charge"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "On the basis of Thomson’s model of an atom, explain how the atom is neutral as a whole.",
+          "hints": [
+            "positive and negative charges are equal in magnitude"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Thomson's model",
+            "atomic structure"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "On the basis of Rutherford’s model of an atom, which subatomic particle is present in the nucleus of an atom?",
+          "hints": [
+            "Rutherford's model proposes a nucleus with positive charge"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Rutherford's model",
+            "nucleus"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Draw a sketch of Bohr’s model of an atom with three shells.",
+          "hints": [
+            "Bohr's model has electrons in discrete orbits"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Bohr's model",
+            "atomic structure"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What do you think would be the observation if the α-particle scattering experiment is carried out using a foil of a metal other than gold?",
+          "hints": [
+            "experiment results depend on the metal used"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "alpha-particle scattering",
+            "experiment"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4.2.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Name the three sub-atomic particles of an atom.",
+          "hints": [
+            "electrons, protons, and neutrons"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sub-atomic particles",
+            "atomic structure"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Helium atom has an atomic mass of 4 u and two protons in its nucleus. How many neutrons does it have?",
+          "hints": [
+            "mass number is the sum of protons and neutrons"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "atomic mass",
+            "neutrons"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Write the distribution of electrons in carbon and sodium atoms.",
+          "hints": [
+            "electrons are distributed in shells"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "electronic configuration",
+            "atoms"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "If K and L shells of an atom are full, then what would be the total number of electrons in the atom?",
+          "hints": [
+            "K shell has 2 electrons, L shell has 8 electrons"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "electronic configuration",
+            "shells"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How will you find the valency of chlorine, sulphur and magnesium?",
+          "hints": [
+            "valency is the combining capacity of an atom"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "valency",
+            "atoms"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4.5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "If number of electrons in an atom is 8 and number of protons is also 8, then (i) what is the atomic number of the atom? and (ii) what is the charge on the atom?",
+          "hints": [
+            "atomic number is the number of protons",
+            "opposite charges cancel each other"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "atomic number",
+            "charge"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "With the help of Table 4.1, find out the mass number of oxygen and sulphur atom.",
+          "hints": [
+            "mass number is the sum of protons and neutrons"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "mass number",
+            "atoms"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4.6",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "For the symbol H, D and T tabulate three sub-atomic particles found in each of them.",
+          "hints": [
+            "sub-atomic particles are electrons, protons, and neutrons"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sub-atomic particles",
+            "isotopes"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Write the electronic configuration of any one pair of isotopes and isobars.",
+          "hints": [
+            "electronic configuration is the distribution of electrons in shells"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "electronic configuration",
+            "isotopes",
+            "isobars"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Exercises",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Compare the properties of electrons, protons and neutrons.",
+          "hints": [
+            "properties include charge, mass, and spin"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sub-atomic particles",
+            "properties"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What are the limitations of J.J. Thomson’s model of the atom?",
+          "hints": [
+            "Thomson's model does not explain the stability of atoms"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Thomson's model",
+            "limitations"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What are the limitations of Rutherford’s model of the atom?",
+          "hints": [
+            "Rutherford's model does not explain the stability of atoms"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Rutherford's model",
+            "limitations"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Describe Bohr’s model of the atom.",
+          "hints": [
+            "Bohr's model has electrons in discrete orbits"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Bohr's model",
+            "atomic structure"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Compare all the proposed models of an atom given in this chapter.",
+          "hints": [
+            "models include Thomson's, Rutherford's, and Bohr's"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "atomic models",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Summarise the rules for writing of distribution of electrons in various shells for the first eighteen elements.",
+          "hints": [
+            "rules include the maximum number of electrons in each shell"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "electronic configuration",
+            "rules"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Define valency by taking examples of silicon and oxygen.",
+          "hints": [
+            "valency is the combining capacity of an atom"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "valency",
+            "examples"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Explain with examples (i) Atomic number, (ii) Mass number, (iii) Isotopes and iv) Isobars. Give any two uses of isotopes.",
+          "hints": [
+            "examples include hydrogen, carbon, and oxygen"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "atomic number",
+            "mass number",
+            "isotopes",
+            "isobars"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Na+ has completely filled K and L shells. Explain.",
+          "hints": [
+            "K shell has 2 electrons, L shell has 8 electrons"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "electronic configuration",
+            "ions"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "If bromine atom is available in the form of, say, two isotopes 79 35 Br (49.7%) and 81 35 Br (50.3%), calculate the average atomic mass of bromine atom.",
+          "hints": [
+            "average atomic mass is the weighted sum of the masses of the isotopes"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "average atomic mass",
+            "isotopes"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "The average atomic mass of a sample of an element X is 16.2 u. What are the percentages of isotopes 16 8 X and 18 8 X in the sample?",
+          "hints": [
+            "percentages can be calculated using the average atomic mass"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "average atomic mass",
+            "isotopes"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "If Z = 3, what would be the valency of the element? Also, name the element.",
+          "hints": [
+            "valency is the combining capacity of an atom"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "valency",
+            "atomic number"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "Composition of the nuclei of two atomic species X and Y are given as under X Y Protons = 6 6 Neutrons = 6 8 Give the mass numbers of X and Y. What is the relation between the two species?",
+          "hints": [
+            "mass number is the sum of protons and neutrons"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "mass number",
+            "isotopes"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "For the following statements, write T for True and F for False. (a) J.J. Thomson proposed that the nucleus of an atom contains only nucleons. (b) A neutron is formed by an electron and a proton combining together. Therefore, it is neutral. (c) The mass of an electron is about 1 2000 times that of proton. (d) An isotope of iodine is used for making tincture iodine, which is used as a medicine.",
+          "hints": [
+            "statements can be evaluated based on the text"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "true or false",
+            "statements"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "Rutherford’s alpha-particle scattering experiment was responsible for the discovery of (a) Atomic Nucleus (b) Electron (c) Proton (d) Neutron",
+          "hints": [
+            "Rutherford's experiment discovered the atomic nucleus"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Rutherford's experiment",
+            "discovery"
+          ]
+        },
+        {
+          "question_number": 16,
+          "question_text": "Isotopes of an element have (a) the same physical properties (b) different chemical properties (c) different number of neutrons (d) different atomic numbers.",
+          "hints": [
+            "isotopes have the same atomic number but different mass numbers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "isotopes",
+            "properties"
+          ]
+        },
+        {
+          "question_number": 17,
+          "question_text": "Number of valence electrons in Cl– ion are: (a) 16 (b) 8 (c) 17 (d) 18",
+          "hints": [
+            "valence electrons are the electrons in the outermost shell"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "valence electrons",
+            "ions"
+          ]
+        },
+        {
+          "question_number": 18,
+          "question_text": "Which one of the following is a correct electronic configuration of sodium? (a) 2,8 (b) 8,2,1 (c) 2,1,8 (d) 2,8,1",
+          "hints": [
+            "electronic configuration is the distribution of electrons in shells"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "electronic configuration",
+            "atoms"
+          ]
+        },
+        {
+          "question_number": 19,
+          "question_text": "Complete the following table. Atomic Mass Number Number Number Number Name of the Atomic of of Neutrons Protons Electrons Species 9 - 10 - - - - 16 32 - - - - Sulphur - 24 - 12 - - - 2 - 1 - - - - 1 0 1 0 - -",
+          "hints": [
+            "table can be completed using the given information"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "table",
+            "completion"
+          ]
+        }
+      ]
+    }
+  ]
+}

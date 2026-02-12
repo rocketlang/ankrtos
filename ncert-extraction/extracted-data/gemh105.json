@@ -1,0 +1,233 @@
+{
+  "chapter_number": 5,
+  "chapter_title": "Lines and Angles",
+  "exercises": [
+    {
+      "exercise_number": "5.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the complement of each of the following angles:\n(i)\n(ii)",
+          "hints": [
+            "Complementary angles sum to 90°",
+            "Subtract given angle from 90°"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "complementary angles",
+            "angle calculation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the supplement of each of the following angles:\n(i)\n(ii)\n(iii)",
+          "hints": [
+            "Supplementary angles sum to 180°",
+            "Subtract given angle from 180°"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "supplementary angles",
+            "angle calculation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Identify which of the following pairs of angles are complementary and which are supplementary.\n(i) 65º, 115º\n(ii) 63º, 27º\n(iii) 112º, 68º\n(iv) 130º, 50º\n(v) 45º, 45º\n(vi) 80º, 10º",
+          "hints": [
+            "Check if sum is 90° (complementary) or 180° (supplementary)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "complementary angles",
+            "supplementary angles",
+            "angle pairs"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the angle which is equal to its complement.",
+          "hints": [
+            "Let angle be x, then x + x = 90°",
+            "Solve for x"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "complementary angles",
+            "equation solving"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the angle which is equal to its supplement.",
+          "hints": [
+            "Let angle be x, then x + x = 180°",
+            "Solve for x"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "supplementary angles",
+            "equation solving"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "In the given figure, ∠1 and ∠2 are supplementary angles.\nIf ∠1 is decreased, what changes should take place in ∠2 so that both the angles still remain supplementary.",
+          "hints": [
+            "Supplementary angles sum to 180°",
+            "If ∠1 decreases, ∠2 must increase by same amount"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "supplementary angles",
+            "angle relationship",
+            "figure analysis"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Can two angles be supplementary if both of them are:\n(i) acute?\n(ii) obtuse?\n(iii) right?",
+          "hints": [
+            "Recall definitions: acute < 90°, obtuse > 90°, right = 90°",
+            "Check if sum can be 180°"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "supplementary angles",
+            "angle types",
+            "reasoning"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "An angle is greater than 45º. Is its complementary angle greater than 45º or equal to 45º or less than 45º?",
+          "hints": [
+            "Complement = 90° - given angle",
+            "If angle > 45°, then complement < 45°"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "complementary angles",
+            "inequality reasoning"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Fill in the blanks:\n(i) If two angles are complementary, then the sum of their measures is _______.\n(ii) If two angles are supplementary, then the sum of their measures is ______.\n(iii) If two adjacent angles are supplementary, they form a ___________.",
+          "hints": [
+            "Recall definitions of complementary, supplementary, linear pair"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definitions",
+            "angle properties",
+            "fill in blanks"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "In the adjoining figure, name the following pairs of angles.\n(i) Obtuse vertically opposite angles\n(ii) Adjacent complementary angles\n(iii) Equal supplementary angles\n(iv) Unequal supplementary angles\n(v) Adjacent angles that do not form a linear pair",
+          "hints": [
+            "Identify angles from figure",
+            "Recall definitions: vertical, adjacent, complementary, supplementary, linear pair"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "angle identification",
+            "figure analysis",
+            "multiple concepts"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "State the property that is used in each of the following statements?\n(i) If a || b, then ∠1 = ∠5.\n(ii) If ∠4 = ∠6, then a || b.\n(iii) If ∠4 + ∠5 = 180°, then a || b.",
+          "hints": [
+            "Recall parallel line properties: corresponding angles equal, alternate interior angles equal, co-interior angles supplementary"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallel lines",
+            "transversal properties",
+            "reasoning"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "In the adjoining figure, identify\n(i) the pairs of corresponding angles.\n(ii) the pairs of alternate interior angles.\n(iii) the pairs of interior angles on the same side of the transversal.\n(iv) the vertically opposite angles.",
+          "hints": [
+            "Label angles in figure",
+            "Recall definitions of corresponding, alternate interior, co-interior, vertical angles"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "angle identification",
+            "transversal",
+            "figure analysis"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "In the adjoining figure, p || q. Find the unknown angles.",
+          "hints": [
+            "Use parallel line properties",
+            "Use linear pair, vertically opposite angles",
+            "Find all missing angles step by step"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallel lines",
+            "angle calculation",
+            "figure analysis"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the value of x in each of the following figures if l || m.\n(i)\n(ii)",
+          "hints": [
+            "Use corresponding/alternate interior angles equality",
+            "Use linear pair if needed"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallel lines",
+            "algebraic solving",
+            "figure analysis"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "In the given figure, the arms of two angles are parallel.\nIf ∠ABC = 70º, then find\n(i) ∠DGC\n(ii) ∠DEF",
+          "hints": [
+            "Identify corresponding/alternate angles",
+            "Use parallel line properties"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "parallel lines",
+            "angle calculation",
+            "multiple steps"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "In the given figures below, decide whether l is parallel to m.\n(i)\n(ii)\n(iii)\n(iv)",
+          "hints": [
+            "Check if corresponding/alternate angles are equal",
+            "Check if co-interior angles are supplementary"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "parallel line test",
+            "angle reasoning",
+            "multiple figures"
+          ]
+        }
+      ]
+    }
+  ]
+}

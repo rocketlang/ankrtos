@@ -1,0 +1,264 @@
+{
+  "chapter_number": 5,
+  "chapter_title": "Physical and Chemical Changes",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Classify the changes involved in the following processes as physical or chemical changes:\n(a) Photosynthesis\n(b) Dissolving sugar in water\n(c) Burning of coal\n(d) Melting of wax\n(e) Beating aluminium to make aluminium foil\n(f) Digestion of food",
+          "hints": [
+            "Identify if new substances are formed",
+            "Check if the change is reversible",
+            "Look for changes in physical properties only"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "classification",
+            "physical change",
+            "chemical change",
+            "examples"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "State whether the following statements are true or false. In case a statement is false, write the corrected statement in your notebook.\n(a) Cutting a log of wood into pieces is a chemical change. (True/False)\n(b) Formation of manure from leaves is a physical change. (True/False)\n(c) Iron pipes coated with zinc do not get rusted easily. (True/False)\n(d) Iron and rust are the same substances. (True/False)\n(e) Condensation of steam is not a chemical change. (True/False)",
+          "hints": [
+            "Recall definitions of physical and chemical changes",
+            "Remember rust prevention methods",
+            "Understand composition of rust"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "true/false",
+            "correction",
+            "rusting",
+            "condensation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Fill in the blanks in the following statements:\n(a) When carbon dioxide is passed through lime water, it turns milky due to the formation of _________.\n(b) The chemical name of baking soda is _________.\n(c) Two methods by which rusting of iron can be prevented are _________ and _________.\n(d) Changes in which only _________ properties of a substance change are called physical changes.\n(e) Changes in which new substances are formed are called _________ changes.",
+          "hints": [
+            "Recall lime water test",
+            "Remember common chemical names",
+            "Think about rust prevention techniques"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fill in blanks",
+            "definitions",
+            "rust prevention",
+            "chemical names"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "When baking soda is mixed with lemon juice, bubbles are formed with the evolution of a gas. What type of change is it? Explain.",
+          "hints": [
+            "Check if new substance is formed",
+            "Identify the gas evolved",
+            "Recall acid-base reaction"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "acid-base reaction",
+            "gas evolution",
+            "explanation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "When a candle burns, both physical and chemical changes take place. Identify these changes. Give another example of a familiar process in which both the chemical and physical changes take place.",
+          "hints": [
+            "Identify melting wax (physical)",
+            "Identify burning wax (chemical)",
+            "Think of cooking processes"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "combined changes",
+            "candle burning",
+            "examples"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "How would you show that setting of curd is a chemical change?",
+          "hints": [
+            "Check formation of new substance",
+            "Test for acidity change",
+            "Observe irreversibility"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "curd formation",
+            "chemical change evidence",
+            "experimental proof"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Explain why burning of wood and cutting it into small pieces are considered as two different types of changes.",
+          "hints": [
+            "Compare new substance formation",
+            "Check reversibility",
+            "Analyze property changes"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comparison",
+            "wood burning",
+            "cutting wood",
+            "change types"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Describe how crystals of copper sulphate are prepared.",
+          "hints": [
+            "Recall Activity 5.9",
+            "Steps: dissolution, heating, filtration, cooling",
+            "Need for dilute acid"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "crystallization",
+            "copper sulphate",
+            "experimental procedure"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Explain how painting of an iron gate prevents it from rusting.",
+          "hints": [
+            "Prevent contact with oxygen",
+            "Prevent contact with water",
+            "Barrier formation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "rust prevention",
+            "painting",
+            "barrier method"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Explain why rusting of iron objects is faster in coastal areas than in deserts.",
+          "hints": [
+            "Consider humidity levels",
+            "Presence of salt in air",
+            "Oxygen availability"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rusting factors",
+            "coastal vs desert",
+            "humidity effect"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "The gas we use in the kitchen is called liquified petroleum gas (LPG). In the cylinder it exist as a liquid. When it comes out from the cylinder it becomes a gas (Change – A) then it burns (Change – B). The following statements pertain to these changes. Choose the correct one.\n(i) Process – A is a chemical change.\n(ii) Process – B is a chemical change.\n(iii) Both processes A and B are chemical changes.\n(iv) None of these processes is a chemical change.",
+          "hints": [
+            "Identify phase change (physical)",
+            "Identify combustion (chemical)",
+            "Select correct combination"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "LPG",
+            "phase change",
+            "combustion",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Anaerobic bacteria digest animal waste and produce biogas (Change – A). The biogas is then burnt as fuel (Change – B). The following statements pertain to these changes. Choose the correct one.\n(i) Process – A is a chemical change.\n(ii) Process – B is a chemical change.\n(iii) Both processes A and B are chemical changes.\n(iv) None of these processes is a chemical change.",
+          "hints": [
+            "Identify digestion as chemical change",
+            "Identify burning as chemical change",
+            "Both involve new substances"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "biogas",
+            "anaerobic digestion",
+            "combustion",
+            "multiple choice"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Extended Learning",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Describe two changes that are harmful. Explain why you consider them harmful. How can you prevent them?",
+          "hints": [
+            "Think of rusting, pollution, spoilage",
+            "Consider economic and health impacts",
+            "Suggest preventive measures"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "harmful changes",
+            "prevention",
+            "application"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Take three glass bottles with wide mouths. Label them A, B and C. Fill about half of bottle A with ordinary tap water. Fill bottle B with water which has been boiled for several minutes, to the same level as in A. In bottle C, take the same boiled water and of the same amount as in other bottles. In each bottle put a few similar iron nails so that they are completely under water. Add a teaspoonful of cooking oil to the water in bottle C so that it forms a film on its surface. Put the bottles away for a few days. Take out nails from each bottle and observe them. Explain your observations.",
+          "hints": [
+            "Compare rusting in different conditions",
+            "Effect of boiled water (oxygen removed)",
+            "Effect of oil layer (prevents oxygen contact)"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "experiment",
+            "rusting conditions",
+            "observation",
+            "explanation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Prepare crystals of alum.",
+          "hints": [
+            "Similar to copper sulphate crystallization",
+            "Dissolve, heat, filter, cool",
+            "Use pure substance"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "crystallization",
+            "alum",
+            "practical activity"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Collect information about the types of fuels used for cooking in your area. Discuss with your teachers/parents/others which fuels are less polluting and why.",
+          "hints": [
+            "Survey local fuels",
+            "Compare pollution levels",
+            "Consider clean energy options"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "fuels",
+            "pollution",
+            "survey",
+            "discussion"
+          ]
+        }
+      ]
+    }
+  ]
+}

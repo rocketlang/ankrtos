@@ -1,0 +1,485 @@
+{
+  "chapter_number": 5,
+  "chapter_title": "Squares and Square Roots",
+  "exercises": [
+    {
+      "exercise_number": "5.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What will be the unit digit of the squares of the following numbers?\n(i) 81\n(ii) 272\n(iii) 799\n(iv) 3853\n(v) 1234\n(vi) 26387\n(vii) 52698\n(viii) 99880\n(ix) 12796\n(x) 55555",
+          "hints": [
+            "Observe the unit digit of each number",
+            "Recall that squares end with 0,1,4,5,6,9 only",
+            "Check pattern: numbers ending with 1 or 9 give squares ending with 1",
+            "Numbers ending with 4 or 6 give squares ending with 6"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "unit digit",
+            "square properties",
+            "pattern recognition"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The following numbers are obviously not perfect squares. Give reason.\n(i) 1057\n(ii) 23453\n(iii) 7928\n(iv) 222222\n(v) 64000\n(vi) 89722\n(vii) 222000\n(viii) 505050",
+          "hints": [
+            "Check unit digit - perfect squares end with 0,1,4,5,6,9",
+            "For numbers ending with zeros, count zeros - must be even",
+            "Some numbers may have wrong unit digit or odd zeros"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "perfect square identification",
+            "unit digit rule",
+            "zero count"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The squares of which of the following would be odd numbers?\n(i) 431\n(ii) 2826\n(iii) 7779\n(iv) 82004",
+          "hints": [
+            "Square of odd number is odd",
+            "Square of even number is even",
+            "Check if number is odd or even"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "odd even squares",
+            "number parity"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Observe the following pattern and find the missing digits.\n112 = 121\n1012 = 10201\n10012 = 1002001\n1000012 = 1 ......... 2 ......... 1\n100000012 = ...........................",
+          "hints": [
+            "Pattern: 1 followed by zeros, then 2, then zeros, then 1",
+            "Count zeros between 1 and 2",
+            "Number of zeros equals (n-1) where number is 1 followed by n zeros then 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "pattern recognition",
+            "number patterns",
+            "algebraic pattern"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Observe the following pattern and supply the missing numbers.\n112 = 1 2 1\n1012 = 1 0 2 0 1\n101012 = 102030201\n10101012 = ...........................\n............2 = 10203040504030201",
+          "hints": [
+            "Pattern shows symmetric numbers",
+            "Middle number increases by 1 each time",
+            "For 1010101, expect 1020304030201"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "symmetric patterns",
+            "palindromic squares",
+            "pattern continuation"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Using the given pattern, find the missing numbers.\n12 + 22 + 22 = 32\n22 + 32 + 62 = 72\n32 + 42 + 122 = 132\n42 + 52 + _2 = 212\n52 + _2 + 302 = 312\n62 + 72 + _2 = __2",
+          "hints": [
+            "Third number = first × second",
+            "Fourth number = third + 1",
+            "Check: 4×5=20, so 202, then 20+1=21"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "algebraic pattern",
+            "pythagorean triples",
+            "number relationships"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Without adding, find the sum.\n(i) 1 + 3 + 5 + 7 + 9\n(ii) 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 +19\n(iii) 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19 + 21 + 23",
+          "hints": [
+            "Sum of first n odd numbers = n²",
+            "Count how many odd numbers",
+            "Square that count"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sum of odd numbers",
+            "square numbers",
+            "arithmetic series"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "(i) Express 49 as the sum of 7 odd numbers.\n(ii) Express 121 as the sum of 11 odd numbers.",
+          "hints": [
+            "49 = 7², so sum of first 7 odd numbers",
+            "121 = 11², so sum of first 11 odd numbers",
+            "Odd numbers: 1,3,5,7,..."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sum of consecutive odds",
+            "perfect square decomposition"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "How many numbers lie between squares of the following numbers?\n(i) 12 and 13\n(ii) 25 and 26\n(iii) 99 and 100",
+          "hints": [
+            "Between n² and (n+1)² there are 2n numbers",
+            "Use formula: 2n non-square numbers",
+            "For 12 and 13: 2×12=24"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "between squares",
+            "non-square numbers",
+            "algebraic formula"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the square of the following numbers.\n(i) 32\n(ii) 35\n(iii) 86\n(iv) 93\n(v) 71\n(vi) 46",
+          "hints": [
+            "Use (a+b)² = a² + 2ab + b² method",
+            "For numbers ending with 5: (a5)² = a(a+1) hundred + 25",
+            "Break into tens and units: 32 = 30+2"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "square calculation",
+            "algebraic identity",
+            "mental math"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Write a Pythagorean triplet whose one member is.\n(i) 6\n(ii) 14\n(iii) 16\n(iv) 18",
+          "hints": [
+            "Use 2m, m²-1, m²+1 formula",
+            "If given number is even, try 2m = given number",
+            "If given number is odd, try m²-1 or m²+1 = given number"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "pythagorean triplets",
+            "right triangles",
+            "number theory"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What could be the possible 'one's' digits of the square root of each of the following numbers?\n(i) 9801\n(ii) 99856\n(iii) 998001\n(iv) 657666025",
+          "hints": [
+            "Square root's unit digit depends on number's unit digit",
+            "If number ends with 1, root ends with 1 or 9",
+            "If number ends with 5, root ends with 5",
+            "If number ends with 6, root ends with 4 or 6"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "unit digit analysis",
+            "square root properties",
+            "deductive reasoning"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Without doing any calculation, find the numbers which are surely not perfect squares.\n(i) 153\n(ii) 257\n(iii) 408\n(iv) 441",
+          "hints": [
+            "Check unit digit - perfect squares end with 0,1,4,5,6,9",
+            "153 ends with 3 → not perfect square",
+            "257 ends with 7 → not perfect square",
+            "408 ends with 8 → not perfect square",
+            "441 ends with 1 → could be perfect square"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "perfect square identification",
+            "unit digit rule",
+            "quick elimination"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the square roots of 100 and 169 by the method of repeated subtraction.",
+          "hints": [
+            "Subtract successive odd numbers starting from 1",
+            "100-1=99, 99-3=96, continue until 0",
+            "Count how many subtractions needed"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "repeated subtraction",
+            "square root method",
+            "odd number series"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the square roots of the following numbers by the Prime Factorisation Method.\n(i) 729\n(ii) 400\n(iii) 1764\n(iv) 4096\n(v) 7744\n(vi) 9604\n(vii) 5929\n(viii) 9216\n(ix) 529\n(x) 8100",
+          "hints": [
+            "Factorize completely",
+            "Pair the prime factors",
+            "Take one from each pair and multiply"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "prime factorization",
+            "square root",
+            "factor pairing"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "For each of the following numbers, find the smallest whole number by which it should be multiplied so as to get a perfect square number. Also find the square root of the square number so obtained.\n(i) 252\n(ii) 180\n(iii) 1008\n(iv) 2028\n(v) 1458\n(vi) 768",
+          "hints": [
+            "Prime factorize",
+            "Identify unpaired factors",
+            "Multiply by unpaired factors to complete pairs"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "perfect square creation",
+            "prime factors",
+            "factor pairing"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "For each of the following numbers, find the smallest whole number by which it should be divided so as to get a perfect square. Also find the square root of the square number so obtained.\n(i) 252\n(ii) 2925\n(iii) 396\n(iv) 2645\n(v) 2800\n(vi) 1620",
+          "hints": [
+            "Prime factorize",
+            "Identify unpaired factors",
+            "Divide by unpaired factors to remove them"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "perfect square by division",
+            "prime factors",
+            "factor elimination"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "The students of Class VIII of a school donated ₹2401 in all, for Prime Minister's National Relief Fund. Each student donated as many rupees as the number of students in the class. Find the number of students in the class.",
+          "hints": [
+            "Let number of students = n",
+            "Each donates n rupees",
+            "Total = n × n = n² = 2401",
+            "Find √2401"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "word problem",
+            "square root application",
+            "real-life context"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "2025 plants are to be planted in a garden in such a way that each row contains as many plants as the number of rows. Find the number of rows and the number of plants in each row.",
+          "hints": [
+            "Let rows = columns = n",
+            "Total plants = n² = 2025",
+            "Find √2025"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "square arrangement",
+            "square root",
+            "array problem"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Find the smallest square number that is divisible by each of the numbers 4, 9 and 10.",
+          "hints": [
+            "Find LCM of 4,9,10 = 180",
+            "Prime factorize 180 = 2²×3²×5",
+            "Make pairs: need extra 5",
+            "Multiply 180×5 = 900"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "LCM",
+            "perfect square",
+            "divisibility"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Find the smallest square number that is divisible by each of the numbers 8, 15 and 20.",
+          "hints": [
+            "Find LCM of 8,15,20 = 120",
+            "Prime factorize 120 = 2³×3×5",
+            "Make pairs: need extra 2,3,5",
+            "Multiply 120×2×3×5 = 120×30 = 3600"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "LCM",
+            "perfect square",
+            "factor pairing"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the square root of each of the following numbers by Division method.\n(i) 2304\n(ii) 4489\n(iii) 3481\n(iv) 529\n(v) 3249\n(vi) 1369\n(vii) 5776\n(viii) 7921\n(ix) 576\n(x) 1024\n(xi) 3136\n(xii) 900",
+          "hints": [
+            "Use long division method",
+            "Pair digits from right",
+            "Find largest number whose square ≤ leftmost pair",
+            "Double quotient, guess next digit"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "long division method",
+            "square root algorithm",
+            "step-by-step division"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the number of digits in the square root of each of the following numbers (without any calculation).\n(i) 64\n(ii) 144\n(iii) 4489\n(iv) 27225\n(v) 390625",
+          "hints": [
+            "Count digits in number",
+            "If n digits, square root has n/2 digits if n even",
+            "If n odd, square root has (n+1)/2 digits"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "digit count",
+            "estimation",
+            "square root digits"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the square root of the following decimal numbers.\n(i) 2.56\n(ii) 7.29\n(iii) 51.84\n(iv) 42.25\n(v) 31.36",
+          "hints": [
+            "Treat as whole number after removing decimal",
+            "Use division method",
+            "Place decimal point in quotient appropriately",
+            "Pair digits from decimal point both directions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "decimal square roots",
+            "division method",
+            "decimal placement"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the least number which must be subtracted from each of the following numbers so as to get a perfect square. Also find the square root of the perfect square so obtained.\n(i) 402\n(ii) 1989\n(iii) 3250\n(iv) 825\n(v) 4000",
+          "hints": [
+            "Find square root by division method",
+            "Note remainder",
+            "Subtract remainder from original number",
+            "Remainder is the number to subtract"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "perfect square adjustment",
+            "remainder subtraction",
+            "square root approximation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the least number which must be added to each of the following numbers so as to get a perfect square. Also find the square root of the perfect square so obtained.\n(i) 525\n(ii) 1750\n(iii) 252\n(iv) 1825\n(v) 6412",
+          "hints": [
+            "Find square root by division method",
+            "Note remainder",
+            "Next perfect square = (root+1)²",
+            "Difference = (root+1)² - original number"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "perfect square completion",
+            "next square",
+            "difference calculation"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Find the length of the side of a square whose area is 441 m².",
+          "hints": [
+            "Area = side²",
+            "side = √area",
+            "Find √441"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "area application",
+            "square root",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "In a right triangle ABC, ∠B = 90°.\n(a) If AB = 6 cm, BC = 8 cm, find AC\n(b) If AC = 13 cm, BC = 5 cm, find AB",
+          "hints": [
+            "Use Pythagoras theorem: AC² = AB² + BC²",
+            "(a) AC² = 6² + 8² = 36+64=100, AC=10",
+            "(b) AB² = AC² - BC² = 169-25=144, AB=12"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pythagoras theorem",
+            "right triangle",
+            "square root application"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "A gardener has 1000 plants. He wants to plant these in such a way that the number of rows and the number of columns remain same. Find the minimum number of plants he needs more for this.",
+          "hints": [
+            "Find perfect square ≥ 1000",
+            "31²=961, 32²=1024",
+            "Need 1024-1000=24 more plants"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "square arrangement",
+            "next perfect square",
+            "minimum addition"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "There are 500 children in a school. For a P.T. drill they have to stand in such a manner that the number of rows is equal to number of columns. How many children would be left out in this arrangement.",
+          "hints": [
+            "Find largest perfect square ≤ 500",
+            "22²=484, 23²=529",
+            "500-484=16 children left out"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "square formation",
+            "remainder",
+            "maximum arrangement"
+          ]
+        }
+      ]
+    }
+  ]
+}

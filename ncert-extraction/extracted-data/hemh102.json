@@ -1,0 +1,349 @@
+{
+  "chapter_number": 2,
+  "chapter_title": "Linear Equations in One Variable",
+  "exercises": [
+    {
+      "exercise_number": "2.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "3x = 2x + 18",
+          "hints": [
+            "Transpose 2x to LHS",
+            "Combine like terms",
+            "Solve for x"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "linear equation",
+            "transposition",
+            "one variable"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "5t – 3 = 3t – 5",
+          "hints": [
+            "Transpose 3t to LHS and -3 to RHS",
+            "Combine like terms",
+            "Solve for t"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "linear equation",
+            "transposition",
+            "one variable"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "5x + 9 = 5 + 3x",
+          "hints": [
+            "Transpose 3x to LHS and 9 to RHS",
+            "Combine like terms",
+            "Solve for x"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "linear equation",
+            "transposition",
+            "one variable"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "4z + 3 = 6 + 2z",
+          "hints": [
+            "Transpose 2z to LHS and 3 to RHS",
+            "Combine like terms",
+            "Solve for z"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "linear equation",
+            "transposition",
+            "one variable"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "2x – 1 = 14 – x",
+          "hints": [
+            "Transpose -x to LHS and -1 to RHS",
+            "Combine like terms",
+            "Solve for x"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "linear equation",
+            "transposition",
+            "one variable"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "8x + 4 = 3 (x – 1) + 7",
+          "hints": [
+            "Expand the bracket on RHS",
+            "Combine like terms",
+            "Transpose terms",
+            "Solve for x"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear equation",
+            "brackets",
+            "simplification",
+            "one variable"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "x = 4/5 (x + 10)",
+          "hints": [
+            "Multiply both sides by 5 to eliminate denominator",
+            "Expand bracket",
+            "Transpose terms",
+            "Solve for x"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear equation",
+            "fractions",
+            "brackets",
+            "one variable"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "2x/3 + 1 = 7x/15 + 3",
+          "hints": [
+            "Find LCM of denominators (15)",
+            "Multiply both sides by 15",
+            "Transpose terms",
+            "Solve for x"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear equation",
+            "fractions",
+            "LCM",
+            "one variable"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "2y + 5/3 = 26/3 - y",
+          "hints": [
+            "Multiply both sides by 3 to eliminate denominators",
+            "Transpose terms",
+            "Combine like terms",
+            "Solve for y"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear equation",
+            "fractions",
+            "transposition",
+            "one variable"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "3m = 5m - 8/5",
+          "hints": [
+            "Transpose 5m to LHS",
+            "Combine like terms",
+            "Solve for m",
+            "Simplify fraction"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "linear equation",
+            "fractions",
+            "transposition",
+            "one variable"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "x/2 - 1/5 = x/3 + 1/4",
+          "hints": [
+            "Find LCM of denominators (60)",
+            "Multiply both sides by 60",
+            "Expand and simplify",
+            "Solve for x"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear equation",
+            "fractions",
+            "LCM",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "n/2 - 3n/4 + 5n/6 = 21",
+          "hints": [
+            "Find LCM of denominators (12)",
+            "Multiply both sides by 12",
+            "Combine like terms",
+            "Solve for n"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear equation",
+            "fractions",
+            "LCM",
+            "combining terms"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "x + 7 - 8x/3 = 17/6 - 5x/2",
+          "hints": [
+            "Find LCM of denominators (6)",
+            "Multiply both sides by 6",
+            "Expand and simplify",
+            "Solve for x"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "linear equation",
+            "fractions",
+            "LCM",
+            "multiple terms"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "(x-5)/3 = (x-3)/5",
+          "hints": [
+            "Cross-multiply",
+            "Expand brackets",
+            "Transpose terms",
+            "Solve for x"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear equation",
+            "cross-multiplication",
+            "brackets",
+            "one variable"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "(3t-2)/4 - (2t+3)/3 = 2/3 - t",
+          "hints": [
+            "Find LCM of denominators (12)",
+            "Multiply both sides by 12",
+            "Expand brackets",
+            "Combine like terms",
+            "Solve for t"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "linear equation",
+            "fractions",
+            "brackets",
+            "LCM",
+            "multiple steps"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "m - (m-1)/2 = 1 - (m-2)/3",
+          "hints": [
+            "Find LCM of denominators (6)",
+            "Multiply both sides by 6",
+            "Expand brackets",
+            "Combine like terms",
+            "Solve for m"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "linear equation",
+            "fractions",
+            "brackets",
+            "LCM",
+            "multiple steps"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "3(t – 3) = 5(2t + 1)",
+          "hints": [
+            "Expand brackets on both sides",
+            "Transpose terms",
+            "Combine like terms",
+            "Solve for t"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear equation",
+            "brackets",
+            "distributive property",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "15(y – 4) –2(y – 9) + 5(y + 6) = 0",
+          "hints": [
+            "Expand all brackets",
+            "Combine like terms",
+            "Solve for y"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear equation",
+            "multiple brackets",
+            "combining terms",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "3(5z – 7) – 2(9z – 11) = 4(8z – 13) – 17",
+          "hints": [
+            "Expand all brackets",
+            "Combine like terms on each side",
+            "Transpose terms",
+            "Solve for z"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "linear equation",
+            "multiple brackets",
+            "complex simplification",
+            "one variable"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "0.25(4f – 3) = 0.05(10f – 9)",
+          "hints": [
+            "Expand brackets",
+            "Multiply to eliminate decimals",
+            "Transpose terms",
+            "Solve for f"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear equation",
+            "decimals",
+            "brackets",
+            "simplification"
+          ]
+        }
+      ]
+    }
+  ]
+}

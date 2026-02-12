@@ -1,0 +1,301 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Locating Places on the Earth",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "On the map in Fig. 1.1 given on page 8 —\n1. Mark the hospital.\n2. What is the meaning of the blue-coloured areas?\n3. Which is farther away from the railway station — the school, the Nagar Panchayat or the public garden?",
+          "hints": [
+            "Observe the map symbols and colors.",
+            "Use the scale to estimate distances.",
+            "Compare distances from the railway station."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "map reading",
+            "symbols",
+            "distance"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "As a class activity, form groups of three or four students each. Let each group try to draw a map of your school and some of the streets or roads that lead to it, and a few neighbouring buildings. At the end, compare all the maps and discuss.",
+          "hints": [
+            "Include key landmarks and directions.",
+            "Use simple symbols for buildings and roads.",
+            "Ensure the map has a scale and cardinal directions."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "map drawing",
+            "practical activity",
+            "collaboration"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Draw a simple map of a school’s playground. Let us assume it is a rectangle, 40 m in length and 30 m in width. Draw it precisely with your ruler on a scale of 1 cm = 10 m.",
+          "hints": [
+            "Convert real measurements to scale measurements.",
+            "Use a ruler for accurate drawing.",
+            "Label dimensions on the map."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "scale",
+            "measurement",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Now measure the diagonal of the rectangle. How many centimetres do you get? Using the scale, calculate the real length of the playground’s diagonal, in metres.",
+          "hints": [
+            "Use the Pythagorean theorem: diagonal = √(length² + width²).",
+            "Convert scale measurement to real distance using the scale factor."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "pythagoras theorem",
+            "scale conversion",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Consider the map of the small city again. Identify the correct and incorrect statements in the list below:\n1. The market is north of the hospital.\n2. The museum is southeast of the bank.\n3. The railway station is northwest of the hospital.\n4. The lake is northwest of the apartment blocks.",
+          "hints": [
+            "Refer to cardinal and intermediate directions on the map.",
+            "Check relative positions of landmarks carefully."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "directions",
+            "map interpretation",
+            "true/false"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Taking your school as the starting point, do you know approximately in which cardinal direction your home is located? Discuss with your teacher and your parents.",
+          "hints": [
+            "Use a compass or known landmarks to determine direction.",
+            "Consider the route from school to home."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cardinal directions",
+            "personal geography",
+            "discussion"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Draw a rough map of your locality or your village, including your home, school and a few other important landmarks. Show the cardinal directions and use a few of the symbols shown in Fig. 1.2 on page 12 to mark some important features.",
+          "hints": [
+            "Sketch major roads and landmarks first.",
+            "Use standard map symbols for clarity.",
+            "Add a north arrow for orientation."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "map creation",
+            "symbols",
+            "local geography"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "If the globe or atlas in your class has well-marked latitudes and longitudes, try to note down approximate values for the latitude and longitude of (1) Mumbai, (2) Kolkata, (3) Singapore, (4) Paris.",
+          "hints": [
+            "Use an atlas or online resources for coordinates.",
+            "Note values in degrees with N/S and E/W indicators."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "latitude",
+            "longitude",
+            "geographic coordinates"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Using the same terms, write down your move if you play black and respond with the same move.",
+          "hints": [
+            "Refer to the chessboard coordinates example (d2 to d4).",
+            "Black's response would be symmetric (e.g., d7 to d5)."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "chess coordinates",
+            "analogy",
+            "grid system"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Two friends, one sitting in Porbandar (Gujarat) and the other in Tinsukia (Assam), are speaking on the phone late afternoon. The latter remarks that the sun has set in Assam and it’s now dark. The former is surprised and says, “But it’s still full daylight here!” Explain why. And, as a class activity, calculate the difference in local time between those two cities. (Hint: for now, consider the difference in longitude between Porbandar and Tinsukia to be 30°; later, you can find out the precise value.)",
+          "hints": [
+            "Recall that local time varies with longitude (15° = 1 hour).",
+            "Eastward locations have later local time.",
+            "Calculate time difference: 30° longitude difference = 2 hours."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "longitude",
+            "local time",
+            "time difference",
+            "india geography"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Return to the two friends sitting in Gujarat and Assam. Use this example to explain the difference between local time and standard time.",
+          "hints": [
+            "Local time is based on longitude; standard time is fixed for a country.",
+            "India uses Indian Standard Time (IST) uniformly.",
+            "Local time can vary within a country, but standard time does not."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "standard time",
+            "local time",
+            "IST",
+            "time zones"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Returning to page 10 and to Fig. 5.2 in Chapter 5 of this textbook, taking the scale to be 2.5 cm = 500 km, calculate the real distance from the estuary of the Narmada River to the estuary of the Ganga river. (Hint: round off your measurement on the map to an easy number.)",
+          "hints": [
+            "Measure the map distance between the two estuaries in cm.",
+            "Use the scale: 2.5 cm = 500 km, so 1 cm = 200 km.",
+            "Multiply map distance by 200 km to get real distance."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "scale calculation",
+            "distance measurement",
+            "india rivers"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why is it 5:30 pm in India when it is 12 pm or noon in London?",
+          "hints": [
+            "India Standard Time (IST) is 5 hours 30 minutes ahead of Greenwich Mean Time (GMT).",
+            "London is on GMT (0° longitude).",
+            "Time difference is due to longitude difference (82.5°E for India)."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "time zones",
+            "GMT",
+            "IST",
+            "longitude"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why do we need symbols and colours in the map?",
+          "hints": [
+            "Symbols represent features concisely in limited space.",
+            "Colors differentiate elements (e.g., water blue, land green).",
+            "Makes maps easier to read and interpret."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "map symbols",
+            "cartography",
+            "visual representation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find out what you have in the eight directions from your home or school.",
+          "hints": [
+            "Use a compass or mobile app to determine directions.",
+            "List landmarks (e.g., park in north, market in east).",
+            "Sketch a simple directional diagram."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cardinal directions",
+            "intermediate directions",
+            "observation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What is the difference between local time and standard time? Discuss it in groups, with each group writing an answer in 100 to 150 words. Compare the answers.",
+          "hints": [
+            "Local time is based on the sun's position at a specific longitude.",
+            "Standard time is fixed for a country/region for uniformity.",
+            "Example: India uses IST, but local time varies from east to west."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "time concepts",
+            "group discussion",
+            "writing"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Delhi’s and Bengaluru’s latitudes are 29°N and 13°N; their longitudes are almost the same, 77°E. How much will be the difference in local time between the two cities?",
+          "hints": [
+            "Local time depends on longitude, not latitude.",
+            "Since longitudes are same (~77°E), local time is nearly identical.",
+            "No significant time difference; maybe seconds due to slight longitude variation."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "longitude",
+            "local time",
+            "latitude",
+            "india cities"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Mark the following statements as true or false; explain your answers with a sentence or two.\nÆ All parallels of latitude have the same length.\nÆ The length of a meridian of longitude is half of that of the Equator.\nÆ The South Pole has a latitude of 90°S.\nÆ In Assam, the local time and the IST are identical.\nÆ Lines separating the time zones are identical with meridians of longitude.\nÆ The Equator is also a parallel of latitude.",
+          "hints": [
+            "Recall properties of latitudes and longitudes.",
+            "Time zone boundaries often follow political borders, not exact meridians.",
+            "IST is uniform across India, but local time varies with longitude."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "true/false",
+            "latitude",
+            "longitude",
+            "time zones",
+            "equator"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Solve the crossword below.",
+          "hints": [
+            "Refer to chapter terms: scale, globe, equator, latitude, longitude, etc.",
+            "Use definitions from the text for clues."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "crossword",
+            "vocabulary",
+            "review"
+          ]
+        }
+      ]
+    }
+  ]
+}

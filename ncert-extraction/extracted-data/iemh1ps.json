@@ -1,0 +1,412 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "NUMBER SYSTEMS",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Is zero a rational number? Can you write it in the form p/q, where p and q are integers and q ≠ 0?",
+          "hints": [
+            "Recall definition of rational numbers",
+            "Check if 0 can be expressed as p/q"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "rational numbers",
+            "definition"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find six rational numbers between 3 and 4.",
+          "hints": [
+            "Use concept of equivalent fractions",
+            "Find numbers with common denominator"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "rational numbers",
+            "between numbers"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find five rational numbers between 3/5 and 4/5.",
+          "hints": [
+            "Convert to equivalent fractions with larger denominator",
+            "Find intermediate fractions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "rational numbers",
+            "fractions"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "State whether the following statements are true or false. Give reasons for your answers. (i) Every natural number is a whole number. (ii) Every integer is a whole number. (iii) Every rational number is a whole number.",
+          "hints": [
+            "Review number system hierarchy",
+            "Check counterexamples for false statements"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "number systems",
+            "classification",
+            "true/false"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "State whether the following statements are true or false. Justify your answers. (i) Every irrational number is a real number. (ii) Every point on the number line is of the form √m, where m is a natural number. (iii) Every real number is an irrational number.",
+          "hints": [
+            "Understand real number system",
+            "Recall relationship between rational and irrational numbers"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "irrational numbers",
+            "real numbers",
+            "number line"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Are the square roots of all positive integers irrational? If not, give an example of the square root of a number that is a rational number.",
+          "hints": [
+            "Consider perfect squares",
+            "Find square roots that are integers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "square roots",
+            "rational numbers",
+            "perfect squares"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Show how √5 can be represented on the number line.",
+          "hints": [
+            "Use Pythagoras theorem",
+            "Construct right triangle with sides 2 and 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "irrational numbers",
+            "number line",
+            "construction"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Classroom activity (Constructing the 'square root spiral'): Take a large sheet of paper and construct the 'square root spiral' in the following fashion. Start with a point O and draw a line segment OP₁ of unit length. Draw a line segment P₁P₂ perpendicular to OP₁ of unit length (see Fig. 1.9). Now draw a line segment P₂P₃ perpendicular to OP₂. Then draw a line segment P₃P₄ perpendicular to OP₃. Continuing in this manner, you can get the line segment Pₙ₋₁Pₙ by drawing a line segment of unit length perpendicular to OPₙ₋₁. In this manner, you will have created the points P₂, P₃, ..., Pₙ, ... and joined them to create a beautiful spiral depicting √2, √3, √4, ...",
+          "hints": [
+            "Follow step-by-step construction",
+            "Use Pythagoras theorem at each step"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "spiral construction",
+            "square roots",
+            "geometric representation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Write the following in decimal form and say what kind of decimal expansion each has: (i) 36/100 (ii) 1/11 (iii) 4 1/8 (iv) 3/13 (v) 2/11 (vi) 329/400",
+          "hints": [
+            "Perform division",
+            "Identify terminating or non-terminating decimals"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "decimal expansion",
+            "terminating decimals",
+            "repeating decimals"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "You know that 1/7 = 0.142857. Can you predict what the decimal expansions of 2/7, 3/7, 4/7, 5/7, 6/7 are, without actually doing the long division? If so, how?",
+          "hints": [
+            "Observe pattern in 1/7",
+            "Use cyclic nature of decimal expansion"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "decimal patterns",
+            "fractions",
+            "prediction"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Express the following in the form p/q, where p and q are integers and q ≠ 0: (i) 0.6 (ii) 0.47 (iii) 0.001",
+          "hints": [
+            "Use place value concept",
+            "For repeating decimals, use algebraic method"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "decimal to fraction",
+            "rational numbers"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Express 0.99999... in the form p/q. Are you surprised by your answer? With your teacher and classmates discuss why the answer makes sense.",
+          "hints": [
+            "Let x = 0.999...",
+            "Subtract from 10x = 9.999...",
+            "Solve for x"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "repeating decimals",
+            "limits",
+            "conceptual understanding"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What can the maximum number of digits be in the repeating block of digits in the decimal expansion of 1/17? Perform the division to check your answer.",
+          "hints": [
+            "Recall property of decimal expansions",
+            "Maximum repeating digits is denominator-1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "decimal expansion",
+            "repeating blocks",
+            "long division"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Look at several examples of rational numbers in the form p/q (q ≠ 0), where p and q are integers with no common factors other than 1 and having terminating decimal representations (expansions). Can you guess what property q must satisfy?",
+          "hints": [
+            "Examine denominators of terminating decimals",
+            "Prime factorization of denominators"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "terminating decimals",
+            "prime factors",
+            "denominator property"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Write three numbers whose decimal expansions are non-terminating non-recurring.",
+          "hints": [
+            "Think of irrational numbers",
+            "Common examples like π, √2, √3"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "irrational numbers",
+            "decimal expansion"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Find three different irrational numbers between the rational numbers 5/7 and 9/11.",
+          "hints": [
+            "Convert to decimals first",
+            "Construct irrational numbers between them"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "irrational numbers",
+            "between numbers",
+            "construction"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Classify the following numbers as rational or irrational: (i) √23 (ii) √225 (iii) 0.3796 (iv) 7.478478... (v) 1.101001000100001...",
+          "hints": [
+            "Check if square root is perfect square",
+            "Identify pattern in decimal expansion"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rational vs irrational",
+            "classification",
+            "decimal patterns"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Visualise 3.765 on the number line, using successive magnification.",
+          "hints": [
+            "Locate between 3 and 4",
+            "Magnify between 3.7 and 3.8",
+            "Further magnify between 3.76 and 3.77"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "number line",
+            "visualization",
+            "successive magnification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Visualise 4.26 on the number line, up to 4 decimal places.",
+          "hints": [
+            "Similar to previous question",
+            "Use magnification technique"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "number line",
+            "decimal representation",
+            "visualization"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Classify the following numbers as rational or irrational: (i) 2 - √5 (ii) (3 + √23) - √23 (iii) 2√7/7√7 (iv) 1/√2 (v) 2π",
+          "hints": [
+            "Simplify expressions first",
+            "Recall sum/difference of rational and irrational"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rational vs irrational",
+            "operations",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Simplify each of the following expressions: (i) (3 + √3)(2 + √2) (ii) (3 + √3)(3 - √3) (iii) (√5 + √2)² (iv) (√5 - √2)(√5 + √2)",
+          "hints": [
+            "Use distributive property",
+            "Apply algebraic identities like (a+b)(a-b)=a²-b²"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "simplification",
+            "surds",
+            "algebraic identities"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Recall, π is defined as the ratio of the circumference (say c) of a circle to its diameter (say d). That is, π = c/d. This seems to contradict the fact that π is irrational. How will you resolve this contradiction?",
+          "hints": [
+            "Consider that c or d might be irrational",
+            "Both c and d cannot be measured exactly"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "pi",
+            "irrational numbers",
+            "conceptual understanding"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Represent √9.3 on the number line.",
+          "hints": [
+            "Construct right triangle with hypotenuse √9.3",
+            "Use Pythagoras theorem"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "square roots",
+            "number line",
+            "geometric construction"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Rationalise the denominators of the following: (i) 1/√7 (ii) 1/(√7-√6) (iii) 1/(√5+√2) (iv) 1/(√7-2)",
+          "hints": [
+            "Multiply numerator and denominator by conjugate",
+            "Use difference of squares identity"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rationalization",
+            "denominators",
+            "conjugates"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.6",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find: (i) 64^(1/2) (ii) 32^(1/5) (iii) 125^(1/3)",
+          "hints": [
+            "Express as power of base",
+            "Use laws of exponents"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "roots",
+            "fractional powers"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find: (i) 9^(3/2) (ii) 32^(2/5) (iii) 16^(3/4) (iv) 125^(-1/3)",
+          "hints": [
+            "Apply (a^m)^n = a^(mn)",
+            "Handle negative exponents carefully"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "exponents",
+            "fractional powers",
+            "negative exponents"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Simplify: (i) 2^(2/3) . 2^(1/5) (ii) (1/3^3)^7 (iii) 11^(1/2)/11^(1/4) (iv) 7^(1/2) . 8^(1/2)",
+          "hints": [
+            "Use laws: a^m . a^n = a^(m+n)",
+            "a^m / a^n = a^(m-n)",
+            "(ab)^m = a^m b^m"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "exponent laws",
+            "simplification",
+            "operations"
+          ]
+        }
+      ]
+    }
+  ]
+}

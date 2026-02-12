@@ -1,0 +1,131 @@
+{
+  "chapter_number": 102,
+  "chapter_title": "Bringing up Kari",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "The enclosure in which Kari lived had a thatched roof that lay on thick tree stumps. Examine the illustration of Kari’s pavilion on page 8 and say why it was built that way.",
+          "hints": [
+            "Think about Kari's size and movements",
+            "Consider structural stability",
+            "Relate to elephant behavior"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension",
+            "inference",
+            "animal behavior"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Did Kari enjoy his morning bath in the river? Give a reason for your answer.",
+          "hints": [
+            "Look for descriptive words about bath time",
+            "Find evidence of pleasure or enjoyment",
+            "Check Kari's reactions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension",
+            "evidence-based",
+            "character analysis"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Finding good twigs for Kari took a long time. Why?",
+          "hints": [
+            "Consider the quality requirements",
+            "Think about preparation time",
+            "Recall specific details about twigs"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension",
+            "detail recall",
+            "animal care"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Why did Kari push his friend into the stream?",
+          "hints": [
+            "Look at the sequence of events",
+            "Consider Kari's intentions",
+            "Think about the emergency situation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "inference",
+            "character motivation",
+            "plot analysis"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Kari was like a baby. What are the main points of comparison?",
+          "hints": [
+            "List baby-like behaviors",
+            "Consider learning patterns",
+            "Think about care requirements"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comparison",
+            "character analysis",
+            "metaphor"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Kari helped himself to all the bananas in the house without anyone noticing it. How did he do it?",
+          "hints": [
+            "Recall the method described",
+            "Think about Kari's physical abilities",
+            "Consider the timing"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "detail recall",
+            "plot comprehension",
+            "animal intelligence"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Kari learnt the commands to sit and to walk. What were the instructions for each command?",
+          "hints": [
+            "Find the specific words used",
+            "Recall the accompanying actions",
+            "Note the learning duration"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "detail recall",
+            "training methods",
+            "animal communication"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "What is 'the master call'? Why is it the most important signal for an elephant to learn?",
+          "hints": [
+            "Describe the sound",
+            "Explain its purpose",
+            "Consider survival situations"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comprehension",
+            "importance analysis",
+            "survival skills"
+          ]
+        }
+      ]
+    }
+  ]
+}

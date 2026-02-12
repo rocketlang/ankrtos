@@ -1,0 +1,292 @@
+{
+  "chapter_number": 7,
+  "chapter_title": "Transportation in Animals and Plants",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Match structures given in Column I with functions given in Column II.\nColumn I\n(i) Stomata\n(ii) Xylem\n(iii) Root hairs\n(iv) Phloem\nColumn II\n(a) Absorption of water\n(b) Transpiration\n(c) Transport of food\n(d) Transport of water\n(e) Synthesis of carbohydrates",
+          "hints": [
+            "Recall the functions of each plant structure",
+            "Stomata are involved in gas exchange and transpiration",
+            "Xylem transports water and minerals",
+            "Root hairs absorb water",
+            "Phloem transports food"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "plant anatomy",
+            "matching",
+            "transport system"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Fill in the blanks.\n(i) The blood from the heart is transported to all parts of the body by the ______.\n(ii) Haemoglobin is present in ______ cells.\n(iii) Arteries and veins are joined by a network of ______.\n(iv) The rhythmic expansion and contraction of the heart is called ______.\n(v) The main excretory product in human beings is ______.\n(vi) Sweat contains water and ______.\n(vii) Kidneys eliminate the waste materials in the liquid form called ______.\n(viii) Water reaches great heights in the trees because of suction pull caused by ______.",
+          "hints": [
+            "Think about circulatory system components",
+            "Recall blood composition",
+            "Remember the smallest blood vessels",
+            "Consider heart's pumping action",
+            "Think about nitrogenous waste",
+            "Sweat contains dissolved salts",
+            "Kidneys produce urine",
+            "Transpiration creates suction"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "fill in blanks",
+            "circulatory system",
+            "excretory system",
+            "plant transport"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Choose the correct option:\n(a) In plants, water is transported through\n(i) xylem\n(ii) phloem\n(iii) stomata\n(iv) root hair\n(b) Water absorption through roots can be increased by keeping the plants\n(i) in the shade\n(ii) in dim light\n(iii) under the fan\n(iv) covered with a polythene bag",
+          "hints": [
+            "Recall plant vascular tissues",
+            "Xylem transports water, phloem transports food",
+            "Transpiration increases water absorption",
+            "Air movement affects transpiration rate"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "plant transport",
+            "transpiration"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why is transport of materials necessary in a plant or in an animal? Explain.",
+          "hints": [
+            "Think about distribution of nutrients",
+            "Consider removal of waste products",
+            "Recall need for oxygen and food to all cells",
+            "Mention maintenance of homeostasis"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "explanation",
+            "transport necessity",
+            "circulatory system"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What will happen if there are no platelets in the blood?",
+          "hints": [
+            "Recall function of platelets",
+            "Think about blood clotting",
+            "Consider consequences of uncontrolled bleeding",
+            "Mention haemophilia as related condition"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "blood components",
+            "platelets",
+            "clotting mechanism"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What are stomata? Give two functions of stomata.",
+          "hints": [
+            "Define stomata as pores in leaves",
+            "First function: gas exchange for photosynthesis",
+            "Second function: transpiration",
+            "Mention guard cells control opening"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "plant anatomy",
+            "stomata",
+            "gas exchange",
+            "transpiration"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "7",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Does transpiration serve any useful function in the plants? Explain.",
+          "hints": [
+            "Yes, transpiration has multiple functions",
+            "Creates suction pull for water transport",
+            "Helps in mineral absorption",
+            "Cools the plant through evaporation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "transpiration",
+            "plant physiology",
+            "water transport"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "8",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What are the components of blood?",
+          "hints": [
+            "List four main components",
+            "Plasma as liquid part",
+            "Red blood cells (RBCs)",
+            "White blood cells (WBCs)",
+            "Platelets"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "blood composition",
+            "circulatory system",
+            "biology basics"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "9",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why is blood needed by all the parts of a body?",
+          "hints": [
+            "Transport of oxygen to cells",
+            "Transport of nutrients from digested food",
+            "Removal of waste products like carbon dioxide",
+            "Distribution of hormones",
+            "Fighting infections through WBCs"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "blood functions",
+            "circulatory system",
+            "transportation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "10",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What makes the blood look red?",
+          "hints": [
+            "Presence of haemoglobin in RBCs",
+            "Haemoglobin contains iron",
+            "Oxygen binding gives red color",
+            "Deoxygenated blood is darker red"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "haemoglobin",
+            "blood color",
+            "RBCs"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Describe the function of the heart.",
+          "hints": [
+            "Acts as pumping organ",
+            "Pumps blood to all body parts",
+            "Has four chambers to prevent mixing",
+            "Right side pumps to lungs, left to body",
+            "Maintains blood circulation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "heart function",
+            "circulatory system",
+            "pumping organ"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why is it necessary to excrete waste products?",
+          "hints": [
+            "Waste products are toxic",
+            "Accumulation causes poisoning",
+            "Maintains chemical balance",
+            "Prevents damage to cells",
+            "Examples: urea, carbon dioxide"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "excretion",
+            "waste removal",
+            "homeostasis"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "13",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Draw a diagram of the human excretory system and label the various parts.",
+          "hints": [
+            "Include two kidneys",
+            "Show ureters connecting to bladder",
+            "Draw urinary bladder",
+            "Label urethra",
+            "Show urinary opening"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "diagram",
+            "excretory system",
+            "labeling",
+            "kidneys"
+          ]
+        }
+      ]
+    }
+  ]
+}

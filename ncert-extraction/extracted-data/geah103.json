@@ -1,0 +1,146 @@
+{
+  "chapter_number": 103,
+  "chapter_title": "Golu Grows a Nose",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Whom does Golu ask, “Why don’t you ever fly like other birds?”",
+          "hints": [
+            "Look for the tall aunt",
+            "Check early in the story"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "character identification",
+            "reading comprehension"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Which uncle of Golu had red eyes?",
+          "hints": [
+            "Look for the huge uncle",
+            "Check descriptions of uncles"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "character identification",
+            "detail recall"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Golu’s relatives did not answer his questions because (i) they were shy. (ii) the questions were too difficult. (iii) Golu was a naughty baby.",
+          "hints": [
+            "Check what the relatives said about Golu",
+            "Look for their reaction"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "inference",
+            "character motivation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Who advised Golu to go to the Limpopo river?",
+          "hints": [
+            "Look for the bird character",
+            "Check who Golu met in the bush"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "character identification",
+            "plot detail"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Why did Golu go to the river?",
+          "hints": [
+            "Check what question Golu wanted answered",
+            "Look for his purpose"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "plot understanding",
+            "character motivation"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "The crocodile lay on the bank of the Limpopo river. Golu thought it was (i) a living crocodile. (ii) a dead crocodile. (iii) a log of wood.",
+          "hints": [
+            "Check Golu's perception",
+            "Look at what he saw on the bank"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "perception",
+            "detail recall"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "What did the crocodile do to show that it was a real crocodile?",
+          "hints": [
+            "Look for the crocodile's action",
+            "Check for emotional display"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "detail recall",
+            "character action",
+            "figurative language"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "“Come here, little one, and I’ll whisper the answer to you.” The crocodile said this because (i) he couldn’t stand up. (ii) he wanted to eat Golu. (iii) Golu was deaf.",
+          "hints": [
+            "Consider the crocodile's intentions",
+            "Check what happened after"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "multiple choice",
+            "inference",
+            "character intention"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Who helped Golu on the bank of the river?",
+          "hints": [
+            "Look for the character who followed Golu",
+            "Check who gave advice"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "character identification",
+            "plot detail"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Name two things the elephant can do with his trunk, and two he cannot.",
+          "hints": [
+            "Look at advantages mentioned by python",
+            "Consider before/after transformation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comparison",
+            "detail listing",
+            "transformation effects"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "chapter_number": 3,
+  "chapter_title": "Trigonometric Functions",
+  "exercises": [
+    {
+      "exercise_number": "3.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the radian measures corresponding to the following degree measures: (i) 25° (ii) – 47°30′ (iii) 240° (iv) 520°",
+          "hints": [
+            "Use the formula: radian measure = (π/180) × degree measure"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "degree to radian conversion"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the degree measures corresponding to the following radian measures (Use π = 22/7): (i) 5π/3 (ii) 7π/4 (iii) 3 (iv) 5π/6",
+          "hints": [
+            "Use the formula: degree measure = (180/π) × radian measure"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "radian to degree conversion"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A wheel makes 360 revolutions in one minute. Through how many radians does it turn in one second?",
+          "hints": [
+            "Use the formula: radian measure = (π/180) × degree measure",
+            "1 revolution = 360°"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rotation",
+            "radians"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the degree measure of the angle subtended at the centre of a circle of radius 100 cm by an arc of length 22 cm (use π = 22/7).",
+          "hints": [
+            "Use the formula: θ = (arc length) / (radius)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "arc length"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "If in two circles, arcs of the same length subtend angles 60° and 75° at the centre, find the ratio of their radii.",
+          "hints": [
+            "Use the formula: θ = (arc length) / (radius)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "arc length"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Find the angle in radian through which a pendulum swings if its length is 75 cm and the tip describes an arc of length (i) 10 cm (ii) 15 cm (iii) 21 cm",
+          "hints": [
+            "Use the formula: θ = (arc length) / (radius)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "pendulum",
+            "arc length"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "The minute hand of a watch is 1.5 cm long. How far does its tip move in 40 minutes? (Use π = 3.14).",
+          "hints": [
+            "Use the formula: distance = (radius) × (angle in radians)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rotation",
+            "distance"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the values of other five trigonometric functions in Exercises 1 to 5.",
+          "hints": [
+            "Use the given trigonometric function to find the other five functions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "trigonometric functions"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the values of the trigonometric functions in Exercises 6 to 10.",
+          "hints": [
+            "Use the given trigonometric function to find the other functions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "trigonometric functions"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Prove that sin^2 (π/6) + cos^2 (π/3) - tan^2 (π/4) = -1/2",
+          "hints": [
+            "Use trigonometric identities to simplify the expression"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "trigonometric identities"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Prove that 2 sin^2 (π/6) + cosec^2 (π/3) = 5/2",
+          "hints": [
+            "Use trigonometric identities to simplify the expression"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "trigonometric identities"
+          ]
+        }
+      ]
+    }
+  ]
+}

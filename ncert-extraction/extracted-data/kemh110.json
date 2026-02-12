@@ -1,0 +1,320 @@
+{
+  "chapter_number": 10,
+  "chapter_title": "Conic Sections",
+  "exercises": [
+    {
+      "exercise_number": "10.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the equation of the circle with centre (0,2) and radius 2",
+          "hints": [
+            "Use the formula (x - h)^2 + (y - k)^2 = r^2"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "circle",
+            "equation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the equation of the circle with centre (-2,3) and radius 4",
+          "hints": [
+            "Use the formula (x - h)^2 + (y - k)^2 = r^2"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "circle",
+            "equation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the equation of the circle with centre (1/2, 1/4) and radius 1/sqrt(2)",
+          "hints": [
+            "Use the formula (x - h)^2 + (y - k)^2 = r^2"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "equation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the equation of the circle with centre (1,1) and radius sqrt(2)",
+          "hints": [
+            "Use the formula (x - h)^2 + (y - k)^2 = r^2"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "circle",
+            "equation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the equation of the circle with centre (-a, -b) and radius sqrt(a^2 - b^2)",
+          "hints": [
+            "Use the formula (x - h)^2 + (y - k)^2 = r^2"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "equation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "10.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the coordinates of the focus, axis of the parabola, the equation of the directrix and the length of the latus rectum of the parabola y^2 = 12x",
+          "hints": [
+            "Use the formula y^2 = 4ax"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parabola",
+            "focus",
+            "directrix"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the coordinates of the focus, axis of the parabola, the equation of the directrix and the length of the latus rectum of the parabola x^2 = 6y",
+          "hints": [
+            "Use the formula x^2 = 4ay"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parabola",
+            "focus",
+            "directrix"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the coordinates of the focus, axis of the parabola, the equation of the directrix and the length of the latus rectum of the parabola y^2 = -8x",
+          "hints": [
+            "Use the formula y^2 = -4ax"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parabola",
+            "focus",
+            "directrix"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the coordinates of the focus, axis of the parabola, the equation of the directrix and the length of the latus rectum of the parabola x^2 = -16y",
+          "hints": [
+            "Use the formula x^2 = -4ay"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parabola",
+            "focus",
+            "directrix"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the coordinates of the focus, axis of the parabola, the equation of the directrix and the length of the latus rectum of the parabola y^2 = 10x",
+          "hints": [
+            "Use the formula y^2 = 4ax"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parabola",
+            "focus",
+            "directrix"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Find the coordinates of the focus, axis of the parabola, the equation of the directrix and the length of the latus rectum of the parabola x^2 = -9y",
+          "hints": [
+            "Use the formula x^2 = -4ay"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parabola",
+            "focus",
+            "directrix"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "10.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the coordinates of the foci, the vertices, the length of major axis, the minor axis, the eccentricity and the length of the latus rectum of the ellipse x^2/36 + y^2/16 = 1",
+          "hints": [
+            "Use the formula x^2/a^2 + y^2/b^2 = 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "ellipse",
+            "foci",
+            "vertices"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the coordinates of the foci, the vertices, the length of major axis, the minor axis, the eccentricity and the length of the latus rectum of the ellipse x^2/4 + y^2/25 = 1",
+          "hints": [
+            "Use the formula x^2/a^2 + y^2/b^2 = 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "ellipse",
+            "foci",
+            "vertices"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the coordinates of the foci, the vertices, the length of major axis, the minor axis, the eccentricity and the length of the latus rectum of the ellipse x^2/16 + y^2/9 = 1",
+          "hints": [
+            "Use the formula x^2/a^2 + y^2/b^2 = 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "ellipse",
+            "foci",
+            "vertices"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the coordinates of the foci, the vertices, the length of major axis, the minor axis, the eccentricity and the length of the latus rectum of the ellipse x^2/25 + y^2/100 = 1",
+          "hints": [
+            "Use the formula x^2/a^2 + y^2/b^2 = 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "ellipse",
+            "foci",
+            "vertices"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the coordinates of the foci, the vertices, the length of major axis, the minor axis, the eccentricity and the length of the latus rectum of the ellipse x^2/49 + y^2/36 = 1",
+          "hints": [
+            "Use the formula x^2/a^2 + y^2/b^2 = 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "ellipse",
+            "foci",
+            "vertices"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Find the coordinates of the foci, the vertices, the length of major axis, the minor axis, the eccentricity and the length of the latus rectum of the ellipse x^2/100 + y^2/400 = 1",
+          "hints": [
+            "Use the formula x^2/a^2 + y^2/b^2 = 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "ellipse",
+            "foci",
+            "vertices"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "10.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the coordinates of the foci and the vertices, the eccentricity, the length of the latus rectum of the hyperbola x^2/9 - y^2/16 = 1",
+          "hints": [
+            "Use the formula x^2/a^2 - y^2/b^2 = 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "hyperbola",
+            "foci",
+            "vertices"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the coordinates of the foci and the vertices, the eccentricity, the length of the latus rectum of the hyperbola y^2/16 - x^2/9 = 1",
+          "hints": [
+            "Use the formula y^2/a^2 - x^2/b^2 = 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "hyperbola",
+            "foci",
+            "vertices"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the coordinates of the foci and the vertices, the eccentricity, the length of the latus rectum of the hyperbola 9y^2 - 4x^2 = 36",
+          "hints": [
+            "Use the formula y^2/a^2 - x^2/b^2 = 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "hyperbola",
+            "foci",
+            "vertices"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the coordinates of the foci and the vertices, the eccentricity, the length of the latus rectum of the hyperbola 16x^2 - 9y^2 = 576",
+          "hints": [
+            "Use the formula x^2/a^2 - y^2/b^2 = 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "hyperbola",
+            "foci",
+            "vertices"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the coordinates of the foci and the vertices, the eccentricity, the length of the latus rectum of the hyperbola 5y^2 - 9x^2 = 36",
+          "hints": [
+            "Use the formula y^2/a^2 - x^2/b^2 = 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "hyperbola",
+            "foci",
+            "vertices"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Find the coordinates of the foci and the vertices, the eccentricity, the length of the latus rectum of the hyperbola 49y^2 - 16x^2 = 784",
+          "hints": [
+            "Use the formula y^2/a^2 - x^2/b^2 = 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "hyperbola",
+            "foci",
+            "vertices"
+          ]
+        }
+      ]
+    }
+  ]
+}

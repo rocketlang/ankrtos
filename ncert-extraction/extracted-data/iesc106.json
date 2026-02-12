@@ -1,0 +1,505 @@
+{
+  "chapter_number": 6,
+  "chapter_title": "TISSUES",
+  "exercises": [
+    {
+      "exercise_number": "6.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What is a tissue?",
+          "hints": [
+            "Recall definition from chapter introduction",
+            "Think about group of cells with similar structure/function"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definition",
+            "basic concept",
+            "tissue introduction"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What is the utility of tissues in multi-cellular organisms?",
+          "hints": [
+            "Consider division of labor",
+            "Think about efficiency in function",
+            "Recall examples from chapter"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "function",
+            "multi-cellular organisms",
+            "division of labor"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the two onions has longer roots? Why?",
+          "hints": [
+            "Refer to Activity 6.1",
+            "Think about meristematic tissue",
+            "Consider root tip removal"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "experiment analysis",
+            "meristematic tissue",
+            "root growth"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Do the roots continue growing even after we have removed their tips?",
+          "hints": [
+            "Check Activity 6.1 observations",
+            "Think about meristem location",
+            "Consider growth regions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "experiment analysis",
+            "growth regulation",
+            "meristem function"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why would the tips stop growing in jar 2 after we cut them?",
+          "hints": [
+            "Recall meristematic tissue function",
+            "Think about apical meristem",
+            "Consider cell division"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "meristematic tissue",
+            "growth mechanism",
+            "experiment reasoning"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.2.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Are all cells similar in structure?",
+          "hints": [
+            "Refer to Activity 6.2",
+            "Observe stem section under microscope",
+            "Compare with Fig. 6.3"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "microscopic observation",
+            "cell structure",
+            "tissue diversity"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "How many types of cells can be seen?",
+          "hints": [
+            "Examine Fig. 6.3 carefully",
+            "Count different cell types",
+            "Look for structural differences"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cell types",
+            "observation skills",
+            "tissue identification"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Can we think of reasons why there would be so many types of cells?",
+          "hints": [
+            "Consider specialization",
+            "Think about different functions",
+            "Recall division of labor"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cell specialization",
+            "functional adaptation",
+            "tissue differentiation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.2.2(ii)",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Name types of simple tissues.",
+          "hints": [
+            "Recall three types mentioned",
+            "Think about parenchyma, collenchyma, sclerenchyma",
+            "Check Fig. 6.4"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "simple tissues",
+            "plant tissues",
+            "classification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Where is apical meristem found?",
+          "hints": [
+            "Refer to Fig. 6.2",
+            "Think about growing tips",
+            "Consider stem and root"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "meristematic tissue",
+            "plant growth",
+            "apical meristem"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Which tissue makes up the husk of coconut?",
+          "hints": [
+            "Recall sclerenchyma description",
+            "Think about hard and stiff tissues",
+            "Check coconut husk example"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sclerenchyma",
+            "plant support",
+            "coconut example"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What are the constituents of phloem?",
+          "hints": [
+            "Refer to Fig. 6.7(d)",
+            "Recall five types of cells",
+            "Think about sieve tubes, companion cells"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "phloem",
+            "complex tissue",
+            "transport tissue"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.3.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Name the tissue responsible for movement in our body.",
+          "hints": [
+            "Think about muscle tissue",
+            "Recall three types of muscles",
+            "Consider voluntary and involuntary"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "muscular tissue",
+            "movement",
+            "animal tissues"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What does a neuron look like?",
+          "hints": [
+            "Refer to Fig. 6.12",
+            "Describe cell body, axon, dendrites",
+            "Think about nerve cell structure"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "neuron",
+            "nervous tissue",
+            "nerve cell"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Give three features of cardiac muscles.",
+          "hints": [
+            "Check Fig. 6.11(c)",
+            "Think about shape, nuclei, branching",
+            "Consider rhythmic contraction"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cardiac muscle",
+            "heart tissue",
+            "muscle features"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What are the functions of areolar tissue?",
+          "hints": [
+            "Recall location in body",
+            "Think about support and repair",
+            "Consider space filling"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "areolar tissue",
+            "connective tissue",
+            "functions"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "End",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Define the term \"tissue\".",
+          "hints": [
+            "Recall chapter introduction",
+            "Think about group of cells",
+            "Consider similar structure and function"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definition",
+            "basic concept",
+            "tissue"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "How many types of elements together make up the xylem tissue? Name them.",
+          "hints": [
+            "Refer to Fig. 6.7",
+            "Count different components",
+            "Think about tracheids, vessels, parenchyma, fibres"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "xylem",
+            "complex tissue",
+            "plant transport"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "How are simple tissues different from complex tissues in plants?",
+          "hints": [
+            "Consider cell types",
+            "Think about composition",
+            "Recall examples of each"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "simple vs complex tissues",
+            "plant tissues",
+            "classification"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Differentiate between parenchyma, collenchyma and sclerenchyma on the basis of their cell wall.",
+          "hints": [
+            "Compare cell wall thickness",
+            "Think about lignin content",
+            "Consider living vs dead cells"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "simple tissues",
+            "cell wall comparison",
+            "plant tissues"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What are the functions of the stomata?",
+          "hints": [
+            "Recall gas exchange",
+            "Think about transpiration",
+            "Consider guard cells"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "stomata",
+            "plant physiology",
+            "gas exchange"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Diagrammatically show the difference between the three types of muscle fibres.",
+          "hints": [
+            "Refer to Fig. 6.11",
+            "Compare striations, shape, nuclei",
+            "Think about labeling"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "muscle fibres",
+            "diagram",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "What is the specific function of the cardiac muscle?",
+          "hints": [
+            "Think about heart function",
+            "Consider rhythmic contraction",
+            "Recall involuntary nature"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cardiac muscle",
+            "heart function",
+            "specific role"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Differentiate between striated, unstriated and cardiac muscles on the basis of their structure and site/location in the body.",
+          "hints": [
+            "Compare striations, nuclei, branching",
+            "Think about voluntary vs involuntary",
+            "Recall body locations"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "muscle types",
+            "comparison",
+            "structure and location"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Draw a labelled diagram of a neuron.",
+          "hints": [
+            "Refer to Fig. 6.12",
+            "Include cell body, axon, dendrites",
+            "Label all parts clearly"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "neuron",
+            "diagram",
+            "nervous tissue"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Name the following. (a) Tissue that forms the inner lining of our mouth. (b) Tissue that connects muscle to bone in humans. (c) Tissue that transports food in plants. (d) Tissue that stores fat in our body. (e) Connective tissue with a fluid matrix. (f) Tissue present in the brain.",
+          "hints": [
+            "Recall epithelial tissues",
+            "Think about tendons and ligaments",
+            "Consider phloem for transport",
+            "Remember adipose tissue",
+            "Blood has fluid matrix",
+            "Brain has nervous tissue"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "identification",
+            "multiple tissues",
+            "recall"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Identify the type of tissue in the following: skin, bark of tree, bone, lining of kidney tubule, vascular bundle.",
+          "hints": [
+            "Skin has epithelial tissue",
+            "Bark has protective tissue",
+            "Bone is connective tissue",
+            "Kidney tubule has cuboidal epithelium",
+            "Vascular bundle has xylem and phloem"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "tissue identification",
+            "examples",
+            "application"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Name the regions in which parenchyma tissue is present.",
+          "hints": [
+            "Think about storage regions",
+            "Consider leaves for photosynthesis",
+            "Recall stem and root cortex"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parenchyma",
+            "location",
+            "plant anatomy"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "What is the role of epidermis in plants?",
+          "hints": [
+            "Think about protection",
+            "Consider water loss prevention",
+            "Recall stomata function"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "epidermis",
+            "protective tissue",
+            "plant function"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "How does the cork act as a protective tissue?",
+          "hints": [
+            "Recall suberin in cell walls",
+            "Think about impermeability",
+            "Consider dead compact cells"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cork",
+            "protective tissue",
+            "plant adaptation"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "Complete the following chart:",
+          "hints": [
+            "The chart content is not provided in text",
+            "This appears to be an incomplete question",
+            "May require additional context"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "chart completion",
+            "summary",
+            "organizational"
+          ]
+        }
+      ]
+    }
+  ]
+}

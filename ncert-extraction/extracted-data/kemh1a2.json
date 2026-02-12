@@ -1,0 +1,134 @@
+{
+  "chapter_number": 2,
+  "chapter_title": "MATHEMATICAL MODELLING",
+  "exercises": [
+    {
+      "exercise_number": "A.2.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "The angle of elevation of the top of a tower from a point O on the ground, which is 450 m away from the foot of the tower, is 40°. Find the height of the tower.",
+          "hints": [
+            "Use trigonometric ratio tan θ = opposite/adjacent",
+            "Draw a right triangle with tower as vertical side",
+            "Apply h = d × tan θ where d = 450m, θ = 40°"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "trigonometry",
+            "height calculation",
+            "angle of elevation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A.2.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Explain the Konigsberg bridge problem and why it was impossible to walk through the town crossing each bridge exactly once in the original configuration.",
+          "hints": [
+            "Consider the network representation with vertices and arcs",
+            "Count the degree (number of arcs) at each vertex",
+            "Recall Euler's theorem about odd vertices"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "graph theory",
+            "Euler path",
+            "network theory",
+            "problem solving"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "After an extra bridge was built joining river banks A and B in Konigsberg, is it possible to go around the city using each bridge exactly once? Explain why.",
+          "hints": [
+            "Draw the modified network with new bridge",
+            "Recalculate degrees of vertices A, B, C, D",
+            "Check Euler's condition for existence of Euler path"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "graph theory",
+            "Euler path",
+            "network modification"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A.2.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A farm house uses atleast 800 kg of special food daily. The special food is a mixture of corn and soyabean with the following compositions: Corn (Protein: 0.09/kg, Fibre: 0.02/kg, Cost: Rs 10/kg), Soyabean (Protein: 0.60/kg, Fibre: 0.06/kg, Cost: Rs 20/kg). The dietary requirements stipulate atleast 30% protein and at most 5% fibre. Determine the daily minimum cost of the food mix.",
+          "hints": [
+            "Define variables: x = corn amount, y = soyabean amount",
+            "Objective: Minimize z = 10x + 20y",
+            "Constraints: x + y ≥ 800, 0.09x + 0.6y ≥ 0.3(x+y), 0.02x + 0.06y ≤ 0.05(x+y)",
+            "Solve graphically or using linear programming"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "linear programming",
+            "optimization",
+            "constraints",
+            "graphical solution"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Suppose a population control unit wants to find out how many people will be there in a certain country after 10 years. Given current population is 250,000,000, birth rate b = 0.02, and death rate d = 0.01. Calculate the population after 10 years using the exponential growth model P(t) = P(0)(1 + b - d)^t.",
+          "hints": [
+            "Calculate growth rate r = 1 + b - d",
+            "Apply formula P(10) = 250,000,000 × (1.01)^10",
+            "Use approximation since population must be integer"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "exponential growth",
+            "population modeling",
+            "Malthusian model",
+            "rate calculation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Describe the four main steps involved in mathematical modelling process with reference to the simple pendulum example.",
+          "hints": [
+            "Identify the steps: Formulation, Solution, Interpretation, Validation",
+            "For pendulum: Parameters (T, l, g), equation T = 2π√(l/g)",
+            "Compare calculated vs experimental values",
+            "Interpret physical meaning of relationship"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "modelling process",
+            "methodology",
+            "pendulum",
+            "validation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Explain why the mathematical model for population growth P(t) = P(0)r^t gives fractional population values and how we handle this in interpretation.",
+          "hints": [
+            "Model assumes continuous growth but population is discrete",
+            "Fractional values arise from mathematical calculation",
+            "Round to nearest integer for practical interpretation",
+            "Model is simplification of reality"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "model limitations",
+            "interpretation",
+            "approximation",
+            "discrete vs continuous"
+          ]
+        }
+      ]
+    }
+  ]
+}

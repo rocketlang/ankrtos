@@ -1,0 +1,182 @@
+{
+  "chapter_number": 10,
+  "chapter_title": "Exponents and Powers",
+  "exercises": [
+    {
+      "exercise_number": "10.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Evaluate. (i) 3–2 (ii) (– 4)– 2 (iii) (1/2)–5",
+          "hints": [
+            "Use a–m = 1/am",
+            "For negative base, sign remains",
+            "Calculate reciprocal"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "negative exponents",
+            "evaluation",
+            "reciprocal"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Simplify and express the result in power notation with positive exponent. (i) (– 4)5 ÷ (– 4)8 (ii) (1/3)2 (iii) (−3)4 × (5/3)4 (iv) (3–7 ÷ 3–10) × 3–5 (v) 2–3 × (–7)–3",
+          "hints": [
+            "Use am ÷ an = am–n",
+            "Apply (ab)m = am × bm",
+            "Convert negative exponents to positive"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "laws of exponents",
+            "simplification",
+            "positive exponent"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the value of. (i) (3° + 4–1) × 2–2 (ii) (2–1 × 4–1) ÷ 2–2 (iii) (1/2)–2 + (1/3)–2 + (1/4)–2 (iv) (3–1 + 4–1 + 5–1)0 (v) {(−2/3)–2}2",
+          "hints": [
+            "Recall a0 = 1",
+            "Calculate each term separately",
+            "Apply power of a power rule"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "mixed operations",
+            "zero exponent",
+            "combined exponents"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Evaluate (i) (8–1 × 53)/2–4 (ii) (5–1 × 2–1) × 6–1",
+          "hints": [
+            "Convert negative exponents to positive",
+            "Simplify numerator and denominator",
+            "Multiply fractions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "fractional exponents",
+            "evaluation",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the value of m for which 5m ÷ 5–3 = 55.",
+          "hints": [
+            "Use am ÷ an = am–n",
+            "Equate exponents since bases are same",
+            "Solve linear equation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "solving for exponent",
+            "laws of exponents",
+            "equation"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Evaluate (i) {(1/3)–1 – (1/4)–1}–1 (ii) (5/8)–7 × (8/5)–5",
+          "hints": [
+            "Find reciprocal of each term",
+            "Use (a/b)–m = (b/a)m",
+            "Simplify using exponent laws"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "reciprocal exponents",
+            "fractional bases",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Simplify. (i) (25 × t–4)/(5–3 × 10 × t–8) (t ≠ 0) (ii) (3–5 × 10–5 × 125)/(5–7 × 6–5)",
+          "hints": [
+            "Separate numerical and variable parts",
+            "Use prime factorization",
+            "Cancel common factors"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "algebraic simplification",
+            "prime factors",
+            "cancellation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "10.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Express the following numbers in standard form. (i) 0.0000000000085 (ii) 0.00000000000942 (iii) 6020000000000000 (iv) 0.00000000837 (v) 31860000000",
+          "hints": [
+            "Move decimal point after first non-zero digit",
+            "Count places moved for exponent",
+            "Use negative exponent for small numbers, positive for large"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "standard form",
+            "scientific notation",
+            "decimal conversion"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Express the following numbers in usual form. (i) 3.02 × 10–6 (ii) 4.5 × 104 (iii) 3 × 10–8 (iv) 1.0001 × 109 (v) 5.8 × 1012 (vi) 3.61492 × 106",
+          "hints": [
+            "For positive exponent, move decimal right",
+            "For negative exponent, move decimal left",
+            "Add zeros as needed"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "usual form",
+            "decimal expansion",
+            "conversion"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Express the number appearing in the following statements in standard form. (i) 1 micron is equal to 1/1000000 m. (ii) Charge of an electron is 0.000,000,000,000,000,000,16 coulomb. (iii) Size of a bacteria is 0.0000005 m (iv) Size of a plant cell is 0.00001275 m (v) Thickness of a thick paper is 0.07 mm",
+          "hints": [
+            "Convert to meters if needed",
+            "Identify first non-zero digit",
+            "Count decimal places for exponent"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "real-world applications",
+            "unit conversion",
+            "standard form"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "In a stack there are 5 books each of thickness 20mm and 5 paper sheets each of thickness 0.016 mm. What is the total thickness of the stack.",
+          "hints": [
+            "Convert all measurements to same unit (mm)",
+            "Calculate total thickness of books",
+            "Calculate total thickness of papers",
+            "Add both totals"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "application",
+            "unit consistency",
+            "addition"
+          ]
+        }
+      ]
+    }
+  ]
+}

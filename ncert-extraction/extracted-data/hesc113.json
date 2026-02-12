@@ -1,0 +1,264 @@
+{
+  "chapter_number": 13,
+  "chapter_title": "LIGHT",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Suppose you are in a dark room. Can you see objects in the room? Can you see objects outside the room. Explain.",
+          "hints": [
+            "Think about how vision works",
+            "Consider the role of light in seeing",
+            "Recall what makes objects visible"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "vision",
+            "light",
+            "reflection"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Differentiate between regular and diffused reflection. Does diffused reflection mean the failure of the laws of reflection?",
+          "hints": [
+            "Define both types of reflection",
+            "Consider surface characteristics",
+            "Recall the laws of reflection"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "regular reflection",
+            "diffused reflection",
+            "laws of reflection"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Mention against each of the following whether regular or diffused reflection will take place when a beam of light strikes. Justify your answer in each case.\n(a) Polished wooden table\n(b) Chalk powder\n(c) Cardboard surface\n(d) Marble floor with water spread over it\n(e) Mirror\n(f) Piece of paper",
+          "hints": [
+            "Consider surface smoothness",
+            "Think about surface irregularities",
+            "Recall examples from the chapter"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "surface properties",
+            "reflection types",
+            "practical examples"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "State the laws of reflection.",
+          "hints": [
+            "Recall the two main laws",
+            "Think about angles and planes"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "laws of reflection",
+            "physics principles"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Describe an activity to show that the incident ray, the reflected ray and the normal at the point of incidence lie in the same plane.",
+          "hints": [
+            "Recall Activity 13.2",
+            "Think about using stiff paper",
+            "Consider bending the paper"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "experiment",
+            "plane of reflection",
+            "practical demonstration"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Fill in the blanks in the following.\n(a) A person 1 m in front of a plane mirror seems to be _______________ m away from his image.\n(b) If you touch your ____________ ear with right hand in front of a plane mirror it will be seen in the mirror that your right ear is touched with ____________.\n(c) The size of the pupil becomes ____________ when you see in dim light.\n(d) Night birds have ____________ cones than rods in their eyes.",
+          "hints": [
+            "Recall mirror image properties",
+            "Think about lateral inversion",
+            "Consider eye adaptation to light",
+            "Recall animal eye adaptations"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "plane mirror",
+            "lateral inversion",
+            "eye anatomy",
+            "animal adaptations"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Angle of incidence is equal to the angle of reflection.\n(a) Always\n(b) Sometimes\n(c) Under special conditions\n(d) Never",
+          "hints": [
+            "Recall the first law of reflection",
+            "Consider if this is always true"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "laws of reflection",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Image formed by a plane mirror is\n(a) virtual, behind the mirror and enlarged.\n(b) virtual, behind the mirror and of the same size as the object.\n(c) real at the surface of the mirror and enlarged.\n(d) real, behind the mirror and of the same size as the object.",
+          "hints": [
+            "Recall properties of plane mirror images",
+            "Consider virtual vs real images",
+            "Think about image size and position"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "plane mirror",
+            "image formation",
+            "multiple choice"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Describe the construction of a kaleidoscope.",
+          "hints": [
+            "Recall Activity 13.6",
+            "List required materials",
+            "Describe step-by-step assembly"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "kaleidoscope",
+            "construction",
+            "multiple mirrors"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Draw a labelled sketch of the human eye.",
+          "hints": [
+            "Recall Fig. 13.14",
+            "Include all major parts",
+            "Label clearly"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "human eye",
+            "anatomy",
+            "diagram"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Gurmit wanted to perform Activity 13.8 using a laser torch. Her teacher advised her not to do so. Can you explain the basis of the teacher's advise?",
+          "hints": [
+            "Recall the caution in Activity 13.8",
+            "Consider laser safety",
+            "Think about eye damage risk"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "safety",
+            "laser",
+            "eye protection"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Explain how you can take care of your eyes.",
+          "hints": [
+            "Recall Section 13.8",
+            "List preventive measures",
+            "Include diet and habits"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "eye care",
+            "health",
+            "prevention"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "What is the angle of incidence of a ray if the reflected ray is at an angle of 90° to the incident ray?",
+          "hints": [
+            "Use the law of reflection",
+            "Set up equation",
+            "Solve mathematically"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "angle calculation",
+            "laws of reflection",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "How many images of a candle will be formed if it is placed between two parallel plane mirrors separated by 40 cm?",
+          "hints": [
+            "Recall Activity 13.5",
+            "Consider parallel mirror arrangement",
+            "Think about infinite images"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "multiple images",
+            "parallel mirrors",
+            "infinite images"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "Two mirrors meet at right angles. A ray of light is incident on one at an angle of 30° as shown in Fig. 13.19. Draw the reflected ray from the second mirror.",
+          "hints": [
+            "Apply laws of reflection twice",
+            "Consider right angle geometry",
+            "Use angle calculations"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "multiple reflections",
+            "geometry",
+            "ray diagram"
+          ]
+        },
+        {
+          "question_number": 16,
+          "question_text": "Boojho stands at A just on the side of a plane mirror as shown in Fig. 13.20. Can he see himself in the mirror? Also can he see the image of objects situated at P, Q and R?",
+          "hints": [
+            "Consider mirror field of view",
+            "Think about line of sight",
+            "Apply image formation rules"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "field of view",
+            "mirror vision",
+            "practical application"
+          ]
+        },
+        {
+          "question_number": 17,
+          "question_text": "(a) Find out the position of the image of an object situated at A in the plane mirror (Fig. 13.21).\n(b) Can Paheli at B see this image?\n(c) Can Boojho at C see this image?\n(d) When Paheli moves from B to C, where does the image of A move?",
+          "hints": [
+            "Apply mirror image rules",
+            "Consider observer positions",
+            "Understand image movement"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "image position",
+            "observer perspective",
+            "relative motion"
+          ]
+        }
+      ]
+    }
+  ]
+}

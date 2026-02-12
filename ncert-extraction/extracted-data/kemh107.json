@@ -1,0 +1,315 @@
+{
+  "chapter_number": 7,
+  "chapter_title": "BINOMIAL THEOREM",
+  "exercises": [
+    {
+      "exercise_number": "7.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Expand (1–2x)⁵",
+          "hints": [
+            "Use binomial theorem formula (a + b)ⁿ = Σ ⁿCₖ aⁿ⁻ᵏ bᵏ",
+            "Here a = 1, b = -2x, n = 5",
+            "Calculate coefficients using ⁿCᵣ"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "binomial expansion",
+            "algebraic expression"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Expand (2/x – x/2)⁵",
+          "hints": [
+            "Identify a = 2/x, b = -x/2, n = 5",
+            "Apply binomial theorem carefully with negative sign",
+            "Simplify powers of x"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "binomial expansion",
+            "rational expression",
+            "negative exponent"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Expand (2x – 3)⁶",
+          "hints": [
+            "Use a = 2x, b = -3, n = 6",
+            "Calculate binomial coefficients ⁶C₀ to ⁶C₆",
+            "Combine like terms carefully"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "binomial expansion",
+            "polynomial",
+            "coefficient calculation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Expand (x/3 + 1/x)⁵",
+          "hints": [
+            "a = x/3, b = 1/x, n = 5",
+            "Watch for negative exponents from 1/x terms",
+            "Simplify fractional coefficients"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "binomial expansion",
+            "rational expression",
+            "fractional exponent"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Expand (x + 1/x)⁶",
+          "hints": [
+            "a = x, b = 1/x, n = 6",
+            "Note that xᵏ × (1/x)⁶⁻ᵏ = x²ᵏ⁻⁶",
+            "Simplify to get symmetric expression"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "binomial expansion",
+            "symmetric expression",
+            "reciprocal"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Using binomial theorem, evaluate (96)³",
+          "hints": [
+            "Express 96 as 100 - 4",
+            "Use (100 - 4)³ expansion",
+            "Calculate using binomial coefficients"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "numerical evaluation",
+            "approximation",
+            "binomial application"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Using binomial theorem, evaluate (102)⁵",
+          "hints": [
+            "Express 102 as 100 + 2",
+            "Use (100 + 2)⁵ expansion",
+            "Calculate powers of 100 and 2"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "numerical evaluation",
+            "large power",
+            "binomial application"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Using binomial theorem, evaluate (101)⁴",
+          "hints": [
+            "Express 101 as 100 + 1",
+            "Use (100 + 1)⁴ expansion",
+            "Simpler than previous as b = 1"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "numerical evaluation",
+            "approximation",
+            "binomial application"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Using binomial theorem, evaluate (99)⁵",
+          "hints": [
+            "Express 99 as 100 - 1",
+            "Use (100 - 1)⁵ expansion",
+            "Alternating signs in expansion"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "numerical evaluation",
+            "subtraction case",
+            "binomial application"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Using Binomial Theorem, indicate which number is larger (1.1)¹⁰⁰⁰⁰ or 1000",
+          "hints": [
+            "Expand (1 + 0.1)¹⁰⁰⁰⁰",
+            "First two terms: 1 + 10000×0.1 = 10001",
+            "Clearly larger than 1000"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comparison",
+            "inequality",
+            "binomial approximation"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Find (a + b)⁴ – (a – b)⁴. Hence, evaluate (√3 + √2)⁴ – (√3 – √2)⁴",
+          "hints": [
+            "Expand both using binomial theorem",
+            "Subtract to find simplified form",
+            "Substitute a = √3, b = √2"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "difference of expansions",
+            "surds",
+            "algebraic manipulation"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Find (x + 1)⁶ + (x – 1)⁶. Hence or otherwise evaluate (√2 + 1)⁶ + (√2 – 1)⁶",
+          "hints": [
+            "Expand both using binomial theorem",
+            "Add to find simplified form (odd terms cancel)",
+            "Substitute x = √2"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sum of expansions",
+            "symmetric expression",
+            "surds"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "Show that 9ⁿ⁺¹ – 8n – 9 is divisible by 64, whenever n is a positive integer",
+          "hints": [
+            "Express 9ⁿ⁺¹ as (8 + 1)ⁿ⁺¹",
+            "Use binomial expansion",
+            "Show all terms except first two are multiples of 64"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "divisibility proof",
+            "mathematical induction alternative",
+            "number theory"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "Prove that Σᵣ₌₀ⁿ 3ʳ ⁿCᵣ = 4ⁿ",
+          "hints": [
+            "Consider binomial expansion of (1 + 3)ⁿ",
+            "By binomial theorem, (1 + 3)ⁿ = Σ ⁿCᵣ 1ⁿ⁻ʳ 3ʳ",
+            "Thus equals Σ 3ʳ ⁿCᵣ = 4ⁿ"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "summation proof",
+            "binomial identity",
+            "combinatorial proof"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Miscellaneous",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "If a and b are distinct integers, prove that a – b is a factor of aⁿ – bⁿ, whenever n is a positive integer. [Hint write aⁿ = (a – b + b)ⁿ and expand]",
+          "hints": [
+            "Write a = (a - b) + b",
+            "Expand ((a - b) + b)ⁿ using binomial theorem",
+            "All terms except bⁿ have (a - b) factor"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "factor theorem",
+            "divisibility",
+            "algebraic proof"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Evaluate (√3 + √2)⁶ – (√3 – √2)⁶",
+          "hints": [
+            "Use result from Exercise 7.1 Q11 pattern",
+            "Or expand directly using binomial theorem",
+            "Simplify surd expressions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "surds",
+            "difference of powers",
+            "binomial expansion"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the value of (a² + √(a² - 1))⁴ + (a² - √(a² - 1))⁴",
+          "hints": [
+            "Similar to Exercise 7.1 Q12 pattern",
+            "Expand both and add",
+            "Odd terms cancel, even terms double"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "symmetric expression",
+            "algebraic manipulation",
+            "radicals"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find an approximation of (0.99)⁵ using the first three terms of its expansion",
+          "hints": [
+            "Write 0.99 = 1 - 0.01",
+            "Expand (1 - 0.01)⁵",
+            "Use first three terms: 1 - 5×0.01 + 10×(0.01)²"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "approximation",
+            "binomial series",
+            "numerical estimation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Expand using Binomial Theorem (1 + x/2 - 2/x)⁴, x ≠ 0",
+          "hints": [
+            "Treat as (a + b)⁴ where a = 1, b = (x/2 - 2/x)",
+            "Or expand directly using multinomial approach",
+            "Careful with negative exponents"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "trinomial expansion",
+            "negative exponent",
+            "algebraic expression"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Find the expansion of (3x² – 2ax + 3a²)³ using binomial theorem",
+          "hints": [
+            "Group as (3x² + (-2ax + 3a²))³",
+            "Or use trinomial expansion formula",
+            "Treat as cubic of quadratic expression"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "trinomial expansion",
+            "cubic expression",
+            "parameter a"
+          ]
+        }
+      ]
+    }
+  ]
+}

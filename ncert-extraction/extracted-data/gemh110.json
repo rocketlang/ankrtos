@@ -1,0 +1,273 @@
+{
+  "chapter_number": 10,
+  "chapter_title": "Algebraic Expressions",
+  "exercises": [
+    {
+      "exercise_number": "10.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Get the algebraic expressions in the following cases using variables, constants and arithmetic operations.\n(i) Subtraction of z from y.\n(ii) One-half of the sum of numbers x and y.\n(iii) The number z multiplied by itself.\n(iv) One-fourth of the product of numbers p and q.\n(v) Numbers x and y both squared and added.\n(vi) Number 5 added to three times the product of numbers m and n.\n(vii) Product of numbers y and z subtracted from 10.\n(viii) Sum of numbers a and b subtracted from their product.",
+          "hints": [
+            "Translate words into mathematical operations",
+            "Identify variables and constants",
+            "Use appropriate arithmetic symbols"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "expression formation",
+            "translation",
+            "basic algebra"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "(i) Identify the terms and their factors in the following expressions. Show the terms and factors by tree diagrams.\n(a) x – 3\n(b) 1 + x + x²\n(c) y – y³\n(d) 5xy² + 7x²y\n(e) – ab + 2b² – 3a²\n(ii) Identify terms and factors in the expressions given below:\n(a) – 4x + 5\n(b) – 4x + 5y\n(c) 5y + 3y²\n(d) xy + 2x²y²\n(e) pq + q\n(f) 1.2 ab – 2.4 b + 3.6 a\n(g) ¾ x + ¼\n(h) 0.1 p² + 0.2 q²",
+          "hints": [
+            "Separate expressions into terms by + or - signs",
+            "Break each term into its factors",
+            "Remember constants are also factors"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "terms",
+            "factors",
+            "tree diagram",
+            "algebraic structure"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Identify the numerical coefficients of terms (other than constants) in the following expressions:\n(i) 5 – 3t²\n(ii) 1 + t + t² + t³\n(iii) x + 2xy + 3y\n(iv) 100m + 1000n\n(v) – p²q + 7pq\n(vi) 1.2 a + 0.8 b\n(vii) 3.14 r²\n(viii) 2 (l + b)\n(ix) 0.1 y + 0.01 y²",
+          "hints": [
+            "Look for the numerical factor in each term",
+            "Ignore the constant terms",
+            "Remember 1 is usually not written but implied"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "coefficients",
+            "numerical factors",
+            "algebraic terms"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "(a) Identify terms which contain x and give the coefficient of x.\n(i) y²x + y\n(ii) 13y² – 8yx\n(iii) x + y + 2\n(iv) 5 + z + zx\n(v) 1 + x + xy\n(vi) 12xy² + 25\n(vii) 7x + xy²\n(b) Identify terms which contain y² and give the coefficient of y².\n(i) 8 – xy²\n(ii) 5y² + 7x\n(iii) 2x²y – 15xy² + 7y²",
+          "hints": [
+            "Look for terms with x as a factor",
+            "The remaining part after x is the coefficient",
+            "For y², look for terms with y² as a factor"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "coefficient identification",
+            "variable factors",
+            "algebraic analysis"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Classify into monomials, binomials and trinomials.\n(i) 4y – 7z\n(ii) y²\n(iii) x + y – xy\n(iv) 100\n(v) ab – a – b\n(vi) 5 – 3t\n(vii) 4p²q – 4pq²\n(viii) 7mn\n(ix) z² – 3z + 8\n(x) a² + b²\n(xi) z² + z\n(xii) 1 + x + x²",
+          "hints": [
+            "Count the number of terms",
+            "Monomial: 1 term, Binomial: 2 terms, Trinomial: 3 terms",
+            "Combine like terms before counting"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "polynomial classification",
+            "monomial",
+            "binomial",
+            "trinomial"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "State whether a given pair of terms is of like or unlike terms.\n(i) 1, 100\n(ii) –7x, 5/2 x\n(iii) – 29x, – 29y\n(iv) 14xy, 42yx\n(v) 4m²p, 4mp²\n(vi) 12xz, 12x²z²",
+          "hints": [
+            "Check if algebraic factors are the same",
+            "Ignore numerical coefficients",
+            "Order of multiplication doesn't matter"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "like terms",
+            "unlike terms",
+            "term comparison"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Identify like terms in the following:\n(a) – xy², – 4yx², 8x², 2xy², 7y, – 11x², – 100x, – 11yx, 20x²y, – 6x², y, 2xy, 3x\n(b) 10pq, 7p, 8q, – p²q², – 7qp, – 100q, – 23, 12q²p², – 5p², 41, 2405p, 78qp, 13p²q, qp², 701p²",
+          "hints": [
+            "Group terms with same variables and powers",
+            "Remember pq = qp (commutative property)",
+            "Ignore numerical coefficients when comparing"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "like terms grouping",
+            "algebraic similarity",
+            "term organization"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "10.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "If m = 2, find the value of:\n(i) m – 2\n(ii) 3m – 5\n(iii) 9 – 5m\n(iv) 3m² – 2m – 7\n(v) 5m/4",
+          "hints": [
+            "Substitute m = 2 in each expression",
+            "Follow order of operations (PEMDAS)",
+            "Be careful with negative signs"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "substitution",
+            "evaluation",
+            "arithmetic operations"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "If p = – 2, find the value of:\n(i) 4p + 7\n(ii) – 3p² + 4p + 7\n(iii) – 2p³ – 3p² + 4p + 7",
+          "hints": [
+            "Substitute p = -2 carefully",
+            "Remember (-2)² = 4, (-2)³ = -8",
+            "Work step by step with exponents first"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "substitution with negatives",
+            "exponents",
+            "polynomial evaluation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the value of the following expressions, when x = –1:\n(i) 2x – 7\n(ii) – x + 2\n(iii) x² + 2x + 1\n(iv) 2x² – x – 2",
+          "hints": [
+            "Substitute x = -1",
+            "Remember (-1)² = 1",
+            "Watch signs when subtracting negatives"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "substitution",
+            "negative values",
+            "expression evaluation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "If a = 2, b = – 2, find the value of:\n(i) a² + b²\n(ii) a² + ab + b²\n(iii) a² – b²",
+          "hints": [
+            "Substitute both values",
+            "Calculate ab = 2 × (-2) = -4",
+            "Remember order of operations"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "two-variable substitution",
+            "squares",
+            "expression evaluation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "When a = 0, b = – 1, find the value of the given expressions:\n(i) 2a + 2b\n(ii) 2a² + b² + 1\n(iii) 2a²b + 2ab² + ab\n(iv) a² + ab + 2",
+          "hints": [
+            "Substitute a = 0 and b = -1",
+            "Any term with a = 0 becomes 0",
+            "Simplify before calculating"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "zero substitution",
+            "simplification",
+            "expression evaluation"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Simplify the expressions and find the value if x is equal to 2\n(i) x + 7 + 4 (x – 5)\n(ii) 3 (x + 2) + 5x – 7\n(iii) 6x + 5 (x – 2)\n(iv) 4(2x – 1) + 3x + 11",
+          "hints": [
+            "Simplify using distributive property first",
+            "Combine like terms",
+            "Then substitute x = 2"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "simplification",
+            "distributive property",
+            "substitution"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Simplify these expressions and find their values if x = 3, a = – 1, b = – 2.\n(i) 3x – 5 – x + 9\n(ii) 2 – 8x + 4x + 4\n(iii) 3a + 5 – 8a + 1\n(iv) 10 – 3b – 4 – 5b\n(v) 2a – 2b – 4 – 5 + a",
+          "hints": [
+            "Combine like terms first",
+            "Then substitute all values",
+            "Be careful with negative signs"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "simplification",
+            "multiple variables",
+            "substitution"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "(i) If z = 10, find the value of z³ – 3(z – 10).\n(ii) If p = – 10, find the value of p² – 2p – 100",
+          "hints": [
+            "Substitute the given value",
+            "Follow order of operations",
+            "Calculate inside parentheses first"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "substitution",
+            "cubic expressions",
+            "quadratic evaluation"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "What should be the value of a if the value of 2x² + x – a equals to 5, when x = 0?",
+          "hints": [
+            "Substitute x = 0 in the expression",
+            "Set the result equal to 5",
+            "Solve for a"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "solving for constant",
+            "equation solving",
+            "substitution"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Simplify the expression and find its value when a = 5 and b = – 3.\n2(a² + ab) + 3 – ab",
+          "hints": [
+            "Use distributive property first",
+            "Combine like terms",
+            "Then substitute values"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "simplification",
+            "distributive property",
+            "two-variable evaluation"
+          ]
+        }
+      ]
+    }
+  ]
+}

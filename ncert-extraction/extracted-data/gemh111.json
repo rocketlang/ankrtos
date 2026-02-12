@@ -1,0 +1,225 @@
+{
+  "chapter_number": 11,
+  "chapter_title": "Exponents and Powers",
+  "exercises": [
+    {
+      "exercise_number": "11.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the value of: (i) 26 (ii) 93",
+          "hints": [
+            "Use exponent rules"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "powers"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Express the following in exponential form: (i) 6 × 6 × 6 × 6 (ii) t × t (iii) b × b × b × b (iv) 5 × 5 × 7 × 7 × 7 (v) 2 × 2 × a × a (vi) a × a × a × c × c × c × c × d",
+          "hints": [
+            "Identify base and exponent"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "powers"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Express each of the following numbers using exponential notation: (i) 512 (ii) 343 (iii) 729 (iv) 3125",
+          "hints": [
+            "Find prime factors"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "exponents",
+            "prime factors"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Identify the greater number, wherever possible, in each of the following: (i) 43 or 34 (ii) 53 or 35 (iii) 28 or 82 (iv) 1002 or 2100 (v) 210 or 102",
+          "hints": [
+            "Compare exponents"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Express each of the following as product of powers of their prime factors: (i) 648 (ii) 405 (iii) 540 (iv) 3600",
+          "hints": [
+            "Find prime factors"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "exponents",
+            "prime factors"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Simplify: (i) 2 × 103 (ii) 72 × 22 (iii) 23 × 5 (iv) 3 × 44 (v) 0 × 102 (vi) 52 × 33 (vii) 24 × 32 (viii) 32 × 104",
+          "hints": [
+            "Apply exponent rules"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Simplify: (i) (–4)3 (ii) (–3) × (–2)3 (iii) (–3)2 × (–5)2 (iv) (–2)3 × (–10)3",
+          "hints": [
+            "Apply exponent rules"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Compare the following numbers: (i) 2.7 × 1012; 1.5 × 108 (ii) 4 × 1014; 3 × 1017",
+          "hints": [
+            "Compare exponents"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "comparison"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Using laws of exponents, simplify and write the answer in exponential form: (i) 32 × 34 × 38 (ii) 615 ÷ 610 (iii) a3 × a2 (iv) 7x × 72 (v) 52 ÷ 53 (vi) 25 × 55 (vii) a4 × b4 (viii) (34)3 (ix) (2 ÷ 2) × 215 (x) 8t ÷ 82",
+          "hints": [
+            "Apply exponent rules"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Simplify and express each of the following in exponential form: (i) 23 × 34 × 42 / 3 × 32 (ii) 254 ÷ 53 (iii) 20 + 30 + 40 (iv) (3 + 2) × 5 (v) 28 × a5 / 4 × a5b3 (vi) 45 × 105 × 25 / 57 × 65",
+          "hints": [
+            "Apply exponent rules"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Say true or false and justify your answer: (i) 10 × 1011 = 10011 (ii) 23 > 52 (iii) 23 × 32 = 65 (iv) 30 = (1000)0",
+          "hints": [
+            "Apply exponent rules"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "justification"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Express each of the following as a product of prime factors only in exponential form: (i) 108 × 192 (ii) 270 (iii) 729 × 64 (iv) 768",
+          "hints": [
+            "Find prime factors"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "exponents",
+            "prime factors"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Simplify: (i) (2/5)2 × 7 (ii) 83 × 7 (iii) 25 × 52 × t8 / 103 × t4",
+          "hints": [
+            "Apply exponent rules"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "simplification"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Write the following numbers in the expanded forms: 279404, 3006194, 2806196, 120719, 20068",
+          "hints": [
+            "Use place value system"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "place value",
+            "expansion"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the number from each of the following expanded forms: (a) 8 × 104 + 6 × 103 + 0 × 102 + 4 × 101 + 5 × 100 (b) 4 × 105 + 5 × 103 + 3 × 102 + 2 × 100 (c) 3 × 104 + 7 × 102 + 5 × 100 (d) 9 × 105 + 2 × 102 + 3 × 101",
+          "hints": [
+            "Use place value system"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "place value",
+            "expansion"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Express the following numbers in standard form: (i) 5,00,00,000 (ii) 70,00,000 (iii) 3,18,65,00,000 (iv) 3,90,878 (v) 39087.8 (vi) 3908.78",
+          "hints": [
+            "Use exponent rules"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "standard form"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Express the number appearing in the following statements in standard form: (a) The distance between Earth and Moon is 384,000,000 m (b) Speed of light in vacuum is 300,000,000 m/s (c) Diameter of the Earth is 1,27,56,000 m (d) Diameter of the Sun is 1,400,000,000 m (e) In a galaxy there are on an average 100,000,000,000 stars (f) The universe is estimated to be about 12,000,000,000 years old (g) The distance of the Sun from the centre of the Milky Way Galaxy is estimated to be 300,000,000,000,000,000,000 m (h) 60,230,000,000,000,000,000,000 molecules are contained in a drop of water weighing 1.8 gm (i) The earth has 1,353,000,000 cubic km of sea water (j) The population of India was about 1,027,000,000 in March, 2001",
+          "hints": [
+            "Use exponent rules"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exponents",
+            "standard form"
+          ]
+        }
+      ]
+    }
+  ]
+}

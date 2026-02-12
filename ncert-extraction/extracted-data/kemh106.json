@@ -1,0 +1,234 @@
+{
+  "chapter_number": 6,
+  "chapter_title": "Permutations and Combinations",
+  "exercises": [
+    {
+      "exercise_number": "6.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How many 3-digit numbers can be formed from the digits 1, 2, 3, 4 and 5 assuming that (i) repetition of the digits is allowed? (ii) repetition of the digits is not allowed?",
+          "hints": [
+            "Consider the total number of digits available",
+            "Apply the fundamental principle of counting"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "permutations",
+            "repetition"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "How many 3-digit even numbers can be formed from the digits 1, 2, 3, 4, 5, 6 if the digits can be repeated?",
+          "hints": [
+            "Identify the possible options for the last digit",
+            "Apply the fundamental principle of counting"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "permutations",
+            "even numbers"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "How many 4-letter code can be formed using the first 10 letters of the English alphabet, if no letter can be repeated?",
+          "hints": [
+            "Consider the total number of letters available",
+            "Apply the fundamental principle of counting"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "permutations",
+            "alphabet"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "How many 5-digit telephone numbers can be constructed using the digits 0 to 9 if each number starts with 67 and no digit appears more than once?",
+          "hints": [
+            "Identify the possible options for the remaining digits",
+            "Apply the fundamental principle of counting"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "permutations",
+            "telephone numbers"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "A coin is tossed 3 times and the outcomes are recorded. How many possible outcomes are there?",
+          "hints": [
+            "Consider the possible outcomes of each toss",
+            "Apply the fundamental principle of counting"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "permutations",
+            "coin toss"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Given 5 flags of different colours, how many different signals can be generated if each signal requires the use of 2 flags, one below the other?",
+          "hints": [
+            "Consider the possible combinations of flags",
+            "Apply the fundamental principle of counting"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "permutations",
+            "flags"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Evaluate (i) 8 ! (ii) 4 ! – 3 !",
+          "hints": [
+            "Apply the formula for factorial",
+            "Simplify the expression"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "factorial",
+            "evaluation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Is 3 ! + 4 ! = 7 ! ?",
+          "hints": [
+            "Evaluate each factorial",
+            "Compare the results"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "factorial",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Compute 5 ! / 3 ! 2 !",
+          "hints": [
+            "Apply the formula for factorial",
+            "Simplify the expression"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "factorial",
+            "evaluation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "If 1 / 6! + 1 / 7! = 1 / x!, find x",
+          "hints": [
+            "Simplify the expression",
+            "Compare the results"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "factorial",
+            "equation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Evaluate nPr, if n = 6, r = 2",
+          "hints": [
+            "Apply the formula for permutation",
+            "Simplify the expression"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "permutation",
+            "evaluation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How many 3-digit numbers can be formed by using the digits 1 to 9 if no digit is repeated?",
+          "hints": [
+            "Consider the total number of digits available",
+            "Apply the fundamental principle of counting"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "permutations",
+            "repetition"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "How many 4-digit numbers are there with no digit repeated?",
+          "hints": [
+            "Consider the total number of digits available",
+            "Apply the fundamental principle of counting"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "permutations",
+            "repetition"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "How many 3-digit even numbers can be made using the digits 1, 2, 3, 4, 6, 7, if no digit is repeated?",
+          "hints": [
+            "Identify the possible options for the last digit",
+            "Apply the fundamental principle of counting"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "permutations",
+            "even numbers"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "If nC8 = nC2, find nC2",
+          "hints": [
+            "Apply the formula for combination",
+            "Simplify the expression"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "combination",
+            "equation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Determine n if (i) 2nC3 : nC3 = 12 : 1 (ii) 2nC3 : nC3 = 11 : 1",
+          "hints": [
+            "Apply the formula for combination",
+            "Simplify the expression"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "combination",
+            "equation"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "chapter_number": 3,
+  "chapter_title": "COAL AND PETROLEUM",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What are the advantages of using CNG and LPG as fuels?",
+          "hints": [
+            "Compare pollution levels",
+            "Consider ease of transport and storage",
+            "Think about safety and efficiency"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fossil fuels",
+            "clean energy",
+            "fuel comparison"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Name the petroleum product used for surfacing of roads.",
+          "hints": [
+            "Check Table 3.1",
+            "Look for road construction materials"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "petroleum products",
+            "road construction",
+            "bitumen"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Describe how coal is formed from dead vegetation. What is this process called?",
+          "hints": [
+            "Recall the story of coal formation",
+            "Mention time period and conditions",
+            "Name the chemical process"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "coal formation",
+            "carbonisation",
+            "fossil fuels"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Fill in the blanks.\n(a) Fossil fuels are ____, ____ and ____.\n(b) Process of separation of different constituents from petroleum is called ____.\n(c) Least polluting fuel for vehicle is ____.",
+          "hints": [
+            "List three main fossil fuels",
+            "Recall petroleum refining term",
+            "Think about clean vehicle fuels"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fossil fuels",
+            "petroleum refining",
+            "clean fuels"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Tick True/False against the following statements.\n(a) Fossil fuels can be made in the laboratory. (T/F)\n(b) CNG is more polluting fuel than petrol. (T/F)\n(c) Coke is almost pure form of carbon. (T/F)\n(d) Coal tar is a mixture of various substances. (T/F)\n(e) Kerosene is not a fossil fuel. (T/F)",
+          "hints": [
+            "Recall laboratory preparation possibility",
+            "Compare pollution levels",
+            "Check composition of coke and coal tar",
+            "Verify kerosene source"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "true false",
+            "fossil fuels",
+            "fuel properties"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Explain why fossil fuels are exhaustible natural resources.",
+          "hints": [
+            "Consider formation time",
+            "Compare consumption rate",
+            "Discuss limited reserves"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "exhaustible resources",
+            "fossil fuels",
+            "conservation"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Describe characteristics and uses of coke.",
+          "hints": [
+            "Physical properties",
+            "Industrial applications",
+            "Compare with other coal products"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "coke",
+            "coal products",
+            "industrial uses"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Explain the process of formation of petroleum.",
+          "hints": [
+            "Source organisms",
+            "Conditions required",
+            "Time period",
+            "Location factors"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "petroleum formation",
+            "fossil fuels",
+            "marine organisms"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "The following Table shows the total power shortage in India from 1991–1997. Show the data in the form of a graph. Plot shortage percentage for the years on the Y-axis and the year on the X-axis.\nS. No. | Year | Shortage (%)\n1 | 1991 | 7.9\n2 | 1992 | 7.8\n3 | 1993 | 8.3\n4 | 1994 | 7.4\n5 | 1995 | 7.1\n6 | 1996 | 9.2\n7 | 1997 | 11.5",
+          "hints": [
+            "Choose appropriate graph type",
+            "Label axes correctly",
+            "Plot points accurately",
+            "Interpret trend"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "data interpretation",
+            "graph plotting",
+            "energy shortage"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "chapter_number": 12,
+  "chapter_title": "STATISTICS",
+  "exercises": [
+    {
+      "exercise_number": "12.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A survey conducted by an organisation for the cause of illness and death among the women between the ages 15 - 44 (in years) worldwide, found the following figures (in %):\nS.No.\tCauses\tFemale fatality rate (%)\n1.\tReproductive health conditions\t31.8\n2.\tNeuropsychiatric conditions\t25.4\n3.\tInjuries\t12.4\n4.\tCardiovascular conditions\t4.3\n5.\tRespiratory conditions\t4.1\n6.\tOther causes\t22.0\n(i) Represent the information given above graphically.\n(ii) Which condition is the major cause of women's ill health and death worldwide?\n(iii) Try to find out, with the help of your teacher, any two factors which play a major role in the cause in (ii) above being the major cause.",
+          "hints": [
+            "Use bar graph for representation",
+            "Compare percentages to find major cause",
+            "Research reproductive health factors"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "bar graph",
+            "data representation",
+            "percentage",
+            "health statistics"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The following data on the number of girls (to the nearest ten) per thousand boys in different sections of Indian society is given below.\nSection\tNumber of girls per thousand boys\nScheduled Caste (SC)\t940\nScheduled Tribe (ST)\t970\nNon SC/ST\t920\nBackward districts\t950\nNon-backward districts\t920\nRural\t930\nUrban\t910\n(i) Represent the information above by a bar graph.\n(ii) In the classroom discuss what conclusions can be arrived at from the graph.",
+          "hints": [
+            "Draw bar graph with sections on x-axis",
+            "Compare values across different sections",
+            "Analyze urban-rural differences"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "bar graph",
+            "social statistics",
+            "gender ratio",
+            "data interpretation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Given below are the seats won by different political parties in the polling outcome of a state assembly elections:\nPolitical Party\tA\tB\tC\tD\tE\tF\nSeats Won\t75\t55\t37\t29\t10\t37\n(i) Draw a bar graph to represent the polling results.\n(ii) Which political party won the maximum number of seats?",
+          "hints": [
+            "Use vertical bar graph",
+            "Compare seat numbers",
+            "Identify highest value"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "bar graph",
+            "election data",
+            "comparison",
+            "political statistics"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The length of 40 leaves of a plant are measured correct to one millimetre, and the obtained data is represented in the following table:\nLength (in mm)\tNumber of leaves\n118 - 126\t3\n127 - 135\t5\n136 - 144\t9\n145 - 153\t12\n154 - 162\t5\n163 - 171\t4\n172 - 180\t2\n(i) Draw a histogram to represent the given data. [Hint: First make the class intervals continuous]\n(ii) Is there any other suitable graphical representation for the same data?\n(iii) Is it correct to conclude that the maximum number of leaves are 153 mm long? Why?",
+          "hints": [
+            "Convert to continuous class intervals",
+            "Consider frequency polygon as alternative",
+            "Understand histogram interpretation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "histogram",
+            "continuous data",
+            "class intervals",
+            "data interpretation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "The following table gives the life times of 400 neon lamps:\nLife time (in hours)\tNumber of lamps\n300 - 400\t14\n400 - 500\t56\n500 - 600\t60\n600 - 700\t86\n700 - 800\t74\n800 - 900\t62\n900 - 1000\t48\n(i) Represent the given information with the help of a histogram.\n(ii) How many lamps have a life time of more than 700 hours?",
+          "hints": [
+            "Draw histogram with equal class widths",
+            "Sum frequencies for classes above 700",
+            "Calculate total from 700-1000 hours"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "histogram",
+            "frequency distribution",
+            "cumulative frequency",
+            "real-life data"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "The following table gives the distribution of students of two sections according to the marks obtained by them:\nSection A\nMarks\tFrequency\n0 - 10\t3\n10 - 20\t9\n20 - 30\t17\n30 - 40\t12\n40 - 50\t9\nSection B\nMarks\tFrequency\n0 - 10\t5\n10 - 20\t19\n20 - 30\t15\n30 - 40\t10\n40 - 50\t1\nRepresent the marks of the students of both the sections on the same graph by two frequency polygons. From the two polygons compare the performance of the two sections.",
+          "hints": [
+            "Find class marks for each interval",
+            "Plot points for both sections",
+            "Compare shapes of polygons"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "frequency polygon",
+            "comparison",
+            "class marks",
+            "performance analysis"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "The runs scored by two teams A and B on the first 60 balls in a cricket match are given below:\nNumber of balls\tTeam A\tTeam B\n1-6\t2\t5\n7 - 12\t1\t6\n13 - 18\t8\t2\n19 - 24\t9\t10\n25 - 30\t4\t5\n31 - 36\t5\t6\n37 - 42\t6\t3\n43 - 48\t10\t4\n49 - 54\t6\t8\n55 - 60\t2\t10\nRepresent the data of both the teams on the same graph by frequency polygons. [Hint : First make the class intervals continuous.]",
+          "hints": [
+            "Convert to continuous intervals (0.5-6.5, etc.)",
+            "Find mid-points of intervals",
+            "Plot both polygons on same axes"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "frequency polygon",
+            "cricket statistics",
+            "continuous data",
+            "sports data"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "A random survey of the number of children of various age groups playing in a park was found as follows:\nAge (in years)\tNumber of children\n1-2\t5\n2-3\t3\n3-5\t6\n5-7\t12\n7 - 10\t9\n10 - 15\t10\n15 - 17\t4\nDraw a histogram to represent the data above.",
+          "hints": [
+            "Note varying class widths",
+            "Adjust rectangle heights for width differences",
+            "Use correct scale for age groups"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "histogram",
+            "varying class widths",
+            "real data",
+            "survey data"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "100 surnames were randomly picked up from a local telephone directory and a frequency distribution of the number of letters in the English alphabet in the surnames was found as follows:\nNumber of letters\tNumber of surnames\n1- 4\t6\n4- 6\t30\n6- 8\t44\n8 - 12\t16\n12 - 20\t4\n(i) Draw a histogram to depict the given information.\n(ii) Write the class interval in which the maximum number of surnames lie.",
+          "hints": [
+            "Make class intervals continuous",
+            "Adjust for varying widths",
+            "Identify class with highest frequency"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "histogram",
+            "varying class widths",
+            "frequency distribution",
+            "linguistics data"
+          ]
+        }
+      ]
+    }
+  ]
+}

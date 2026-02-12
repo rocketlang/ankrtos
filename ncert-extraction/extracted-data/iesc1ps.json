@@ -1,0 +1,258 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "MATTER IN OUR SURROUNDINGS",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the following are matter? Chair, air, love, smell, hate, almonds, thought, cold, cold drink, smell of perfume.",
+          "hints": [
+            "Recall definition of matter: anything that has mass and occupies space.",
+            "Think about physical existence vs. emotions/ideas."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definition of matter",
+            "classification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Give reasons for the following observation: The smell of hot sizzling food reaches you several metres away, but to get the smell from cold food you have to go close.",
+          "hints": [
+            "Consider kinetic energy of particles in hot vs. cold substances.",
+            "Relate to diffusion rate and temperature."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "diffusion",
+            "kinetic theory",
+            "effect of temperature"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A diver is able to cut through water in a swimming pool. Which property of matter does this observation show?",
+          "hints": [
+            "Think about intermolecular forces and space between particles in liquids.",
+            "Relate to fluidity."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "intermolecular space",
+            "fluidity",
+            "states of matter"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What are the characteristics of the particles of matter?",
+          "hints": [
+            "List properties like space between particles, attraction, motion.",
+            "Recall kinetic theory."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "particle nature",
+            "kinetic theory",
+            "characteristics"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "The mass per unit volume of a substance is called density. (Density = mass/volume). Arrange the following in order of increasing density – air, exhaust from chimney, honey, water, chalk, cotton and iron.",
+          "hints": [
+            "Compare densities of common substances.",
+            "Remember gases have very low density, solids high."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "density",
+            "comparison",
+            "states of matter"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "a) Tabulate the differences in the characteristics of states of matter. b) Comment upon the following: rigidity, compressibility, fluidity, filling a gas container, shape, kinetic energy and density.",
+          "hints": [
+            "Create a table comparing solid, liquid, gas.",
+            "Define each term in context of states."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "states of matter",
+            "properties",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Give reasons: a) A gas fills completely the vessel in which it is kept. b) A gas exerts pressure on the walls of the container. c) A wooden table should be called a solid. d) We can easily move our hand in air but to do the same through a solid block of wood we need a karate expert.",
+          "hints": [
+            "Use kinetic theory: particles move randomly, collide with walls.",
+            "Consider intermolecular forces and spaces."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "kinetic theory",
+            "pressure",
+            "intermolecular forces",
+            "rigidity"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Liquids generally have lower density as compared to solids. But you must have observed that ice floats on water. Find out why.",
+          "hints": [
+            "Recall anomalous expansion of water.",
+            "Think about structure of ice vs. liquid water."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "anomalous expansion",
+            "density of ice",
+            "hydrogen bonding"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Convert the following temperatures to the Celsius scale: a) 300 K b) 573 K.",
+          "hints": [
+            "Use formula: °C = K - 273."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "temperature conversion",
+            "Kelvin to Celsius"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Convert the following temperatures to the Kelvin scale: a) 25°C b) 373°C.",
+          "hints": [
+            "Use formula: K = °C + 273."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "temperature conversion",
+            "Celsius to Kelvin"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Give reason for the following observations: a) Naphthalene balls disappear with time without leaving any solid. b) We can get the smell of perfume sitting several metres away.",
+          "hints": [
+            "Think about sublimation and diffusion.",
+            "Relate to particle motion and vaporization."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sublimation",
+            "diffusion",
+            "evaporation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Arrange the following substances in increasing order of forces of attraction between the particles – water, sugar, oxygen.",
+          "hints": [
+            "Compare forces in solid, liquid, gas.",
+            "Sugar (solid) > water (liquid) > oxygen (gas)."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "intermolecular forces",
+            "states of matter"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What is the physical state of water at: a) 25°C b) 0°C c) 100°C?",
+          "hints": [
+            "Recall melting and boiling points of water.",
+            "Consider state at given temperatures."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "states of water",
+            "melting point",
+            "boiling point"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Give two reasons to justify: a) Water at room temperature is a liquid. b) An iron almirah is a solid at room temperature.",
+          "hints": [
+            "Use properties of liquids and solids.",
+            "Consider intermolecular forces and rigidity."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "properties of liquids",
+            "properties of solids",
+            "room temperature"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why is ice at 273 K more effective in cooling than water at the same temperature?",
+          "hints": [
+            "Consider latent heat of fusion.",
+            "Energy absorbed during melting provides extra cooling."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "latent heat",
+            "cooling effect",
+            "phase change"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What produces more severe burns, boiling water or steam?",
+          "hints": [
+            "Recall latent heat of vaporization.",
+            "Steam has extra energy compared to boiling water."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "latent heat of vaporization",
+            "burns",
+            "energy transfer"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Name A, B, C, D, E and F in the following diagram showing change in state:",
+          "hints": [
+            "Identify processes: melting, vaporization, condensation, freezing, sublimation, deposition."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "phase changes",
+            "state diagram",
+            "sublimation"
+          ]
+        }
+      ]
+    }
+  ]
+}

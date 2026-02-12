@@ -1,0 +1,247 @@
+{
+  "chapter_number": 6,
+  "chapter_title": "Respiration in Organisms",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why does an athlete breathe faster and deeper than usual after finishing the race?",
+          "hints": [
+            "Think about energy demand during exercise",
+            "Consider oxygen requirement for muscle cells",
+            "Recall anaerobic respiration and lactic acid"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "aerobic respiration",
+            "energy demand",
+            "muscle cells"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "List the similarities and differences between aerobic and anaerobic respiration.",
+          "hints": [
+            "Compare oxygen requirement",
+            "Compare end products",
+            "Compare energy released",
+            "Think about organisms that use each type"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comparison",
+            "aerobic vs anaerobic",
+            "cellular respiration"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why do we often sneeze when we inhale a lot of dust-laden air?",
+          "hints": [
+            "Consider nasal cavity structure",
+            "Think about foreign particles",
+            "Recall body's defense mechanism"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sneezing",
+            "defense mechanism",
+            "respiratory system"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Take three test-tubes. Fill ¾th of each with water. Label them A, B and C. Keep a snail in test-tube A, a water plant in test-tube B and in C, keep snail and plant both. Which test-tube would have the highest concentration of CO₂?",
+          "hints": [
+            "Consider respiration in animals vs plants",
+            "Think about gas exchange in plants",
+            "Recall photosynthesis and respiration balance"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "experiment",
+            "carbon dioxide",
+            "respiration vs photosynthesis"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2",
+      "questions": [
+        {
+          "question_number": 5,
+          "question_text": "Tick the correct answer:\n(a) In cockroaches, air enters the body through\n(i) lungs (ii) gills (iii) spiracles (iv) skin\n(b) During heavy exercise, we get cramps in the legs due to the accumulation of\n(i) carbon dioxide (ii) lactic acid (iii) alcohol (iv) water\n(c) Normal range of breathing rate per minute in an average adult person at rest is:\n(i) 9–12 (ii) 15–18 (iii) 21–24 (iv) 30–33\n(d) During exhalation, the ribs\n(i) move outwards (ii) move downwards (iii) move upwards (iv) do not move at all",
+          "hints": [
+            "Recall insect respiratory system",
+            "Remember anaerobic respiration products",
+            "Check normal breathing rate statistics",
+            "Review breathing mechanism"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "respiratory organs",
+            "breathing rate",
+            "rib movement"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Match the items in Column I with those in Column II:\nColumn I\n(a) Yeast\n(b) Diaphragm\n(c) Skin\n(d) Leaves\n(e) Fish\n(f) Frog\nColumn II\n(i) Earthworm\n(ii) Gills\n(iii) Alcohol\n(iv) Chest cavity\n(v) Stomata\n(vi) Lungs and skin\n(vii) Tracheae",
+          "hints": [
+            "Recall yeast respiration product",
+            "Identify diaphragm location",
+            "Remember earthworm breathing",
+            "Think leaf gas exchange",
+            "Identify fish respiratory organ",
+            "Recall frog dual respiration"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "matching",
+            "respiratory adaptations",
+            "organisms"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Mark 'T' if the statement is true and 'F' if it is false:\n(i) During heavy exercise the breathing rate of a person slows down. (T/F)\n(ii) Plants carry out photosynthesis only during the day and respiration only at night. (T/F)\n(iii) Frogs breathe through their skins as well as their lungs. (T/F)\n(iv) The fishes have lungs for respiration. (T/F)\n(v) The size of the chest cavity increases during inhalation. (T/F)",
+          "hints": [
+            "Consider exercise effect on breathing",
+            "Recall plant respiration timing",
+            "Check frog respiratory organs",
+            "Verify fish respiratory system",
+            "Review inhalation mechanism"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "true false",
+            "breathing rate",
+            "plant respiration",
+            "animal adaptations"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3",
+      "questions": [
+        {
+          "question_number": 8,
+          "question_text": "Given below is a square of letters in which are hidden different words related to respiration in organisms. These words may be present in any direction — upwards, downwards, or along the diagonals. Find the words for your respiratory system. Clues about those words are given below the square.\nS V M P L U N G S\nC Z G Q W X N T L\nR M A T I D O T C\nI Y R X Y M S R A\nB R H I A N T A Y\nS T P T B Z R C E\nM I A M T S I H A\nS P I R A C L E S\nN E D K J N S A T\n(i) The air tubes of insects\n(ii) Skeletal structures surrounding chest cavity\n(iii) Muscular floor of chest cavity\n(iv) Tiny pores on the surface of leaf\n(v) Small openings on the sides of the body of an insect\n(vi) The respiratory organs of human beings\n(vii) The openings through which we inhale\n(viii) An anaerobic organism\n(ix) An organism with tracheal system",
+          "hints": [
+            "Look for TRACHEAE horizontally",
+            "Find RIBS diagonally",
+            "Search DIAPHRAGM vertically",
+            "Locate STOMATA",
+            "Find SPIRACLES",
+            "Identify LUNGS",
+            "Look for NOSTRILS",
+            "Find YEAST",
+            "Identify INSECT"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "word search",
+            "vocabulary",
+            "respiratory terms",
+            "puzzle"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "The mountaineers carry oxygen with them because:\n(a) At an altitude of more than 5 km there is no air.\n(b) The amount of air available to a person is less than that available on the ground.\n(c) The temperature of air is higher than that on the ground.\n(d) The pressure of air is higher than that on the ground.",
+          "hints": [
+            "Consider air density at high altitude",
+            "Think about oxygen concentration",
+            "Recall atmospheric pressure changes"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "application",
+            "altitude",
+            "oxygen requirement",
+            "mountaineering"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Extended Learning",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Observe fish in an aquarium. You will find flap like structures on both sides of their heads. These are flaps which cover the gills. These flaps open and close alternately. On the basis of these observations, explain the process of respiration in the fish.",
+          "hints": [
+            "Observe gill movement",
+            "Consider water flow over gills",
+            "Think about oxygen extraction from water",
+            "Recall counter-current exchange"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "observation",
+            "fish respiration",
+            "gills",
+            "practical activity"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Visit a local doctor. Learn about the harmful effects of smoking. You can also collect material on this topic from other sources. You can seek help of your teacher or parents. Find out the percentage of people of your area who smoke. If you have a smoker in your family, confront him with the material that you have collected.",
+          "hints": [
+            "Research lung diseases",
+            "Collect statistics on smoking",
+            "Prepare educational material",
+            "Practice communication skills"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "project",
+            "health education",
+            "smoking effects",
+            "social awareness"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Visit a doctor. Find out about artificial respiration. Ask the doctor:\n(a) When does a person need artificial respiration?\n(b) Does the person need to be kept on artificial respiration temporarily or permanently?\n(c) From where can the person get supply of oxygen for artificial respiration?",
+          "hints": [
+            "Research emergency situations",
+            "Learn about ventilators",
+            "Understand oxygen sources",
+            "Prepare interview questions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "interview",
+            "artificial respiration",
+            "medical knowledge",
+            "first aid"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Measure the breathing rate of the members of your family and some of your friends. Investigate:\n(c) If the breathing rate of children is different from that of adults.\n(d) If the breathing rate of males is different from that of females.\nIf there is a difference in any of these cases, try to find the reason.",
+          "hints": [
+            "Use stopwatch for measurement",
+            "Record data systematically",
+            "Compare age groups",
+            "Consider physiological differences",
+            "Analyze patterns"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "experiment",
+            "data collection",
+            "breathing rate comparison",
+            "analysis"
+          ]
+        }
+      ]
+    }
+  ]
+}

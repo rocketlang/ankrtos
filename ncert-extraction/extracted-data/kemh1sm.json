@@ -1,0 +1,109 @@
+{
+  "chapter_number": 8,
+  "chapter_title": "Infinite G.P. and its Sum",
+  "exercises": [
+    {
+      "exercise_number": "8.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the sum to infinity in the following Geometric Progression: 1, 1/3, 1/9, ... (Ans. 1.5)",
+          "hints": [
+            "Identify first term a = 1",
+            "Find common ratio r = 1/3",
+            "Apply formula S∞ = a/(1 - r) since |r| < 1"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "infinite G.P.",
+            "sum to infinity",
+            "geometric progression"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the sum to infinity in the following Geometric Progression: 6, 1.2, 0.24, ... (Ans. 7.5)",
+          "hints": [
+            "First term a = 6",
+            "Common ratio r = 1.2/6 = 0.2",
+            "Check |r| < 1",
+            "Use S∞ = a/(1 - r)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "infinite G.P.",
+            "sum to infinity",
+            "decimal terms"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the sum to infinity in the following Geometric Progression: 5, 20/7, 80/49, ... (Ans. 35/3)",
+          "hints": [
+            "a = 5",
+            "r = (20/7)/5 = 4/7",
+            "Verify |r| < 1",
+            "Calculate S∞ = 5/(1 - 4/7)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "infinite G.P.",
+            "fraction terms",
+            "sum to infinity"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the sum to infinity in the following Geometric Progression: -3/4, 3/16, -3/64, ... (Ans. -3/5)",
+          "hints": [
+            "First term a = -3/4",
+            "Common ratio r = (3/16)/(-3/4) = -1/4",
+            "Check |r| < 1",
+            "Apply S∞ = a/(1 - r)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "infinite G.P.",
+            "alternating signs",
+            "negative sum"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Prove that 3^(1/2) × 3^(1/4) × 3^(1/8) ... = 3",
+          "hints": [
+            "Recognize as infinite product of powers of 3",
+            "Exponents form G.P.: 1/2, 1/4, 1/8, ...",
+            "Sum of exponents = (1/2)/(1 - 1/2) = 1",
+            "Therefore product = 3^1 = 3"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "proof",
+            "infinite product",
+            "geometric progression",
+            "exponents"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Let x = 1 + a + a^2 + ... and y = 1 + b + b^2 + ..., where |a| < 1 and |b| < 1. Prove that 1 + ab + a^2b^2 + ... = xy/(x + y - 1)",
+          "hints": [
+            "Express x = 1/(1 - a)",
+            "Express y = 1/(1 - b)",
+            "Left side is infinite G.P. with first term 1, common ratio ab",
+            "Sum = 1/(1 - ab)",
+            "Simplify RHS using x and y expressions to match LHS"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "proof",
+            "infinite G.P.",
+            "algebraic manipulation",
+            "series product"
+          ]
+        }
+      ]
+    }
+  ]
+}

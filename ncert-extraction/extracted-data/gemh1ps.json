@@ -1,0 +1,482 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Integers",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Following number line shows the temperature in degree celsius (°C) at different places on a particular day. (a) Observe this number line and write the temperature of the places marked on it. (b) What is the temperature difference between the hottest and the coldest places among the above? (c) What is the temperature difference between Lahulspiti and Srinagar? (d) Can we say temperature of Srinagar and Shimla taken together is less than the temperature at Shimla? Is it also less than the temperature at Srinagar?",
+          "hints": [
+            "Read values from number line",
+            "Subtract to find difference",
+            "Add temperatures for combined value"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "number line",
+            "temperature",
+            "integers",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "In a quiz, positive marks are given for correct answers and negative marks are given for incorrect answers. If Jack's scores in five successive rounds were 25, –5, –10, 15 and 10, what was his total at the end?",
+          "hints": [
+            "Add all scores including negatives",
+            "Combine positive and negative numbers separately"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "addition",
+            "positive and negative",
+            "quiz scores"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "At Srinagar temperature was –5°C on Monday and then it dropped by 2°C on Tuesday. What was the temperature of Srinagar on Tuesday? On Wednesday, it rose by 4°C. What was the temperature on this day?",
+          "hints": [
+            "Subtract for drop",
+            "Add for rise",
+            "Use negative numbers carefully"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "temperature change",
+            "addition",
+            "subtraction"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "A plane is flying at the height of 5000 m above the sea level. At a particular point, it is exactly above a submarine floating 1200 m below the sea level. What is the vertical distance between them?",
+          "hints": [
+            "Consider sea level as 0",
+            "Submarine is at -1200 m",
+            "Find difference between 5000 and -1200"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "vertical distance",
+            "sea level",
+            "absolute value"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Mohan deposits ₹2,000 in his bank account and withdraws ₹1,642 from it, the next day. If withdrawal of amount from the account is represented by a negative integer, then how will you represent the amount deposited? Find the balance in Mohan's account after the withdrawal.",
+          "hints": [
+            "Deposit as positive integer",
+            "Withdrawal as negative",
+            "Add deposit and withdrawal"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "bank transaction",
+            "deposit",
+            "withdrawal",
+            "balance"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Rita goes 20 km towards east from a point A to the point B. From B, she moves 30 km towards west along the same road. If the distance towards east is represented by a positive integer then, how will you represent the distance travelled towards west? By which integer will you represent her final position from A?",
+          "hints": [
+            "East as positive",
+            "West as negative",
+            "Add movements: +20 + (-30)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "direction",
+            "displacement",
+            "positive and negative"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "In a magic square each row, column and diagonal have the same sum. Check which of the following is a magic square.\n\n5  –1  –4\n–5  –2  7\n0   3  –3\n\n1  –10  0\n–4  –3  –2\n–6   4  –7",
+          "hints": [
+            "Sum each row, column, and diagonal",
+            "Check if all sums are equal",
+            "Include negative numbers carefully"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "magic square",
+            "addition",
+            "verification"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Verify a – (–b) = a + b for the following values of a and b. (i) a = 21, b = 18 (ii) a = 118, b = 125 (iii) a = 75, b = 84 (iv) a = 28, b = 11",
+          "hints": [
+            "Calculate left side: a - (-b)",
+            "Calculate right side: a + b",
+            "Compare results"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "verification",
+            "integer subtraction",
+            "properties"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Use the sign of >, < or = in the box to make the statements true. (a) (–8) + (–4) □ (–8) – (–4) (b) (–3) + 7 – (19) □ 15 – 8 + (–9) (c) 23 – 41 + 11 □ 23 – 41 – 11 (d) 39 + (–24) – (15) □ 36 + (–52) – (–36) (e) –231 + 79 + 51 □ –399 + 159 + 81",
+          "hints": [
+            "Simplify both sides",
+            "Compare results",
+            "Remember integer rules"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comparison",
+            "simplification",
+            "inequality"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "A water tank has steps inside it. A monkey is sitting on the topmost step (i.e., the first step). The water level is at the ninth step. (i) He jumps 3 steps down and then jumps back 2 steps up. In how many jumps will he reach the water level? (ii) After drinking water, he wants to go back. For this, he jumps 4 steps up and then jumps back 2 steps down in every move. In how many jumps will he reach back the top step? (iii) If the number of steps moved down is represented by negative integers and the number of steps moved up by positive integers, represent his moves in part (i) and (ii) by completing the following: (a) –3 + 2 – ... = –8 (b) 4 – 2 + ... = 8. In (a) the sum (–8) represents going down by eight steps. So, what will the sum 8 in (b) represent?",
+          "hints": [
+            "Track position after each jump",
+            "Use positive for up, negative for down",
+            "Solve sequence equations"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "step problem",
+            "sequence",
+            "integer addition",
+            "word problem"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Write down a pair of integers whose: (a) sum is –7 (b) difference is –10 (c) sum is 0",
+          "hints": [
+            "Choose any integers satisfying condition",
+            "Multiple answers possible",
+            "Use positive and negative numbers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "integer pairs",
+            "sum",
+            "difference"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "(a) Write a pair of negative integers whose difference gives 8. (b) Write a negative integer and a positive integer whose sum is –5. (c) Write a negative integer and a positive integer whose difference is –3.",
+          "hints": [
+            "For (a): both negative, difference positive",
+            "For (b): sum negative",
+            "For (c): difference negative"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "negative integers",
+            "sum",
+            "difference",
+            "constraints"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "In a quiz, team A scored –40, 10, 0 and team B scored 10, 0, –40 in three successive rounds. Which team scored more? Can we say that we can add integers in any order?",
+          "hints": [
+            "Add scores for each team",
+            "Compare totals",
+            "Check commutative property"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "team scores",
+            "addition order",
+            "commutative property"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Fill in the blanks to make the following statements true: (i) (–5) + (–8) = (–8) + (......) (ii) –53 + ...... = –53 (iii) 17 + ...... = 0 (iv) [13 + (–12)] + (......) = 13 + [(–12) + (–7)] (v) (–4) + [15 + (–3)] = [–4 + 15] + ......",
+          "hints": [
+            "Use commutative property",
+            "Use additive identity",
+            "Use associative property"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "properties",
+            "commutative",
+            "associative",
+            "additive identity"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find each of the following products: (a) 3 × (–1) (b) (–1) × 225 (c) (–21) × (–30) (d) (–316) × (–1) (e) (–15) × 0 × (–18) (f) (–12) × (–11) × (10) (g) 9 × (–3) × (–6) (h) (–18) × (–5) × (–4) (i) (–1) × (–2) × (–3) × 4 (j) (–3) × (–6) × (–2) × (–1)",
+          "hints": [
+            "Rules: positive × positive = positive, negative × negative = positive, negative × positive = negative",
+            "Multiply step by step",
+            "Any number × 0 = 0"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiplication",
+            "integer rules",
+            "product"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Verify the following: (a) 18 × [7 + (–3)] = [18 × 7] + [18 × (–3)] (b) (–21) × [(–4) + (–6)] = [(–21) × (–4)] + [(–21) × (–6)]",
+          "hints": [
+            "Simplify left side using BODMAS",
+            "Simplify right side using distributive property",
+            "Compare results"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "verification",
+            "distributive property",
+            "integer multiplication"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "(i) For any integer a, what is (–1) × a equal to? (ii) Determine the integer whose product with (–1) is (a) –22 (b) 37 (c) 0",
+          "hints": [
+            "(–1) × a = –a",
+            "To find integer, divide given number by (–1)",
+            "Division is inverse of multiplication"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiplication by -1",
+            "inverse",
+            "property"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Starting from (–1) × 5, write various products showing some pattern to show (–1) × (–1) = 1.",
+          "hints": [
+            "Create sequence: (–1)×5 = –5, (–1)×4 = –4, ...",
+            "Observe pattern as multiplier decreases",
+            "Extend to (–1)×(–1)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "pattern",
+            "multiplication by -1",
+            "inductive reasoning"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the product, using suitable properties: (a) 26 × (–48) + (–48) × (–36) (b) 8 × 53 × (–125) (c) 15 × (–25) × (–4) × (–10) (d) (–41) × 102 (e) 625 × (–35) + (–625) × 65 (f) 7 × (50 – 2) (g) (–17) × (–29) (h) (–57) × (–19) + 57",
+          "hints": [
+            "Use distributive, commutative, associative properties",
+            "Look for common factors",
+            "Simplify stepwise"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "properties",
+            "simplification",
+            "distributive",
+            "factorization"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A certain freezing process requires that room temperature be lowered from 40°C at the rate of 5°C every hour. What will be the room temperature 10 hours after the process begins?",
+          "hints": [
+            "Temperature decrease = 5°C per hour",
+            "Total decrease = 5 × 10",
+            "Subtract from initial 40°C"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "temperature decrease",
+            "rate",
+            "multiplication"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "In a class test containing 10 questions, 5 marks are awarded for every correct answer and (–2) marks are awarded for every incorrect answer and 0 for questions not attempted. (i) Mohan gets four correct and six incorrect answers. What is his score? (ii) Reshma gets five correct answers and five incorrect answers, what is her score? (iii) Heena gets two correct and five incorrect answers out of seven questions she attempts. What is her score?",
+          "hints": [
+            "Calculate: (correct × 5) + (incorrect × (–2))",
+            "Unattempted questions score 0",
+            "Add carefully"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "scoring",
+            "positive and negative marks",
+            "word problem"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "A cement company earns a profit of ₹8 per bag of white cement sold and a loss of ₹5 per bag of grey cement sold. (a) The company sells 3,000 bags of white cement and 5,000 bags of grey cement in a month. What is its profit or loss? (b) What is the number of white cement bags it must sell to have neither profit nor loss, if the number of grey bags sold is 6,400 bags?",
+          "hints": [
+            "Profit = 8 × white bags, Loss = 5 × grey bags",
+            "Net = Profit – Loss",
+            "For (b): set profit from white = loss from grey"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "profit loss",
+            "linear equation",
+            "word problem"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Replace the blank with an integer to make it a true statement. (a) (–3) × _____ = 27 (b) 5 × _____ = –35 (c) _____ × (–8) = –56 (d) _____ × (–12) = 132",
+          "hints": [
+            "Use inverse operation: divide product by given integer",
+            "Mind sign rules"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "missing factor",
+            "division",
+            "integer rules"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Evaluate each of the following: (a) (–30) ÷ 10 (b) 50 ÷ (–5) (c) (–36) ÷ (–9) (d) (–49) ÷ 49 (e) 13 ÷ [(–2) + 1] (f) 0 ÷ (–12) (g) (–31) ÷ [(–30) + (–1)] (h) [(–36) ÷ 12] ÷ 3 (i) [(–6) + 5)] ÷ [(–2) + 1]",
+          "hints": [
+            "Rules: positive ÷ positive = positive, negative ÷ negative = positive, negative ÷ positive = negative",
+            "Simplify brackets first",
+            "0 divided by any integer = 0"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "division",
+            "integer rules",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Verify that a ÷ (b + c) ≠ (a ÷ b) + (a ÷ c) for each of the following values of a, b and c. (a) a = 12, b = –4, c = 2 (b) a = (–10), b = 1, c = 1",
+          "hints": [
+            "Calculate left side: a ÷ (b + c)",
+            "Calculate right side: (a ÷ b) + (a ÷ c)",
+            "Show they are not equal"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "verification",
+            "division property",
+            "counterexample"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Fill in the blanks: (a) 369 ÷ _____ = 369 (b) (–75) ÷ _____ = –1 (c) (–206) ÷ _____ = 1 (d) –87 ÷ _____ = 87 (e) _____ ÷ 1 = –87 (f) _____ ÷ 48 = –1 (g) 20 ÷ _____ = –2 (h) _____ ÷ (4) = –3",
+          "hints": [
+            "Use identity: a ÷ 1 = a",
+            "Use rules of signs",
+            "Find missing divisor/dividend"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "missing numbers",
+            "division rules",
+            "properties"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Write five pairs of integers (a, b) such that a ÷ b = –3. One such pair is (6, –2) because 6 ÷ (–2) = –3.",
+          "hints": [
+            "Choose any b (non-zero)",
+            "Then a = –3 × b",
+            "Include positive and negative combinations"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "integer pairs",
+            "division",
+            "generation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "The temperature at 12 noon was 10°C above zero. If it decreases at the rate of 2°C per hour until midnight, at what time would the temperature be 8°C below zero? What would be the temperature at midnight?",
+          "hints": [
+            "Total decrease needed from +10°C to –8°C = 18°C",
+            "Time = total decrease ÷ rate",
+            "Midnight temperature = initial – (rate × 12 hours)"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "temperature decrease",
+            "rate",
+            "time calculation",
+            "word problem"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "In a class test (+3) marks are given for every correct answer and (–2) marks are given for every incorrect answer and no marks for not attempting any question. (i) Radhika scored 20 marks. If she has got 12 correct answers, how many questions has she attempted incorrectly? (ii) Mohini scores –5 marks in this test, though she has got 7 correct answers. How many questions has she attempted incorrectly?",
+          "hints": [
+            "Let incorrect = x",
+            "Equation: 3×(correct) + (–2)×(incorrect) = total marks",
+            "Solve for x"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "scoring",
+            "linear equation",
+            "word problem"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "An elevator descends into a mine shaft at the rate of 6 m/min. If the descent starts from 10 m above the ground level, how long will it take to reach –350 m?",
+          "hints": [
+            "Total distance = 10 – (–350) = 360 m",
+            "Time = distance ÷ rate",
+            "Rate = 6 m/min"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "elevator",
+            "rate",
+            "time",
+            "distance"
+          ]
+        }
+      ]
+    }
+  ]
+}

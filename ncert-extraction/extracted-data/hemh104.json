@@ -1,0 +1,181 @@
+{
+  "chapter_number": 4,
+  "chapter_title": "Data Handling",
+  "exercises": [
+    {
+      "exercise_number": "4.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A survey was made to find the type of music that a certain group of young people liked in a city. Adjoining pie chart shows the findings of this survey. From this pie chart answer the following: (i) If 20 people liked classical music, how many young people were surveyed? (ii) Which type of music is liked by the maximum number of people? (iii) If a cassette company were to make 1000 CD’s, how many of each type would they make?",
+          "hints": [
+            "Use the pie chart percentages to find total surveyed from classical music count.",
+            "Identify the largest sector in the pie chart.",
+            "Multiply total CDs by each sector's percentage."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "pie chart",
+            "percentage",
+            "data interpretation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "A group of 360 people were asked to vote for their favourite season from the three seasons rainy, winter and summer. (i) Which season got the most votes? (ii) Find the central angle of each sector. (iii) Draw a pie chart to show this information.",
+          "hints": [
+            "Compare votes: Summer 90, Rainy 120, Winter 150.",
+            "Central angle = (votes/total votes) × 360°.",
+            "Use protractor to draw sectors with calculated angles."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pie chart",
+            "central angle",
+            "data representation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Draw a pie chart showing the following information. The table shows the colours preferred by a group of people. Colours: Blue (18), Green (9), Red (6), Yellow (3). Total = 36. Find the proportion of each sector. For example, Blue is 18/36 = 1/2; Green is 9/36 = 1/4 and so on. Use this to find the corresponding angles.",
+          "hints": [
+            "Calculate fraction for each colour: Blue 1/2, Green 1/4, Red 1/6, Yellow 1/12.",
+            "Multiply each fraction by 360° to get central angles.",
+            "Draw circle and sectors using protractor."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pie chart",
+            "fractions",
+            "angles"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The adjoining pie chart gives the marks scored in an examination by a student in Hindi, English, Mathematics, Social Science and Science. If the total marks obtained by the students were 540, answer the following questions. (i) In which subject did the student score 105 marks? (Hint: for 540 marks, the central angle = 360°. So, for 105 marks, what is the central angle?) (ii) How many more marks were obtained by the student in Mathematics than in Hindi? (iii) Examine whether the sum of the marks obtained in Social Science and Mathematics is more than that in Science and Hindi. (Hint: Just study the central angles).",
+          "hints": [
+            "Find central angle for 105 marks: (105/540)×360° = 70°. Match angle to subject.",
+            "Calculate marks from central angles: Marks = (angle/360°)×540.",
+            "Compare sums of angles for subjects."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "pie chart",
+            "marks calculation",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "The number of students in a hostel, speaking different languages is given below. Display the data in a pie chart. Language: Hindi (40), English (12), Marathi (9), Tamil (7), Bengali (4). Total = 72.",
+          "hints": [
+            "Calculate central angles: (number/total)×360°.",
+            "Draw circle and sectors.",
+            "Label each sector with language and angle/percentage."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pie chart",
+            "data display",
+            "languages"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "List the outcomes you can see in these experiments. (a) Spinning a wheel (b) Tossing two coins together",
+          "hints": [
+            "For wheel: Identify sectors (e.g., A, B, C, D).",
+            "For two coins: Possible outcomes: HH, HT, TH, TT."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "outcomes",
+            "sample space",
+            "experiments"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "When a die is thrown, list the outcomes of an event of getting (i) (a) a prime number (b) not a prime number. (ii) (a) a number greater than 5 (b) a number not greater than 5.",
+          "hints": [
+            "Prime numbers on die: 2, 3, 5.",
+            "Numbers greater than 5: only 6.",
+            "Not greater than 5: 1,2,3,4,5."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "dice",
+            "prime numbers",
+            "events"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the. (a) Probability of the pointer stopping on D in (Question 1-(a))? (b) Probability of getting an ace from a well shuffled deck of 52 playing cards? (c) Probability of getting a red apple. (See figure below)",
+          "hints": [
+            "(a) Count sectors: If D is one of equal sectors, probability = 1/(total sectors).",
+            "(b) Aces in deck: 4. Probability = 4/52 = 1/13.",
+            "(c) From figure: red apples/total apples."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "probability",
+            "cards",
+            "visual data"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Numbers 1 to 10 are written on ten separate slips (one number on one slip), kept in a box and mixed well. One slip is chosen from the box without looking into it. What is the probability of . (i) getting a number 6? (ii) getting a number less than 6? (iii) getting a number greater than 6? (iv) getting a 1-digit number?",
+          "hints": [
+            "Total outcomes = 10.",
+            "(i) Only one slip with 6: probability = 1/10.",
+            "(ii) Numbers less than 6: 1,2,3,4,5 → 5 outcomes.",
+            "(iii) Greater than 6: 7,8,9,10 → 4 outcomes.",
+            "(iv) 1-digit numbers: 1 to 9 → 9 outcomes."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "probability",
+            "slips",
+            "numbers"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "If you have a spinning wheel with 3 green sectors, 1 blue sector and 1 red sector, what is the probability of getting a green sector? What is the probability of getting a non blue sector?",
+          "hints": [
+            "Total sectors = 5. Green sectors = 3 → P(green) = 3/5.",
+            "Non-blue sectors: green + red = 3+1=4 → P(non-blue)=4/5."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "probability",
+            "spinning wheel",
+            "sectors"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Find the probabilities of the events given in Question 2.",
+          "hints": [
+            "Refer to outcomes listed in Q2.",
+            "Probability = (favorable outcomes)/(total outcomes=6).",
+            "Calculate for each subpart."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "probability",
+            "dice",
+            "calculation"
+          ]
+        }
+      ]
+    }
+  ]
+}

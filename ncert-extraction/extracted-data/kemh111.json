@@ -1,0 +1,218 @@
+{
+  "chapter_number": 11,
+  "chapter_title": "INTRODUCTION TO THREE DIMENSIONAL GEOMETRY",
+  "exercises": [
+    {
+      "exercise_number": "11.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A point is on the x-axis. What are its y-coordinate and z-coordinates?",
+          "hints": [
+            "Recall properties of points on coordinate axes",
+            "On x-axis, both y and z coordinates are zero"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "coordinate axes",
+            "basic concepts"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "A point is in the XZ-plane. What can you say about its y-coordinate?",
+          "hints": [
+            "Recall properties of points on coordinate planes",
+            "In XZ-plane, y-coordinate is zero"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "coordinate planes",
+            "basic concepts"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Name the octants in which the following points lie: (1, 2, 3), (4, –2, 3), (4, –2, –5), (4, 2, –5), (– 4, 2, –5), (– 4, 2, 5), (–3, –1, 6) (– 2, – 4, –7).",
+          "hints": [
+            "Use Table 11.1 for sign patterns",
+            "Check signs of x, y, z coordinates",
+            "Match with octant signs"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "octants",
+            "sign determination",
+            "coordinate geometry"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Fill in the blanks: (i) The x-axis and y-axis taken together determine a plane known as_______. (ii) The coordinates of points in the XY-plane are of the form _______. (iii) Coordinate planes divide the space into ______ octants.",
+          "hints": [
+            "Recall definitions from section 11.2",
+            "XY-plane contains points with z=0",
+            "Three planes divide space into 8 parts"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definitions",
+            "coordinate planes",
+            "basic concepts"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the distance between the following pairs of points: (i) (2, 3, 5) and (4, 3, 1) (ii) (–3, 7, 2) and (2, 4, –1) (iii) (–1, 3, – 4) and (1, –3, 4) (iv) (2, –1, 3) and (–2, 1, 3).",
+          "hints": [
+            "Use distance formula: √[(x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²]",
+            "Be careful with negative signs",
+            "Simplify radicals where possible"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "distance formula",
+            "3D geometry",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Show that the points (–2, 3, 5), (1, 2, 3) and (7, 0, –1) are collinear.",
+          "hints": [
+            "Calculate distances between all pairs",
+            "Check if sum of two distances equals third",
+            "Use distance formula from section 11.4"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "collinearity",
+            "distance formula",
+            "proof"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Verify the following: (i) (0, 7, –10), (1, 6, – 6) and (4, 9, – 6) are the vertices of an isosceles triangle. (ii) (0, 7, 10), (–1, 6, 6) and (– 4, 9, 6) are the vertices of a right angled triangle. (iii) (–1, 2, 1), (1, –2, 5), (4, –7, 8) and (2, –3, 4) are the vertices of a parallelogram.",
+          "hints": [
+            "For (i): Check if any two sides are equal",
+            "For (ii): Use Pythagoras theorem (check if a²+b²=c²)",
+            "For (iii): Show opposite sides are equal or diagonals bisect"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "triangle properties",
+            "parallelogram",
+            "distance formula",
+            "verification"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the equation of the set of points which are equidistant from the points (1, 2, 3) and (3, 2, –1).",
+          "hints": [
+            "Let point be P(x,y,z)",
+            "Set PA = PB where A=(1,2,3), B=(3,2,-1)",
+            "Square both sides to eliminate square roots",
+            "Simplify to get linear equation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "locus",
+            "equidistant points",
+            "equation derivation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the equation of the set of points P, the sum of whose distances from A (4, 0, 0) and B (– 4, 0, 0) is equal to 10.",
+          "hints": [
+            "Let P(x,y,z)",
+            "Set PA + PB = 10",
+            "Use distance formula for PA and PB",
+            "Simplify to get equation in x,y,z"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "locus",
+            "ellipse definition",
+            "distance sum",
+            "equation derivation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Miscellaneous",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Three vertices of a parallelogram ABCD are A(3, – 1, 2), B (1, 2, – 4) and C (– 1, 1, 2). Find the coordinates of the fourth vertex.",
+          "hints": [
+            "Use property: diagonals bisect each other",
+            "Midpoint of AC = Midpoint of BD",
+            "Let D(x,y,z) and solve equations"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallelogram",
+            "midpoint formula",
+            "coordinate geometry"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the lengths of the medians of the triangle with vertices A (0, 0, 6), B (0,4, 0) and (6, 0, 0).",
+          "hints": [
+            "Find midpoints of sides using midpoint formula",
+            "Calculate distance from vertex to opposite midpoint",
+            "Use distance formula for each median"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "triangle medians",
+            "midpoint formula",
+            "distance formula"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "If the origin is the centroid of the triangle PQR with vertices P (2a, 2, 6), Q (– 4, 3b, –10) and R(8, 14, 2c), then find the values of a, b and c.",
+          "hints": [
+            "Use centroid formula: ((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3, (z₁+z₂+z₃)/3)",
+            "Set centroid = (0,0,0)",
+            "Solve three equations for a, b, c"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "centroid",
+            "coordinate geometry",
+            "solving equations"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "If A and B be the points (3, 4, 5) and (–1, 3, –7), respectively, find the equation of the set of points P such that PA² + PB² = k², where k is a constant.",
+          "hints": [
+            "Let P(x,y,z)",
+            "Write expressions for PA² and PB²",
+            "Add them and set equal to k²",
+            "Simplify to get equation in x,y,z"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "locus",
+            "distance squares",
+            "equation derivation",
+            "constant sum"
+          ]
+        }
+      ]
+    }
+  ]
+}

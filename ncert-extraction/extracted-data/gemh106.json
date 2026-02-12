@@ -1,0 +1,272 @@
+{
+  "chapter_number": 6,
+  "chapter_title": "The Triangle and its Properties",
+  "exercises": [
+    {
+      "exercise_number": "6.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "In ∆ PQR, D is the mid-point of QR. PM is _________________. PD is _________________. Is QM = MR?",
+          "hints": [
+            "mid-point",
+            "median"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "median",
+            "mid-point"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Draw rough sketches for the following: (a) In ∆ABC, BE is a median. (b) In ∆PQR, PQ and PR are altitudes of the triangle. (c) In ∆XYZ, YL is an altitude in the exterior of the triangle.",
+          "hints": [
+            "median",
+            "altitude"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "median",
+            "altitude"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Verify by drawing a diagram if the median and altitude of an isosceles triangle can be same.",
+          "hints": [
+            "isoseceles triangle",
+            "median",
+            "altitude"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "isoseceles triangle",
+            "median",
+            "altitude"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the value of the unknown exterior angle x in the following diagrams:",
+          "hints": [
+            "exterior angle"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "exterior angle"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the value of the unknown interior angle x in the following figures:",
+          "hints": [
+            "interior angle"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "interior angle"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the value of the unknown x in the following diagrams:",
+          "hints": [
+            "angle sum property"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "angle sum property"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the values of the unknowns x and y in the following diagrams:",
+          "hints": [
+            "angle sum property"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "angle sum property"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Is it possible to have a triangle with the following sides? (i) 2 cm, 3 cm, 5 cm (ii) 3 cm, 6 cm, 7 cm (iii) 6 cm, 3 cm, 2 cm",
+          "hints": [
+            "triangle inequality"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "triangle inequality"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Take any point O in the interior of a triangle PQR. Is (i) OP + OQ > PQ? (ii) OQ + OR > QR? (iii) OR + OP > RP?",
+          "hints": [
+            "triangle inequality"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "triangle inequality"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "AM is a median of a triangle ABC. Is AB + BC + CA > 2 AM?",
+          "hints": [
+            "median",
+            "triangle inequality"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "median",
+            "triangle inequality"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "ABCD is a quadrilateral. Is AB + BC + CD + DA > AC + BD?",
+          "hints": [
+            "triangle inequality"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "triangle inequality"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "ABCD is quadrilateral. Is AB + BC + CD + DA < 2 (AC + BD)?",
+          "hints": [
+            "triangle inequality"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "triangle inequality"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "The lengths of two sides of a triangle are 12 cm and 15 cm. Between what two measures should the length of the third side fall?",
+          "hints": [
+            "triangle inequality"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "triangle inequality"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "6.5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "PQR is a triangle, right-angled at P. If PQ = 10 cm and PR = 24 cm, find QR.",
+          "hints": [
+            "Pythagoras theorem"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Pythagoras theorem"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "ABC is a triangle, right-angled at C. If AB = 25 cm and AC = 7 cm, find BC.",
+          "hints": [
+            "Pythagoras theorem"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Pythagoras theorem"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A 15 m long ladder reached a window 12 m high from the ground on placing it against a wall at a distance a. Find the distance of the foot of the ladder from the wall.",
+          "hints": [
+            "Pythagoras theorem"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Pythagoras theorem"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Which of the following can be the sides of a right triangle? (i) 2.5 cm,6.5 cm, 6 cm. (ii) 2 cm, 2 cm, 5 cm. (iii) 1.5 cm, 2cm, 2.5 cm. In the case of right-angled triangles, identify the right angles.",
+          "hints": [
+            "Pythagoras theorem"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Pythagoras theorem"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "A tree is broken at a height of 5 m from the ground and its top touches the ground at a distance of 12 m from the base of the tree. Find the original height of the tree.",
+          "hints": [
+            "Pythagoras theorem"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Pythagoras theorem"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Angles Q and R of a ∆PQR are 25º and 65º. Write which of the following is true: (i) PQ2 + QR2 = RP2 (ii) PQ2 + RP2 = QR2 (iii) RP2 + QR2 = PQ2",
+          "hints": [
+            "Pythagoras theorem"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "Pythagoras theorem"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Find the perimeter of the rectangle whose length is 40 cm and a diagonal is 41 cm.",
+          "hints": [
+            "Pythagoras theorem"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Pythagoras theorem"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "The diagonals of a rhombus measure 16 cm and 30 cm. Find its perimeter.",
+          "hints": [
+            "Pythagoras theorem"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Pythagoras theorem"
+          ]
+        }
+      ]
+    }
+  ]
+}

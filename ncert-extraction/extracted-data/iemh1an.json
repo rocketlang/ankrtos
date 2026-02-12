@@ -1,0 +1,402 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Number Systems",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Is zero a rational number? Can you write it in the form p/q where p and q are integers and q ≠ 0?",
+          "hints": [
+            "Recall definition of rational numbers",
+            "Zero can be expressed as 0/1, 0/2, etc.",
+            "Denominator q can be positive or negative integer"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "rational numbers",
+            "definition",
+            "zero"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find six rational numbers between 3 and 4.",
+          "hints": [
+            "Convert 3 and 4 to fractions with common denominator",
+            "Use denominator 7 or higher",
+            "List numbers between 21/7 and 28/7"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "rational numbers",
+            "between numbers",
+            "fractions"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find five rational numbers between 3/5 and 4/5.",
+          "hints": [
+            "Convert to equivalent fractions with larger denominator",
+            "Multiply numerator and denominator by same number",
+            "Choose numbers between expanded fractions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "rational numbers",
+            "fractions",
+            "between fractions"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "State whether the following statements are true or false. Give reasons for your answers.\n(i) Every natural number is a whole number.\n(ii) Every integer is a whole number.\n(iii) Every rational number is a whole number.",
+          "hints": [
+            "Recall definitions of natural, whole, integer, rational numbers",
+            "Check if each statement follows from definitions",
+            "Find counterexamples for false statements"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "number systems",
+            "definitions",
+            "true/false",
+            "counterexamples"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "State whether the following statements are true or false. Justify your answers.\n(i) Every irrational number is a real number.\n(ii) Every point on the number line is of the form √m, where m is a natural number.\n(iii) Every real number is an irrational number.",
+          "hints": [
+            "Recall relationship between real, rational, irrational numbers",
+            "Consider counterexamples for false statements",
+            "Number line contains all real numbers"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "real numbers",
+            "irrational numbers",
+            "number line",
+            "true/false"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Are the square roots of all positive integers irrational? If not, give an example of the square root of a number that is a rational number.",
+          "hints": [
+            "Consider perfect squares",
+            "Square root of perfect squares are integers",
+            "Example: √4 = 2 which is rational"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "square roots",
+            "rational numbers",
+            "perfect squares"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Show how √5 can be represented on the number line.",
+          "hints": [
+            "Use Pythagoras theorem",
+            "Construct right triangle with sides 2 and 1",
+            "Hypotenuse will be √5",
+            "Use compass to transfer length to number line"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "irrational numbers",
+            "number line",
+            "geometric construction",
+            "Pythagoras theorem"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Write the following in decimal form and say what kind of decimal expansion each has:\n(i) 36/100\n(ii) 1/11\n(iii) 4 1/8\n(iv) 3/13\n(v) 2/11\n(vi) 329/400",
+          "hints": [
+            "Perform division",
+            "Identify terminating vs non-terminating",
+            "Non-terminating repeating decimals have repeating pattern"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "decimal expansion",
+            "terminating decimals",
+            "repeating decimals",
+            "fractions to decimals"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "You know that 1/7 = 0.142857. Can you predict what the decimal expansions of 2/7, 3/7, 4/7, 5/7, 6/7 are, without actually doing the long division? If so, how?",
+          "hints": [
+            "Observe pattern in 1/7 = 0.142857",
+            "Digits 142857 repeat in cyclic order",
+            "Multiply 142857 by 2, 3, 4, 5, 6 to get other expansions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "decimal patterns",
+            "cyclic numbers",
+            "fractions",
+            "prediction"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Express the following in the form p/q, where p and q are integers and q ≠ 0:\n(i) 0.6̅\n(ii) 0.47̅\n(iii) 0.001̅",
+          "hints": [
+            "Let x = the repeating decimal",
+            "Multiply by appropriate power of 10",
+            "Subtract to eliminate repeating part",
+            "Solve for x as fraction"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "repeating decimals to fractions",
+            "algebraic method",
+            "rational numbers"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Express 0.99999... in the form p/q. Are you surprised by your answer? With your teacher and classmates discuss why the answer makes sense.",
+          "hints": [
+            "Let x = 0.999...",
+            "10x = 9.999...",
+            "Subtract: 10x - x = 9",
+            "Solve x = 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "repeating decimals",
+            "0.999... equals 1",
+            "limits",
+            "number theory"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What can the maximum number of digits be in the repeating block of digits in the decimal expansion of 1/17? Perform the division to check your answer.",
+          "hints": [
+            "Maximum repeating digits for 1/n is n-1",
+            "Perform long division of 1/17",
+            "Count digits before repetition starts"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "decimal expansion",
+            "repeating blocks",
+            "long division",
+            "number theory"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Look at several examples of rational numbers in the form p/q (q ≠ 0), where p and q are integers with no common factors other than 1 and having terminating decimal representations (expansions). Can you guess what property q must satisfy?",
+          "hints": [
+            "Examine denominators of terminating decimals",
+            "Prime factorization of denominators",
+            "Only factors 2 and/or 5 in denominator"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "terminating decimals",
+            "prime factorization",
+            "rational numbers"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Write three numbers whose decimal expansions are non-terminating non-repeating.",
+          "hints": [
+            "Construct pattern that doesn't repeat",
+            "Example: 0.01001000100001...",
+            "Irrational numbers have this property"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "irrational numbers",
+            "non-terminating decimals",
+            "non-repeating decimals"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Find three different irrational numbers between the rational numbers 5/7 and 9/11.",
+          "hints": [
+            "Convert to decimals: 5/7 ≈ 0.714285..., 9/11 ≈ 0.818181...",
+            "Construct numbers with non-repeating patterns between these values",
+            "Example: 0.75075007500075..."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "irrational numbers",
+            "between rationals",
+            "decimal construction"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Classify the following numbers as rational or irrational:\n(i) √23\n(ii) √225\n(iii) 0.3796\n(iv) 7.478478...\n(v) 1.101001000100001...",
+          "hints": [
+            "Check if square root is of perfect square",
+            "Identify repeating vs non-repeating decimals",
+            "Pattern-based decimals may be irrational"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rational vs irrational",
+            "square roots",
+            "decimal patterns",
+            "classification"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Visualise 3.765 on the number line, using successive magnification.",
+          "hints": [
+            "Locate 3.7 to 3.8 interval",
+            "Divide into 10 parts for hundredths",
+            "Further divide for thousandths",
+            "Mark 3.765"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "number line",
+            "decimal representation",
+            "successive magnification",
+            "visualization"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Visualise 4.26̅ on the number line, upto 4 decimal places.",
+          "hints": [
+            "4.26̅ = 4.262626...",
+            "Approximate as 4.2626",
+            "Use successive magnification",
+            "Show repeating nature conceptually"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "repeating decimals",
+            "number line",
+            "approximation",
+            "visualization"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Classify the following numbers as rational or irrational:\n(i) 2 - √5\n(ii) (3 + √23) - √23\n(iii) 2√7/7√7\n(iv) 1/√2\n(v) 2π",
+          "hints": [
+            "Simplify each expression",
+            "Check if result can be expressed as p/q",
+            "Irrational ± Rational = Irrational",
+            "π is irrational"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rational vs irrational",
+            "operations with irrationals",
+            "simplification",
+            "classification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Simplify each of the following expressions:\n(i) (3 + √3)(2 + √2)\n(ii) (3 + √3)(3 - √3)\n(iii) (√5 + √2)²\n(iv) (√5 - √2)(√5 + √2)",
+          "hints": [
+            "Use distributive property",
+            "Apply (a+b)(a-b) = a² - b²",
+            "Apply (a+b)² = a² + 2ab + b²",
+            "Simplify radicals"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "radical expressions",
+            "algebraic identities",
+            "simplification",
+            "surds"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Recall, π is defined as the ratio of the circumference (say c) of a circle to its diameter (say d). That is, π = c/d. This seems to contradict the fact that π is irrational. How will you resolve this contradiction?",
+          "hints": [
+            "Measurement gives approximate values",
+            "c and d cannot both be measured exactly",
+            "If one is irrational, ratio can be irrational",
+            "Perfect circle is theoretical concept"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "pi",
+            "irrational numbers",
+            "measurement",
+            "approximation",
+            "circles"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Represent √9.3 on the number line.",
+          "hints": [
+            "Construct right triangle with hypotenuse √9.3",
+            "Use Pythagoras: 9.3 = 3² + (√0.3)²",
+            "Alternatively use successive approximation",
+            "Mark point corresponding to √9.3 ≈ 3.049"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "square roots",
+            "number line",
+            "geometric construction",
+            "irrational numbers"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Rationalise the denominators of the following:\n(i) 1/√7\n(ii) 1/(√7 - √6)\n(iii) 1/(√5 + √2)\n(iv) 1/(√7 - 2)",
+          "hints": [
+            "Multiply numerator and denominator by conjugate",
+            "For 1/√a, multiply by √a/√a",
+            "Use (a-b)(a+b) = a² - b²",
+            "Simplify resulting expression"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rationalizing denominators",
+            "conjugates",
+            "radical expressions",
+            "simplification"
+          ]
+        }
+      ]
+    }
+  ]
+}

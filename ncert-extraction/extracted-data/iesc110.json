@@ -1,0 +1,448 @@
+{
+  "chapter_number": 10,
+  "chapter_title": "WORK AND ENERGY",
+  "exercises": [
+    {
+      "exercise_number": "10.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A force of 7 N acts on an object. The displacement is, say 8 m, in the direction of the force (Fig. 10.3). Let us take it that the force acts on the object through the displacement. What is the work done in this case?",
+          "hints": [
+            "Use formula W = F × s",
+            "Force and displacement are in same direction"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "work",
+            "force",
+            "displacement",
+            "calculation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "10.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "When do we say that work is done?",
+          "hints": [
+            "Recall two conditions for work",
+            "Force must act on object",
+            "Object must be displaced"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definition",
+            "work",
+            "conditions"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Write an expression for the work done when a force is acting on an object in the direction of its displacement.",
+          "hints": [
+            "Formula: W = F × s",
+            "Force and displacement in same direction"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "formula",
+            "work",
+            "expression"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Define 1 J of work.",
+          "hints": [
+            "1 joule = 1 newton × 1 metre",
+            "Force of 1 N causing 1 m displacement"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definition",
+            "joule",
+            "unit"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "A pair of bullocks exerts a force of 140 N on a plough. The field being ploughed is 15 m long. How much work is done in ploughing the length of the field?",
+          "hints": [
+            "Use W = F × s",
+            "Force = 140 N, displacement = 15 m"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "calculation",
+            "work",
+            "agriculture"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "10.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What is the kinetic energy of an object?",
+          "hints": [
+            "Energy due to motion",
+            "Depends on mass and velocity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definition",
+            "kinetic energy",
+            "motion"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Write an expression for the kinetic energy of an object.",
+          "hints": [
+            "Formula: Ek = ½ mv²",
+            "m = mass, v = velocity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "formula",
+            "kinetic energy",
+            "expression"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The kinetic energy of an object of mass, m moving with a velocity of 5 m s⁻¹ is 25 J. What will be its kinetic energy when its velocity is doubled? What will be its kinetic energy when its velocity is increased three times?",
+          "hints": [
+            "Kinetic energy ∝ v²",
+            "Double velocity → 4× energy",
+            "Triple velocity → 9× energy"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "calculation",
+            "kinetic energy",
+            "proportionality"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Exercises",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Look at the activities listed below. Reason out whether or not work is done in the light of your understanding of the term 'work'. • Suma is swimming in a pond. • A donkey is carrying a load on its back. • A wind-mill is lifting water from a well. • A green plant is carrying out photosynthesis. • An engine is pulling a train. • Food grains are getting dried in the sun. • A sailboat is moving due to wind energy.",
+          "hints": [
+            "Check two conditions: force and displacement",
+            "Consider scientific vs everyday meaning"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "application",
+            "work",
+            "real-life examples"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "An object thrown at a certain angle to the ground moves in a curved path and falls back to the ground. The initial and the final points of the path of the object lie on the same horizontal line. What is the work done by the force of gravity on the object?",
+          "hints": [
+            "Vertical displacement is zero",
+            "Work = force × displacement in direction of force"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "gravity",
+            "work",
+            "projectile motion"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A battery lights a bulb. Describe the energy changes involved in the process.",
+          "hints": [
+            "Chemical → electrical → light + heat",
+            "Energy transformation chain"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "energy transformation",
+            "electrical",
+            "light"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Certain force acting on a 20 kg mass changes its velocity from 5 m s⁻¹ to 2 m s⁻¹. Calculate the work done by the force.",
+          "hints": [
+            "Work done = change in kinetic energy",
+            "Use Ek = ½ m(v² - u²)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "work-energy theorem",
+            "calculation",
+            "kinetic energy"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "A mass of 10 kg is at a point A on a table. It is moved to a point B. If the line joining A and B is horizontal, what is the work done on the object by the gravitational force? Explain your answer.",
+          "hints": [
+            "Gravity acts vertically",
+            "Displacement is horizontal",
+            "Angle between force and displacement = 90°"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "gravity",
+            "work",
+            "horizontal motion"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "The potential energy of a freely falling object decreases progressively. Does this violate the law of conservation of energy? Why?",
+          "hints": [
+            "Potential energy converts to kinetic energy",
+            "Total mechanical energy remains constant"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "conservation of energy",
+            "free fall",
+            "potential energy"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "What are the various energy transformations that occur when you are riding a bicycle?",
+          "hints": [
+            "Chemical → muscular → kinetic + heat",
+            "Consider human body and bicycle motion"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "energy transformation",
+            "bicycle",
+            "muscular energy"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Does the transfer of energy take place when you push a huge rock with all your might and fail to move it? Where is the energy you spend going?",
+          "hints": [
+            "No displacement means no work on rock",
+            "Energy converts to heat in muscles"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "work",
+            "energy transfer",
+            "heat energy"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "A certain household has consumed 250 units of energy during a month. How much energy is this in joules?",
+          "hints": [
+            "1 unit = 1 kWh",
+            "1 kWh = 3.6 × 10⁶ J"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "energy units",
+            "conversion",
+            "electricity"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "An object of mass 40 kg is raised to a height of 5 m above the ground. What is its potential energy? If the object is allowed to fall, find its kinetic energy when it is half-way down.",
+          "hints": [
+            "Potential energy = mgh",
+            "At halfway, h = 2.5 m",
+            "Conservation of energy"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "potential energy",
+            "kinetic energy",
+            "conservation"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "What is the work done by the force of gravity on a satellite moving round the earth? Justify your answer.",
+          "hints": [
+            "Gravity provides centripetal force",
+            "Displacement perpendicular to force",
+            "Circular motion"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "gravity",
+            "satellite",
+            "circular motion",
+            "centripetal force"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Can there be displacement of an object in the absence of any force acting on it? Think. Discuss this question with your friends and teacher.",
+          "hints": [
+            "Newton's first law of motion",
+            "Object in uniform motion",
+            "Inertia"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "force",
+            "displacement",
+            "newton's laws"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "A person holds a bundle of hay over his head for 30 minutes and gets tired. Has he done some work or not? Justify your answer.",
+          "hints": [
+            "No displacement of hay",
+            "Force applied but no motion",
+            "Muscular energy converts to heat"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "work",
+            "displacement",
+            "muscular energy"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "An electric heater is rated 1500 W. How much energy does it use in 10 hours?",
+          "hints": [
+            "Energy = Power × Time",
+            "Convert hours to seconds or use kWh"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "power",
+            "energy",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "Illustrate the law of conservation of energy by discussing the energy changes which occur when we draw a pendulum bob to one side and allow it to oscillate. Why does the bob eventually come to rest? What happens to its energy eventually? Is it a violation of the law of conservation of energy?",
+          "hints": [
+            "Potential ↔ kinetic energy conversion",
+            "Energy lost to air resistance and friction",
+            "Energy converts to heat and sound"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "conservation of energy",
+            "pendulum",
+            "energy dissipation"
+          ]
+        },
+        {
+          "question_number": 16,
+          "question_text": "An object of mass, m is moving with a constant velocity, v. How much work should be done on the object in order to bring the object to rest?",
+          "hints": [
+            "Work done = change in kinetic energy",
+            "Final kinetic energy = 0",
+            "Initial kinetic energy = ½ mv²"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "work-energy theorem",
+            "stopping work",
+            "kinetic energy"
+          ]
+        },
+        {
+          "question_number": 17,
+          "question_text": "Calculate the work required to be done to stop a car of 1500 kg moving at a velocity of 60 km/h?",
+          "hints": [
+            "Convert km/h to m/s",
+            "Work = change in kinetic energy",
+            "Final KE = 0"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "calculation",
+            "work-energy theorem",
+            "stopping distance"
+          ]
+        },
+        {
+          "question_number": 18,
+          "question_text": "In each of the following a force, F is acting on an object of mass, m. The direction of displacement is from west to east shown by the longer arrow. Observe the diagrams carefully and state whether the work done by the force is negative, positive or zero.",
+          "hints": [
+            "Work = F·s cosθ",
+            "θ = angle between force and displacement",
+            "Positive: θ < 90°, Negative: θ > 90°, Zero: θ = 90°"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "work",
+            "angle",
+            "force direction"
+          ]
+        },
+        {
+          "question_number": 19,
+          "question_text": "Soni says that the acceleration in an object could be zero even when several forces are acting on it. Do you agree with her? Why?",
+          "hints": [
+            "Net force can be zero",
+            "Balanced forces",
+            "Newton's first law"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "acceleration",
+            "balanced forces",
+            "net force"
+          ]
+        },
+        {
+          "question_number": 20,
+          "question_text": "Find the energy in joules consumed in 10 hours by four devices of power 500 W each.",
+          "hints": [
+            "Total power = 4 × 500 W",
+            "Energy = Power × Time",
+            "Convert hours to seconds"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "power",
+            "energy",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 21,
+          "question_text": "A freely falling object eventually stops on reaching the ground. What happens to its kinetic energy?",
+          "hints": [
+            "Kinetic energy converts to other forms",
+            "Sound, heat, deformation",
+            "Conservation of energy"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "kinetic energy",
+            "energy transformation",
+            "impact"
+          ]
+        }
+      ]
+    }
+  ]
+}

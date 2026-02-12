@@ -1,0 +1,231 @@
+{
+  "chapter_number": 7,
+  "chapter_title": "Comparing Quantities",
+  "exercises": [
+    {
+      "exercise_number": "7.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the ratio of the following. (a) Speed of a cycle 15 km per hour to the speed of scooter 30 km per hour. (b) 5 m to 10 km (c) 50 paise to ₹ 5",
+          "hints": [
+            "Convert to same units before comparing",
+            "Simplify the ratio to lowest terms",
+            "For (b), convert km to m or m to km"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "ratio",
+            "unit conversion",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Convert the following ratios to percentages. (a) 3 : 4 (b) 2 : 3",
+          "hints": [
+            "Convert ratio to fraction",
+            "Multiply fraction by 100 to get percentage",
+            "Simplify if needed"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "ratio to percentage",
+            "fraction",
+            "percentage"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "72% of 25 students are interested in mathematics. How many are not interested in mathematics?",
+          "hints": [
+            "Find number interested using percentage",
+            "Subtract from total to find not interested",
+            "Calculate 72% of 25"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "percentage calculation",
+            "word problem",
+            "subtraction"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "A football team won 10 matches out of the total number of matches they played. If their win percentage was 40, then how many matches did they play in all?",
+          "hints": [
+            "Let total matches be x",
+            "Set up equation: 40% of x = 10",
+            "Solve for x"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "percentage",
+            "word problem",
+            "equation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "If Chameli had ₹ 600 left after spending 75% of her money, how much did she have in the beginning?",
+          "hints": [
+            "Money left is 25% of original",
+            "Set up: 25% of x = 600",
+            "Solve for original amount"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "percentage",
+            "money problem",
+            "reverse calculation"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "If 60% people in a city like cricket, 30% like football and the remaining like other games, then what per cent of the people like other games? If the total number of people is 50 lakh, find the exact number who like each type of game.",
+          "hints": [
+            "Calculate percentage for other games: 100% - (60% + 30%)",
+            "Convert percentages to numbers using total population",
+            "Multiply 50 lakh by each percentage"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "percentage",
+            "population",
+            "calculation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "7.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "During a sale, a shop offered a discount of 10% on the marked prices of all the items. What would a customer have to pay for a pair of jeans marked at ₹ 1450 and two shirts marked at ₹ 850 each?",
+          "hints": [
+            "Calculate total marked price first",
+            "Apply 10% discount to total",
+            "Subtract discount from total"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "discount",
+            "shopping",
+            "percentage calculation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The price of a TV is ₹ 13,000. The sales tax charged on it is at the rate of 12%. Find the amount that Vinod will have to pay if he buys it.",
+          "hints": [
+            "Calculate sales tax: 12% of 13000",
+            "Add tax to original price",
+            "Use formula: Amount = Price + Tax"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sales tax",
+            "percentage",
+            "addition"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Arun bought a pair of skates at a sale where the discount given was 20%. If the amount he pays is ₹ 1,600, find the marked price.",
+          "hints": [
+            "Amount paid is 80% of marked price",
+            "Set up: 80% of x = 1600",
+            "Solve for marked price"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "discount",
+            "reverse calculation",
+            "percentage"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "I purchased a hair-dryer for ₹ 5,400 including 8% VAT. Find the price before VAT was added.",
+          "hints": [
+            "Price with VAT is 108% of original",
+            "Set up: 108% of x = 5400",
+            "Solve for original price"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "VAT",
+            "reverse calculation",
+            "percentage"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "An article was purchased for ₹ 1239 including GST of 18%. Find the price of the article before GST was added?",
+          "hints": [
+            "Price with GST is 118% of original",
+            "Set up: 118% of x = 1239",
+            "Solve for original price"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "GST",
+            "reverse calculation",
+            "percentage"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "7.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "The population of a place increased to 54,000 in 2003 at a rate of 5% per annum (i) find the population in 2001. (ii) what would be its population in 2005?",
+          "hints": [
+            "Use compound interest formula for population growth",
+            "For (i): P = A / (1 + R/100)^n",
+            "For (ii): A = P(1 + R/100)^n"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "population growth",
+            "compound interest",
+            "reverse calculation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "In a Laboratory, the count of bacteria in a certain experiment was increasing at the rate of 2.5% per hour. Find the bacteria at the end of 2 hours if the count was initially 5,06,000.",
+          "hints": [
+            "Use compound growth formula",
+            "A = P(1 + R/100)^n",
+            "Calculate for n=2 hours"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "bacteria growth",
+            "compound growth",
+            "percentage"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A scooter was bought at ₹ 42,000. Its value depreciated at the rate of 8% per annum. Find its value after one year.",
+          "hints": [
+            "Use depreciation formula: Value = Original × (1 - R/100)",
+            "Calculate 8% depreciation",
+            "Subtract from original value"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "depreciation",
+            "percentage decrease",
+            "value calculation"
+          ]
+        }
+      ]
+    }
+  ]
+}

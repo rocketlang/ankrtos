@@ -1,0 +1,178 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "CROP PRODUCTION AND MANAGEMENT",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Select the correct word from the following list and fill in the blanks.\nfloat, water, crop, nutrients, preparation\n(a) The same kind of plants grown and cultivated on a large scale at a place is called _____________.\n(b) The first step before growing crops is _____________ of the soil.\n(c) Damaged seeds would _____________ on top of water.\n(d) For growing a crop, sufficient sunlight and _____________ and _____________ from the soil are essential.",
+          "hints": [
+            "Recall definitions from the chapter",
+            "Think about the properties of damaged seeds",
+            "Remember what plants need to grow"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fill in blanks",
+            "basic concepts",
+            "crop definition"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Match items in column A with those in column B.\nA\n(i) Kharif crops\n(ii) Rabi crops\n(iii) Chemical fertilisers\n(iv) Organic manure\n\nB\n(a) Food for cattle\n(b) Urea and super phosphate\n(c) Animal excreta, cow dung urine and plant waste\n(d) Wheat, gram, pea\n(e) Paddy and maize",
+          "hints": [
+            "Refer to crop seasons section",
+            "Check fertiliser vs manure differences",
+            "Look at Table 1.1"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "matching",
+            "crop classification",
+            "fertilisers",
+            "manure"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Give two examples of each.\n(a) Kharif crop\n(b) Rabi crop",
+          "hints": [
+            "Think of crops grown in rainy season",
+            "Recall winter season crops",
+            "Examples are given in the chapter"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "examples",
+            "kharif crops",
+            "rabi crops"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Write a paragraph in your own words on each of the following.\n(a) Preparation of soil\n(b) Sowing\n(c) Weeding\n(d) Threshing",
+          "hints": [
+            "Describe steps involved in each process",
+            "Include tools used",
+            "Explain importance"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "paragraph writing",
+            "agricultural practices",
+            "explanation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Explain how fertilisers are different from manure.",
+          "hints": [
+            "Compare origin (natural vs man-made)",
+            "Discuss nutrient content",
+            "Mention effects on soil"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comparison",
+            "fertilisers",
+            "manure",
+            "soil fertility"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "What is irrigation? Describe two methods of irrigation which conserve water.",
+          "hints": [
+            "Define irrigation first",
+            "Think of modern methods",
+            "Explain water conservation aspect"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "irrigation",
+            "water conservation",
+            "modern methods"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "If wheat is sown in the kharif season, what would happen? Discuss.",
+          "hints": [
+            "Consider seasonal requirements",
+            "Think about water needs",
+            "Recall growth conditions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "crop seasons",
+            "wheat cultivation",
+            "agricultural timing"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Explain how soil gets affected by the continuous plantation of crops in a field.",
+          "hints": [
+            "Think about nutrient depletion",
+            "Mention soil fertility",
+            "Discuss need for manuring"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "soil fertility",
+            "crop rotation",
+            "nutrient depletion"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "What are weeds? How can we control them?",
+          "hints": [
+            "Define weeds first",
+            "List control methods",
+            "Include manual and chemical methods"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "weeds",
+            "weed control",
+            "agricultural pests"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Arrange the following boxes in proper order to make a flow chart of sugarcane crop production.\nSending crop to sugar factory\nIrrigation\nHarvesting\nSowing\nPreparation of soil\nPloughing the field\nManuring",
+          "hints": [
+            "Start with soil preparation",
+            "End with sending to factory",
+            "Think logical sequence"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "flow chart",
+            "crop production sequence",
+            "agricultural steps"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Complete the following word puzzle with the help of clues given below.\nDown\n1. Providing water to the crops.\n2. Keeping crop grains for a long time under proper conditions.\n5. Certain plants of the same kind grown on a large scale.\nAcross\n3. A machine used for cutting the matured crop.\n4. A rabi crop that is also one of the pulses.\n6. A process of separating the grain from chaff.",
+          "hints": [
+            "Use chapter keywords",
+            "Check harvesting tools",
+            "Recall grain separation process"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "word puzzle",
+            "agricultural terms",
+            "vocabulary"
+          ]
+        }
+      ]
+    }
+  ]
+}

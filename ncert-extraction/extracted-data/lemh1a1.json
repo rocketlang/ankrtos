@@ -1,0 +1,143 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Proofs in Mathematics",
+  "exercises": [
+    {
+      "exercise_number": "A.1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Show that if x² – 5x + 6 = 0, then x = 3 or x = 2.",
+          "hints": [
+            "Factorize the quadratic equation",
+            "Use the zero product property"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "quadratic equation",
+            "factorization",
+            "direct proof"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Prove that the function f : R → R defined by f(x) = 2x + 5 is one-one.",
+          "hints": [
+            "Use definition of one-one function: f(x1) = f(x2) ⇒ x1 = x2",
+            "Solve the linear equation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "function",
+            "one-one",
+            "direct proof"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Show that if A = [[cos θ, sin θ], [-sin θ, cos θ]], then Aⁿ = [[cos nθ, sin nθ], [-sin nθ, cos nθ]].",
+          "hints": [
+            "Use mathematical induction",
+            "Verify base case n=1",
+            "Assume P(k) true and prove P(k+1) using matrix multiplication"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "matrices",
+            "mathematical induction",
+            "trigonometric matrices"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Show that in any triangle ABC, a = b cos C + c cos B.",
+          "hints": [
+            "Consider three cases: ∠C acute, obtuse, and right angle",
+            "Draw perpendicular AD to BC",
+            "Use trigonometric ratios in right triangles"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "trigonometry",
+            "triangle properties",
+            "proof by cases"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Show that the set of all prime numbers is infinite.",
+          "hints": [
+            "Assume the set is finite and list all primes",
+            "Construct N = (product of all primes) + 1",
+            "Show N has a prime factor not in the list"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "prime numbers",
+            "proof by contradiction",
+            "number theory"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Prove that the function f : R → R defined by f(x) = 2x + 5 is one-one using contrapositive.",
+          "hints": [
+            "Contrapositive: if x1 ≠ x2 then f(x1) ≠ f(x2)",
+            "Start with x1 ≠ x2 and manipulate to show 2x1+5 ≠ 2x2+5"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "function",
+            "one-one",
+            "contrapositive proof"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Show that 'if a matrix A is invertible, then A is non singular'.",
+          "hints": [
+            "Prove contrapositive: if A is singular (|A|=0), then A is not invertible",
+            "Use formula for inverse involving adjugate and determinant"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "matrices",
+            "invertible",
+            "contrapositive proof"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Disprove: For each n, 2^(2ⁿ) + 1 is a prime (n ∈ N).",
+          "hints": [
+            "Find a counter example",
+            "Check for n=5: 2^(32)+1 = 4294967297",
+            "Show it is composite (641 × 6700417)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "number theory",
+            "counter example",
+            "Fermat numbers"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Disprove: Every continuous function is differentiable.",
+          "hints": [
+            "Find a counter example",
+            "Consider φ(x) = |x|",
+            "Show it is continuous but not differentiable at x=0"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "calculus",
+            "continuity",
+            "differentiability",
+            "counter example"
+          ]
+        }
+      ]
+    }
+  ]
+}

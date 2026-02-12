@@ -1,0 +1,612 @@
+{
+  "chapter_number": 11,
+  "chapter_title": "SURFACE AREAS AND VOLUMES",
+  "exercises": [
+    {
+      "exercise_number": "11.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Diameter of the base of a cone is 10.5 cm and its slant height is 10 cm. Find its curved surface area.",
+          "hints": [
+            "Use formula: Curved surface area = πrl",
+            "Convert diameter to radius: r = diameter/2",
+            "Assume π = 22/7"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cone",
+            "curved surface area",
+            "radius",
+            "slant height"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the total surface area of a cone, if its slant height is 21 m and diameter of its base is 24 m.",
+          "hints": [
+            "Total surface area = πr(l + r)",
+            "Find radius from diameter",
+            "Use π = 22/7"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cone",
+            "total surface area",
+            "diameter",
+            "slant height"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Curved surface area of a cone is 308 cm² and its slant height is 14 cm. Find (i) radius of the base and (ii) total surface area of the cone.",
+          "hints": [
+            "Use curved surface area formula: πrl = 308",
+            "Solve for radius r",
+            "Then find total surface area: πr(l + r)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cone",
+            "radius calculation",
+            "surface area",
+            "reverse calculation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "A conical tent is 10 m high and the radius of its base is 24 m. Find (i) slant height of the tent. (ii) cost of the canvas required to make the tent, if the cost of 1 m² canvas is ₹70.",
+          "hints": [
+            "Use Pythagoras: l = √(h² + r²)",
+            "Find curved surface area = πrl",
+            "Multiply area by cost per m²"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "conical tent",
+            "real application",
+            "cost calculation",
+            "slant height"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What length of tarpaulin 3 m wide will be required to make conical tent of height 8 m and base radius 6 m? Assume that the extra length of material that will be required for stitching margins and wastage in cutting is approximately 20 cm (Use π = 3.14).",
+          "hints": [
+            "Find slant height first: l = √(h² + r²)",
+            "Curved surface area = πrl",
+            "Area of tarpaulin = length × width",
+            "Add 20 cm extra for margins"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "tarpaulin",
+            "material calculation",
+            "real world problem",
+            "wastage"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "The slant height and base diameter of a conical tomb are 25 m and 14 m respectively. Find the cost of white-washing its curved surface at the rate of ₹210 per 100 m².",
+          "hints": [
+            "Radius = diameter/2 = 7 m",
+            "Curved surface area = πrl",
+            "Calculate cost: (area/100) × 210"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "conical tomb",
+            "white-washing",
+            "cost calculation",
+            "curved surface"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "A joker's cap is in the form of a right circular cone of base radius 7 cm and height 24 cm. Find the area of the sheet required to make 10 such caps.",
+          "hints": [
+            "Find slant height: l = √(r² + h²)",
+            "Curved surface area for one cap = πrl",
+            "Multiply by 10 for 10 caps"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "joker cap",
+            "multiple objects",
+            "sheet area",
+            "cone"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "A bus stop is barricaded from the remaining part of the road, by using 50 hollow cones made of recycled cardboard. Each cone has a base diameter of 40 cm and height 1 m. If the outer side of each of the cones is to be painted and the cost of painting is ₹12 per m², what will be the cost of painting all these cones? (Use π = 3.14 and take √1.04 = 1.02)",
+          "hints": [
+            "Convert all measurements to meters",
+            "Find slant height: l = √(r² + h²)",
+            "Curved surface area for one cone = πrl",
+            "Multiply by 50, then by cost per m²"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "hollow cones",
+            "painting cost",
+            "multiple objects",
+            "unit conversion"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the surface area of a sphere of radius: (i) 10.5 cm (ii) 5.6 cm (iii) 14 cm",
+          "hints": [
+            "Use formula: Surface area = 4πr²",
+            "Assume π = 22/7",
+            "Calculate for each radius separately"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sphere",
+            "surface area",
+            "multiple parts",
+            "radius"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the surface area of a sphere of diameter: (i) 14 cm (ii) 21 cm (iii) 3.5 m",
+          "hints": [
+            "First convert diameter to radius: r = d/2",
+            "Then use 4πr²",
+            "Note unit for (iii) is meters"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sphere",
+            "diameter",
+            "surface area",
+            "unit conversion"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the total surface area of a hemisphere of radius 10 cm. (Use π = 3.14)",
+          "hints": [
+            "Total surface area of hemisphere = 3πr²",
+            "Use π = 3.14 as specified"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "hemisphere",
+            "total surface area",
+            "specific pi value"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The radius of a spherical balloon increases from 7 cm to 14 cm as air is being pumped into it. Find the ratio of surface areas of the balloon in the two cases.",
+          "hints": [
+            "Surface area ∝ r²",
+            "Ratio = (r2²)/(r1²) = (14²)/(7²)",
+            "Simplify the ratio"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "balloon",
+            "ratio",
+            "surface area comparison",
+            "proportionality"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "A hemispherical bowl made of brass has inner diameter 10.5 cm. Find the cost of tin-plating it on the inside at the rate of ₹16 per 100 cm².",
+          "hints": [
+            "Inner radius = diameter/2",
+            "Inner curved surface area = 2πr²",
+            "Cost = (area/100) × 16"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "hemispherical bowl",
+            "tin-plating",
+            "cost calculation",
+            "inner surface"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Find the radius of a sphere whose surface area is 154 cm².",
+          "hints": [
+            "Use formula: 4πr² = 154",
+            "Solve for r",
+            "Assume π = 22/7"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sphere",
+            "reverse calculation",
+            "radius from area",
+            "algebra"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "The diameter of the moon is approximately one fourth of the diameter of the earth. Find the ratio of their surface areas.",
+          "hints": [
+            "Let earth diameter = D, moon diameter = D/4",
+            "Radius ratio = 1:4",
+            "Surface area ratio = (radius ratio)²"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "moon",
+            "earth",
+            "ratio",
+            "comparison",
+            "proportionality"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "A hemispherical bowl is made of steel, 0.25 cm thick. The inner radius of the bowl is 5 cm. Find the outer curved surface area of the bowl.",
+          "hints": [
+            "Outer radius = inner radius + thickness",
+            "Outer curved surface area = 2π(outer radius)²",
+            "Convert thickness to cm"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "hemispherical bowl",
+            "thickness",
+            "outer surface",
+            "steel"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "A right circular cylinder just encloses a sphere of radius r (see Fig. 11.10). Find (i) surface area of the sphere, (ii) curved surface area of the cylinder, (iii) ratio of the areas obtained in (i) and (ii).",
+          "hints": [
+            "Sphere surface area = 4πr²",
+            "Cylinder height = 2r, radius = r",
+            "Cylinder curved surface area = 2πrh = 2πr(2r) = 4πr²",
+            "Ratio = 1:1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cylinder enclosing sphere",
+            "comparison",
+            "ratio",
+            "geometry relationship"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the volume of the right circular cone with (i) radius 6 cm, height 7 cm (ii) radius 3.5 cm, height 12 cm",
+          "hints": [
+            "Use formula: Volume = (1/3)πr²h",
+            "Assume π = 22/7",
+            "Calculate for both cases"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cone",
+            "volume",
+            "multiple parts",
+            "radius and height"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the capacity in litres of a conical vessel with (i) radius 7 cm, slant height 25 cm (ii) height 12 cm, slant height 13 cm",
+          "hints": [
+            "First find height using Pythagoras: h = √(l² - r²)",
+            "Then volume = (1/3)πr²h",
+            "Convert cm³ to litres: 1 litre = 1000 cm³"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "conical vessel",
+            "capacity",
+            "litres conversion",
+            "slant height"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The height of a cone is 15 cm. If its volume is 1570 cm³, find the radius of the base. (Use π = 3.14)",
+          "hints": [
+            "Use volume formula: (1/3)πr²h = 1570",
+            "Solve for r",
+            "Use π = 3.14 as specified"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cone",
+            "reverse calculation",
+            "radius from volume",
+            "algebra"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "If the volume of a right circular cone of height 9 cm is 48π cm³, find the diameter of its base.",
+          "hints": [
+            "Volume = (1/3)πr²h = 48π",
+            "Cancel π from both sides",
+            "Solve for r, then diameter = 2r"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cone",
+            "diameter",
+            "volume given",
+            "algebraic simplification"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "A conical pit of top diameter 3.5 m is 12 m deep. What is its capacity in kilolitres?",
+          "hints": [
+            "Radius = diameter/2 = 1.75 m",
+            "Volume = (1/3)πr²h",
+            "1 m³ = 1 kilolitre",
+            "Convert to kilolitres"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "conical pit",
+            "capacity",
+            "kilolitres",
+            "real world application"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "The volume of a right circular cone is 9856 cm³. If the diameter of the base is 28 cm, find (i) height of the cone (ii) slant height of the cone (iii) curved surface area of the cone",
+          "hints": [
+            "Radius = 14 cm",
+            "From volume, find height: h = 3V/(πr²)",
+            "Slant height l = √(r² + h²)",
+            "Curved surface area = πrl"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "cone",
+            "multiple calculations",
+            "height",
+            "slant height",
+            "surface area"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "A right triangle ABC with sides 5 cm, 12 cm and 13 cm is revolved about the side 12 cm. Find the volume of the solid so obtained.",
+          "hints": [
+            "When revolved about 12 cm side, forms a cone",
+            "Height = 12 cm, radius = 5 cm",
+            "Volume = (1/3)πr²h"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "revolution",
+            "cone formation",
+            "right triangle",
+            "3D geometry"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "If the triangle ABC in the Question 7 above is revolved about the side 5 cm, then find the volume of the solid so obtained. Find also the ratio of the volumes of the two solids obtained in Questions 7 and 8.",
+          "hints": [
+            "When revolved about 5 cm side, height = 5 cm, radius = 12 cm",
+            "Volume = (1/3)πr²h",
+            "Ratio = Volume7 : Volume8"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "revolution",
+            "comparison",
+            "ratio",
+            "different axes"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "A heap of wheat is in the form of a cone whose diameter is 10.5 m and height is 3 m. Find its volume. The heap is to be covered by canvas to protect it from rain. Find the area of the canvas required.",
+          "hints": [
+            "Radius = 5.25 m",
+            "Volume = (1/3)πr²h",
+            "Canvas covers curved surface area = πrl, where l = √(r² + h²)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "heap of wheat",
+            "real application",
+            "volume",
+            "canvas area"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the volume of a sphere whose radius is (i) 7 cm (ii) 0.63 m",
+          "hints": [
+            "Use formula: Volume = (4/3)πr³",
+            "Assume π = 22/7",
+            "Note unit difference between parts"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sphere",
+            "volume",
+            "radius",
+            "unit conversion"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the amount of water displaced by a solid spherical ball of diameter (i) 28 cm (ii) 0.21 m",
+          "hints": [
+            "Water displaced = volume of sphere",
+            "Radius = diameter/2",
+            "Volume = (4/3)πr³"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "water displacement",
+            "sphere volume",
+            "archimedes principle",
+            "diameter"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The diameter of a metallic ball is 4.2 cm. What is the mass of the ball, if the density of the metal is 8.9 g per cm³?",
+          "hints": [
+            "Find volume: V = (4/3)πr³, r = 2.1 cm",
+            "Mass = Volume × Density",
+            "Use π = 22/7"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "metallic ball",
+            "mass",
+            "density",
+            "volume calculation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The diameter of the moon is approximately one-fourth of the diameter of the earth. What fraction of the volume of the earth is the volume of the moon?",
+          "hints": [
+            "Volume ∝ r³",
+            "If radius ratio = 1:4, then volume ratio = (1/4)³ = 1/64",
+            "Moon volume = 1/64 of earth volume"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "moon",
+            "earth",
+            "volume ratio",
+            "proportionality",
+            "cube of radius"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "How many litres of milk can a hemispherical bowl of diameter 10.5 cm hold?",
+          "hints": [
+            "Volume of hemisphere = (2/3)πr³",
+            "Radius = 5.25 cm",
+            "Convert cm³ to litres: 1 litre = 1000 cm³"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "hemispherical bowl",
+            "capacity",
+            "litres",
+            "milk volume"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A hemispherical tank is made up of an iron sheet 1 cm thick. If the inner radius is 1 m, then find the volume of the iron used to make the tank.",
+          "hints": [
+            "Outer radius = inner radius + thickness = 1 m + 0.01 m",
+            "Volume of iron = Volume of outer hemisphere - Volume of inner hemisphere",
+            "Convert cm to m: 1 cm = 0.01 m"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "hemispherical tank",
+            "thickness",
+            "iron volume",
+            "hollow object",
+            "unit conversion"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Find the volume of a sphere whose surface area is 154 cm².",
+          "hints": [
+            "First find radius from surface area: 4πr² = 154",
+            "Then volume = (4/3)πr³",
+            "Assume π = 22/7"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sphere",
+            "reverse calculation",
+            "volume from surface area",
+            "two-step problem"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "A dome of a building is in the form of a hemisphere. From inside, it was white-washed at the cost of ₹4989.60. If the cost of white-washing is ₹20 per square metre, find the (i) inside surface area of the dome, (ii) volume of the air inside the dome.",
+          "hints": [
+            "Inside surface area = Cost ÷ Rate per m²",
+            "Curved surface area of hemisphere = 2πr²",
+            "From area, find radius r",
+            "Volume of air = (2/3)πr³"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "dome",
+            "white-washing",
+            "cost calculation",
+            "volume of air",
+            "two-part problem"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Twenty seven solid iron spheres, each of radius r and surface area S are melted to form a sphere with surface area S'. Find the (i) radius r' of the new sphere, (ii) ratio of S and S'.",
+          "hints": [
+            "Volume conserved: 27 × (4/3)πr³ = (4/3)π(r')³",
+            "Solve for r' in terms of r",
+            "Surface area S = 4πr², S' = 4π(r')²",
+            "Find ratio S:S'"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "sphere melting",
+            "volume conservation",
+            "surface area ratio",
+            "radius relationship"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "A capsule of medicine is in the shape of a sphere of diameter 3.5 mm. How much medicine (in mm³) is needed to fill this capsule?",
+          "hints": [
+            "Radius = 1.75 mm",
+            "Volume = (4/3)πr³",
+            "Use π = 22/7"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "capsule",
+            "medicine volume",
+            "sphere",
+            "millimeters"
+          ]
+        }
+      ]
+    }
+  ]
+}

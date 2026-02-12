@@ -1,0 +1,156 @@
+{
+  "chapter_number": 101,
+  "chapter_title": "The Tiny Teacher",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "The story of an ant’s life sounds almost untrue. The italicised phrase means (i) highly exaggerated. (ii) too remarkable to be true. (iii) not based on facts.",
+          "hints": [
+            "Look for the meaning of 'almost untrue' in context",
+            "Consider the tone of the passage"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension",
+            "vocabulary",
+            "meaning"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Complete the following sentences. (i) An ant is the smallest,—————————————— ——————————————————————— —————————————————————— (ii) We know a number of facts about an ant’s life because —————————————————————— ———————————————————————",
+          "hints": [
+            "Find the description of ants in the first paragraph",
+            "Look for how people have studied ants"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "sentence completion",
+            "information recall"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "In what ways is an ant’s life peaceful?",
+          "hints": [
+            "Look for descriptions of ant society structure",
+            "Consider how different ants perform their duties"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comprehension",
+            "analysis",
+            "social structure"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How long does it take for a grub to become a complete ant?",
+          "hints": [
+            "Look for the timeline of ant development",
+            "Count the weeks mentioned for each stage"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "information recall",
+            "life cycle"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why do the worker ants carry the grubs about?",
+          "hints": [
+            "Find the purpose mentioned in the text",
+            "Look for benefits to the grubs"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension",
+            "behavior"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What jobs are new ants trained for?",
+          "hints": [
+            "Look for the list of duties mentioned",
+            "Consider different roles in ant society"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "information recall",
+            "roles"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Name some other creatures that live in anthills.",
+          "hints": [
+            "Look for the paragraph about other creatures",
+            "Find the specific names mentioned"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "information recall",
+            "ecosystem"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Mention three things we can learn from the ‘tiny teacher’. Give reasons for choosing these items.",
+          "hints": [
+            "Look at the concluding paragraph",
+            "Identify the lessons mentioned explicitly"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "analysis",
+            "moral lessons",
+            "application"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Discuss the following topics in groups. 1. (i) What problems are you likely to face if you keep ants as pets? (ii) When a group of bees finds nectar, it informs other bees of its location, quantity, etc. through dancing. Can you guess what ants communicate to their fellow ants by touching one another’s feelers?",
+          "hints": [
+            "Consider practical aspects of ant keeping",
+            "Think about ant communication methods mentioned earlier"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "discussion",
+            "application",
+            "communication"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Complete the following poem with words from the box below. Then recite the poem. Soldiers live in barracks And birds in ———————, Much like a snake that rests In a ———————. No horse is able To sleep except in a ———————. And a dog lives well, Mind you, only in a ———————. To say ‘hi’ to an ant, if you will, You may have to climb an ———————. hole kennel nests anthill stable",
+          "hints": [
+            "Match each animal with its typical dwelling",
+            "Consider the context of each line"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "poem completion",
+            "vocabulary",
+            "animal habitats"
+          ]
+        }
+      ]
+    }
+  ]
+}

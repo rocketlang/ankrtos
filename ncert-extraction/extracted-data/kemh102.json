@@ -1,0 +1,588 @@
+{
+  "chapter_number": 2,
+  "chapter_title": "RELATIONS AND FUNCTIONS",
+  "exercises": [
+    {
+      "exercise_number": "2.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "If (x/3 + 1, y - 2/3) = (5/3, 1/3), find the values of x and y.",
+          "hints": [
+            "Equate corresponding components of ordered pairs",
+            "Solve the two linear equations"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "ordered pairs",
+            "equality",
+            "linear equations"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "If the set A has 3 elements and the set B = {3, 4, 5}, then find the number of elements in (A × B).",
+          "hints": [
+            "Use formula n(A × B) = n(A) × n(B)",
+            "Count elements in each set"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cartesian product",
+            "cardinality",
+            "set theory"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "If G = {7, 8} and H = {5, 4, 2}, find G × H and H × G.",
+          "hints": [
+            "List all ordered pairs",
+            "Note order matters in cartesian product"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cartesian product",
+            "ordered pairs",
+            "finite sets"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "State whether each of the following statements are true or false. If the statement is false, rewrite the given statement correctly. (i) If P = {m, n} and Q = {n, m}, then P × Q = {(m, n), (n, m)}. (ii) If A and B are non-empty sets, then A × B is a non-empty set of ordered pairs (x, y) such that x ∈ A and y ∈ B. (iii) If A = {1, 2}, B = {3, 4}, then A × (B ∩ φ) = φ.",
+          "hints": [
+            "Recall definition of cartesian product",
+            "Empty set properties",
+            "Order matters in ordered pairs"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cartesian product",
+            "empty set",
+            "set theory",
+            "true/false"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "If A = {–1, 1}, find A × A × A.",
+          "hints": [
+            "Find all ordered triplets",
+            "Systematically list combinations"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cartesian product",
+            "ordered triplets",
+            "finite sets"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "If A × B = {(a, x), (a, y), (b, x), (b, y)}. Find A and B.",
+          "hints": [
+            "Extract first elements for A",
+            "Extract second elements for B"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cartesian product",
+            "reverse engineering",
+            "set extraction"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Let A = {1, 2}, B = {1, 2, 3, 4}, C = {5, 6} and D = {5, 6, 7, 8}. Verify that (i) A × (B ∩ C) = (A × B) ∩ (A × C). (ii) A × C is a subset of B × D.",
+          "hints": [
+            "Find intersections first",
+            "Compute cartesian products",
+            "Check subset relation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cartesian product",
+            "intersection",
+            "subset",
+            "verification"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Let A = {1, 2} and B = {3, 4}. Write A × B. How many subsets will A × B have? List them.",
+          "hints": [
+            "First find A × B",
+            "Number of subsets = 2^n where n = number of elements",
+            "List all subsets including empty set"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cartesian product",
+            "subsets",
+            "power set",
+            "combinatorics"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Let A and B be two sets such that n(A) = 3 and n(B) = 2. If (x, 1), (y, 2), (z, 1) are in A × B, find A and B, where x, y and z are distinct elements.",
+          "hints": [
+            "From ordered pairs, deduce elements of A and B",
+            "Check cardinality matches given n(A) and n(B)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cartesian product",
+            "set reconstruction",
+            "distinct elements"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "The Cartesian product A × A has 9 elements among which are found (–1, 0) and (0, 1). Find the set A and the remaining elements of A × A.",
+          "hints": [
+            "If n(A × A) = 9, then n(A) = 3",
+            "From given pairs, deduce elements of A",
+            "List all 9 ordered pairs"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "cartesian product",
+            "set reconstruction",
+            "ordered pairs",
+            "deduction"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Let A = {1, 2, 3, ..., 14}. Define a relation R from A to A by R = {(x, y) : 3x – y = 0, where x, y ∈ A}. Write down its domain, codomain and range.",
+          "hints": [
+            "Solve y = 3x",
+            "Find pairs where both x and y are in A",
+            "Domain = set of first elements, Range = set of second elements"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "relation",
+            "domain",
+            "range",
+            "codomain",
+            "linear equation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Define a relation R on the set N of natural numbers by R = {(x, y) : y = x + 5, x is a natural number less than 4; x, y ∈ N}. Depict this relationship using roster form. Write down the domain and the range.",
+          "hints": [
+            "List x = 1, 2, 3 only",
+            "Compute y = x + 5 for each",
+            "Write as ordered pairs"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "relation",
+            "roster form",
+            "domain",
+            "range",
+            "natural numbers"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A = {1, 2, 3, 5} and B = {4, 6, 9}. Define a relation R from A to B by R = {(x, y): the difference between x and y is odd; x ∈ A, y ∈ B}. Write R in roster form.",
+          "hints": [
+            "Check |x - y| is odd for each combination",
+            "List qualifying pairs"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "relation",
+            "roster form",
+            "odd difference",
+            "set theory"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The Fig 2.7 shows a relationship between the sets P and Q. Write this relation (i) in set-builder form (ii) roster form. What is its domain and range?",
+          "hints": [
+            "From figure, identify mapping",
+            "Describe rule in set-builder",
+            "List pairs in roster",
+            "Extract domain and range"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "relation",
+            "set-builder form",
+            "roster form",
+            "domain",
+            "range",
+            "arrow diagram"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Let A = {1, 2, 3, 4, 6}. Let R be the relation on A defined by {(a, b): a, b ∈ A, b is exactly divisible by a}. (i) Write R in roster form (ii) Find the domain of R (iii) Find the range of R.",
+          "hints": [
+            "Check divisibility for all pairs",
+            "b should be multiple of a",
+            "List all such pairs"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "relation",
+            "divisibility",
+            "roster form",
+            "domain",
+            "range"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Determine the domain and range of the relation R defined by R = {(x, x + 5) : x ∈ {0, 1, 2, 3, 4, 5}}.",
+          "hints": [
+            "List the pairs explicitly",
+            "Domain = set of x values",
+            "Range = set of (x+5) values"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "relation",
+            "domain",
+            "range",
+            "finite set"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Write the relation R = {(x, x^3) : x is a prime number less than 10} in roster form.",
+          "hints": [
+            "List primes less than 10",
+            "Compute cube for each",
+            "Write as ordered pairs"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "relation",
+            "roster form",
+            "prime numbers",
+            "cubes"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Let A = {x, y, z} and B = {1, 2}. Find the number of relations from A to B.",
+          "hints": [
+            "Number of relations = 2^(n(A)×n(B))",
+            "Compute n(A) and n(B)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "relation",
+            "number of relations",
+            "combinatorics",
+            "power set"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Let R be the relation on Z defined by R = {(a, b): a, b ∈ Z, a – b is an integer}. Find the domain and range of R.",
+          "hints": [
+            "a - b is always integer for integers a, b",
+            "Relation includes all pairs of integers",
+            "Domain = Z, Range = Z"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "relation",
+            "integers",
+            "domain",
+            "range",
+            "universal relation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the following relations are functions? Give reasons. If it is a function, determine its domain and range. (i) {(2,1), (5,1), (8,1), (11,1), (14,1), (17,1)} (ii) {(2,1), (4,2), (6,3), (8,4), (10,5), (12,6), (14,7)} (iii) {(1,3), (1,5), (2,5)}.",
+          "hints": [
+            "Check each first element appears only once",
+            "If yes, it's a function",
+            "Extract domain and range"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "function",
+            "domain",
+            "range",
+            "relation test"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the domain and range of the following real functions: (i) f(x) = –|x| (ii) f(x) = √(9 – x^2).",
+          "hints": [
+            "(i) |x| defined for all real x, so domain = R; range: f(x) ≤ 0",
+            "(ii) 9 - x^2 ≥ 0 for real output, solve inequality"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "function",
+            "domain",
+            "range",
+            "absolute value",
+            "square root"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A function f is defined by f(x) = 2x – 5. Write down the values of (i) f(0), (ii) f(7), (iii) f(–3).",
+          "hints": [
+            "Substitute x values into f(x) = 2x - 5"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "function evaluation",
+            "linear function"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The function 't' which maps temperature in degree Celsius into temperature in degree Fahrenheit is defined by t(C) = (9C/5) + 32. Find (i) t(0) (ii) t(28) (iii) t(–10) (iv) The value of C, when t(C) = 212.",
+          "hints": [
+            "Substitute C values into formula",
+            "For (iv), solve (9C/5) + 32 = 212"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "function evaluation",
+            "temperature conversion",
+            "linear equation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the range of each of the following functions. (i) f(x) = 2 – 3x, x ∈ R, x > 0. (ii) f(x) = x^2 + 2, x is a real number. (iii) f(x) = x, x is a real number.",
+          "hints": [
+            "(i) For x > 0, f(x) < 2",
+            "(ii) x^2 ≥ 0, so f(x) ≥ 2",
+            "(iii) Identity function, range = R"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "function",
+            "range",
+            "linear",
+            "quadratic",
+            "identity"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Miscellaneous",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "The relation f is defined by f(x) = { x^2, 0 ≤ x ≤ 3; 3x, 3 ≤ x ≤ 10 }. The relation g is defined by g(x) = { x^2, 0 ≤ x ≤ 2; 3x, 2 ≤ x ≤ 10 }. Show that f is a function and g is not a function.",
+          "hints": [
+            "Check at overlapping x values: for f, at x=3 both rules give same value 9",
+            "For g, at x=2, rules give 4 and 6 (two images)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "function",
+            "piecewise",
+            "overlap test",
+            "vertical line test"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "If f(x) = x^2, find [f(1.1) – f(1)] / (1.1 – 1).",
+          "hints": [
+            "Compute f(1.1) = (1.1)^2",
+            "Compute f(1) = 1",
+            "Evaluate difference quotient"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "function",
+            "difference quotient",
+            "quadratic",
+            "evaluation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the domain of the function f(x) = (x^2 + 2x + 1) / (x^2 – 8x + 12).",
+          "hints": [
+            "Denominator cannot be zero",
+            "Factor denominator: x^2 - 8x + 12 = (x-6)(x-2)",
+            "Domain: R - {2, 6}"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "function",
+            "domain",
+            "rational function",
+            "excluded values"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the domain and the range of the real function f defined by f(x) = √(x – 1).",
+          "hints": [
+            "x - 1 ≥ 0 for real output",
+            "Domain: [1, ∞)",
+            "Range: [0, ∞) since square root ≥ 0"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "function",
+            "domain",
+            "range",
+            "square root"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the domain and the range of the real function f defined by f(x) = |x – 1|.",
+          "hints": [
+            "|x-1| defined for all real x",
+            "Domain: R",
+            "Range: [0, ∞)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "function",
+            "domain",
+            "range",
+            "absolute value"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Let f = { (x, x^2/(1+x^2)) : x ∈ R } be a function from R into R. Determine the range of f.",
+          "hints": [
+            "Let y = x^2/(1+x^2)",
+            "Solve for x^2 in terms of y",
+            "Since x^2 ≥ 0, get condition on y"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "function",
+            "range",
+            "rational function",
+            "inequality"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Let f, g : R → R be defined, respectively by f(x) = x + 1, g(x) = 2x – 3. Find f + g, f – g and f/g.",
+          "hints": [
+            "(f+g)(x) = f(x) + g(x)",
+            "(f-g)(x) = f(x) - g(x)",
+            "(f/g)(x) = f(x)/g(x), where g(x) ≠ 0"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "function operations",
+            "addition",
+            "subtraction",
+            "division",
+            "algebra of functions"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Let f = {(1,1), (2,3), (0,–1), (–1, –3)} be a function from Z to Z defined by f(x) = ax + b, for some integers a, b. Determine a, b.",
+          "hints": [
+            "Use two points to form equations",
+            "Solve system for a and b"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear function",
+            "parameter determination",
+            "system of equations"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Let R be a relation from N to N defined by R = {(a, b) : a, b ∈ N and a = b^2}. Are the following true? (i) (a,a) ∈ R, for all a ∈ N (ii) (a,b) ∈ R, implies (b,a) ∈ R (iii) (a,b) ∈ R, (b,c) ∈ R implies (a,c) ∈ R. Justify your answer in each case.",
+          "hints": [
+            "(i) Check if a = a^2 for all natural numbers",
+            "(ii) If a = b^2, is b = a^2?",
+            "(iii) If a = b^2 and b = c^2, is a = c^2?"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "relation",
+            "properties",
+            "reflexive",
+            "symmetric",
+            "transitive",
+            "natural numbers"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Let A = {1,2,3,4}, B = {1,5,9,11,15,16} and f = {(1,5), (2,9), (3,1), (4,5), (2,11)}. Are the following true? (i) f is a relation from A to B (ii) f is a function from A to B. Justify your answer in each case.",
+          "hints": [
+            "(i) Check if all pairs have first element in A, second in B",
+            "(ii) Check if any first element repeats with different second element"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "relation",
+            "function",
+            "domain",
+            "codomain",
+            "mapping"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Let f be the subset of Z × Z defined by f = {(ab, a + b) : a, b ∈ Z}. Is f a function from Z to Z? Justify your answer.",
+          "hints": [
+            "Check if same first element (ab) can come from different (a,b) giving different a+b",
+            "Find counterexample: e.g., 6 = 2×3 = 1×6 but 2+3 ≠ 1+6"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "function",
+            "integers",
+            "product-sum",
+            "counterexample"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Let A = {9,10,11,12,13} and let f : A → N be defined by f(n) = the highest prime factor of n. Find the range of f.",
+          "hints": [
+            "Compute highest prime factor for each n in A",
+            "List results"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "function",
+            "range",
+            "prime factors",
+            "highest prime factor"
+          ]
+        }
+      ]
+    }
+  ]
+}

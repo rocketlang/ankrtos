@@ -1,0 +1,248 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Integers",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Write down a pair of integers whose: (a) sum is –7 (b) difference is –10 (c) sum is 0",
+          "hints": [
+            "Think of positive and negative integer combinations",
+            "Use number line for visualization",
+            "Check if sum/difference matches required value"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "integer addition",
+            "integer subtraction",
+            "pair finding"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "(a) Write a pair of negative integers whose difference gives 8. (b) Write a negative integer and a positive integer whose sum is –5. (c) Write a negative integer and a positive integer whose difference is –3.",
+          "hints": [
+            "For (a): Consider two negative numbers where subtraction yields positive",
+            "For (b): Negative should be larger in magnitude than positive",
+            "For (c): Difference negative means first number < second number"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "negative integers",
+            "integer operations",
+            "problem solving"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "In a quiz, team A scored –40, 10, 0 and team B scored 10, 0, –40 in three successive rounds. Which team scored more? Can we say that we can add integers in any order?",
+          "hints": [
+            "Calculate total score for each team",
+            "Compare the sums",
+            "Check if order affects the total sum"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "integer addition",
+            "commutative property",
+            "real-world application"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Fill in the blanks to make the following statements true: (i) (–5) + (–8) = (–8) + (............) (ii) –53 + ............ = –53 (iii) 17 + ............ = 0 (iv) [13 + (–12)] + (............) = 13 + [(–12) + (–7)] (v) (–4) + [15 + (–3)] = [–4 + 15] + ............",
+          "hints": [
+            "Use commutative property for (i)",
+            "Additive identity for (ii)",
+            "Additive inverse for (iii)",
+            "Associative property for (iv) and (v)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "properties of integers",
+            "commutative",
+            "associative",
+            "additive identity"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find each of the following products: (a) 3 × (–1) (b) (–1) × 225 (c) (–21) × (–30) (d) (–316) × (–1) (e) (–15) × 0 × (–18) (f) (–12) × (–11) × (10) (g) 9 × (–3) × (–6) (h) (–18) × (–5) × (–4) (i) (–1) × (–2) × (–3) × 4 (j) (–3) × (–6) × (–2) × (–1)",
+          "hints": [
+            "Remember sign rules: positive × negative = negative, negative × negative = positive",
+            "Zero multiplied by any number is zero",
+            "Multiply step by step for multiple numbers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "integer multiplication",
+            "sign rules",
+            "multiple operations"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Verify the following: (a) 18 × [7 + (–3)] = [18 × 7] + [18 × (–3)] (b) (–21) × [(–4) + (–6)] = [(–21) × (–4)] + [(–21) × (–6)]",
+          "hints": [
+            "Calculate LHS and RHS separately",
+            "Use distributive property: a × (b + c) = a × b + a × c",
+            "Check if both sides are equal"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "distributive property",
+            "verification",
+            "integer operations"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "(i) For any integer a, what is (–1) × a equal to? (ii) Determine the integer whose product with (–1) is (a) –22 (b) 37 (c) 0",
+          "hints": [
+            "(–1) × a = –a for any integer a",
+            "To find original number, divide given product by (–1)",
+            "Use inverse operation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiplication by –1",
+            "inverse operations",
+            "conceptual understanding"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Starting from (–1) × 5, write various products showing some pattern to show (–1) × (–1) = 1.",
+          "hints": [
+            "Create a decreasing pattern: (–1) × 5 = –5, (–1) × 4 = –4, etc.",
+            "Observe how products change as multiplier decreases",
+            "Extend pattern to (–1) × 0 and then (–1) × (–1)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "pattern recognition",
+            "multiplication patterns",
+            "conceptual proof"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Evaluate each of the following: (a) (–30) ÷ 10 (b) 50 ÷ (–5) (c) (–36) ÷ (–9) (d) (–49) ÷ (49) (e) 13 ÷ [(–2) + 1] (f) 0 ÷ (–12) (g) (–31) ÷ [(–30) + (–1)] (h) [(–36) ÷ 12] ÷ 3 (i) [(–6) + 5)] ÷ [(–2) + 1]",
+          "hints": [
+            "Remember division sign rules: positive ÷ negative = negative, negative ÷ negative = positive",
+            "Simplify brackets first",
+            "0 divided by any non-zero integer is 0"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "integer division",
+            "order of operations",
+            "sign rules"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Verify that a ÷ (b + c) ≠ (a ÷ b) + (a ÷ c) for each of the following values of a, b and c. (a) a = 12, b = –4, c = 2 (b) a = (–10), b = 1, c = 1",
+          "hints": [
+            "Calculate LHS: a ÷ (b + c)",
+            "Calculate RHS: (a ÷ b) + (a ÷ c)",
+            "Show they are not equal for given values"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "division properties",
+            "counterexample",
+            "verification"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Fill in the blanks: (a) 369 ÷ _____ = 369 (b) (–75) ÷ _____ = –1 (c) (–206) ÷ _____ = 1 (d) –87 ÷ _____ = 87 (e) _____ ÷ 1 = –87 (f) _____ ÷ 48 = –1 (g) 20 ÷ _____ = –2 (h) _____ ÷ (4) = –3",
+          "hints": [
+            "Use identity property: a ÷ 1 = a",
+            "Think inverse operations",
+            "For division to give 1, divisor must equal dividend"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "division facts",
+            "inverse operations",
+            "missing numbers"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Write five pairs of integers (a, b) such that a ÷ b = –3. One such pair is (6, –2) because 6 ÷ (–2) = (–3).",
+          "hints": [
+            "Choose any integer for b (non-zero)",
+            "Multiply b by –3 to get a",
+            "Both positive/negative combinations possible"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "integer division",
+            "pair generation",
+            "pattern creation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "The temperature at 12 noon was 10°C above zero. If it decreases at the rate of 2°C per hour until midnight, at what time would the temperature be 8°C below zero? What would be the temperature at mid-night?",
+          "hints": [
+            "Calculate total drop needed: from +10°C to –8°C = 18°C drop",
+            "Time = total drop ÷ rate",
+            "Midnight temperature = initial + (rate × hours)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "real-world application",
+            "rate calculation",
+            "temperature change"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "In a class test (+3) marks are given for every correct answer and (–2) marks are given for every incorrect answer and no marks for not attempting any question. (i) Radhika scored 20 marks. If she has got 12 correct answers, how many questions has she attempted incorrectly? (ii) Mohini scores –5 marks in this test, though she has got 7 correct answers. How many questions has she attempted incorrectly?",
+          "hints": [
+            "Let x = incorrect answers",
+            "Equation: (3 × correct) + (–2 × incorrect) = total score",
+            "Solve for x in both cases"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear equation",
+            "real-world problem",
+            "marks calculation"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "An elevator descends into a mine shaft at the rate of 6 m/min. If the descent starts from 10 m above the ground level, how long will it take to reach –350 m.",
+          "hints": [
+            "Total distance = from +10m to –350m = 360m",
+            "Time = distance ÷ rate",
+            "Consider direction: descent means negative movement"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "rate-time-distance",
+            "real-world application",
+            "elevator problem"
+          ]
+        }
+      ]
+    }
+  ]
+}

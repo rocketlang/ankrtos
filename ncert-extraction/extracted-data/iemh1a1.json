@@ -1,0 +1,247 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "PROOFS IN MATHEMATICS",
+  "exercises": [
+    {
+      "exercise_number": "A1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "State whether the following statements are always true, always false or ambiguous. Justify your answers.",
+          "hints": [
+            "Check if the statement is always true or always false",
+            "Check if the statement is ambiguous"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "statements",
+            "ambiguity"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "State whether the following statements are true or false. Give reasons for your answers.",
+          "hints": [
+            "Check if the statement is true or false",
+            "Give reasons for your answer"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "statements",
+            "truth"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Restate the following statements with appropriate conditions, so that they become true statements.",
+          "hints": [
+            "Restate the statement with conditions",
+            "Make the statement true"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "statements",
+            "conditions"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Use deductive reasoning to answer the following:",
+          "hints": [
+            "Use deductive reasoning",
+            "Answer the questions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "deductive reasoning",
+            "logic"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Once again you are given four cards. Each card has a number printed on one side and a letter on the other side. Which are the only two cards you need to turn over to check whether the following rule holds?",
+          "hints": [
+            "Check the rule",
+            "Turn over the cards"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cards",
+            "rule"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Take any three consecutive even numbers and find their product; for example, 2 × 4 × 6 = 48, 4 × 6 × 8 = 192, and so on. Make three conjectures about these products.",
+          "hints": [
+            "Take three consecutive even numbers",
+            "Make conjectures about their products"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "conjectures",
+            "products"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Go back to Pascal’s triangle. Make a conjecture about Line 4 and Line 5. Does your conjecture hold? Does your conjecture hold for Line 6 too?",
+          "hints": [
+            "Go back to Pascal's triangle",
+            "Make a conjecture about Line 4 and Line 5"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "Pascal's triangle",
+            "conjectures"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Let us look at the triangular numbers (see Fig.A1.2) again. Add two consecutive triangular numbers. For example, T1 + T2 = 4, T2 + T3 = 9, T3+ T4 = 16. What about T4 + T5 ? Make a conjecture about Tn–1 +Tn.",
+          "hints": [
+            "Look at the triangular numbers",
+            "Make a conjecture about Tn-1 + Tn"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "triangular numbers",
+            "conjectures"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Look at the following pattern: 12 = 1, 112 = 121, 1112 = 12321, 11112 = 1234321, 111112 = 123454321. Make a conjecture about each of the following: 1111112 = , 11111112 = . Check if your conjecture is true.",
+          "hints": [
+            "Look at the pattern",
+            "Make a conjecture about the next numbers"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "pattern",
+            "conjectures"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "List five axioms (postulates) used in this book.",
+          "hints": [
+            "List the axioms",
+            "Used in this book"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "axioms",
+            "postulates"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A1.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find counter-examples to disprove the following statements:",
+          "hints": [
+            "Find counter-examples",
+            "Disprove the statements"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "counter-examples",
+            "disproof"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Take your favourite proof and analyse it step-by-step along the lines discussed in Section A1.5 (what is given, what has been proved, what theorems and axioms have been used, and so on).",
+          "hints": [
+            "Take your favourite proof",
+            "Analyse it step-by-step"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "proof",
+            "analysis"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Prove that the sum of two odd numbers is even.",
+          "hints": [
+            "Prove the statement",
+            "Sum of two odd numbers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "proof",
+            "sum of odd numbers"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Prove that the product of two odd numbers is odd.",
+          "hints": [
+            "Prove the statement",
+            "Product of two odd numbers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "proof",
+            "product of odd numbers"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Prove that the sum of three consecutive even numbers is divisible by 6.",
+          "hints": [
+            "Prove the statement",
+            "Sum of three consecutive even numbers"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "proof",
+            "sum of even numbers"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Prove that infinitely many points lie on the line whose equation is y = 2x. (Hint : Consider the point (n, 2n) for any integer n.)",
+          "hints": [
+            "Prove the statement",
+            "Infinitely many points"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "proof",
+            "infinitely many points"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "You must have had a friend who must have told you to think of a number and do various things to it, and then without knowing your original number, telling you what number you ended up with. Here are two examples. Examine why they work.",
+          "hints": [
+            "Examine the examples",
+            "Why they work"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "examples",
+            "why they work"
+          ]
+        }
+      ]
+    }
+  ]
+}

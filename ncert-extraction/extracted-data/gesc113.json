@@ -1,0 +1,239 @@
+{
+  "chapter_number": 13,
+  "chapter_title": "Wastewater Story",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Fill in the blanks:\n(a) Cleaning of water is a process of removing ____________.\n(b) Wastewater released by houses is called ____________.\n(c) Dried ____________ is used as manure.\n(d) Drains get blocked by ____________ and ____________.",
+          "hints": [
+            "Recall definitions from the chapter",
+            "Think about wastewater treatment by-products",
+            "Consider common drain blockages mentioned"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fill in blanks",
+            "definitions",
+            "wastewater basics"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What is sewage? Explain why it is harmful to discharge untreated sewage into rivers or seas.",
+          "hints": [
+            "Define sewage from the chapter",
+            "List contaminants in sewage",
+            "Explain environmental and health impacts"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sewage definition",
+            "environmental impact",
+            "water pollution"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why should oils and fats be not released in the drain? Explain.",
+          "hints": [
+            "Think about pipe blockages",
+            "Consider soil filtration impact",
+            "Recall better housekeeping practices"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "housekeeping practices",
+            "drain maintenance",
+            "pollution prevention"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Describe the steps involved in getting clarified water from wastewater.",
+          "hints": [
+            "Recall WWTP process steps",
+            "Start from bar screens to clarification",
+            "Include physical and biological processes"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "wastewater treatment",
+            "clarification process",
+            "WWTP steps"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "What is sludge? Explain how it is treated.",
+          "hints": [
+            "Define sludge from settling process",
+            "Describe anaerobic digestion",
+            "Mention biogas and manure production"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sludge treatment",
+            "anaerobic bacteria",
+            "biogas production"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Untreated human excreta is a health hazard. Explain.",
+          "hints": [
+            "List diseases caused",
+            "Explain water and soil pollution",
+            "Mention groundwater contamination"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sanitation",
+            "health hazards",
+            "disease transmission"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Name two chemicals used to disinfect water.",
+          "hints": [
+            "Recall from treatment plant description",
+            "Think about common water disinfectants"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "water disinfection",
+            "chemical treatment",
+            "purification"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Explain the function of bar screens in a wastewater treatment plant.",
+          "hints": [
+            "Describe what bar screens remove",
+            "Explain purpose as first treatment step"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "bar screens",
+            "physical treatment",
+            "waste removal"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Explain the relationship between sanitation and disease.",
+          "hints": [
+            "Connect poor sanitation to disease spread",
+            "Give specific disease examples",
+            "Mention open defecation issues"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sanitation",
+            "disease prevention",
+            "public health"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Outline your role as an active citizen in relation to sanitation.",
+          "hints": [
+            "Think about individual responsibilities",
+            "Consider community action",
+            "Mention reporting and awareness"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "citizen role",
+            "community action",
+            "sanitation practices"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Here is a crossword puzzle: Good luck!\n\nAcross\n3. Liquid waste products\n4. Solid waste extracted in sewage treatment\n6. A word related to hygiene\n8. Waste matter discharged from human body\n\nDown\n1. Used water\n2. A pipe carrying sewage\n5. Micro-organisms which causes cholera\n7. A chemical to disinfect water",
+          "hints": [
+            "Use chapter keywords",
+            "Match definitions to terms",
+            "Check spelling carefully"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "crossword puzzle",
+            "vocabulary",
+            "keywords"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Study the following statements about ozone:\n(a) It is essential for breathing of living organisms.\n(b) It is used to disinfect water.\n(c) It absorbs ultraviolet rays.\n(d) Its proportion in air is about 3%.\n\nWhich of these statements are correct?\n(i) (a), (b) and (c)\n(ii) (b) and (c)\n(iii) (a) and (d)\n(iv) All four",
+          "hints": [
+            "Recall ozone properties from general knowledge",
+            "Think about ozone layer function",
+            "Consider water treatment methods"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "ozone",
+            "multiple choice",
+            "critical thinking"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Extended Learning",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Construct a crossword puzzle of your own using the keywords.",
+          "hints": [
+            "Use all chapter keywords",
+            "Create clues based on definitions",
+            "Ensure proper grid layout"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "creative activity",
+            "vocabulary reinforcement",
+            "puzzle making"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Then and now: Talk to your grand parents and other elderly people in the neighbourhood. Find out the sewage disposal systems available to them. You can also write letters to people living in far off places to get more information. Prepare a brief report on the information you collected.",
+          "hints": [
+            "Prepare interview questions",
+            "Compare past and present systems",
+            "Document findings systematically"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "research project",
+            "historical comparison",
+            "field work"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Visit a sewage treatment plant. It could be as exciting and enriching as a visit to a zoo, a museum, or a park. To guide your observation here are a few suggestions.\nRecord in your notepad:\nPlace ___________\nDate ___________\nTime ___________\nName of the official at the plant ___________ Guide/Teacher ___________\n(a) The location of the sewage plant.\n(b) Treatment capacity.\n(c) The purpose of screening as the initial process.\n(d) How is air bubbled through the aeration tank?\n(e) How safe is the water at the end of the treatment? How is it tested?\n(f) Where is the water discharged after treatment?\n(g) What happens to the plant during heavy rains?\n(h) Is biogas consumed within the plant or sold to other consumers?\n(i) What happens to the treated sludge?\n(j) Is there any special effort to protect nearby houses from the plant?\n(k) Other observations.",
+          "hints": [
+            "Prepare questions in advance",
+            "Take notes during visit",
+            "Observe each treatment stage carefully"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "field trip",
+            "practical observation",
+            "treatment plant study"
+          ]
+        }
+      ]
+    }
+  ]
+}

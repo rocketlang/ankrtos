@@ -1,0 +1,151 @@
+{
+  "chapter_number": 5,
+  "chapter_title": "CONTINUITY AND DIFFERENTIABILITY",
+  "exercises": [
+    {
+      "exercise_number": "5.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Prove that the function f (x) = 5x – 3 is continuous at x = 0, at x = – 3 and at x = 5.",
+          "hints": [
+            "Use the definition of continuity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "continuity"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Examine the continuity of the function f (x) = 2x2 – 1 at x = 3.",
+          "hints": [
+            "Use the definition of continuity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "continuity"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Examine the following functions for continuity.",
+          "hints": [
+            "Use the definition of continuity"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "continuity"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Differentiate the functions with respect to x in Exercises 1 to 8.",
+          "hints": [
+            "Use the chain rule and product rule"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "differentiation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Prove that the function f given by f (x) = | x – 1 |, x ∈ R is not differentiable at x = 1.",
+          "hints": [
+            "Use the definition of differentiability"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "differentiability"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find dy/dx in the following:",
+          "hints": [
+            "Use implicit differentiation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "implicit differentiation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Differentiate the following w.r.t. x:",
+          "hints": [
+            "Use the chain rule and product rule"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "differentiation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Differentiate the functions given in Exercises 1 to 11 w.r.t. x.",
+          "hints": [
+            "Use logarithmic differentiation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "logarithmic differentiation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.6",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "If x and y are connected parametrically by the equations given in Exercises 1 to 10, without eliminating the parameter, Find dy/dx.",
+          "hints": [
+            "Use parametric differentiation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parametric differentiation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5.7",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the second order derivatives of the functions given in Exercises 1 to 10.",
+          "hints": [
+            "Use the definition of second order derivative"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "second order derivative"
+          ]
+        }
+      ]
+    }
+  ]
+}

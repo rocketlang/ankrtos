@@ -1,0 +1,251 @@
+{
+  "chapter_number": 8,
+  "chapter_title": "ALGEBRAIC EXPRESSIONS AND IDENTITIES",
+  "exercises": [
+    {
+      "exercise_number": "8.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Add the following.\n(i) ab – bc, bc – ca, ca – ab\n(ii) a – b + ab, b – c + bc, c – a + ac\n(iii) 2p²q – 3pq + 4, 5 + 7pq – 3p²q\n(iv) l² + m², m² + n², n² + l², 2lm + 2mn + 2nl",
+          "hints": [
+            "Arrange like terms one below the other",
+            "Add coefficients of like terms",
+            "Carry over terms with no like terms as they are"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "addition of algebraic expressions",
+            "like terms",
+            "polynomial addition"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "(a) Subtract 4a – 7ab + 3b + 12 from 12a – 9ab + 5b – 3\n(b) Subtract 3xy + 5yz – 7zx from 5xy – 2yz – 2zx + 10xyz\n(c) Subtract 4p²q – 3pq + 5pq² – 8p + 7q – 10 from 18 – 3p – 11q + 5pq – 2pq² + 5p²q",
+          "hints": [
+            "Change subtraction to addition of additive inverse",
+            "Change signs of all terms in the expression being subtracted",
+            "Add like terms"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "subtraction of algebraic expressions",
+            "additive inverse",
+            "polynomial subtraction"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "8.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the product of the following pairs of monomials.\n(i) 4, 7p\n(ii) – 4p, 7p\n(iii) – 4p, 7pq\n(iv) 4p³, – 3p\n(v) 4p, 0",
+          "hints": [
+            "Multiply coefficients",
+            "Multiply algebraic factors using laws of exponents",
+            "Combine like variables"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiplication of monomials",
+            "coefficients",
+            "exponents"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the areas of rectangles with the following pairs of monomials as their lengths and breadths respectively.\n(p, q); (10m, 5n); (20x², 5y²); (4x, 3x²); (3mn, 4np)",
+          "hints": [
+            "Area = length × breadth",
+            "Multiply the monomials",
+            "Simplify using exponent rules"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "area of rectangle",
+            "monomial multiplication",
+            "application"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Complete the table of products.\nFirst monomial →\nSecond monomial ↓\n2x\n–5y\n3x²\n– 4xy\n7x²y\n–9x²y²\n4x²\n...\n...\n...\n...\n...\n...\n–15x²y\n...\n...\n...\n3x²\n– 4xy\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n7x²y\n...\n...\n...\n...\n...\n...\n–9x²y²\n...\n...\n...\n...\n...\n...",
+          "hints": [
+            "Multiply each row monomial with each column monomial",
+            "Use distributive property",
+            "Combine like terms where applicable"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "multiplication table",
+            "monomial products",
+            "systematic calculation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Obtain the volume of rectangular boxes with the following length, breadth and height respectively.\n(i) 5a, 3a², 7a⁴\n(ii) 2p, 4q, 8r\n(iii) xy, 2x²y, 2xy²\n(iv) a, 2b, 3c",
+          "hints": [
+            "Volume = length × breadth × height",
+            "Multiply all three monomials",
+            "Use associative property of multiplication"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "volume of rectangular box",
+            "monomial multiplication",
+            "three-term product"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Obtain the product of\n(i) xy, yz, zx\n(ii) a, – a², a³\n(iii) 2, 4y, 8y², 16y³\n(iv) a, 2b, 3c, 6abc\n(v) m, – mn, mnp",
+          "hints": [
+            "Multiply all given monomials",
+            "Multiply coefficients first",
+            "Combine variables using exponent rules"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "product of multiple monomials",
+            "associative multiplication",
+            "exponent rules"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "8.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Carry out the multiplication of the expressions in each of the following pairs.\n(i) 4p, q + r\n(ii) ab, a – b\n(iii) a + b, 7a²b²\n(iv) a² – 9, 4a\n(v) pq + qr + rp, 0",
+          "hints": [
+            "Use distributive law: multiply monomial with each term of polynomial",
+            "Multiply coefficients and variables separately",
+            "Combine like terms if any"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "monomial × polynomial",
+            "distributive law",
+            "multiplication"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Complete the table.\nFirst expression\tSecond expression\tProduct\n(i)\ta\tb+c+d\t...\n(ii)\tx+y–5\t5xy\t...\n(iii)\tp\t6p² – 7p + 5\t...\n(iv)\t4p²q²\tp² – q²\t...\n(v)\ta+b+c\tabc\t...",
+          "hints": [
+            "Multiply first expression with second expression",
+            "Use distributive property for polynomial multiplication",
+            "Write product in simplified form"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "multiplication table",
+            "distributive property",
+            "polynomial multiplication"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the product.\n(i) (a²) × (2a²²) × (4a²⁶)\n(ii) (2/3 xy) × (–9/10 x²y²)\n(iii) (–10/3 p³q) × (6/5 p³q)\n(iv) x × x² × x³ × x⁴",
+          "hints": [
+            "Multiply coefficients (including fractions)",
+            "Add exponents of like bases",
+            "Simplify fractions if possible"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "product of monomials",
+            "fraction coefficients",
+            "exponent addition"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "(a) Simplify 3x (4x – 5) + 3 and find its values for (i) x = 3 (ii) x = 1/2.\n(b) Simplify a (a² + a + 1) + 5 and find its value for (i) a = 0, (ii) a = 1 (iii) a = – 1.",
+          "hints": [
+            "First use distributive law to multiply",
+            "Combine like terms",
+            "Substitute given values and simplify"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "simplification",
+            "evaluation",
+            "substitution"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "(a) Add: p ( p – q), q ( q – r) and r ( r – p)\n(b) Add: 2x (z – x – y) and 2y (z – y – x)\n(c) Subtract: 3l (l – 4 m + 5 n) from 4l ( 10 n – 3 m + 2 l )\n(d) Subtract: 3a (a + b + c ) – 2 b (a – b + c) from 4c ( – a + b + c )",
+          "hints": [
+            "First multiply using distributive law",
+            "Then add/subtract the resulting expressions",
+            "Combine like terms"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "addition and subtraction",
+            "distributive law",
+            "combining like terms"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "8.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Multiply the binomials.\n(i) (2x + 5) and (4x – 3)\n(ii) (y – 8) and (3y – 4)\n(iii) (2.5l – 0.5m) and (2.5l + 0.5m)\n(iv) (a + 3b) and (x + 5)\n(v) (2pq + 3q²) and (3pq – 2q²)\n(vi) (3/4 a² + 3b²) and 4(a² – 2/3 b²)",
+          "hints": [
+            "Use distributive law: multiply each term of first binomial with each term of second",
+            "Use FOIL method (First, Outer, Inner, Last)",
+            "Combine like terms"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "binomial × binomial",
+            "FOIL method",
+            "distributive law"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the product.\n(i) (5 – 2x) (3 + x)\n(ii) (x + 7y) (7x – y)\n(iii) (a² + b²) (a² + b²)\n(iv) (p² – q²) (2p + q)",
+          "hints": [
+            "Multiply each term of first expression with each term of second",
+            "Watch signs carefully",
+            "Combine like terms"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "product of binomials",
+            "algebraic multiplication",
+            "like terms"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Simplify.\n(i) (x² – 5) (x + 5) + 25\n(ii) (a² + 5) (b³ + 3) + 5\n(iii) (t + s²) (t² – s)\n(iv) (a + b) (c – d) + (a – b) (c + d) + 2 (ac + bd)\n(v) (x + y)(2x + y) + (x + 2y)(x – y)\n(vi) (x + y)(x² – xy + y²)\n(vii) (1.5x – 4y)(1.5x + 4y + 3) – 4.5x + 12y\n(viii) (a + b + c)(a + b – c)",
+          "hints": [
+            "First multiply the expressions",
+            "Then add/subtract as indicated",
+            "Combine like terms to simplify"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "simplification",
+            "polynomial multiplication",
+            "combining expressions"
+          ]
+        }
+      ]
+    }
+  ]
+}

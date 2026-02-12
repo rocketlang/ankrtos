@@ -1,0 +1,335 @@
+{
+  "chapter_number": 7,
+  "chapter_title": "Comparing Quantities",
+  "exercises": [
+    {
+      "exercise_number": "7.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Convert the given fractional numbers to per cents. (a) 1/8 (b) 5/4 (c) 3/40 (d) 2/7",
+          "hints": [
+            "Convert fraction to equivalent fraction with denominator 100",
+            "Multiply fraction by 100%",
+            "Simplify the percentage if possible"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fraction to percentage",
+            "conversion",
+            "basic percentage"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Convert the given decimal fractions to per cents. (a) 0.65 (b) 2.1 (c) 0.02 (d) 12.35",
+          "hints": [
+            "Multiply decimal by 100%",
+            "Move decimal point two places to the right",
+            "Add % symbol"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "decimal to percentage",
+            "conversion",
+            "basic percentage"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Estimate what part of the figures is coloured and hence find the per cent which is coloured. (i) [figure described] (ii) [figure described] (iii) [figure described]",
+          "hints": [
+            "Count shaded parts vs total parts",
+            "Convert fraction to percentage",
+            "Use visual estimation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "visual estimation",
+            "fraction to percentage",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find: (a) 15% of 250 (b) 1% of 1 hour (c) 20% of ₹2500 (d) 75% of 1 kg",
+          "hints": [
+            "Convert percentage to decimal",
+            "Multiply by the quantity",
+            "Convert units if necessary"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "percentage calculation",
+            "percentage of quantity",
+            "basic arithmetic"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Find the whole quantity if (a) 5% of it is 600. (b) 12% of it is ₹1080. (c) 40% of it is 500 km. (d) 70% of it is 14 minutes. (e) 8% of it is 40 litres.",
+          "hints": [
+            "Set up equation: (percentage/100) × whole = given part",
+            "Solve for whole by dividing given part by percentage/100",
+            "Check units consistency"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "reverse percentage",
+            "finding whole",
+            "percentage equations"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Convert given per cents to decimal fractions and also to fractions in simplest forms: (a) 25% (b) 150% (c) 20% (d) 5%",
+          "hints": [
+            "Divide percentage by 100 for decimal",
+            "Write percentage as fraction with denominator 100",
+            "Simplify fraction to lowest terms"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "percentage to fraction",
+            "percentage to decimal",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "In a city, 30% are females, 40% are males and remaining are children. What per cent are children?",
+          "hints": [
+            "Add given percentages",
+            "Subtract from 100% to find remaining",
+            "Check that all percentages sum to 100%"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "percentage sum",
+            "complementary percentage",
+            "population distribution"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Out of 15,000 voters in a constituency, 60% voted. Find the percentage of voters who did not vote. Can you now find how many actually did not vote?",
+          "hints": [
+            "Calculate percentage who didn't vote: 100% - 60%",
+            "Calculate actual number: percentage × total voters",
+            "Convert percentage to decimal before multiplying"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "percentage application",
+            "voter statistics",
+            "real-world problem"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Meeta saves ₹4000 from her salary. If this is 10% of her salary. What is her salary?",
+          "hints": [
+            "Set up: 10% of salary = 4000",
+            "Solve: salary = 4000 ÷ (10/100)",
+            "Check: 10% of calculated salary should equal 4000"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "reverse percentage",
+            "salary calculation",
+            "savings"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "A local cricket team played 20 matches in one season. It won 25% of them. How many matches did they win?",
+          "hints": [
+            "Calculate 25% of 20",
+            "Convert 25% to decimal: 0.25",
+            "Multiply: 0.25 × 20"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "percentage calculation",
+            "sports statistics",
+            "basic application"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "7.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Tell what is the profit or loss in the following transactions. Also find profit per cent or loss per cent in each case. (a) Gardening shears bought for ₹250 and sold for ₹325. (b) A refrigerator bought for ₹12,000 and sold at ₹13,500. (c) A cupboard bought for ₹2,500 and sold at ₹3,000. (d) A skirt bought for ₹250 and sold at ₹150.",
+          "hints": [
+            "Calculate profit/loss = SP - CP",
+            "Profit % = (Profit/CP) × 100",
+            "Loss % = (Loss/CP) × 100",
+            "Compare SP and CP to determine profit/loss"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "profit and loss",
+            "percentage profit",
+            "percentage loss",
+            "business mathematics"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Convert each part of the ratio to percentage: (a) 3 : 1 (b) 2 : 3 : 5 (c) 1:4 (d) 1 : 2 : 5",
+          "hints": [
+            "Find total of ratio parts",
+            "Calculate each part's fraction: part/total",
+            "Convert fraction to percentage: (fraction × 100)%",
+            "Check that percentages sum to 100%"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "ratio to percentage",
+            "proportion",
+            "percentage distribution"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "The population of a city decreased from 25,000 to 24,500. Find the percentage decrease.",
+          "hints": [
+            "Calculate decrease = original - new",
+            "Percentage decrease = (decrease/original) × 100",
+            "Round to appropriate decimal places"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "percentage decrease",
+            "population change",
+            "real-world application"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Arun bought a car for ₹3,50,000. The next year, the price went upto ₹3,70,000. What was the Percentage of price increase?",
+          "hints": [
+            "Calculate increase = new price - original price",
+            "Percentage increase = (increase/original) × 100",
+            "Express as percentage with proper units"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "percentage increase",
+            "price appreciation",
+            "financial mathematics"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "I buy a T.V. for ₹10,000 and sell it at a profit of 20%. How much money do I get for it?",
+          "hints": [
+            "Calculate profit = 20% of CP",
+            "SP = CP + profit",
+            "Alternative: SP = CP × (1 + profit percentage/100)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "selling price calculation",
+            "profit percentage",
+            "consumer mathematics"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Juhi sells a washing machine for ₹13,500. She loses 20% in the bargain. What was the price at which she bought it?",
+          "hints": [
+            "Loss % = (Loss/CP) × 100",
+            "SP = CP - Loss",
+            "Set up equation: SP = CP - (20% of CP)",
+            "Solve for CP"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cost price calculation",
+            "loss percentage",
+            "reverse calculation"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "(i) Chalk contains calcium, carbon and oxygen in the ratio 10:3:12. Find the percentage of carbon in chalk. (ii) If in a stick of chalk, carbon is 3g, what is the weight of the chalk stick?",
+          "hints": [
+            "(i) Find total ratio parts, carbon part/total, convert to percentage",
+            "(ii) If carbon is 3g and ratio part is 3, find weight per ratio part, multiply by total ratio parts"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "ratio to percentage",
+            "proportional reasoning",
+            "chemical composition",
+            "weight calculation"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Amina buys a book for ₹275 and sells it at a loss of 15%. How much does she sell it for?",
+          "hints": [
+            "Calculate loss = 15% of CP",
+            "SP = CP - loss",
+            "Alternative: SP = CP × (1 - loss percentage/100)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "selling price",
+            "loss percentage",
+            "book trade"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Find the amount to be paid at the end of 3 years in each case: (a) Principal = ₹1,200 at 12% p.a. (b) Principal = ₹7,500 at 5% p.a.",
+          "hints": [
+            "Calculate simple interest: I = (P × R × T)/100",
+            "Amount = Principal + Interest",
+            "Apply formula for each case separately"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "simple interest",
+            "amount calculation",
+            "financial mathematics"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "What rate gives ₹280 as interest on a sum of ₹56,000 in 2 years?",
+          "hints": [
+            "Use simple interest formula: I = (P × R × T)/100",
+            "Rearrange to find R: R = (I × 100)/(P × T)",
+            "Substitute values and calculate"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "interest rate calculation",
+            "simple interest formula",
+            "reverse calculation"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "If Meena gives an interest of ₹45 for one year at 9% rate p.a.. What is the sum she has borrowed?",
+          "hints": [
+            "Use simple interest formula: I = (P × R × T)/100",
+            "Rearrange to find P: P = (I × 100)/(R × T)",
+            "Substitute values: I=45, R=9, T=1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "principal calculation",
+            "simple interest",
+            "loan amount"
+          ]
+        }
+      ]
+    }
+  ]
+}

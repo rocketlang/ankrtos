@@ -1,0 +1,798 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Unknown Chapter",
+  "exercises": [
+    {
+      "exercise_number": "3.1",
+      "questions": [
+        {
+          "question_number": 4,
+          "question_text": "Write the chemical formulae for the following compounds: (a) MgCl2 (b) CaO (c) Cu(NO3)2 (d) AlCl3 (e) CaCO3",
+          "hints": [
+            "Recall valency of elements",
+            "Use criss-cross method"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "chemical formulae",
+            "naming compounds"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Name the elements present in the following compounds: (a) Calcium, oxygen (b) Hydrogen, bromine (c) Sodium, hydrogen, carbon and oxygen (d) Potassium, sulphur and oxygen",
+          "hints": [
+            "Identify elements from compound names",
+            "Refer to periodic table"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "elements",
+            "compound composition"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Calculate the molecular masses of the following: (a) 26 g (b) 256 g (c) 124 g (d) 36.5 g (e) 63 g",
+          "hints": [
+            "Sum atomic masses of all atoms",
+            "Use standard atomic weights"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "molecular mass",
+            "calculations"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4.1",
+      "questions": [
+        {
+          "question_number": 10,
+          "question_text": "80.006",
+          "hints": [
+            "Check calculation or context"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "numerical",
+            "value"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "16 18 8 × =90% , 8 × = 10%",
+          "hints": [
+            "Interpret percentage calculation",
+            "Check multiplication"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "percentage",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Valency = 1, Name of the element is lithium,",
+          "hints": [
+            "Relate valency to element properties",
+            "Identify from periodic table"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "valency",
+            "element identification"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "Mass number of X =12, Y=14, Relationship is Isotope.",
+          "hints": [
+            "Define isotopes",
+            "Compare atomic and mass numbers"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "isotopes",
+            "mass number"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "State True or False: (a) F (b) F (c) T (d) F",
+          "hints": [
+            "Review statements context",
+            "Verify scientific facts"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "true false",
+            "concepts"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "(a) ü (b) × (c) × (d) ×",
+          "hints": [
+            "Interpret tick and cross symbols",
+            "Check correctness"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "verification",
+            "symbols"
+          ]
+        },
+        {
+          "question_number": 16,
+          "question_text": "(a) × (b) × (c) ü (d) ×",
+          "hints": [
+            "Interpret tick and cross symbols",
+            "Check correctness"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "verification",
+            "symbols"
+          ]
+        },
+        {
+          "question_number": 17,
+          "question_text": "(a) × (b) ü (c) × (d) ×",
+          "hints": [
+            "Interpret tick and cross symbols",
+            "Check correctness"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "verification",
+            "symbols"
+          ]
+        },
+        {
+          "question_number": 18,
+          "question_text": "(a) × (b) × (c) × (d) ü",
+          "hints": [
+            "Interpret tick and cross symbols",
+            "Check correctness"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "verification",
+            "symbols"
+          ]
+        },
+        {
+          "question_number": 19,
+          "question_text": "Complete the table: Atomic Number, Mass Number, Number of Neutrons, Number of Protons, Number of Electrons, Name of the Atomic Species for: 9,19,10,9,9,Fluorine; 16,32,16,16,16,Sulphur; 12,24,12,12,12,Magnesium; 01,2,01,1,01,Deuterium; 01,1,0,1,0,Protium",
+          "hints": [
+            "Use atomic number to find protons/electrons",
+            "Mass number = protons + neutrons"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "atomic structure",
+            "table completion"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "7.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "(a) distance = 2200 m; displacement = 200 m.",
+          "hints": [
+            "Define distance and displacement",
+            "Calculate net change in position"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "motion",
+            "distance",
+            "displacement"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "(a) average speed = average velocity = 2.00 m s–1 (b) average speed = 1.90 m s–1; average velocity = 0.952 m s–1",
+          "hints": [
+            "Use formulas: speed = total distance/time, velocity = displacement/time"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "average speed",
+            "average velocity",
+            "calculations"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "average speed = 24 km h–1",
+          "hints": [
+            "Convert units if needed",
+            "Apply speed formula"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "speed",
+            "units"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "distance travelled = 96 m",
+          "hints": [
+            "Use motion equations",
+            "Consider time and speed"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "distance",
+            "motion"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "velocity = 20 m s–1; time = 2 s",
+          "hints": [
+            "Relate velocity, time, and acceleration if given"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "velocity",
+            "time"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "speed = 3.07 km s–1",
+          "hints": [
+            "Check context (e.g., sound speed, orbital speed)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "speed",
+            "units"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "8.1",
+      "questions": [
+        {
+          "question_number": 4,
+          "question_text": "c",
+          "hints": [
+            "Identify correct option from multiple choice"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "concept"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "2 m s–2, 14000 N",
+          "hints": [
+            "Use Newton's second law: F = ma",
+            "Calculate acceleration and force"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "acceleration",
+            "force",
+            "Newton's laws"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "– 4N",
+          "hints": [
+            "Consider direction of force",
+            "Net force calculation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "force",
+            "direction"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "(a) 35000 N (b) 1.944 m s–2",
+          "hints": [
+            "Apply force and acceleration formulas",
+            "Use given mass or data"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "force",
+            "acceleration",
+            "calculations"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "2550 N in a direction opposite to the motion of the vehicle",
+          "hints": [
+            "Determine net force direction",
+            "Use deceleration concept"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "force",
+            "direction",
+            "motion"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "d",
+          "hints": [
+            "Identify correct option from multiple choice"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "concept"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "200 N",
+          "hints": [
+            "Calculate force using given parameters"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "force",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "3 kg m s–1",
+          "hints": [
+            "Momentum = mass × velocity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "momentum",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "2.25 m; 50 N",
+          "hints": [
+            "Use work-energy or motion equations",
+            "Force calculation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "distance",
+            "force",
+            "work"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "10 kg m s–1; 10 kg m s–1; 5/3 m s–1",
+          "hints": [
+            "Apply conservation of momentum",
+            "Calculate velocities"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "momentum",
+            "conservation",
+            "velocity"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "500 kg m s–1; 800 kg m s–1; 50 N",
+          "hints": [
+            "Momentum before and after",
+            "Force from impulse"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "momentum",
+            "impulse",
+            "force"
+          ]
+        },
+        {
+          "question_number": 17,
+          "question_text": "40 kg m s–1",
+          "hints": [
+            "Momentum calculation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "momentum",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": "A2",
+          "question_text": "240 N",
+          "hints": [
+            "Additional problem: force calculation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "force",
+            "additional problem"
+          ]
+        },
+        {
+          "question_number": "A3",
+          "question_text": "2500 N",
+          "hints": [
+            "Additional problem: force calculation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "force",
+            "additional problem"
+          ]
+        },
+        {
+          "question_number": "A4",
+          "question_text": "5 m s–2; 24000 kg m s–1; 6000 N",
+          "hints": [
+            "Acceleration, momentum, force calculations"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "acceleration",
+            "momentum",
+            "force",
+            "additional problem"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "9.1",
+      "questions": [
+        {
+          "question_number": 3,
+          "question_text": "9.8 N",
+          "hints": [
+            "Weight = mass × gravity (g=9.8 m/s²)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "weight",
+            "gravity"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Weight on earth is 98 N and on moon is 16.3 N.",
+          "hints": [
+            "Weight on moon ≈ 1/6 of weight on Earth"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "weight",
+            "earth",
+            "moon"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "Maximum height is 122.5 m and total time is 5 s + 5 s = 10 s.",
+          "hints": [
+            "Use equations of motion under gravity",
+            "Time up = time down if same level"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "projectile motion",
+            "maximum height",
+            "time of flight"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "19.6 m/s",
+          "hints": [
+            "Final velocity under gravity: v = u + gt"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "velocity",
+            "gravity"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "Maximum height = 80 m, Net displacement = 0, Total distance covered = 160 m.",
+          "hints": [
+            "Symmetry in vertical motion",
+            "Displacement zero if return to start"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "projectile motion",
+            "displacement",
+            "distance"
+          ]
+        },
+        {
+          "question_number": 16,
+          "question_text": "Gravitational force = 3.56 × 10^22 N.",
+          "hints": [
+            "Use Newton's law of gravitation: F = G(m1m2)/r²"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "gravitational force",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 17,
+          "question_text": "4 s, 80 m from the top.",
+          "hints": [
+            "Equations of motion for free fall"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "free fall",
+            "time",
+            "distance"
+          ]
+        },
+        {
+          "question_number": 18,
+          "question_text": "Initial velocity = 29.4 m s–1, height = 44.1 m. After 4 s the ball will be at a distance of 4.9 m from the top or 39.2 m from the bottom.",
+          "hints": [
+            "Use v² = u² + 2gs, s = ut + ½gt²"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "projectile motion",
+            "height",
+            "time"
+          ]
+        },
+        {
+          "question_number": 21,
+          "question_text": "The substance will sink.",
+          "hints": [
+            "Compare density with water",
+            "Density > water density → sink"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "density",
+            "sink or float"
+          ]
+        },
+        {
+          "question_number": 22,
+          "question_text": "The packet will sink. The mass of water displaced is 350 g.",
+          "hints": [
+            "Archimedes' principle",
+            "Check buoyancy from mass/volume"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "buoyancy",
+            "Archimedes",
+            "displacement"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "10.1",
+      "questions": [
+        {
+          "question_number": 2,
+          "question_text": "Zero",
+          "hints": [
+            "Work done when force is perpendicular to displacement"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "work",
+            "zero work"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "– 210 J",
+          "hints": [
+            "Work done against force (negative sign)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "work",
+            "negative work"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Zero",
+          "hints": [
+            "No displacement or force in direction of motion"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "work",
+            "zero work"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "9 × 10^8 J",
+          "hints": [
+            "Work = force × distance",
+            "Use large number calculations"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "work",
+            "energy",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "2000 J, 1000 J",
+          "hints": [
+            "Calculate work for different forces or distances"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "work",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Zero",
+          "hints": [
+            "Net work in closed path or conservative field"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "work",
+            "zero work"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "5.4×10^7 J",
+          "hints": [
+            "Energy calculation from power or work"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "energy",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 17,
+          "question_text": "208333.3 J",
+          "hints": [
+            "Work or energy conversion (e.g., from power × time)"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "work",
+            "energy",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 18,
+          "question_text": "(i) Zero (ii) Positive (iii) Negative",
+          "hints": [
+            "Sign of work depends on force direction relative to displacement"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "work",
+            "sign convention"
+          ]
+        },
+        {
+          "question_number": 20,
+          "question_text": "7.2×10^7 J",
+          "hints": [
+            "Energy calculation from given parameters"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "energy",
+            "calculation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "11.1",
+      "questions": [
+        {
+          "question_number": 7,
+          "question_text": "17.2 m, 0.0172 m",
+          "hints": [
+            "Wave speed or wavelength calculations",
+            "Use v = fλ"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "waves",
+            "wavelength",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "18.55",
+          "hints": [
+            "Numerical result from wave or sound problem"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "waves",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "6000",
+          "hints": [
+            "Frequency or speed calculation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "waves",
+            "frequency"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "11.47 s",
+          "hints": [
+            "Time calculation for sound or wave travel"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "sound",
+            "time",
+            "calculation"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "22,600 Hz",
+          "hints": [
+            "Frequency calculation, possibly Doppler effect"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "frequency",
+            "Doppler effect",
+            "sound"
+          ]
+        }
+      ]
+    }
+  ]
+}

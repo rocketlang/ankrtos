@@ -1,0 +1,180 @@
+{
+  "chapter_number": 104,
+  "chapter_title": "Chandni",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why did Abbu Khan’s goats want to run away? What happened to them in the hills?",
+          "hints": [
+            "Think about the goats' natural instincts",
+            "Consider what Abbu Khan provided vs. what they desired"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "character motivation",
+            "freedom",
+            "cause and effect"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Abbu Khan said, “No more goats in my house ever again.” Then he changed his mind. Why?",
+          "hints": [
+            "Consider Abbu Khan's emotional state",
+            "Think about his lifestyle without goats"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "character analysis",
+            "emotional conflict",
+            "decision making"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why did he buy a young goat?",
+          "hints": [
+            "Consider his past experiences with goats",
+            "Think about his expectations from a young goat"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "character motivation",
+            "hope",
+            "past experience"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why did Chandni hate the rope round her neck?",
+          "hints": [
+            "Consider what the rope symbolizes",
+            "Think about Chandni's desires and observations"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "symbolism",
+            "freedom",
+            "character feelings"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "“Now Abbu Khan understood Chandni’s problem...” What was Chandni’s problem?",
+          "hints": [
+            "Look at what Chandni explicitly tells Abbu Khan",
+            "Consider her physical and emotional state"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "character conflict",
+            "freedom vs. safety",
+            "explicit vs. implicit meaning"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Abbu Khan pushed Chandni into a small hut. This shows that he (i) was cruel. (ii) loved her and wanted to save her life. (iii) was selfish.",
+          "hints": [
+            "Consider Abbu Khan's previous actions and warnings",
+            "Analyze his motivation behind this action"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "character interpretation",
+            "multiple choice",
+            "motivation analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why did Chandni refuse to join the group of wild goats?",
+          "hints": [
+            "Consider what Chandni valued most at that moment",
+            "Think about her reason for coming to the hills"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "character decision",
+            "independence",
+            "freedom"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Chandni fought the wolf because she (i) was stronger than the wolf. (ii) hated the wolf. (iii) had to retain her freedom at all costs.",
+          "hints": [
+            "Recall Chandni's conversation with Abbu Khan before leaving",
+            "Consider what she values most"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "multiple choice",
+            "character motivation",
+            "theme of freedom"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why did the wise old bird say, “Chandni is the winner”?",
+          "hints": [
+            "Consider different definitions of 'winning'",
+            "Think about what Chandni achieved versus what she lost"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "interpretation",
+            "theme analysis",
+            "moral victory"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "“Death in an open field is better than life in a small hut,” Chandni said to herself. Was it the right decision? Give reasons for your answer.",
+          "hints": [
+            "Consider both perspectives: safety vs. freedom",
+            "Think about the story's message"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "critical thinking",
+            "debate",
+            "values assessment"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Freedom is life. Discuss this with reference to ‘Chandni’ and ‘I Want Something in a Cage’.",
+          "hints": [
+            "Compare the themes of both stories",
+            "Consider how different characters view freedom"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "comparative analysis",
+            "theme exploration",
+            "cross-text reference"
+          ]
+        }
+      ]
+    }
+  ]
+}

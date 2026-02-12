@@ -1,0 +1,433 @@
+{
+  "chapter_number": 12,
+  "chapter_title": "IMPROVEMENT IN FOOD RESOURCES",
+  "exercises": [
+    {
+      "exercise_number": "12.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What do we get from cereals, pulses, fruits and vegetables?",
+          "hints": [
+            "Recall the nutritional components provided by each food group",
+            "Think about carbohydrates, proteins, vitamins, and minerals"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "nutrition",
+            "food groups",
+            "crop classification"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How do biotic and abiotic factors affect crop production?",
+          "hints": [
+            "Define biotic and abiotic factors",
+            "Consider diseases, pests, weather conditions, and soil quality"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "crop production",
+            "environmental factors",
+            "agriculture"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What are the desirable agronomic characteristics for crop improvements?",
+          "hints": [
+            "Think about plant height, branching, maturity duration",
+            "Consider resistance to stresses and adaptability"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "crop improvement",
+            "agronomy",
+            "plant breeding"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.1.2(i)",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What are macro-nutrients and why are they called macro-nutrients?",
+          "hints": [
+            "Define macro-nutrients based on quantity required",
+            "List examples like nitrogen, phosphorus, potassium"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "plant nutrition",
+            "nutrients",
+            "agriculture"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "How do plants get nutrients?",
+          "hints": [
+            "Consider sources: air, water, soil",
+            "Think about absorption through roots and leaves"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "plant physiology",
+            "nutrient uptake",
+            "soil science"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.1.2(i)-2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Compare the use of manure and fertilizers in maintaining soil fertility.",
+          "hints": [
+            "List advantages and disadvantages of each",
+            "Consider long-term vs short-term effects",
+            "Think about environmental impact"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "soil fertility",
+            "organic farming",
+            "sustainable agriculture"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which of the following conditions will give the most benefits? Why? (a) Farmers use high-quality seeds, do not adopt irrigation or use fertilizers. (b) Farmers use ordinary seeds, adopt irrigation and use fertilizer. (c) Farmers use quality seeds, adopt irrigation, use fertilizer and use crop protection measures.",
+          "hints": [
+            "Consider integrated approach to farming",
+            "Evaluate all factors: seeds, irrigation, fertilizers, protection"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "integrated farming",
+            "crop management",
+            "agricultural practices"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.1.3-2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why should preventive measures and biological control methods be preferred for protecting crops?",
+          "hints": [
+            "Consider environmental impact of chemicals",
+            "Think about sustainability and long-term soil health"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "crop protection",
+            "biological control",
+            "sustainable agriculture"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What factors may be responsible for losses of grains during storage?",
+          "hints": [
+            "Consider biotic factors: insects, rodents, fungi",
+            "Consider abiotic factors: moisture, temperature"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "grain storage",
+            "post-harvest losses",
+            "agricultural storage"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.2.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Which method is commonly used for improving cattle breeds and why?",
+          "hints": [
+            "Think about cross-breeding techniques",
+            "Consider combining desirable traits from different breeds"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cattle breeding",
+            "animal husbandry",
+            "livestock improvement"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.2.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Discuss the implications of the following statement: 'It is interesting to note that poultry is India's most efficient converter of low fibre food stuff (which is unfit for human consumption) into highly nutritious animal protein food.'",
+          "hints": [
+            "Consider feed conversion efficiency",
+            "Think about nutritional value of poultry products"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "poultry farming",
+            "nutrition",
+            "animal protein"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.2.2-2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What management practices are common in dairy and poultry farming?",
+          "hints": [
+            "Consider housing, feeding, breeding, disease control",
+            "Compare requirements of both types of farming"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "dairy farming",
+            "poultry farming",
+            "animal management"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What are the differences between broilers and layers and in their management?",
+          "hints": [
+            "Consider purpose: meat vs egg production",
+            "Think about feed requirements, housing, and care"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "poultry types",
+            "broiler management",
+            "layer management"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.2.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How are fish obtained?",
+          "hints": [
+            "Consider capture fishing vs culture fishery",
+            "Think about marine and freshwater sources"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fisheries",
+            "fish production",
+            "aquaculture"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What are the advantages of composite fish culture?",
+          "hints": [
+            "Consider efficient use of pond resources",
+            "Think about reduced competition between species"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "composite fish culture",
+            "aquaculture",
+            "fish farming"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "12.2.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What are the desirable characters of bee varieties suitable for honey production?",
+          "hints": [
+            "Consider honey collection capacity, sting behavior, breeding",
+            "Think about adaptability and maintenance requirements"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "bee-keeping",
+            "honey production",
+            "apiculture"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What is pasturage and how is it related to honey production?",
+          "hints": [
+            "Define pasturage as availability of flowers",
+            "Consider how flower type affects honey quality and quantity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "bee-keeping",
+            "honey quality",
+            "floral resources"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "End",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Explain any one method of crop production which ensures high yield.",
+          "hints": [
+            "Consider crop rotation, inter-cropping, or use of hybrid varieties",
+            "Explain how the method increases productivity"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "crop production",
+            "high yield",
+            "agricultural methods"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why are manure and fertilizers used in fields?",
+          "hints": [
+            "Consider nutrient supply to plants",
+            "Think about soil fertility and crop growth"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "manure",
+            "fertilizers",
+            "soil fertility"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What are the advantages of inter-cropping and crop rotation?",
+          "hints": [
+            "Consider soil fertility maintenance, pest control, risk reduction",
+            "Compare both methods"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "inter-cropping",
+            "crop rotation",
+            "sustainable agriculture"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What is genetic manipulation? How is it useful in agricultural practices?",
+          "hints": [
+            "Define genetic manipulation techniques",
+            "Consider development of resistant varieties and higher yields"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "genetic manipulation",
+            "biotechnology",
+            "crop improvement"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "How do storage grain losses occur?",
+          "hints": [
+            "Consider biotic factors: insects, rodents, microorganisms",
+            "Consider abiotic factors: moisture, temperature, humidity"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "grain storage",
+            "post-harvest losses",
+            "storage management"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "How do good animal husbandry practices benefit farmers?",
+          "hints": [
+            "Consider increased production, disease prevention, better quality products",
+            "Think about economic benefits"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "animal husbandry",
+            "livestock management",
+            "farm economics"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "What are the benefits of cattle farming?",
+          "hints": [
+            "Consider milk production, draught power, manure",
+            "Think about multiple products and by-products"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "cattle farming",
+            "dairy",
+            "livestock"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "For increasing production, what is common in poultry, fisheries and bee-keeping?",
+          "hints": [
+            "Consider cross-breeding, proper management, disease control",
+            "Think about quality feed and suitable environment"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "poultry",
+            "fisheries",
+            "bee-keeping",
+            "animal production"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "How do you differentiate between capture fishing, mariculture and aquaculture?",
+          "hints": [
+            "Define each term based on source and method",
+            "Consider natural vs cultured systems, marine vs freshwater"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "fisheries",
+            "mariculture",
+            "aquaculture",
+            "fish production"
+          ]
+        }
+      ]
+    }
+  ]
+}

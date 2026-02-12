@@ -1,0 +1,364 @@
+{
+  "chapter_number": 3,
+  "chapter_title": "Understanding Quadrilaterals",
+  "exercises": [
+    {
+      "exercise_number": "3.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Given here are some figures.\n(1) (2) (3) (4) (5) (6) (7) (8)\nClassify each of them on the basis of the following.\n(a) Simple curve\n(b) Simple closed curve\n(c) Polygon\n(d) Convex polygon\n(e) Concave polygon",
+          "hints": [
+            "Recall definitions: simple curve (no self-intersection), simple closed curve (starts and ends at same point without crossing), polygon (closed figure with straight sides), convex (all interior angles < 180°), concave (at least one interior angle > 180°).",
+            "Examine each figure for its properties."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "classification",
+            "polygons",
+            "convex",
+            "concave"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What is a regular polygon?\nState the name of a regular polygon of\n(i) 3 sides\n(ii) 4 sides\n(iii) 6 sides",
+          "hints": [
+            "Regular polygon: all sides equal and all angles equal.",
+            "Recall names: triangle (3), quadrilateral (4), hexagon (6). For regular ones: equilateral triangle, square, regular hexagon."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "regular polygon",
+            "naming polygons",
+            "geometry"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find x in the following figures.\n(a) [Figure with angles: 125°, 125°, x]\n(b) [Figure with angles: 90°, 60°, 70°, x, 60°]",
+          "hints": [
+            "Sum of exterior angles of any polygon is 360°. For (a), two angles given are 125° each, so x = 360° - (125+125). For (b), add given angles and subtract from 360°."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "exterior angles",
+            "angle sum",
+            "polygons"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the measure of each exterior angle of a regular polygon of\n(i) 9 sides\n(ii) 15 sides",
+          "hints": [
+            "Each exterior angle = 360° / number of sides."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "regular polygon",
+            "exterior angle",
+            "formula"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "How many sides does a regular polygon have if the measure of an exterior angle is 24°?",
+          "hints": [
+            "Number of sides = 360° / exterior angle."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "regular polygon",
+            "exterior angle",
+            "inverse calculation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "How many sides does a regular polygon have if each of its interior angles is 165°?",
+          "hints": [
+            "Exterior angle = 180° - interior angle. Then use: number of sides = 360° / exterior angle."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "interior angle",
+            "exterior angle",
+            "regular polygon"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "(a) Is it possible to have a regular polygon with measure of each exterior angle as 22°?\n(b) Can it be an interior angle of a regular polygon? Why?",
+          "hints": [
+            "(a) Check if 360° is divisible by 22° (i.e., 360/22 must be an integer). (b) For interior angle, exterior = 180° - interior; then check divisibility."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "regular polygon existence",
+            "divisibility",
+            "interior/exterior relation"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "(a) What is the minimum interior angle possible for a regular polygon? Why?\n(b) What is the maximum exterior angle possible for a regular polygon?",
+          "hints": [
+            "(a) As number of sides increases, interior angle approaches 180° but must be > 60° (triangle). Minimum for regular polygon is 60° (equilateral triangle). (b) Exterior angle maximum when sides are minimum (triangle): 120°."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "limits",
+            "regular polygon",
+            "interior angle",
+            "exterior angle"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Given a parallelogram ABCD. Complete each statement along with the definition or property used.\n(i) AD = ......\n(ii) ∠ DCB = ......\n(iii) OC = ......\n(iv) m ∠DAB + m ∠CDA = ......",
+          "hints": [
+            "Use properties: opposite sides equal, opposite angles equal, diagonals bisect each other, adjacent angles supplementary."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "parallelogram properties",
+            "completion",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Consider the following parallelograms. Find the values of the unknowns x, y, z.\n(i) [Figure with angles: 100°, y, x, z]\n(ii) [Figure with angles: 50°, y, x, z]\n(iii) [Figure with angles: 30°, y, x, z]\n(iv) [Figure with angles: 80°, y, x, z]\n(v) [Figure with angles: 112°, y, x, z]",
+          "hints": [
+            "Use: opposite angles equal, adjacent angles supplementary (sum 180°), sum of angles in quadrilateral = 360°."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallelogram angles",
+            "algebraic solving",
+            "unknowns"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Can a quadrilateral ABCD be a parallelogram if\n(i) ∠D + ∠B = 180°?\n(ii) AB = DC = 8 cm, AD = 4 cm and BC = 4.4 cm?\n(iii) ∠A = 70° and ∠C = 65°?",
+          "hints": [
+            "(i) In parallelogram, adjacent angles supplementary, but ∠D and ∠B are opposite; they should be equal, not necessarily sum 180°. (ii) Opposite sides must be equal; check AD vs BC. (iii) Opposite angles must be equal."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallelogram conditions",
+            "counterexamples",
+            "properties"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Draw a rough figure of a quadrilateral that is not a parallelogram but has exactly two opposite angles of equal measure.",
+          "hints": [
+            "Think of a kite or an isosceles trapezium where only one pair of opposite angles are equal."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "quadrilateral types",
+            "drawing",
+            "non-parallelogram"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "The measures of two adjacent angles of a parallelogram are in the ratio 3 : 2. Find the measure of each of the angles of the parallelogram.",
+          "hints": [
+            "Adjacent angles supplementary: sum = 180°. Let angles be 3x and 2x, solve 3x+2x=180°."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "ratio",
+            "adjacent angles",
+            "parallelogram"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Two adjacent angles of a parallelogram have equal measure. Find the measure of each of the angles of the parallelogram.",
+          "hints": [
+            "If adjacent angles equal and supplementary, each = 90°. So it's a rectangle."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "equal angles",
+            "rectangle",
+            "parallelogram"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "The adjacent figure HOPE is a parallelogram. Find the angle measures x, y and z. State the properties you use to find them.\n[Figure HOPE with angles: ∠E = 40°, ∠P = 70°, x at ∠H, y at ∠O, z diagonal angle]",
+          "hints": [
+            "Use: opposite angles equal, adjacent supplementary, triangle angle sum."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallelogram angles",
+            "diagonal angles",
+            "properties"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "The following figures GUNS and RUNS are parallelograms. Find x and y. (Lengths are in cm)\n(i) GUNS: GU = 3x-1, UN = 18, NS = 26, SG = 3y\n(ii) RUNS: RN = 5x+9, US = 6y, UN = 3x+24, RS = 2y+7",
+          "hints": [
+            "Opposite sides equal. Set up equations: GU=NS, UN=SG for (i); RN=US, UN=RS for (ii)."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallelogram sides",
+            "algebraic equations",
+            "solving"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "In the above figure both RISK and CLUE are parallelograms. Find the value of x.\n[Figure with angles: ∠K = 120°, ∠I = 140°, ∠C = 70°, ∠L = y, ∠U = x]",
+          "hints": [
+            "Use properties: opposite angles equal, adjacent supplementary. Find missing angles step by step across parallelograms."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "multiple parallelograms",
+            "angle chasing",
+            "properties"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Explain how this figure is a trapezium. Which of its two sides are parallel? (Fig 3.26)\n[Figure with quadrilateral, one pair of sides marked with arrows]",
+          "hints": [
+            "Trapezium has exactly one pair of parallel sides. Arrows indicate parallel lines."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "trapezium",
+            "parallel sides",
+            "identification"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Find m∠C in Fig 3.27 if AB ∥ DC.\n[Figure with trapezium ABCD, ∠A = 60°, ∠D = 130°, ∠B = 70°, ∠C = ?]",
+          "hints": [
+            "In trapezium with AB∥DC, ∠A + ∠D = 180° and ∠B + ∠C = 180° (co-interior angles)."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "trapezium angles",
+            "parallel lines",
+            "co-interior angles"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Find the measure of ∠P and ∠S if SP ∥ RQ in Fig 3.28.\n(If you find m∠R, is there more than one method to find m∠P?)\n[Figure with trapezium PQRS, ∠Q = 130°, ∠R = 90°, ∠P = ?, ∠S = ?]",
+          "hints": [
+            "SP∥RQ, so ∠S + ∠R = 180° and ∠P + ∠Q = 180°. Alternatively, sum of quadrilateral angles = 360°."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "trapezium angles",
+            "parallel lines",
+            "multiple methods"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "State whether True or False.\n(a) All rectangles are squares\n(b) All rhombuses are parallelograms\n(c) All squares are rhombuses and also rectangles\n(d) All squares are not parallelograms.\n(e) All kites are rhombuses.\n(f) All rhombuses are kites.\n(g) All parallelograms are trapeziums.\n(h) All squares are trapeziums.",
+          "hints": [
+            "Recall hierarchy: parallelogram → rhombus/rectangle → square. Kite is different. Trapezium has at least one pair parallel."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "quadrilateral hierarchy",
+            "true/false",
+            "definitions"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Identify all the quadrilaterals that have.\n(a) four sides of equal length\n(b) four right angles",
+          "hints": [
+            "(a) Rhombus, square. (b) Rectangle, square."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "property identification",
+            "quadrilateral types"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Explain how a square is.\n(i) a quadrilateral\n(ii) a parallelogram\n(iii) a rhombus\n(iv) a rectangle",
+          "hints": [
+            "List properties: 4 sides (quadrilateral), opposite sides parallel (parallelogram), all sides equal (rhombus), all angles 90° (rectangle)."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "square properties",
+            "hierarchy explanation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Name the quadrilaterals whose diagonals.\n(i) bisect each other\n(ii) are perpendicular bisectors of each other\n(iii) are equal",
+          "hints": [
+            "(i) Parallelogram, rhombus, rectangle, square. (ii) Rhombus, square. (iii) Rectangle, square."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "diagonal properties",
+            "quadrilateral types"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Explain why a rectangle is a convex quadrilateral.",
+          "hints": [
+            "All interior angles < 180°, and line joining any two interior points lies inside it."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "convex quadrilateral",
+            "rectangle"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "ABC is a right-angled triangle and O is the mid point of the side opposite to the right angle. Explain why O is equidistant from A, B and C. (The dotted lines are drawn additionally to help you).\n[Figure shows right triangle ABC, right angle at B, O midpoint of AC, dotted lines from O to A, B, C]",
+          "hints": [
+            "In right triangle, midpoint of hypotenuse is equidistant from all vertices (property of circumcenter)."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "right triangle",
+            "midpoint of hypotenuse",
+            "circumcenter"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "chapter_number": 10,
+  "chapter_title": "Electric Current and its Effects",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Draw in your notebook the symbols to represent the following components of electrical circuits: connecting wires, switch in the 'OFF' position, bulb, cell, switch in the 'ON' position, and battery",
+          "hints": [
+            "Refer to Table 10.1 for symbols",
+            "Remember longer line represents positive terminal in cell symbol",
+            "Switch symbols differ for ON and OFF positions"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "circuit symbols",
+            "electric components",
+            "drawing"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Draw the circuit diagram to represent the circuit shown in Fig.10.21.",
+          "hints": [
+            "Identify components in the figure",
+            "Use correct symbols from Table 10.1",
+            "Ensure proper connections between components"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circuit diagram",
+            "symbol representation",
+            "practical application"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Fig.10.22 shows four cells fixed on a board. Draw lines to indicate how you will connect their terminals with wires to make a battery of four cells.",
+          "hints": [
+            "Connect positive terminal of one cell to negative terminal of next",
+            "Ensure series connection",
+            "Final battery should have one positive and one negative terminal"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "battery formation",
+            "cell connection",
+            "series circuit"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The bulb in the circuit shown in Fig.10.23 does not glow. Can you identify the problem? Make necessary changes in the circuit to make the bulb glow.",
+          "hints": [
+            "Check if circuit is complete",
+            "Look for broken connections",
+            "Ensure switch is in ON position if present"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "troubleshooting",
+            "circuit completion",
+            "problem solving"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Name any two effects of electric current.",
+          "hints": [
+            "Recall heating effect from Activity 10.2",
+            "Recall magnetic effect from Activity 10.5",
+            "Think about applications mentioned in chapter"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "effects of current",
+            "heating effect",
+            "magnetic effect"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "When the current is switched on through a wire, a compass needle kept nearby gets deflected from its north-south position. Explain.",
+          "hints": [
+            "Recall Oersted's experiment",
+            "Current carrying wire behaves like magnet",
+            "Magnetic field around wire affects compass"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "magnetic effect",
+            "Oersted experiment",
+            "compass deflection"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Will the compass needle show deflection when the switch in the circuit shown by Fig.10.24 is closed?",
+          "hints": [
+            "Check if circuit is complete",
+            "Current must flow for magnetic effect",
+            "Look for breaks in circuit"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circuit analysis",
+            "magnetic effect",
+            "practical reasoning"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Fill in the blanks:\n(a) Longer line in the symbol for a cell represents its ______ terminal.\n(b) The combination of two or more cells is called a ______.\n(c) When current is switched 'on' in a room heater, it ______.\n(d) The safety device based on the heating effect of electric current is called a ______.",
+          "hints": [
+            "Recall cell symbol from Table 10.1",
+            "Definition of battery",
+            "Heating effect applications",
+            "Safety devices mentioned in chapter"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definitions",
+            "terminology",
+            "recall"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Mark 'T' if the statement is true and 'F' if it is false:\n(a) To make a battery of two cells, the negative terminal of one cell is connected to the negative terminal of the other cell. (T/F)\n(b) When the electric current through the fuse exceeds a certain limit, the fuse wire melts and breaks. (T/F)\n(c) An electromagnet does not attract a piece of iron. (T/F)\n(d) An electric bell has an electromagnet. (T/F)",
+          "hints": [
+            "Recall correct battery connection",
+            "Function of fuse",
+            "Properties of electromagnet",
+            "Components of electric bell"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "true/false",
+            "concept checking",
+            "misconceptions"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Do you think an electromagnet can be used for separating plastic bags from a garbage heap? Explain.",
+          "hints": [
+            "Recall what materials electromagnets attract",
+            "Properties of plastic",
+            "Magnetic vs non-magnetic materials"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "application",
+            "electromagnet uses",
+            "material separation"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "An electrician is carrying out some repairs in your house. He wants to replace a fuse by a piece of wire. Would you agree? Give reasons for your response.",
+          "hints": [
+            "Recall purpose of fuse",
+            "Safety considerations",
+            "ISI mark importance",
+            "Risks of improper fuse"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "safety",
+            "fuse function",
+            "practical decision making"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Zubeda made an electric circuit using a cell holder shown in Fig. 10.4, a switch and a bulb. When she put the switch in the 'ON' position, the bulb did not glow. Help Zubeda in identifying the possible defects in the circuit.",
+          "hints": [
+            "Check cell placement in holder",
+            "Check bulb filament",
+            "Check all connections",
+            "Check switch functionality"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "troubleshooting",
+            "circuit defects",
+            "problem solving"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "In the circuit shown in Fig. 10.25\n(i) Would any of the bulb glow when the switch is in the 'OFF' position?\n(ii) What will be the order in which the bulbs A, B and C will glow when the switch is moved to the 'ON' position?",
+          "hints": [
+            "Current flow when switch is OFF",
+            "Path of current when switch is ON",
+            "Series vs parallel concepts",
+            "Simultaneous vs sequential glowing"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "circuit analysis",
+            "switch function",
+            "bulb glowing order"
+          ]
+        }
+      ]
+    }
+  ]
+}

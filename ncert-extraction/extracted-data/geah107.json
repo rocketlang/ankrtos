@@ -1,0 +1,218 @@
+{
+  "chapter_number": 107,
+  "chapter_title": "An Alien Hand",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "How does Tilloo manage to find his way to the ‘forbidden passage’?",
+          "hints": [
+            "Look for Tilloo's actions with his father's security card",
+            "Recall how he evades his mother"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension",
+            "plot"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What did Tilloo hope to see once he emerged from his underground home?",
+          "hints": [
+            "Think about what Tilloo has heard about but never seen",
+            "Consider his expectations from the surface"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension",
+            "character motivation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Why did Tilloo’s father advise him not to try to reach the surface of the planet?",
+          "hints": [
+            "Recall the surface conditions described by Tilloo's father",
+            "Consider survival requirements"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comprehension",
+            "science",
+            "survival"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What changes had occurred, which forced people to live in underground homes?",
+          "hints": [
+            "Look for environmental changes mentioned",
+            "Consider the sun's transformation"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comprehension",
+            "environment",
+            "history"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why was everyone in the Control Room greatly excited?",
+          "hints": [
+            "Recall what appears on the TV screen",
+            "Consider the significance of the moving dot"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension",
+            "plot development"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Was the spacecraft manned or unmanned? How do you know it?",
+          "hints": [
+            "Look for Number One's report about the spacecraft contents",
+            "Check what instruments are mentioned"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "inference",
+            "text evidence"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What did Number One and Number Two suggest should be done about the alien spacecraft?",
+          "hints": [
+            "Compare defense vs science perspectives",
+            "Note their different recommendations"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comprehension",
+            "decision making",
+            "perspectives"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What do you think the mechanical hand was trying to do?",
+          "hints": [
+            "Connect to the NASA Viking Mission context",
+            "Consider soil examination purposes"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "inference",
+            "science",
+            "space exploration"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Tilloo pressed the red button and 'the damage was done'. What was the damage?",
+          "hints": [
+            "Look at what happens immediately after button press",
+            "Connect to NASA press conference"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "comprehension",
+            "cause-effect"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Where had the spacecraft come from?",
+          "hints": [
+            "Recall the President's report about spacecraft origin",
+            "Consider neighboring planet reference"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "comprehension",
+            "space",
+            "inference"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "On which planet do Tilloo and his parents live?",
+          "hints": [
+            "Connect story context to real-world space missions",
+            "Consider the Viking Mission reference"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "inference",
+            "context clues",
+            "science"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "1.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "If you had to live in a home like Tilloo's, what parts of life would you find most difficult? What compensations might there be?",
+          "hints": [
+            "Consider lack of natural sunlight and open spaces",
+            "Think about artificial living conditions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "discussion",
+            "personal reflection",
+            "imagination"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What, if anything, might drive mankind to make their homes underground?",
+          "hints": [
+            "Consider environmental disasters",
+            "Think about survival scenarios"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "discussion",
+            "environment",
+            "future speculation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Do you think there is life on other planets? Can you guess what kind of people there may be on them? In what ways are they likely to be different from us?",
+          "hints": [
+            "Consider different planetary conditions",
+            "Think about adaptation to environment"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "discussion",
+            "speculation",
+            "science fiction",
+            "biology"
+          ]
+        }
+      ]
+    }
+  ]
+}

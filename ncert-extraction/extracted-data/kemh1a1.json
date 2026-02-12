@@ -1,0 +1,176 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "INFINITE SERIES",
+  "exercises": [
+    {
+      "exercise_number": "A.1.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Prove that (1 + x)^(-1) = 1 - x + x^2 - x^3 + ... for |x| < 1.",
+          "hints": [
+            "Use the binomial expansion formula with m = -1",
+            "Apply the condition |x| < 1",
+            "Simplify the coefficients"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "binomial theorem",
+            "infinite series",
+            "expansion"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Prove that (1 - x)^(-1) = 1 + x + x^2 + x^3 + ... for |x| < 1.",
+          "hints": [
+            "Use the binomial expansion formula with m = -1 and replace x by -x",
+            "Apply the condition |x| < 1",
+            "Simplify the alternating signs"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "binomial theorem",
+            "infinite series",
+            "geometric series"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Prove that (1 + x)^(-2) = 1 - 2x + 3x^2 - 4x^3 + ... for |x| < 1.",
+          "hints": [
+            "Use the binomial expansion formula with m = -2",
+            "Calculate coefficients using m(m-1)/2! etc.",
+            "Apply the condition |x| < 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "binomial theorem",
+            "infinite series",
+            "coefficient calculation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Prove that (1 - x)^(-2) = 1 + 2x + 3x^2 + 4x^3 + ... for |x| < 1.",
+          "hints": [
+            "Use the binomial expansion formula with m = -2 and replace x by -x",
+            "Calculate coefficients using m(m-1)/2! etc.",
+            "Apply the condition |x| < 1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "binomial theorem",
+            "infinite series",
+            "coefficient calculation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A.1.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the sum to infinity of the geometric series: 1 + 1/2 + 1/2^2 + 1/2^3 + ...",
+          "hints": [
+            "Identify a = 1, r = 1/2",
+            "Check |r| < 1",
+            "Use formula S = a/(1 - r)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "geometric series",
+            "infinite sum",
+            "convergence"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the sum to infinity of the geometric series: 1 - 1/2 + 1/2^2 - 1/2^3 + ...",
+          "hints": [
+            "Identify a = 1, r = -1/2",
+            "Check |r| < 1",
+            "Use formula S = a/(1 - r)"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "geometric series",
+            "alternating series",
+            "infinite sum"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the sum to infinity of the G.P.: -5/4, 5/16, -5/64, ...",
+          "hints": [
+            "Identify a = -5/4, r = -1/4",
+            "Check |r| < 1",
+            "Use formula S = a/(1 - r)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "geometric series",
+            "fractional terms",
+            "infinite sum"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A.1.4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the coefficient of x^2 in the expansion of e^(2x+3) as a series in powers of x.",
+          "hints": [
+            "Use exponential series e^x = 1 + x/1! + x^2/2! + ...",
+            "Replace x by (2x+3)",
+            "Expand using binomial theorem or separate as e^3 * e^(2x)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "exponential series",
+            "coefficient extraction",
+            "binomial expansion"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the value of e^2, rounded off to one decimal place.",
+          "hints": [
+            "Use exponential series e^x with x = 2",
+            "Calculate first several terms",
+            "Bound the value between partial sums"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "exponential series",
+            "approximation",
+            "numerical calculation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A.1.5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "If α, β are the roots of the equation x^2 - px + q = 0, prove that log_e(1 + px + qx^2) = (α + β)x - (α^2 + β^2)x^2/2 + (α^3 + β^3)x^3/3 - ...",
+          "hints": [
+            "Use logarithmic series log(1+x) = x - x^2/2 + x^3/3 - ...",
+            "Express px + qx^2 in terms of α and β",
+            "Combine two logarithmic expansions"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "logarithmic series",
+            "roots of equations",
+            "series expansion"
+          ]
+        }
+      ]
+    }
+  ]
+}

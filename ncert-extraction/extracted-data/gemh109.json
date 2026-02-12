@@ -1,0 +1,405 @@
+{
+  "chapter_number": 9,
+  "chapter_title": "Perimeter and Area",
+  "exercises": [
+    {
+      "exercise_number": "9.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the area of each of the following parallelograms: (a) (b) (c) (d) (e)",
+          "hints": [
+            "Use formula: Area = base × height",
+            "Identify base and height from diagram",
+            "Ensure units are consistent"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "parallelogram",
+            "area",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the area of each of the following triangles: (a) (b) (c) (d)",
+          "hints": [
+            "Use formula: Area = ½ × base × height",
+            "Height is perpendicular to base",
+            "Check if triangle is right-angled"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "triangle",
+            "area",
+            "geometry"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Find the missing values:\nS.No. Base Height Area of the Parallelogram\na. 20 cm ______ 246 cm²\nb. 15 cm ______ 154.5 cm²\nc. ______ 8.4 cm 48.72 cm²\nd. ______ 15.6 cm 16.38 cm²",
+          "hints": [
+            "Use formula: Area = base × height",
+            "Rearrange to find missing value: height = Area/base, base = Area/height",
+            "Keep units consistent"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallelogram",
+            "missing values",
+            "algebra"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Find the missing values:\nBase Height Area of Triangle\n15 cm ______ 87 cm²\n______ 31.4 mm 1256 mm²\n22 cm ______ 170.5 cm²",
+          "hints": [
+            "Use formula: Area = ½ × base × height",
+            "Rearrange: height = (2 × Area)/base, base = (2 × Area)/height",
+            "Convert units if needed"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "triangle",
+            "missing values",
+            "algebra"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "PQRS is a parallelogram (Fig 9.14). QM is the height from Q to SR and QN is the height from Q to PS. If SR = 12 cm and QM = 7.6 cm. Find: (a) the area of the parallelogram PQRS (b) QN, if PS = 8 cm",
+          "hints": [
+            "Area = base × corresponding height",
+            "For (a): Use SR as base, QM as height",
+            "For (b): Same area, use PS as base to find QN"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallelogram",
+            "height",
+            "area calculation"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "DL and BM are the heights on sides AB and AD respectively of parallelogram ABCD (Fig 9.15). If the area of the parallelogram is 1470 cm², AB = 35 cm and AD = 49 cm, find the length of BM and DL.",
+          "hints": [
+            "Area = base × height",
+            "Using AB as base: Area = AB × DL → find DL",
+            "Using AD as base: Area = AD × BM → find BM"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parallelogram",
+            "multiple heights",
+            "area application"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "∆ABC is right angled at A (Fig 9.16). AD is perpendicular to BC. If AB = 5 cm, BC = 13 cm and AC = 12 cm, Find the area of ∆ABC. Also find the length of AD.",
+          "hints": [
+            "In right triangle, area = ½ × (leg1 × leg2) = ½ × AB × AC",
+            "AD is height to hypotenuse BC: Area = ½ × BC × AD",
+            "Use both methods to verify"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "right triangle",
+            "area",
+            "altitude to hypotenuse",
+            "Pythagorean triple"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "∆ABC is isosceles with AB = AC = 7.5 cm and BC = 9 cm (Fig 9.17). The height AD from A to BC, is 6 cm. Find the area of ∆ABC. What will be the height from C to AB i.e., CE?",
+          "hints": [
+            "Area using base BC: ½ × BC × AD",
+            "Same area using base AB: ½ × AB × CE",
+            "Solve for CE"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "isosceles triangle",
+            "area",
+            "different bases",
+            "height calculation"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "9.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the circumference of the circles with the following radius: (Take π = 22/7) (a) 14 cm (b) 28 mm (c) 21 cm",
+          "hints": [
+            "Circumference = 2πr",
+            "Convert mm to cm if needed for consistency",
+            "Use π = 22/7 as given"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "circle",
+            "circumference",
+            "radius"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find the area of the following circles, given that: (a) radius = 14 mm (Take π = 22/7) (b) diameter = 49 m (c) radius = 5 cm",
+          "hints": [
+            "Area = πr²",
+            "If diameter given: radius = diameter/2",
+            "Convert units appropriately"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "circle",
+            "area",
+            "radius",
+            "diameter"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "If the circumference of a circular sheet is 154 m, find its radius. Also find the area of the sheet. (Take π = 22/7)",
+          "hints": [
+            "Circumference = 2πr → solve for r",
+            "Then Area = πr²",
+            "Use π = 22/7 consistently"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "circumference to radius",
+            "area calculation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "A gardener wants to fence a circular garden of diameter 21m. Find the length of the rope he needs to purchase, if he makes 2 rounds of fence. Also find the cost of the rope, if it costs ₹4 per meter. (Take π = 22/7)",
+          "hints": [
+            "Length for one round = circumference = πd",
+            "For 2 rounds: multiply by 2",
+            "Cost = total length × rate per meter"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "circumference",
+            "real-world application",
+            "cost calculation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "From a circular sheet of radius 4 cm, a circle of radius 3 cm is removed. Find the area of the remaining sheet. (Take π = 3.14)",
+          "hints": [
+            "Area of larger circle = π(4)²",
+            "Area of removed circle = π(3)²",
+            "Remaining area = difference"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "area subtraction",
+            "annulus"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Saima wants to put a lace on the edge of a circular table cover of diameter 1.5 m. Find the length of the lace required and also find its cost if one meter of the lace costs ₹15. (Take π = 3.14)",
+          "hints": [
+            "Length = circumference = πd",
+            "Convert diameter to meters",
+            "Cost = length × cost per meter"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "circle",
+            "circumference",
+            "real-world application",
+            "cost"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Find the perimeter of the adjoining figure, which is a semicircle including its diameter.",
+          "hints": [
+            "Perimeter = curved part (½ × circumference) + diameter",
+            "Circumference = πd, so curved part = ½πd",
+            "Add diameter length"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "semicircle",
+            "perimeter",
+            "composite figure"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Find the cost of polishing a circular table-top of diameter 1.6 m, if the rate of polishing is ₹15/m². (Take π = 3.14)",
+          "hints": [
+            "Area to polish = area of circle = πr²",
+            "Radius = diameter/2 = 0.8 m",
+            "Cost = area × rate per m²"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "area",
+            "real-world application",
+            "cost"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Shazli took a wire of length 44 cm and bent it into the shape of a circle. Find the radius of that circle. Also find its area. If the same wire is bent into the shape of a square, what will be the length of each of its sides? Which figure encloses more area, the circle or the square? (Take π = 22/7)",
+          "hints": [
+            "Wire length = circumference = 2πr → solve for r",
+            "Area of circle = πr²",
+            "For square: perimeter = 44 cm → side = 11 cm, area = side²",
+            "Compare areas"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "circle",
+            "square",
+            "perimeter to area",
+            "comparison",
+            "optimization"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "From a circular card sheet of radius 14 cm, two circles of radius 3.5 cm and a rectangle of length 3 cm and breadth 1cm are removed. (as shown in the adjoining figure). Find the area of the remaining sheet. (Take π = 22/7)",
+          "hints": [
+            "Area of original sheet = π(14)²",
+            "Area removed = 2 × π(3.5)² + (3 × 1)",
+            "Remaining area = original - removed"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "circle",
+            "rectangle",
+            "area subtraction",
+            "composite shapes"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "A circle of radius 2 cm is cut out from a square piece of an aluminium sheet of side 6 cm. What is the area of the left over aluminium sheet? (Take π = 3.14)",
+          "hints": [
+            "Area of square = side² = 36 cm²",
+            "Area of circle = π(2)²",
+            "Leftover area = square area - circle area"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "square",
+            "circle",
+            "area subtraction"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "The circumference of a circle is 31.4 cm. Find the radius and the area of the circle? (Take π = 3.14)",
+          "hints": [
+            "Circumference = 2πr = 31.4 → solve for r",
+            "Then area = πr²",
+            "Use π = 3.14 as given"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "circle",
+            "circumference to radius",
+            "area"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "A circular flower bed is surrounded by a path 4 m wide. The diameter of the flower bed is 66 m. What is the area of this path? (π = 3.14)",
+          "hints": [
+            "Radius of flower bed = 33 m",
+            "Radius including path = 33 + 4 = 37 m",
+            "Area of path = area of larger circle - area of flower bed"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "circle",
+            "annulus",
+            "path area",
+            "real-world application"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "A circular flower garden has an area of 314 m². A sprinkler at the centre of the garden can cover an area that has a radius of 12 m. Will the sprinkler water the entire garden? (Take π = 3.14)",
+          "hints": [
+            "Find radius of garden: area = πr² = 314 → solve for r",
+            "Compare with sprinkler radius 12 m",
+            "If garden radius ≤ 12 m, sprinkler covers entire garden"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "area to radius",
+            "comparison",
+            "real-world application"
+          ]
+        },
+        {
+          "question_number": 15,
+          "question_text": "Find the circumference of the inner and the outer circles, shown in the adjoining figure? (Take π = 3.14)",
+          "hints": [
+            "Need radii from figure (not provided in text)",
+            "Circumference = 2πr",
+            "Calculate for both circles"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "circle",
+            "circumference",
+            "concentric circles"
+          ]
+        },
+        {
+          "question_number": 16,
+          "question_text": "How many times a wheel of radius 28 cm must rotate to go 352 m? (Take π = 22/7)",
+          "hints": [
+            "Distance in one rotation = circumference = 2πr",
+            "Convert 352 m to cm (35200 cm)",
+            "Number of rotations = total distance / circumference"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circle",
+            "circumference",
+            "rotation",
+            "unit conversion"
+          ]
+        },
+        {
+          "question_number": 17,
+          "question_text": "The minute hand of a circular clock is 15 cm long. How far does the tip of the minute hand move in 1 hour. (Take π = 3.14)",
+          "hints": [
+            "Minute hand length = radius = 15 cm",
+            "In 1 hour, minute hand completes full circle",
+            "Distance = circumference = 2πr"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "circle",
+            "circumference",
+            "real-world application",
+            "clock"
+          ]
+        }
+      ]
+    }
+  ]
+}

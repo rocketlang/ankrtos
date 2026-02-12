@@ -1,0 +1,207 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Nutrition in Plants",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why do organisms take food?",
+          "hints": [
+            "Think about energy requirements",
+            "Consider growth and maintenance",
+            "Recall functions of nutrients"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "nutrition",
+            "basic concepts",
+            "energy"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Distinguish between a parasite and a saprotroph.",
+          "hints": [
+            "Consider their food sources",
+            "Think about living vs dead matter",
+            "Recall examples from chapter"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "modes of nutrition",
+            "comparison",
+            "definitions"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "How would you test the presence of starch in leaves?",
+          "hints": [
+            "Recall iodine test",
+            "Think about photosynthesis indicator",
+            "Consider experimental setup"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "experiment",
+            "starch test",
+            "photosynthesis"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Give a brief description of the process of synthesis of food in green plants.",
+          "hints": [
+            "Start with raw materials",
+            "Include chlorophyll role",
+            "Mention sunlight requirement"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "photosynthesis",
+            "food synthesis",
+            "process description"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Show with the help of a sketch that plants are the ultimate source of food.",
+          "hints": [
+            "Draw food chain",
+            "Show plant as base",
+            "Include animals and humans"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "food chain",
+            "sketch",
+            "ultimate source"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Fill in the blanks:\n(a) Green plants are called _________________ since they synthesise their own food.\n(b) The food synthesised by plants is stored as _________________.\n(c) In photosynthesis solar energy is absorbed by the pigment called ___________.\n(d) During photosynthesis plants take in ______________________ and release __________________ gas.",
+          "hints": [
+            "Recall autotrophs definition",
+            "Think about carbohydrate storage",
+            "Remember chlorophyll function",
+            "Recall photosynthesis equation"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fill in blanks",
+            "definitions",
+            "photosynthesis basics"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Name the following:\n(i) A parasitic plant with yellow, slender and branched stem.\n(ii) A plant that is partially autotrophic.\n(iii) The pores through which leaves exchange gases.",
+          "hints": [
+            "Recall Cuscuta example",
+            "Think about insectivorous plants",
+            "Remember leaf structure"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "identification",
+            "plant examples",
+            "terminology"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Tick the correct answer:\n(a) Cuscuta is an example of:\n(i) autotroph (ii) parasite (iii) saprotroph (iv) host\n(b) The plant which traps and feeds on insects is:\n(i) Cuscuta (ii) china rose (iii) pitcher plant (iv) rose",
+          "hints": [
+            "Recall Cuscuta nutrition mode",
+            "Remember insectivorous plant example"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "plant types",
+            "classification"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Match the items given in Column I with those in Column II:\nColumn I\nChlorophyll\nNitrogen\nCuscuta\nAnimals\nInsects\n\nColumn II\nRhizobium\nHeterotrophs\nPitcher plant\nLeaf\nParasite",
+          "hints": [
+            "Chlorophyll is in leaves",
+            "Nitrogen fixation by Rhizobium",
+            "Cuscuta is parasite",
+            "Animals are heterotrophs",
+            "Insects eaten by pitcher plant"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "matching",
+            "associations",
+            "concepts"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Mark 'T' if the statement is true and 'F' if it is false:\n(i) Carbon dioxide is released during photosynthesis. (T/F)\n(ii) Plants which synthesise their food are called saprotrophs. (T/F)\n(iii) The product of photosynthesis is not a protein. (T/F)\n(iv) Solar energy is converted into chemical energy during photosynthesis. (T/F)",
+          "hints": [
+            "Recall photosynthesis products",
+            "Remember autotrophs vs saprotrophs",
+            "Think about carbohydrate production",
+            "Energy conversion in photosynthesis"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "true false",
+            "concepts",
+            "photosynthesis details"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Choose the correct option from the following:\nWhich part of the plant takes in carbon dioxide from the air for photosynthesis?\n(i) Root hair (ii) Stomata (iii) Leaf veins (iv) Petals",
+          "hints": [
+            "Recall gas exchange structures",
+            "Think about leaf pores"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "plant parts",
+            "gas exchange"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Choose the correct option from the following:\nPlants take carbon dioxide from the atmosphere mainly through their:\n(i) roots (ii) stem (iii) flowers (iv) leaves",
+          "hints": [
+            "Consider main photosynthetic organ",
+            "Recall stomata location"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "carbon dioxide intake",
+            "photosynthesis"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "Why do farmers grow many fruits and vegetable crops inside large green houses? What are the advantages to the farmers?",
+          "hints": [
+            "Think about controlled environment",
+            "Consider year-round production",
+            "Recall protection from pests"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "application",
+            "agriculture",
+            "greenhouse farming"
+          ]
+        }
+      ]
+    }
+  ]
+}

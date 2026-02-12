@@ -1,0 +1,468 @@
+{
+  "chapter_number": 7,
+  "chapter_title": "MOTION",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "An object has moved through a distance. Can it have zero displacement? If yes, support your answer with an example.",
+          "hints": [
+            "Consider circular motion",
+            "Think about returning to starting point"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "displacement",
+            "distance",
+            "conceptual"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "A farmer moves along the boundary of a square field of side 10 m in 40 s. What will be the magnitude of displacement of the farmer at the end of 2 minutes 20 seconds from his initial position?",
+          "hints": [
+            "Calculate total time in seconds",
+            "Find number of rounds completed",
+            "Determine final position on square"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "displacement",
+            "square motion",
+            "time calculation"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Which of the following is true for displacement? (a) It cannot be zero. (b) Its magnitude is greater than the distance travelled by the object.",
+          "hints": [
+            "Displacement can be zero when object returns to start",
+            "Displacement magnitude can be less than or equal to distance"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "displacement properties",
+            "multiple choice"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Distinguish between speed and velocity.",
+          "hints": [
+            "Speed is scalar, velocity is vector",
+            "Velocity includes direction"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "speed",
+            "velocity",
+            "comparison"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Under what condition(s) is the magnitude of average velocity of an object equal to its average speed?",
+          "hints": [
+            "Consider straight line motion",
+            "Think about no change in direction"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "average velocity",
+            "average speed",
+            "conditions"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What does the odometer of an automobile measure?",
+          "hints": [
+            "Measures total distance travelled",
+            "Not speed or velocity"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "odometer",
+            "distance measurement"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What does the path of an object look like when it is in uniform motion?",
+          "hints": [
+            "Uniform motion means constant velocity",
+            "Path could be straight line"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "uniform motion",
+            "path description"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "During an experiment, a signal from a spaceship reached the ground station in five minutes. What was the distance of the spaceship from the ground station? The signal travels at the speed of light, that is, 3 × 10^8 m s^-1.",
+          "hints": [
+            "Convert minutes to seconds",
+            "Use distance = speed × time"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "distance calculation",
+            "speed of light",
+            "unit conversion"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "When will you say a body is in (i) uniform acceleration? (ii) non-uniform acceleration?",
+          "hints": [
+            "Uniform: equal velocity changes in equal times",
+            "Non-uniform: unequal changes"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "acceleration types",
+            "definitions"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "A bus decreases its speed from 80 km h^-1 to 60 km h^-1 in 5 s. Find the acceleration of the bus.",
+          "hints": [
+            "Convert km/h to m/s",
+            "Use a = (v-u)/t",
+            "Negative acceleration indicates deceleration"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "acceleration calculation",
+            "deceleration",
+            "unit conversion"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A train starting from a railway station and moving with uniform acceleration attains a speed 40 km h^-1 in 10 minutes. Find its acceleration.",
+          "hints": [
+            "Convert km/h to m/s",
+            "Convert minutes to seconds",
+            "Initial velocity is zero"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "acceleration",
+            "train motion",
+            "unit conversion"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What is the nature of the distance-time graphs for uniform and non-uniform motion of an object?",
+          "hints": [
+            "Uniform: straight line",
+            "Non-uniform: curved line"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "distance-time graphs",
+            "graph interpretation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What can you say about the motion of an object whose distance-time graph is a straight line parallel to the time axis?",
+          "hints": [
+            "Distance not changing with time",
+            "Object is stationary"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "stationary object",
+            "graph analysis"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "What can you say about the motion of an object if its speed-time graph is a straight line parallel to the time axis?",
+          "hints": [
+            "Constant speed",
+            "Zero acceleration"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "constant speed",
+            "zero acceleration",
+            "graph analysis"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "What is the quantity which is measured by the area occupied below the velocity-time graph?",
+          "hints": [
+            "Area represents displacement",
+            "For constant velocity, area = distance"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "velocity-time graph",
+            "area interpretation",
+            "displacement"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A bus starting from rest moves with a uniform acceleration of 0.1 m s^-2 for 2 minutes. Find (a) the speed acquired, (b) the distance travelled.",
+          "hints": [
+            "Convert minutes to seconds",
+            "Use v = u + at for speed",
+            "Use s = ut + ½at² for distance"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "equations of motion",
+            "acceleration",
+            "unit conversion"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "A train is travelling at a speed of 90 km h^-1. Brakes are applied so as to produce a uniform acceleration of – 0.5 m s^-2. Find how far the train will go before it is brought to rest.",
+          "hints": [
+            "Convert km/h to m/s",
+            "Use v² = u² + 2as",
+            "Final velocity is zero"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "deceleration",
+            "stopping distance",
+            "equations of motion"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "A trolley, while going down an inclined plane, has an acceleration of 2 cm s^-2. What will be its velocity 3 s after the start?",
+          "hints": [
+            "Convert cm/s² to m/s²",
+            "Initial velocity is zero",
+            "Use v = u + at"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "acceleration",
+            "velocity calculation",
+            "unit conversion"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "A racing car has a uniform acceleration of 4 m s^-2. What distance will it cover in 10 s after start?",
+          "hints": [
+            "Initial velocity is zero",
+            "Use s = ut + ½at²"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "acceleration",
+            "distance calculation",
+            "equations of motion"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "A stone is thrown in a vertically upward direction with a velocity of 5 m s^-1. If the acceleration of the stone during its motion is 10 m s^-2 in the downward direction, what will be the height attained by the stone and how much time will it take to reach there?",
+          "hints": [
+            "At highest point, velocity becomes zero",
+            "Use v = u + at for time",
+            "Use v² = u² + 2as for height"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "projectile motion",
+            "vertical throw",
+            "gravity"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Exercises",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "An athlete completes one round of a circular track of diameter 200 m in 40 s. What will be the distance covered and the displacement at the end of 2 minutes 20 s?",
+          "hints": [
+            "Calculate radius from diameter",
+            "Find total time in seconds",
+            "Determine number of complete rounds",
+            "Displacement depends on final position"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "circular motion",
+            "displacement",
+            "distance",
+            "time calculation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Joseph jogs from one end A to the other end B of a straight 300 m road in 2 minutes 30 seconds and then turns around and jogs 100 m back to point C in another 1 minute. What are Joseph's average speeds and velocities in jogging (a) from A to B and (b) from A to C?",
+          "hints": [
+            "Convert minutes to seconds",
+            "Average speed = total distance/total time",
+            "Average velocity = displacement/total time"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "average speed",
+            "average velocity",
+            "displacement"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Abdul, while driving to school, computes the average speed for his trip to be 20 km h^-1. On his return trip along the same route, there is less traffic and the average speed is 30 km h^-1. What is the average speed for Abdul's trip?",
+          "hints": [
+            "Assume equal distance for both trips",
+            "Use harmonic mean formula",
+            "Not simple arithmetic average"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "average speed",
+            "round trip",
+            "harmonic mean"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "A motorboat starting from rest on a lake accelerates in a straight line at a constant rate of 3.0 m s^-2 for 8.0 s. How far does the boat travel during this time?",
+          "hints": [
+            "Initial velocity is zero",
+            "Use s = ut + ½at²"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "acceleration",
+            "distance",
+            "equations of motion"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "A driver of a car travelling at 52 km h^-1 applies the brakes and accelerates uniformly in the opposite direction. The car stops in 5 s. Another driver going at 3 km h^-1 in another car applies his brakes slowly and stops in 10 s. On the same graph paper, plot the speed versus time graphs for the two cars. Which of the two cars travelled farther after the brakes were applied?",
+          "hints": [
+            "Convert speeds to m/s",
+            "Area under speed-time graph gives distance",
+            "Calculate areas for both cars"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "speed-time graph",
+            "deceleration",
+            "graph plotting",
+            "area calculation"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Fig 7.10 shows the distance-time graph of three objects A,B and C. Study the graph and answer the following questions: (a) Which of the three is travelling the fastest? (b) Are all three ever at the same point on the road? (c) How far has C travelled when B passes A? (d) How far has B travelled by the time it passes C?",
+          "hints": [
+            "Fastest has steepest slope",
+            "Same point means same distance at same time",
+            "Read values from graph"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "distance-time graph",
+            "graph analysis",
+            "slope interpretation"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "A ball is gently dropped from a height of 20 m. If its velocity increases uniformly at the rate of 10 m s^-2, with what velocity will it strike the ground? After what time will it strike the ground?",
+          "hints": [
+            "Initial velocity is zero",
+            "Use v² = u² + 2as for velocity",
+            "Use s = ut + ½at² for time"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "free fall",
+            "gravity",
+            "equations of motion"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "The speed-time graph for a car is shown is Fig. 7.11. (a) Find how far does the car travel in the first 4 seconds. Shade the area on the graph that represents the distance travelled by the car during the period. (b) Which part of the graph represents uniform motion of the car?",
+          "hints": [
+            "Area under speed-time graph gives distance",
+            "Uniform motion means constant speed (horizontal line)"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "speed-time graph",
+            "area calculation",
+            "uniform motion"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "State which of the following situations are possible and give an example for each of these: (a) an object with a constant acceleration but with zero velocity (b) an object moving with an acceleration but with uniform speed. (c) an object moving in a certain direction with an acceleration in the perpendicular direction.",
+          "hints": [
+            "(a) Think about object at highest point of vertical throw",
+            "(b) Consider uniform circular motion",
+            "(c) Consider projectile motion"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "conceptual",
+            "acceleration scenarios",
+            "physics concepts"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "An artificial satellite is moving in a circular orbit of radius 42250 km. Calculate its speed if it takes 24 hours to revolve around the earth.",
+          "hints": [
+            "Convert radius to meters",
+            "Convert hours to seconds",
+            "Use v = 2πr/t"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "circular motion",
+            "satellite speed",
+            "unit conversion"
+          ]
+        }
+      ]
+    }
+  ]
+}

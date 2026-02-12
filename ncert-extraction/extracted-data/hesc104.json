@@ -1,0 +1,303 @@
+{
+  "chapter_number": 4,
+  "chapter_title": "COMBUSTION AND FLAME",
+  "exercises": [
+    {
+      "exercise_number": "1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "List conditions under which combustion can take place.",
+          "hints": [
+            "Recall the three essential requirements for fire",
+            "Think about what is needed for a substance to burn"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "combustion",
+            "fire requirements",
+            "basic concepts"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Fill in the blanks.\n(a) Burning of wood and coal causes ______ of air.\n(b) A liquid fuel, used in homes is ______.\n(c) Fuel must be heated to its ______ before it starts burning.\n(d) Fire produced by oil cannot be controlled by ______.",
+          "hints": [
+            "Think about pollutants from burning wood/coal",
+            "Consider common household liquid fuels",
+            "Recall the temperature term for starting combustion",
+            "Remember why water doesn't work on oil fires"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fill in blanks",
+            "fuel types",
+            "combustion basics",
+            "fire control"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Explain how the use of CNG in automobiles has reduced pollution in our cities.",
+          "hints": [
+            "Compare CNG with petrol/diesel",
+            "Think about harmful products from different fuels",
+            "Consider which pollutants are reduced"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "CNG",
+            "pollution control",
+            "automobile fuels",
+            "environment"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Compare LPG and wood as fuels.",
+          "hints": [
+            "Consider calorific values",
+            "Think about ease of use",
+            "Compare pollution levels",
+            "Consider availability and cost"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "fuel comparison",
+            "LPG",
+            "wood",
+            "domestic fuels"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Give reasons.\n(a) Water is not used to control fires involving electrical equipment.\n(b) LPG is a better domestic fuel than wood.\n(c) Paper by itself catches fire easily whereas a piece of paper wrapped around an aluminium pipe does not.",
+          "hints": [
+            "Think about conductivity of water",
+            "Compare properties of LPG vs wood",
+            "Consider heat transfer and ignition temperature"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "fire safety",
+            "fuel properties",
+            "heat transfer",
+            "practical applications"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Make a labelled diagram of a candle flame.",
+          "hints": [
+            "Recall the three zones of candle flame",
+            "Remember their colors and temperatures",
+            "Label all parts clearly"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "candle flame",
+            "diagram",
+            "flame structure",
+            "visual representation"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Name the unit in which the calorific value of a fuel is expressed.",
+          "hints": [
+            "Check Table 4.4 in the chapter",
+            "Recall the standard unit for energy measurement"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "calorific value",
+            "units",
+            "fuel efficiency",
+            "measurement"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Explain how CO2 is able to control fires.",
+          "hints": [
+            "Think about CO2 properties",
+            "Consider how it affects the fire triangle",
+            "Recall its behavior when released from cylinders"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "CO2",
+            "fire extinguisher",
+            "fire control",
+            "safety"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "It is difficult to burn a heap of green leaves but dry leaves catch fire easily. Explain.",
+          "hints": [
+            "Consider moisture content",
+            "Think about ignition temperature",
+            "Recall how water affects combustion"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "combustion",
+            "moisture",
+            "ignition temperature",
+            "practical example"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Which zone of a flame does a goldsmith use for melting gold and silver and why?",
+          "hints": [
+            "Recall the different flame zones",
+            "Think about which zone is hottest",
+            "Consider what goldsmiths need for melting metals"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "flame zones",
+            "goldsmith",
+            "hottest part",
+            "practical application"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "In an experiment 4.5 kg of a fuel was completely burnt. The heat produced was measured to be 180,000 kJ. Calculate the calorific value of the fuel.",
+          "hints": [
+            "Use the formula: Calorific value = Total heat produced / Mass of fuel",
+            "Ensure units are correct",
+            "Divide 180,000 by 4.5"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "calculation",
+            "calorific value",
+            "numerical",
+            "fuel efficiency"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Can the process of rusting be called combustion? Discuss.",
+          "hints": [
+            "Compare rusting with combustion",
+            "Consider if rusting produces heat/light",
+            "Think about oxygen involvement in both processes"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "rusting",
+            "combustion comparison",
+            "chemical reactions",
+            "critical thinking"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "Abida and Ramesh were doing an experiment in which water was to be heated in a beaker. Abida kept the beaker near the wick in the yellow part of the candle flame. Ramesh kept the beaker in the outermost part of the flame. Whose water will get heated in a shorter time?",
+          "hints": [
+            "Recall which flame zone is hottest",
+            "Think about heat transfer efficiency",
+            "Consider complete vs incomplete combustion zones"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "experiment",
+            "flame zones",
+            "heat transfer",
+            "practical application"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Extended Learning",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Survey the availability of various fuels in your locality. Find out their cost per kg and prepare a tabular chart showing how many kJ of various fuels you can get for every rupee.",
+          "hints": [
+            "Use calorific values from Table 4.4",
+            "Calculate kJ per rupee for each fuel",
+            "Organize data in a clear table"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "survey",
+            "fuel cost",
+            "calorific value",
+            "practical activity"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Find out the number, type and location of fire extinguishers available in your school, nearby shops and factories. Write a brief report about the preparedness of these establishments to fight fire.",
+          "hints": [
+            "Check different types of fire extinguishers",
+            "Note their locations and accessibility",
+            "Assess overall fire safety preparedness"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "fire safety",
+            "survey",
+            "safety equipment",
+            "practical activity"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Survey 100 houses in your area. Find the percentage of households using LPG, kerosene, wood and cattle dung as fuel.",
+          "hints": [
+            "Design a simple survey questionnaire",
+            "Collect data systematically",
+            "Calculate percentages for each fuel type"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "survey",
+            "fuel usage",
+            "statistics",
+            "social study"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Talk to people who use LPG at home. Find out what precautions they take in using LPG.",
+          "hints": [
+            "Interview LPG users",
+            "Ask about safety measures",
+            "Note common precautions mentioned"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "interview",
+            "LPG safety",
+            "precautions",
+            "practical activity"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Make a model of a fire extinguisher. Place a short candle and a slightly taller candle in a small dish filled with baking soda. Place the dish at the bottom of a large bowl. Light both the candles. Then pour vinegar into the dish of baking soda. Take care. Do not pour vinegar on the candles. Observe the foaming reaction. What happens to the candles? Why? In what order?",
+          "hints": [
+            "The reaction produces CO2 gas",
+            "CO2 is heavier than air and displaces oxygen",
+            "Observe which candle goes out first and why"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "experiment",
+            "fire extinguisher model",
+            "CO2 production",
+            "practical demonstration"
+          ]
+        }
+      ]
+    }
+  ]
+}

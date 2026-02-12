@@ -1,0 +1,442 @@
+{
+  "chapter_number": 4,
+  "chapter_title": "COMPLEX NUMBERS AND QUADRATIC EQUATIONS",
+  "exercises": [
+    {
+      "exercise_number": "4.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Express (5i)(-i/3/5) in the form a + ib.",
+          "hints": [
+            "Multiply the complex numbers directly",
+            "Remember i² = -1",
+            "Simplify to a + ib form"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "complex multiplication",
+            "imaginary unit"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Express i⁹ + i¹⁹ in the form a + ib.",
+          "hints": [
+            "Use the cyclic pattern of powers of i",
+            "i⁴ = 1, i = i, i² = -1, i³ = -i",
+            "Simplify each term separately"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "powers of i",
+            "cyclic pattern"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Express i⁻³⁹ in the form a + ib.",
+          "hints": [
+            "Convert negative power to positive using i⁻¹ = -i",
+            "Use i⁴ = 1 to reduce the exponent",
+            "Simplify to a + ib form"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "negative powers",
+            "imaginary unit",
+            "exponent reduction"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Express 3(7 + i7) + i(7 + i7) in the form a + ib.",
+          "hints": [
+            "Distribute multiplication",
+            "Combine real and imaginary parts",
+            "Simplify using i² = -1"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "distributive law",
+            "complex addition",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Express (1 - i) - (-1 + i6) in the form a + ib.",
+          "hints": [
+            "Subtract complex numbers by subtracting real and imaginary parts separately",
+            "Be careful with signs",
+            "Simplify to a + ib form"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "complex subtraction",
+            "real and imaginary parts"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Express (1/5 + 2i/5) - (4 + i5/2) in the form a + ib.",
+          "hints": [
+            "Convert to common denominators if needed",
+            "Subtract real and imaginary parts separately",
+            "Simplify fractions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "fractional complex numbers",
+            "subtraction",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Express [(1/3 + i7/3) + (4 + i1/3)] - (-4/3 + i) in the form a + ib.",
+          "hints": [
+            "Add the first two complex numbers first",
+            "Then subtract the third complex number",
+            "Combine real and imaginary parts carefully"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "complex addition and subtraction",
+            "multiple operations",
+            "fractional parts"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Express (1 - i)⁴ in the form a + ib.",
+          "hints": [
+            "Use binomial expansion or multiply step by step",
+            "Remember i² = -1, i³ = -i, i⁴ = 1",
+            "Simplify powers of i"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "binomial expansion",
+            "powers of complex numbers",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Express (1/3 + 3i)³ in the form a + ib.",
+          "hints": [
+            "Use binomial expansion (a + b)³ formula",
+            "Apply to complex numbers with a = 1/3, b = 3i",
+            "Simplify powers of i carefully"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cube of complex number",
+            "binomial theorem",
+            "fractional real part"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Express (-2 - i1/3)³ in the form a + ib.",
+          "hints": [
+            "Use binomial expansion (a + b)³ formula",
+            "Apply with a = -2, b = -i/3",
+            "Simplify powers of i and fractions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cube of complex number",
+            "negative coefficients",
+            "fractional imaginary part"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Find the multiplicative inverse of 4 - 3i.",
+          "hints": [
+            "Multiplicative inverse of a + ib is (a - ib)/(a² + b²)",
+            "Calculate a² + b² for denominator",
+            "Express in a + ib form"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiplicative inverse",
+            "complex conjugate",
+            "modulus"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Find the multiplicative inverse of 5 + 3i.",
+          "hints": [
+            "Use formula: 1/(a + ib) = (a - ib)/(a² + b²)",
+            "Calculate denominator: 5² + 3²",
+            "Simplify to a + ib form"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiplicative inverse",
+            "complex numbers",
+            "rationalization"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "Find the multiplicative inverse of -i.",
+          "hints": [
+            "Write -i as 0 - i",
+            "Apply multiplicative inverse formula",
+            "Simplify using i² = -1"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "pure imaginary number",
+            "multiplicative inverse",
+            "imaginary unit"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "Express the following expression in the form of a + ib: (3 + i√5)(3 - i√5)/[(√3 + √2i) - (√3 - i√2)].",
+          "hints": [
+            "Simplify numerator using (a + b)(a - b) = a² - b²",
+            "Simplify denominator by subtracting complex numbers",
+            "Divide and rationalize if needed"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "complex multiplication",
+            "conjugate pairs",
+            "subtraction",
+            "division"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Miscellaneous",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Evaluate: [i¹⁸ + (1/i)²⁵]³.",
+          "hints": [
+            "Simplify i¹⁸ using i⁴ = 1",
+            "Simplify (1/i)²⁵ = i⁻²⁵",
+            "Combine and then cube the result"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "powers of i",
+            "negative exponents",
+            "cube of complex number"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "For any two complex numbers z₁ and z₂, prove that Re(z₁z₂) = Re(z₁)Re(z₂) - Im(z₁)Im(z₂).",
+          "hints": [
+            "Let z₁ = a + ib, z₂ = c + id",
+            "Multiply z₁z₂ and find real part",
+            "Compare with right side expression"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "proof",
+            "real part",
+            "complex multiplication",
+            "algebraic identity"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "Reduce [(1/(1 - 4i)) - (2/(1 + i))] × [(3 - 4i)/(5 + i)] to the standard form a + ib.",
+          "hints": [
+            "Simplify first bracket by finding common denominator",
+            "Multiply the two complex numbers",
+            "Rationalize and simplify to a + ib form"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "complex fractions",
+            "multiplication",
+            "rationalization",
+            "standard form"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "If x - iy = √[(a - ib)/(c - id)], prove that x² + y² = √[(a² + b²)/(c² + d²)].",
+          "hints": [
+            "Square both sides: (x - iy)² = (a - ib)/(c - id)",
+            "Use modulus properties |z|² = z·z̄",
+            "Compare real and imaginary parts or use modulus approach"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "proof",
+            "modulus",
+            "complex square root",
+            "algebraic manipulation"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "If z₁ = 2 - i, z₂ = 1 + i, find |(z₁ + z₂ + 1)/(z₁ - z₂ + i)|.",
+          "hints": [
+            "Calculate numerator: z₁ + z₂ + 1",
+            "Calculate denominator: z₁ - z₂ + i",
+            "Find modulus of the quotient"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "modulus",
+            "complex operations",
+            "quotient of complex numbers"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "If a + ib = (x² + 1)²/(2x² + 1) + i[(x + i)²/(2x² + 1)], prove that a² + b² = [(x² + 1)²/(2x² + 1)²].",
+          "hints": [
+            "Identify real part a and imaginary part b",
+            "Calculate a² + b²",
+            "Simplify using algebraic identities"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "proof",
+            "modulus squared",
+            "algebraic manipulation",
+            "complex identity"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Let z₁ = 2 - i, z₂ = -2 + i. Find (i) Re(z₁z₂/z₁), (ii) Im(1/z₁z̄₁).",
+          "hints": [
+            "For (i): Simplify z₁z₂/z₁ = z₂, then find real part",
+            "For (ii): Find z₁z̄₁ = |z₁|², then find imaginary part of its reciprocal"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "real part",
+            "imaginary part",
+            "conjugate",
+            "modulus"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Find the real numbers x and y if (x - iy)(3 + 5i) is the conjugate of -6 - 24i.",
+          "hints": [
+            "Find conjugate of -6 - 24i = -6 + 24i",
+            "Multiply (x - iy)(3 + 5i) and equate to -6 + 24i",
+            "Solve system of equations for x and y"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "conjugate",
+            "system of equations",
+            "complex multiplication"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Find the modulus of (1 + i)/(1 - i) - (1 - i)/(1 + i).",
+          "hints": [
+            "Simplify each fraction separately",
+            "Subtract the results",
+            "Find modulus of the resulting complex number"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "modulus",
+            "complex fractions",
+            "subtraction",
+            "simplification"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "If (x + iy)³ = u + iv, then show that u/x + v/y = 4(x² - y²).",
+          "hints": [
+            "Expand (x + iy)³ using binomial theorem",
+            "Equate real part to u and imaginary part to v",
+            "Express u/x + v/y and simplify"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "proof",
+            "binomial expansion",
+            "complex cube",
+            "algebraic identity"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "If α and β are different complex numbers with |β| = 1, then find |(β - α)/(1 - ᾱβ)|.",
+          "hints": [
+            "Use property |z|² = z·z̄",
+            "Multiply numerator and denominator by conjugate of denominator",
+            "Simplify using |β| = 1"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "modulus",
+            "complex quotient",
+            "conjugate",
+            "algebraic proof"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Find the number of non-zero integral solutions of the equation |1 - i|ˣ = 2ˣ.",
+          "hints": [
+            "Calculate |1 - i| = √2",
+            "Equation becomes (√2)ˣ = 2ˣ",
+            "Solve for x and find integral solutions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "modulus",
+            "exponential equation",
+            "integral solutions"
+          ]
+        },
+        {
+          "question_number": 13,
+          "question_text": "If (a + ib)(c + id)(e + if)(g + ih) = A + iB, then show that (a² + b²)(c² + d²)(e² + f²)(g² + h²) = A² + B².",
+          "hints": [
+            "Take modulus of both sides",
+            "Use property |z₁z₂| = |z₁||z₂|",
+            "Square both sides to get required result"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "proof",
+            "modulus properties",
+            "product of complex numbers",
+            "Pythagorean identity"
+          ]
+        },
+        {
+          "question_number": 14,
+          "question_text": "If [(1 + i)/(1 - i)]ᵐ = 1, then find the least positive integral value of m.",
+          "hints": [
+            "Simplify (1 + i)/(1 - i) = i",
+            "Equation becomes iᵐ = 1",
+            "Find smallest positive m where iᵐ = 1"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "powers of i",
+            "complex division",
+            "integral exponent"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "chapter_number": 1,
+  "chapter_title": "Nutrition in Plants",
+  "exercises": [
+    {
+      "exercise_number": "1.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Why do organisms need to take food?",
+          "hints": [
+            "Think about energy requirements",
+            "Consider growth and repair"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "nutrition",
+            "food necessity",
+            "organisms"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Distinguish between a parasite and a saprotroph.",
+          "hints": [
+            "Recall how each obtains nutrition",
+            "Think about host dependency vs. dead matter"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "parasite",
+            "saprotroph",
+            "nutrition modes"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "How would you test the presence of starch in leaves?",
+          "hints": [
+            "Recall iodine test procedure",
+            "Think about leaf preparation steps"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "starch test",
+            "iodine test",
+            "experiment"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "Give a brief description of the process of photosynthesis in plants.",
+          "hints": [
+            "Recall raw materials needed",
+            "Think about chlorophyll role",
+            "Consider end products"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "photosynthesis",
+            "process description",
+            "plant nutrition"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Show with the help of a sketch that plants are the ultimate source of food.",
+          "hints": [
+            "Draw food chain",
+            "Show plant as producer",
+            "Connect to animals"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "food chain",
+            "sketch",
+            "producer"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "Fill in the blanks: (a) Green plants are called __________ since they synthesise their own food. (b) The food synthesised by plants is stored as __________. (c) In photosynthesis solar energy is absorbed by the pigment called __________. (d) During photosynthesis plants take in __________ and release __________ gas.",
+          "hints": [
+            "Recall autotrophs",
+            "Think about starch storage",
+            "Remember chlorophyll",
+            "Recall gas exchange"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "fill blanks",
+            "photosynthesis basics",
+            "terminology"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Name the following: (i) A parasitic plant with yellow, slender and branched stem. (ii) A plant that is partially autotrophic. (iii) The pores through which leaves exchange gases.",
+          "hints": [
+            "Think of cuscuta",
+            "Recall insectivorous plants",
+            "Remember stomata"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "identification",
+            "plant types",
+            "structures"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question_text": "Tick the correct answer: (a) Cuscuta is an example of: (i) autotroph (ii) parasite (iii) saprotroph (iv) host (b) The plant which traps and feeds on insects is: (i) Cuscuta (ii) china rose (iii) pitcher plant (iv) rose",
+          "hints": [
+            "Recall cuscuta nutrition mode",
+            "Remember insectivorous plant examples"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "plant nutrition types"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question_text": "Match the items given in Column I with those in Column II:\nColumn I\nChlorophyll\nNitrogen\nAmarbel\nAnimals\nInsects\nColumn II\n(a) Bacteria\n(b) Heterotrophs\n(c) Pitcher plant\n(d) Leaf\n(e) Parasite",
+          "hints": [
+            "Match chlorophyll to leaf",
+            "Nitrogen to bacteria",
+            "Amarbel to parasite",
+            "Animals to heterotrophs",
+            "Insects to pitcher plant"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "matching",
+            "concept association"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question_text": "Mark 'T' if the statement is true and 'F' if it is false: (i) Carbon dioxide is released during photosynthesis. (T/F) (ii) Plants which synthesise their food are called saprotrophs. (T/F) (iii) The product of photosynthesis is not a protein. (T/F) (iv) Solar energy is converted into chemical energy during photosynthesis. (T/F)",
+          "hints": [
+            "Recall gas released in photosynthesis",
+            "Check saprotroph definition",
+            "Think about photosynthesis products",
+            "Energy conversion in photosynthesis"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "true false",
+            "photosynthesis facts"
+          ]
+        },
+        {
+          "question_number": 11,
+          "question_text": "Choose the correct option from the following: Which part of the plant takes in carbon dioxide from the air for photosynthesis? (i) Root hair (ii) Stomata (iii) Leaf veins (iv) Petals",
+          "hints": [
+            "Recall gas exchange structure in leaves"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "photosynthesis",
+            "gas exchange"
+          ]
+        },
+        {
+          "question_number": 12,
+          "question_text": "Choose the correct option from the following: Plants take nitrogen from (i) the air (ii) the soil (iii) water (iv) fertilisers",
+          "hints": [
+            "Recall nitrogen absorption by roots"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "multiple choice",
+            "plant nutrition",
+            "nitrogen"
+          ]
+        }
+      ]
+    }
+  ]
+}

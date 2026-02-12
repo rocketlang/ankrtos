@@ -1,0 +1,342 @@
+{
+  "chapter_number": 2,
+  "chapter_title": "MATHEMATICAL MODELLING",
+  "exercises": [
+    {
+      "exercise_number": "A.2.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "What is mathematical modelling? Explain with examples.",
+          "hints": [
+            "Define mathematical modelling",
+            "Give examples of real-life problems",
+            "Explain the conversion process"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "definition",
+            "introduction",
+            "real-life applications"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A.2.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "List some real-life problems that can be solved using mathematical modelling.",
+          "hints": [
+            "Think of measurement problems",
+            "Consider optimization problems",
+            "Include estimation problems"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "problem identification",
+            "applications",
+            "examples"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Why do we need mathematical modelling for problems like finding the width of a river or height of a tower?",
+          "hints": [
+            "Consider physical constraints",
+            "Think about indirect measurement",
+            "Discuss practical limitations"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "practical applications",
+            "measurement",
+            "indirect methods"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "A.2.3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "List the basic principles of mathematical modelling.",
+          "hints": [
+            "Identify 8 principles mentioned",
+            "Focus on systematic approach",
+            "Include validation steps"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "principles",
+            "methodology",
+            "systematic approach"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Describe the steps involved in mathematical modelling with the help of a diagram.",
+          "hints": [
+            "List all 5 steps",
+            "Explain each step briefly",
+            "Refer to Fig A.2.1"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "steps",
+            "process",
+            "flowchart",
+            "methodology"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Example 1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Find the height of a given tower using mathematical modelling when the foot of the tower is accessible.",
+          "hints": [
+            "Use trigonometry",
+            "Consider observer's height",
+            "Apply tan α = (H-h)/l"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "trigonometry",
+            "height measurement",
+            "accessible base"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Modify the model in Example 1 when the foot of the tower is not accessible.",
+          "hints": [
+            "Use angle of depression",
+            "Apply tan β = h/l",
+            "Combine with previous result"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "trigonometry",
+            "inaccessible base",
+            "angle of depression"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Example 2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A business firm produces three types of products P1, P2 and P3 using three types of raw materials R1, R2 and R3. The firm has purchase orders from two clients F1 and F2. Prepare a mathematical model to determine the quantities of raw materials required to meet the purchase orders.",
+          "hints": [
+            "Define matrices A and B",
+            "Use matrix multiplication",
+            "AB gives required raw materials"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "matrix multiplication",
+            "resource allocation",
+            "business application"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Example 3",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Interpret the model in Example 2 with A = [[10, 15, 6], [10, 20, 0]] and B = [[3, 4, 0], [7, 9, 3], [5, 12, 7]]. If available raw materials are 330 units of R1, 455 units of R2 and 140 units of R3, can the firm meet the orders?",
+          "hints": [
+            "Calculate AB",
+            "Compare with available resources",
+            "Analyze shortages"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "matrix calculation",
+            "resource analysis",
+            "feasibility check"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "What modifications can be made if the firm cannot meet the orders with available resources?",
+          "hints": [
+            "Reduce purchase orders",
+            "Modify matrix A",
+            "Check new AB product"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "optimization",
+            "constraint satisfaction",
+            "business decision"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Example 4",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "With B = [[3, 4, 0], [7, 9, 3], [5, 12, 7]] and available raw materials: 330 units of R1, 455 units of R2, 140 units of R3, how many units of each product should be made to fully utilize available raw material?",
+          "hints": [
+            "Set up equations: 3x+7y+5z=330, 4x+9y+12z=455, 3y+7z=140",
+            "Solve system of equations",
+            "Use matrix methods"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "system of equations",
+            "matrix solution",
+            "resource utilization",
+            "optimization"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Example 5",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A medicine manufacturer produces M1 and M2. Constraints: raw materials for 20000 bottles of M1 and 40000 bottles of M2, only 45000 bottles available, 66 hours available (3 hours/1000 bottles for M1, 1 hour/1000 bottles for M2). Profit: Rs 8 per bottle for M1, Rs 7 per bottle for M2. How should production be scheduled to maximize profit?",
+          "hints": [
+            "Define variables x and y",
+            "Formulate objective function Z=8x+7y",
+            "List all constraints",
+            "Use graphical method/LPP",
+            "Find corner points"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "linear programming",
+            "optimization",
+            "profit maximization",
+            "constraints"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Example 6",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A company produces a new product with fixed cost 'a' and variable cost 'b' per unit. Selling price is 's' per unit. All units produced are sold. Develop a mathematical model for profitability analysis.",
+          "hints": [
+            "Define C = a + bx",
+            "Define I = sx",
+            "Profit P = I - C = (s-b)x - a",
+            "Find break-even point"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "cost analysis",
+            "profit function",
+            "break-even analysis",
+            "business model"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "From the model P = (s-b)x - a, what does dP/dx = s-b indicate about profitability?",
+          "hints": [
+            "Interpret derivative as rate of change",
+            "Discuss significance of s-b > 0",
+            "Relate to production decisions"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "calculus application",
+            "marginal profit",
+            "decision making"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Example 7",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "A tank contains 1000L brine with 250g salt/L. Brine with 200g salt/L flows in at 25L/min, mixture flows out at same rate. Find amount of salt in tank at time t.",
+          "hints": [
+            "Set up differential equation: dy/dt = 5 - y/40",
+            "Solve linear differential equation",
+            "Use initial condition y(0)=250"
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "differential equations",
+            "mixing problems",
+            "rate of change",
+            "initial value problem"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "From the solution y = 200 + 50e^(-t/40), what are the minimum and maximum possible salt amounts in the tank?",
+          "hints": [
+            "Analyze as t→∞",
+            "Consider initial condition",
+            "Determine range of y"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "limits",
+            "asymptotic behavior",
+            "range analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "Limitations",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Discuss the limitations of mathematical modelling.",
+          "hints": [
+            "Complex situations",
+            "Mathematical intractability",
+            "Parameter estimation",
+            "Real-world vs model accuracy"
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "limitations",
+            "challenges",
+            "model accuracy",
+            "parameter estimation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "How have computers helped in overcoming some limitations of mathematical modelling?",
+          "hints": [
+            "Complex model simulation",
+            "Realistic models",
+            "Better agreement with observations",
+            "Large-scale modelling"
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "computational methods",
+            "simulation",
+            "advancements"
+          ]
+        }
+      ]
+    }
+  ]
+}

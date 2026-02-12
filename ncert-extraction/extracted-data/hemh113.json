@@ -1,0 +1,169 @@
+{
+  "chapter_number": 13,
+  "chapter_title": "Introduction to Graphs",
+  "exercises": [
+    {
+      "exercise_number": "13.1",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "The following graph shows the temperature of a patient in a hospital, recorded every hour. (a) What was the patient’s temperature at 1 p.m.? (b) When was the patient’s temperature 38.5° C? (c) The patient’s temperature was the same two times during the period given. What were these two times? (d) What was the temperature at 1.30 p.m.? How did you arrive at your answer? (e) During which periods did the patients’ temperature showed an upward trend?",
+          "hints": [
+            "Read values directly from the graph for specific times.",
+            "Look for points where temperature is 38.5°C.",
+            "Identify two different times with the same temperature reading.",
+            "Estimate temperature between recorded hours by observing the line trend.",
+            "Identify intervals where the line slopes upward."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "line graph",
+            "temperature",
+            "data interpretation",
+            "estimation"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "The following line graph shows the yearly sales figures for a manufacturing company. (a) What were the sales in (i) 2002 (ii) 2006? (b) What were the sales in (i) 2003 (ii) 2005? (c) Compute the difference between the sales in 2002 and 2006. (d) In which year was there the greatest difference between the sales as compared to its previous year?",
+          "hints": [
+            "Read sales values directly from the graph for given years.",
+            "Subtract sales of 2002 from sales of 2006.",
+            "Calculate year‑on‑year differences and find the largest."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "line graph",
+            "sales data",
+            "comparison",
+            "subtraction"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question_text": "For an experiment in Botany, two different plants, plant A and plant B were grown under similar laboratory conditions. Their heights were measured at the end of each week for 3 weeks. The results are shown by the following graph. (a) How high was Plant A after (i) 2 weeks (ii) 3 weeks? (b) How high was Plant B after (i) 2 weeks (ii) 3 weeks? (c) How much did Plant A grow during the 3rd week? (d) How much did Plant B grow from the end of the 2nd week to the end of the 3rd week? (e) During which week did Plant A grow most? (f) During which week did Plant B grow least? (g) Were the two plants of the same height during any week shown here? Specify.",
+          "hints": [
+            "Read heights from the graph for each plant at week 2 and week 3.",
+            "Subtract height at week 2 from height at week 3 for each plant.",
+            "Calculate weekly growth for each plant and compare.",
+            "Look for weeks where both graph lines meet at the same height."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "line graph",
+            "plant growth",
+            "comparison",
+            "growth calculation"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question_text": "The following graph shows the temperature forecast and the actual temperature for each day of a week. (a) On which days was the forecast temperature the same as the actual temperature? (b) What was the maximum forecast temperature during the week? (c) What was the minimum actual temperature during the week? (d) On which day did the actual temperature differ the most from the forecast temperature?",
+          "hints": [
+            "Identify days where forecast and actual lines coincide.",
+            "Find the highest point on the forecast line.",
+            "Find the lowest point on the actual line.",
+            "Calculate daily differences and find the largest."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "dual line graph",
+            "forecast vs actual",
+            "maximum/minimum",
+            "difference"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question_text": "Use the tables below to draw linear graphs. (a) The number of days a hill side city received snow in different years. Year: 2003, 2004, 2005, 2006; Days: 8, 10, 5, 12. (b) Population (in thousands) of men and women in a village in different years. Year: 2003, 2004, 2005, 2006, 2007; Number of Men: 12, 12.5, 13, 13.2, 13.5; Number of Women: 11.3, 11.9, 13, 13.6, 12.8.",
+          "hints": [
+            "Plot years on x‑axis and days/population on y‑axis.",
+            "For (b) use two lines or a double‑bar representation.",
+            "Join points with straight line segments."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "linear graph",
+            "data plotting",
+            "snow days",
+            "population"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question_text": "A courier-person cycles from a town to a neighbouring suburban area to deliver a parcel to a merchant. His distance from the town at different times is shown by the following graph. (a) What is the scale taken for the time axis? (b) How much time did the person take for the travel? (c) How far is the place of the merchant from the town? (d) Did the person stop on his way? Explain. (e) During which period did he ride fastest?",
+          "hints": [
+            "Check the units and intervals on the time axis.",
+            "Find total time from start to end of journey.",
+            "Read the final distance from the graph.",
+            "Look for horizontal segments where distance does not change.",
+            "Identify the steepest upward slope."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "distance‑time graph",
+            "scale",
+            "speed",
+            "stop detection"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question_text": "Can there be a time‑temperature graph as follows? Justify your answer. (i) (ii) (iii) (iv)",
+          "hints": [
+            "Check if temperature can decrease with time (possible).",
+            "Check if temperature can be constant (possible).",
+            "Check if temperature can increase with time (possible).",
+            "Verify that a single time cannot have two different temperatures."
+          ],
+          "difficulty": "hard",
+          "tags": [
+            "graph validity",
+            "time‑temperature",
+            "real‑world consistency",
+            "justification"
+          ]
+        }
+      ]
+    },
+    {
+      "exercise_number": "13.2",
+      "questions": [
+        {
+          "question_number": 1,
+          "question_text": "Draw the graphs for the following tables of values, with suitable scales on the axes. (a) Cost of apples: Number of apples: 1, 2, 3, 4, 5; Cost (in `): 5, 10, 15, 20, 25. (b) Distance travelled by a car: Time (in hours): 6 a.m., 7 a.m., 8 a.m., 9 a.m.; Distances (in km): 40, 80, 120, 160. (i) How much distance did the car cover during the period 7.30 a.m. to 8 a.m? (ii) What was the time when the car had covered a distance of 100 km since it’s start? (c) Interest on deposits for a year: Deposit (in `): 1000, 2000, 3000, 4000, 5000; Simple Interest (in `): 80, 160, 240, 320, 400. (i) Does the graph pass through the origin? (ii) Use the graph to find the interest on ` 2500 for a year. (iii) To get an interest of ` 280 per year, how much money should be deposited?",
+          "hints": [
+            "Plot points and join them with straight lines.",
+            "For (b)(i) estimate distance at 7:30 a.m. by interpolation.",
+            "For (b)(ii) find time corresponding to 100 km on the graph.",
+            "Check if (0,0) is a valid point for the interest graph.",
+            "Use the graph to read values for intermediate amounts."
+          ],
+          "difficulty": "medium",
+          "tags": [
+            "linear graph plotting",
+            "interpolation",
+            "simple interest",
+            "scale selection"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question_text": "Draw a graph for the following. (i) Side of square (in cm): 2, 3, 3.5, 5, 6; Perimeter (in cm): 8, 12, 14, 20, 24. Is it a linear graph? (ii) Side of square (in cm): 2, 3, 4, 5, 6; Area (in cm²): 4, 9, 16, 25, 36. Is it a linear graph?",
+          "hints": [
+            "Plot side on x‑axis, perimeter/area on y‑axis.",
+            "For perimeter, check if points lie on a straight line.",
+            "For area, note that points will not lie on a straight line (quadratic relation)."
+          ],
+          "difficulty": "easy",
+          "tags": [
+            "perimeter vs side",
+            "area vs side",
+            "linear vs non‑linear",
+            "graph identification"
+          ]
+        }
+      ]
+    }
+  ]
+}
