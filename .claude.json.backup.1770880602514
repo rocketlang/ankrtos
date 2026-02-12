@@ -43,7 +43,8 @@
     "agent-flag": 576,
     "overage-promo": 582
   },
-  "promptQueueUseCount": 2832,
+  "promptQueueUseCount": 2837,
+  "showExpandedTodos": true,
   "cachedStatsigGates": {
     "tengu_prompt_suggestion": true,
     "tengu_year_end_2025_campaign_promo": false,
