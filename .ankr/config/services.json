@@ -99,12 +99,12 @@
     },
     "swayam-bani": {
       "portPath": "standalone.bani",
-      "path": "/root/swayam/api-bani",
-      "command": "npx tsx server.ts",
-      "description": "BANI Voice AI Server",
+      "path": "/root/swayam-bani-standalone",
+      "command": "./node_modules/.bin/tsx server.ts",
+      "description": "BANI Voice AI Server - Standalone Build",
       "healthEndpoint": "/health",
       "enabled": true,
-      "_note": "Uses Node.js/tsx - Missing kb-postgres module and dependency issues",
+      "_note": "Standalone build with all dependencies resolved - 8 AI personas, 21 languages, 53 MCP tools",
       "interpreter": "tsx",
       "runtime": "node"
     },
@@ -640,6 +640,28 @@
       "runtime": "bun",
       "runtimeVersion": "1.3.9"
     },
+    "ankr-academy-api": {
+      "portPath": "knowledgeBase.ncertBackend",
+      "path": "/root/ankr-labs-nx/apps/ankr-academy/api",
+      "command": "node server.js",
+      "description": "ANKR Academy API - NCERT exercises database backend (27 courses, 3275 exercises)",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "critical": false,
+      "autoStart": true,
+      "pm2Name": "ankr-academy-api",
+      "_features": [
+        "REST API for 183 NCERT courses",
+        "2700+ solved exercises (83%)",
+        "Class 6-12 Math & Science",
+        "Search & filter exercises"
+      ],
+      "env": {
+        "DATABASE_URL": "postgresql://ankr:indrA@0612@localhost:5432/ankr_eon"
+      },
+      "interpreter": "node",
+      "runtime": "node"
+    },
     "ankr-copilot": {
       "portPath": "knowledgeBase.copilot",
       "path": "/root/ankr-labs-nx/apps/ankr-copilot",
@@ -1091,6 +1113,15 @@
       "interpreterPath": "/root/.bun/bin/bun",
       "runtime": "bun",
       "runtimeVersion": "1.3.9"
+    },
+    "compass-autopilot": {
+      "portPath": "service.compassAutopilot",
+      "path": "/root/ankr-labs-nx/packages/@ankr/compass",
+      "command": "compass autopilot start",
+      "description": "COMPASS Autopilot - Self-healing service monitoring",
+      "enabled": true,
+      "interpreter": "node",
+      "runtime": "node"
     }
   }
 }
