@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANKR-CTL - Service Orchestration Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Monaco', 'Courier New', monospace;
+            background: #0a0e27;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        header .tagline {
+            font-size: 1.2em;
+            color: #e0e0ff;
+            font-weight: 300;
+        }
+
+        .section {
+            background: #1a1e35;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid #2a2e45;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #667eea20, #764ba220);
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5em;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: #a0a0c0;
+            font-size: 0.9em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #2a2e45;
+        }
+
+        th {
+            background: #667eea20;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background: #2a2e45;
+        }
+
+        .status-running {
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .status-stopped {
+            color: #ef4444;
+            font-weight: bold;
+        }
+
+        .status-disabled {
+            color: #f59e0b;
+            font-weight: bold;
+        }
+
+        .port {
+            color: #60a5fa;
+            font-family: 'Monaco', monospace;
+        }
+
+        .domain {
+            color: #a78bfa;
+            font-style: italic;
+        }
+
+        .service-type {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
+        .type-ai { background: #8b5cf6; color: white; }
+        .type-backend { background: #3b82f6; color: white; }
+        .type-frontend { background: #10b981; color: white; }
+        .type-dashboard { background: #f59e0b; color: white; }
+        .type-service { background: #6366f1; color: white; }
+
+        .apps-table {
+            overflow-x: auto;
+        }
+
+        .db-card {
+            background: #2a2e45;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+
+        .db-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .db-info {
+            color: #a0a0c0;
+            line-height: 1.8;
+        }
+
+        .db-info strong {
+            color: #e0e0e0;
+        }
+
+        .command-box {
+            background: #0a0e27;
+            border: 1px solid #667eea;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: 'Monaco', monospace;
+        }
+
+        .command-box h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .command {
+            color: #10b981;
+            padding: 8px 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .command .cmd {
+            color: #60a5fa;
+        }
+
+        .command .desc {
+            color: #a0a0c0;
+        }
+
+        .ports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .port-category {
+            background: #2a2e45;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        .port-category h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .port-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #1a1e35;
+        }
+
+        .port-item:last-child {
+            border-bottom: none;
+        }
+
+        .port-name {
+            color: #a0a0c0;
+        }
+
+        .port-num {
+            color: #60a5fa;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ ANKR-CTL v3.0</h1>
+            <div class="tagline">Universal Service Orchestrator - NO HARDCODING - Central Config</div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-value">9</div>
+                <div class="stat-label">Services Running</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">22</div>
+                <div class="stat-label">Total Applications</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">4</div>
+                <div class="stat-label">Database Servers</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Uptime (Running)</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🚀 Active Services (ankr-ctl status)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Type</th>
+                        <th>Port</th>
+                        <th>Status</th>
+                        <th>PID</th>
+                        <th>Memory</th>
+                        <th>Uptime</th>
+                        <th>Domain</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>vyomo-algo</td>
+                        <td><span class="service-type type-ai">AI</span></td>
+                        <td class="port">4445</td>
+                        <td class="status-running">RUNNING</td>
+                        <td>1002880</td>
+                        <td>73.6 MB</td>
+                        <td>3h</td>
+                        <td class="domain">vyomo.in</td>
+                    </tr>
+                    <tr>
+                        <td>vyomo-download</td>
+                        <td><span class="service-type type-ai">AI</span></td>
+                        <td class="port">4447</td>
+                        <td class="status-running">RUNNING</td>
+                        <td>1007267</td>
+                        <td>68.7 MB</td>
+                        <td>3h</td>
+                        <td class="domain">vyomo.in</td>
+                    </tr>
+                    <tr>
+                        <td>complymitra-api</td>
+                        <td><span class="service-type type-backend">Backend</span></td>
+                        <td class="port">4015</td>
+                        <td class="status-running">RUNNING</td>
+                        <td>4114550</td>
+                        <td>63.5 MB</td>
+                        <td>11m</td>
+                        <td class="domain">complymitra.com</td>
+                    </tr>
+                    <tr>
+                        <td>edibox-backend</td>
+                        <td><span class="service-type type-backend">Backend</span></td>
+                        <td class="port">4080</td>
+                        <td class="status-running">RUNNING</td>
+                        <td>4053609</td>
+                        <td>3.6 MB</td>
+                        <td>14m</td>
+                        <td class="domain">-</td>
+                    </tr>
+                    <tr>
+                        <td>mari8x-backend</td>
+                        <td><span class="service-type type-backend">Backend</span></td>
+                        <td class="port">4051</td>
+                        <td class="status-running">RUNNING</td>
+                        <td>4187694</td>
+                        <td>63.8 MB</td>
+                        <td>7m</td>
+                        <td class="domain">mari8x.com</td>
+                    </tr>
+                    <tr>
+                        <td>ankr-interact</td>
+                        <td><span class="service-type type-dashboard">Dashboard</span></td>
+                        <td class="port">3199</td>
+                        <td class="status-running">RUNNING</td>
+                        <td>3770295</td>
+                        <td>615.2 MB</td>
+                        <td>30m</td>
+                        <td class="domain">ankr.in</td>
+                    </tr>
+                    <tr>
+                        <td>edibox-frontend</td>
+                        <td><span class="service-type type-frontend">Frontend</span></td>
+                        <td class="port">3080</td>
+                        <td class="status-running">RUNNING</td>
+                        <td>145680</td>
+                        <td>55.9 MB</td>
+                        <td>6m</td>
+                        <td class="domain">-</td>
+                    </tr>
+                    <tr>
+                        <td>mari8x-frontend</td>
+                        <td><span class="service-type type-frontend">Frontend</span></td>
+                        <td class="port">3008</td>
+                        <td class="status-running">RUNNING</td>
+                        <td>29736</td>
+                        <td>52.9 MB</td>
+                        <td>6m</td>
+                        <td class="domain">mari8x.com</td>
+                    </tr>
+                    <tr>
+                        <td>ankr-hybrid-search</td>
+                        <td><span class="service-type type-service">Service</span></td>
+                        <td class="port">4446</td>
+                        <td class="status-running">RUNNING</td>
+                        <td>997098</td>
+                        <td>78.2 MB</td>
+                        <td>3h</td>
+                        <td class="domain">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>📱 All ANKR Applications (ankr-ctl apps)</h2>
+            <div class="apps-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Application</th>
+                            <th>Frontend</th>
+                            <th>Backend</th>
+                            <th>DB Port</th>
+                            <th>Domain</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>WowTruck (TMS)</strong></td>
+                            <td class="port">?</td>
+                            <td class="port">?</td>
+                            <td class="port">5433</td>
+                            <td class="domain">wowtruck.ankr.in</td>
+                            <td class="status-disabled">-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>FreightBox</strong></td>
+                            <td class="port">3001</td>
+                            <td class="port">4003</td>
+                            <td class="port">5433</td>
+                            <td class="domain">freightbox.ankr.in</td>
+                            <td class="status-stopped">STOPPED</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Odoo FreightBox</strong></td>
+                            <td>-</td>
+                            <td class="port">8019</td>
+                            <td class="port">5433</td>
+                            <td class="domain">odoo.freightbox.org</td>
+                            <td class="status-stopped">STOPPED</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fr8X Exchange</strong></td>
+                            <td class="port">3006</td>
+                            <td class="port">4050</td>
+                            <td class="port">5433</td>
+                            <td class="domain">fr8x.org</td>
+                            <td class="status-stopped">STOPPED</td>
+                        </tr>
+                        <tr>
+                            <td><strong>DODD ERP</strong></td>
+                            <td class="port">3007</td>
+                            <td class="port">4007</td>
+                            <td class="port">5433</td>
+                            <td class="domain">dodd-erp.org</td>
+                            <td class="status-stopped">STOPPED</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BFC Banking</strong></td>
+                            <td class="port">3020</td>
+                            <td class="port">4020</td>
+                            <td class="port">5433</td>
+                            <td class="domain">bfc.ankr.in</td>
+                            <td class="status-stopped">STOPPED</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CRM</strong></td>
+                            <td class="port">5177</td>
+                            <td class="port">4010</td>
+                            <td class="port">5432</td>
+                            <td class="domain">crm.ankr.in</td>
+                            <td class="status-stopped">STOPPED</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Compliance</strong></td>
+                            <td>-</td>
+                            <td class="port">4001</td>
+                            <td class="port">5434</td>
+                            <td class="domain">compliance.ankr.digital</td>
+                            <td class="status-running">RUNNING</td>
+                        </tr>
+                        <tr style="background: #667eea10;">
+                            <td><strong>ComplyMitra</strong></td>
+                            <td>-</td>
+                            <td class="port">4015</td>
+                            <td>-</td>
+                            <td class="domain">complymitra.ankr.in</td>
+                            <td class="status-running">RUNNING ✨</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ERP Bharat</strong></td>
+                            <td class="port">3002</td>
+                            <td class="port">4004</td>
+                            <td class="port">5433</td>
+                            <td class="domain">erpbharat.in</td>
+                            <td class="status-stopped">STOPPED</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vyomo</strong></td>
+                            <td class="port">3011</td>
+                            <td class="port">4025</td>
+                            <td>-</td>
+                            <td class="domain">vyomo.in</td>
+                            <td class="status-stopped">STOPPED</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EverPure</strong></td>
+                            <td class="port">3005</td>
+                            <td class="port">4006</td>
+                            <td>-</td>
+                            <td class="domain">ever-pure.in</td>
+                            <td class="status-stopped">STOPPED</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AnkrForge</strong></td>
+                            <td class="port">3200</td>
+                            <td class="port">4201</td>
+                            <td class="port">5432</td>
+                            <td class="domain">forge.ankr.in</td>
+                            <td class="status-stopped">STOPPED</td>
+                        </tr>
+                        <tr>
+                            <td><strong>EON Memory</strong></td>
+                            <td>-</td>
+                            <td class="port">4005</td>
+                            <td class="port">5433</td>
+                            <td class="domain">eon.ankr.in</td>
+                            <td class="status-running">RUNNING</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI Proxy</strong></td>
+                            <td>-</td>
+                            <td class="port">4444</td>
+                            <td>-</td>
+                            <td class="domain">ai.ankr.in</td>
+                            <td class="status-running">RUNNING</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💾 Database Servers</h2>
+            <div class="db-card">
+                <h3>PostgreSQL (Local) - Port 5432</h3>
+                <div class="db-info">
+                    <strong>Databases:</strong> ankr_crm, ankrforge<br>
+                    <strong>Credentials:</strong> postgres/ankr : indrA@0612<br>
+                    <strong>Connection:</strong> postgresql://postgres:indrA@0612@localhost:5432/ankr_crm
+                </div>
+            </div>
+            <div class="db-card">
+                <h3>PostgreSQL (Docker) - Port 5433</h3>
+                <div class="db-info">
+                    <strong>Databases:</strong> ankr_eon (WowTruck, BFC, EON, Fr8X)<br>
+                    <strong>Credentials:</strong> ankr : indrA@0612<br>
+                    <strong>Connection:</strong> postgresql://ankr:indrA@0612@localhost:5433/ankr_eon
+                </div>
+            </div>
+            <div class="db-card">
+                <h3>TimescaleDB - Port 5434</h3>
+                <div class="db-info">
+                    <strong>Databases:</strong> compliance<br>
+                    <strong>Credentials:</strong> ankr : ankrSecure2025<br>
+                    <strong>Connection:</strong> postgresql://ankr:ankrSecure2025@localhost:5434/compliance<br>
+                    <strong>Type:</strong> Time-series optimized PostgreSQL
+                </div>
+            </div>
+            <div class="db-card">
+                <h3>Redis - Port 6379</h3>
+                <div class="db-info">
+                    <strong>Purpose:</strong> Cache layer<br>
+                    <strong>Connection:</strong> redis://localhost:6379<br>
+                    <strong>Auth:</strong> None (local only)
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔌 Port Allocations (ankr-ctl ports)</h2>
+            <div class="ports-grid">
+                <div class="port-category">
+                    <h3>Frontend (3000-3099)</h3>
+                    <div class="port-item">
+                        <span class="port-name">FreightBox</span>
+                        <span class="port-num">3001</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">ERP Bharat</span>
+                        <span class="port-num">3002</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">ANKR Website</span>
+                        <span class="port-num">3003</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">Fr8X</span>
+                        <span class="port-num">3006</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">DODD</span>
+                        <span class="port-num">3007</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">Mari8X</span>
+                        <span class="port-num">3008</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">Vyomo</span>
+                        <span class="port-num">3011</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">BFC Web</span>
+                        <span class="port-num">3020</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">EDIBox</span>
+                        <span class="port-num">3080</span>
+                    </div>
+                </div>
+
+                <div class="port-category">
+                    <h3>Backend (4000-4099)</h3>
+                    <div class="port-item">
+                        <span class="port-name">Compliance</span>
+                        <span class="port-num">4001</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">FreightBox</span>
+                        <span class="port-num">4003</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">EON Memory</span>
+                        <span class="port-num">4005</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">DODD ERP</span>
+                        <span class="port-num">4007</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">CRM</span>
+                        <span class="port-num">4010</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">ComplyMitra</span>
+                        <span class="port-num">4015</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">BFC Banking</span>
+                        <span class="port-num">4020</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">Mari8X</span>
+                        <span class="port-num">4051</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">EDIBox</span>
+                        <span class="port-num">4080</span>
+                    </div>
+                </div>
+
+                <div class="port-category">
+                    <h3>AI Services (4400-4499)</h3>
+                    <div class="port-item">
+                        <span class="port-name">AI Proxy</span>
+                        <span class="port-num">4444</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">Vyomo Algo</span>
+                        <span class="port-num">4445</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">Hybrid Search</span>
+                        <span class="port-num">4446</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">Vyomo Download</span>
+                        <span class="port-num">4447</span>
+                    </div>
+                </div>
+
+                <div class="port-category">
+                    <h3>Dashboard (4300-4399)</h3>
+                    <div class="port-item">
+                        <span class="port-name">ANKR Interact</span>
+                        <span class="port-num">3199</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">Cockpit React</span>
+                        <span class="port-num">4310</span>
+                    </div>
+                    <div class="port-item">
+                        <span class="port-name">Pulse</span>
+                        <span class="port-num">4320</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💻 ANKR-CTL Commands</h2>
+            <div class="command-box">
+                <h3>Service Management</h3>
+                <div class="command">
+                    <span class="cmd">ankr-ctl start [service]</span>
+                    <span class="desc">Start all or specific service</span>
+                </div>
+                <div class="command">
+                    <span class="cmd">ankr-ctl stop [service]</span>
+                    <span class="desc">Stop all or specific service</span>
+                </div>
+                <div class="command">
+                    <span class="cmd">ankr-ctl restart [service]</span>
+                    <span class="desc">Restart service</span>
+                </div>
+                <div class="command">
+                    <span class="cmd">ankr-ctl status [service]</span>
+                    <span class="desc">Show status</span>
+                </div>
+                <div class="command">
+                    <span class="cmd">ankr-ctl health</span>
+                    <span class="desc">Health check all services</span>
+                </div>
+            </div>
+
+            <div class="command-box">
+                <h3>Information</h3>
+                <div class="command">
+                    <span class="cmd">ankr-ctl ports</span>
+                    <span class="desc">Show port allocations</span>
+                </div>
+                <div class="command">
+                    <span class="cmd">ankr-ctl apps</span>
+                    <span class="desc">Show apps with frontend/backend ports</span>
+                </div>
+                <div class="command">
+                    <span class="cmd">ankr-ctl db</span>
+                    <span class="desc">Show database configurations & mappings</span>
+                </div>
+                <div class="command">
+                    <span class="cmd">ankr-ctl env</span>
+                    <span class="desc">Show injected env vars</span>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; padding: 40px 0; color: #667eea;">
+            <p style="font-size: 1.2em; margin-bottom: 10px;">
+                <strong>Created by: Powerp Box IT Solutions Pvt Ltd</strong>
+            </p>
+            <p style="color: #a0a0c0;">
+                Config: /root/.ankr/config/ | Package: @ankr/ports | Version: 3.0.0
+            </p>
+            <p style="color: #a0a0c0; margin-top: 10px;">
+                © 2026 All Rights Reserved
+            </p>
+        </div>
+    </div>
+</body>
+</html>

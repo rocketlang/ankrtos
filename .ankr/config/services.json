@@ -110,6 +110,19 @@
       "domain": "mari8x.com",
       "_note": "React + Vite frontend"
     },
+    "edibox-frontend": {
+      "portPath": "frontend.edibox",
+      "path": "/root/ankr-labs-nx/apps/edibox/frontend",
+      "command": "npm run dev",
+      "description": "EDIBox Frontend - BAPLIE 2D/3D Viewer UI",
+      "healthEndpoint": null,
+      "enabled": true,
+      "interpreter": "node",
+      "interpreterPath": "/usr/bin/node",
+      "runtime": "vite",
+      "runtimeVersion": "5.4.21",
+      "_note": "React + Vite + D3 + React Three Fiber"
+    },
     "ankr-maritime-watcher": {
       "portPath": null,
       "path": "/root/apps/ankr-maritime",

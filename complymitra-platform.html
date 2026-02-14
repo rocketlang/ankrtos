@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComplyMitra - Compliance Management Platform</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header .tagline {
+            font-size: 1.5em;
+            color: #60a5fa;
+            margin-bottom: 10px;
+        }
+
+        header .subtitle {
+            font-size: 1.1em;
+            color: #cbd5e0;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(52, 211, 153, 0.2));
+            border: 2px solid rgba(96, 165, 250, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: #60a5fa;
+            box-shadow: 0 10px 40px rgba(96, 165, 250, 0.4);
+        }
+
+        .stat-value {
+            font-size: 3em;
+            font-weight: bold;
+            color: #60a5fa;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #cbd5e0;
+            font-size: 1.1em;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .module-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(96, 165, 250, 0.3);
+            border-radius: 16px;
+            padding: 35px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+            border-color: #60a5fa;
+            box-shadow: 0 10px 40px rgba(96, 165, 250, 0.3);
+        }
+
+        .module-card h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #60a5fa;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .module-card .badge {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.5em;
+            font-weight: bold;
+        }
+
+        .module-card p {
+            color: #cbd5e0;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .module-card ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .module-card ul li {
+            padding: 8px 0;
+            color: #a0aec0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .module-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .tools-section {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .tools-section h2 {
+            color: #10b981;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .tool-category {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .tool-category h3 {
+            color: #10b981;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .tool-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            color: #cbd5e0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tool-stat:last-child {
+            border-bottom: none;
+        }
+
+        .tool-stat strong {
+            color: #60a5fa;
+        }
+
+        .api-section {
+            background: rgba(139, 92, 246, 0.1);
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .api-section h2 {
+            color: #8b5cf6;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+
+        .endpoint-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .endpoint-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #8b5cf6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .endpoint-name {
+            color: #cbd5e0;
+            font-weight: 500;
+        }
+
+        .endpoint-count {
+            background: #8b5cf6;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(135deg, #60a5fa, #34d399);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(96, 165, 250, 0.5);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .feature-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid rgba(96, 165, 250, 0.2);
+            text-align: center;
+        }
+
+        .feature-box h3 {
+            color: #60a5fa;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .feature-box p {
+            color: #cbd5e0;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 2px solid rgba(96, 165, 250, 0.3);
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: #a0aec0;
+            margin-bottom: 10px;
+        }
+
+        footer strong {
+            color: #60a5fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 ComplyMitra</h1>
+            <div class="tagline">Complete Compliance Management Platform</div>
+            <div class="subtitle">145 Tools | 64 API Endpoints | GST, TDS, ITR, MCA, ULIP & More</div>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value">145</div>
+                <div class="stat-label">Total Tools</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">64</div>
+                <div class="stat-label">API Endpoints</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">v2.1.0</div>
+                <div class="stat-label">Latest Version</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Uptime</div>
+            </div>
+        </div>
+
+        <div class="modules-grid">
+            <div class="module-card">
+                <h2>💰 GST Compliance <span class="badge">25 Tools</span></h2>
+                <p>Comprehensive GST filing, returns, and reconciliation tools</p>
+                <ul>
+                    <li>GSTR-1, GSTR-3B filing</li>
+                    <li>Input tax credit matching</li>
+                    <li>E-way bill generation</li>
+                    <li>GST reconciliation</li>
+                    <li>Return auto-filing</li>
+                    <li>6 API endpoints</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <h2>🏦 TDS Management <span class="badge">16 Tools</span></h2>
+                <p>Complete TDS calculation, filing, and reporting system</p>
+                <ul>
+                    <li>TDS calculation engine</li>
+                    <li>Form 26AS integration</li>
+                    <li>Quarterly return filing</li>
+                    <li>Certificate generation</li>
+                    <li>Lower deduction tracking</li>
+                    <li>6 API endpoints</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <h2>📊 Income Tax (ITR) <span class="badge">12 Tools</span></h2>
+                <p>End-to-end income tax return preparation and filing</p>
+                <ul>
+                    <li>ITR-1 to ITR-7 support</li>
+                    <li>Auto tax computation</li>
+                    <li>E-filing integration</li>
+                    <li>Refund tracking</li>
+                    <li>Assessment tools</li>
+                    <li>7 API endpoints</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <h2>🏢 MCA Compliance <span class="badge">10 Tools</span></h2>
+                <p>Ministry of Corporate Affairs compliance and filing</p>
+                <ul>
+                    <li>Annual returns (AOC-4)</li>
+                    <li>Financial statements</li>
+                    <li>Director KYC (DIR-3 KYC)</li>
+                    <li>Form MGT-7 filing</li>
+                    <li>Company master data</li>
+                    <li>5 API endpoints</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <h2>🤖 AI Assistant <span class="badge">5 Tools</span></h2>
+                <p>AI-powered compliance insights and automation</p>
+                <ul>
+                    <li>Smart compliance suggestions</li>
+                    <li>Document analysis</li>
+                    <li>Risk detection</li>
+                    <li>Auto-categorization</li>
+                    <li>Chatbot support</li>
+                    <li>1 AI endpoint</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <h2>📅 Compliance Calendar <span class="badge">15 Tools</span></h2>
+                <p>Never miss a deadline with smart calendar management</p>
+                <ul>
+                    <li>14 tracked deadlines</li>
+                    <li>Automated reminders</li>
+                    <li>Multi-entity tracking</li>
+                    <li>Deadline visualization</li>
+                    <li>Custom alerts</li>
+                    <li>2 calendar endpoints</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tools-section">
+            <h2>🔌 ULIP Integrations (19 Tools)</h2>
+            <p style="color: #cbd5e0; margin-bottom: 30px;">
+                Unified Logistics Interface Platform - Seamless integration with government logistics systems
+            </p>
+            <div class="tools-grid">
+                <div class="tool-category">
+                    <h3>E-Way Bill</h3>
+                    <div class="tool-stat">
+                        <span>Tools</span>
+                        <strong>4</strong>
+                    </div>
+                    <div class="tool-stat">
+                        <span>Generate, cancel, extend</span>
+                    </div>
+                </div>
+
+                <div class="tool-category">
+                    <h3>Vahan (Vehicle RC)</h3>
+                    <div class="tool-stat">
+                        <span>Tools</span>
+                        <strong>4</strong>
+                    </div>
+                    <div class="tool-stat">
+                        <span>RC verification, details</span>
+                    </div>
+                </div>
+
+                <div class="tool-category">
+                    <h3>FASTag</h3>
+                    <div class="tool-stat">
+                        <span>Tools</span>
+                        <strong>4</strong>
+                    </div>
+                    <div class="tool-stat">
+                        <span>Balance, transactions</span>
+                    </div>
+                </div>
+
+                <div class="tool-category">
+                    <h3>Sarathi (DL)</h3>
+                    <div class="tool-stat">
+                        <span>Tools</span>
+                        <strong>4</strong>
+                    </div>
+                    <div class="tool-stat">
+                        <span>License verification</span>
+                    </div>
+                </div>
+
+                <div class="tool-category">
+                    <h3>GPS Tracking</h3>
+                    <div class="tool-stat">
+                        <span>Tools</span>
+                        <strong>3</strong>
+                    </div>
+                    <div class="tool-stat">
+                        <span>Real-time location</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <h2>🚀 Compliance Wizards (45 Tools)</h2>
+            <p style="color: #cbd5e0; margin-bottom: 30px;">
+                Guided workflows and templates to simplify complex compliance tasks
+            </p>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <h3>5 Wizards</h3>
+                    <p>Step-by-step compliance workflows</p>
+                </div>
+                <div class="feature-box">
+                    <h3>49 Steps</h3>
+                    <p>Detailed wizard guidance</p>
+                </div>
+                <div class="feature-box">
+                    <h3>5 Templates</h3>
+                    <p>Pre-built workflow templates</p>
+                </div>
+                <div class="feature-box">
+                    <h3>28 Workflow Steps</h3>
+                    <p>Automated process steps</p>
+                </div>
+                <div class="feature-box">
+                    <h3>6 Built-in Wizards</h3>
+                    <p>Ready-to-use workflows</p>
+                </div>
+                <div class="feature-box">
+                    <h3>14 Deadlines</h3>
+                    <p>Calendar integration</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <h2>📡 API Endpoints (64 Total)</h2>
+            <div class="endpoint-list">
+                <div class="endpoint-item">
+                    <span class="endpoint-name">GST APIs</span>
+                    <span class="endpoint-count">6</span>
+                </div>
+                <div class="endpoint-item">
+                    <span class="endpoint-name">TDS APIs</span>
+                    <span class="endpoint-count">6</span>
+                </div>
+                <div class="endpoint-item">
+                    <span class="endpoint-name">ITR APIs</span>
+                    <span class="endpoint-count">7</span>
+                </div>
+                <div class="endpoint-item">
+                    <span class="endpoint-name">MCA APIs</span>
+                    <span class="endpoint-count">5</span>
+                </div>
+                <div class="endpoint-item">
+                    <span class="endpoint-name">AI Assistant</span>
+                    <span class="endpoint-count">1</span>
+                </div>
+                <div class="endpoint-item">
+                    <span class="endpoint-name">Calendar APIs</span>
+                    <span class="endpoint-count">2</span>
+                </div>
+                <div class="endpoint-item">
+                    <span class="endpoint-name">ULIP APIs</span>
+                    <span class="endpoint-count">13</span>
+                </div>
+                <div class="endpoint-item">
+                    <span class="endpoint-name">Wizard APIs</span>
+                    <span class="endpoint-count">11</span>
+                </div>
+                <div class="endpoint-item">
+                    <span class="endpoint-name">Work Wizard</span>
+                    <span class="endpoint-count">13</span>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 60px 0;">
+            <a href="http://localhost:4015/health" class="btn" target="_blank">📊 API Health Check</a>
+            <a href="http://localhost:4015/api/docs" class="btn btn-secondary" target="_blank" style="margin-left: 20px;">📖 API Documentation</a>
+        </div>
+
+        <div class="modules-grid">
+            <div class="module-card">
+                <h2>⚡ High Performance</h2>
+                <p>Built with modern Node.js and TypeScript for lightning-fast responses</p>
+                <ul>
+                    <li>Sub-100ms response times</li>
+                    <li>Efficient caching layer</li>
+                    <li>Horizontal scaling support</li>
+                    <li>Load balancing ready</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <h2>🔒 Enterprise Security</h2>
+                <p>Bank-grade security for sensitive compliance data</p>
+                <ul>
+                    <li>JWT authentication</li>
+                    <li>Role-based access control</li>
+                    <li>Data encryption at rest</li>
+                    <li>Audit trail logging</li>
+                </ul>
+            </div>
+
+            <div class="module-card">
+                <h2>📱 Multi-Platform</h2>
+                <p>RESTful APIs work with any client application</p>
+                <ul>
+                    <li>Web applications</li>
+                    <li>Mobile apps (iOS/Android)</li>
+                    <li>Desktop software</li>
+                    <li>Third-party integrations</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Created by: Powerp Box IT Solutions Pvt Ltd</strong></p>
+            <p>Domain: complymitra.com | API: localhost:4015 | Version: 2.1.0</p>
+            <p style="margin-top: 20px; color: #60a5fa;">© 2026 All Rights Reserved</p>
+            <p style="margin-top: 10px; color: #a0aec0;">
+                Status: <span style="color: #10b981; font-weight: bold;">HEALTHY</span> |
+                Uptime: 100% |
+                Response Time: &lt;50ms
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
