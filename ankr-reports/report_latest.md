@@ -1,519 +1,1062 @@
 <!--
 Published by ANKR COMPASS
 Type: report
-Source: /root/COMPASS_IMPLEMENTATION_SUMMARY.md
-Published: 2026-02-12 14:55:13
+Source: /root/COMPASS_TRAINING_GUIDE.md
+Published: 2026-02-12 15:07:43
 Tool: compass publish report
 -->
 
-# ANKR COMPASS - Implementation Summary
+# ANKR COMPASS - Training & Usage Guide
 
-**Date**: February 12, 2026
-**Status**: ✅ **COMPLETE** - Phase 1 MVP + Publishing Features
+**Audience**: ANKR Team Members, DevOps, Developers
 **Version**: 1.0.0
+**Last Updated**: 2026-02-12
 
 ---
 
-## 🎉 What Was Built
+## 📚 Table of Contents
 
-### Core Package
-- **Package**: `@ankr/compass` - Platform engineering CLI for ANKR system operations
-- **Location**: `/root/ankr-labs-nx/packages/@ankr/compass`
-- **Build System**: TypeScript + tsup (dual CJS/ESM output)
-- **CLI Framework**: Commander.js 11.x
-- **Installation**: Globally linked via `npm link`
-
-### Command Groups (6 Total)
-
-#### 1. Service Management (`compass service`)
-- `start <name>` - Start a service
-- `stop <name>` - Stop a service
-- `restart <name>` - Safe restart with port cleanup and health verification
-- `status [name]` - Show service status
-- `health` - Health check all services
-- `logs <name>` - Show service logs
-
-**Key Features**:
-- ✅ Safe restart protocol (5-step validation)
-- ✅ Automatic port cleanup
-- ✅ Health verification with timeout
-- ✅ Rollback on failure
-- ✅ Wraps ankr-ctl (no breaking changes)
-
-#### 2. Provider Management (`compass provider`)
-- `list` - List available embedding providers
-- `status` - Show current provider status
-- `switch <name>` - Switch to different provider
-- `migrate <from> <to>` - Automated migration
-- `validate <name>` - Validate API key and health
-
-**Key Features**:
-- ✅ Provider registry (Jina, Nomic, Voyage)
-- ✅ API key validation
-- ✅ Health checks
-- ✅ Config backup before changes
-- ✅ Zero-downtime switching
-- ✅ Cost comparison (Voyage $120/mo → Jina FREE)
-
-#### 3. Database Operations (`compass db`)
-- `status [name]` - Show database status
-- `backup <name>` - Backup database with compression
-- `restore <backup> <name>` - Restore with verification
-- `list-backups [name]` - List available backups
-
-**Key Features**:
-- ✅ Multi-database support (13 databases)
-- ✅ Automatic compression
-- ✅ 7-day retention policy
-- ✅ Verification after restore
-- ✅ Detailed status reporting
-
-#### 4. Port Management (`compass port`)
-- `check <port>` - Check if port is in use
-- `kill <port>` - Kill process on port
-- `list` - List all ports in use
-- `conflicts` - Check ANKR service port conflicts
-
-**Key Features**:
-- ✅ Automatic conflict detection
-- ✅ Auto-resolve with --auto-fix
-- ✅ Detailed process information
-- ✅ Safe port cleanup
-
-#### 5. Diagnostics (`compass diagnose`)
-- `system` - Full system diagnostics
-- `service <name>` - Service-specific diagnostics
-- `port-conflict` - Port conflict diagnosis
-- `embedding-provider` - Provider diagnostics
-- `database [name]` - Database diagnostics
-
-**Key Features**:
-- ✅ Comprehensive troubleshooting workflows
-- ✅ Automated fix suggestions
-- ✅ Multi-level diagnostics
-- ✅ Clear actionable output
-
-#### 6. Publishing (`compass publish`) - **NEW!**
-- `report <file>` - Publish project reports
-- `todo <file>` - Publish TODO lists
-- `changelog` - Auto-generate changelog from git
-- `version <type>` - Update version (patch/minor/major)
-- `summary` - Show published documents
-
-**Key Features**:
-- ✅ Timestamped document versions
-- ✅ Metadata injection
-- ✅ "Latest" symlinks
-- ✅ Git-based changelog generation
-- ✅ Semantic versioning support
-
-### Utility Modules
-
-**Port Utilities** (`utils/port.ts`):
-- Port availability checking
-- Process killing (graceful + force)
-- Port release waiting
-- Conflict detection
-- ANKR service port mapping
-
-**Process Utilities** (`utils/process.ts`):
-- Command execution with execa
-- Streaming output support
-- ankr-ctl wrapper functions
-- Process status checking
-- PID management
-
-**Health Utilities** (`utils/health.ts`):
-- HTTP health checks
-- Retry with exponential backoff
-- Timeout handling
-- Health waiting loops
-
-**Backup Utilities** (`utils/backup.ts`):
-- File backup with timestamps
-- Restore from backup
-- Backup listing and cleanup
-- Retention policy enforcement
-
-**Prompt Utilities** (`utils/prompt.ts`):
-- Confirmation dialogs
-- Select menus
-- Text input
-- Multi-select lists
-
-### Configuration Files
-
-**Provider Registry** (`config/providers.config.ts`):
-- Jina AI (FREE, 88% MTEB, 1024 dims)
-- Nomic AI (FREE, 86% MTEB, 768 dims)
-- Voyage AI (DEPRECATED, $120/mo, 85% MTEB)
-- Health check functions
-- Cost comparison logic
-
-**Validation Schemas** (`config/validation.schemas.ts`):
-- Zod schemas for all inputs
-- Type-safe validation
-- Error messages
+1. [Getting Started](#getting-started)
+2. [Basic Usage](#basic-usage)
+3. [Common Workflows](#common-workflows)
+4. [Advanced Features](#advanced-features)
+5. [Extending COMPASS](#extending-compass)
+6. [Training Your Team](#training-your-team)
+7. [Best Practices](#best-practices)
+8. [Troubleshooting](#troubleshooting)
 
 ---
 
-## 📊 Implementation Metrics
-
-### Code Statistics
-- **Total Files Created**: 21
-- **Total Lines of Code**: ~3,500+
-- **TypeScript Files**: 18
-- **Configuration Files**: 3
-- **Documentation Files**: 3
-
-### File Breakdown
-```
-src/
-├── cli.ts (160 lines)           # CLI entry point
-├── index.ts (50 lines)          # Programmatic API
-├── commands/ (600 lines)        # Command implementations
-├── engines/ (1,200 lines)       # Business logic
-├── config/ (400 lines)          # Configuration
-└── utils/ (600 lines)           # Utilities
-
-docs/
-├── README.md (400 lines)
-├── COMPASS_PROJECT_REPORT.md (450 lines)
-└── COMPASS_TODO.md (350 lines)
-```
-
-### Build Output
-- **CJS Output**: `dist/cli.js` (56.43 KB)
-- **ESM Output**: `dist/cli.mjs` (52.51 KB)
-- **Type Definitions**: `dist/index.d.ts` (6.43 KB)
-- **Build Time**: ~300ms (CJS/ESM), ~17s (DTS)
-
----
-
-## ✅ Testing Results
-
-### Commands Tested
-
-| Command | Status | Notes |
-|---------|--------|-------|
-| `compass --version` | ✅ PASS | Returns 1.0.0 |
-| `compass --help` | ✅ PASS | Shows all commands |
-| `compass quickstart` | ✅ PASS | Displays guide |
-| `compass service status` | ✅ PASS | Shows all services |
-| `compass provider status` | ✅ PASS | Shows Jina as current |
-| `compass provider list` | ✅ PASS | Lists Jina + Nomic |
-| `compass port check 4444` | ✅ PASS | Detects bun process |
-| `compass port list` | ✅ PASS | Shows 98 ports in use |
-| `compass db status` | ✅ PASS | Shows 19 databases |
-| `compass publish report` | ✅ PASS | Published successfully |
-| `compass publish todo` | ✅ PASS | Published successfully |
-| `compass publish changelog` | ✅ PASS | Generated from git |
-| `compass publish summary` | ✅ PASS | Shows all published docs |
-
-### Integration Tests
-
-**Service Restart Flow**:
-```bash
-1. Check port in use → ✅ Detected
-2. Kill process → ✅ Killed
-3. Restart service → ✅ Restarted
-4. Verify health → ✅ Healthy
-```
-
-**Provider Migration Flow**:
-```bash
-1. Check current provider → ✅ Jina
-2. Validate new provider → ✅ API key checked
-3. Backup config → ✅ Backed up
-4. Update config → ✅ Updated
-5. Restart ai-proxy → ✅ Restarted
-6. Show comparison → ✅ $1,440/year savings
-```
-
-**Database Operations Flow**:
-```bash
-1. Check database status → ✅ Connected
-2. Backup database → ✅ Compressed backup
-3. Restore database → ✅ Verified restore
-4. List backups → ✅ Shows history
-```
-
-**Publishing Flow**:
-```bash
-1. Publish report → ✅ Created with timestamp
-2. Publish TODO → ✅ Created with metadata
-3. Generate changelog → ✅ 50 commits processed
-4. Show summary → ✅ All docs listed
-```
-
----
-
-## 📦 Published Artifacts
-
-### Documentation Published
-- ✅ `/root/ankr-reports/COMPASS_PROJECT_REPORT_2026-02-12.md` (15.45 KB)
-- ✅ `/root/ankr-reports/report_latest.md`
-- ✅ `/root/ankr-todos/COMPASS_TODO_2026-02-12.md` (12.42 KB)
-- ✅ `/root/ankr-todos/todo_latest.md`
-- ✅ `/root/COMPASS_CHANGELOG.md` (50 commits)
-
-### Package Files
-- ✅ `/root/ankr-labs-nx/packages/@ankr/compass/dist/*` (Built output)
-- ✅ `/root/ankr-labs-nx/packages/@ankr/compass/README.md`
-- ✅ Globally linked via `npm link`
-
----
-
-## 🎯 Success Criteria - All Met
-
-### Phase 1 MVP Goals
-- ✅ **3 critical pain points solved**
-  - Port conflicts automated
-  - Provider management automated
-  - Database operations simplified
-- ✅ **10 core commands working** (Actually 15+ commands delivered)
-- ✅ **Zero breaking changes** to ankr-ctl
-- ✅ **$1,440/year cost savings** automated
-
-### Additional Achievements
-- ✅ **Publishing system** integrated (bonus feature)
-- ✅ **Comprehensive documentation** (3 markdown files)
-- ✅ **Full test coverage** of MVP commands
-- ✅ **Production-ready** error handling
-
----
-
-## 🚀 How to Use
+## 🚀 Getting Started
 
 ### Installation (Already Done)
+
+COMPASS is already installed and globally linked:
+
+```bash
+# Verify installation
+compass --version
+# Output: 1.0.0
+
+# Get help
+compass --help
+
+# Quick start guide
+compass quickstart
+```
+
+### Your First Commands
+
+```bash
+# 1. Check system health
+compass diagnose system
+
+# 2. Check service status
+compass service status
+
+# 3. Check for port conflicts
+compass port conflicts
+
+# 4. View provider status
+compass provider status
+```
+
+**Expected Output**:
+- Green ✓ means healthy
+- Yellow ⚠ means warning
+- Red ✗ means issue needs attention
+
+---
+
+## 📖 Basic Usage
+
+### 1. Service Management
+
+#### Safe Service Restart
+```bash
+# Safe restart with automatic port cleanup
+compass service restart ai-proxy --safe
+
+# What it does:
+# ✓ Checks if service exists
+# ✓ Kills old process on port 4444
+# ✓ Waits for port release
+# ✓ Starts service via ankr-ctl
+# ✓ Verifies health
+# ✓ Rolls back if failed
+```
+
+#### Check Service Status
+```bash
+# All services
+compass service status
+
+# Specific service
+compass service status ai-proxy
+```
+
+#### View Service Logs
+```bash
+# Last 50 lines (default)
+compass service logs ai-proxy
+
+# Last 100 lines
+compass service logs ai-proxy -n 100
+```
+
+### 2. Provider Management (Cost Optimization)
+
+#### Check Current Provider
+```bash
+compass provider status
+
+# Shows:
+# - Current provider (Jina, Nomic, or Voyage)
+# - MTEB quality score
+# - Cost (FREE or $/month)
+# - API key status
+```
+
+#### List All Providers
+```bash
+compass provider list
+
+# Shows comparison:
+# - Jina AI: FREE, 88% MTEB, 1024 dims
+# - Nomic AI: FREE, 86% MTEB, 768 dims
+# - Voyage AI: $120/mo, 85% MTEB (DEPRECATED)
+```
+
+#### Switch Provider (Save $1,440/year!)
+```bash
+# Validate before switching
+compass provider validate jina
+
+# Switch with validation
+compass provider switch jina --validate
+
+# Full migration from Voyage to Jina
+compass provider migrate voyage jina
+
+# What it does:
+# ✓ Tests API key
+# ✓ Backs up config
+# ✓ Updates server.ts
+# ✓ Safe restarts ai-proxy
+# ✓ Verifies health
+# ✓ Shows cost savings
+```
+
+### 3. Database Operations
+
+#### Check Database Status
+```bash
+# All databases
+compass db status
+
+# Specific database
+compass db status wowtruck
+```
+
+#### Backup Database
+```bash
+# Simple backup
+compass db backup wowtruck
+
+# Compressed backup (recommended)
+compass db backup wowtruck --compress
+
+# Custom output location
+compass db backup wowtruck --compress -o /backup/wowtruck.sql.gz
+```
+
+#### Restore Database
+```bash
+# Restore from backup
+compass db restore wowtruck_backup.sql.gz wowtruck
+
+# With verification
+compass db restore wowtruck_backup.sql.gz wowtruck --verify
+
+# Force restore even if errors
+compass db restore wowtruck_backup.sql.gz wowtruck --force
+```
+
+#### List Available Backups
+```bash
+# All backups
+compass db list-backups
+
+# Backups for specific database
+compass db list-backups wowtruck
+```
+
+### 4. Port Management
+
+#### Check Port Status
+```bash
+# Check if port is in use
+compass port check 4444
+
+# Shows:
+# - Port status (in use / available)
+# - Process ID (PID)
+# - Command name
+# - User
+```
+
+#### Kill Process on Port
+```bash
+# Graceful kill
+compass port kill 4444
+
+# Force kill (SIGKILL)
+compass port kill 4444 --force
+```
+
+#### Check for Conflicts
+```bash
+# Check all ANKR service ports
+compass port conflicts
+
+# Auto-resolve conflicts
+compass port conflicts --auto-fix
+
+# What auto-fix does:
+# ✓ Identifies conflicts
+# ✓ Kills conflicting processes
+# ✓ Waits for port release
+# ✓ Reports results
+```
+
+#### List All Ports in Use
+```bash
+compass port list
+
+# Shows table of:
+# Port | PID | Command | User
+```
+
+### 5. Diagnostics
+
+#### Full System Diagnostics
+```bash
+compass diagnose system
+
+# Runs:
+# - Service health checks
+# - Port conflict scan
+# - Database status checks
+# - Comprehensive report
+```
+
+#### Service-Specific Diagnostics
+```bash
+compass diagnose service ai-proxy
+
+# Shows:
+# - Service status
+# - Recent logs
+# - Port status
+# - Suggestions
+```
+
+#### Port Conflict Diagnostics
+```bash
+# Detect and report
+compass diagnose port-conflict
+
+# Detect and auto-fix
+compass diagnose port-conflict --auto-fix
+```
+
+#### Database Diagnostics
+```bash
+# All databases
+compass diagnose database
+
+# Specific database
+compass diagnose database wowtruck
+```
+
+#### Provider Diagnostics
+```bash
+compass diagnose embedding-provider
+
+# Shows:
+# - Current provider status
+# - Available providers
+# - API key status
+# - Recommendations
+```
+
+### 6. Publishing
+
+#### Publish a Report
+```bash
+compass publish report PROJECT_REPORT.md
+
+# Published to:
+# - /root/ankr-reports/PROJECT_REPORT_2026-02-12.md
+# - /root/ankr-reports/report_latest.md (symlink)
+```
+
+#### Publish a TODO List
+```bash
+compass publish todo TODO.md
+
+# Published to:
+# - /root/ankr-todos/TODO_2026-02-12.md
+# - /root/ankr-todos/todo_latest.md (symlink)
+```
+
+#### Auto-Publish All Documents
+```bash
+# Detect and publish all
+compass publish auto /root
+
+# With HTML versions
+compass publish auto /root --html
+
+# With PDF versions (via ankr-publish)
+compass publish auto /root --pdf
+```
+
+#### Generate Changelog
+```bash
+compass publish changelog
+
+# Auto-generates from git history
+# Output: /root/CHANGELOG.md
+```
+
+#### Show Published Documents
+```bash
+compass publish summary
+
+# Lists all published:
+# - Reports
+# - TODOs
+# - Changelogs
+```
+
+---
+
+## 🔄 Common Workflows
+
+### Workflow 1: Service Won't Start (Port Conflict)
+
+**Problem**: `ai-proxy` won't start, port 4444 already in use
+
+**Solution**:
+```bash
+# 1. Check what's using the port
+compass port check 4444
+
+# 2. Kill the process
+compass port kill 4444 --force
+
+# 3. Restart service safely
+compass service restart ai-proxy --safe
+
+# 4. Verify it's running
+compass service status ai-proxy
+```
+
+**One-liner Alternative**:
+```bash
+compass diagnose port-conflict --auto-fix && compass service restart ai-proxy --safe
+```
+
+### Workflow 2: Optimize Costs (Voyage → Jina)
+
+**Scenario**: Currently using Voyage ($120/month), want to switch to free Jina
+
+**Steps**:
+```bash
+# 1. Check current status
+compass provider status
+# Shows: Voyage AI, $120/month, 85% MTEB
+
+# 2. Validate Jina is working
+compass provider validate jina
+
+# 3. Migrate (automatic)
+compass provider migrate voyage jina
+
+# Result:
+# ✓ Switched to Jina (FREE)
+# ✓ Better quality (88% vs 85% MTEB)
+# ✓ Savings: $1,440/year
+# ✓ Zero downtime
+```
+
+### Workflow 3: Database Backup Before Migration
+
+**Scenario**: Running database migration, need safety backup
+
+**Steps**:
+```bash
+# 1. Check database health
+compass db status wowtruck
+
+# 2. Create compressed backup
+compass db backup wowtruck --compress
+
+# 3. Note backup location
+# Output: /root/ankr-backups/daily/wowtruck_2026-02-12.sql.gz
+
+# 4. Run migration (your code)
+npx prisma migrate deploy
+
+# 5. If migration fails, restore:
+compass db restore wowtruck_2026-02-12.sql.gz wowtruck --verify
+
+# 6. Verify data integrity
+compass diagnose database wowtruck
+```
+
+### Workflow 4: Morning System Check
+
+**Routine**: Daily system health verification
+
+```bash
+# Single command
+compass diagnose system
+
+# Or detailed:
+compass service health          # Check all services
+compass port conflicts          # Check for conflicts
+compass db status              # Check databases
+compass provider status        # Check embedding provider
+```
+
+### Workflow 5: Pre-Deployment Checklist
+
+**Before deploying changes**:
+```bash
+# 1. Check system health
+compass diagnose system
+
+# 2. Backup critical databases
+compass db backup wowtruck --compress
+compass db backup ankr_eon --compress
+
+# 3. Ensure no port conflicts
+compass port conflicts --auto-fix
+
+# 4. Verify services are healthy
+compass service health
+
+# 5. Document current state
+compass publish auto /root
+```
+
+### Workflow 6: Troubleshooting Slow Service
+
+**Problem**: `ai-proxy` is slow or not responding
+
+**Steps**:
+```bash
+# 1. Run diagnostics
+compass diagnose service ai-proxy
+
+# 2. Check logs for errors
+compass service logs ai-proxy -n 100
+
+# 3. Check provider health
+compass diagnose embedding-provider
+
+# 4. Safe restart if needed
+compass service restart ai-proxy --safe
+
+# 5. Verify recovery
+compass diagnose service ai-proxy
+```
+
+---
+
+## 🎓 Advanced Features
+
+### Programmatic Usage (TypeScript/JavaScript)
+
+COMPASS can be used as a library in your code:
+
+```typescript
+import { ServiceEngine, ProviderEngine, PortEngine } from '@ankr/compass';
+
+// Service management
+const serviceEngine = new ServiceEngine();
+await serviceEngine.safeRestart('ai-proxy', { safe: true });
+
+// Provider switching
+const providerEngine = new ProviderEngine();
+await providerEngine.switchProvider('jina', { validate: true });
+
+// Port management
+const portEngine = new PortEngine();
+const portInfo = await portEngine.checkPort(4444);
+if (portInfo.inUse) {
+  await portEngine.killPortProcess(4444, true);
+}
+```
+
+### Automation with Scripts
+
+**Create a daily health check script**:
+
+```bash
+#!/bin/bash
+# File: /root/daily-health-check.sh
+
+echo "🏥 ANKR Daily Health Check - $(date)"
+echo "========================================"
+
+# Run diagnostics
+compass diagnose system
+
+# Check for issues
+if [ $? -ne 0 ]; then
+  echo "❌ Issues detected!"
+  # Send alert (integrate with your alerting system)
+else
+  echo "✅ All systems healthy"
+fi
+
+# Backup critical databases
+compass db backup wowtruck --compress
+compass db backup ankr_eon --compress
+
+echo "========================================"
+echo "✓ Daily health check complete"
+```
+
+**Schedule with cron**:
+```bash
+# Run daily at 2 AM
+0 2 * * * /root/daily-health-check.sh >> /var/log/ankr-health.log 2>&1
+```
+
+### CI/CD Integration
+
+**In your deployment pipeline**:
+
+```yaml
+# .github/workflows/deploy.yml
+- name: Pre-deployment health check
+  run: compass diagnose system
+
+- name: Backup databases
+  run: |
+    compass db backup wowtruck --compress
+    compass db backup ankr_eon --compress
+
+- name: Deploy application
+  run: ./deploy.sh
+
+- name: Post-deployment verification
+  run: |
+    compass service restart ai-proxy --safe
+    compass diagnose system
+```
+
+---
+
+## 🔧 Extending COMPASS
+
+### Adding New Commands
+
+**1. Create a new command file**:
+
+```typescript
+// File: /root/ankr-labs-nx/packages/@ankr/compass/src/commands/custom.ts
+
+import { Command } from 'commander';
+import chalk from 'chalk';
+
+export function createCustomCommand(): Command {
+  const custom = new Command('custom');
+  custom.description('Your custom commands');
+
+  custom
+    .command('hello <name>')
+    .description('Say hello')
+    .action(async (name) => {
+      console.log(chalk.green(`Hello, ${name}!`));
+    });
+
+  return custom;
+}
+```
+
+**2. Register in CLI**:
+
+```typescript
+// File: /root/ankr-labs-nx/packages/@ankr/compass/src/cli.ts
+
+import { createCustomCommand } from './commands/custom.js';
+
+// Add to program
+program.addCommand(createCustomCommand());
+```
+
+**3. Rebuild**:
+
 ```bash
 cd /root/ankr-labs-nx/packages/@ankr/compass
-npm install
 npm run build
-npm link
 ```
 
-### Common Operations
+**4. Test**:
 
-**1. Safe Service Restart**
 ```bash
+compass custom hello World
+# Output: Hello, World!
+```
+
+### Adding New Engines
+
+**1. Create engine file**:
+
+```typescript
+// File: /root/ankr-labs-nx/packages/@ankr/compass/src/engines/custom.engine.ts
+
+import ora from 'ora';
+import chalk from 'chalk';
+
+export class CustomEngine {
+  async doSomething(): Promise<void> {
+    const spinner = ora('Doing something').start();
+
+    try {
+      // Your logic here
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      spinner.succeed(chalk.green('✓ Done!'));
+    } catch (error) {
+      spinner.fail(chalk.red('✗ Failed!'));
+      throw error;
+    }
+  }
+}
+```
+
+**2. Use in commands**:
+
+```typescript
+import { CustomEngine } from '../engines/custom.engine.js';
+
+const engine = new CustomEngine();
+await engine.doSomething();
+```
+
+### Customizing for Your Workflow
+
+**Example: Add monitoring command**:
+
+```typescript
+// File: src/commands/monitor.ts
+
+export function createMonitorCommand(): Command {
+  const monitor = new Command('monitor');
+
+  monitor
+    .command('start')
+    .description('Start continuous monitoring')
+    .option('--interval <seconds>', 'Check interval', '60')
+    .action(async (options) => {
+      console.log(chalk.blue('Starting monitor...'));
+
+      setInterval(async () => {
+        // Run health checks
+        const serviceEngine = new ServiceEngine();
+        await serviceEngine.health();
+
+        // Check for issues
+        const portEngine = new PortEngine();
+        await portEngine.checkConflicts();
+
+        // Log to file
+        const timestamp = new Date().toISOString();
+        fs.appendFileSync(
+          '/var/log/compass-monitor.log',
+          `${timestamp} - Health check complete\n`
+        );
+      }, parseInt(options.interval) * 1000);
+    });
+
+  return monitor;
+}
+```
+
+---
+
+## 👥 Training Your Team
+
+### Training Plan (3 Levels)
+
+#### Level 1: Basic Users (1 hour)
+
+**Objective**: Use COMPASS for daily tasks
+
+**Topics**:
+1. What is COMPASS and why use it
+2. Running `compass quickstart`
+3. Common commands:
+   - `compass service status`
+   - `compass service restart <name> --safe`
+   - `compass port conflicts --auto-fix`
+   - `compass diagnose system`
+
+**Hands-on Exercise**:
+```bash
+# Exercise 1: Check system health
+compass diagnose system
+
+# Exercise 2: Restart a service
 compass service restart ai-proxy --safe
-```
 
-**2. Optimize Provider (Save $1,440/year)**
-```bash
-compass provider migrate voyage jina
-```
-
-**3. Database Backup**
-```bash
-compass db backup wowtruck --compress
-```
-
-**4. Port Conflict Resolution**
-```bash
+# Exercise 3: Fix port conflict
 compass port conflicts --auto-fix
 ```
 
-**5. System Diagnostics**
+**Assessment**: Can independently check health and restart services
+
+#### Level 2: Power Users (2 hours)
+
+**Objective**: Handle common operational issues
+
+**Topics**:
+1. All Level 1 topics
+2. Provider management and cost optimization
+3. Database backup/restore
+4. Troubleshooting workflows
+5. Publishing documentation
+
+**Hands-on Exercises**:
 ```bash
-compass diagnose system
+# Exercise 1: Provider migration
+compass provider migrate voyage jina
+
+# Exercise 2: Database backup/restore cycle
+compass db backup wowtruck --compress
+compass db restore backup.sql.gz wowtruck --verify
+
+# Exercise 3: Troubleshoot slow service
+compass diagnose service ai-proxy
+compass service logs ai-proxy -n 100
+compass service restart ai-proxy --safe
 ```
 
-**6. Publish Documentation**
+**Assessment**: Can handle 80% of operational issues independently
+
+#### Level 3: Advanced Users / Contributors (4 hours)
+
+**Objective**: Extend and customize COMPASS
+
+**Topics**:
+1. All Level 1 & 2 topics
+2. COMPASS architecture
+3. Adding new commands
+4. Creating custom engines
+5. CI/CD integration
+6. Contributing to codebase
+
+**Hands-on Project**:
+- Add a custom command for your team's specific workflow
+- Integrate COMPASS into deployment pipeline
+- Create a custom monitoring dashboard
+
+**Assessment**: Can add features and train others
+
+### Training Resources
+
+**1. Documentation**:
+- `/root/COMPASS_INDEX.md` - Master index
+- `/root/ankr-labs-nx/packages/@ankr/compass/README.md` - User guide
+- `/root/COMPASS_IMPLEMENTATION_SUMMARY.md` - Technical details
+
+**2. Interactive Learning**:
 ```bash
-compass publish report PROJECT_REPORT.md
-compass publish todo TODO.md
-compass publish changelog
+# Built-in guide
+compass quickstart
+
+# Help system
+compass --help
+compass service --help
+compass provider --help
+
+# Examples
+compass examples
+```
+
+**3. Video Walkthrough** (Create this):
+- 5-minute quick start
+- 15-minute common workflows
+- 30-minute deep dive
+
+**4. Cheat Sheet** (Create one-pager):
+```
+┌─────────────────────────────────────────┐
+│     COMPASS QUICK REFERENCE             │
+├─────────────────────────────────────────┤
+│ Check Health:                           │
+│   compass diagnose system               │
+│                                         │
+│ Restart Service:                        │
+│   compass service restart X --safe      │
+│                                         │
+│ Fix Port Conflict:                      │
+│   compass port conflicts --auto-fix     │
+│                                         │
+│ Switch Provider:                        │
+│   compass provider migrate voyage jina  │
+│                                         │
+│ Backup Database:                        │
+│   compass db backup X --compress        │
+└─────────────────────────────────────────┘
 ```
 
 ---
 
-## 🔧 Integration Points
+## ✅ Best Practices
 
-### Successfully Integrated
-- ✅ **ankr-ctl**: Wrapped for service orchestration
-- ✅ **Port Configuration**: `/root/.ankr/config/ports.json`
-- ✅ **Service Configuration**: `/root/.ankr/config/services.json`
-- ✅ **Database Configuration**: `/root/.ankr/config/databases.json`
-- ✅ **AI Proxy**: `server.ts` provider switching
-- ✅ **Git**: Changelog generation from history
+### DO's
 
-### Configuration Files Used
-```bash
-/root/.ankr/config/
-├── ports.json        # Port assignments (READ)
-├── services.json     # Service definitions (READ)
-└── databases.json    # Database configs (READ)
-
-/root/ankr-labs-nx/apps/ai-proxy/src/
-└── server.ts         # Provider config (READ + WRITE)
-
-/root/ankr-backups/   # Database backups (WRITE)
-/root/ankr-reports/   # Published reports (WRITE)
-/root/ankr-todos/     # Published TODOs (WRITE)
-```
-
----
-
-## 💡 Key Learnings
-
-### What Worked Exceptionally Well
-
-1. **"Extend, not replace" philosophy**
-   - Zero resistance to adoption
-   - No breaking changes
-   - Builds on proven tools
-
-2. **TypeScript + tsup**
-   - Type safety caught bugs early
-   - Dual CJS/ESM works everywhere
-   - Fast builds (~300ms)
-
-3. **Commander.js structure**
-   - Intuitive command hierarchy
-   - Auto-generated help
-   - Easy to extend
-
-4. **Safety-first design**
-   - Users trust the tool
-   - Rollback mechanisms work
-   - Clear error messages
-
-### Challenges Overcome
-
-1. **Database config format mismatch**
-   - Expected simple format
-   - Actual format had servers + databases sections
-   - **Fixed**: Added adapter layer
-
-2. **Port cleanup timing**
-   - Needed to wait for port release
-   - **Fixed**: Added polling with timeout
-
-3. **Provider health checks**
-   - Different APIs for each provider
-   - **Fixed**: Provider-specific implementations
-
----
-
-## 📈 Impact Summary
-
-### Quantitative Impact
-- ✅ **92% faster** port conflict resolution (5 commands → 1 command)
-- ✅ **93% faster** provider migration (30 minutes → 2 minutes)
-- ✅ **$1,440/year** direct cost savings potential
-- ✅ **~10 hours/month** time savings from automation
-- ✅ **15 commands** vs planned 10 (50% more value)
-
-### Qualitative Impact
-- ✅ **Reduced cognitive load** (one tool vs many scripts)
-- ✅ **Self-service enabled** (no DevOps expert needed)
-- ✅ **Improved confidence** (safety guardrails work)
-- ✅ **Faster onboarding** (intuitive commands)
-- ✅ **Better documentation** (comprehensive guides)
-
----
-
-## 🎓 Recommendations
-
-### For Immediate Use
-
-1. **Start with quickstart guide**
-   ```bash
-   compass quickstart
-   ```
-
-2. **Use safe flags initially**
+1. ✅ **Always use `--safe` flag for restarts** in production
    ```bash
    compass service restart ai-proxy --safe
    ```
 
-3. **Explore diagnostics**
+2. ✅ **Run diagnostics before major changes**
    ```bash
    compass diagnose system
    ```
 
-4. **Publish your documentation**
+3. ✅ **Backup databases before migrations**
    ```bash
-   compass publish report YOUR_REPORT.md
+   compass db backup wowtruck --compress
    ```
 
-### For Phase 2 Development
+4. ✅ **Use `--validate` when switching providers**
+   ```bash
+   compass provider switch jina --validate
+   ```
 
-1. **Add setup wizard**
-   - Interactive onboarding
-   - API key configuration
-   - System verification
+5. ✅ **Check logs when troubleshooting**
+   ```bash
+   compass service logs ai-proxy -n 100
+   ```
 
-2. **Multi-repo sync**
-   - ankr-labs-nx, swayam, awesome-ankr-skills
-   - Unified deployment
-   - Diff visualization
+6. ✅ **Auto-fix port conflicts before restarts**
+   ```bash
+   compass port conflicts --auto-fix
+   ```
 
-3. **Script consolidation**
-   - Map 189+ scripts to COMPASS
-   - Deprecation notices
-   - Migration guide
+7. ✅ **Publish documentation regularly**
+   ```bash
+   compass publish auto /root
+   ```
 
-4. **Monitoring integration**
-   - Connect to ANKR Pulse
-   - Real-time alerts
-   - Metrics dashboard
+### DON'Ts
+
+1. ❌ **Don't skip health checks after restarts**
+   - COMPASS does this automatically with `--safe`
+
+2. ❌ **Don't force operations without understanding**
+   - Use `--force` only when you know what you're doing
+
+3. ❌ **Don't ignore warnings**
+   - Yellow warnings indicate potential issues
+
+4. ❌ **Don't restart multiple services simultaneously**
+   - Restart one at a time to avoid cascading failures
+
+5. ❌ **Don't bypass ankr-ctl**
+   - COMPASS wraps ankr-ctl properly - use it
+
+6. ❌ **Don't delete backups manually**
+   - COMPASS manages 7-day retention automatically
 
 ---
 
-## 🏁 Conclusion
+## 🔍 Troubleshooting
 
-**COMPASS Phase 1 MVP + Publishing is COMPLETE and PRODUCTION-READY**
+### Common Issues
 
-The implementation exceeded the original plan by:
-- ✅ Delivering 15 commands (vs planned 10)
-- ✅ Adding publishing system (bonus feature)
-- ✅ Creating comprehensive documentation (3 reports)
-- ✅ Achieving all success metrics
-- ✅ Zero breaking changes to infrastructure
+#### Issue 1: Command Not Found
 
-**Ready for production use. Phase 2 planning can begin.**
+**Error**: `compass: command not found`
 
----
-
-## 📞 Quick Reference
-
-**Global Command**:
+**Solution**:
 ```bash
-compass <command> <subcommand> [options]
+# Re-link globally
+cd /root/ankr-labs-nx/packages/@ankr/compass
+npm link
+
+# Verify
+which compass
+compass --version
 ```
+
+#### Issue 2: Service Won't Restart
+
+**Error**: Service fails health check after restart
+
+**Diagnosis**:
+```bash
+# Check service logs
+compass service logs ai-proxy -n 50
+
+# Check port status
+compass port check 4444
+
+# Run diagnostics
+compass diagnose service ai-proxy
+```
+
+**Solutions**:
+- If port conflict: `compass port kill 4444 --force`
+- If config error: Check service configuration
+- If dependency issue: Check database/other services
+
+#### Issue 3: Provider Switch Fails
+
+**Error**: Provider validation fails
+
+**Diagnosis**:
+```bash
+# Check API key
+echo $JINA_API_KEY
+
+# Validate manually
+compass provider validate jina
+```
+
+**Solutions**:
+```bash
+# Set API key if missing
+export JINA_API_KEY="your-key-here"
+
+# Or add to credentials file
+echo "JINA_API_KEY=your-key" >> /root/.ankr/config/credentials.env
+
+# Retry
+compass provider switch jina --validate
+```
+
+#### Issue 4: Database Backup Fails
+
+**Error**: Permission denied or connection refused
+
+**Diagnosis**:
+```bash
+# Check database status
+compass db status wowtruck
+
+# Check PostgreSQL is running
+systemctl status postgresql
+```
+
+**Solutions**:
+- Start PostgreSQL if stopped
+- Check credentials in `/root/.ankr/config/databases.json`
+- Ensure backup directory has write permissions
+
+#### Issue 5: Slow Performance
+
+**Symptoms**: Commands take long time to execute
+
+**Diagnosis**:
+```bash
+# Check system resources
+htop
+
+# Check database connections
+compass db status
+```
+
+**Solutions**:
+- Close unnecessary database connections
+- Restart slow services
+- Check for resource exhaustion
+
+---
+
+## 📊 Monitoring & Metrics
+
+### Track COMPASS Usage
+
+**Create usage log**:
+```bash
+# Add to your .bashrc or .zshrc
+alias compass='compass "$@" && echo "$(date) - compass $@" >> /var/log/compass-usage.log'
+```
+
+**Analyze usage**:
+```bash
+# Most used commands
+cat /var/log/compass-usage.log | awk '{print $4}' | sort | uniq -c | sort -rn
+
+# Usage over time
+cat /var/log/compass-usage.log | cut -d'-' -f1 | uniq -c
+```
+
+### Success Metrics
+
+**Track these KPIs**:
+1. **Time to resolve port conflicts**: Before vs After COMPASS
+2. **Service restart success rate**: Should be >95% with `--safe`
+3. **Cost savings**: $1,440/year if migrating from Voyage
+4. **Mean time to recovery (MTTR)**: Reduce by 40-50%
+5. **Manual intervention rate**: Should decrease over time
+
+---
+
+## 🎯 Next Steps
+
+### For New Users
+1. ✅ Run `compass quickstart`
+2. ✅ Try common workflows above
+3. ✅ Join training session (Level 1)
+4. ✅ Use COMPASS for 1 week
+5. ✅ Share feedback
+
+### For Power Users
+1. ✅ Complete Level 2 training
+2. ✅ Add COMPASS to daily routine
+3. ✅ Create custom commands for your workflow
+4. ✅ Train 2-3 team members
+5. ✅ Contribute improvements
+
+### For Contributors
+1. ✅ Complete Level 3 training
+2. ✅ Review source code
+3. ✅ Add features for Phase 2
+4. ✅ Improve documentation
+5. ✅ Help maintain codebase
+
+---
+
+## 📞 Support
 
 **Get Help**:
-```bash
-compass --help
-compass <command> --help
-compass quickstart
-compass examples
-```
+- `compass --help` - Built-in help
+- `/root/COMPASS_INDEX.md` - Documentation index
+- GitHub Issues - Report bugs
 
-**Version**:
-```bash
-compass --version  # 1.0.0
-```
-
-**Documentation**:
-- README: `/root/ankr-labs-nx/packages/@ankr/compass/README.md`
-- Project Report: `/root/ankr-reports/report_latest.md`
-- TODO: `/root/ankr-todos/todo_latest.md`
-- Changelog: `/root/COMPASS_CHANGELOG.md`
+**Ask Questions**:
+- Team chat/Slack
+- Weekly COMPASS office hours (TBD)
+- Documentation contributions welcome
 
 ---
 
-**Status**: ✅ **PHASE 1 COMPLETE**
-**Next**: Phase 2 Advanced Features
-**Timeline**: On track
+**Remember**: COMPASS is a tool to reduce cognitive load and enable self-service. Don't be afraid to use it - it has safety guardrails built in!
 
 **Jai Guru Ji** 🙏
 
 ---
 
-*Generated by ANKR COMPASS*
-*Date: 2026-02-12*
-*Implementation: Claude Code + ANKR Labs*
+*This guide is continuously updated. Last update: 2026-02-12*
+*Feedback: Create issues or submit PRs to improve this guide*
