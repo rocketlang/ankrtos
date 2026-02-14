@@ -117,24 +117,25 @@ Unlimited digital scale
 ---
 
 <!-- Slide 5: The Technology Advantage -->
-# ⚡ FAANG-Grade Tech at Startup Speed
+# ⚡ Modern Tech Stack, Faster Development
 
-## What the Top Companies Use
+## Built with Industry-Standard Technologies
 
-| Component | What FAANG Uses | What Pratham Gets |
-|-----------|----------------|-------------------|
+| Component | Technology | What You Get |
+|-----------|-----------|--------------|
 | **Frontend** | React + TypeScript | ✅ React 18 + TypeScript |
-| **Backend** | Node.js microservices | ✅ Node.js 20 + Fastify |
+| **Backend** | Node.js | ✅ Node.js 20 + Fastify |
 | **Database** | PostgreSQL + Redis | ✅ PostgreSQL 16 + Redis 7 |
 | **Real-time** | WebSockets | ✅ Socket.io |
 | **AI** | Claude, GPT-4 | ✅ ANKR AI Proxy (multi-model) |
 | **Mobile** | React Native | ✅ React Native + PWA |
-| **Cloud** | Auto-scaling infra | ✅ Kubernetes + Docker |
+| **Cloud** | Container-based | ✅ Docker deployment |
 
-**The Difference:**
-- FAANG spends: ₹100+ Crores
-- You get it for: **Fraction of the effort**
-- Why? ANKR Platform = Pre-built, battle-tested, ready to deploy
+**The Advantage:**
+- Modern, well-maintained technology stack
+- Active open-source communities
+- Accelerated development using ANKR's reusable components
+- Why? ANKR Platform = Modular, customizable, growing ecosystem
 
 ---
 
@@ -568,34 +569,33 @@ Phase 4: OPTIMIZE (Weeks 25-32)
 
 ---
 
-<!-- Slide 19: The Team Behind It -->
-# 👥 Battle-Tested Technology
+<!-- Slide 19: The Technology Foundation -->
+# 👥 Modern Technology, Faster Development
 
 ## Why ANKR Platform?
 
-**Not a Startup. Not Unproven. Production-Ready.**
+**Accelerated Development Through Reusable Components**
 
-### Track Record:
-- ✅ 2+ years in production
-- ✅ 10,000+ daily active users
-- ✅ 99.9%+ uptime
-- ✅ Zero major incidents
-- ✅ Used by maritime, compliance, learning sectors
+### Platform Background:
+- ✅ In active development since 2024
+- ✅ Powers multiple internal projects
+- ✅ Used across maritime, compliance, and learning applications
+- ✅ Continuously improved based on real-world usage
 
-### Technology Pedigree:
-- Same stack as FAANG companies
-- Modern, actively maintained
-- Large developer community
-- Constant improvements
-- Free platform updates
+### Technology Foundation:
+- Modern, open-source technology stack
+- Industry-standard tools and frameworks
+- Active developer community support
+- Regular updates and improvements
+- Modular, reusable components
 
 ### Your Advantage:
-- No need to build from scratch (saves ₹2-3Cr)
-- Proven at scale (de-risked)
-- Continuous innovation (free upgrades)
-- Expert support (included)
+- Leverage existing components (accelerate development)
+- Learn from previous implementations
+- Benefit from ongoing improvements
+- Access to experienced development team
 
-**Standing on the shoulders of giants**
+**Building on proven components, customized for education**
 
 ---
 

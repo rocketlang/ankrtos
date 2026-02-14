@@ -55,6 +55,44 @@
       "runtime": "bun",
       "runtimeVersion": "1.3.9",
       "domain": "vyomo.in"
+    },
+    "edibox-backend": {
+      "portPath": "backend.edibox",
+      "path": "/root",
+      "command": "/bin/bash /root/edibox-backend-start.sh",
+      "description": "EDIBox Backend - BAPLIE Parser & Ship Stability API",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "interpreter": "bash",
+      "interpreterPath": "/bin/bash",
+      "runtime": "tsx",
+      "runtimeVersion": "4.21.0",
+      "database": "edibox"
+    },
+    "complymitra-api": {
+      "portPath": "backend.complymitra",
+      "path": "/root/ankr-labs-nx/apps/complymitra-api",
+      "command": "npx tsx src/index.ts",
+      "description": "ComplyMitra - Compliance Management API",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "interpreter": "node",
+      "interpreterPath": "/usr/bin/node",
+      "runtime": "tsx",
+      "runtimeVersion": "4.21.0"
+    },
+    "ankr-maritime-watcher": {
+      "portPath": null,
+      "path": "/root/apps/ankr-maritime",
+      "command": "ankr-publish-watch watch --dirs /root/apps/ankr-maritime --scan-existing",
+      "description": "ANKR Maritime - File Watcher & Auto-Publisher",
+      "healthEndpoint": null,
+      "enabled": false,
+      "interpreter": "bash",
+      "interpreterPath": "/bin/bash",
+      "runtime": "node",
+      "runtimeVersion": "20.x",
+      "_note": "File watcher service - no HTTP endpoint, managed separately (PID 2779)"
     }
   }
 }
