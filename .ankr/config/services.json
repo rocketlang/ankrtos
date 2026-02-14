@@ -1,13 +1,9 @@
 {
-  "name": "ankr-hybrid-search",
-  "description": "Hybrid Search API (File Index + Vector)",
-  "category": "search",
-  "portPath": "services.ankr-hybrid-search",
-  "type": "api",
-  "healthCheck": "http://localhost:4446/health",
-  "pm2Name": "ankr-hybrid-search",
-  "startCommand": "pm2 start /root/ankr-hybrid-search-service.js --name ankr-hybrid-search",
-  "url": "https://ankr.in/api/hybrid-search",
+  "_meta": {
+    "description": "ANKR Service Registry - References ports.json via portPath (NO hardcoding)",
+    "version": "2.0.0",
+    "portsFile": "./ports.json"
+  },
   "services": {
     "ankr-hybrid-search": {
       "portPath": "services.ankr-hybrid-search",
@@ -20,6 +16,18 @@
       "interpreterPath": "/root/.bun/bin/bun",
       "runtime": "bun",
       "runtimeVersion": "1.3.9"
+    },
+    "ankr-interact": {
+      "portPath": "dashboard.viewer",
+      "path": "/root/ankr-labs-nx/packages/ankr-interact",
+      "command": "npm run dev:server",
+      "description": "ANKR Interact - Documentation Browser & Knowledge Graph",
+      "healthEndpoint": "/api/health",
+      "enabled": true,
+      "interpreter": "tsx",
+      "runtime": "node",
+      "runtimeVersion": "20.19.6",
+      "_note": "Uses tsx for TypeScript - requires CommonJS compatibility fixes"
     }
   }
 }

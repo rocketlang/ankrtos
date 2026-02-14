@@ -179,6 +179,7 @@
   "dependencies": {
     "@ankr/agent": "^1.2.0",
     "@fastify/cors": "^11.2.0",
+    "@fastify/jwt": "^10.0.0",
     "@fastify/websocket": "^11.2.0",
     "@prisma/client": "^7.3.0",
     "chokidar": "^5.0.0",

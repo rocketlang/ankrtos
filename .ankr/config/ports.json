@@ -86,6 +86,7 @@
     "_range": "4400-4499",
     "proxy": 4444,
     "vyomoBlackbox": 4445,
+    "vyomoDownload": 4447,
     "embeddings": 4450,
     "judge": 4460,
     "guardrails": 4470,
@@ -183,6 +184,12 @@
       "description": "Hybrid Search API (File Index + Vector)",
       "category": "search",
       "health": "/health"
+    },
+    "ankr-interact": {
+      "port": 3199,
+      "description": "ANKR Interact - Documentation Browser & Knowledge Graph",
+      "category": "viewer",
+      "health": "/api/health"
     }
   }
 }
