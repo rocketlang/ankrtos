@@ -81,3 +81,4 @@ data/ncert-full/
 ankr-doctor-reports/fix-log.jsonl
 *.zip
 *.pdf
+vyomo-download-api.env

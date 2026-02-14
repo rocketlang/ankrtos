@@ -122,8 +122,8 @@ server.get('/api/download/vyomo-blackbox', {
   // Create fresh archive (exclude node_modules and .git)
   try {
     await execAsync(
-      `tar -czf ${archivePath} -C /root vyomo-algo-blackbox ` +
-      `--exclude=node_modules --exclude=.git --exclude=bun.lock`
+      `tar --exclude=node_modules --exclude=.git --exclude=bun.lock ` +
+      `-czf ${archivePath} -C /root vyomo-algo-blackbox`
     )
   } catch (err) {
     server.log.error({ err }, 'Failed to create archive')
