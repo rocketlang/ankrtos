@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIBox - BAPLIE Parser & Ship Stability Platform</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 20px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 20px;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header .tagline {
+            font-size: 1.5em;
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+
+        header .subtitle {
+            font-size: 1.1em;
+            color: #cbd5e0;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(6, 182, 212, 0.2));
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        .stat-value {
+            font-size: 3em;
+            font-weight: bold;
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #cbd5e0;
+            font-size: 1.1em;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            border-radius: 16px;
+            padding: 35px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
+        }
+
+        .feature-card h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #3b82f6;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-card p {
+            color: #cbd5e0;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .feature-card ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .feature-card ul li {
+            padding: 8px 0;
+            color: #a0aec0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .feature-card ul li:before {
+            content: "⚓";
+            position: absolute;
+            left: 0;
+            color: #06b6d4;
+        }
+
+        .tech-section {
+            background: rgba(6, 182, 212, 0.1);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .tech-section h2 {
+            color: #06b6d4;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .tech-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(6, 182, 212, 0.2);
+        }
+
+        .tech-item h3 {
+            color: #06b6d4;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .tech-item p {
+            color: #cbd5e0;
+            line-height: 1.6;
+        }
+
+        .viewer-showcase {
+            background: rgba(139, 92, 246, 0.1);
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .viewer-showcase h2 {
+            color: #8b5cf6;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+
+        .viewer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .viewer-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            border: 2px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .viewer-box h3 {
+            color: #8b5cf6;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .viewer-box ul {
+            list-style: none;
+        }
+
+        .viewer-box ul li {
+            padding: 10px 0;
+            color: #cbd5e0;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .viewer-box ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #8b5cf6;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.5);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+        }
+
+        .workflow-section {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .workflow-section h2 {
+            color: #10b981;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .workflow-steps {
+            display: grid;
+            gap: 20px;
+        }
+
+        .step {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #10b981;
+            padding: 25px;
+            border-radius: 8px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: #10b981;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            color: #10b981;
+            margin-bottom: 8px;
+        }
+
+        .step-content p {
+            color: #cbd5e0;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 2px solid rgba(59, 130, 246, 0.3);
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: #a0aec0;
+            margin-bottom: 10px;
+        }
+
+        footer strong {
+            color: #3b82f6;
+        }
+
+        .badge {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📦 EDIBox</h1>
+            <div class="tagline">BAPLIE Parser & Ship Stability Platform</div>
+            <div class="subtitle">2D/3D Container Visualization | Real-Time Stability Analysis | EDI Compliance</div>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value">2D + 3D</div>
+                <div class="stat-label">Visualization Modes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">BAPLIE Compliant</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">v0.1.0</div>
+                <div class="stat-label">Latest Version</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">Real-Time</div>
+                <div class="stat-label">Stability Analysis</div>
+            </div>
+        </div>
+
+        <div class="viewer-showcase">
+            <h2>🎨 Advanced Visualization Engines</h2>
+            <p style="color: #cbd5e0; margin-bottom: 30px;">
+                Industry-leading 2D and 3D container stowage viewers with interactive capabilities
+            </p>
+            <div class="viewer-grid">
+                <div class="viewer-box">
+                    <h3>📊 2D Bay Plan Viewer</h3>
+                    <p style="color: #cbd5e0; margin-bottom: 20px;"><strong>Technology:</strong> D3.js + SVG (220 lines)</p>
+                    <ul>
+                        <li>Overhead grid layout showing bay/row positions</li>
+                        <li>Heat map color coding by container weight</li>
+                        <li>Blue highlighting for reefer containers</li>
+                        <li>Interactive hover effects with details</li>
+                        <li>Container number labels (last 4 digits)</li>
+                        <li>Weight display in tonnes</li>
+                        <li>Tier indicator (stacking height)</li>
+                        <li>Built-in legend and statistics bar</li>
+                        <li>20ft/40ft container counts</li>
+                        <li>Gray marking for empty containers</li>
+                    </ul>
+                </div>
+
+                <div class="viewer-box">
+                    <h3>🌐 3D Stowage Viewer</h3>
+                    <p style="color: #cbd5e0; margin-bottom: 20px;"><strong>Technology:</strong> React Three Fiber + Three.js (320 lines)</p>
+                    <ul>
+                        <li>Realistic 3D ship visualization with hull</li>
+                        <li>Accurate container dimensions (20ft/40ft)</li>
+                        <li>True 3D stacking (bay/row/tier)</li>
+                        <li>OrbitControls for rotation/pan/zoom</li>
+                        <li>Directional lighting with shadows</li>
+                        <li>Color coding by weight and type</li>
+                        <li>Hover effects with container glow</li>
+                        <li>Container labels on hover</li>
+                        <li>BOW/STERN axis labels</li>
+                        <li>Corner posts for realism</li>
+                        <li>Interactive controls overlay</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="workflow-section">
+            <h2>🔄 User Workflow</h2>
+            <div class="workflow-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Upload BAPLIE File</h3>
+                        <p>Upload EDI format (.edi or .txt) BAPLIE files through the web interface. Supports drag-and-drop and file browser selection.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Backend Parsing & Validation</h3>
+                        <p>Our GraphQL API parses the BAPLIE file, validates container data, and generates a transaction ID for tracking.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Fetch Bay Plan Data</h3>
+                        <p>Frontend automatically fetches detailed bay plan data including container positions, weights, types, and reefer status.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Toggle Between 2D & 3D Views</h3>
+                        <p>Switch seamlessly between overhead 2D grid view and immersive 3D ship visualization using the ViewToggle component.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Inspect Container Details</h3>
+                        <p>Click any container to open a detailed modal with full specifications: number, ISO type, position, weight, status, and export options.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Export & Analyze</h3>
+                        <p>Export container details, analyze stowage patterns, and ensure compliance with ship stability requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h2>🔍 Container Detail Modal <span class="badge">150 lines</span></h2>
+                <p>Beautiful popup modal with comprehensive container information</p>
+                <ul>
+                    <li>Container number and ISO type</li>
+                    <li>Position in grid layout (bay/row/tier)</li>
+                    <li>Weight in tonnes and kilograms</li>
+                    <li>Status badges (Full/Empty, Reefer)</li>
+                    <li>Container type classification (20ft/40ft)</li>
+                    <li>Export details button (PDF ready)</li>
+                    <li>Gradient design with blue header</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h2>🔄 View Toggle Component <span class="badge">50 lines</span></h2>
+                <p>Smooth switching between visualization modes</p>
+                <ul>
+                    <li>Clean button group design</li>
+                    <li>Icons for both 2D and 3D</li>
+                    <li>Active state styling</li>
+                    <li>Smooth transitions</li>
+                    <li>Keyboard shortcuts support</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h2>📡 GraphQL API</h2>
+                <p>Modern API for BAPLIE operations</p>
+                <ul>
+                    <li>uploadBAPLIE mutation</li>
+                    <li>getBayPlan query</li>
+                    <li>Transaction ID tracking</li>
+                    <li>Real-time validation</li>
+                    <li>Error handling with details</li>
+                    <li>Type-safe operations</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h2>⚖️ Ship Stability Analysis</h2>
+                <p>Ensure safe container stowage</p>
+                <ul>
+                    <li>Center of gravity calculation</li>
+                    <li>Weight distribution analysis</li>
+                    <li>Reefer positioning validation</li>
+                    <li>Tier limit compliance</li>
+                    <li>Bay balance verification</li>
+                    <li>Real-time warnings</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h2>🧊 Reefer Container Tracking</h2>
+                <p>Special handling for refrigerated cargo</p>
+                <ul>
+                    <li>Blue color highlighting in both views</li>
+                    <li>Automatic reefer count in statistics</li>
+                    <li>Position tracking for power access</li>
+                    <li>Temperature monitoring ready</li>
+                    <li>Isolation from heat sources</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h2>📊 Statistics Dashboard</h2>
+                <p>Comprehensive stowage analytics</p>
+                <ul>
+                    <li>Total container count</li>
+                    <li>20ft/40ft TEU breakdown</li>
+                    <li>Reefer container count</li>
+                    <li>Weight distribution by tier</li>
+                    <li>Bay utilization percentage</li>
+                    <li>Empty container tracking</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tech-section">
+            <h2>🔧 Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h3>Frontend</h3>
+                    <p>React 19 + Vite 5.4.21<br>
+                    D3.js for 2D visualization<br>
+                    React Three Fiber + Three.js for 3D<br>
+                    TypeScript for type safety<br>
+                    Apollo Client for GraphQL</p>
+                </div>
+
+                <div class="tech-item">
+                    <h3>Backend</h3>
+                    <p>Node.js + TypeScript (tsx 4.21.0)<br>
+                    GraphQL API<br>
+                    BAPLIE EDI parser<br>
+                    Ship stability algorithms<br>
+                    Database: EDIBox (PostgreSQL)</p>
+                </div>
+
+                <div class="tech-item">
+                    <h3>Visualization</h3>
+                    <p>D3.js v7+ (SVG rendering)<br>
+                    Three.js (WebGL 3D)<br>
+                    React Three Fiber<br>
+                    OrbitControls<br>
+                    Directional lighting & shadows</p>
+                </div>
+
+                <div class="tech-item">
+                    <h3>Data Format</h3>
+                    <p>BAPLIE EDI format support<br>
+                    ISO container codes<br>
+                    UN/EDIFACT standard<br>
+                    .edi and .txt file support<br>
+                    Full validation engine</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 60px 0;">
+            <a href="http://localhost:3080" class="btn" target="_blank">🚀 Open 2D/3D Viewer</a>
+            <a href="http://localhost:4080/health" class="btn btn-secondary" target="_blank" style="margin-left: 20px;">📊 API Health</a>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h2>🎯 Production Ready</h2>
+                <p>Enterprise-grade BAPLIE processing</p>
+                <ul>
+                    <li>Full EDI compliance</li>
+                    <li>Error handling and validation</li>
+                    <li>Transaction tracking</li>
+                    <li>Audit trail logging</li>
+                    <li>Performance optimized</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h2>🔒 Secure & Reliable</h2>
+                <p>Built for maritime industry standards</p>
+                <ul>
+                    <li>Database persistence</li>
+                    <li>Transaction integrity</li>
+                    <li>Data validation</li>
+                    <li>Error recovery</li>
+                    <li>100% uptime target</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <h2>📱 Responsive Design</h2>
+                <p>Works on all devices and screen sizes</p>
+                <ul>
+                    <li>Desktop optimized</li>
+                    <li>Tablet compatible</li>
+                    <li>Touch-friendly 3D controls</li>
+                    <li>Adaptive layouts</li>
+                    <li>Cross-browser support</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Created by: Powerp Box IT Solutions Pvt Ltd</strong></p>
+            <p>Backend: localhost:4080 | Frontend: localhost:3080 | Version: 0.1.0</p>
+            <p style="margin-top: 20px; color: #3b82f6;">© 2026 All Rights Reserved</p>
+            <p style="margin-top: 10px; color: #a0aec0;">
+                Status: <span style="color: #10b981; font-weight: bold;">OK</span> |
+                Database: <span style="color: #10b981; font-weight: bold;">Connected</span> |
+                Components: 4 React modules (740 total lines)
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
