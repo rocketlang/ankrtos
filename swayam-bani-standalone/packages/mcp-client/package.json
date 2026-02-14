@@ -1,0 +1,22 @@
+{
+  "name": "@swayam/mcp-client",
+  "version": "2.1.0",
+  "description": "MCP client for SWAYAM - connects to PowerBox MCP. Security-hardened v2.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": ["mcp", "swayam", "ai", "client", "model-context-protocol"],
+  "author": "ANKR Labs",
+  "license": "MIT",
+  "dependencies": {
+    "eventemitter3": "^5.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  },
+  "files": ["dist/**/*"]
+}

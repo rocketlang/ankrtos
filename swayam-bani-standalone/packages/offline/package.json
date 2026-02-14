@@ -1,0 +1,15 @@
+{
+  "name": "@swayam/offline",
+  "version": "1.0.0",
+  "description": "Offline-first support for SWAYAM",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}

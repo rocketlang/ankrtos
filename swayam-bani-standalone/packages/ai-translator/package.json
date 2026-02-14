@@ -1,0 +1,49 @@
+{
+  "name": "@ankr/ai-translator",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "AI-powered real-time website translation supporting 10+ Indian languages",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "browser": "dist/browser.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "browser": "./dist/browser.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts && tsup src/browser.ts --format iife --global-name AITranslator --outDir dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "translation",
+    "ai",
+    "i18n",
+    "indian-languages",
+    "hindi",
+    "bengali",
+    "tamil",
+    "telugu",
+    "localization",
+    "ankr"
+  ],
+  "author": "ANKR Labs <dev@ankr.in>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ankr-labs/ai-translator"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}

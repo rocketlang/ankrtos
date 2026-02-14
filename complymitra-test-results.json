@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-02-12T17:11:29.577Z",
+  "tests": [
+    {
+      "name": "Landing Page",
+      "url": "https://complymitra.in",
+      "status": 200,
+      "title": "ComplyMitra - India's Smartest AI Compliance Platform",
+      "passed": true,
+      "screenshot": "/root/complymitra-landing.png",
+      "errors": []
+    },
+    {
+      "name": "App Page",
+      "url": "https://app.complymitra.in",
+      "status": 200,
+      "title": "Ankr Compliance",
+      "passed": true,
+      "loginElements": {
+        "emailInput": 0,
+        "passwordInput": 0,
+        "loginButton": 0,
+        "anyInputs": 0,
+        "anyButtons": 31
+      },
+      "graphqlTest": {
+        "status": 200,
+        "statusText": "",
+        "ok": true,
+        "body": "{\"data\":{\"__typename\":\"Query\"}}"
+      },
+      "consoleLogs": [],
+      "jsErrors": [],
+      "networkFailures": [],
+      "screenshots": [
+        "/root/complymitra-app-initial.png",
+        "/root/complymitra-app-filled.png",
+        "/root/complymitra-app-after-login.png"
+      ]
+    },
+    {
+      "name": "GraphQL API Health",
+      "url": "http://localhost:4001/health",
+      "passed": true,
+      "data": {
+        "status": "OK",
+        "timestamp": "2026-02-12T17:11:37.616Z",
+        "plugins": [
+          "auth",
+          "iam",
+          "wire",
+          "security",
+          "ai"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@swayam/security",
+  "version": "1.0.0",
+  "description": "Enterprise security for SWAYAM",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}

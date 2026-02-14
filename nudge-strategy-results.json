@@ -1,0 +1,62 @@
+{
+  "strategies": [
+    {
+      "type": "LOSS AVERSION",
+      "compliance": 65,
+      "improvement": "550%"
+    },
+    {
+      "type": "PERSONALIZED",
+      "compliance": 60,
+      "improvement": "500%"
+    },
+    {
+      "type": "SOCIAL PROOF",
+      "compliance": 55,
+      "improvement": "450%"
+    },
+    {
+      "type": "GAMIFICATION",
+      "compliance": 50,
+      "improvement": "400%"
+    },
+    {
+      "type": "PROOF-BASED",
+      "compliance": 45,
+      "improvement": "350%"
+    },
+    {
+      "type": "EDUCATIONAL",
+      "compliance": 35,
+      "improvement": "250%"
+    }
+  ],
+  "implementation": {
+    "phase1": {
+      "target": 50,
+      "strategies": [
+        "PERSONALIZED",
+        "SOCIAL PROOF"
+      ]
+    },
+    "phase2": {
+      "target": 60,
+      "strategies": [
+        "LOSS AVERSION",
+        "GAMIFICATION"
+      ]
+    },
+    "phase3": {
+      "target": 65,
+      "strategies": [
+        "EDUCATIONAL",
+        "TRACK RECORD"
+      ]
+    }
+  },
+  "expectedROI": {
+    "perUser": 63500,
+    "per1000Users": 63500000,
+    "percentageImprovement": 217
+  }
+}

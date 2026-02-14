@@ -62,15 +62,32 @@ async function testPage(browser: puppeteer.Browser, name: string, route: string)
     // Wait for React to render
     await new Promise(resolve => setTimeout(resolve, 2000))
 
-    // Check for error messages in the DOM
-    const errorElements = await page.$$('[class*="error"], [class*="Error"]')
-    if (errorElements.length > 0) {
-      for (const el of errorElements) {
-        const text = await page.evaluate(e => e.textContent, el)
-        if (text && text.trim()) {
-          result.warnings.push(`Error element found: ${text.substring(0, 100)}`)
+    // Check for actual visible error messages (not just error class names)
+    const actualErrors = await page.evaluate(() => {
+      const errorTexts = [
+        'error', 'failed', 'cannot', 'unable', 'something went wrong',
+        'try again', 'not found', 'unavailable'
+      ]
+      const elements = document.querySelectorAll('[class*="error"], [class*="Error"]')
+      const visibleErrors: string[] = []
+
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect()
+        const isVisible = rect.width > 0 && rect.height > 0
+        const text = (el.textContent || '').toLowerCase()
+
+        if (isVisible && errorTexts.some(err => text.includes(err))) {
+          visibleErrors.push(el.textContent?.substring(0, 100) || '')
         }
-      }
+      })
+
+      return visibleErrors
+    })
+
+    if (actualErrors.length > 0) {
+      actualErrors.forEach(err => {
+        if (err.trim()) result.warnings.push(`Page shows error message`)
+      })
     }
 
     // Check for loading states that never resolve

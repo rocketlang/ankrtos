@@ -1,47 +1,27 @@
 {
-  "totalPositions": 78391267,
-  "uniqueVessels": 51239,
-  "avgPositionsPerShip": 1529,
-  "earliestDate": "2025-11-12T13:13:35.000Z",
-  "latestDate": "2026-02-09T19:55:19.120Z",
-  "durationDays": 89,
-  "shipsMovingNow": 8431,
-  "shipsAtAnchor": 42808,
-  "shipsOnEquator": 5,
-  "shipsAtSuez": 13,
-  "coverageLatSpan": 179.90949799999999,
-  "coverageLonSpan": 359.877435,
-  "coveragePercent": 99.9497211111111,
+  "totalPositions": 3361451,
+  "uniqueVessels": 54962,
+  "avgPositionsPerShip": 61,
+  "earliestDate": "2026-02-12T03:30:07.783Z",
+  "latestDate": "2026-02-13T21:00:01.864Z",
+  "durationDays": 1,
+  "shipsMovingNow": 2918,
+  "shipsAtAnchor": 52044,
+  "shipsOnEquator": 4,
+  "shipsAtSuez": 0,
+  "coverageLatSpan": 179.69163200000003,
+  "coverageLonSpan": 359.378096,
+  "coveragePercent": 99.82868444444446,
   "last7DaysTrend": [
     {
-      "date": "2026-02-03",
-      "count": 7455261
+      "date": "2026-02-12",
+      "count": 3156282
     },
     {
-      "date": "2026-02-04",
-      "count": 354740
-    },
-    {
-      "date": "2026-02-05",
-      "count": 10992521
-    },
-    {
-      "date": "2026-02-06",
-      "count": 16907376
-    },
-    {
-      "date": "2026-02-07",
-      "count": 10857062
-    },
-    {
-      "date": "2026-02-08",
-      "count": 11402563
-    },
-    {
-      "date": "2026-02-09",
-      "count": 11323061
+      "date": "2026-02-13",
+      "count": 205169
     }
   ],
-  "lastUpdated": "2026-02-09T20:37:51.981Z",
-  "computedIn": 463304
+  "lastUpdated": "2026-02-13T21:00:14.271Z",
+  "computedIn": 7760
 }

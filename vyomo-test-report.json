@@ -1,0 +1,174 @@
+{
+  "timestamp": "2026-02-14T08:16:43.681Z",
+  "summary": {
+    "total": 19,
+    "passed": 14,
+    "warnings": 5,
+    "failed": 0
+  },
+  "results": [
+    {
+      "page": "Dashboard",
+      "route": "/",
+      "status": "WARNING",
+      "errors": [],
+      "warnings": [
+        "Market status widget not found"
+      ],
+      "screenshots": "/tmp/vyomo-Dashboard.png"
+    },
+    {
+      "page": "Anomaly Detection",
+      "route": "/anomaly",
+      "status": "WARNING",
+      "errors": [],
+      "warnings": [
+        "Anomaly feed not found"
+      ],
+      "screenshots": "/tmp/vyomo-Anomaly-Detection.png"
+    },
+    {
+      "page": "Live Chart",
+      "route": "/live",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Live-Chart.png"
+    },
+    {
+      "page": "Option Chain",
+      "route": "/chain",
+      "status": "WARNING",
+      "errors": [],
+      "warnings": [
+        "No strike price data visible"
+      ],
+      "screenshots": "/tmp/vyomo-Option-Chain.png"
+    },
+    {
+      "page": "Analytics",
+      "route": "/analytics",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Analytics.png"
+    },
+    {
+      "page": "Alerts",
+      "route": "/alerts",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Alerts.png"
+    },
+    {
+      "page": "Iron Condor",
+      "route": "/iron-condor",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Iron-Condor.png"
+    },
+    {
+      "page": "Intraday Signals",
+      "route": "/intraday",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Intraday-Signals.png"
+    },
+    {
+      "page": "Stock Screener",
+      "route": "/screener",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Stock-Screener.png"
+    },
+    {
+      "page": "Adaptive AI",
+      "route": "/adaptive-ai",
+      "status": "WARNING",
+      "errors": [],
+      "warnings": [
+        "Page shows error message",
+        "No AI recommendations visible"
+      ],
+      "screenshots": "/tmp/vyomo-Adaptive-AI.png"
+    },
+    {
+      "page": "Auto Trading",
+      "route": "/auto-trading",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Auto-Trading.png"
+    },
+    {
+      "page": "Risk Management",
+      "route": "/risk-management",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Risk-Management.png"
+    },
+    {
+      "page": "Broker Integration",
+      "route": "/broker-management",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Broker-Integration.png"
+    },
+    {
+      "page": "Index Divergence",
+      "route": "/divergence",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Index-Divergence.png"
+    },
+    {
+      "page": "Performance Tracker",
+      "route": "/tracker",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Performance-Tracker.png"
+    },
+    {
+      "page": "Backtesting",
+      "route": "/backtesting",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Backtesting.png"
+    },
+    {
+      "page": "Advanced Charts",
+      "route": "/charts",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Advanced-Charts.png"
+    },
+    {
+      "page": "Glossary",
+      "route": "/glossary",
+      "status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "screenshots": "/tmp/vyomo-Glossary.png"
+    },
+    {
+      "page": "Admin Panel",
+      "route": "/admin",
+      "status": "WARNING",
+      "errors": [],
+      "warnings": [
+        "Page shows error message"
+      ],
+      "screenshots": "/tmp/vyomo-Admin-Panel.png"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "@ankr/pkg-crawler",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Monorepo package crawler - discovers packages, extracts metadata, generates AI training data",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "pkg-crawler": "dist/cli.js",
+    "ankr-crawl": "dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/cli.ts --format cjs,esm --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "monorepo",
+    "crawler",
+    "package-discovery",
+    "training-data",
+    "ai",
+    "vibecoder",
+    "ankr"
+  ],
+  "author": "ANKR Labs <dev@ankr.in>",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}

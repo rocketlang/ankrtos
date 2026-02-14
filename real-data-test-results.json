@@ -1,0 +1,50 @@
+{
+  "dataInfo": {
+    "totalPoints": 365,
+    "duration": 364,
+    "groundTruthLabels": 7
+  },
+  "marketDetection": {
+    "detections": {
+      "PRICE_SPIKE": 4,
+      "PRICE_DROP": 2,
+      "VOLUME_SURGE": 7,
+      "IV_SPIKE": 7,
+      "SPREAD_EXPLOSION": 0
+    },
+    "truePositives": 6,
+    "falsePositives": 0,
+    "falseNegatives": 1,
+    "precision": 100,
+    "recall": 85.71,
+    "f1Score": 92.31
+  },
+  "conflictDetection": {
+    "totalConflicts": 193,
+    "highSeverityConflicts": 124,
+    "contextAwareFiltered": 5,
+    "conflictsByType": {
+      "BUY_SELL_SPLIT": 129,
+      "UNANIMOUS_BUT_LOW_CONFIDENCE": 0,
+      "NEUTRAL_DOMINANCE": 36,
+      "VOLATILITY_DISAGREEMENT": 28
+    },
+    "detectionRate": 55.94
+  },
+  "behaviorDetection": {
+    "totalTrades": 365,
+    "totalAnomalies": 159,
+    "behaviorAnomalies": {
+      "REVENGE_TRADING": 82,
+      "OVERTRADING": 0,
+      "POSITION_SIZING_ERRORS": 0,
+      "LOSS_AVERAGING": 77,
+      "PANIC_SELLING": 0,
+      "GREED_TRADING": 0,
+      "FATIGUE_TRADING": 0,
+      "INCONSISTENT_STRATEGY": 0
+    },
+    "detectionRate": 43.56
+  },
+  "overallScore": 63.93666666666667
+}

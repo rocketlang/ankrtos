@@ -1,0 +1,82 @@
+{
+  "algorithmPerformance": {
+    "High Volatility + Trending": [
+      {
+        "algo": "DELTA_NEUTRAL",
+        "winRate": 80,
+        "avgProfit": 0.05,
+        "trades": 10
+      }
+    ],
+    "High Volatility + Range-Bound": [
+      {
+        "algo": "DELTA_NEUTRAL",
+        "winRate": 67.7,
+        "avgProfit": 0.05,
+        "trades": 96
+      }
+    ],
+    "Low Volatility + Trending": [
+      {
+        "algo": "DELTA_NEUTRAL",
+        "winRate": 72.7,
+        "avgProfit": -0.01,
+        "trades": 11
+      }
+    ],
+    "Low Volatility + Range-Bound": [
+      {
+        "algo": "DELTA_NEUTRAL",
+        "winRate": 67.6,
+        "avgProfit": -0.02,
+        "trades": 145
+      }
+    ],
+    "News-Driven Event": [
+      {
+        "algo": "DELTA_NEUTRAL",
+        "winRate": 33.3,
+        "avgProfit": -0.02,
+        "trades": 6
+      }
+    ],
+    "Options Expiry Week": [
+      {
+        "algo": "DELTA_NEUTRAL",
+        "winRate": 67.1,
+        "avgProfit": 0.05,
+        "trades": 76
+      }
+    ]
+  },
+  "regimeDistribution": {
+    "Low Volatility + Range-Bound": 145,
+    "Options Expiry Week": 76,
+    "News-Driven Event": 6,
+    "Low Volatility + Trending": 11,
+    "High Volatility + Trending": 10,
+    "High Volatility + Range-Bound": 96
+  },
+  "nudgeEffectiveness": {
+    "control": {
+      "winRate": 64,
+      "avgProfit": 0.005,
+      "revengeTrades": 41
+    },
+    "treatment": {
+      "winRate": 66.9,
+      "avgProfit": 0.011,
+      "revengeTrades": 0
+    },
+    "improvement": {
+      "winRate": 2.9000000000000057,
+      "profit": 0.005999999999999999,
+      "revengeReduction": 100
+    }
+  },
+  "summary": {
+    "winRateImprovement": 2.9000000000000057,
+    "profitImprovement": 0.005999999999999999,
+    "revengeReduction": 100
+  }
+}

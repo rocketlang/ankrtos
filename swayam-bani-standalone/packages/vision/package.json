@@ -1,0 +1,19 @@
+{
+  "name": "@swayam/vision",
+  "version": "1.0.0",
+  "description": "Multi-modal vision for SWAYAM - OCR and image understanding",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "tesseract.js": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}

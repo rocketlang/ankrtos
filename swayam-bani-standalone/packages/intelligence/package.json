@@ -1,0 +1,25 @@
+{
+  "name": "@ankr/intelligence",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "SWAYAM Conversational Intelligence - AI that understands, plans, and executes",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "swayam",
+    "ai",
+    "agents",
+    "conversational",
+    "todo",
+    "planning"
+  ],
+  "author": "ANKR Labs",
+  "license": "MIT",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

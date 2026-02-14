@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratham Transformation - The Growth Playbook</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+
+        .slide {
+            width: 210mm;
+            height: 297mm;
+            padding: 60px;
+            background: white;
+            page-break-after: always;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .slide:last-child {
+            page-break-after: auto;
+        }
+
+        /* Title Slide */
+        .title-slide {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .title-slide h1 {
+            font-size: 72px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .title-slide h2 {
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .title-slide h3 {
+            font-size: 32px;
+            font-weight: 300;
+            opacity: 0.8;
+            margin-bottom: 60px;
+        }
+
+        .title-slide .subtitle {
+            font-size: 24px;
+            opacity: 0.7;
+            margin-top: 40px;
+        }
+
+        /* Regular Slides */
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #667eea;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: #333;
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        p {
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .subtitle {
+            font-size: 28px;
+            color: #666;
+            font-weight: 300;
+            margin-top: -20px;
+            margin-bottom: 40px;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 22px;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 18px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin: 20px 0 20px 40px;
+            font-size: 24px;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        /* Highlight boxes */
+        .highlight {
+            background: #f0f4ff;
+            border-left: 6px solid #667eea;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .highlight h3 {
+            color: #667eea;
+            margin-top: 0;
+        }
+
+        /* Stats boxes */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-box .number {
+            font-size: 64px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .stat-box .label {
+            font-size: 24px;
+            opacity: 0.9;
+        }
+
+        /* Code/comparison blocks */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .comparison-box {
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+        }
+
+        .comparison-box h3 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        .comparison-box.good {
+            border-color: #4caf50;
+            background: #f1f8f4;
+        }
+
+        .comparison-box.bad {
+            border-color: #f44336;
+            background: #fef5f5;
+        }
+
+        /* Footer */
+        .footer {
+            position: absolute;
+            bottom: 40px;
+            left: 60px;
+            right: 60px;
+            font-size: 18px;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .slide-number {
+            font-weight: 600;
+        }
+
+        /* Emoji support */
+        .emoji {
+            font-size: 1.2em;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .slide {
+                page-break-after: always;
+            }
+        }
+
+        /* Strong emphasis */
+        strong {
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        /* Big numbers */
+        .big-number {
+            font-size: 96px;
+            font-weight: 800;
+            color: #667eea;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        /* Phase boxes */
+        .phase {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 15px 0;
+            border-left: 5px solid #667eea;
+            border-radius: 4px;
+        }
+
+        .phase h4 {
+            color: #667eea;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .phase ul {
+            margin: 10px 0 10px 30px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide title-slide">
+    <h1>🚀 The Next Chapter</h1>
+    <h2>From 1,000 Students to 100,000</h2>
+    <h3>How Modern Tech Unlocks 10x Revenue Growth</h3>
+    <p class="subtitle">A Strategic Transformation Roadmap for Pratham Education Foundation</p>
+    <p class="subtitle" style="margin-top: 80px; font-size: 20px;">Prepared by ANKR Labs | February 2026</p>
+</div>
+
+<!-- Slide 2: The Big Picture -->
+<div class="slide">
+    <h1>🌟 The Opportunity Hiding in Plain Sight</h1>
+    <p class="subtitle">What if your current operations are just 10% of your potential?</p>
+
+    <table>
+        <tr>
+            <th>Today</th>
+            <th>Tomorrow</th>
+        </tr>
+        <tr>
+            <td>30 telecallers calling one at a time</td>
+            <td>AI platform reaching 10,000 students simultaneously</td>
+        </tr>
+        <tr>
+            <td>Voice-only delivery</td>
+            <td>Video, mobile, WhatsApp, voice - everywhere</td>
+        </tr>
+        <tr>
+            <td>Limited by telecaller availability</td>
+            <td>24/7 learning, anywhere in India</td>
+        </tr>
+        <tr>
+            <td>Revenue capped by human hours</td>
+            <td>Revenue scales infinitely with digital</td>
+        </tr>
+    </table>
+
+    <div class="highlight">
+        <p><strong>The Math:</strong> Current: 900 touchpoints/day → Platform: 10,000 simultaneous learners = <strong>11x more reach</strong></p>
+    </div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">2</span>
+    </div>
+</div>
+
+<!-- Slide 3: Revenue Explosion -->
+<div class="slide">
+    <h1>💰 The Revenue Multiplier Effect</h1>
+    <h2>Not Just Growth - Exponential Transformation</h2>
+
+    <div class="comparison">
+        <div class="comparison-box bad">
+            <h3>Current Model (Voice Only)</h3>
+            <div class="big-number" style="font-size: 72px;">₹1 Cr</div>
+            <p style="text-align: center;">Limited by human capacity</p>
+        </div>
+        <div class="comparison-box good">
+            <h3>Digital-First Model (Year 3)</h3>
+            <div class="big-number" style="font-size: 72px;">₹6.5 Cr</div>
+            <p style="text-align: center;">Unlimited digital scale</p>
+        </div>
+    </div>
+
+    <div class="highlight">
+        <h3 style="text-align: center; font-size: 48px;">550% Revenue Growth</h3>
+        <p style="text-align: center; font-size: 28px;">Same core mission, 6x the impact</p>
+    </div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">3</span>
+    </div>
+</div>
+
+<!-- Slide 4: Five Revenue Rivers -->
+<div class="slide">
+    <h1>🎯 Five Revenue Rivers (All New!)</h1>
+
+    <div class="phase">
+        <h4>1. Digital Course Marketplace - ₹1.91 Cr ARR</h4>
+        <ul>
+            <li>Self-paced video courses</li>
+            <li>Live interactive classes</li>
+            <li>Subscription tiers (₹99-999/month)</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h4>2. B2B Corporate Training - ₹35L-1.5 Cr</h4>
+        <ul>
+            <li>Skill development for companies</li>
+            <li>Government employee training</li>
+            <li>Target: 20-100 companies</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h4>3. White-Label Platform - ₹50L-2.5 Cr</h4>
+        <ul>
+            <li>License to schools (₹50K/year each)</li>
+            <li>Target: 500 schools by Year 3</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">4</span>
+    </div>
+</div>
+
+<!-- Slide 5: More Revenue Streams -->
+<div class="slide">
+    <h1>🎯 Five Revenue Rivers (Continued)</h1>
+
+    <div class="phase">
+        <h4>4. AI Tutoring Premium - ₹1+ Cr</h4>
+        <ul>
+            <li>24/7 AI tutor (ChatGPT-style)</li>
+            <li>Instant doubt resolution</li>
+            <li>₹49-299/month subscription</li>
+            <li>Margin: 80%+ (AI costs 20%)</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h4>5. Data & Analytics Services - ₹20-50L</h4>
+        <ul>
+            <li>Learning effectiveness reports for government</li>
+            <li>EdTech market research</li>
+            <li>Student outcome predictions</li>
+        </ul>
+    </div>
+
+    <div class="highlight">
+        <p style="text-align: center; font-size: 28px;"><strong>Key Insight:</strong> EdTech market is ₹58,000 Cr and growing 39%/year</p>
+    </div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">5</span>
+    </div>
+</div>
+
+<!-- Slide 6: FAANG-Grade Tech -->
+<div class="slide">
+    <h1>⚡ FAANG-Grade Tech at Startup Speed</h1>
+    <h2>What the Top Companies Use</h2>
+
+    <table>
+        <tr>
+            <th>Component</th>
+            <th>FAANG Uses</th>
+            <th>Pratham Gets</th>
+        </tr>
+        <tr>
+            <td><strong>Frontend</strong></td>
+            <td>React + TypeScript</td>
+            <td>✅ React 18 + TypeScript</td>
+        </tr>
+        <tr>
+            <td><strong>Backend</strong></td>
+            <td>Node.js microservices</td>
+            <td>✅ Node.js 20 + Fastify</td>
+        </tr>
+        <tr>
+            <td><strong>Database</strong></td>
+            <td>PostgreSQL + Redis</td>
+            <td>✅ PostgreSQL 16 + Redis 7</td>
+        </tr>
+        <tr>
+            <td><strong>AI</strong></td>
+            <td>Claude, GPT-4</td>
+            <td>✅ ANKR AI Proxy</td>
+        </tr>
+        <tr>
+            <td><strong>Mobile</strong></td>
+            <td>React Native</td>
+            <td>✅ React Native + PWA</td>
+        </tr>
+    </table>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">6</span>
+    </div>
+</div>
+
+<!-- Slide 7: Speed Transformation -->
+<div class="slide">
+    <h1>🏃 From Months to Days</h1>
+    <h2>Course Launch Timeline Transformation</h2>
+
+    <div class="comparison">
+        <div class="comparison-box bad">
+            <h3>Old World (Manual)</h3>
+            <ul style="margin-left: 0; list-style: none;">
+                <li>→ Create curriculum: 2-3 months</li>
+                <li>→ Develop materials: 1-2 months</li>
+                <li>→ Train telecallers: 2-4 weeks</li>
+                <li>→ <strong>Launch: 3-5 months total</strong></li>
+            </ul>
+            <p><strong>Capacity: 2-3 courses/year</strong></p>
+        </div>
+        <div class="comparison-box good">
+            <h3>New World (AI-Accelerated)</h3>
+            <ul style="margin-left: 0; list-style: none;">
+                <li>→ AI curriculum: 1-2 days</li>
+                <li>→ AI content: 2-3 days</li>
+                <li>→ AI video: 1 week</li>
+                <li>→ <strong>Launch: 2-3 weeks total</strong></li>
+            </ul>
+            <p><strong>Capacity: 10+ courses/month</strong></p>
+        </div>
+    </div>
+
+    <div class="big-number">15x Faster</div>
+    <p style="text-align: center; font-size: 28px;">Transform idea to revenue in weeks, not months</p>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">7</span>
+    </div>
+</div>
+
+<!-- Slide 8: Scale Without Chaos -->
+<div class="slide">
+    <h1>📈 Scale Without Chaos</h1>
+    <h2>How Digital Breaks the Linear Model</h2>
+
+    <div class="comparison">
+        <div class="comparison-box bad">
+            <h3>Current Model (Linear)</h3>
+            <p>More students = More telecallers = More costs = Limited scale</p>
+        </div>
+        <div class="comparison-box good">
+            <h3>Platform Model (Exponential)</h3>
+            <p>More students = Same platform = Marginal cost ≈ ₹0 = Infinite scale</p>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Current</th>
+            <th>Year 1</th>
+            <th>Year 3</th>
+        </tr>
+        <tr>
+            <td>Students Served</td>
+            <td>1,000</td>
+            <td>5,000</td>
+            <td>50,000</td>
+        </tr>
+        <tr>
+            <td>Staff Needed</td>
+            <td>30</td>
+            <td>35</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>Revenue/Employee</td>
+            <td>₹3.3L</td>
+            <td>₹11L</td>
+            <td>₹1.44Cr</td>
+        </tr>
+        <tr>
+            <td><strong>Efficiency Gain</strong></td>
+            <td><strong>1x</strong></td>
+            <td><strong>3.3x</strong></td>
+            <td><strong>43x</strong></td>
+        </tr>
+    </table>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">8</span>
+    </div>
+</div>
+
+<!-- Slide 9: AI Advantage -->
+<div class="slide">
+    <h1>🤖 Your Unfair Competitive Edge</h1>
+    <h2>AI Does the Heavy Lifting (You Scale the Impact)</h2>
+
+    <div class="stats">
+        <div class="stat-box">
+            <div class="number">₹21L</div>
+            <div class="label">Student Support Savings</div>
+            <p style="font-size: 18px; margin-top: 15px;">AI chatbot + 2 humans vs 10 staff</p>
+        </div>
+        <div class="stat-box">
+            <div class="number">₹9L</div>
+            <div class="label">Content QA Savings</div>
+            <p style="font-size: 18px; margin-top: 15px;">AI quality checks + 2 reviewers vs 5</p>
+        </div>
+        <div class="stat-box">
+            <div class="number">₹21L</div>
+            <div class="label">Operations Savings</div>
+            <p style="font-size: 18px; margin-top: 15px;">Automation vs manual work</p>
+        </div>
+        <div class="stat-box">
+            <div class="number">₹12L</div>
+            <div class="label">IT Maintenance Savings</div>
+            <p style="font-size: 18px; margin-top: 15px;">Predictive AI vs reactive fixes</p>
+        </div>
+    </div>
+
+    <div class="big-number" style="font-size: 64px;">₹63 Lakhs/Year Total Savings</div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">9</span>
+    </div>
+</div>
+
+<!-- Slide 10: Cost Revolution -->
+<div class="slide">
+    <h1>💡 Spend Less, Do More</h1>
+    <h2>The Cost Transformation</h2>
+
+    <table>
+        <tr>
+            <th>Function</th>
+            <th>Legacy Approach</th>
+            <th>AI-Powered</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>Student Support</td>
+            <td>₹30L (10 people)</td>
+            <td>₹9L (AI + 2)</td>
+            <td>₹21L (70%)</td>
+        </tr>
+        <tr>
+            <td>Content QA</td>
+            <td>₹18L (5 people)</td>
+            <td>₹9L (AI + 2)</td>
+            <td>₹9L (50%)</td>
+        </tr>
+        <tr>
+            <td>Operations</td>
+            <td>₹26L (10 people)</td>
+            <td>₹5L (automation)</td>
+            <td>₹21L (80%)</td>
+        </tr>
+        <tr>
+            <td>IT Maintenance</td>
+            <td>₹15L (reactive)</td>
+            <td>₹3L (AI predictive)</td>
+            <td>₹12L (80%)</td>
+        </tr>
+        <tr style="background: #f0f4ff; font-weight: 700;">
+            <td><strong>Total</strong></td>
+            <td><strong>₹89L/year</strong></td>
+            <td><strong>₹26L/year</strong></td>
+            <td><strong>₹63L/year</strong></td>
+        </tr>
+    </table>
+
+    <div class="highlight">
+        <h3 style="text-align: center;">71% Operating Cost Reduction</h3>
+        <p style="text-align: center;">Reinvest savings into growth and innovation</p>
+    </div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">10</span>
+    </div>
+</div>
+
+<!-- Slide 11: Mobile-First -->
+<div class="slide">
+    <h1>📱 Meet Students Where They Are</h1>
+    <h2>The India Reality: Mobile-First or Nothing</h2>
+
+    <div class="stats">
+        <div class="stat-box">
+            <div class="number">750M</div>
+            <div class="label">Smartphone Users in India</div>
+        </div>
+        <div class="stat-box">
+            <div class="number">60%</div>
+            <div class="label">Mobile-Only Internet Users</div>
+        </div>
+    </div>
+
+    <div class="comparison">
+        <div class="comparison-box bad">
+            <h3>Current Pratham</h3>
+            <ul style="margin-left: 0; list-style: none;">
+                <li>❌ Desktop-only interface</li>
+                <li>❌ Poor mobile experience</li>
+                <li>❌ No offline capability</li>
+            </ul>
+        </div>
+        <div class="comparison-box good">
+            <h3>ANKR Platform</h3>
+            <ul style="margin-left: 0; list-style: none;">
+                <li>✅ Progressive Web App</li>
+                <li>✅ Offline learning</li>
+                <li>✅ Works on 2G/3G</li>
+                <li>✅ WhatsApp bot integration</li>
+                <li>✅ Native iOS/Android apps</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="big-number" style="font-size: 56px;">Reach the 80% You're Missing Today</div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">11</span>
+    </div>
+</div>
+
+<!-- Slide 12: AI Personalization -->
+<div class="slide">
+    <h1>🎓 Learning That Actually Learns</h1>
+    <h2>AI-Powered Personalization</h2>
+
+    <div class="comparison">
+        <div class="comparison-box bad">
+            <h3>One-Size-Fits-All (Current)</h3>
+            <p>Same content → All students → Hope for the best</p>
+            <div class="big-number" style="font-size: 48px; color: #f44336;">30-40%</div>
+            <p style="text-align: center;">Completion rate</p>
+        </div>
+        <div class="comparison-box good">
+            <h3>AI-Adaptive Learning</h3>
+            <p>Assessment → Personalized path → Dynamic difficulty → Real-time adjustments</p>
+            <div class="big-number" style="font-size: 48px; color: #4caf50;">60-70%</div>
+            <p style="text-align: center;">Completion rate (2x improvement)</p>
+        </div>
+    </div>
+
+    <div class="phase">
+        <h4>Impact:</h4>
+        <ul>
+            <li>2x completion rates</li>
+            <li>30% better learning outcomes</li>
+            <li>50% lower support needs</li>
+            <li>Happier students = word-of-mouth growth</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">12</span>
+    </div>
+</div>
+
+<!-- Slide 13: Real-Time Everything -->
+<div class="slide">
+    <h1>⚡ The Instant Advantage</h1>
+    <h2>Why Real-Time Matters</h2>
+
+    <div class="comparison">
+        <div class="comparison-box bad">
+            <h3>Legacy Systems (Current)</h3>
+            <p>Action → Wait 2-5 seconds → Manual refresh → Maybe updated</p>
+        </div>
+        <div class="comparison-box good">
+            <h3>ANKR Platform</h3>
+            <p>Action → Instant update (50-200ms) → Everyone sees it live</p>
+        </div>
+    </div>
+
+    <div class="phase">
+        <h4>For Students:</h4>
+        <ul>
+            <li>Live quiz results (instant leaderboard)</li>
+            <li>Real-time class participation</li>
+            <li>Instant AI tutor responses</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h4>For Managers:</h4>
+        <ul>
+            <li>Live team dashboard</li>
+            <li>Instant performance alerts</li>
+            <li>No more waiting for reports</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">13</span>
+    </div>
+</div>
+
+<!-- Slide 14: Data-Driven -->
+<div class="slide">
+    <h1>📊 From Gut Feel to Data-Driven</h1>
+    <h2>Questions You Can Answer Instantly</h2>
+
+    <div class="phase">
+        <h4>Student Success:</h4>
+        <ul>
+            <li>Which courses have highest completion?</li>
+            <li>Where do students drop off?</li>
+            <li>Who's at risk of churning?</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h4>Revenue Optimization:</h4>
+        <ul>
+            <li>Which marketing sources convert best?</li>
+            <li>What's the lifetime value by segment?</li>
+            <li>Which upsells work?</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h4>Strategic Planning:</h4>
+        <ul>
+            <li>Which courses to build next?</li>
+            <li>What markets to expand into?</li>
+            <li>How to allocate budget?</li>
+        </ul>
+    </div>
+
+    <div class="big-number" style="font-size: 56px;">From "We think..." to "We know..."</div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">14</span>
+    </div>
+</div>
+
+<!-- Slide 15: Migration Journey -->
+<div class="slide">
+    <h1>🛤️ Getting There: Zero-Risk Transition</h1>
+    <h2>4-Phase Approach (8 Months Total)</h2>
+
+    <div class="phase">
+        <h4>Phase 1: FOUNDATION (Weeks 1-8)</h4>
+        <p>100 student pilot • 5 courses • Parallel with existing system</p>
+        <p><strong>✅ Outcome: Proof it works</strong></p>
+    </div>
+
+    <div class="phase">
+        <h4>Phase 2: SCALE (Weeks 9-16)</h4>
+        <p>Telecaller AI tools • 1,000 students • Mobile app launch</p>
+        <p><strong>✅ Outcome: Operational efficiency proven</strong></p>
+    </div>
+
+    <div class="phase">
+        <h4>Phase 3: EXPAND (Weeks 17-24)</h4>
+        <p>B2B features • 5,000 students • New revenue streams active</p>
+        <p><strong>✅ Outcome: Growth engine running</strong></p>
+    </div>
+
+    <div class="phase">
+        <h4>Phase 4: OPTIMIZE (Weeks 25-32)</h4>
+        <p>Full transition • 10,000+ students • Legacy retired</p>
+        <p><strong>✅ Outcome: Complete transformation</strong></p>
+    </div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">15</span>
+    </div>
+</div>
+
+<!-- Slide 16: ROI -->
+<div class="slide">
+    <h1>📈 The Numbers That Matter</h1>
+    <h2>Return on Investment (Conservative)</h2>
+
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Revenue</th>
+            <th>Impact vs Baseline</th>
+            <th>ROI</th>
+        </tr>
+        <tr>
+            <td>Year 1 (6 months)</td>
+            <td>₹1.55Cr</td>
+            <td>+₹1Cr</td>
+            <td>100%+</td>
+        </tr>
+        <tr>
+            <td>Year 2</td>
+            <td>₹4.25Cr</td>
+            <td>+₹2.75Cr</td>
+            <td>300%</td>
+        </tr>
+        <tr>
+            <td>Year 3</td>
+            <td>₹6.5Cr</td>
+            <td>+₹4.5Cr</td>
+            <td>700%</td>
+        </tr>
+    </table>
+
+    <div class="stats">
+        <div class="stat-box">
+            <div class="number">&lt; 6</div>
+            <div class="label">Months to Break-Even</div>
+        </div>
+        <div class="stat-box">
+            <div class="number">700%+</div>
+            <div class="label">ROI by Year 3</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">16</span>
+    </div>
+</div>
+
+<!-- Slide 17: Vision 2029 -->
+<div class="slide">
+    <h1>🌟 Imagining 2029</h1>
+    <h2>What Pratham Looks Like in 3 Years</h2>
+
+    <div class="stats">
+        <div class="stat-box">
+            <div class="number">100K+</div>
+            <div class="label">Students Learning Simultaneously</div>
+        </div>
+        <div class="stat-box">
+            <div class="number">₹6-10Cr</div>
+            <div class="label">Annual Revenue</div>
+        </div>
+    </div>
+
+    <div class="phase">
+        <h4>Student Impact:</h4>
+        <ul>
+            <li>Available in 12 languages</li>
+            <li>Accessible in remotest villages</li>
+            <li>Completion rates 2x industry average</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h4>Market Position:</h4>
+        <ul>
+            <li>Top 3 in affordable quality education</li>
+            <li>Known for innovation, not just legacy</li>
+            <li>Technology leader among NGO EdTech</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">17</span>
+    </div>
+</div>
+
+<!-- Slide 18: Call to Action -->
+<div class="slide">
+    <h1>🚀 What Happens Next</h1>
+    <h2>The Path Forward</h2>
+
+    <div class="phase">
+        <h4>Week 1: Decision</h4>
+        <ul>
+            <li>Leadership workshop</li>
+            <li>Review this proposal</li>
+            <li>Q&A session</li>
+            <li>Initial go/no-go decision</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h4>Week 2: Alignment</h4>
+        <ul>
+            <li>Stakeholder alignment</li>
+            <li>Define success metrics</li>
+            <li>Budget allocation</li>
+            <li>Timeline confirmation</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h4>Week 3: Preparation</h4>
+        <ul>
+            <li>Technical assessment</li>
+            <li>Team formation</li>
+            <li>Pilot planning</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h4>Week 4: Launch</h4>
+        <ul>
+            <li>Pilot begins (100 students)</li>
+            <li>Metrics dashboard setup</li>
+            <li>🎉 Celebrate start!</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">18</span>
+    </div>
+</div>
+
+<!-- Slide 19: Final Thought -->
+<div class="slide">
+    <h1>💭 One Last Thing</h1>
+    <h2>This Isn't About Technology</h2>
+
+    <div class="highlight" style="margin-top: 60px;">
+        <h3 style="font-size: 36px; text-align: center;">It's about:</h3>
+        <ul style="font-size: 32px; margin-top: 30px;">
+            <li>📚 Reaching more students - 100x scale</li>
+            <li>💰 Sustaining the mission - 6x revenue</li>
+            <li>🌍 Expanding impact - New markets, new models</li>
+            <li>🚀 Leading the future - Not following</li>
+        </ul>
+    </div>
+
+    <div class="big-number" style="margin-top: 60px; font-size: 48px; line-height: 1.4;">
+        From "We help 1,000 students"<br>
+        to<br>
+        "We help 100,000 students"
+    </div>
+
+    <p style="text-align: center; font-size: 32px; margin-top: 40px; color: #667eea; font-weight: 600;">
+        Same mission. Bigger canvas.
+    </p>
+
+    <div class="footer">
+        <span>Pratham Transformation</span>
+        <span class="slide-number">19</span>
+    </div>
+</div>
+
+<!-- Slide 20: Thank You -->
+<div class="slide title-slide">
+    <h1>🙏 Thank You</h1>
+    <h2>Let's Transform Education Together</h2>
+
+    <div style="margin-top: 80px;">
+        <p style="font-size: 32px; margin-bottom: 20px;">Questions? Let's discuss.</p>
+        <p style="font-size: 24px; opacity: 0.8;">Next Steps: Leadership Workshop</p>
+    </div>
+
+    <div style="margin-top: 120px; font-size: 20px; opacity: 0.7;">
+        <p>Prepared by ANKR Labs</p>
+        <p>February 2026</p>
+        <p style="margin-top: 30px;">🙏 Jai Guru Ji</p>
+    </div>
+</div>
+
+</body>
+</html>

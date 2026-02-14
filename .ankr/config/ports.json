@@ -36,7 +36,8 @@
     "adminPortal": 3030,
     "sidecar": 3040,
     "ankrforgeWeb": 3200,
-    "ankrInteract": 5173
+    "ankrInteract": 5173,
+    "edibox": 3080
   },
   "backend": {
     "_range": "4000-4099",
@@ -58,7 +59,8 @@
     "ankrMaritime": 4051,
     "coralAstrology": 4052,
     "ankrWms": 4060,
-    "curriculum": 4009
+    "curriculum": 4009,
+    "edibox": 4080
   },
   "admin": {
     "_range": "4200-4299",
@@ -173,5 +175,13 @@
     "doctor": 3035,
     "ncertFrontend": 5174,
     "ncertBackend": 4090
+  },
+  "services": {
+    "ankr-hybrid-search": {
+      "port": 4446,
+      "description": "Hybrid Search API (File Index + Vector)",
+      "category": "search",
+      "health": "/health"
+    }
   }
 }
