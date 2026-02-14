@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyomo Blackbox - Demo (Standalone)</title>
+    <meta name="description" content="Standalone demo - No backend required. Created by Powerp Box IT Solutions Pvt Ltd">
+    <style>
+        /* Copy all CSS from main file */
+EOF
+
+# Extract CSS from main file (between <style> and </style>)
+sed -n '/<style>/,/<\/style>/p' /root/vyomo-algo-blackbox/public/index.html | sed '1d;$d' >> /root/vyomo-blackbox-demo-standalone.html
+
+cat >> /root/vyomo-blackbox-demo-standalone.html << 'HTMLEOF'
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header" style="position: relative;">
+            <!-- Mode Indicator (Locked to Demo in standalone) -->
+            <div class="mode-toggle">
+                <label>Mode:</label>
+                <div class="toggle-switch">
+                    <div class="toggle-slider"></div>
+                </div>
+                <span class="mode-label">Demo (Standalone)</span>
+            </div>
+
+            <h1>🔐 Vyomo Blackbox</h1>
+            <p>AI-Powered Trading Algorithms Platform - DEMO</p>
+        </div>
+
+        <!-- Rest of HTML structure... -->
+EOF
+
+# Extract body content
+sed -n '/<div class="tabs">/,/<\/body>/p' /root/vyomo-algo-blackbox/public/index.html | sed '$d' >> /root/vyomo-blackbox-demo-standalone.html
+
+cat >> /root/vyomo-blackbox-demo-standalone.html << 'JSEOF'
+
+    <script>
+        // STANDALONE DEMO VERSION - NO BACKEND REQUIRED
+        // All data is generated client-side with mock algorithms
+
+        const currentMode = 'demo'; // Always demo in standalone
+
+        // Mock data generators
+        function generateMockCandles(count, symbol) {
+            const candles = [];
+            let basePrice = symbol === 'AAPL' ? 150 : symbol === 'TSLA' ? 250 : symbol === 'NIFTY' ? 22000 : 100;
+            const now = Date.now();
+
+            for (let i = count - 1; i >= 0; i--) {
+                const variation = (Math.random() - 0.5) * basePrice * 0.02;
+                const open = basePrice + variation;
+                const close = open + (Math.random() - 0.5) * basePrice * 0.015;
+                const high = Math.max(open, close) + Math.random() * basePrice * 0.01;
+                const low = Math.min(open, close) - Math.random() * basePrice * 0.01;
+
+                candles.push({
+                    timestamp: new Date(now - i * 5 * 60 * 1000),
+                    open, high, low, close,
+                    volume: Math.floor(Math.random() * 1000000) + 500000
+                });
+
+                basePrice = close;
+            }
+
+            return candles;
+        }
+
+        function analyzeMarketData(candles) {
+            // Simplified algorithm simulation
+            const price = candles[candles.length - 1].close;
+            const priceChange = ((price - candles[0].open) / candles[0].open) * 100;
+
+            const signals = [
+                { name: 'RSI', signal: priceChange > 0 ? 'BUY' : 'SELL', weight: 15 },
+                { name: 'MACD', signal: Math.random() > 0.5 ? 'BUY' : 'SELL', weight: 12 },
+                { name: 'Bollinger', signal: Math.random() > 0.4 ? 'BUY' : 'SELL', weight: 10 },
+                { name: 'Stochastic', signal: priceChange > 0 ? 'BUY' : 'SELL', weight: 8 },
+                { name: 'Volume', signal: 'BUY', weight: 7 }
+            ];
+
+            const buyScore = signals.filter(s => s.signal === 'BUY').reduce((sum, s) => sum + s.weight, 0);
+            const totalWeight = signals.reduce((sum, s) => sum + s.weight, 0);
+            const confidence = buyScore / totalWeight;
+
+            const action = confidence > 0.6 ? 'BUY' : confidence < 0.4 ? 'SELL' : 'HOLD';
+            const targetPrice = price * (action === 'BUY' ? 1.05 : action === 'SELL' ? 0.95 : 1.0);
+            const stopLoss = price * (action === 'BUY' ? 0.97 : action === 'SELL' ? 1.03 : 1.0);
+
+            return {
+                signals,
+                consensus: {
+                    action,
+                    confidence,
+                    targetPrice,
+                    stopLoss
+                }
+            };
+        }
+
+        // Tab Switching
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName + '-tab').classList.add('active');
+            event.target.closest('.tab').classList.add('active');
+        }
+
+        // Dashboard
+        async function updateDashboard() {
+            document.getElementById('api-status').textContent = 'DEMO';
+            document.getElementById('api-status').className = 'badge badge-online';
+            document.getElementById('api-version').textContent = '1.0.0 (Standalone)';
+            document.getElementById('api-uptime').textContent = formatUptime(Math.floor(Math.random() * 86400));
+            document.getElementById('response-time').textContent = 'Instant';
+        }
+
+        function formatUptime(seconds) {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            if (hours > 0) return `${hours}h ${minutes}m`;
+            return `${minutes}m`;
+        }
+
+        // Trading Demo
+        async function getSignal() {
+            const symbol = document.getElementById('demo-symbol').value.trim().toUpperCase();
+            const timeframe = document.getElementById('demo-timeframe').value;
+
+            if (!symbol) {
+                alert('Please enter a symbol');
+                return;
+            }
+
+            const candles = generateMockCandles(100, symbol);
+            const { signals, consensus } = analyzeMarketData(candles);
+            const data = {
+                symbol,
+                timeframe,
+                action: consensus.action,
+                confidence: consensus.confidence,
+                price: candles[candles.length - 1].close,
+                target: consensus.targetPrice,
+                stopLoss: consensus.stopLoss,
+                risk: consensus.confidence > 0.8 ? 'Low' : consensus.confidence > 0.6 ? 'Medium' : 'High',
+                signals
+            };
+
+            displaySignalResult(data);
+        }
+
+        function quickSignal(symbol) {
+            document.getElementById('demo-symbol').value = symbol;
+            switchTab('demo');
+            setTimeout(() => getSignal(), 300);
+        }
+
+        function displaySignalResult(data) {
+            const resultBox = document.getElementById('signal-result');
+            const badgeClass = data.action === 'BUY' ? 'badge-buy' : data.action === 'SELL' ? 'badge-sell' : 'badge-hold';
+
+            resultBox.innerHTML = `
+                <h3>📊 ${data.symbol} - ${data.timeframe} (DEMO DATA)</h3>
+                <div style="margin: 20px 0;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <span style="font-size: 1.2em;">Signal:</span>
+                        <span class="badge ${badgeClass}" style="font-size: 1.2em;">${data.action}</span>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Confidence:</span>
+                            <strong style="color: #667eea;">${Math.round(data.confidence * 100)}%</strong>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: ${data.confidence * 100}%"></div>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-top: 1px solid #334155;">
+                        <span>Current Price:</span>
+                        <strong>$${data.price.toFixed(2)}</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-top: 1px solid #334155;">
+                        <span>Target:</span>
+                        <strong style="color: #10b981;">$${data.target.toFixed(2)}</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-top: 1px solid #334155;">
+                        <span>Stop Loss:</span>
+                        <strong style="color: #ef4444;">$${data.stopLoss.toFixed(2)}</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 10px 0; border-top: 1px solid #334155;">
+                        <span>Risk Level:</span>
+                        <strong>${data.risk}</strong>
+                    </div>
+                </div>
+                <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #334155;">
+                    <strong style="color: #94a3b8;">Algorithm Breakdown:</strong>
+                    <div style="margin-top: 10px;">
+                        ${data.signals.map(s => `
+                            <div style="padding: 5px 0; font-size: 0.9em; color: #94a3b8;">
+                                ${s.name}: <strong>${s.signal}</strong> (${s.weight}%)
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            resultBox.style.display = 'block';
+        }
+
+        // Market Scanner
+        async function scanMarket() {
+            const signal = document.getElementById('scan-signal').value;
+            const minConfidence = parseInt(document.getElementById('scan-confidence').value);
+            const symbols = ['AAPL', 'GOOGL', 'MSFT', 'TSLA', 'AMZN', 'NVDA', 'META', 'NFLX', 'AMD', 'INTC'];
+            const results = [];
+
+            for (const symbol of symbols) {
+                const candles = generateMockCandles(100, symbol);
+                const { consensus } = analyzeMarketData(candles);
+
+                if (signal && consensus.action !== signal) continue;
+                if (consensus.confidence * 100 < minConfidence) continue;
+
+                results.push({
+                    symbol,
+                    signal: consensus.action,
+                    confidence: Math.round(consensus.confidence * 100),
+                    price: candles[candles.length - 1].close,
+                    change: ((Math.random() - 0.5) * 8),
+                    target: consensus.targetPrice,
+                    risk: consensus.confidence > 0.8 ? 'Low' : 'Medium'
+                });
+            }
+
+            displayScanResults({ scanned: symbols.length, found: results.length, results });
+        }
+
+        function displayScanResults(data) {
+            const statsBar = document.getElementById('scan-stats');
+            statsBar.innerHTML = `
+                <div class="stat-item">
+                    <div class="stat-value">${data.scanned}</div>
+                    <div class="stat-label">Symbols Scanned</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">${data.found}</div>
+                    <div class="stat-label">Opportunities Found</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">${data.results.length > 0 ? Math.round(data.results.reduce((sum, r) => sum + r.confidence, 0) / data.results.length) : 0}%</div>
+                    <div class="stat-label">Avg Confidence</div>
+                </div>
+            `;
+            statsBar.style.display = 'grid';
+
+            const resultsContainer = document.getElementById('scan-results');
+            resultsContainer.innerHTML = `
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Signal</th>
+                            <th>Confidence</th>
+                            <th>Price</th>
+                            <th>Change %</th>
+                            <th>Target</th>
+                            <th>Risk</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${data.results.map(r => `
+                            <tr>
+                                <td><strong>${r.symbol}</strong></td>
+                                <td><span class="badge badge-${r.signal.toLowerCase()}">${r.signal}</span></td>
+                                <td>
+                                    ${r.confidence}%
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: ${r.confidence}%"></div>
+                                    </div>
+                                </td>
+                                <td>$${r.price.toFixed(2)}</td>
+                                <td style="color: ${r.change >= 0 ? '#10b981' : '#ef4444'};">
+                                    ${r.change >= 0 ? '+' : ''}${r.change.toFixed(2)}%
+                                </td>
+                                <td>$${r.target.toFixed(2)}</td>
+                                <td>${r.risk}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            `;
+            resultsContainer.style.display = 'block';
+        }
+
+        // AI Insights
+        async function askQuestion(predefinedQuestion) {
+            const questionInput = document.getElementById('ai-question');
+            const question = predefinedQuestion || questionInput.value.trim();
+
+            if (!question) {
+                alert('Please ask a question');
+                return;
+            }
+
+            addChatMessage(question, 'user');
+            if (!predefinedQuestion) questionInput.value = '';
+
+            const typingId = addChatMessage('Thinking...', 'ai');
+
+            setTimeout(() => {
+                document.getElementById(typingId).remove();
+                const answer = `Based on demo market analysis: ${question}. Note: This is a demo response generated client-side. For real market insights, use the database mode.`;
+                addChatMessage(answer, 'ai');
+            }, 1000);
+        }
+
+        function addChatMessage(content, sender) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const messageId = 'msg-' + Date.now();
+            const messageDiv = document.createElement('div');
+            messageDiv.id = messageId;
+            messageDiv.className = `message ${sender}`;
+            messageDiv.innerHTML = `<div class="message-content">${content}</div>`;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            return messageId;
+        }
+
+        // Initialize
+        updateDashboard();
+        setInterval(updateDashboard, 5000);
+    </script>
+</body>
+</html>
+JSEOF
+
+echo "Standalone demo created at: /root/vyomo-blackbox-demo-standalone.html"
