@@ -6,7 +6,7 @@
   },
   "services": {
     "ankr-hybrid-search": {
-      "portPath": "services.ankr-hybrid-search",
+      "portPath": "services.ankr-hybrid-search.port",
       "path": "/root",
       "command": "/root/.bun/bin/bun /root/ankr-hybrid-search-service.js",
       "description": "Hybrid Search API (File Index + Vector)",
@@ -20,14 +20,41 @@
     "ankr-interact": {
       "portPath": "dashboard.viewer",
       "path": "/root/ankr-labs-nx/packages/ankr-interact",
-      "command": "npm run dev:server",
+      "command": "/root/.bun/bin/bun src/server/index.ts",
       "description": "ANKR Interact - Documentation Browser & Knowledge Graph",
       "healthEndpoint": "/api/health",
       "enabled": true,
-      "interpreter": "tsx",
-      "runtime": "node",
-      "runtimeVersion": "20.19.6",
-      "_note": "Uses tsx for TypeScript - requires CommonJS compatibility fixes"
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9",
+      "_note": "Using bun for TypeScript - removed --watch flag for stability"
+    },
+    "vyomo-algo": {
+      "portPath": "ai.vyomoBlackbox",
+      "path": "/root/vyomo-algo-blackbox",
+      "command": "bun run src/server.ts",
+      "description": "Vyomo Blackbox - Trading Algorithms API",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9",
+      "domain": "vyomo.in"
+    },
+    "vyomo-download": {
+      "portPath": "ai.vyomoDownload",
+      "path": "/root",
+      "command": "/root/.bun/bin/bun /root/vyomo-download-api.js",
+      "description": "Vyomo Download API - Package Distribution",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "interpreter": "bun",
+      "interpreterPath": "/root/.bun/bin/bun",
+      "runtime": "bun",
+      "runtimeVersion": "1.3.9",
+      "domain": "vyomo.in"
     }
   }
 }
