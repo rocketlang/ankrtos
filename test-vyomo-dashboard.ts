@@ -60,7 +60,7 @@ async function testPage(browser: puppeteer.Browser, name: string, route: string)
     }
 
     // Wait for React to render
-    await page.waitForTimeout(2000)
+    await new Promise(resolve => setTimeout(resolve, 2000))
 
     // Check for error messages in the DOM
     const errorElements = await page.$$('[class*="error"], [class*="Error"]')
