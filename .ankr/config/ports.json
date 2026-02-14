@@ -85,6 +85,7 @@
   "ai": {
     "_range": "4400-4499",
     "proxy": 4444,
+    "vyomoBlackbox": 4445,
     "embeddings": 4450,
     "judge": 4460,
     "guardrails": 4470,
