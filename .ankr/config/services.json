@@ -79,7 +79,36 @@
       "interpreter": "node",
       "interpreterPath": "/usr/bin/node",
       "runtime": "tsx",
-      "runtimeVersion": "4.21.0"
+      "runtimeVersion": "4.21.0",
+      "domain": "complymitra.com"
+    },
+    "mari8x-backend": {
+      "portPath": "backend.ankrMaritime",
+      "path": "/root/apps/ankr-maritime/backend",
+      "command": "npx tsx src/main.ts",
+      "description": "Mari8X Backend - Maritime Operations & Analytics API",
+      "healthEndpoint": "/health",
+      "enabled": true,
+      "interpreter": "node",
+      "interpreterPath": "/usr/bin/node",
+      "runtime": "tsx",
+      "runtimeVersion": "4.21.0",
+      "domain": "mari8x.com",
+      "database": "mari8x"
+    },
+    "mari8x-frontend": {
+      "portPath": "frontend.ankrMaritime",
+      "path": "/root/apps/ankr-maritime/frontend",
+      "command": "npm run dev",
+      "description": "Mari8X Frontend - Maritime Operations Dashboard",
+      "healthEndpoint": null,
+      "enabled": true,
+      "interpreter": "node",
+      "interpreterPath": "/usr/bin/node",
+      "runtime": "vite",
+      "runtimeVersion": "6.x",
+      "domain": "mari8x.com",
+      "_note": "React + Vite frontend"
     },
     "ankr-maritime-watcher": {
       "portPath": null,
