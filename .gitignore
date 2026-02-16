@@ -58,6 +58,7 @@ npm-debug.log*
 .claude/
 .claude.json
 .claude.json.backup
+.claude.json.backup.*
 .codex/
 .opencode/
 .tasher/
