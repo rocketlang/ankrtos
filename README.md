@@ -92,7 +92,8 @@ Unlike traditional TOS (just operations), ANKR TOS includes:
 ### **Implementation**
 | Document | Description | Tasks |
 |----------|-------------|-------|
-| [ANKR-TOS-MASSIVE-IMPLEMENTATION-ROADMAP.md](ANKR-TOS-MASSIVE-IMPLEMENTATION-ROADMAP.md) | Complete task-by-task roadmap (24 months) | 1,150+ |
+| [ANKR-TOS-MASSIVE-IMPLEMENTATION-ROADMAP-TODO-V2.md](ANKR-TOS-MASSIVE-IMPLEMENTATION-ROADMAP-TODO-V2.md) ⭐ **NEW V2** | Enhanced roadmap with AI Optimizer + Self-Evolving features (27 months) | 1,500+ |
+| [ANKR-TOS-MASSIVE-IMPLEMENTATION-ROADMAP.md](ANKR-TOS-MASSIVE-IMPLEMENTATION-ROADMAP.md) | Original task-by-task roadmap (24 months) | 1,150+ |
 | [ANKR-TOS-MASTER-PLAN-SUMMARY.md](ANKR-TOS-MASTER-PLAN-SUMMARY.md) | Master index and quick reference | - |
 
 ### **AI & Innovation**
@@ -101,7 +102,7 @@ Unlike traditional TOS (just operations), ANKR TOS includes:
 | [ANKR-AI-OPTIMIZER-UNIVERSAL-SYSTEM.md](ANKR-AI-OPTIMIZER-UNIVERSAL-SYSTEM.md) | Self-monitoring, hotspot detection, congestion prevention | Universal AI layer |
 | [ANKR-SELF-EVOLVING-TERMINAL-INTELLIGENCE.md](ANKR-SELF-EVOLVING-TERMINAL-INTELLIGENCE.md) | Self-building infrastructure, gradual automation | Generative AI design |
 
-**Total:** 7 strategic documents, ~250 pages, ~100,000 words
+**Total:** 8 strategic documents, ~350 pages, ~130,000 words
 
 ---
 
@@ -280,7 +281,7 @@ Year 5: 50% automated, 50% human (optimal mix)
 
 ### **For Product Managers:**
 1. Read: [ANKR-TOS-COMPLETE-ALL-IN-ONE-SOLUTIONS.md](ANKR-TOS-COMPLETE-ALL-IN-ONE-SOLUTIONS.md)
-2. Review: [ANKR-TOS-MASSIVE-IMPLEMENTATION-ROADMAP.md](ANKR-TOS-MASSIVE-IMPLEMENTATION-ROADMAP.md)
+2. Review: [ANKR-TOS-MASSIVE-IMPLEMENTATION-ROADMAP-TODO-V2.md](ANKR-TOS-MASSIVE-IMPLEMENTATION-ROADMAP-TODO-V2.md) ⭐ **V2 Recommended**
 
 ### **For Developers:**
 1. Study: EDIBox codebase (foundation)
@@ -304,12 +305,12 @@ Year 5: 50% automated, 50% human (optimal mix)
 
 ## 📊 Project Stats
 
-- **Documentation:** 7 strategic documents
-- **Total Pages:** ~250 pages
-- **Total Words:** ~100,000 words
-- **Implementation Tasks:** 1,150+ tasks
-- **Timeline:** 24 months
-- **Budget:** $1.6M - $2.0M
+- **Documentation:** 8 strategic documents (including V2 roadmap)
+- **Total Pages:** ~350 pages
+- **Total Words:** ~130,000 words
+- **Implementation Tasks:** 1,500+ tasks (V2 roadmap)
+- **Timeline:** 27 months
+- **Budget:** $2.38M - $2.94M (V2 includes AI infrastructure)
 - **Team Size:** 15-25 people (varies by phase)
 - **ROI:** 2-3 years
 
